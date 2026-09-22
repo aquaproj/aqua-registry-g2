@@ -1,0 +1,55 @@
+---
+name: index
+# Keep index.json in step with the package branches.
+#
+# 'ar2 run' adds a package to the catalogue as it takes it over, which is the one
+# moment a package can be new to it. This is the reconciliation: it looks at every
+# branch and adds whatever the catalogue doesn't have, which is what catches a
+# package whose run failed after committing its definition, or whose pull request
+# was never merged. Nothing else would notice.
+#
+# It runs on demand here. It belongs on a schedule in the real registry, where nobody
+# is watching for a package that quietly never arrived.
+#
+# Not a create event: GitHub reads the workflow from the ref that was created, and a
+# package branch is an orphan carrying only the branch template. index.yaml lives on
+# main and would never be there, so the event fires and nothing runs.
+on:
+  workflow_dispatch:
+permissions: {}
+jobs:
+  index:
+    runs-on: ubuntu-24.04
+    # Its own environment, holding the pull request key alone. This workflow never
+    # creates a package branch, so it has no business reaching the key that bypasses
+    # the ruleset guarding them.
+    environment: index
+    timeout-minutes: 15
+    permissions:
+      # Committing the catalogue to the update branch.
+      contents: write
+      # Opening the pull request.
+      pull-requests: write
+    steps:
+      # For aqua/aqua.yaml, which pins the ar2 version and its checksum.
+      - uses: actions/checkout@08eba0b27e820071cde6df949e0beb9ba4906955 # v4.3.0
+        with:
+          persist-credentials: false
+      - uses: aquaproj/aqua-installer@11dd79b4e498d471a9385aa9fb7f62bb5f52a73c # v4.0.4
+        with:
+          aqua_version: v2.63.0
+      # The token that commits the catalogue and opens its pull request. A pull
+      # request opened or updated with GITHUB_TOKEN gets its checks in an
+      # approval-required state, and this one is added to on every run.
+      - uses: actions/create-github-app-token@67018539274d69449ef7c02e8e71183d1719ab42 # v2.1.4
+        id: pr_token
+        with:
+          app-id: ${{ vars.AR2_PR_CLIENT_ID }}
+          private-key: ${{ secrets.AR2_PR_PRIVATE_KEY }}
+      - run: |
+          ar2 index \
+            --g2-owner "${GITHUB_REPOSITORY%/*}" \
+            --g2-repo "${GITHUB_REPOSITORY#*/}"
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          AR2_PR_TOKEN: ${{ steps.pr_token.outputs.token }}
