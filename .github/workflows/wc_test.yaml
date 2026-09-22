@@ -1,0 +1,65 @@
+---
+# The checks a package branch's pull request is merged on.
+#
+# It lives on main rather than on the package branch, so that improving the checks
+# improves every package. The workflow a package branch carries is copied when the
+# branch is created and never again, which is why it does nothing but call this.
+name: test (workflow_call)
+on: workflow_call
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        # Two runners, because the only thing here that depends on the machine is
+        # whether an asset's format can be opened. Everything ubuntu can't open, a
+        # dmg or a pkg, macOS can; a Windows runner would open nothing that ubuntu
+        # doesn't.
+        os:
+          - ubuntu-24.04
+          - macos-15
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 30
+    permissions:
+      contents: read
+      # Reading which files the pull request touches.
+      pull-requests: read
+    steps:
+      - uses: actions/checkout@08eba0b27e820071cde6df949e0beb9ba4906955 # v4.3.0
+        with:
+          persist-credentials: false
+      # ar2 and the version of it to run are pinned on main, next to the checksum
+      # that fixes what is downloaded. A package branch holds no such file: it holds
+      # one package, and the tooling is the registry's rather than the package's.
+      - uses: actions/checkout@08eba0b27e820071cde6df949e0beb9ba4906955 # v4.3.0
+        with:
+          ref: main
+          path: .registry
+          persist-credentials: false
+      - uses: aquaproj/aqua-installer@11dd79b4e498d471a9385aa9fb7f62bb5f52a73c # v4.0.4
+        with:
+          aqua_version: v2.63.0
+      # Only what this pull request adds or changes is checked. A package accumulates
+      # versions and the ones already merged were checked when they arrived, so
+      # checking them again would download every asset the package ever published.
+      - id: files
+        run: |
+          gh api "repos/$GITHUB_REPOSITORY/pulls/$NUMBER/files" --paginate \
+            --jq '.[] | select(.status != "removed") | .filename' \
+            | grep -E '^versions/[^/]+/registry\.json$' > files.txt || true
+          echo "count=$(wc -l < files.txt | tr -d ' ')" >> "$GITHUB_OUTPUT"
+          cat files.txt
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          NUMBER: ${{ github.event.pull_request.number }}
+      - if: steps.files.outputs.count == '0'
+        run: echo "This pull request changes no registry.json." >> "$GITHUB_STEP_SUMMARY"
+      - if: steps.files.outputs.count != '0'
+        run: xargs ar2 test < files.txt
+        env:
+          # The configuration that pins ar2. aqua reads it wherever the command runs,
+          # so the package branch stays free of it.
+          AQUA_GLOBAL_CONFIG: ${{ github.workspace }}/.registry/aqua/aqua.yaml
+          # Verifying an attestation asks GitHub about the artifact, and downloading
+          # assets without a token runs into the anonymous rate limit.
+          GITHUB_TOKEN: ${{ github.token }}
