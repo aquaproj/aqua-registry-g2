@@ -32,16 +32,16 @@ jobs:
       pull-requests: write
     steps:
       # For aqua/aqua.yaml, which pins the ar2 version and its checksum.
-      - uses: actions/checkout@08eba0b27e820071cde6df949e0beb9ba4906955 # v4.3.0
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
-      - uses: aquaproj/aqua-installer@11dd79b4e498d471a9385aa9fb7f62bb5f52a73c # v4.0.4
+      - uses: aquaproj/aqua-installer@96a9bc20066c5bf5e275b41019cfc165b25f4e2e # v4.0.5
         with:
           aqua_version: v2.63.0
       # The token that commits the catalogue and opens its pull request. A pull
       # request opened or updated with GITHUB_TOKEN gets its checks in an
       # approval-required state, and this one is added to on every run.
-      - uses: actions/create-github-app-token@67018539274d69449ef7c02e8e71183d1719ab42 # v2.1.4
+      - uses: actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1 # v3.2.0
         id: pr_token
         with:
           app-id: ${{ vars.AR2_PR_CLIENT_ID }}

@@ -25,18 +25,18 @@ jobs:
       # Reading which files the pull request touches.
       pull-requests: read
     steps:
-      - uses: actions/checkout@08eba0b27e820071cde6df949e0beb9ba4906955 # v4.3.0
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
       # ar2 and the version of it to run are pinned on main, next to the checksum
       # that fixes what is downloaded. A package branch holds no such file: it holds
       # one package, and the tooling is the registry's rather than the package's.
-      - uses: actions/checkout@08eba0b27e820071cde6df949e0beb9ba4906955 # v4.3.0
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           ref: main
           path: .registry
           persist-credentials: false
-      - uses: aquaproj/aqua-installer@11dd79b4e498d471a9385aa9fb7f62bb5f52a73c # v4.0.4
+      - uses: aquaproj/aqua-installer@96a9bc20066c5bf5e275b41019cfc165b25f4e2e # v4.0.5
         with:
           aqua_version: v2.63.0
       # Only what this pull request adds or changes is checked. A package accumulates
