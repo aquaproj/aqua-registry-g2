@@ -20,6 +20,11 @@ jobs:
           - macos-15
     runs-on: ${{ matrix.os }}
     timeout-minutes: 30
+    env:
+      # The configuration that pins ar2, read from main rather than from the package
+      # branch. It is set for the whole job because the installer needs it too: it is
+      # what tells aqua which commands to put on PATH.
+      AQUA_GLOBAL_CONFIG: ${{ github.workspace }}/.registry/aqua/aqua.yaml
     permissions:
       contents: read
       # Reading which files the pull request touches.
@@ -39,6 +44,9 @@ jobs:
       - uses: aquaproj/aqua-installer@96a9bc20066c5bf5e275b41019cfc165b25f4e2e # v4.0.5
         with:
           aqua_version: v2.63.0
+          # -a includes the global configuration. Without it the packages pinned there
+          # are not linked and the command isn't found.
+          aqua_opts: -l -a
       # Only what this pull request adds or changes is checked. A package accumulates
       # versions and the ones already merged were checked when they arrived, so
       # checking them again would download every asset the package ever published.
@@ -57,9 +65,6 @@ jobs:
       - if: steps.files.outputs.count != '0'
         run: xargs ar2 test < files.txt
         env:
-          # The configuration that pins ar2. aqua reads it wherever the command runs,
-          # so the package branch stays free of it.
-          AQUA_GLOBAL_CONFIG: ${{ github.workspace }}/.registry/aqua/aqua.yaml
           # Verifying an attestation asks GitHub about the artifact, and downloading
           # assets without a token runs into the anonymous rate limit.
           GITHUB_TOKEN: ${{ github.token }}
