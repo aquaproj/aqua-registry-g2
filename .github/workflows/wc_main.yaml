@@ -7,6 +7,8 @@ jobs:
     timeout-minutes: 15
     permissions:
       contents: read
+    env:
+      AQUA_GLOBAL_CONFIG: ${{ github.workspace }}/aqua/aqua.yaml
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
@@ -21,7 +23,6 @@ jobs:
       # read is caught rather than ignored.
       - run: ar2 validate-index
         env:
-          AQUA_GLOBAL_CONFIG: ${{ github.workspace }}/aqua/aqua.yaml
           AQUA_GITHUB_TOKEN: ${{ github.token }}
 
   aqua:
@@ -49,6 +50,8 @@ jobs:
     timeout-minutes: 10
     permissions:
       contents: read
+    env:
+      AQUA_GLOBAL_CONFIG: ${{ github.workspace }}/aqua/aqua.yaml
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
@@ -56,6 +59,7 @@ jobs:
       - uses: aquaproj/aqua-installer@96a9bc20066c5bf5e275b41019cfc165b25f4e2e # v4.0.5
         with:
           aqua_version: v2.63.0
+          aqua_opts: -l -a
       - run: actionlint
         env:
           AQUA_GITHUB_TOKEN: ${{ github.token }}
