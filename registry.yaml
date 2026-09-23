@@ -1,0 +1,56 @@
+aliases:
+  - name: sst/opencode
+type: github_release
+repo_owner: anomalyco
+repo_name: opencode
+description: The AI coding agent built for the terminal
+version_overrides:
+  - version_constraint: Version in ["v0.1.84", "v0.1.92", "v0.1.115", "v0.1.124"]
+    replacements:
+      amd64: x64
+  - version_constraint: Version in ["v0.1.139", "v0.1.142"]
+    replacements:
+      amd64: x64
+  - version_constraint: Version in ["v0.1.150", "v0.1.156", "v0.1.159", "v0.1.167", "v0.1.170", "v0.1.180", "v0.2.5"]
+    replacements:
+      amd64: x64
+  - version_constraint: Version in ["v0.3.11", "v0.3.25"]
+    replacements:
+      amd64: x64
+  - version_constraint: Version == "v1.0.92"
+    replacements:
+      amd64: x64
+  - version_constraint: Version == "v1.0.93"
+    replacements:
+      amd64: x64
+  - version_constraint: semver("<= 0.0.52")
+    replacements:
+      amd64: x86_64
+      darwin: mac
+  - version_constraint: semver("<= 0.1.61")
+    replacements:
+      amd64: x64
+  - version_constraint: semver("<= 0.1.129")
+    replacements:
+      amd64: x64
+  - version_constraint: semver("<= 0.3.18")
+    replacements:
+      amd64: x64
+  - version_constraint: semver("<= 0.3.20")
+    replacements:
+      amd64: x64
+  - version_constraint: semver("<= 0.3.31")
+    replacements:
+      amd64: x64
+  - version_constraint: semver("<= 0.3.34")
+    replacements:
+      amd64: x64
+  - version_constraint: semver("<= 1.0.91")
+    replacements:
+      amd64: x64
+  - version_constraint: "true"
+    replacements:
+      amd64: x64
+  - version_constraint: "true"
+    replacements:
+      amd64: x64
