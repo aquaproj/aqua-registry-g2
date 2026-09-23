@@ -25,13 +25,13 @@ jobs:
       # Reading which files the pull request touches.
       pull-requests: read
     steps:
-      - uses: actions/checkout@08eba0b27e820071cde6df949e0beb9ba4906955 # v4.3.0
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
       # ar2 and the version of it to run are pinned on main, next to the checksum
       # that fixes what is downloaded. A package branch holds no such file: it holds
       # one package, and the tooling is the registry's rather than the package's.
-      - uses: actions/checkout@08eba0b27e820071cde6df949e0beb9ba4906955 # v4.3.0
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           ref: main
           path: .registry
