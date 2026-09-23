@@ -1,0 +1,37 @@
+type: github_release
+repo_owner: ollama
+repo_name: ollama
+description: Get up and running with Llama 3.1, Mistral, Gemma 2, and other large language models
+version_overrides:
+  - version_constraint: semver("> 0.13.5")
+    overrides:
+      - goos: linux
+        files:
+          - name: ollama
+            src: bin/ollama
+  - version_constraint: semver("> 0.5.7")
+    overrides:
+      - goos: linux
+        files:
+          - name: ollama
+            src: bin/ollama
+  - version_constraint: semver("> 0.3.6")
+    overrides:
+      - goos: linux
+        files:
+          - name: ollama
+            src: bin/ollama
+  - version_constraint: semver("> 0.1.32")
+  - version_constraint: semver("> 0.1.29")
+  - version_constraint: semver("> 0.0.21")
+  - version_constraint: semver("> 0.0.12")
+  - version_constraint: semver("<= 0.0.12")
+  - version_constraint: "true"
+    overrides:
+      - goos: linux
+        files:
+          - name: ollama
+            src: bin/ollama
+all_assets_filter: |
+  let words = ["rocm", "jetpack"];
+  not any(words, {Asset matches #})
