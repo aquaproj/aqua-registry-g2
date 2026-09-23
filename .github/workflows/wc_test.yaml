@@ -7,23 +7,17 @@
 name: test (workflow_call)
 on: workflow_call
 jobs:
-  test:
-    strategy:
-      fail-fast: false
-      matrix:
-        # Two runners, because the only thing here that depends on the machine is
-        # whether an asset's format can be opened. Everything ubuntu can't open, a
-        # dmg or a pkg, macOS can; a Windows runner would open nothing that ubuntu
-        # doesn't.
-        os:
-          - ubuntu-24.04
-          - macos-15
-    runs-on: ${{ matrix.os }}
-    timeout-minutes: 30
+  # What to check and where. The jobs are worked out from the files rather than fixed
+  # here: an entry for an environment nobody thought of would otherwise go unchecked,
+  # which is the one thing a merge gate must not do.
+  plan:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    outputs:
+      count: ${{ steps.files.outputs.count }}
+      files: ${{ steps.files.outputs.files }}
+      matrix: ${{ steps.matrix.outputs.matrix }}
     env:
-      # The configuration that pins ar2, read from main rather than from the package
-      # branch. It is set for the whole job because the installer needs it too: it is
-      # what tells aqua which commands to put on PATH.
       AQUA_GLOBAL_CONFIG: ${{ github.workspace }}/.registry/aqua/aqua.yaml
     permissions:
       contents: read
@@ -56,15 +50,82 @@ jobs:
             --jq '.[] | select(.status != "removed") | .filename' \
             | grep -E '^versions/[^/]+/registry\.json$' > files.txt || true
           echo "count=$(wc -l < files.txt | tr -d ' ')" >> "$GITHUB_OUTPUT"
+          echo "files=$(tr '\n' ' ' < files.txt)" >> "$GITHUB_OUTPUT"
           cat files.txt
         env:
           GITHUB_TOKEN: ${{ github.token }}
           NUMBER: ${{ github.event.pull_request.number }}
       - if: steps.files.outputs.count == '0'
         run: echo "This pull request changes no registry.json." >> "$GITHUB_STEP_SUMMARY"
-      - if: steps.files.outputs.count != '0'
-        run: xargs ar2 test < files.txt
+      # One job per environment the files describe, on a machine of that environment.
+      # An environment with no runner to answer for it fails here rather than being
+      # passed over quietly.
+      - id: matrix
+        if: steps.files.outputs.count != '0'
+        run: |
+          : > matrix.jsonl
+          while read -r env; do
+            os=${env%%/*}
+            arch=${env##*/}
+            case "$env" in
+              linux/amd64) runner=ubuntu-24.04 ;;
+              linux/arm64) runner=ubuntu-24.04-arm ;;
+              darwin/amd64) runner=macos-15-intel ;;
+              darwin/arm64) runner=macos-15 ;;
+              windows/amd64) runner=windows-2025 ;;
+              windows/arm64) runner=windows-11-arm ;;
+              *)
+                echo "::error::no runner answers for $env, so its entry can't be checked"
+                exit 1
+                ;;
+            esac
+            jq -n -c --arg env "$env" --arg os "$os" --arg arch "$arch" --arg runner "$runner" \
+              '{env: $env, os: $os, arch: $arch, runner: $runner}' >> matrix.jsonl
+          done < <(echo "$FILES" | xargs ar2 test --environments)
+          echo "matrix=$(jq -s -c . matrix.jsonl)" >> "$GITHUB_OUTPUT"
+          jq -s -c . matrix.jsonl
         env:
+          FILES: ${{ steps.files.outputs.files }}
+
+  test:
+    needs: plan
+    if: needs.plan.outputs.count != '0'
+    strategy:
+      fail-fast: false
+      matrix:
+        include: ${{ fromJSON(needs.plan.outputs.matrix) }}
+    runs-on: ${{ matrix.runner }}
+    timeout-minutes: 30
+    defaults:
+      run:
+        # The Windows runners default to PowerShell, and these steps are written for
+        # the shell the other runners use.
+        shell: bash
+    env:
+      AQUA_GLOBAL_CONFIG: ${{ github.workspace }}/.registry/aqua/aqua.yaml
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: main
+          path: .registry
+          persist-credentials: false
+      - uses: aquaproj/aqua-installer@96a9bc20066c5bf5e275b41019cfc165b25f4e2e # v4.0.5
+        with:
+          aqua_version: v2.63.0
+          aqua_opts: -l -a
+      # The entries of this environment, on a machine of this environment. An archive
+      # is opened by its format rather than by its platform, so this is not what makes
+      # the files check work; it is what will let the command be run.
+      - run: echo "$FILES" | xargs ar2 test --os "$OS" --arch "$ARCH"
+        env:
+          OS: ${{ matrix.os }}
+          ARCH: ${{ matrix.arch }}
+          FILES: ${{ needs.plan.outputs.files }}
           # Verifying an attestation asks GitHub about the artifact, and downloading
           # assets without a token runs into the anonymous rate limit.
           GITHUB_TOKEN: ${{ github.token }}
