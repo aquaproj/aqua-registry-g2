@@ -15,6 +15,12 @@ name: index
 # package branch is an orphan carrying only the branch template. index.yaml lives on
 # main and would never be there, so the event fires and nothing runs.
 on:
+  # Every half hour rather than every hour. A scheduled workflow runs when GitHub
+  # gets to it, which at the top of the hour is when everyone else asked too, so an
+  # hourly schedule spends a good deal of its time more than an hour apart. The odd
+  # minutes are for the same reason.
+  schedule:
+    - cron: "13,43 * * * *"
   workflow_dispatch:
 permissions: {}
 jobs:
