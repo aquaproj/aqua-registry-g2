@@ -1,0 +1,28 @@
+---
+# The checks a pull request into main has to pass.
+#
+# Don't add jobs to this file. Add them to wc_main.yaml.
+name: test
+on: pull_request
+permissions: {}
+concurrency:
+  group: ${{ github.workflow }}--${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  test:
+    uses: ./.github/workflows/wc_main.yaml
+    permissions:
+      contents: read
+  # The one check the ruleset requires. It is named apart from the package branches'
+  # check of the same purpose, so that neither can stand in for the other while it
+  # hasn't started.
+  status-check-main:
+    runs-on: ubuntu-24.04
+    if: always() && (contains(needs.*.result, 'failure') || contains(needs.*.result, 'cancelled'))
+    timeout-minutes: 10
+    permissions: {}
+    needs:
+      - test
+    steps:
+      - run: exit 1
+  # Don't add jobs to this file. Add them to wc_main.yaml.

@@ -1,0 +1,52 @@
+---
+name: main (workflow_call)
+on: workflow_call
+jobs:
+  index:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      # index.json is what 'aqua g' searches, and it arrives by a pull request that
+      # merges itself. Nothing else reads it before a user does.
+      - run: python3 .github/scripts/check-index.py index.json
+
+  aqua:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: aquaproj/aqua-installer@96a9bc20066c5bf5e275b41019cfc165b25f4e2e # v4.0.5
+        with:
+          aqua_version: v2.63.0
+      # Installing for real, not linking: it is the checksums that are being checked.
+      # A pull request raising ar2's version without bringing aqua-checksums.json
+      # along leaves the workflows unable to install anything, and this is what says
+      # so before it merges rather than on the next run.
+      - run: aqua install -a
+        env:
+          AQUA_GITHUB_TOKEN: ${{ github.token }}
+
+  actionlint:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: aquaproj/aqua-installer@96a9bc20066c5bf5e275b41019cfc165b25f4e2e # v4.0.5
+        with:
+          aqua_version: v2.63.0
+      - run: actionlint
+        env:
+          AQUA_GITHUB_TOKEN: ${{ github.token }}
