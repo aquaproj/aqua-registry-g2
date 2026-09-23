@@ -1,0 +1,29 @@
+name: microsoft/vscode/code
+type: http
+repo_owner: microsoft
+repo_name: vscode
+description: Visual Studio Code
+link: https://code.visualstudio.com/
+version_overrides:
+  - version_constraint: semver(">= 1.73.0")
+    url: https://update.code.visualstudio.com/{{trimV .Version}}/cli-{{.OS}}-{{.Arch}}/stable
+    format: zip
+    append_ext: false
+    replacements:
+      amd64: x64
+      windows: win32
+    overrides:
+      - goos: linux
+        format: tar.gz
+  - version_constraint: semver("< 1.73.0")
+    no_asset: true
+  - version_constraint: "true"
+    url: https://update.code.visualstudio.com/{{trimV .Version}}/cli-{{.OS}}-{{.Arch}}/stable
+    format: zip
+    append_ext: false
+    replacements:
+      amd64: x64
+      windows: win32
+    overrides:
+      - goos: linux
+        format: tar.gz
