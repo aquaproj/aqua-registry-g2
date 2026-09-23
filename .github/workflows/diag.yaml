@@ -36,13 +36,17 @@ jobs:
         env:
           GH_TOKEN: ${{ steps.branch_token.outputs.token }}
         run: |
-          echo '{"tree":[{"path":".github/workflows/test.yaml","mode":"100644","type":"blob","content":"name: t\non: pull_request\njobs: {}\n"}]}' > tree.json
+          cat > tree.json <<'JSON'
+          {"tree":[{"path":".github/workflows/test.yaml","mode":"100644","type":"blob","content":"name: t\non: pull_request\njobs: {}\n"}]}
+          JSON
           gh api -i -X POST "repos/$GITHUB_REPOSITORY/git/trees" --input tree.json 2>&1 \
             | grep -iE "^HTTP|^x-accepted|^x-oauth|sha|message" | head -10
       - name: A tree holding an ordinary file, for comparison
         env:
           GH_TOKEN: ${{ steps.branch_token.outputs.token }}
         run: |
-          echo '{"tree":[{"path":"README.md","mode":"100644","type":"blob","content":"diag\n"}]}' > tree2.json
+          cat > tree2.json <<'JSON'
+          {"tree":[{"path":"README.md","mode":"100644","type":"blob","content":"diag\n"}]}
+          JSON
           gh api -i -X POST "repos/$GITHUB_REPOSITORY/git/trees" --input tree2.json 2>&1 \
             | grep -iE "^HTTP|^x-accepted|^x-oauth|sha|message" | head -10
