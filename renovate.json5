@@ -1,0 +1,13 @@
+{
+  extends: [
+    "github>suzuki-shunsuke/renovate-config#4.0.0",
+    "github>suzuki-shunsuke/renovate-config:nolimit#4.0.0",
+    "github>aquaproj/aqua-renovate-config#2.13.0",
+  ],
+  // The branch template is copied onto a package branch when the branch is created and
+  // is never updated again, so what it references has to stay a moving target: it calls
+  // the reusable workflow at main so that improving the checks improves every package.
+  // Pinning that call to a commit would freeze each package's CI at the day its branch
+  // was created.
+  ignorePaths: ["template/**"],
+}

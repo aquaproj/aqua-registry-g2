@@ -1,0 +1,26 @@
+---
+# Whatever a pull request should have brought along and didn't.
+#
+# Renovate raises the pinned ar2 version in aqua/aqua.yaml, and aqua won't install a
+# version whose checksum isn't recorded. The checksums are recorded here rather than
+# by hand, which is what makes such a pull request mergeable.
+name: autofix.ci
+on: pull_request
+permissions: {}
+jobs:
+  autofix:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    permissions: {}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          persist-credentials: false
+      - uses: aquaproj/aqua-installer@96a9bc20066c5bf5e275b41019cfc165b25f4e2e # v4.0.5
+        with:
+          aqua_version: v2.63.0
+      - run: aqua upc -prune
+        env:
+          AQUA_GITHUB_TOKEN: ${{ github.token }}
+      - uses: autofix-ci/action@c5b2d67aa2274e7b5a18224e8171550871fc7e4a # v1.3.4
