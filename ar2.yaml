@@ -1,0 +1,10 @@
+---
+# ar2's configuration for this registry. See
+# https://github.com/aquaproj/ar2 for what it means.
+ignored_packages:
+  - name: scenarigo/scenarigo
+    reason: |
+      Its asset name carries the Go version the plugin support was built against,
+      declared as a required variable with no default. The value comes from the
+      machine installing it rather than from the release, so there is no one answer
+      to resolve and publish. aqua-registry (v1) keeps serving it.
