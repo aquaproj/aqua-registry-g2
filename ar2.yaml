@@ -8,3 +8,10 @@ ignored_packages:
       declared as a required variable with no default. The value comes from the
       machine installing it rather than from the release, so there is no one answer
       to resolve and publish. aqua-registry (v1) keeps serving it.
+  - name: bridgecrewio/yor
+    reason: |
+      Its downloads are refused from the addresses CI runs on, so there is no asset to
+      hash or open. aqua-registry (v1) ignores it for the same reason.
+  - name: golang/tools/gorename
+    reason: |
+      The command was deleted upstream: https://github.com/golang/go/issues/69360
