@@ -48,7 +48,7 @@ jobs:
         run: |
           gh api "repos/$GITHUB_REPOSITORY/pulls/$NUMBER/files" --paginate \
             --jq '.[] | select(.status != "removed") | .filename' \
-            | grep -E '^versions/[^/]+/registry\.json$' > files.txt || true
+            | grep -E '^versions/[^/]+/registry-[0-9]+\.json$' > files.txt || true
           echo "count=$(wc -l < files.txt | tr -d ' ')" >> "$GITHUB_OUTPUT"
           echo "files=$(tr '\n' ' ' < files.txt)" >> "$GITHUB_OUTPUT"
           cat files.txt
@@ -56,7 +56,7 @@ jobs:
           GITHUB_TOKEN: ${{ github.token }}
           NUMBER: ${{ github.event.pull_request.number }}
       - if: steps.files.outputs.count == '0'
-        run: echo "This pull request changes no registry.json." >> "$GITHUB_STEP_SUMMARY"
+        run: echo "This pull request changes no generated registry file." >> "$GITHUB_STEP_SUMMARY"
       # One job per environment the files describe, on a machine of that environment.
       # An environment with no runner to answer for it fails here rather than being
       # passed over quietly.
