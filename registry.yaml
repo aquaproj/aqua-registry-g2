@@ -1,0 +1,36 @@
+type: github_release
+repo_owner: earendil-works
+repo_name: pi
+description: Interactive coding agent CLI
+version_overrides:
+  - version_constraint: Version == "v0.12.0"
+    files:
+      - name: pi
+        src: pi-{{.OS}}-{{.Arch}}
+    replacements:
+      amd64: x64
+  - version_constraint: semver(">= 0.46.0")
+    files:
+      - name: pi
+        src: pi/pi
+    replacements:
+      amd64: x64
+    overrides:
+      - goos: windows
+        files:
+          - name: pi
+  - version_constraint: semver(">= 0.12.0")
+    replacements:
+      amd64: x64
+  - version_constraint: semver("< 0.12.0")
+    no_asset: true
+  - version_constraint: "true"
+    files:
+      - name: pi
+        src: pi/pi
+    replacements:
+      amd64: x64
+    overrides:
+      - goos: windows
+        files:
+          - name: pi
