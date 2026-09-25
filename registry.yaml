@@ -1,0 +1,52 @@
+aliases:
+  - name: Jarred-Sumner/bun
+type: github_release
+repo_owner: oven-sh
+repo_name: bun
+description: Incredibly fast JavaScript runtime, bundler, transpiler and package manager – all in one
+version_prefix: bun-v
+files:
+  - name: bun
+  - name: bunx
+version_overrides:
+  - version_constraint: semver("> 1.0.36")
+    files:
+      - name: bun
+        src: '{{.AssetWithoutExt}}/bun'
+      - name: bunx
+        src: '{{.AssetWithoutExt}}/bun'
+        link: bunx
+    replacements:
+      amd64: x64
+      arm64: aarch64
+  - version_constraint: semver("> 0.1.4")
+    files:
+      - name: bun
+        src: '{{.AssetWithoutExt}}/bun'
+      - name: bunx
+        src: '{{.AssetWithoutExt}}/bun'
+        link: bunx
+    replacements:
+      amd64: x64
+      arm64: aarch64
+  - version_constraint: semver("<= 0.1.4")
+    files:
+      - name: bun
+        src: '{{.AssetWithoutExt}}/bun'
+      - name: bunx
+        src: '{{.AssetWithoutExt}}/bun'
+        link: bunx
+    replacements:
+      amd64: x64
+      arm64: aarch64
+  - version_constraint: "true"
+    files:
+      - name: bun
+        src: '{{.AssetWithoutExt}}/bun'
+      - name: bunx
+        src: '{{.AssetWithoutExt}}/bun'
+        link: bunx
+    replacements:
+      amd64: x64
+      arm64: aarch64
+all_assets_filter: not ((Asset matches "profile") or (Asset matches "baseline"))
