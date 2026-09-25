@@ -1,0 +1,136 @@
+type: github_release
+repo_owner: godotengine
+repo_name: godot
+description: Godot Engine – Multi-platform 2D and 3D game engine
+version_overrides:
+  - version_constraint: Version == "1.0-stable"
+    no_asset: true
+  - version_constraint: Version == "2.0.3-stable"
+    files:
+      - name: godot
+        src: '{{.AssetWithoutExt}}'
+    replacements:
+      darwin: osx64
+      windows: win64
+    overrides:
+      - goos: darwin
+        files:
+          - name: godot
+            src: Godot64.app/Contents/MacOS/Godot
+        replacements:
+          amd64: x64
+  - version_constraint: Version == "2.0.4.1-stable"
+    files:
+      - name: godot
+        src: '{{.AssetWithoutExt}}'
+    replacements:
+      darwin: osx
+      windows: win64
+    overrides:
+      - goos: darwin
+        files:
+          - name: godot
+            src: Godot.app/Contents/MacOS/Godot
+  - version_constraint: semver("> 4.2.2-stable")
+    files:
+      - name: godot
+        src: '{{.AssetWithoutExt}}'
+    replacements:
+      darwin: macos
+    overrides:
+      - goos: darwin
+        files:
+          - name: godot
+            src: Godot.app/Contents/MacOS/Godot
+  - version_constraint: semver("> 4.1.4-stable")
+    files:
+      - name: godot
+        src: '{{.AssetWithoutExt}}'
+    replacements:
+      darwin: macos
+      windows: win64
+    overrides:
+      - goos: darwin
+        files:
+          - name: godot
+            src: Godot.app/Contents/MacOS/Godot
+  - version_constraint: semver("> 3.6.1-stable")
+    files:
+      - name: godot
+        src: '{{.AssetWithoutExt}}'
+    replacements:
+      darwin: macos
+      windows: win64
+    overrides:
+      - goos: darwin
+        files:
+          - name: godot
+            src: Godot.app/Contents/MacOS/Godot
+  - version_constraint: semver("> 3.5.3-stable")
+    files:
+      - name: godot
+        src: '{{.AssetWithoutExt}}'
+    replacements:
+      darwin: osx
+      windows: win64
+    overrides:
+      - goos: darwin
+        files:
+          - name: godot
+            src: Godot.app/Contents/MacOS/Godot
+  - version_constraint: semver("> 3.2.3-stable")
+    files:
+      - name: godot
+        src: '{{.AssetWithoutExt}}'
+    replacements:
+      darwin: osx
+      windows: win64
+    overrides:
+      - goos: darwin
+        files:
+          - name: godot
+            src: Godot.app/Contents/MacOS/Godot
+  - version_constraint: semver("> 3.0.6-stable")
+    files:
+      - name: godot
+        src: '{{.AssetWithoutExt}}'
+    replacements:
+      darwin: osx
+      windows: win64
+    overrides:
+      - goos: darwin
+        files:
+          - name: godot
+            src: Godot.app/Contents/MacOS/Godot
+  - version_constraint: semver("> 2.0.2-stable")
+    files:
+      - name: godot
+        src: '{{.AssetWithoutExt}}'
+    replacements:
+      darwin: osx
+      windows: win64
+    overrides:
+      - goos: darwin
+        files:
+          - name: godot
+            src: Godot.app/Contents/MacOS/Godot
+  - version_constraint: semver("<= 2.0.2-stable")
+    files:
+      - name: godot
+        src: '{{.AssetWithoutExt}}'
+    replacements:
+      windows: win64
+  - version_constraint: "true"
+    files:
+      - name: godot
+        src: '{{.AssetWithoutExt}}'
+    replacements:
+      darwin: macos
+    overrides:
+      - goos: darwin
+        files:
+          - name: godot
+            src: Godot.app/Contents/MacOS/Godot
+all_assets_filter: |
+  let words = ["server", "headless", "mono", "android", "editor", "templates", "export", "32"];
+  not any(words, {Asset matches #})
