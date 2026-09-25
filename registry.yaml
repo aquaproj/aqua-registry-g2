@@ -1,0 +1,140 @@
+type: github_release
+repo_owner: neovim
+repo_name: neovim
+description: Vim-fork focused on extensibility and usability
+files:
+  - name: nvim
+version_overrides:
+  - version_constraint: semver("<= 0.1.7") or Version == "v0.2.1"
+    no_asset: true
+  - version_constraint: Version == "v0.2.0"
+    files:
+      - name: nvim
+        src: nvim-osx64/bin/nvim
+    replacements:
+      darwin: macos
+      windows: win64
+    overrides:
+      - goos: windows
+        files:
+          - name: nvim
+            src: Neovim/bin/nvim.exe
+  - version_constraint: semver("<= 0.3.1")
+    files:
+      - name: nvim
+        src: nvim-osx64/bin/nvim
+    replacements:
+      darwin: macos
+      windows: win64
+    overrides:
+      - goos: windows
+        files:
+          - name: nvim
+            src: Neovim/bin/nvim.exe
+  - version_constraint: Version in ["v0.3.6", "v0.4.0"]
+    files:
+      - name: nvim
+        src: '{{.AssetWithoutExt}}/bin/nvim'
+    replacements:
+      darwin: macos
+      linux: linux64
+    overrides:
+      - goos: darwin
+        files:
+          - name: nvim
+            src: nvim-osx64/bin/nvim
+  - version_constraint: semver("<= 0.4.4")
+    files:
+      - name: nvim
+        src: '{{.AssetWithoutExt}}/bin/nvim'
+    replacements:
+      darwin: macos
+      linux: linux64
+      windows: win64
+    overrides:
+      - goos: darwin
+        files:
+          - name: nvim
+            src: nvim-osx64/bin/nvim
+      - goos: windows
+        files:
+          - name: nvim
+            src: Neovim/bin/nvim.exe
+  - version_constraint: semver("<= 0.6.1")
+    files:
+      - name: nvim
+        src: '{{.AssetWithoutExt}}/bin/nvim'
+    replacements:
+      darwin: macos
+      linux: linux64
+      windows: win64
+    overrides:
+      - goos: darwin
+        files:
+          - name: nvim
+            src: nvim-osx64/bin/nvim
+      - goos: windows
+        files:
+          - name: nvim
+            src: Neovim/bin/nvim.exe
+  - version_constraint: Version == "v0.7.0"
+    files:
+      - name: nvim
+        src: '{{.AssetWithoutExt}}/bin/nvim'
+    replacements:
+      darwin: macos
+      linux: linux64
+      windows: win64
+    overrides:
+      - goos: darwin
+        files:
+          - name: nvim
+            src: nvim-osx64/bin/nvim
+  - version_constraint: semver("<= 0.8.3")
+    files:
+      - name: nvim
+        src: '{{.AssetWithoutExt}}/bin/nvim'
+    replacements:
+      darwin: macos
+      linux: linux64
+      windows: win64
+  - version_constraint: semver("<= 0.9.5")
+    files:
+      - name: nvim
+        src: '{{.AssetWithoutExt}}/bin/nvim'
+    replacements:
+      darwin: macos
+      linux: linux64
+      windows: win64
+  - version_constraint: semver("<= 0.10.3")
+    files:
+      - name: nvim
+        src: '{{.AssetWithoutExt}}/bin/nvim'
+    replacements:
+      darwin: macos
+      linux: linux64
+      windows: win64
+  - version_constraint: Version == "v0.10.4"
+    files:
+      - name: nvim
+        src: '{{.AssetWithoutExt}}/bin/nvim'
+    replacements:
+      amd64: x86_64
+      darwin: macos
+      windows: win64
+  - version_constraint: semver("<= 0.11.2")
+    files:
+      - name: nvim
+        src: '{{.AssetWithoutExt}}/bin/nvim'
+    replacements:
+      amd64: x86_64
+      darwin: macos
+      windows: win64
+  - version_constraint: "true"
+    files:
+      - name: nvim
+        src: '{{.AssetWithoutExt}}/bin/nvim'
+    replacements:
+      amd64: x86_64
+      darwin: macos
+      windows: win64
