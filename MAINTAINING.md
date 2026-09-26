@@ -148,20 +148,25 @@ run that commits has to be the workflow, for the reason at the top of this guide
 
 ## How To Fix index.json
 
-`ar2 index` lists every package branch and adds whatever the catalogue is missing. It
-runs on a schedule, twice an hour, so a package whose pull request merged arrives without
-anybody doing anything.
-
-What it does not notice is an entry that is out of date: it asks which packages are
-missing, and a package whose description or aliases changed isn't missing. After editing
-a definition, name the package:
+After editing a definition, run [index.yaml](.github/workflows/index.yaml) and name the
+package:
 
 ```sh
-ar2 index <package name>
+gh workflow run index.yaml -f packages="<package name>..."
 ```
 
-`ar2 validate-index` checks that a name isn't both a package and another package's alias,
-and runs on every pull request into `main`.
+Naming none reconciles the whole catalogue, which is what the schedule does twice an hour: it
+lists every package branch and adds whatever the catalogue is missing, so a package whose
+pull request merged is listed without anybody doing anything.
+
+### What the reconciliation doesn't notice
+
+An entry that is out of date. It asks which packages are missing, and a package whose
+description or aliases changed isn't missing -- which is why a definition edited by hand needs
+the package named.
+
+`ar2 validate-index` checks that a name isn't both a package and another package's alias, and
+runs on every pull request into `main`.
 
 ## How To Fix aliases.json
 
