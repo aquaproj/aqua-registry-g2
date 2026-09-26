@@ -1,0 +1,15 @@
+name: protocolbuffers/protobuf/protoc
+type: github_release
+repo_owner: protocolbuffers
+repo_name: protobuf
+description: Protocol Buffers - Google's data interchange format
+files:
+  - name: protoc
+    src: bin/protoc
+replacements:
+  amd64: x86_64
+  arm64: aarch_64
+  darwin: osx
+  windows: win64
+version_overrides:
+  - version_constraint: "true"
