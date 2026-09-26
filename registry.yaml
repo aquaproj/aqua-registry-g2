@@ -1,0 +1,15 @@
+type: github_release
+repo_owner: juanfont
+repo_name: headscale
+description: An open source, self-hosted implementation of the Tailscale control server
+version_overrides:
+  - version_constraint: Version == "v0.1.0"
+    replacements:
+      amd64: x86_64
+      darwin: Darwin
+      linux: Linux
+      windows: Windows
+  - version_constraint: semver("> 0.10.2")
+  - version_constraint: semver("> 0.3.2")
+  - version_constraint: semver("<= 0.3.2")
+  - version_constraint: "true"
