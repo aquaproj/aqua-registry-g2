@@ -1,0 +1,60 @@
+name: gohugoio/hugo/hugo-extended
+type: github_release
+repo_owner: gohugoio
+repo_name: hugo
+description: The world’s fastest framework for building websites
+files:
+  - name: hugo
+version_overrides:
+  - version_constraint: Version == "v0.139.5"
+    no_asset: true
+  - version_constraint: Version == "v0.88.0"
+    replacements:
+      amd64: 64bit
+      darwin: macOS
+      linux: Linux
+      windows: Windows
+  - version_constraint: Version == "v0.88.1"
+    replacements:
+      amd64: 64bit
+      darwin: macOS
+      linux: Linux
+      windows: Windows
+  - version_constraint: Version == "v0.89.0"
+    replacements:
+      amd64: 64bit
+      darwin: macOS
+      linux: Linux
+      windows: Windows
+  - version_constraint: semver("> 0.152.2")
+    overrides:
+      - goos: darwin
+        files:
+          - name: hugo
+            src: Payload/hugo
+  - version_constraint: semver("> 0.102.3")
+  - version_constraint: semver("> 0.101.0")
+    replacements:
+      amd64: 64bit
+      darwin: macOS
+      linux: Linux
+      windows: Windows
+  - version_constraint: semver("> 0.80.0")
+    replacements:
+      amd64: 64bit
+      darwin: macOS
+      linux: Linux
+      windows: Windows
+  - version_constraint: semver("<= 0.80.0")
+    replacements:
+      amd64: 64bit
+      darwin: macOS
+      linux: Linux
+      windows: Windows
+  - version_constraint: "true"
+    overrides:
+      - goos: darwin
+        files:
+          - name: hugo
+            src: Payload/hugo
+all_assets_filter: (Asset matches "extended") or (Asset matches "checksum")
