@@ -1,0 +1,17 @@
+type: github_release
+repo_owner: duckdb
+repo_name: duckdb
+description: DuckDB is an analytical in-process SQL database management system
+version_overrides:
+  - version_constraint: Version == "v0.1.0"
+    no_asset: true
+  - version_constraint: Version == "v0.2.8"
+  - version_constraint: Version in ["v1.2.0", "v1.2.1", "v1.2.2"]
+  - version_constraint: semver("<= 0.1.8")
+    no_asset: true
+  - version_constraint: semver("<= 0.3.2")
+  - version_constraint: semver("<= 0.4.0")
+  - version_constraint: semver("<= 1.0.0")
+  - version_constraint: semver("<= 1.1.3")
+  - version_constraint: "true"
+all_assets_filter: not ((Asset matches "libduckdb") or (Asset matches "static-lib") or (Asset matches "duckdb_r_"))
