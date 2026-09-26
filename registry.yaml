@@ -1,0 +1,56 @@
+type: github_release
+repo_owner: jesseduffield
+repo_name: lazygit
+description: simple terminal UI for git commands
+version_overrides:
+  - version_constraint: semver("<= 0.1.6") || Version in ["v0.1.12", "v0.1.77"]
+    no_asset: true
+  - version_constraint: Version == "v0.1.7"
+  - version_constraint: semver("<= 0.1.11")
+  - version_constraint: semver("<= 0.1.16")
+    replacements:
+      arm64: arm
+  - version_constraint: Version == "v0.1.22"
+    replacements:
+      amd64: x86_64
+      darwin: Darwin
+      linux: Linux
+  - version_constraint: Version == "v0.1.25"
+    replacements:
+      linux: Linux
+      windows: Windows
+  - version_constraint: semver("<= 0.1.29")
+    replacements:
+      amd64: x86_64
+      darwin: Darwin
+      linux: Linux
+      windows: Windows
+  - version_constraint: semver("<= 0.16.2")
+    replacements:
+      amd64: x86_64
+      darwin: Darwin
+      linux: Linux
+      windows: Windows
+  - version_constraint: semver("<= 0.17.2")
+    no_asset: true
+  - version_constraint: semver("<= 0.24.2")
+    replacements:
+      amd64: x86_64
+      darwin: Darwin
+      linux: Linux
+      windows: Windows
+  - version_constraint: semver("<= 0.34.0")
+    replacements:
+      amd64: x86_64
+      darwin: Darwin
+      linux: Linux
+      windows: Windows
+  - version_constraint: semver("<= 0.53.0")
+    replacements:
+      amd64: x86_64
+      darwin: Darwin
+      linux: Linux
+      windows: Windows
+  - version_constraint: "true"
+    replacements:
+      amd64: x86_64
