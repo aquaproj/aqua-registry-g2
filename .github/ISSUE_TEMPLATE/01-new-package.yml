@@ -1,0 +1,32 @@
+name: Add a New Package
+description: Request to add a new package to the registry
+labels:
+  - new-package
+body:
+  - type: input
+    id: package-name
+    attributes:
+      label: Package name
+      description: Package name
+    validations:
+      required: true
+  - type: input
+    id: source-url
+    attributes:
+      label: Source URL
+      description: Source URL. e.g. https://github.com/aquaproj/aqua
+    validations:
+      required: true
+  - type: input
+    id: commands
+    attributes:
+      label: Installed commands
+      description: Installed commands. If multiple commands are installed, please list them separated by spaces.
+    validations:
+      required: true
+  - type: textarea
+    id: note
+    attributes:
+      label: Note
+    validations:
+      required: false
