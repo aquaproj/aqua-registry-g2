@@ -15,7 +15,18 @@ on:
         description: how much the run says about what it is doing
         required: false
         default: info
+      chain:
+        description: how many more runs follow this one, or "forever"
+        required: false
+        default: "0"
 permissions: {}
+# One run at a time. The chain never makes two by itself -- a run dispatches its
+# successor and the successor waits for it to finish -- but a dispatch by hand while a
+# chain is going would, and two runs generating at once would take the same packages
+# from the top of the same order.
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
 jobs:
   run:
     runs-on: ubuntu-24.04
@@ -35,6 +46,11 @@ jobs:
       # container registry holds none and adds whatever aqua-registry has gained
       # since, so 'ar2 init' isn't part of a scheduled run.
       packages: write
+      # Dispatching the next run of this workflow, and reading whether the runs
+      # before this one failed.
+      actions: write
+      # Saying on the monitoring issue that the chain stopped.
+      issues: write
     steps:
       # For aqua/aqua.yaml, which pins the ar2 version and its checksum. The
       # repository is only read here; ar2 does its own writing through the API with
@@ -65,7 +81,11 @@ jobs:
         with:
           app-id: ${{ vars.AR2_PR_CLIENT_ID }}
           private-key: ${{ secrets.AR2_PR_PRIVATE_KEY }}
-      - run: |
+      - name: record when the run started
+        id: started
+        run: echo "at=$(date +%s)" >> "$GITHUB_OUTPUT"
+      - id: generate
+        run: |
           ar2 run \
             --log-level "$LOG_LEVEL" \
             --limit "$LIMIT" \
@@ -77,3 +97,31 @@ jobs:
           AR2_PR_TOKEN: ${{ steps.pr_token.outputs.token }}
           LIMIT: ${{ inputs.limit }}
           LOG_LEVEL: ${{ inputs.log_level }}
+
+      # The cadence is this, rather than a schedule. A workflow asking for every ten
+      # minutes is triggered every few hours: aqua-registry's own updater, set to
+      # "*/10 * * * *", ran eight times in the last day, three to five hours apart.
+      # A run that dispatches the next one instead gives a cadence of however long a
+      # run takes, which is what the limit was chosen for, and spends no time idle.
+      #
+      # It continues after a failure too. A rate limit or a repository that didn't
+      # answer would otherwise stop the registry until somebody noticed, and what
+      # noticing looks like is the paragraph below.
+      #
+      # Not after a cancellation, which is how a chain is stopped: cancel the run that is
+      # going and no successor is dispatched. A job that hit its timeout counts as
+      # cancelled too, so a run that got stuck ends the chain rather than handing the same
+      # state to another run to get stuck on.
+      - name: dispatch the next run
+        if: ${{ !cancelled() && inputs.chain != '0' }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+          OUTCOME: ${{ steps.generate.outcome }}
+          STARTED_AT: ${{ steps.started.outputs.at }}
+          CHAIN: ${{ inputs.chain }}
+          LIMIT: ${{ inputs.limit }}
+          LOG_LEVEL: ${{ inputs.log_level }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          # The issue whoever watches this repository gets the mail from.
+          ISSUE: "105"
+        run: bash .github/scripts/chain.sh
