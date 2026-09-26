@@ -1,0 +1,74 @@
+type: github_release
+repo_owner: gohugoio
+repo_name: hugo
+description: The world’s fastest framework for building websites
+version_overrides:
+  - version_constraint: Version == "v0.139.5"
+    no_asset: true
+  - version_constraint: Version == "v0.88.0"
+    replacements:
+      amd64: 64bit
+      darwin: macOS
+      linux: Linux
+      windows: Windows
+  - version_constraint: Version == "v0.88.1"
+    replacements:
+      amd64: 64bit
+      arm64: ARM64
+      darwin: macOS
+      linux: Linux
+      windows: Windows
+  - version_constraint: Version == "v0.89.0"
+    replacements:
+      amd64: 64bit
+      arm64: ARM64
+      darwin: macOS
+      linux: Linux
+      windows: Windows
+  - version_constraint: semver("> 0.152.2")
+    overrides:
+      - goos: darwin
+        files:
+          - name: hugo
+            src: Payload/hugo
+  - version_constraint: semver("> 0.102.3")
+  - version_constraint: semver("> 0.101.0")
+    replacements:
+      amd64: 64bit
+      arm64: ARM64
+      darwin: macOS
+      linux: Linux
+      windows: Windows
+  - version_constraint: semver("> 0.87.0")
+    replacements:
+      amd64: 64bit
+      arm64: ARM64
+      darwin: macOS
+      linux: Linux
+      windows: Windows
+  - version_constraint: semver("> 0.84.0")
+    replacements:
+      amd64: 64bit
+      arm64: ARM64
+      darwin: macOS
+      linux: Linux
+      windows: Windows
+  - version_constraint: semver("> 0.80.0")
+    replacements:
+      amd64: 64bit
+      arm64: ARM64
+      darwin: macOS
+      linux: Linux
+      windows: Windows
+  - version_constraint: semver("<= 0.80.0")
+    replacements:
+      amd64: 64bit
+      darwin: macOS
+      linux: Linux
+      windows: Windows
+  - version_constraint: "true"
+    overrides:
+      - goos: darwin
+        files:
+          - name: hugo
+            src: Payload/hugo
