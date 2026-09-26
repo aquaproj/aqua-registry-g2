@@ -52,7 +52,7 @@ jobs:
       - uses: actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1 # v3.2.0
         id: pr_token
         with:
-          app-id: ${{ vars.AR2_PR_CLIENT_ID }}
+          client-id: ${{ vars.AR2_PR_CLIENT_ID }}
           private-key: ${{ secrets.AR2_PR_PRIVATE_KEY }}
       - run: |
           ar2 index \
