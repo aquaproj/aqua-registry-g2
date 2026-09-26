@@ -1,0 +1,36 @@
+type: github_release
+repo_owner: jesseduffield
+repo_name: lazydocker
+description: The lazier way to manage everything docker
+version_overrides:
+  - version_constraint: Version == "v0.11"
+    no_asset: true
+  - version_constraint: Version == "v0.12"
+    replacements:
+      amd64: x86_64
+      darwin: Darwin
+      linux: Linux
+      windows: Windows
+  - version_constraint: semver("> 0.10.0")
+    replacements:
+      amd64: x86_64
+      darwin: Darwin
+      linux: Linux
+      windows: Windows
+  - version_constraint: semver("> 0.7.4")
+    replacements:
+      amd64: x86_64
+      darwin: Darwin
+      linux: Linux
+      windows: Windows
+  - version_constraint: semver("<= 0.7.4")
+    replacements:
+      amd64: x86_64
+      darwin: Darwin
+      linux: Linux
+  - version_constraint: "true"
+    replacements:
+      amd64: x86_64
+      darwin: Darwin
+      linux: Linux
+      windows: Windows
