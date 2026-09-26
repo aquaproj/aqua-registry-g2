@@ -69,7 +69,7 @@ jobs:
       - uses: actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1 # v3.2.0
         id: branch_token
         with:
-          app-id: ${{ vars.AR2_BRANCH_CLIENT_ID }}
+          client-id: ${{ vars.AR2_BRANCH_CLIENT_ID }}
           private-key: ${{ secrets.AR2_BRANCH_PRIVATE_KEY }}
       # The token that commits to the head branch and opens the pull request. A pull
       # request opened or updated with GITHUB_TOKEN gets its checks in an
@@ -79,7 +79,7 @@ jobs:
       - uses: actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1 # v3.2.0
         id: pr_token
         with:
-          app-id: ${{ vars.AR2_PR_CLIENT_ID }}
+          client-id: ${{ vars.AR2_PR_CLIENT_ID }}
           private-key: ${{ secrets.AR2_PR_PRIVATE_KEY }}
       - name: record when the run started
         id: started
