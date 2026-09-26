@@ -76,7 +76,7 @@ gh workflow run ar2.yaml -f limit=<how many package versions> -f chain=forever
 
 A run generates the versions the registry is missing, most starred package first and newest
 version first, and opens one pull request per package. Most of them merge themselves; what to
-do about one that doesn't is [Reviewing pull requests](#reviewing-pull-requests). The job
+do about one that doesn't is [How To Review pull requests](#how-to-review-pull-requests). The job
 summary says what was generated, what wasn't, and how far the registry has got.
 
 To stop a chain, cancel the run that is going.
@@ -175,7 +175,7 @@ alias is a missing `aliases` entry in the package's `registry.yaml`:
 
 A transfer GitHub reports needs none of this. See below.
 
-## Renaming a package
+## How To Rename a package
 
 Usually nothing. A repository that was renamed or transferred is noticed by the run itself:
 the sweep asks GitHub for each package's versions and gets the name the repository answers
@@ -202,7 +202,7 @@ branch's parent, so nothing is copied. The old branch is left behind: deleting i
 administrator's decision, and nothing reads it once the catalogue names the package under its
 new name.
 
-## Ignoring a package
+## How To Ignore a package
 
 A package the registry doesn't take on. Nothing was ever published for it, and the reason
 is why: an asset whose name carries something only the installing machine knows, downloads
@@ -216,7 +216,7 @@ package whose repository is gone stops costing a request every run.
 This is not a package being removed, and the two aren't degrees of the same thing. See
 below.
 
-## Removing a package
+## How To Remove a package
 
 Not something this registry does. What it publishes for a version is meant to stay what it
 was, and somebody's configuration may name the package. Two things override that: a
@@ -260,7 +260,7 @@ step 3 changes that.
 Where the difference matters -- malware -- saying so where people will read it reaches
 them and a registry change doesn't. That is the part to do first.
 
-## Reviewing pull requests
+## How To Review pull requests
 
 Most of them merge themselves, and the trust in that comes from CI rather than from
 anyone's judgement: it downloads every asset the generated files describe, on a machine of
@@ -324,7 +324,7 @@ git hash-object template/.github/workflows/test.yaml
 gh api "repos/aquaproj/aqua-registry-g2/contents/.github/workflows/test.yaml?ref=<branch>" --jq .sha
 ```
 
-## Updating ar2
+## How To Update ar2
 
 Renovate raises the pinned version in `aqua/aqua.yaml`, and autofix.ci records the
 checksums, which is what makes such a pull request mergeable. A bump by hand records them
@@ -336,7 +336,7 @@ aqua upc -prune
 
 Releasing ar2 is a signed tag on its repository; the release workflow does the rest.
 
-## Updating the schema of registry.json
+## How To Update the schema of registry.json
 
 The schema version is the file name. `registry-1.json` is the first, and a change that
 old aqua can't read is `registry-2.json` written beside it rather than an edit to what is
