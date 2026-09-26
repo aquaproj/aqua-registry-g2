@@ -24,6 +24,11 @@ on:
   schedule:
     - cron: "13,43 * * * *"
   workflow_dispatch:
+    inputs:
+      packages:
+        description: packages whose entries to read out of their definitions again, separated by spaces; empty reconciles the whole catalogue
+        required: false
+        default: ""
 permissions: {}
 jobs:
   index:
@@ -55,9 +60,18 @@ jobs:
           client-id: ${{ vars.AR2_PR_CLIENT_ID }}
           private-key: ${{ secrets.AR2_PR_PRIVATE_KEY }}
       - run: |
+          # The packages are one field and each is its own argument, so they are split on
+          # spaces rather than interpolated into the command line. Empty leaves the
+          # arguments off, which is the reconciliation the schedule runs.
+          args=()
+          for package in $PACKAGES; do
+            args+=("$package")
+          done
           ar2 index \
             --g2-owner "${GITHUB_REPOSITORY%/*}" \
-            --g2-repo "${GITHUB_REPOSITORY#*/}"
+            --g2-repo "${GITHUB_REPOSITORY#*/}" \
+            "${args[@]}"
         env:
           GITHUB_TOKEN: ${{ github.token }}
           AR2_PR_TOKEN: ${{ steps.pr_token.outputs.token }}
+          PACKAGES: ${{ inputs.packages }}
