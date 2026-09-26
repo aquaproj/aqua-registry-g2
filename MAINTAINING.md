@@ -297,16 +297,43 @@ itself the answer.
 
 ## The package branch template
 
-`template/` is copied when a branch is created and never again. The CI a package branch
-runs is therefore the CI its branch was created with, and changing the template does not
-reach the branches that already exist. Until something reconciles them, a change to the
-checks has to be treated as applying to new packages only.
+`template/` is copied when a branch is created and never again. Whatever it holds is
+therefore frozen on every branch that exists, and changing it later is a commit to each of
+them, one pull request each. There are dozens of branches now and there will be thousands,
+so the rule is to copy as little as can be copied and to read the rest from `main`.
+
+The CI is where that is possible, and it is worth seeing why. A `pull_request` workflow is
+read from the branch the pull request targets, so it cannot live on `main` -- but it can be
+a caller that does nothing except invoke a reusable workflow there, which is what the
+template's one file is: it calls `wc_test.yaml@main` and holds no checks of its own. The
+checks are therefore on `main`, where changing them reaches every package at once, and what
+is frozen is only the caller -- its trigger, the ref it calls, the permissions it passes,
+and the `status-check` job the ruleset requires. Nothing has needed to change there.
+
+Anything else that wants to be in the template deserves the same question first: what about
+this will have to change, and can that part be read from `main` instead of copied? A file
+that genuinely has to be copied is a file to be sure about before thousands of branches
+carry it.
+
+Whether the branches are still in step can be read without cloning them, since the file is
+identical everywhere when it is:
+
+```sh
+git hash-object template/.github/workflows/test.yaml
+gh api "repos/aquaproj/aqua-registry-g2/contents/.github/workflows/test.yaml?ref=<branch>" --jq .sha
+```
 
 ## Updating ar2
 
 Renovate raises the pinned version in `aqua/aqua.yaml`, and autofix.ci records the
-checksum, which is what makes such a pull request mergeable. Releasing ar2 is a signed
-tag on its repository; the release workflow does the rest.
+checksums, which is what makes such a pull request mergeable. A bump by hand records them
+in the same commit instead:
+
+```sh
+aqua upc -prune
+```
+
+Releasing ar2 is a signed tag on its repository; the release workflow does the rest.
 
 ## Updating the schema of registry.json
 
