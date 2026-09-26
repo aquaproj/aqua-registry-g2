@@ -37,20 +37,29 @@ head branches and opens the pull requests, because a pull request opened with
 ## How To Add packages
 
 ```sh
-gh workflow run add_package.yaml -f name=<package name>
+gh workflow run add_package.yaml -f name=<package name> -f commands="<command>..."
+gh workflow run add_package.yaml -f name=<package name> -f repo=<owner>/<name> -f dry_run=true
 ```
 
-Not there yet. It goes in before the registry is used in production, along with the ar2
-command behind it: the state is built from aqua-registry's package list and a run works
-through that order, so a package aqua-registry doesn't have has no way in today.
+A request for a package aqua-registry already has needs none of this: the state is built
+from its list, so the order reaches the package on its own. This is for a package
+aqua-registry doesn't have, which otherwise has no way in at all.
 
-What it will do is scaffold the definition and put the package into the state. Generating
-it is then the ordinary path rather than part of adding it, because a package new to the
-state joins the order at the current lap rather than behind everything, so the next run
-reaches it.
+It writes two things. The definition, as a pull request into the package's branch, and the
+package's place in the order. Nothing is generated: the package joins at the current lap,
+so the next run of the ar2 workflow reaches it and opens the pull requests for its
+versions.
 
-A request for a package aqua-registry already has needs none of this. The order reaches
-it.
+What to check on the definition is the repository and the commands. Everything else about
+a package is read from its releases, so the definition says only what a release can't:
+which of its files are the commands. `commands` defaults to the last part of the package
+name, which is also what the inference guesses, so it is worth giving when the package
+installs something else or more than one thing. `repo` is for a package whose name isn't
+its repository, such as `kubernetes/kubernetes/kubectl`.
+
+Either half may be there already, so this is dispatched again after a failure rather than
+unpicked. A branch that has a definition keeps it, and a package that is in the order
+keeps its turns.
 
 ## How To Support a new version
 
@@ -58,13 +67,25 @@ it.
 newest version first, and opens one pull request per package. Dispatch it:
 
 ```sh
-gh workflow run ar2.yaml -f limit=<how many package versions>
+gh workflow run ar2.yaml -f limit=<how many package versions>          # one run
+gh workflow run ar2.yaml -f limit=<how many package versions> -f chain=forever
 ```
 
-There is no schedule yet. One goes on before the registry is used in production; until
-then the backfill advances when somebody dispatches it, which is deliberate while ar2 is
-still changing. `--limit` bounds the versions attempted, not the versions generated, so a
-package that fails every time can't spend a whole run.
+There is no schedule. A run dispatches the next one instead, which is what `chain` asks
+for: `forever` keeps going, a number counts down, and `0` is a single run. The cadence is
+then however long a run takes rather than whenever GitHub gets to a cron -- a workflow
+asking for every ten minutes is triggered every few hours -- and the registry spends no
+time idle.
+
+To stop a chain, cancel the run that is going. Nothing is dispatched after a cancellation,
+and a run that hit its timeout counts as one, so a run that got stuck ends the chain
+rather than handing the same state to another run to get stuck on. A failure does not end
+it, because a rate limit or a repository that didn't answer would otherwise stop the
+registry until somebody noticed; five failures in a row do, with a comment on the
+monitoring issue.
+
+`limit` bounds the versions attempted, not the versions generated, so a package that fails
+every time can't spend a whole run.
 
 What to read afterwards: the job summary lists what was generated and what wasn't, and
 the pull requests it opened either merge themselves or are waiting for a reason. See
@@ -108,12 +129,13 @@ says it does, not that replacing the old one was right.
 It commits, so it is dispatched rather than run by hand:
 
 ```sh
-gh workflow run regenerate.yaml -f name=<package name> -f versions=<versions>
+gh workflow run regenerate.yaml -f name=<package name> -f versions="<version>..."
+gh workflow run regenerate.yaml -f name=<package name> -f dry_run=true
 ```
 
-That workflow isn't there yet; it goes in before the registry is used in production. Until
-then `--dry-run` is what can be run locally, and it answers the question that matters
-most: whether anything would change at all.
+Naming no version does every version the registry holds, which for a package with a long
+history is a large pull request. `dry_run` says which versions would change and commits
+nothing, and is the same question `ar2 regenerate --dry-run` answers locally.
 
 A version whose upstream release was changed after the fact is a different problem.
 Regenerating it produces a different checksum for the same version, which is what a
@@ -178,9 +200,6 @@ It commits and it creates a branch, so it needs both Apps, and therefore a workf
 ```sh
 gh workflow run rename.yaml -f from=<old package name> -f to=<new package name>
 ```
-
-Not there yet either. It goes in with the others, before the registry is used in
-production.
 
 ## Ignoring a package
 

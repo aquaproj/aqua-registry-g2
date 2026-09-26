@@ -1,0 +1,73 @@
+---
+name: rename
+# Move a package to the name it has now.
+#
+# A repository that GitHub reports under another name is moved by the run itself, which
+# asks for each package's versions and gets the name the repository answers to. This is
+# for the rename GitHub can't see: a repository that starts publishing several commands,
+# say, where the package's name changes and the repository's doesn't.
+#
+# The branch is carried over rather than the versions generated again, with the old commit
+# as the new branch's parent, and the old name becomes an alias so a configuration still
+# asking for it keeps working.
+on:
+  workflow_dispatch:
+    inputs:
+      from:
+        description: the name the registry holds the package under now
+        required: true
+      to:
+        description: the name to hold it under
+        required: true
+      log_level:
+        description: how much the run says about what it is doing
+        required: false
+        default: info
+permissions: {}
+# Two renames at once would both write the catalogue, and the second would commit over
+# what the first added to it.
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+jobs:
+  rename:
+    runs-on: ubuntu-24.04
+    # The same environment as a run: the new name needs a branch created, which is what
+    # the branch key is for.
+    environment: ar2
+    timeout-minutes: 15
+    permissions:
+      # Creating the branch under the new name and committing the catalogue.
+      contents: write
+      # Opening the catalogue's pull request.
+      pull-requests: write
+    steps:
+      # For aqua/aqua.yaml, which pins the ar2 version and its checksum.
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: aquaproj/aqua-installer@96a9bc20066c5bf5e275b41019cfc165b25f4e2e # v4.0.5
+        with:
+          aqua_version: v2.63.0
+      - uses: actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1 # v3.2.0
+        id: branch_token
+        with:
+          client-id: ${{ vars.AR2_BRANCH_CLIENT_ID }}
+          private-key: ${{ secrets.AR2_BRANCH_PRIVATE_KEY }}
+      - uses: actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1 # v3.2.0
+        id: pr_token
+        with:
+          client-id: ${{ vars.AR2_PR_CLIENT_ID }}
+          private-key: ${{ secrets.AR2_PR_PRIVATE_KEY }}
+      - run: |
+          ar2 rename "$FROM" "$TO" \
+            --log-level "$LOG_LEVEL" \
+            --g2-owner "${GITHUB_REPOSITORY%/*}" \
+            --g2-repo "${GITHUB_REPOSITORY#*/}"
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          AR2_BRANCH_TOKEN: ${{ steps.branch_token.outputs.token }}
+          AR2_PR_TOKEN: ${{ steps.pr_token.outputs.token }}
+          FROM: ${{ inputs.from }}
+          TO: ${{ inputs.to }}
+          LOG_LEVEL: ${{ inputs.log_level }}

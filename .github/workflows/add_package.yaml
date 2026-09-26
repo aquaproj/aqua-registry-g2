@@ -1,0 +1,105 @@
+---
+name: add a package
+# Put a package the registry doesn't have into it, which is what an issue asking for one
+# is answered with.
+#
+# It writes two things: the package's definition, on a branch of its own as a pull
+# request, and its place in the order the runs work through. Nothing is generated here --
+# the package joins the order at the current lap, so the next run of the ar2 workflow
+# reaches it.
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        description: the aqua package name, such as cli/cli
+        required: true
+      repo:
+        description: the repository the versions come from, if it isn't the package name
+        required: false
+        default: ""
+      commands:
+        description: the executables the package installs, separated by spaces
+        required: false
+        default: ""
+      dry_run:
+        description: render the definition and write nothing
+        type: boolean
+        required: false
+        default: false
+      log_level:
+        description: how much the run says about what it is doing
+        required: false
+        default: info
+permissions: {}
+# The state is read, changed and written back, so two of these at once would lose one of
+# the packages. They are dispatched by a person, one issue at a time, but a second
+# dispatch while the first is still going is the ordinary way that happens.
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+jobs:
+  add:
+    runs-on: ubuntu-24.04
+    # The same environment as a run: this creates a package branch and opens a pull
+    # request, so it needs the same two keys.
+    environment: ar2
+    timeout-minutes: 15
+    permissions:
+      # Creating the package branch and committing to the head branch.
+      contents: write
+      # Opening the pull request.
+      pull-requests: write
+      # Putting the package into the order.
+      packages: write
+    steps:
+      # For aqua/aqua.yaml, which pins the ar2 version and its checksum. The repository
+      # is only read here; ar2 does its own writing through the API with the tokens
+      # below, so the checkout keeps no credentials.
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: aquaproj/aqua-installer@96a9bc20066c5bf5e275b41019cfc165b25f4e2e # v4.0.5
+        with:
+          aqua_version: v2.63.0
+      # A package that isn't in the registry has no branch, and creating one has to get
+      # past the ruleset requiring status checks that a brand new branch can't have.
+      - uses: actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1 # v3.2.0
+        id: branch_token
+        with:
+          client-id: ${{ vars.AR2_BRANCH_CLIENT_ID }}
+          private-key: ${{ secrets.AR2_BRANCH_PRIVATE_KEY }}
+      # A pull request opened with GITHUB_TOKEN gets its checks in an approval-required
+      # state, so nothing would run until someone pressed a button.
+      - uses: actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1 # v3.2.0
+        id: pr_token
+        with:
+          client-id: ${{ vars.AR2_PR_CLIENT_ID }}
+          private-key: ${{ secrets.AR2_PR_PRIVATE_KEY }}
+      # Each command is its own --command, and the input is one field, so the arguments
+      # are built rather than interpolated. Nothing from the input reaches a shell word
+      # either way: it is read from the environment and split on spaces.
+      - run: |
+          args=()
+          for command in $COMMANDS; do
+            args+=(--command "$command")
+          done
+          if [ -n "$REPO" ]; then
+            args+=(--repo "$REPO")
+          fi
+          if [ "$DRY_RUN" = "true" ]; then
+            args+=(--dry-run)
+          fi
+          ar2 add "$NAME" \
+            --log-level "$LOG_LEVEL" \
+            --g2-owner "${GITHUB_REPOSITORY%/*}" \
+            --g2-repo "${GITHUB_REPOSITORY#*/}" \
+            "${args[@]}"
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          AR2_BRANCH_TOKEN: ${{ steps.branch_token.outputs.token }}
+          AR2_PR_TOKEN: ${{ steps.pr_token.outputs.token }}
+          NAME: ${{ inputs.name }}
+          REPO: ${{ inputs.repo }}
+          COMMANDS: ${{ inputs.commands }}
+          DRY_RUN: ${{ inputs.dry_run }}
+          LOG_LEVEL: ${{ inputs.log_level }}
