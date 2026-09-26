@@ -1,0 +1,28 @@
+name: gohugoio/hugo/hugo-extended-withdeploy
+type: github_release
+repo_owner: gohugoio
+repo_name: hugo
+description: The world’s fastest framework for building websites
+files:
+  - name: hugo
+version_overrides:
+  - version_constraint: Version == "v0.139.5"
+    no_asset: true
+  - version_constraint: Version == "v0.137.0"
+  - version_constraint: semver("> 0.152.2")
+    overrides:
+      - goos: darwin
+        files:
+          - name: hugo
+            src: Payload/hugo
+  - version_constraint: semver("> 0.138.0")
+  - version_constraint: semver(">= 0.137.0")
+  - version_constraint: semver("< 0.137.0")
+    no_asset: true
+  - version_constraint: "true"
+    overrides:
+      - goos: darwin
+        files:
+          - name: hugo
+            src: Payload/hugo
+all_assets_filter: (Asset matches "extended_withdeploy") or (Asset matches "checksum")
