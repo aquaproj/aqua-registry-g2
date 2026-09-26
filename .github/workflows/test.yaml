@@ -1,0 +1,35 @@
+---
+# The CI of a package branch.
+#
+# A pull_request workflow is read from the branch the pull request targets, so this
+# has to be on the package branch itself rather than on main. It is copied here when
+# the branch is created and is never updated again, which is why it holds no checks
+# of its own: what it calls lives on main, where it can be improved for every package
+# at once.
+#
+# Don't add jobs to this file. Add them to wc_test.yaml on main.
+name: test
+on: pull_request
+permissions: {}
+jobs:
+  test:
+    # A reusable workflow in the same repository is usually called by a relative path,
+    # but that resolves against this branch, which holds only this file. The full form
+    # reads it from main.
+    uses: aquaproj/aqua-registry-g2/.github/workflows/wc_test.yaml@main
+    permissions:
+      contents: read
+      pull-requests: read
+  # The one check the ruleset requires. It fails when the call above didn't pass,
+  # and a skipped check counts as a passing one, so this is what decides the merge
+  # however the checks on main change.
+  status-check:
+    runs-on: ubuntu-24.04
+    if: always() && (contains(needs.*.result, 'failure') || contains(needs.*.result, 'cancelled'))
+    timeout-minutes: 10
+    permissions: {}
+    needs:
+      - test
+    steps:
+      - run: exit 1
+  # Don't add jobs to this file. Add them to wc_test.yaml on main.
