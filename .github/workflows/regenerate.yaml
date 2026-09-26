@@ -1,0 +1,83 @@
+---
+name: regenerate
+# Generate again what the registry already holds, for when a definition turns out wrong.
+#
+# What the registry serves is frozen per version, so a definition that was wrong is wrong
+# in every file generated under it, and a run won't touch them: it generates what is
+# missing. Fix registry.yaml on the package's branch first, then dispatch this.
+#
+# Only the versions whose file actually changes are committed, so dispatching it for a
+# package where nothing moved comes to nothing.
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        description: the aqua package name, such as cli/cli
+        required: true
+      versions:
+        description: the versions to generate again, separated by spaces; empty means all of them
+        required: false
+        default: ""
+      dry_run:
+        description: say which versions would change and commit nothing
+        type: boolean
+        required: false
+        default: false
+      log_level:
+        description: how much the run says about what it is doing
+        required: false
+        default: info
+permissions: {}
+# One at a time for a reason a run doesn't have: two of these for the same package would
+# commit to the same head branch, and the second would reset what the first put there.
+concurrency:
+  group: ${{ github.workflow }}--${{ inputs.name }}
+  cancel-in-progress: false
+jobs:
+  regenerate:
+    runs-on: ubuntu-24.04
+    environment: ar2
+    timeout-minutes: 30
+    permissions:
+      # Committing to the head branch.
+      contents: write
+      # Opening the pull request.
+      pull-requests: write
+    steps:
+      # For aqua/aqua.yaml, which pins the ar2 version and its checksum.
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: aquaproj/aqua-installer@96a9bc20066c5bf5e275b41019cfc165b25f4e2e # v4.0.5
+        with:
+          aqua_version: v2.63.0
+      # No branch token, although this environment holds the key: a regeneration is for a
+      # package the registry already holds, so the branch is there and creating one is
+      # something it has no business being able to do.
+      - uses: actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1 # v3.2.0
+        id: pr_token
+        with:
+          client-id: ${{ vars.AR2_PR_CLIENT_ID }}
+          private-key: ${{ secrets.AR2_PR_PRIVATE_KEY }}
+      # The versions are one field and each is its own argument, so they are split on
+      # spaces rather than interpolated into the command line.
+      - run: |
+          args=()
+          for version in $VERSIONS; do
+            args+=("$version")
+          done
+          if [ "$DRY_RUN" = "true" ]; then
+            args+=(--dry-run)
+          fi
+          ar2 regenerate "$NAME" \
+            --log-level "$LOG_LEVEL" \
+            --g2-owner "${GITHUB_REPOSITORY%/*}" \
+            --g2-repo "${GITHUB_REPOSITORY#*/}" \
+            "${args[@]}"
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          AR2_PR_TOKEN: ${{ steps.pr_token.outputs.token }}
+          NAME: ${{ inputs.name }}
+          VERSIONS: ${{ inputs.versions }}
+          DRY_RUN: ${{ inputs.dry_run }}
+          LOG_LEVEL: ${{ inputs.log_level }}
