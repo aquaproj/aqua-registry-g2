@@ -1,0 +1,40 @@
+type: github_release
+repo_owner: nektos
+repo_name: act
+description: Run your GitHub Actions locally
+version_overrides:
+  - version_constraint: semver("> 0.2.24")
+    replacements:
+      amd64: x86_64
+      darwin: Darwin
+      linux: Linux
+      windows: Windows
+  - version_constraint: semver("> 0.2.22")
+    replacements:
+      amd64: x86_64
+      darwin: Darwin
+      linux: Linux
+      windows: Windows
+  - version_constraint: semver("> 0.2.3")
+    replacements:
+      amd64: x86_64
+      darwin: Darwin
+      linux: Linux
+      windows: Windows
+  - version_constraint: semver("> 0.1.3")
+    replacements:
+      amd64: x86_64
+      darwin: Darwin
+      linux: Linux
+  - version_constraint: semver("<= 0.1.3")
+    replacements:
+      amd64: x86_64
+      darwin: Darwin
+      linux: Linux
+      windows: Windows
+  - version_constraint: "true"
+    replacements:
+      amd64: x86_64
+      darwin: Darwin
+      linux: Linux
+      windows: Windows
