@@ -1,0 +1,67 @@
+---
+name: remove a package
+# Stop the registry serving a package.
+#
+# Not something the registry does as a rule: what it publishes for a version is meant to
+# stay what it was, and somebody's configuration may name the package. Two things override
+# that -- a package aqua can't install whatever is generated for it, and malware.
+#
+# It opens two pull requests, one into main carrying the registry's configuration and the
+# catalogue, and one into the package's branch taking the generated files away. The first
+# has to merge first, or the next run generates the files again; the second says so.
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        description: the aqua package name to stop serving
+        required: true
+      reason:
+        description: why the registry stops serving it; it goes into ignored_packages
+        required: true
+      log_level:
+        description: how much the run says about what it is doing
+        required: false
+        default: info
+permissions: {}
+# It reads the registry's configuration and the catalogue, changes them and commits them
+# back, so two at once would lose one of the two removals.
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+jobs:
+  remove:
+    runs-on: ubuntu-24.04
+    environment: ar2
+    timeout-minutes: 15
+    permissions:
+      # Committing to the removal branch and to the package's head branch.
+      contents: write
+      # Opening the two pull requests.
+      pull-requests: write
+    steps:
+      # For aqua/aqua.yaml, which pins the ar2 version and its checksum.
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: aquaproj/aqua-installer@96a9bc20066c5bf5e275b41019cfc165b25f4e2e # v4.0.5
+        with:
+          aqua_version: v2.63.0
+      # No branch token, although this environment holds the key: a package being removed
+      # is one the registry holds, so every branch this touches is already there.
+      - uses: actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1 # v3.2.0
+        id: pr_token
+        with:
+          client-id: ${{ vars.AR2_PR_CLIENT_ID }}
+          private-key: ${{ secrets.AR2_PR_PRIVATE_KEY }}
+      - run: |
+          ar2 remove "$NAME" \
+            --reason "$REASON" \
+            --log-level "$LOG_LEVEL" \
+            --g2-owner "${GITHUB_REPOSITORY%/*}" \
+            --g2-repo "${GITHUB_REPOSITORY#*/}"
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          AR2_PR_TOKEN: ${{ steps.pr_token.outputs.token }}
+          NAME: ${{ inputs.name }}
+          REASON: ${{ inputs.reason }}
+          LOG_LEVEL: ${{ inputs.log_level }}
