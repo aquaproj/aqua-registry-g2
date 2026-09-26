@@ -281,8 +281,19 @@ aqua-registry has gained since, so `ar2 init` is not part of ordinary operation 
 for the first time, or for rebuilding one that was lost. A run that finds no state builds
 it from scratch.
 
-There is no way to read it yet, which is what "why has this package not been generated"
-needs answering with.
+Reading it needs no workflow, since it writes nothing:
+
+```sh
+ar2 state --repository aquaproj/aqua-registry-g2
+ar2 state --repository aquaproj/aqua-registry-g2 <package name>...
+```
+
+Without a name it says how far the registry has got, which every run also writes into its
+job summary. With one it answers the question an issue asks -- why has this package not
+been generated -- with the things that decide it: how many turns it has had, how far behind
+the order that leaves it, whether it already holds every version the last sweep saw, and
+whether its history has ever been walked. A name the order doesn't hold says so, which is
+itself the answer.
 
 ## The package branch template
 
