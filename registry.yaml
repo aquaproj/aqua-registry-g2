@@ -1,0 +1,76 @@
+type: github_release
+repo_owner: astral-sh
+repo_name: uv
+description: An extremely fast Python package installer and resolver, written in Rust
+files:
+  - name: uv
+  - name: uvx
+github_artifact_attestations:
+  signer_workflow: astral-sh/uv/.github/workflows/release.yml
+version_overrides:
+  - version_constraint: semver("<= 0.2.19")
+    files:
+      - name: uv
+        src: '{{.AssetWithoutExt}}/uv'
+    replacements:
+      amd64: x86_64
+      arm64: aarch64
+      darwin: apple-darwin
+      linux: unknown-linux-musl
+      windows: pc-windows-msvc
+    overrides:
+      - goos: windows
+        files:
+          - name: uv
+  - version_constraint: Version == "0.2.20"
+    files:
+      - name: uv
+        src: '{{.AssetWithoutExt}}/uv'
+      - name: uvx
+        src: '{{.AssetWithoutExt}}/uvx'
+    replacements:
+      amd64: x86_64
+      arm64: aarch64
+      darwin: apple-darwin
+      linux: unknown-linux-musl
+      windows: pc-windows-msvc
+    overrides:
+      - goos: windows
+        files:
+          - name: uv
+  - version_constraint: semver("<= 0.9.7") || Version in ["0.9.11", "0.11.9"]
+    files:
+      - name: uv
+        src: '{{.AssetWithoutExt}}/uv'
+      - name: uvx
+        src: '{{.AssetWithoutExt}}/uvx'
+    replacements:
+      amd64: x86_64
+      arm64: aarch64
+      darwin: apple-darwin
+      linux: unknown-linux-musl
+      windows: pc-windows-msvc
+    overrides:
+      - goos: windows
+        files:
+          - name: uv
+          - name: uvx
+  - version_constraint: "true"
+    files:
+      - name: uv
+        src: '{{.AssetWithoutExt}}/uv'
+      - name: uvx
+        src: '{{.AssetWithoutExt}}/uvx'
+    replacements:
+      amd64: x86_64
+      arm64: aarch64
+      darwin: apple-darwin
+      linux: unknown-linux-musl
+      windows: pc-windows-msvc
+    github_artifact_attestations:
+      signer_workflow: astral-sh/uv/.github/workflows/release.yml
+    overrides:
+      - goos: windows
+        files:
+          - name: uv
+          - name: uvx
