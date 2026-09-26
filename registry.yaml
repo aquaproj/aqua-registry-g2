@@ -1,0 +1,77 @@
+type: github_release
+repo_owner: sharkdp
+repo_name: fd
+description: A simple, fast and user-friendly alternative to 'find'
+files:
+  - name: fd
+    src: '{{.AssetWithoutExt}}/fd'
+version_overrides:
+  - version_constraint: Version == "v10.4.0"
+    no_asset: true
+  - version_constraint: Version == "v1.1.0"
+  - version_constraint: Version == "v4.0.0"
+    replacements:
+      amd64: x86_64
+      windows: pc-windows-msvc
+    overrides:
+      - goos: windows
+        files:
+          - name: fd
+  - version_constraint: Version == "v10.0.0"
+    replacements:
+      amd64: x86_64
+      darwin: apple-darwin
+      linux: unknown-linux-musl
+      windows: pc-windows-msvc
+  - version_constraint: Version == "v10.3.0"
+    replacements:
+      amd64: x86_64
+      arm64: aarch64
+      darwin: apple-darwin
+      linux: unknown-linux-musl
+      windows: pc-windows-msvc
+  - version_constraint: semver("> 10.4.2")
+    replacements:
+      amd64: x86_64
+      arm64: aarch64
+      darwin: apple-darwin
+      linux: unknown-linux-musl
+      windows: pc-windows-msvc
+  - version_constraint: semver("> 10.2.0")
+    replacements:
+      amd64: x86_64
+      arm64: aarch64
+      darwin: apple-darwin
+      linux: unknown-linux-musl
+      windows: pc-windows-msvc
+  - version_constraint: semver("> 9.0.0")
+    replacements:
+      amd64: x86_64
+      arm64: aarch64
+      darwin: apple-darwin
+      linux: unknown-linux-musl
+      windows: pc-windows-msvc
+  - version_constraint: semver("> 8.2.1")
+    replacements:
+      amd64: x86_64
+      darwin: apple-darwin
+      windows: pc-windows-msvc
+  - version_constraint: semver("> 3.1.0")
+    replacements:
+      amd64: x86_64
+      darwin: apple-darwin
+      linux: unknown-linux-musl
+      windows: pc-windows-msvc
+    overrides:
+      - goos: windows
+        files:
+          - name: fd
+  - version_constraint: semver("<= 3.1.0")
+    error_message: The version is too old. Please upgrade to a newer version.
+  - version_constraint: "true"
+    replacements:
+      amd64: x86_64
+      arm64: aarch64
+      darwin: apple-darwin
+      linux: unknown-linux-musl
+      windows: pc-windows-msvc
