@@ -1,0 +1,34 @@
+aliases:
+  - name: block/goose
+type: github_release
+repo_owner: aaif-goose
+repo_name: goose
+description: an open source, extensible AI agent that goes beyond code suggestions - install, execute, edit, and test with any LLM
+github_artifact_attestations:
+  signer_workflow: aaif-goose/goose/.github/workflows/release.yml
+version_overrides:
+  - version_constraint: semver("> 1.29.1")
+    replacements:
+      amd64: x86_64
+      arm64: aarch64
+      darwin: apple-darwin
+      linux: unknown-linux-gnu
+    github_artifact_attestations:
+      signer_workflow: aaif-goose/goose/.github/workflows/release.yml
+  - version_constraint: semver(">= 1.0.0")
+    replacements:
+      amd64: x86_64
+      arm64: aarch64
+      darwin: apple-darwin
+      linux: unknown-linux-gnu
+  - version_constraint: semver("< 1.0.0")
+    error_message: |
+      Please use a version later than v1.0.
+  - version_constraint: "true"
+    replacements:
+      amd64: x86_64
+      arm64: aarch64
+      darwin: apple-darwin
+      linux: unknown-linux-gnu
+    github_artifact_attestations:
+      signer_workflow: aaif-goose/goose/.github/workflows/release.yml
