@@ -1,0 +1,14 @@
+type: github_release
+repo_owner: aaif-goose
+repo_name: goose
+description: "an open source, extensible AI agent that goes beyond code suggestions - install, execute, edit, and test with any LLM"
+aliases:
+  - name: block/goose
+# The release carries the desktop application as well as the command line one:
+# Goose-darwin-arm64.zip and Goose-win32-x64.zip hold an application bundle with the
+# executable somewhere inside it, and the inference took them for the package. It also
+# carries source archives, rpms, and a Vulkan build of each Linux target. What the package
+# is is the tarball per target triple, which is what aqua-registry has always installed.
+all_assets_filter: Asset matches "^goose-(x86_64|aarch64)-(apple-darwin|unknown-linux-gnu)\\.tar\\.bz2$"
+files:
+  - name: goose
