@@ -114,19 +114,9 @@ usually follow:
 
 ## How To Fix registry.json
 
-Never by hand. Fix `registry.yaml` first, then generate the affected versions again.
-
-```sh
-ar2 regenerate <package name> [<version>...]   # naming none does every version held
-ar2 regenerate <package name> --dry-run        # which versions would change
-```
-
-Only the versions whose file actually changes are committed, so pointing it at a whole
-package to find out whether anything moved comes to nothing when nothing did. Auto-merge
-is never turned on for what it opens: CI can say the new file describes the release it
-says it does, not that replacing the old one was right.
-
-It commits, so it is dispatched rather than run by hand:
+Never by hand. Fix `registry.yaml` first, then run
+[regenerate.yaml](.github/workflows/regenerate.yaml) to generate the affected versions
+again:
 
 ```sh
 gh workflow run regenerate.yaml -f name=<package name> -f versions="<version>..."
@@ -135,12 +125,20 @@ gh workflow run regenerate.yaml -f name=<package name> -f dry_run=true
 
 Naming no version does every version the registry holds, which for a package with a long
 history is a large pull request. `dry_run` says which versions would change and commits
-nothing, and is the same question `ar2 regenerate --dry-run` answers locally.
+nothing. The pull request it opens is never set to auto-merge, so it is read.
+
+### What it does with them
+
+Only the versions whose file actually changes are committed, so pointing it at a whole
+package to find out whether anything moved comes to nothing when nothing did.
 
 A version whose upstream release was changed after the fact is a different problem.
-Regenerating it produces a different checksum for the same version, which is what a
-release being rewritten looks like and what a lock file exists to catch. Decide whether
-to publish the new file rather than regenerating by reflex.
+Regenerating it produces a different checksum for the same version, which is what a release
+being rewritten looks like and what a lock file exists to catch. Decide whether to publish
+the new file rather than regenerating by reflex.
+
+`ar2 regenerate --dry-run` answers the same question locally, since it writes nothing. The
+run that commits has to be the workflow, for the reason at the top of this guide.
 
 ## How To Fix index.json
 
