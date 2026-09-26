@@ -3,10 +3,12 @@ name: index
 # Keep index.json in step with the package branches.
 #
 # 'ar2 run' adds a package to the catalogue as it takes it over, which is the one
-# moment a package can be new to it. This is the reconciliation: it looks at every
-# branch and adds whatever the catalogue doesn't have, which is what catches a
-# package whose run failed after committing its definition, or whose pull request
-# was never merged. Nothing else would notice.
+# moment a package can be new to it. This is the reconciliation: it reads every
+# branch's definition and makes the catalogue say what they say. Two things that
+# catches -- a package whose run failed after committing its definition, or whose
+# pull request was never merged, which the catalogue is missing; and a package whose
+# definition was edited after its entry was made, which the catalogue describes as it
+# was. Nothing else would notice either.
 #
 # It runs on demand here. It belongs on a schedule in the real registry, where nobody
 # is watching for a package that quietly never arrived.
