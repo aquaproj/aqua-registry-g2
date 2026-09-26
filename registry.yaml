@@ -1,0 +1,44 @@
+type: github_release
+repo_owner: helix-editor
+repo_name: helix
+description: A post-modern modal text editor
+files:
+  - name: hx
+version_overrides:
+  - version_constraint: semver("> 22.8.1")
+    files:
+      - name: hx
+        src: '{{.AssetWithoutExt}}/hx'
+    replacements:
+      amd64: x86_64
+      arm64: aarch64
+      darwin: macos
+  - version_constraint: semver("> 22.5.0")
+    files:
+      - name: hx
+        src: '{{.AssetWithoutExt}}/hx'
+    replacements:
+      amd64: x86_64
+      darwin: macos
+  - version_constraint: semver("> 0.6.0")
+    files:
+      - name: hx
+        src: '{{.AssetWithoutExt}}/hx'
+    replacements:
+      amd64: x86_64
+      darwin: macos
+  - version_constraint: semver("<= 0.6.0")
+    files:
+      - name: hx
+        src: '{{.AssetWithoutExt}}/hx'
+    replacements:
+      amd64: x86_64
+      darwin: macos
+  - version_constraint: "true"
+    files:
+      - name: hx
+        src: '{{.AssetWithoutExt}}/hx'
+    replacements:
+      amd64: x86_64
+      arm64: aarch64
+      darwin: macos
