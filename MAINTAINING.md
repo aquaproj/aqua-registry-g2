@@ -36,60 +36,66 @@ head branches and opens the pull requests, because a pull request opened with
 
 ## How To Add packages
 
+For a package aqua-registry doesn't have, which otherwise has no way in at all, run
+[add_package.yaml](.github/workflows/add_package.yaml):
+
 ```sh
 gh workflow run add_package.yaml -f name=<package name> -f commands="<command>..."
 gh workflow run add_package.yaml -f name=<package name> -f repo=<owner>/<name> -f dry_run=true
 ```
 
+`commands` is worth giving when the package installs something other than the last part of
+its name, or more than one thing. `repo` is for a package whose name isn't its repository,
+such as `kubernetes/kubernetes/kubectl`. `dry_run` renders the definition and writes nothing.
+
 A request for a package aqua-registry already has needs none of this: the state is built
-from its list, so the order reaches the package on its own. This is for a package
-aqua-registry doesn't have, which otherwise has no way in at all.
+from its list, so the order reaches the package on its own.
 
-It writes two things. The definition, as a pull request into the package's branch, and the
-package's place in the order. Nothing is generated: the package joins at the current lap,
-so the next run of the ar2 workflow reaches it and opens the pull requests for its
-versions.
+What to read on the pull request is the repository and the commands. Everything else about a
+package is read from its releases, so the definition says only what a release can't.
 
-What to check on the definition is the repository and the commands. Everything else about
-a package is read from its releases, so the definition says only what a release can't:
-which of its files are the commands. `commands` defaults to the last part of the package
-name, which is also what the inference guesses, so it is worth giving when the package
-installs something else or more than one thing. `repo` is for a package whose name isn't
-its repository, such as `kubernetes/kubernetes/kubectl`.
+### What it writes
 
-Either half may be there already, so this is dispatched again after a failure rather than
-unpicked. A branch that has a definition keeps it, and a package that is in the order
-keeps its turns.
+Two things, and neither follows from the other: the definition, as a pull request into the
+package's branch, and the package's place in the order. Nothing is generated here -- the
+package joins at the current lap, so the next run of the ar2 workflow reaches it and opens
+the pull requests for its versions.
+
+Either half may be there already, so it is dispatched again after a failure rather than
+unpicked. A branch that has a definition keeps it, and a package that is in the order keeps
+its turns.
 
 ## How To Support a new version
 
-`ar2 run` generates the versions the registry is missing, most starred package first and
-newest version first, and opens one pull request per package. Dispatch it:
+Wait, or run [ar2.yaml](.github/workflows/ar2.yaml):
 
 ```sh
-gh workflow run ar2.yaml -f limit=<how many package versions>          # one run
+gh workflow run ar2.yaml -f limit=<how many package versions>                 # one run
 gh workflow run ar2.yaml -f limit=<how many package versions> -f chain=forever
 ```
 
-There is no schedule. A run dispatches the next one instead, which is what `chain` asks
-for: `forever` keeps going, a number counts down, and `0` is a single run. The cadence is
-then however long a run takes rather than whenever GitHub gets to a cron -- a workflow
-asking for every ten minutes is triggered every few hours -- and the registry spends no
-time idle.
+A run generates the versions the registry is missing, most starred package first and newest
+version first, and opens one pull request per package. Most of them merge themselves; what to
+do about one that doesn't is [Reviewing pull requests](#reviewing-pull-requests). The job
+summary says what was generated, what wasn't, and how far the registry has got.
 
-To stop a chain, cancel the run that is going. Nothing is dispatched after a cancellation,
-and a run that hit its timeout counts as one, so a run that got stuck ends the chain
-rather than handing the same state to another run to get stuck on. A failure does not end
-it, because a rate limit or a repository that didn't answer would otherwise stop the
-registry until somebody noticed; five failures in a row do, with a comment on the
-monitoring issue.
+To stop a chain, cancel the run that is going.
+
+### How the cadence works
+
+There is no schedule. A run dispatches the next one, which is what `chain` asks for:
+`forever` keeps going, a number counts down, and `0` is a single run. The cadence is then
+however long a run takes rather than whenever GitHub gets to a cron -- a workflow asking for
+every ten minutes is triggered every few hours -- and the registry spends no time idle.
+
+Nothing is dispatched after a cancellation, and a run that hit its timeout counts as one, so
+a run that got stuck ends the chain rather than handing the same state to another run to get
+stuck on. A failure does not end it, because a rate limit or a repository that didn't answer
+would otherwise stop the registry until somebody noticed; five failures in a row do, with a
+comment on the monitoring issue.
 
 `limit` bounds the versions attempted, not the versions generated, so a package that fails
 every time can't spend a whole run.
-
-What to read afterwards: the job summary lists what was generated and what wasn't, and
-the pull requests it opened either merge themselves or are waiting for a reason. See
-[Reviewing pull requests](#reviewing-pull-requests).
 
 ## How To Fix registry.yaml
 
@@ -159,45 +165,42 @@ and runs on every pull request into `main`.
 
 ## How To Fix aliases.json
 
-Not directly: it is rendered from the entries in `index.json`, in the commit that writes
-them. A missing alias is a missing `aliases` entry in the package's `registry.yaml`, so
-fix that and then run `ar2 index <package name>`.
+Not directly. It is rendered from the entries in `index.json`, in the commit that writes them
+-- [index.yaml](.github/workflows/index.yaml) writes both files together -- so a missing
+alias is a missing `aliases` entry in the package's `registry.yaml`:
 
-- [.github/workflows/index.yaml](.github/workflows/index.yaml): writes `index.json` and
-  `aliases.json` together, on a schedule.
+1. [How To Fix registry.yaml](#how-to-fix-registryyaml), to add the alias.
+2. [How To Fix index.json](#how-to-fix-indexjson), to read the entry out of the definition
+   again.
 
 A transfer GitHub reports needs none of this. See below.
 
 ## Renaming a package
 
-A rename moves everything: the branch the generated versions live on, the path aqua
-fetches them from, the entry the catalogue lists the package under. The old name stays as
-an alias, which is how a configuration still asking for it resolves.
+Usually nothing. A repository that was renamed or transferred is noticed by the run itself:
+the sweep asks GitHub for each package's versions and gets the name the repository answers
+to, so the move costs no extra request, and the run makes it before generating anything. The
+job summary reports it under Renamed.
 
-A repository that was renamed or transferred is noticed by the run itself. The sweep asks
-GitHub for each package's versions and gets the name the repository has now, so the move
-costs no extra request, and the run makes it before generating anything. The job summary
-reports it under Renamed.
-
-A rename GitHub can't see is the other case: one repository that starts publishing
-several commands, say, where the package name changes but the repository doesn't. That is
-this command, and nothing else:
-
-```sh
-ar2 rename <old package name> <new package name>
-```
-
-The branch is carried over rather than the versions generated again -- each of them was
-downloaded, hashed and opened on six machines to get there -- with the old commit as the
-new branch's parent, so nothing is copied. The old branch is left behind: deleting it is
-an administrator's decision, and nothing reads it once the catalogue names the package
-under its new name.
-
-It commits and it creates a branch, so it needs both Apps, and therefore a workflow:
+A rename GitHub can't see is the other case -- one repository that starts publishing several
+commands, say, where the package's name changes and the repository's doesn't. That is
+[rename.yaml](.github/workflows/rename.yaml) and nothing else:
 
 ```sh
 gh workflow run rename.yaml -f from=<old package name> -f to=<new package name>
 ```
+
+### What a rename moves
+
+Everything: the branch the generated versions live on, the path aqua fetches them from, the
+entry the catalogue lists the package under. The old name stays as an alias, which is how a
+configuration still asking for it resolves.
+
+The branch is carried over rather than the versions generated again -- each of them was
+downloaded, hashed and opened on six machines to get there -- with the old commit as the new
+branch's parent, so nothing is copied. The old branch is left behind: deleting it is an
+administrator's decision, and nothing reads it once the catalogue names the package under its
+new name.
 
 ## Ignoring a package
 
