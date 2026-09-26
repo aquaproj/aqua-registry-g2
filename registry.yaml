@@ -1,0 +1,23 @@
+type: github_release
+repo_owner: vercel-labs
+repo_name: agent-browser
+description: Browser automation CLI for AI agents
+version_overrides:
+  - version_constraint: semver("> 0.20.1")
+    replacements:
+      amd64: x64
+      windows: win32
+  - version_constraint: semver("> 0.7.4")
+    replacements:
+      amd64: x64
+      windows: win32
+  - version_constraint: semver("> 0.7.0")
+    no_asset: true
+  - version_constraint: semver("<= 0.7.0")
+    replacements:
+      amd64: x64
+      windows: win32
+  - version_constraint: "true"
+    replacements:
+      amd64: x64
+      windows: win32
