@@ -203,19 +203,61 @@ gh workflow run rename.yaml -f from=<old package name> -f to=<new package name>
 
 ## Ignoring a package
 
-`ignored_packages` in [ar2.yaml](ar2.yaml), as a pull request into `main`. Each entry
-carries the reason, because the next person to wonder why a package isn't here reads that
-file and nothing else.
+A package the registry doesn't take on. Nothing was ever published for it, and the reason
+is why: an asset whose name carries something only the installing machine knows, downloads
+refused from the addresses CI runs on, a command deleted upstream.
 
-They are dropped before anything asks GitHub about them, so a package whose repository is
-gone stops costing a request every run.
+`ignored_packages` in [ar2.yaml](ar2.yaml), as a pull request into `main`. Each entry
+carries its reason, because the next person to wonder why a package isn't here reads that
+file and nothing else. They are dropped before anything asks GitHub about them, so a
+package whose repository is gone stops costing a request every run.
+
+This is not a package being removed, and the two aren't degrees of the same thing. See
+below.
 
 ## Removing a package
 
-No path yet. The branch can't be deleted except by an administrator, and there is no
-command that takes an entry out of the catalogue on its own. When a package has to stop
-being served, the entry is what matters: taking it out of `index.json` stops aqua finding
-the package, and the branch can stay where it is.
+Not something this registry does. What it publishes for a version is meant to stay what it
+was, and somebody's configuration may name the package. Two things override that: a
+package aqua can't install whatever is generated for it, and malware, which goes without
+asking.
+
+When it is decided, it is three things at once, and the command does all of them.
+
+```sh
+gh workflow run remove_package.yaml -f name=<package name> -f reason="<why>"
+```
+
+1. The package stops being generated: it goes into `ignored_packages`, with the reason.
+2. It stops being listed: its entry goes from `index.json`, and its aliases from
+   `aliases.json` with it.
+3. It stops being held: the files under `versions/` go off its branch.
+
+Any one alone leaves a state nobody meant. An entry for a package that can't be fetched,
+or files nothing lists that the next run adds to.
+
+It opens two pull requests, because 1 and 2 are on `main` and 3 is on the package's
+branch. Merge the one into `main` first: a package still in the order has its files
+generated again by the next run, whatever the other one did. The second pull request says
+so and points at the first.
+
+The branch itself stays. A ruleset forbids deleting a package branch and no app bypasses
+it, so what was published stays readable in its history.
+
+### What removing cannot reach
+
+A lock file that already holds the package. It carries the URL and the checksum of every
+file it needs, which is the point of it, and nothing here takes that away. What step 3
+stops is `aqua lock update` resolving those versions, so nobody new installs the package.
+
+Steps 1 and 2 don't stop an install either, which is worth being clear about: nothing
+resolves a package through `index.json`. A name in `aqua.yaml` is turned into
+`pkg_<encoded>/versions/<version>/registry-1.json` and fetched directly, so a package with
+no entry is one nothing can search for and anything already naming it still installs. Only
+step 3 changes that.
+
+Where the difference matters -- malware -- saying so where people will read it reaches
+them and a registry change doesn't. That is the part to do first.
 
 ## Reviewing pull requests
 
