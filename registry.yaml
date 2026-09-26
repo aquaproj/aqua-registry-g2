@@ -1,0 +1,11 @@
+type: github_release
+repo_owner: etcd-io
+repo_name: etcd
+description: Distributed reliable key-value store for the most critical data of a distributed system
+files:
+  - name: etcdctl
+    src: etcd-{{.Version}}-{{.OS}}-{{.Arch}}/etcdctl
+  - name: etcd
+    src: etcd-{{.Version}}-{{.OS}}-{{.Arch}}/etcd
+version_overrides:
+  - version_constraint: "true"
