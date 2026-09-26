@@ -1,0 +1,61 @@
+type: github_release
+repo_owner: colbymchenry
+repo_name: codegraph
+description: Pre-indexed code knowledge graph for coding agents
+github_artifact_attestations:
+  signer_workflow: colbymchenry/codegraph/.github/workflows/release.yml
+version_overrides:
+  - version_constraint: semver(">= 1.5.0")
+    files:
+      - name: codegraph
+        src: '{{.AssetWithoutExt}}/bin/codegraph'
+    replacements:
+      amd64: x64
+      windows: win32
+    github_artifact_attestations:
+      signer_workflow: colbymchenry/codegraph/.github/workflows/release.yml
+    overrides:
+      - goos: windows
+        files:
+          - name: codegraph
+            src: '{{.AssetWithoutExt}}/bin/codegraph.cmd'
+  - version_constraint: semver("> 0.9.3")
+    files:
+      - name: codegraph
+        src: '{{.AssetWithoutExt}}/bin/codegraph'
+    replacements:
+      amd64: x64
+      windows: win32
+    overrides:
+      - goos: windows
+        files:
+          - name: codegraph
+            src: '{{.AssetWithoutExt}}/bin/codegraph.cmd'
+  - version_constraint: semver("> 0.8.0")
+    files:
+      - name: codegraph
+        src: '{{.AssetWithoutExt}}/bin/codegraph'
+    replacements:
+      amd64: x64
+      windows: win32
+    overrides:
+      - goos: windows
+        files:
+          - name: codegraph
+            src: '{{.AssetWithoutExt}}/bin/codegraph.cmd'
+  - version_constraint: semver("<= 0.8.0")
+    no_asset: true
+  - version_constraint: "true"
+    files:
+      - name: codegraph
+        src: '{{.AssetWithoutExt}}/bin/codegraph'
+    replacements:
+      amd64: x64
+      windows: win32
+    github_artifact_attestations:
+      signer_workflow: colbymchenry/codegraph/.github/workflows/release.yml
+    overrides:
+      - goos: windows
+        files:
+          - name: codegraph
+            src: '{{.AssetWithoutExt}}/bin/codegraph.cmd'
