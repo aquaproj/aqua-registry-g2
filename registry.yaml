@@ -4,6 +4,13 @@ repo_name: SwiftLint
 description: A tool to enforce Swift style and conventions
 files:
   - name: swiftlint
+# The release carries an installer package, a Swift Package Manager artifact bundle, a
+# bazel archive, Windows msi and zip files, and the two archives this package is: one per
+# Linux target, and portable_swiftlint.zip for macOS. That one names no platform, which is
+# what the replacement says.
+all_assets_filter: Asset matches "^(portable_swiftlint|swiftlint_linux(_(amd64|arm64))?)\\.zip$"
+replacements:
+  darwin: portable
 version_overrides:
   - version_constraint: semver("> 0.59.1")
     files:
