@@ -12,6 +12,9 @@ version_overrides:
   - version_constraint: semver("> 2.3.0")
     no_asset: true
   - version_constraint: "true"
-all_assets_filter: |
-  let words = ["_gui"];
-  not any(words, {Asset matches #})
+# One release carries several programs and several builds of each: czkawka_cli and the two
+# GUIs, czkawka_gui and krokiet, and for the command line one a plain build beside builds
+# with extra image codecs compiled in and a musl build. Excluding the GUI by name left
+# krokiet, and the inference took it -- and for darwin/amd64, which has no command line
+# build at all, a shell script. The plain build per target is what aqua-registry installs.
+all_assets_filter: Asset matches "^(linux|mac)_czkawka_cli_(x86_64|arm64)$|^windows_czkawka_cli\\.exe$"
