@@ -1,0 +1,16 @@
+type: http
+repo_owner: hashicorp
+repo_name: vault
+description: A tool for secrets management, encryption as a service, and privileged access management
+url: https://releases.hashicorp.com/vault/{{trimV .Version}}/vault_{{trimV .Version}}_{{.OS}}_{{.Arch}}.zip
+version_filter: Version matches "^v\\d+\\.\\d+\\.\\d+"
+supported_envs:
+  - darwin
+  - linux
+  - amd64
+checksum:
+  type: http
+  url: https://releases.hashicorp.com/vault/{{trimV .Version}}/vault_{{trimV .Version}}_SHA256SUMS
+  algorithm: sha256
+version_overrides:
+  - version_constraint: "true"
