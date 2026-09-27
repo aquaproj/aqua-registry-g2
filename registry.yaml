@@ -1,0 +1,117 @@
+aliases:
+  - name: mozilla/sops
+type: github_release
+repo_owner: getsops
+repo_name: sops
+description: Simple and flexible tool for managing secrets
+version_overrides:
+  - version_constraint: Version == "v3.8.0-rc.1"
+    checksum:
+      type: github_release
+      asset: sops-{{.Version}}.checksums.txt
+      algorithm: sha256
+      cosign:
+        opts:
+          - --certificate
+          - https://github.com/getsops/sops/releases/download/{{.Version}}/sops-{{.Version}}.checksums.pem
+          - --signature
+          - https://github.com/getsops/sops/releases/download/{{.Version}}/sops-{{.Version}}.checksums.sig
+          - --certificate-identity-regexp
+          - https://github.com/getsops
+          - --certificate-oidc-issuer
+          - https://token.actions.githubusercontent.com
+          - --certificate-github-workflow-repository
+          - getsops/sops
+          - --certificate-github-workflow-ref
+          - refs/tags/{{.Version}}
+    slsa_provenance:
+      type: github_release
+      asset: provenance.intoto.jsonl
+  - version_constraint: semver("> 3.12.2")
+    checksum:
+      type: github_release
+      asset: sops-{{.Version}}.checksums.txt
+      algorithm: sha256
+      cosign:
+        opts:
+          - --certificate-identity-regexp
+          - https://github.com/getsops
+          - --certificate-oidc-issuer
+          - https://token.actions.githubusercontent.com
+          - --certificate-github-workflow-repository
+          - getsops/sops
+          - --certificate-github-workflow-ref
+          - refs/tags/{{.Version}}
+        bundle:
+          type: github_release
+          asset: sops-{{.Version}}.checksums.sigstore.json
+    slsa_provenance:
+      type: github_release
+      asset: sops-{{.Version}}.intoto.jsonl
+  - version_constraint: semver("> 3.9.4")
+    checksum:
+      type: github_release
+      asset: sops-{{.Version}}.checksums.txt
+      algorithm: sha256
+      cosign:
+        opts:
+          - --certificate
+          - https://github.com/getsops/sops/releases/download/{{.Version}}/sops-{{.Version}}.checksums.pem
+          - --signature
+          - https://github.com/getsops/sops/releases/download/{{.Version}}/sops-{{.Version}}.checksums.sig
+          - --certificate-identity-regexp
+          - https://github.com/getsops
+          - --certificate-oidc-issuer
+          - https://token.actions.githubusercontent.com
+          - --certificate-github-workflow-repository
+          - getsops/sops
+          - --certificate-github-workflow-ref
+          - refs/tags/{{.Version}}
+    slsa_provenance:
+      type: github_release
+      asset: sops-{{.Version}}.intoto.jsonl
+  - version_constraint: semver("> 3.7.3")
+    checksum:
+      type: github_release
+      asset: sops-{{.Version}}.checksums.txt
+      algorithm: sha256
+      cosign:
+        opts:
+          - --certificate
+          - https://github.com/getsops/sops/releases/download/{{.Version}}/sops-{{.Version}}.checksums.pem
+          - --signature
+          - https://github.com/getsops/sops/releases/download/{{.Version}}/sops-{{.Version}}.checksums.sig
+          - --certificate-identity-regexp
+          - https://github.com/getsops
+          - --certificate-oidc-issuer
+          - https://token.actions.githubusercontent.com
+          - --certificate-github-workflow-repository
+          - getsops/sops
+          - --certificate-github-workflow-ref
+          - refs/tags/{{.Version}}
+    slsa_provenance:
+      type: github_release
+      asset: sops-{{.Version}}.intoto.jsonl
+  - version_constraint: semver("> 3.7.1")
+  - version_constraint: semver("<= 3.7.1")
+  - version_constraint: "true"
+    checksum:
+      type: github_release
+      asset: sops-{{.Version}}.checksums.txt
+      algorithm: sha256
+      cosign:
+        opts:
+          - --certificate-identity-regexp
+          - https://github.com/getsops
+          - --certificate-oidc-issuer
+          - https://token.actions.githubusercontent.com
+          - --certificate-github-workflow-repository
+          - getsops/sops
+          - --certificate-github-workflow-ref
+          - refs/tags/{{.Version}}
+        bundle:
+          type: github_release
+          asset: sops-{{.Version}}.checksums.sigstore.json
+    slsa_provenance:
+      type: github_release
+      asset: sops-{{.Version}}.intoto.jsonl
