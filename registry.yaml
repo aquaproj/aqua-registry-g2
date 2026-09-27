@@ -1,0 +1,87 @@
+type: github_release
+repo_owner: ImageMagick
+repo_name: ImageMagick
+description: ImageMagick is a free and open-source software suite for displaying, creating, converting, modifying, and editing raster images
+github_artifact_attestations:
+  signer_workflow: ImageMagick/ImageMagick/.github/workflows/release.yml
+# The release carries Windows installers, portable archives in three quality and HDRI
+# combinations for three architectures, AppImages built with two compilers, an SBOM beside
+# each archive, and the source. The inference took the installers, whose one file it then
+# said holds every one of the commands. What aqua-registry installs is the portable
+# Q16-HDRI archive on Windows and the gcc AppImage on Linux -- and no asset name here says
+# which platform it is for, which is what the replacements are.
+all_assets_filter: Asset matches "^ImageMagick-[^ ]*-(portable-Q16-HDRI-(x64|arm64)\\.7z|gcc-x86_64\\.AppImage)$"
+replacements:
+  windows: portable
+  linux: gcc
+  amd64: x64
+# The intoto.jsonl carries a provenance built by ImageMagick's own release workflow, which
+# is not a builder slsa-verifier trusts, so the claim can never verify. Its subjects are
+# the installers rather than these archives in any case. The same workflow is what the
+# attestation above holds the assets to.
+slsa_provenance:
+  enabled: false
+version_overrides:
+  - version_constraint: Version == "7.1.2-19"
+    github_artifact_attestations:
+      signer_workflow: ImageMagick/ImageMagick/.github/workflows/release.yml
+    overrides:
+      - goos: windows
+        files:
+          - name: compare
+          - name: composite
+          - name: conjure
+          - name: identify
+          - name: magick
+          - name: mogrify
+          - name: montage
+          - name: stream
+  - version_constraint: semver("> 7.1.2-18")
+    github_artifact_attestations:
+      signer_workflow: ImageMagick/ImageMagick/.github/workflows/release.yml
+    overrides:
+      - goos: linux
+        files:
+          - name: magick
+      - goos: windows
+        files:
+          - name: compare
+          - name: composite
+          - name: conjure
+          - name: identify
+          - name: magick
+          - name: mogrify
+          - name: montage
+          - name: stream
+  - version_constraint: semver("<= 7.1.2-18")
+    overrides:
+      - goos: linux
+        files:
+          - name: magick
+      - goos: windows
+        files:
+          - name: compare
+          - name: composite
+          - name: conjure
+          - name: identify
+          - name: magick
+          - name: mogrify
+          - name: montage
+          - name: stream
+  - version_constraint: "true"
+    github_artifact_attestations:
+      signer_workflow: ImageMagick/ImageMagick/.github/workflows/release.yml
+    overrides:
+      - goos: linux
+        files:
+          - name: magick
+      - goos: windows
+        files:
+          - name: compare
+          - name: composite
+          - name: conjure
+          - name: identify
+          - name: magick
+          - name: mogrify
+          - name: montage
+          - name: stream
