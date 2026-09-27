@@ -1,0 +1,44 @@
+type: github_release
+repo_owner: securego
+repo_name: gosec
+description: Go security checker
+version_overrides:
+  - version_constraint: semver("> 2.24.0")
+    checksum:
+      type: github_release
+      asset: gosec_{{trimV .Version}}_checksums.txt
+      algorithm: sha256
+      cosign:
+        opts:
+          - --key
+          - https://raw.githubusercontent.com/securego/gosec/refs/tags/{{.Version}}/cosign.pub
+        bundle:
+          type: github_release
+          asset: gosec_{{trimV .Version}}_checksums.txt.sigstore.json
+  - version_constraint: semver(">= 2.10.0")
+    checksum:
+      type: github_release
+      asset: gosec_{{trimV .Version}}_checksums.txt
+      algorithm: sha256
+      cosign:
+        opts:
+          - --key
+          - https://raw.githubusercontent.com/securego/gosec/refs/tags/{{.Version}}/cosign.pub
+          - --signature
+          - https://github.com/securego/gosec/releases/download/{{.Version}}/gosec_{{trimV .Version}}_checksums.txt.sig
+  - version_constraint: semver("> 2.8.1")
+  - version_constraint: semver("> 2.7.0")
+  - version_constraint: semver("> 2.0.0")
+  - version_constraint: semver("<= 2.0.0")
+  - version_constraint: "true"
+    checksum:
+      type: github_release
+      asset: gosec_{{trimV .Version}}_checksums.txt
+      algorithm: sha256
+      cosign:
+        opts:
+          - --key
+          - https://raw.githubusercontent.com/securego/gosec/refs/tags/{{.Version}}/cosign.pub
+        bundle:
+          type: github_release
+          asset: gosec_{{trimV .Version}}_checksums.txt.sigstore.json
