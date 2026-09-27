@@ -5,7 +5,5 @@ description: '"rsync for cloud storage" - Google Drive, S3, Dropbox, Backblaze B
 files:
   - name: rclone
     src: rclone-{{.Version}}-{{.OS}}-{{.Arch}}/rclone
-replacements:
-  darwin: osx
 version_overrides:
   - version_constraint: "true"
