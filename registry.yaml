@@ -1,0 +1,21 @@
+aliases:
+  - name: up9inc/mizu
+type: github_release
+repo_owner: kubeshark
+repo_name: kubeshark
+description: The API traffic analyzer for Kubernetes providing real-time K8s protocol-level visibility, capturing and monitoring all traffic and payloads going in, out and across containers, pods, nodes and clusters. Inspired by Wireshark, purposely built for Kubernetes
+version_overrides:
+  - version_constraint: semver("> 52.1.50")
+  - version_constraint: semver("> 50.4")
+  - version_constraint: semver("> 37.0")
+  - version_constraint: semver("> 36.0")
+  - version_constraint: semver("> 0.23.0")
+    files:
+      - name: mizu
+  - version_constraint: semver("> 0.17.0")
+    files:
+      - name: mizu
+  - version_constraint: semver("<= 0.17.0")
+    files:
+      - name: mizu
+  - version_constraint: "true"
