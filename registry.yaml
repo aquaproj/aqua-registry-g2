@@ -1,0 +1,25 @@
+type: github_release
+repo_owner: getzola
+repo_name: zola
+description: A fast static site generator in a single binary with everything built-in. https://www.getzola.org
+github_artifact_attestations:
+  signer_workflow: getzola/zola/.github/workflows/release.yml
+version_overrides:
+  - version_constraint: Version == "v0.0.2"
+    files:
+      - name: gutenberg
+  - version_constraint: Version == "v0.9.0"
+  - version_constraint: semver(">= 0.20.0")
+    github_artifact_attestations:
+      signer_workflow: getzola/zola/.github/workflows/release.yml
+  - version_constraint: semver("> 0.17.2")
+  - version_constraint: semver("> 0.4.2")
+  - version_constraint: semver("> 0.0.7")
+    files:
+      - name: gutenberg
+  - version_constraint: semver("<= 0.0.7")
+    files:
+      - name: gutenberg
+  - version_constraint: "true"
+    github_artifact_attestations:
+      signer_workflow: getzola/zola/.github/workflows/release.yml
