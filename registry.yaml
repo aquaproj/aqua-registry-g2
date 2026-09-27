@@ -7,11 +7,6 @@ version_overrides:
     files:
       - name: bat
         src: '{{.AssetWithoutExt}}/bat'
-    replacements:
-      amd64: x86_64
-      darwin: apple-darwin
-      linux: unknown-linux-musl
-      windows: pc-windows-msvc
     overrides:
       - goos: windows
         files:
@@ -20,43 +15,19 @@ version_overrides:
     files:
       - name: bat
         src: '{{.AssetWithoutExt}}/bat'
-    replacements:
-      amd64: x86_64
-      arm64: aarch64
-      darwin: apple-darwin
-      linux: unknown-linux-musl
-      windows: pc-windows-msvc
   - version_constraint: semver("> 0.6.0")
     files:
       - name: bat
         src: '{{.AssetWithoutExt}}/bat'
-    replacements:
-      amd64: x86_64
-      darwin: apple-darwin
-      windows: pc-windows-msvc
   - version_constraint: semver("> 0.2.2")
     files:
       - name: bat
         src: '{{.AssetWithoutExt}}/bat'
-    replacements:
-      amd64: x86_64
-      darwin: apple-darwin
-      linux: unknown-linux-musl
   - version_constraint: semver("<= 0.2.2")
     files:
       - name: bat
         src: '{{.AssetWithoutExt}}/bat'
-    replacements:
-      amd64: x86_64
-      darwin: apple-darwin
-      linux: unknown-linux-gnu
   - version_constraint: "true"
     files:
       - name: bat
         src: '{{.AssetWithoutExt}}/bat'
-    replacements:
-      amd64: x86_64
-      arm64: aarch64
-      darwin: apple-darwin
-      linux: unknown-linux-musl
-      windows: pc-windows-msvc
