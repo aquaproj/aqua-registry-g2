@@ -172,7 +172,8 @@ commit.
 
 ## How To Update the schema of registry.json
 
-The schema version is the file name. `registry-1.json` is the first, and a change that
-old aqua can't read is `registry-2.json` written beside it rather than an edit to what is
-already published, so an aqua that knows only the first keeps working. How the two are
-generated and for how long both are kept is still being decided.
+[skills/update-schema](skills/update-schema/SKILL.md).
+
+The schema's major version is the file name, so a change an older aqua can't read arrives as
+`registry-2.json` beside the first rather than as an edit to what is published. Nothing here
+has been done yet: there is one schema, and the skill is what to build the first time.
