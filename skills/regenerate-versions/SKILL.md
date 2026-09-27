@@ -18,6 +18,26 @@ Naming no version does every version the registry holds, which for a package wit
 history is a large pull request. `dry_run` says which versions would change and commits
 nothing. The pull request it opens is never set to auto-merge, so it is read.
 
+### What is waiting for a definition
+
+A version that couldn't be generated at all -- the archive holds no file of the name
+`files[].src` gives -- is not in the registry, so there is nothing of it to generate again. It
+is on a pull request of its own, labelled `needs-definition`, with the versions of the same era.
+
+Write the definition those versions need on that branch first -- a `version_overrides` entry
+with its own `files` -- and then:
+
+```sh
+gh workflow run regenerate.yaml -f name=<package name> -f pending=true
+```
+
+That reads the definition the pull request carries rather than the one the package branch has,
+generates what the pull request holds, and commits onto the same branch. A version and the
+definition that makes it true then merge together or not at all.
+
+It says so and stops when the package has no such pull request, so it can't be confused with
+the ordinary mode.
+
 ### What it does with them
 
 Only the versions whose file actually changes are committed, so pointing it at a whole
