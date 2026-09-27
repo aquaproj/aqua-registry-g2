@@ -36,34 +36,10 @@ head branches and opens the pull requests, because a pull request opened with
 
 ## How To Add packages
 
-For a package aqua-registry doesn't have, which otherwise has no way in at all, run
-[add_package.yaml](.github/workflows/add_package.yaml):
+[skills/add-package](skills/add-package/SKILL.md).
 
-```sh
-gh workflow run add_package.yaml -f name=<package name> -f commands="<command>..."
-gh workflow run add_package.yaml -f name=<package name> -f repo=<owner>/<name> -f dry_run=true
-```
-
-`commands` is worth giving when the package installs something other than the last part of
-its name, or more than one thing. `repo` is for a package whose name isn't its repository,
-such as `kubernetes/kubernetes/kubectl`. `dry_run` renders the definition and writes nothing.
-
-A request for a package aqua-registry already has needs none of this: the state is built
-from its list, so the order reaches the package on its own.
-
-What to read on the pull request is the repository and the commands. Everything else about a
-package is read from its releases, so the definition says only what a release can't.
-
-### What it writes
-
-Two things, and neither follows from the other: the definition, as a pull request into the
-package's branch, and the package's place in the order. Nothing is generated here -- the
-package joins at the current lap, so the next run of the ar2 workflow reaches it and opens
-the pull requests for its versions.
-
-Either half may be there already, so it is dispatched again after a failure rather than
-unpicked. A branch that has a definition keeps it, and a package that is in the order keeps
-its turns.
+For a package aqua-registry doesn't have, which otherwise has no way into the order at all. A
+request for one aqua-registry already has needs nothing: the order reaches it.
 
 ## How To Support a new version
 
