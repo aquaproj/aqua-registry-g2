@@ -1,0 +1,80 @@
+type: github_release
+repo_owner: Orange-OpenSource
+repo_name: hurl
+description: Hurl, run and test HTTP requests with plain text
+files:
+  - name: hurl
+  - name: hurlfmt
+version_overrides:
+  - version_constraint: Version == "1.6.1"
+    files:
+      - name: hurl
+        src: hurl-{{.Version}}/hurl
+      - name: hurlfmt
+        src: hurl-{{.Version}}/hurlfmt
+    overrides:
+      - goos: windows
+        files:
+          - name: hurl
+          - name: hurlfmt
+  - version_constraint: semver("> 4.2.0")
+    files:
+      - name: hurl
+        src: hurl-{{.Version}}-{{.Arch}}-{{.OS}}/bin/hurl
+      - name: hurlfmt
+        src: hurl-{{.Version}}-{{.Arch}}-{{.OS}}/bin/hurlfmt
+    overrides:
+      - goos: windows
+        files:
+          - name: hurl
+          - name: hurlfmt
+  - version_constraint: semver("> 4.0.0")
+    files:
+      - name: hurl
+        src: hurl-{{.Version}}-{{.Arch}}-{{.OS}}/hurl
+      - name: hurlfmt
+        src: hurl-{{.Version}}-{{.Arch}}-{{.OS}}/hurlfmt
+    overrides:
+      - goos: windows
+        files:
+          - name: hurl
+          - name: hurlfmt
+  - version_constraint: semver("> 1.6.0")
+    files:
+      - name: hurl
+        src: hurl-{{.Version}}/hurl
+      - name: hurlfmt
+        src: hurl-{{.Version}}/hurlfmt
+    overrides:
+      - goos: windows
+        files:
+          - name: hurl
+          - name: hurlfmt
+  - version_constraint: semver("> 1.1.0")
+    files:
+      - name: hurl
+        src: hurl-{{.Version}}/hurl
+      - name: hurlfmt
+        src: hurl-{{.Version}}/hurlfmt
+    overrides:
+      - goos: windows
+        files:
+          - name: hurl
+          - name: hurlfmt
+  - version_constraint: semver("<= 1.1.0")
+    files:
+      - name: hurl
+        src: hurl-{{.Version}}/hurl
+      - name: hurlfmt
+        src: hurl-{{.Version}}/hurlfmt
+  - version_constraint: "true"
+    files:
+      - name: hurl
+        src: hurl-{{.Version}}-{{.Arch}}-{{.OS}}/bin/hurl
+      - name: hurlfmt
+        src: hurl-{{.Version}}-{{.Arch}}-{{.OS}}/bin/hurlfmt
+    overrides:
+      - goos: windows
+        files:
+          - name: hurl
+          - name: hurlfmt
