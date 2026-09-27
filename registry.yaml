@@ -1,0 +1,14 @@
+aliases:
+  - name: github/hub
+type: github_release
+repo_owner: mislav
+repo_name: hub
+description: A command-line tool that makes git easier to use with GitHub
+overrides:
+  - goos: windows
+    files:
+      - name: hub
+        src: bin/hub.exe
+files:
+  - name: hub
+    src: hub-{{.OS}}-{{.Arch}}-{{trimV .Version}}/bin/hub
