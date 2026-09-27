@@ -27,6 +27,8 @@ A tool fetches it from the raw URL:
 https://raw.githubusercontent.com/aquaproj/aqua-registry-g2/<branch>/versions/<version>/registry-1.json
 ```
 
+`<branch>` is the package name encoded as [README.md](README.md#the-branch-name) describes, e.g. `grafana/k6` is on `pkg_grafana_2fk6`.
+
 e.g. https://raw.githubusercontent.com/aquaproj/aqua-registry-g2/pkg_grafana_2fk6/versions/v2.3.0/registry-1.json
 
 `1` of `registry-1.json` is the registry schema version.
