@@ -1,0 +1,19 @@
+name: cloudnative-pg/cloudnative-pg/kubectl-cnpg
+type: github_release
+repo_owner: cloudnative-pg
+repo_name: cloudnative-pg
+description: CloudNativePG is a comprehensive platform designed to seamlessly manage PostgreSQL databases within Kubernetes environments, covering the entire operational lifecycle from initial deployment to ongoing maintenance
+version_overrides:
+  - version_constraint: Version == "v1.27.4"
+    slsa_provenance:
+      type: github_release
+      asset: multiple.intoto.jsonl
+  - version_constraint: semver("> 1.28.1")
+    slsa_provenance:
+      type: github_release
+      asset: multiple.intoto.jsonl
+  - version_constraint: semver("<= 1.28.1")
+  - version_constraint: "true"
+    slsa_provenance:
+      type: github_release
+      asset: multiple.intoto.jsonl
