@@ -1,0 +1,44 @@
+type: github_release
+repo_owner: orhun
+repo_name: git-cliff
+description: A highly customizable Changelog Generator that follows Conventional Commit specifications
+version_overrides:
+  - version_constraint: Version == "v0.1.1"
+    no_asset: true
+  - version_constraint: Version == "v0.1.0-beta.2"
+    files:
+      - name: git-cliff
+        src: git-cliff-{{trimV .Version}}/git-cliff
+  - version_constraint: Version == "v0.1.0-beta.3"
+    files:
+      - name: git-cliff
+        src: git-cliff-{{trimV .Version}}/git-cliff
+    overrides:
+      - goos: windows
+        files:
+          - name: git-cliff
+            src: git-cliff-/git-cliff.exe
+  - version_constraint: Version == "v0.1.0-rc.2"
+    files:
+      - name: git-cliff
+        src: git-cliff-{{trimV .Version}}/git-cliff
+  - version_constraint: semver("> 1.0.0")
+    files:
+      - name: git-cliff
+        src: git-cliff-{{trimV .Version}}/git-cliff
+  - version_constraint: semver("> 0.1.0-rc.5")
+    files:
+      - name: git-cliff
+        src: git-cliff-{{trimV .Version}}/git-cliff
+  - version_constraint: semver("> 0.1.0-rc.1")
+    files:
+      - name: git-cliff
+        src: git-cliff-{{trimV .Version}}/git-cliff
+  - version_constraint: semver("<= 0.1.0-rc.1")
+    files:
+      - name: git-cliff
+        src: git-cliff-{{trimV .Version}}/git-cliff
+  - version_constraint: "true"
+    files:
+      - name: git-cliff
+        src: git-cliff-{{trimV .Version}}/git-cliff
