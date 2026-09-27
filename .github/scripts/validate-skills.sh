@@ -78,6 +78,12 @@ main() {
 	for file in "${files[@]}"; do
 		check "$file"
 	done
+
+	# Codex scans .agents/skills, which is one symlink to the whole directory rather than
+	# one per skill, so a skill added here needs nothing more to reach it.
+	if [ "$(readlink .agents/skills)" != "../skills" ]; then
+		fail ".agents/skills" ".agents/skills isn't a symlink to ../skills, so Codex loads none of the skills"
+	fi
 	if [ "$failed" -ne 0 ]; then
 		exit 1
 	fi
