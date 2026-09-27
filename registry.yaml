@@ -1,0 +1,53 @@
+type: github_release
+repo_owner: aristocratos
+repo_name: btop
+description: A monitor of resources
+version_overrides:
+  - version_constraint: Version == "v1.1.0"
+    files:
+      - name: btop
+        src: bin/btop
+  - version_constraint: Version == "v1.1.1"
+    files:
+      - name: btop
+        src: bin/btop
+  - version_constraint: Version == "v1.1.2"
+    files:
+      - name: btop
+        src: bin/btop
+  - version_constraint: Version == "v1.2.13"
+    files:
+      - name: btop
+        src: btop/bin/btop
+  - version_constraint: Version == "v1.4.6"
+    files:
+      - name: btop
+        src: btop/bin/btop
+  - version_constraint: semver("> 1.4.5")
+    files:
+      - name: btop
+        src: btop/bin/btop
+  - version_constraint: semver("> 1.2.13")
+    files:
+      - name: btop
+        src: btop/bin/btop
+  - version_constraint: semver("> 1.0.24")
+    files:
+      - name: btop
+        src: btop/bin/btop
+  - version_constraint: semver("> 1.0.16")
+    files:
+      - name: btop
+        src: bin/btop
+  - version_constraint: semver("> 1.0.7")
+    files:
+      - name: btop
+        src: bin/btop
+  - version_constraint: semver("<= 1.0.7")
+    files:
+      - name: btop
+        src: bin/btop
+  - version_constraint: "true"
+    files:
+      - name: btop
+        src: btop/bin/btop
