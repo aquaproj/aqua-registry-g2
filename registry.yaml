@@ -1,0 +1,19 @@
+type: github_release
+repo_owner: realm
+repo_name: SwiftLint
+description: A tool to enforce Swift style and conventions
+files:
+  - name: swiftlint
+version_overrides:
+  - version_constraint: semver("> 0.59.1")
+    files:
+      - name: swiftlint
+  - version_constraint: semver("> 0.40.0")
+    files:
+      - name: swiftlint
+  - version_constraint: semver("<= 0.40.0")
+    files:
+      - name: swiftlint
+  - version_constraint: "true"
+    files:
+      - name: swiftlint
