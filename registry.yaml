@@ -4,8 +4,6 @@ repo_name: caddy
 description: Fast, multi-platform web server with automatic HTTPS
 version_overrides:
   - version_constraint: semver("> 2.5.2")
-    replacements:
-      darwin: mac
     checksum:
       type: github_release
       asset: caddy_{{trimV .Version}}_checksums.txt
@@ -25,11 +23,7 @@ version_overrides:
           - --certificate-github-workflow-ref
           - refs/tags/{{.Version}}
   - version_constraint: semver("<= 2.5.2")
-    replacements:
-      darwin: mac
   - version_constraint: "true"
-    replacements:
-      darwin: mac
     checksum:
       type: github_release
       asset: caddy_{{trimV .Version}}_checksums.txt
