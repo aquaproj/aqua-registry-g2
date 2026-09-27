@@ -1,0 +1,18 @@
+name: VictoriaMetrics/VictoriaMetrics/vmutils
+type: github_release
+repo_owner: VictoriaMetrics
+repo_name: VictoriaMetrics
+description: 'VictoriaMetrics: fast, cost-effective monitoring solution and time series database'
+version_filter: semver("> 1.78.1") and not (Version endsWith "-victorialogs") and (Version endsWith ".0")
+files:
+  - name: vmalert-tool
+    src: vmalert-tool-prod
+version_overrides:
+  - version_constraint: Version == "v1.103.0"
+  - version_constraint: "true"
+    overrides:
+      - goos: windows
+        files:
+          - name: vmalert-tool
+            src: vmalert-tool-windows-{{.Arch}}-prod.exe
+all_assets_filter: (Asset matches "vmutils-") and not (Asset matches "-enterprise") and not (Asset matches "-arm-")
