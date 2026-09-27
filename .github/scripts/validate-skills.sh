@@ -56,12 +56,6 @@ check() {
 	if [ "${#description}" -gt "$DESCRIPTION_MAX" ]; then
 		fail "$file" "the description is ${#description} characters, and the limit is $DESCRIPTION_MAX"
 	fi
-
-	# The symlink is how a session finds the skill at all: the skills live here so that a
-	# person can read them, and .claude/skills is what is scanned.
-	if [ ! -L ".claude/skills/$dir" ]; then
-		fail "$file" "there is no .claude/skills/$dir symlink, so nothing loads this skill"
-	fi
 }
 
 main() {
@@ -79,11 +73,16 @@ main() {
 		check "$file"
 	done
 
-	# Codex scans .agents/skills, which is one symlink to the whole directory rather than
-	# one per skill, so a skill added here needs nothing more to reach it.
-	if [ "$(readlink .agents/skills)" != "../skills" ]; then
-		fail ".agents/skills" ".agents/skills isn't a symlink to ../skills, so Codex loads none of the skills"
-	fi
+	# The symlinks are how a session finds the skills at all: the skills live here so that a
+	# person can read them, and Claude Code scans .claude/skills and Codex .agents/skills.
+	# Each is one symlink to the whole directory rather than one per skill, so a skill
+	# added here needs nothing more to reach either.
+	local link
+	for link in .claude/skills .agents/skills; do
+		if [ "$(readlink "$link")" != "../skills" ]; then
+			fail "$link" "$link isn't a symlink to ../skills, so no skill loads from there"
+		fi
+	done
 	if [ "$failed" -ne 0 ]; then
 		exit 1
 	fi
