@@ -1,6 +1,25 @@
 {
   "packages": [
     {
+      "name": "99designs/aws-vault",
+      "description": "A vault for securely storing and accessing AWS credentials in development environments"
+    },
+    {
+      "name": "AGWA/git-crypt",
+      "description": "Transparent file encryption in git"
+    },
+    {
+      "name": "Automattic/harper/harper-cli",
+      "description": "The Grammar Checker for Developers"
+    },
+    {
+      "name": "Automattic/harper/harper-ls",
+      "description": "The Grammar Checker for Developers",
+      "aliases": [
+        "elijah-potter/harper/harper-ls"
+      ]
+    },
+    {
       "name": "BurntSushi/ripgrep",
       "description": "ripgrep recursively searches directories for a regex pattern while respecting your gitignore"
     },
@@ -13,6 +32,10 @@
       "description": "Yet another cross-platform graphical process/system monitor"
     },
     {
+      "name": "EpicGames/lore",
+      "description": "Lore is a next-generation, open source version control system"
+    },
+    {
       "name": "FiloSottile/age",
       "description": "A simple, modern and secure encryption tool (and Go library) with small explicit keys, no config options, and UNIX-style composability"
     },
@@ -21,8 +44,16 @@
       "description": "A simple zero-config tool to make locally trusted development certificates with any names you'd like"
     },
     {
+      "name": "Gentleman-Programming/gentle-ai",
+      "description": "Ecosystem, frameworks, and workflows for AI coding agents"
+    },
+    {
       "name": "Genymobile/scrcpy",
       "description": "Display and control your Android device"
+    },
+    {
+      "name": "GoogleCloudPlatform/kubectl-ai",
+      "description": "AI powered Kubernetes Assistant"
     },
     {
       "name": "GoogleCloudPlatform/terraformer",
@@ -37,12 +68,20 @@
       "description": "Easy and Repeatable Kubernetes Development"
     },
     {
+      "name": "ImageMagick/ImageMagick",
+      "description": "ImageMagick is a free and open-source software suite for displaying, creating, converting, modifying, and editing raster images"
+    },
+    {
       "name": "JanDeDobbeleer/oh-my-posh",
       "description": "The most customisable and low-latency cross platform/shell prompt renderer"
     },
     {
       "name": "LGUG2Z/komorebi",
       "description": "A tiling window manager for Windows"
+    },
+    {
+      "name": "Melkeydev/go-blueprint",
+      "description": "Go-blueprint allows users to spin up a quick Go project using a popular framework"
     },
     {
       "name": "Orange-OpenSource/hurl",
@@ -61,6 +100,14 @@
       "description": "Fast and simple Node.js version manager, built in Rust"
     },
     {
+      "name": "TomWright/dasel",
+      "description": "Select, put and delete data from JSON, TOML, YAML, XML and CSV files with a single tool. Supports conversion between formats and can be used as a Go package"
+    },
+    {
+      "name": "ViRb3/wgcf",
+      "description": "Cross-platform, unofficial CLI for Cloudflare Warp"
+    },
+    {
       "name": "VictoriaMetrics/VictoriaMetrics/victoria-metrics",
       "description": "VictoriaMetrics: fast, cost-effective monitoring solution and time series database"
     },
@@ -71,6 +118,10 @@
     {
       "name": "Wilfred/difftastic",
       "description": "a structural diff that understands syntax"
+    },
+    {
+      "name": "XTLS/Xray-core",
+      "description": "Xray, Penetrates Everything. Also the best v2ray-core"
     },
     {
       "name": "a-h/templ",
@@ -114,8 +165,16 @@
       "description": "Open-source \u0026 free — Battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in fine-tuned ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI \u0026 Anthropic compatible"
     },
     {
+      "name": "amacneil/dbmate",
+      "description": "A lightweight, framework-agnostic database migration tool"
+    },
+    {
       "name": "anchore/grype",
       "description": "A vulnerability scanner for container images and filesystems"
+    },
+    {
+      "name": "anchore/syft",
+      "description": "CLI tool and library for generating a Software Bill of Materials from container images and filesystems"
     },
     {
       "name": "anomalyco/opencode",
@@ -137,6 +196,10 @@
       "description": "Apache Pulsar - distributed pub-sub messaging system"
     },
     {
+      "name": "apache/tomcat",
+      "description": "Apache Tomcat"
+    },
+    {
       "name": "apple/container",
       "description": "A tool for creating and running Linux containers using lightweight virtual machines on a Mac. It is written in Swift, and optimized for Apple silicon"
     },
@@ -151,6 +214,15 @@
     {
       "name": "argoproj/argo-workflows",
       "description": "Argo Worfkflows CLI. Workflow engine for Kubernetes"
+    },
+    {
+      "name": "ariga/atlas",
+      "description": "A modern tool for managing database schemas"
+    },
+    {
+      "name": "ariga/atlas/community",
+      "description": "A modern tool for managing database schemas (Community Edition)",
+      "link": "https://atlasgo.io/community-edition"
     },
     {
       "name": "aristocratos/btop",
@@ -204,8 +276,19 @@
       "description": "a fast, scalable, multi-language and extensible build system"
     },
     {
+      "name": "bcicen/ctop",
+      "description": "Top-like interface for container metrics"
+    },
+    {
       "name": "benbjohnson/litestream",
       "description": "Streaming replication for SQLite"
+    },
+    {
+      "name": "bensadeh/tailspin",
+      "description": "A log file highlighter",
+      "aliases": [
+        "crates.io/tailspin"
+      ]
     },
     {
       "name": "binwiederhier/ntfy",
@@ -216,12 +299,31 @@
       "description": "A toolchain for web projects, aimed to provide functionalities to maintain them. Biome offers formatter and linter, usable via CLI and LSP"
     },
     {
+      "name": "bitnami/sealed-secrets",
+      "description": "A Kubernetes controller and tool for one-way encrypted Secrets",
+      "aliases": [
+        "bitnami-labs/sealed-secrets"
+      ]
+    },
+    {
+      "name": "bitwarden/clients",
+      "description": "Bitwarden CLI"
+    },
+    {
       "name": "blender/blender",
       "description": "Blender is a free and open-source 3D computer graphics software"
     },
     {
       "name": "bootandy/dust",
       "description": "A more intuitive version of du in rust"
+    },
+    {
+      "name": "borgbackup/borg",
+      "description": "Deduplicating archiver with compression and authenticated encryption"
+    },
+    {
+      "name": "boyter/scc",
+      "description": "Sloc, Cloc and Code: scc is a very fast accurate code counter with complexity calculations and COCOMO estimates written in pure Go"
     },
     {
       "name": "bufbuild/buf",
@@ -234,6 +336,10 @@
     {
       "name": "caddyserver/caddy",
       "description": "Fast, multi-platform web server with automatic HTTPS"
+    },
+    {
+      "name": "cantino/mcfly",
+      "description": "Fly through your shell history. Great Scott"
     },
     {
       "name": "casey/just",
@@ -264,8 +370,47 @@
       "description": "GitHub’s official command line tool"
     },
     {
+      "name": "cloudflare/cfssl/cfssl",
+      "description": "CFSSL: Cloudflare's PKI and TLS toolkit",
+      "aliases": [
+        "cloudflare/cfssl"
+      ]
+    },
+    {
+      "name": "cloudflare/cfssl/cfssl-bundle",
+      "description": "CFSSL: Cloudflare's PKI and TLS toolkit"
+    },
+    {
+      "name": "cloudflare/cfssl/cfssl-certinfo",
+      "description": "CFSSL: Cloudflare's PKI and TLS toolkit"
+    },
+    {
+      "name": "cloudflare/cfssl/cfssl-newkey",
+      "description": "CFSSL: Cloudflare's PKI and TLS toolkit"
+    },
+    {
+      "name": "cloudflare/cfssl/cfssl-scan",
+      "description": "CFSSL: Cloudflare's PKI and TLS toolkit"
+    },
+    {
+      "name": "cloudflare/cfssl/cfssljson",
+      "description": "CFSSL: Cloudflare's PKI and TLS toolkit"
+    },
+    {
+      "name": "cloudflare/cfssl/mkbundle",
+      "description": "CFSSL: Cloudflare's PKI and TLS toolkit"
+    },
+    {
+      "name": "cloudflare/cfssl/multirootca",
+      "description": "CFSSL: Cloudflare's PKI and TLS toolkit"
+    },
+    {
       "name": "cloudflare/cloudflared",
       "description": "Cloudflare Tunnel client"
+    },
+    {
+      "name": "cloudnative-pg/cloudnative-pg/kubectl-cnpg",
+      "description": "CloudNativePG is a comprehensive platform designed to seamlessly manage PostgreSQL databases within Kubernetes environments, covering the entire operational lifecycle from initial deployment to ongoing maintenance"
     },
     {
       "name": "cockroachdb/cockroach",
@@ -278,6 +423,10 @@
     {
       "name": "colbymchenry/codegraph",
       "description": "Pre-indexed code knowledge graph for coding agents"
+    },
+    {
+      "name": "concourse/concourse/fly",
+      "description": "Concourse is a container-based continuous thing-doer written in Go"
     },
     {
       "name": "containerd/containerd",
@@ -303,6 +452,10 @@
     {
       "name": "crates.io/eza",
       "description": "A modern replacement for ls"
+    },
+    {
+      "name": "cross-rs/cross",
+      "description": "“Zero setup” cross compilation and “cross testing” of Rust crates"
     },
     {
       "name": "d2lang/d2",
@@ -356,6 +509,10 @@
       "description": "An HTTP toolkit for security research"
     },
     {
+      "name": "ducaale/xh",
+      "description": "Friendly and fast tool for sending HTTP requests"
+    },
+    {
       "name": "dylanaraps/neofetch",
       "description": "A command-line system information tool written in bash 3.2+"
     },
@@ -376,12 +533,20 @@
       "description": "Open Source Development Platform for building robust type-safe distributed systems with declarative infrastructure"
     },
     {
+      "name": "ericchiang/pup",
+      "description": "Parsing HTML at the command line"
+    },
+    {
       "name": "esengine/DeepSeek-Reasonix",
       "description": "DeepSeek-native AI coding agent for the terminal"
     },
     {
       "name": "etcd-io/etcd",
       "description": "Distributed reliable key-value store for the most critical data of a distributed system"
+    },
+    {
+      "name": "evilmartians/lefthook",
+      "description": "Fast and powerful Git hooks manager for any type of projects"
     },
     {
       "name": "eza-community/eza",
@@ -412,8 +577,16 @@
       "description": "Flutter SDK - Google's UI toolkit for building beautiful, natively compiled applications"
     },
     {
+      "name": "fluxcd/flux2",
+      "description": "Open and extensible continuous delivery solution for Kubernetes. Powered by GitOps Toolkit"
+    },
+    {
       "name": "foundry-rs/foundry",
       "description": "Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust"
+    },
+    {
+      "name": "fujiapple852/trippy",
+      "description": "A network diagnostic tool"
     },
     {
       "name": "fullstorydev/grpcurl",
@@ -431,6 +604,10 @@
       "description": "A terminal UI for tshark, inspired by Wireshark"
     },
     {
+      "name": "getanteon/anteon",
+      "description": "Anteon (formerly Ddosify) - Effortless Kubernetes Monitoring and Performance Testing. Available on CLI, Self-Hosted, and Cloud"
+    },
+    {
       "name": "getsops/sops",
       "description": "Simple and flexible tool for managing secrets",
       "aliases": [
@@ -444,6 +621,13 @@
     {
       "name": "ginuerzh/gost",
       "description": "GO Simple Tunnel - a simple tunnel written in golang"
+    },
+    {
+      "name": "git-bug/git-bug",
+      "description": "Distributed, offline-first bug tracker embedded in git, with bridges",
+      "aliases": [
+        "MichaelMure/git-bug"
+      ]
     },
     {
       "name": "git-lfs/git-lfs",
@@ -484,8 +668,16 @@
       "description": "A friendly language for building type-safe, scalable systems"
     },
     {
+      "name": "go-acme/lego",
+      "description": "Let's Encrypt/ACME client and library written in Go"
+    },
+    {
       "name": "go-delve/delve",
       "description": "Delve is a debugger for the Go programming language"
+    },
+    {
+      "name": "go-gost/gost",
+      "description": "GO Simple Tunnel - a simple tunnel written in golang"
     },
     {
       "name": "go-swagger/go-swagger",
@@ -516,8 +708,40 @@
       "description": "The world’s fastest framework for building websites"
     },
     {
+      "name": "gokcehan/lf",
+      "description": "Terminal file manager"
+    },
+    {
       "name": "golang-migrate/migrate",
       "description": "Database migrations. CLI and Golang library"
+    },
+    {
+      "name": "golang.org/x/tools/gopls",
+      "description": "Go language server",
+      "aliases": [
+        "golang/tools/gopls"
+      ]
+    },
+    {
+      "name": "golang/mock",
+      "description": "GoMock is a mocking framework for the Go programming language"
+    },
+    {
+      "name": "golang/tools/goimports",
+      "description": "updates your Go import lines, adding missing ones and removing unreferenced ones",
+      "link": "https://pkg.go.dev/golang.org/x/tools/cmd/goimports",
+      "aliases": [
+        "golang.org/x/tools/cmd/goimports"
+      ]
+    },
+    {
+      "name": "golang/tools/goyacc",
+      "description": "Goyacc is a version of yacc for Go. It is written in Go and generates parsers written in Go"
+    },
+    {
+      "name": "golang/tools/stringer",
+      "description": "Stringer is a tool to automate the creation of methods that satisfy the fmt.Stringer interface",
+      "link": "https://pkg.go.dev/golang.org/x/tools/cmd/stringer"
     },
     {
       "name": "golangci/golangci-lint",
@@ -530,6 +754,10 @@
     {
       "name": "google/wire",
       "description": "Compile-time Dependency Injection for Go"
+    },
+    {
+      "name": "gopasspw/gopass",
+      "description": "The slightly more awesome standard unix password manager for teams"
     },
     {
       "name": "goreleaser/goreleaser",
@@ -637,6 +865,14 @@
       "description": "The istioctl tool is a configuration command line utility that allows service operators to debug and diagnose their Istio service mesh deployments"
     },
     {
+      "name": "iyear/tdl",
+      "description": "A Telegram toolkit written in Golang"
+    },
+    {
+      "name": "j178/prek",
+      "description": "Better `pre-commit`, re-engineered in Rust"
+    },
+    {
       "name": "jdx/mise",
       "description": "dev tools, env vars, task runner",
       "aliases": [
@@ -671,6 +907,10 @@
       ]
     },
     {
+      "name": "johnkerl/miller",
+      "description": "Miller is like awk, sed, cut, join, and sort for name-indexed data such as CSV, TSV, and tabular JSON"
+    },
+    {
       "name": "jpillora/chisel",
       "description": "A fast TCP/UDP tunnel over HTTP"
     },
@@ -694,6 +934,10 @@
       "description": ":cherry_blossom: A command-line fuzzy finder"
     },
     {
+      "name": "kellyjonbrazil/jc",
+      "description": "CLI tool and python library that converts the output of popular command-line tools, file-types, and common strings to JSON, YAML, or Dictionaries. This allows piping of output to tools like jq and simplifying automation scripts"
+    },
+    {
       "name": "knadh/listmonk",
       "description": "High performance, self-hosted, newsletter and mailing list manager with a modern dashboard. Single binary app"
     },
@@ -706,8 +950,24 @@
       "description": "Cross-platform backup tool for Windows, macOS \u0026 Linux with fast, incremental backups, client-side end-to-end encryption, compression and data deduplication. CLI and GUI included"
     },
     {
+      "name": "kubernetes-sigs/kind",
+      "description": "Kubernetes IN Docker - local clusters for testing Kubernetes"
+    },
+    {
+      "name": "kubernetes-sigs/kubebuilder",
+      "description": "Kubebuilder - SDK for building Kubernetes APIs using CRDs"
+    },
+    {
       "name": "kubernetes-sigs/kustomize",
       "description": "Customization of kubernetes YAML configurations"
+    },
+    {
+      "name": "kubernetes/kompose",
+      "description": "Go from Docker Compose to Kubernetes"
+    },
+    {
+      "name": "kubernetes/kops",
+      "description": "Kubernetes Operations (kops) - Production Grade K8s Installation, Upgrades, and Management"
     },
     {
       "name": "kubernetes/kubernetes/apiextensions-apiserver",
@@ -779,12 +1039,24 @@
       ]
     },
     {
+      "name": "kyverno/kyverno",
+      "description": "Cloud Native Policy Management"
+    },
+    {
       "name": "lima-vm/lima",
       "description": "Linux virtual machines, with a focus on running containers"
     },
     {
       "name": "linkerd/linkerd2",
       "description": "Ultralight, security-first service mesh for Kubernetes. Main repo for Linkerd 2.x"
+    },
+    {
+      "name": "linuxkit/linuxkit",
+      "description": "A toolkit for building secure, portable and lean operating systems for containers"
+    },
+    {
+      "name": "loft-sh/devpod",
+      "description": "Codespaces but open-source, client-only and unopinionated: Works with any IDE and lets you use any cloud, kubernetes or just localhost docker"
     },
     {
       "name": "loft-sh/vcluster",
@@ -803,6 +1075,18 @@
       "description": "Mac App Store command line interface"
     },
     {
+      "name": "max-sixty/worktrunk",
+      "description": "Worktrunk is a CLI for Git worktree management, designed for parallel AI agent workflows"
+    },
+    {
+      "name": "mfontanini/presenterm",
+      "description": "A markdown terminal slideshow tool"
+    },
+    {
+      "name": "mgdm/htmlq",
+      "description": "Like jq, but for HTML"
+    },
+    {
       "name": "micro-editor/micro",
       "description": "A modern and intuitive terminal-based text editor",
       "aliases": [
@@ -819,6 +1103,10 @@
       "link": "https://code.visualstudio.com/"
     },
     {
+      "name": "mikefarah/yq",
+      "description": "yq is a portable command-line YAML processor"
+    },
+    {
       "name": "mislav/hub",
       "description": "A command-line tool that makes git easier to use with GitHub",
       "aliases": [
@@ -830,8 +1118,16 @@
       "description": "concurrent, cache-efficient, and Dockerfile-agnostic builder toolkit"
     },
     {
+      "name": "modem-dev/hunk",
+      "description": "Review-first terminal diff viewer for agentic coders"
+    },
+    {
       "name": "muesli/duf",
       "description": "Disk Usage/Free Utility - a better 'df' alternative"
+    },
+    {
+      "name": "mvdan/sh",
+      "description": "A shell parser, formatter, and interpreter with bash and zsh support; includes shfmt"
     },
     {
       "name": "nektos/act",
@@ -858,6 +1154,13 @@
       "description": "Command-line Git information tool"
     },
     {
+      "name": "oapi-codegen/oapi-codegen",
+      "description": "Generate Go client and server boilerplate from OpenAPI 3 specifications",
+      "aliases": [
+        "deepmap/oapi-codegen"
+      ]
+    },
+    {
       "name": "ogham/exa",
       "description": "A modern replacement for ‘ls’"
     },
@@ -868,6 +1171,17 @@
     {
       "name": "open-policy-agent/opa",
       "description": "Open Policy Agent (OPA) is an open source, general-purpose policy engine"
+    },
+    {
+      "name": "openbao/openbao/bao",
+      "description": "OpenBao exists to provide a software solution to manage, store, and distribute sensitive data including secrets, certificates, and keys"
+    },
+    {
+      "name": "openclaw/gogcli",
+      "description": "Google Suite CLI: Gmail, GCal, GDrive, GContacts",
+      "aliases": [
+        "steipete/gogcli"
+      ]
     },
     {
       "name": "opentofu/opentofu",
@@ -901,6 +1215,25 @@
       "description": "The linter for oxc"
     },
     {
+      "name": "peco/peco",
+      "description": "Simplistic interactive filtering tool"
+    },
+    {
+      "name": "phiresky/ripgrep-all",
+      "description": "rga: ripgrep, but also search in PDFs, E-Books, Office documents, zip, tar.gz, etc"
+    },
+    {
+      "name": "pimalaya/himalaya",
+      "description": "CLI to manage emails",
+      "aliases": [
+        "soywod/himalaya"
+      ]
+    },
+    {
+      "name": "pkgxdev/pkgx",
+      "description": "“run anything” from the creator of `brew`"
+    },
+    {
       "name": "pranshuparmar/witr",
       "description": "Why is this running"
     },
@@ -925,6 +1258,10 @@
       "description": "Subfinder is a subdomain discovery tool that discovers valid subdomains for websites. Designed as a passive framework to be useful for bug bounties and safe for penetration testing"
     },
     {
+      "name": "prometheus/alertmanager",
+      "description": "Prometheus Alertmanager"
+    },
+    {
       "name": "prometheus/prometheus",
       "description": "The Prometheus monitoring system and time series database"
     },
@@ -937,8 +1274,16 @@
       "description": "Pulumi - Infrastructure as Code in any programming language"
     },
     {
+      "name": "qarmin/czkawka",
+      "description": "Multi functional app to find duplicates, empty folders, similar images etc"
+    },
+    {
       "name": "rclone/rclone",
       "description": "\"rsync for cloud storage\" - Google Drive, S3, Dropbox, Backblaze B2, One Drive, Swift, Hubic, Wasabi, Google Cloud Storage, Yandex Files"
+    },
+    {
+      "name": "realm/SwiftLint",
+      "description": "A tool to enforce Swift style and conventions"
     },
     {
       "name": "redpanda-data/redpanda",
@@ -949,12 +1294,20 @@
       "description": "Fast, secure, efficient backup program"
     },
     {
+      "name": "reviewdog/reviewdog",
+      "description": "Automated code review tool integrated with any code analysis tools regardless of programming language"
+    },
+    {
       "name": "rtk-ai/rtk",
       "description": "CLI proxy that reduces LLM token consumption by 60-90% on common dev commands. Single Rust binary, zero dependencies"
     },
     {
       "name": "rui314/mold",
       "description": "mold: A Modern Linker"
+    },
+    {
+      "name": "runatlantis/atlantis",
+      "description": "Terraform Pull Request Automation"
     },
     {
       "name": "rust-lang/mdBook",
@@ -996,8 +1349,16 @@
       "description": "Use GPT-4(V), Gemini, LocalAI, Ollama and other LLMs in the terminal"
     },
     {
+      "name": "simeji/jid",
+      "description": "json incremental digger"
+    },
+    {
       "name": "slackhq/nebula",
       "description": "A scalable overlay networking tool with a focus on performance, simplicity and security"
+    },
+    {
+      "name": "smtg-ai/claude-squad",
+      "description": "Manage multiple AI agents like Claude Code, Aider, Codex, and Amp. 10x your productivity"
     },
     {
       "name": "spotDL/spotify-downloader",
@@ -1019,8 +1380,20 @@
       "description": "The minimal, blazing-fast, and infinitely customizable prompt for any shell"
     },
     {
+      "name": "superradcompany/microsandbox",
+      "description": "Self-Hosted Platform for Secure Execution of Untrusted User/AI Code",
+      "aliases": [
+        "microsandbox/microsandbox",
+        "zerocore-ai/microsandbox"
+      ]
+    },
+    {
       "name": "svenstaro/genact",
       "description": "A nonsense activity generator"
+    },
+    {
+      "name": "svenstaro/miniserve",
+      "description": "For when you really just want to serve some files over HTTP right now"
     },
     {
       "name": "swaggo/swag",
@@ -1055,8 +1428,16 @@
       "description": "Define your dev environment as code. For microservice apps on Kubernetes"
     },
     {
+      "name": "tinygo-org/tinygo",
+      "description": "Go compiler for small places. Microcontrollers, WebAssembly (WASM/WASI), and command-line tools. Based on LLVM"
+    },
+    {
       "name": "tomnomnom/gron",
       "description": "Make JSON greppable"
+    },
+    {
+      "name": "traefik/yaegi",
+      "description": "Yaegi is Another Elegant Go Interpreter"
     },
     {
       "name": "tree-sitter/tree-sitter",
@@ -1077,6 +1458,10 @@
     {
       "name": "tstack/lnav",
       "description": "Log file navigator"
+    },
+    {
+      "name": "turbot/steampipe",
+      "description": "Use SQL to instantly query your cloud services (AWS, Azure, GCP and more). Open source CLI. No DB required"
     },
     {
       "name": "twpayne/chezmoi",
@@ -1110,6 +1495,14 @@
       "description": "Browser automation CLI for AI agents"
     },
     {
+      "name": "vi/websocat",
+      "description": "Command-line client for WebSockets, like netcat (or curl) for ws:// with advanced socat-like functions"
+    },
+    {
+      "name": "visioncortex/vtracer",
+      "description": "Raster to Vector Graphics Converter"
+    },
+    {
       "name": "volta-cli/volta",
       "description": "Volta: JS Toolchains as Code"
     },
@@ -1122,6 +1515,14 @@
       "description": "A tool for exploring each layer in a docker image"
     },
     {
+      "name": "wasm-bindgen/wasm-pack",
+      "description": "your favorite rust -\u003e wasm workflow tool",
+      "aliases": [
+        "rustwasm/wasm-pack",
+        "drager/wasm-pack"
+      ]
+    },
+    {
       "name": "weaviate/weaviate",
       "description": "Weaviate is an open-source vector database that stores both objects and vectors, allowing for the combination of vector search with structured filtering with the fault tolerance and scalability of a cloud-native database"
     },
@@ -1132,6 +1533,10 @@
     {
       "name": "xo/usql",
       "description": "Universal command-line interface for SQL databases"
+    },
+    {
+      "name": "yarnpkg/berry",
+      "description": "Active development trunk for Yarn"
     },
     {
       "name": "yorukot/superfile",
