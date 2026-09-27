@@ -1,0 +1,13 @@
+type: github_release
+repo_owner: ahmetb
+repo_name: kubectx
+description: Faster way to switch between clusters and namespaces in kubectl
+version_overrides:
+  - version_constraint: Version == "v0.9.0"
+  - version_constraint: semver("> 0.9.4")
+  - version_constraint: semver("> 0.9.2")
+  - version_constraint: semver("> 0.8.0")
+  - version_constraint: semver("<= 0.8.0")
+    no_asset: true
+  - version_constraint: "true"
+all_assets_filter: not (Asset matches "kubens")
