@@ -18,6 +18,7 @@ requests, which merge when their checks pass.
 
 - [CONTRIBUTING.md](CONTRIBUTING.md): For users and outside contributors.
 - [MAINTAINING.md](MAINTAINING.md): For maintainers.
+- [CONSUMING.md](CONSUMING.md): For developers of other tools that read this registry.
 
 ## Branches and Directory Structure
 
@@ -45,9 +46,22 @@ versions/
 - `versions/<version>/registry-1.json`: the static registry file, which is what aqua
   reads. One per version, written once. We call it `registry.json` for short.
 
-The `1` is the registry schema version rather than a counter. A change that older aqua
-can't read arrives as `registry-2.json` beside it, so an aqua that knows only the first
-keeps working.
+#### Schema version
+
+The `1` in `registry-1.json` is the major version of the registry schema, not a counter.
+There is only one schema so far.
+
+- A change a reader of the current schema can still read, such as a field it can ignore,
+  keeps the file name. A reader should ignore fields it doesn't know.
+- A change it can't read arrives as `registry-2.json`, written beside `registry-1.json`
+  rather than replacing it, so a reader that knows only the first keeps working.
+- For a while after a new schema arrives, new versions get both files. When that stops,
+  new versions get only the new one, and a reader that knows only the old schema doesn't
+  get them.
+- A published file is never deleted.
+
+So a reader asks for the newest `registry-<major>.json` it knows, and steps down to older
+ones if that isn't there.
 
 #### The branch name
 

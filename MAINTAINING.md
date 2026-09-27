@@ -174,6 +174,6 @@ commit.
 
 [skills/update-schema](skills/update-schema/SKILL.md).
 
-The schema's major version is the file name, so a change an older aqua can't read arrives as
-`registry-2.json` beside the first rather than as an edit to what is published. Nothing here
-has been done yet: there is one schema, and the skill is what to build the first time.
+What the schema version promises a reader is in [README.md](README.md#schema-version).
+Nothing here has been done yet: there is one schema, and the skill is what to build the first
+time.

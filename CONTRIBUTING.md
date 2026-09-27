@@ -8,6 +8,26 @@ Please create an issue if you have any problem.
 This document is for outside contributors.
 For maintainers, see [MAINTAINING.md](MAINTAINING.md).
 
+## For non-aqua users
+
+aqua-registry-g2 is a registry for aqua, not for other tools.
+So we don't accept bug reports that haven't been reproduced using aqua.
+If you face a problem using another tool, please ask that tool's community for help first, and confirm that you can reproduce the problem using aqua before creating an issue in this repository.
+If you can, please [create an issue using the issue template](https://github.com/aquaproj/aqua-registry-g2/issues/new?template=02-bug-report.yml).
+
+### Background
+
+As of 2026-09-27, other tools like [mise](https://github.com/jdx/mise), [Docker Agent](https://github.com/docker/docker-agent), [Atmos](https://github.com/cloudposse/atmos), and [Dagu](https://github.com/dagucloud/dagu) use [aqua-registry](https://github.com/aquaproj/aqua-registry).
+
+References:
+
+- [mise](https://mise.jdx.dev/dev-tools/backends/aqua.html)
+- [Inside Dagu v2.7.0: Reproducible Workflows](https://dagu.sh/blog/inside-dagu-v2-7-actions)
+- [Docker Agent: Auto-Installing Tools](https://github.com/docker/docker-agent/blob/9d110ae3498808feaa4be3c85f307a6701ada2d6/docs/configuration/tools/index.md#auto-installing-tools)
+- [Atmos toolchain](https://atmos.tools/cli/commands/toolchain/usage)
+
+As a result, users of these tools sometimes report issues that can't be reproduced using aqua, and we can't address them.
+
 ## How To Add packages
 
 Create a GitHub Issue from the [issue template](https://github.com/aquaproj/aqua-registry-g2/issues/new?template=01-new-package.yml).

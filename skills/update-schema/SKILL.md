@@ -5,10 +5,10 @@ description: Roll out a new major version of the registry.json schema across aqu
 
 # Update the schema of registry.json
 
-The schema's major version is the file name. `registry-1.json` is the first, and a change an
-older aqua can't read arrives as `registry-2.json` written beside it, so an aqua that knows
-only the first keeps working. A change an older aqua can read -- a field it ignores -- adds no
-file; `schema_version` inside the file carries the full version.
+What the schema version promises a reader -- the major version is the file name, a change an
+older aqua can't read arrives as a new file beside the old one, and a published file is never
+deleted -- is in [README.md](../../README.md#schema-version). This is how to keep that promise
+when a new major version is needed.
 
 Nothing here has been done yet. There is one schema, no migration in ar2 and no fallback in
 aqua, so the steps below are what to build the first time rather than commands to run.
