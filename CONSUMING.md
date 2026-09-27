@@ -43,10 +43,24 @@ Fetch [index.json](index.json).
 
 ## How To List available versions
 
-List files in `versions/` of package branches.
+Each directory in `versions/` of a package branch is a version.
 
 e.g. [grafana/k6](https://github.com/aquaproj/aqua-registry-g2/tree/pkg_grafana_2fk6/versions)
+
+A tool can list them with GitHub's Git Trees API:
+
+```sh
+gh api 'repos/aquaproj/aqua-registry-g2/git/trees/pkg_grafana_2fk6:versions' \
+  --jq '.tree[] | select(.type == "tree") | .path'
+```
+
+A version that isn't there hasn't been generated, usually because it hasn't been yet. Mutable versions such as `latest` are never generated.
+See [CONTRIBUTING.md](CONTRIBUTING.md#how-to-support-a-new-version).
 
 ## How To Resolve package aliases
 
 Fetch [aliases.json](aliases.json).
+It maps an alias to the package's name, e.g. `stedolan/jq`, the name before the repository moved, to `jqlang/jq`.
+The package branch is named after the package's name, so resolve the name before [encoding it](README.md#the-branch-name).
+
+index.json also lists each package's aliases, but use aliases.json: the aliases in index.json may change or go away.
