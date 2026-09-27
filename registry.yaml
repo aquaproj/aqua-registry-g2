@@ -1,0 +1,23 @@
+type: github_release
+repo_owner: bootandy
+repo_name: dust
+description: A more intuitive version of du in rust
+version_overrides:
+  - version_constraint: Version in ["v0.1.1", "v0.4.0", "v0.4.1.1", "v0.7.0"]
+    no_asset: true
+  - version_constraint: semver("<= 0.2.0")
+  - version_constraint: semver("<= 0.3.1")
+  - version_constraint: Version == "v0.4.0.1"
+  - version_constraint: semver("<= 0.4.4")
+  - version_constraint: semver("<= 0.6.2")
+    files:
+      - name: dust
+        src: '{{.AssetWithoutExt}}/dust'
+  - version_constraint: semver("<= 0.8.0")
+    files:
+      - name: dust
+        src: '{{.AssetWithoutExt}}/dust'
+  - version_constraint: "true"
+    files:
+      - name: dust
+        src: '{{.AssetWithoutExt}}/dust'
