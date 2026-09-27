@@ -1,0 +1,15 @@
+type: github_release
+repo_owner: mozilla
+repo_name: sccache
+description: Sccache is a ccache-like tool. It is used as a compiler wrapper and avoids compilation when possible. Sccache has the capability to utilize caching in remote storage environments, including various cloud storage options, or alternatively, in local storage
+files:
+  - name: sccache
+    src: '{{.AssetWithoutExt}}/sccache'
+version_overrides:
+  - version_constraint: Version == "v0.3.2"
+    no_asset: true
+  - version_constraint: Version in ["v0.5.1", "v0.6.0"]
+  - version_constraint: Version == "v0.13.0"
+  - version_constraint: semver("<= 0.2.13")
+    error_message: This version is too old. Please use newer versions
+  - version_constraint: "true"
