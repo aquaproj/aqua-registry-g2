@@ -1,0 +1,42 @@
+type: github_release
+repo_owner: go-gost
+repo_name: gost
+description: GO Simple Tunnel - a simple tunnel written in golang
+version_overrides:
+  - version_constraint: semver("> 3.0.0-rc.4")
+    overrides:
+      - goos: windows
+        files:
+          - name: gost
+  - version_constraint: semver("> 3.0.0-beta.6")
+    files:
+      - name: gost
+        src: gost-{{.OS}}-{{.Arch}}-{{trimV .Version}}
+    overrides:
+      - goos: windows
+        files:
+          - name: gost
+            src: gost-windows-{{.Arch}}.exe
+  - version_constraint: semver("> 3.0.0-beta.2")
+    files:
+      - name: gost
+        src: gost-{{.OS}}-{{.Arch}}-{{trimV .Version}}
+    overrides:
+      - goos: windows
+        files:
+          - name: gost
+            src: gost-windows-{{.Arch}}.exe
+  - version_constraint: semver("<= 3.0.0-beta.2")
+    files:
+      - name: gost
+        src: gost-{{.OS}}-{{.Arch}}-{{trimV .Version}}
+    overrides:
+      - goos: windows
+        files:
+          - name: gost
+            src: gost-windows-{{.Arch}}.exe
+  - version_constraint: "true"
+    overrides:
+      - goos: windows
+        files:
+          - name: gost
