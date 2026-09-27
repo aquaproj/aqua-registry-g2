@@ -8,6 +8,10 @@ name: regenerate
 #
 # Only the versions whose file actually changes are committed, so dispatching it for a
 # package where nothing moved comes to nothing.
+#
+# 'pending' is the other way round: it regenerates what the pull request of versions waiting
+# for a definition holds, from the definition that pull request carries, and commits onto the
+# same branch. Put the version_overrides those versions need on that branch first.
 on:
   workflow_dispatch:
     inputs:
@@ -18,6 +22,11 @@ on:
         description: the versions to generate again, separated by spaces; empty means all of them
         required: false
         default: ""
+      pending:
+        description: generate again what the pull request of versions waiting for a definition holds, from the definition it carries
+        type: boolean
+        required: false
+        default: false
       dry_run:
         description: say which versions would change and commit nothing
         type: boolean
@@ -66,6 +75,9 @@ jobs:
           for version in $VERSIONS; do
             args+=("$version")
           done
+          if [ "$PENDING" = "true" ]; then
+            args+=(--pending)
+          fi
           if [ "$DRY_RUN" = "true" ]; then
             args+=(--dry-run)
           fi
@@ -79,5 +91,6 @@ jobs:
           AR2_PR_TOKEN: ${{ steps.pr_token.outputs.token }}
           NAME: ${{ inputs.name }}
           VERSIONS: ${{ inputs.versions }}
+          PENDING: ${{ inputs.pending }}
           DRY_RUN: ${{ inputs.dry_run }}
           LOG_LEVEL: ${{ inputs.log_level }}
