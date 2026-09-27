@@ -6,18 +6,14 @@ and opens pull requests, and CI decides what merges.
 
 ## Before writing anything
 
-Everything that writes runs as a GitHub Actions workflow, not from a checkout. The
-`require_sign` ruleset covers every branch and no actor bypasses it, and GitHub signs a commit
-made through its API only when the caller is a GitHub App installation or Actions -- whose keys
-are in this repository's environments. A commit made here with a user access token is refused,
-however correct its contents.
+Don't commit from a checkout. A commit made here with a user access token isn't signed, and a
+ruleset covering every branch refuses it, however correct its contents. A change is
+`gh workflow run <workflow> -f ...` and then reading the pull request it opens --
+[MAINTAINING.md](MAINTAINING.md#everything-that-writes-runs-in-github-actions) says which
+workflow, and why the rest of the repository is shaped around this.
 
-So a change is `gh workflow run <workflow> -f ...`, and then reading the pull request it opens.
-The `ar2` commands that only read can be run directly: `ar2 state`, `ar2 regenerate --dry-run`,
-`ar2 test`, `ar2 validate-index`.
-
-Two more rules: a pull request is required on `main` and on every `pkg_*` branch, and a package
-branch cannot be deleted by anyone but an administrator.
+The `ar2` commands that only read can be run directly: `ar2 state`,
+`ar2 regenerate --dry-run`, `ar2 test`, `ar2 validate-index`.
 
 ## Where things are
 
