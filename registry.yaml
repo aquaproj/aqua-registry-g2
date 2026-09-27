@@ -1,0 +1,14 @@
+type: github_release
+repo_owner: restic
+repo_name: restic
+description: Fast, secure, efficient backup program
+overrides:
+  - goos: windows
+    files:
+      - name: restic
+        src: restic_{{trimV .Version}}_windows_{{.Arch}}.exe
+files:
+  - name: restic
+    src: restic_{{trimV .Version}}_{{.OS}}_{{.Arch}}
+version_overrides:
+  - version_constraint: "true"
