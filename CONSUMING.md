@@ -1,0 +1,38 @@
+# Consuming
+
+aqua-registry-g2 is a registry for aqua.
+See also [For Non aqua users](CONTRIBUTING.md#for-non-aqua-users).
+
+But aqua-registry-g2 is valuable for not only aqua but also other tools.
+Some tools used aqua-registry, so maybe they migrate to aqua-registry-g2.
+
+This document is for this kind of tool maintainers.
+We don't guarantee anything, but we hope this will be helpful.
+
+Please see also [README.md](README.md), [CONTRIBUTING.md](CONTRIBUTING.md), and [MAINTAINING.md](MAINTAINING.md).
+
+## How To Fetch registry.json
+
+In aqua-registry, tools could fetch registry.yaml from the repository root or `pkgs/<package name>/registry.yaml` in the main branch of aqua-registry.
+
+e.g. [pkgs/cli/cli/registry.yaml](https://github.com/aquaproj/aqua-registry/blob/main/pkgs/cli/cli/registry.yaml)
+
+In case of aqua-registry-g2, [`registry.json` can be fetched from each package branch per package version](README.md#package-branches).
+
+e.g. [grafana/k6 v2.3.0](https://github.com/aquaproj/aqua-registry-g2/blob/pkg_grafana_2fk6/versions/v2.3.0/registry-1.json)
+
+`1` of `registry-1.json` is the registry schema version.
+
+## How To List available packages
+
+Fetch [index.json](index.json).
+
+## How To List available versions
+
+List files in `versions/` of package branches.
+
+e.g. [grafana/k6](https://github.com/aquaproj/aqua-registry-g2/tree/pkg_grafana_2fk6/versions)
+
+## How To Resolve package aliases
+
+Fetch [aliases.json](aliases.json).
