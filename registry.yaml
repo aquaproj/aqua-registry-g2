@@ -25,6 +25,19 @@ files:
     src: bin/{{.FileName}}
 github_artifact_attestations:
   signer_workflow: containerd/containerd/.github/workflows/release.yml
+# The release carries containerd-<version>-attestation.intoto.jsonl, and the inference
+# takes an .intoto.jsonl for SLSA provenance. slsa-verifier won't read this one: it holds
+# a provenance built by containerd's own release workflow, which is not a builder it
+# trusts, and aqua has nowhere to name one.
+#
+#   FAILED: SLSA verification failed: untrusted reusable workflow:
+#   https://github.com/containerd/containerd/.github/workflows/release.yml
+#   with builderID provided: false
+#
+# Nothing is given up by saying so. The file is a Sigstore bundle, which is what
+# github_artifact_attestations above verifies, against that same workflow.
+slsa_provenance:
+  enabled: false
 version_overrides:
   - version_constraint: Version == "v1.2.11"
     no_asset: true
