@@ -1,0 +1,31 @@
+type: github_release
+repo_owner: a-h
+repo_name: templ
+description: A language for writing HTML user interfaces in Go
+version_overrides:
+  - version_constraint: semver(">= 0.2.639")
+    checksum:
+      type: github_release
+      asset: checksums.txt
+      algorithm: sha256
+      cosign:
+        opts:
+          - --signature
+          - https://github.com/a-h/templ/releases/download/{{.Version}}/checksums.txt.sig
+          - --key
+          - https://raw.githubusercontent.com/a-h/templ/refs/tags/{{.Version}}/cosign.pub
+  - version_constraint: semver("> 0.2.194")
+  - version_constraint: semver("> 0.0.148")
+  - version_constraint: semver("> 0.0.126")
+  - version_constraint: semver("<= 0.0.126")
+  - version_constraint: "true"
+    checksum:
+      type: github_release
+      asset: checksums.txt
+      algorithm: sha256
+      cosign:
+        opts:
+          - --signature
+          - https://github.com/a-h/templ/releases/download/{{.Version}}/checksums.txt.sig
+          - --key
+          - https://raw.githubusercontent.com/a-h/templ/refs/tags/{{.Version}}/cosign.pub
