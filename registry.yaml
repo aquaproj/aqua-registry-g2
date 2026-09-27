@@ -9,12 +9,6 @@ version_overrides:
     files:
       - name: ruff
         src: '{{.AssetWithoutExt}}/ruff'
-    replacements:
-      amd64: x86_64
-      arm64: aarch64
-      darwin: apple-darwin
-      linux: unknown-linux-musl
-      windows: pc-windows-msvc
     github_artifact_attestations:
       signer_workflow: astral-sh/ruff/.github/workflows/release.yml
     overrides:
@@ -25,42 +19,18 @@ version_overrides:
     files:
       - name: ruff
         src: '{{.AssetWithoutExt}}/ruff'
-    replacements:
-      amd64: x86_64
-      arm64: aarch64
-      darwin: apple-darwin
-      linux: unknown-linux-musl
-      windows: pc-windows-msvc
     overrides:
       - goos: windows
         files:
           - name: ruff
   - version_constraint: semver("> 0.1.7")
-    replacements:
-      amd64: x86_64
-      arm64: aarch64
-      darwin: apple-darwin
-      linux: unknown-linux-musl
-      windows: pc-windows-msvc
   - version_constraint: semver("> 0.0.246")
-    replacements:
-      amd64: x86_64
-      arm64: aarch64
-      darwin: apple-darwin
-      linux: unknown-linux-musl
-      windows: pc-windows-msvc
   - version_constraint: semver("<= 0.0.246")
     no_asset: true
   - version_constraint: "true"
     files:
       - name: ruff
         src: '{{.AssetWithoutExt}}/ruff'
-    replacements:
-      amd64: x86_64
-      arm64: aarch64
-      darwin: apple-darwin
-      linux: unknown-linux-musl
-      windows: pc-windows-msvc
     github_artifact_attestations:
       signer_workflow: astral-sh/ruff/.github/workflows/release.yml
     overrides:
