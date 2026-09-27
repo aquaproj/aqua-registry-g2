@@ -1,0 +1,25 @@
+type: github_release
+repo_owner: dolthub
+repo_name: dolt
+description: Dolt – It's Git for Data
+files:
+  - name: dolt
+    src: dolt-{{.OS}}-{{.Arch}}/bin/dolt
+version_overrides:
+  - version_constraint: semver(">= 0.40.29")
+  - version_constraint: semver(">= 0.40.15")
+    files:
+      - name: dolt
+        src: dolt-{{.OS}}-{{.Arch}}/bin/dolt
+      - name: git-dolt
+        src: dolt-{{.OS}}-{{.Arch}}/bin/git-dolt
+      - name: git-dolt-smudge
+        src: dolt-{{.OS}}-{{.Arch}}/bin/git-dolt-smudge
+  - version_constraint: "true"
+    files:
+      - name: dolt
+        src: dolt-{{.OS}}-{{.Arch}}/bin/dolt
+      - name: git-dolt
+        src: dolt-{{.OS}}-{{.Arch}}/bin/git-dolt
+      - name: git-dolt-smudge
+        src: dolt-{{.OS}}-{{.Arch}}/bin/git-dolt-smudge
