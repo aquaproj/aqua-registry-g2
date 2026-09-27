@@ -1,0 +1,157 @@
+type: github_release
+repo_owner: Kitware
+repo_name: CMake
+description: Mirror of CMake upstream repository
+overrides:
+  - goos: windows
+    files:
+      - name: cmake
+        src: '{{.AssetWithoutExt}}/bin/cmake'
+      - name: cmake-gui
+        src: '{{.AssetWithoutExt}}/bin/cmake-gui'
+      - name: cpack
+        src: '{{.AssetWithoutExt}}/bin/cpack'
+      - name: ctest
+        src: '{{.AssetWithoutExt}}/bin/ctest'
+  - goos: darwin
+    files:
+      - name: cmake
+        src: '{{.AssetWithoutExt}}/CMake.app/Contents/bin/cmake'
+      - name: ccmake
+        src: '{{.AssetWithoutExt}}/CMake.app/Contents/bin/ccmake'
+      - name: cmake-gui
+        src: '{{.AssetWithoutExt}}/CMake.app/Contents/bin/cmake-gui'
+      - name: cpack
+        src: '{{.AssetWithoutExt}}/CMake.app/Contents/bin/cpack'
+      - name: ctest
+        src: '{{.AssetWithoutExt}}/CMake.app/Contents/bin/ctest'
+files:
+  - name: cmake
+    src: '{{.AssetWithoutExt}}/bin/cmake'
+  - name: ccmake
+    src: '{{.AssetWithoutExt}}/bin/ccmake'
+  - name: cmake-gui
+    src: '{{.AssetWithoutExt}}/bin/cmake-gui'
+  - name: cpack
+    src: '{{.AssetWithoutExt}}/bin/cpack'
+  - name: ctest
+    src: '{{.AssetWithoutExt}}/bin/ctest'
+version_overrides:
+  - version_constraint: Version == "v3.1.0"
+    overrides:
+      - goos: darwin
+        files:
+          - name: cmake
+            src: '{{.AssetWithoutExt}}/CMake.app/Contents/bin/cmake'
+          - name: ccmake
+            src: '{{.AssetWithoutExt}}/CMake.app/Contents/bin/ccmake'
+          - name: cmake-gui
+            src: '{{.AssetWithoutExt}}/CMake.app/Contents/bin/cmake-gui'
+          - name: cpack
+            src: '{{.AssetWithoutExt}}/CMake.app/Contents/bin/cpack'
+          - name: ctest
+            src: '{{.AssetWithoutExt}}/CMake.app/Contents/bin/ctest'
+  - version_constraint: Version == "v3.19.2"
+    overrides:
+      - goos: darwin
+        files:
+          - name: cmake
+            src: '{{.AssetWithoutExt}}/CMake.app/Contents/bin/cmake'
+          - name: ccmake
+            src: '{{.AssetWithoutExt}}/CMake.app/Contents/bin/ccmake'
+          - name: cmake-gui
+            src: '{{.AssetWithoutExt}}/CMake.app/Contents/bin/cmake-gui'
+          - name: cpack
+            src: '{{.AssetWithoutExt}}/CMake.app/Contents/bin/cpack'
+          - name: ctest
+            src: '{{.AssetWithoutExt}}/CMake.app/Contents/bin/ctest'
+      - goos: windows
+        files:
+          - name: cmake
+            src: '{{.AssetWithoutExt}}/bin/cmake'
+          - name: cmake-gui
+            src: '{{.AssetWithoutExt}}/bin/cmake-gui'
+          - name: cpack
+            src: '{{.AssetWithoutExt}}/bin/cpack'
+          - name: ctest
+            src: '{{.AssetWithoutExt}}/bin/ctest'
+  - version_constraint: semver("> 3.23.5")
+  - version_constraint: semver("> 3.19.8")
+  - version_constraint: semver("> 3.19.1")
+    overrides:
+      - goos: darwin
+        files:
+          - name: cmake
+            src: '{{.AssetWithoutExt}}/CMake.app/Contents/bin/cmake'
+          - name: ccmake
+            src: '{{.AssetWithoutExt}}/CMake.app/Contents/bin/ccmake'
+          - name: cmake-gui
+            src: '{{.AssetWithoutExt}}/CMake.app/Contents/bin/cmake-gui'
+          - name: cpack
+            src: '{{.AssetWithoutExt}}/CMake.app/Contents/bin/cpack'
+          - name: ctest
+            src: '{{.AssetWithoutExt}}/CMake.app/Contents/bin/ctest'
+      - goos: windows
+        files:
+          - name: cmake
+            src: '{{.AssetWithoutExt}}/bin/cmake'
+          - name: cmake-gui
+            src: '{{.AssetWithoutExt}}/bin/cmake-gui'
+          - name: cpack
+            src: '{{.AssetWithoutExt}}/bin/cpack'
+          - name: ctest
+            src: '{{.AssetWithoutExt}}/bin/ctest'
+  - version_constraint: semver("> 3.5.2")
+    overrides:
+      - goos: windows
+        files:
+          - name: cmake
+            src: '{{.AssetWithoutExt}}/bin/cmake'
+          - name: cmake-gui
+            src: '{{.AssetWithoutExt}}/bin/cmake-gui'
+          - name: cpack
+            src: '{{.AssetWithoutExt}}/bin/cpack'
+          - name: ctest
+            src: '{{.AssetWithoutExt}}/bin/ctest'
+      - goos: darwin
+        files:
+          - name: cmake
+            src: '{{.AssetWithoutExt}}/CMake.app/Contents/bin/cmake'
+          - name: ccmake
+            src: '{{.AssetWithoutExt}}/CMake.app/Contents/bin/ccmake'
+          - name: cmake-gui
+            src: '{{.AssetWithoutExt}}/CMake.app/Contents/bin/cmake-gui'
+          - name: cpack
+            src: '{{.AssetWithoutExt}}/CMake.app/Contents/bin/cpack'
+          - name: ctest
+            src: '{{.AssetWithoutExt}}/CMake.app/Contents/bin/ctest'
+  - version_constraint: semver("> 3.0.2")
+    overrides:
+      - goos: darwin
+        files:
+          - name: cmake
+            src: '{{.AssetWithoutExt}}/CMake.app/Contents/bin/cmake'
+          - name: ccmake
+            src: '{{.AssetWithoutExt}}/CMake.app/Contents/bin/ccmake'
+          - name: cmake-gui
+            src: '{{.AssetWithoutExt}}/CMake.app/Contents/bin/cmake-gui'
+          - name: cpack
+            src: '{{.AssetWithoutExt}}/CMake.app/Contents/bin/cpack'
+          - name: ctest
+            src: '{{.AssetWithoutExt}}/CMake.app/Contents/bin/ctest'
+  - version_constraint: semver("<= 3.0.2")
+    files:
+      - name: cmake
+        src: '{{.AssetWithoutExt}}/CMake.app/Contents/bin/cmake'
+      - name: ccmake
+        src: '{{.AssetWithoutExt}}/CMake.app/Contents/bin/ccmake'
+      - name: cmake-gui
+        src: '{{.AssetWithoutExt}}/CMake.app/Contents/bin/cmake-gui'
+      - name: cpack
+        src: '{{.AssetWithoutExt}}/CMake.app/Contents/bin/cpack'
+      - name: ctest
+        src: '{{.AssetWithoutExt}}/CMake.app/Contents/bin/ctest'
+  - version_constraint: "true"
+all_assets_filter: |
+  let words = ["macos10.10"];
+  not any(words, {Asset matches #})
