@@ -9,9 +9,6 @@ version_overrides:
     url: https://update.code.visualstudio.com/{{trimV .Version}}/cli-{{.OS}}-{{.Arch}}/stable
     format: zip
     append_ext: false
-    replacements:
-      amd64: x64
-      windows: win32
     overrides:
       - goos: linux
         format: tar.gz
@@ -21,9 +18,6 @@ version_overrides:
     url: https://update.code.visualstudio.com/{{trimV .Version}}/cli-{{.OS}}-{{.Arch}}/stable
     format: zip
     append_ext: false
-    replacements:
-      amd64: x64
-      windows: win32
     overrides:
       - goos: linux
         format: tar.gz
