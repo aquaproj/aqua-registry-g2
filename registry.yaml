@@ -5,3 +5,8 @@ type: github_release
 repo_owner: Automattic
 repo_name: harper
 description: The Grammar Checker for Developers
+# One release carries every program harper ships: the command line one, the editor
+# extensions as vsix files, the browser plugins, the desktop application as a dmg. The
+# inference took the dmg for darwin/amd64 and a vsix for windows/arm64. harper-ls is the
+# one built per target triple, and aqua-registry installs the glibc build on Linux.
+all_assets_filter: Asset matches "^harper-ls-(x86_64|aarch64)-(apple-darwin|unknown-linux-gnu|pc-windows-msvc)\\.(tar\\.gz|zip)$"
