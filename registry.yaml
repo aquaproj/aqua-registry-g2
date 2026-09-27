@@ -1,0 +1,45 @@
+name: ariga/atlas/community
+type: http
+repo_owner: ariga
+repo_name: atlas
+description: A modern tool for managing database schemas (Community Edition)
+link: https://atlasgo.io/community-edition
+version_overrides:
+  - version_constraint: semver(">= 0.21.0")
+    url: https://release.ariga.io/atlas/atlas-community-{{.OS}}-{{.Arch}}-{{.Version}}
+    format: raw
+    windows_arm_emulation: true
+    files:
+      - name: atlas
+    checksum:
+      type: http
+      url: https://release.ariga.io/atlas/atlas-community-{{.OS}}-{{.Arch}}-{{.Version}}.sha256
+      file_format: raw
+      algorithm: sha256
+    overrides:
+      - goos: windows
+        checksum:
+          type: http
+          url: https://release.ariga.io/atlas/atlas-community-{{.OS}}-{{.Arch}}-{{.Version}}.exe.sha256
+          file_format: raw
+          algorithm: sha256
+  - version_constraint: semver("< 0.21.0")
+    no_asset: true
+  - version_constraint: "true"
+    url: https://release.ariga.io/atlas/atlas-community-{{.OS}}-{{.Arch}}-{{.Version}}
+    format: raw
+    windows_arm_emulation: true
+    files:
+      - name: atlas
+    checksum:
+      type: http
+      url: https://release.ariga.io/atlas/atlas-community-{{.OS}}-{{.Arch}}-{{.Version}}.sha256
+      file_format: raw
+      algorithm: sha256
+    overrides:
+      - goos: windows
+        checksum:
+          type: http
+          url: https://release.ariga.io/atlas/atlas-community-{{.OS}}-{{.Arch}}-{{.Version}}.exe.sha256
+          file_format: raw
+          algorithm: sha256
