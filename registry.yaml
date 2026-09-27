@@ -46,3 +46,15 @@ version_overrides:
       linux: linux-glibc235
     github_artifact_attestations:
       signer_workflow: borgbackup/borg/.github/workflows/ci.yml
+# Every build is published twice: as the executable itself, and as a tgz of the directory
+# PyInstaller puts it in, where it is called borg.exe whatever the platform is. The
+# inference took the tgz. aqua-registry installs the executable, which is also what makes
+# an entry that doesn't depend on the files beside it.
+#
+# From 1.4 the executables are built twice over as well, against two glibc baselines, and
+# the newer one carries -gh. Before that there is one build per target and no suffix, so
+# which assets are the command is a question per version rather than for the package.
+asset_filters:
+  - version_constraint: semver(">= 1.4.2")
+    all_assets_filter: Asset matches "^borg-[^.]+-gh$"
+all_assets_filter: Asset matches "^borg-[^.]+$"
