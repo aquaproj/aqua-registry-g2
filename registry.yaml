@@ -1,0 +1,38 @@
+type: github_release
+repo_owner: microsoft
+repo_name: edit
+description: We all edit
+version_overrides:
+  - version_constraint: Version == "v1.2.1"
+    overrides:
+      - goos: windows
+        files:
+          - name: edit
+            src: '{{.AssetWithoutExt}}/edit'
+  - version_constraint: Version == "v1.0.0"
+    files:
+      - name: edit
+        src: '{{.AssetWithoutExt}}'
+    overrides:
+      - goos: windows
+        files:
+          - name: edit
+            src: '{{.AssetWithoutExt}}/edit'
+  - version_constraint: semver(">= 2.0.0")
+    overrides:
+      - goos: windows
+        files:
+          - name: edit
+            src: '{{.AssetWithoutExt}}/edit'
+  - version_constraint: semver("< 2.0.0")
+    overrides:
+      - goos: windows
+        files:
+          - name: edit
+            src: '{{.AssetWithoutExt}}/edit'
+  - version_constraint: "true"
+    overrides:
+      - goos: windows
+        files:
+          - name: edit
+            src: '{{.AssetWithoutExt}}/edit'
