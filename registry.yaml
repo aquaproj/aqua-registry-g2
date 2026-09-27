@@ -1,0 +1,17 @@
+aliases:
+  - name: google/ko
+type: github_release
+repo_owner: ko-build
+repo_name: ko
+description: Build and deploy Go applications on Kubernetes
+replacements:
+  "386": i386
+slsa_provenance:
+  type: github_release
+  asset: multiple.intoto.jsonl
+version_overrides:
+  - version_constraint: semver("> 0.12.0")
+  - version_constraint: semver("<=0.12.0")
+    slsa_provenance:
+      enabled: false
+  - version_constraint: "true"
