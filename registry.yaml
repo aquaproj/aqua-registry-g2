@@ -12,12 +12,6 @@ version_overrides:
     files:
       - name: uv
         src: '{{.AssetWithoutExt}}/uv'
-    replacements:
-      amd64: x86_64
-      arm64: aarch64
-      darwin: apple-darwin
-      linux: unknown-linux-musl
-      windows: pc-windows-msvc
     overrides:
       - goos: windows
         files:
@@ -28,12 +22,6 @@ version_overrides:
         src: '{{.AssetWithoutExt}}/uv'
       - name: uvx
         src: '{{.AssetWithoutExt}}/uvx'
-    replacements:
-      amd64: x86_64
-      arm64: aarch64
-      darwin: apple-darwin
-      linux: unknown-linux-musl
-      windows: pc-windows-msvc
     overrides:
       - goos: windows
         files:
@@ -44,12 +32,6 @@ version_overrides:
         src: '{{.AssetWithoutExt}}/uv'
       - name: uvx
         src: '{{.AssetWithoutExt}}/uvx'
-    replacements:
-      amd64: x86_64
-      arm64: aarch64
-      darwin: apple-darwin
-      linux: unknown-linux-musl
-      windows: pc-windows-msvc
     overrides:
       - goos: windows
         files:
@@ -61,12 +43,6 @@ version_overrides:
         src: '{{.AssetWithoutExt}}/uv'
       - name: uvx
         src: '{{.AssetWithoutExt}}/uvx'
-    replacements:
-      amd64: x86_64
-      arm64: aarch64
-      darwin: apple-darwin
-      linux: unknown-linux-musl
-      windows: pc-windows-msvc
     github_artifact_attestations:
       signer_workflow: astral-sh/uv/.github/workflows/release.yml
     overrides:
