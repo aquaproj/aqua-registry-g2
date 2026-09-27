@@ -7,7 +7,8 @@ But aqua-registry-g2 can be useful for other tools as well.
 Some tools use aqua-registry and may migrate to aqua-registry-g2.
 
 This document is for maintainers of such tools.
-We don't guarantee anything, but we hope this will be helpful.
+We write it in the hope that it helps, but we don't support other tools.
+aqua-registry-g2 changes for what aqua needs, and what this document describes may change without regard to other tools.
 
 Please see also [README.md](README.md), [CONTRIBUTING.md](CONTRIBUTING.md), and [MAINTAINING.md](MAINTAINING.md).
 
