@@ -1,0 +1,28 @@
+name: containerd/containerd/static
+type: github_release
+repo_owner: containerd
+repo_name: containerd
+description: An open and reliable container runtime (static binary)
+version_filter: Version matches "^v[0-9]+.[0-9]+.[0-9]+$"
+files:
+  - name: containerd
+    src: bin/{{.FileName}}
+  - name: containerd-shim-runc-v2
+    src: bin/{{.FileName}}
+  - name: containerd-stress
+    src: bin/{{.FileName}}
+  - name: ctr
+    src: bin/{{.FileName}}
+github_artifact_attestations:
+  signer_workflow: containerd/containerd/.github/workflows/release.yml
+version_overrides:
+  - version_constraint: semver("> 2.0.0")
+    github_artifact_attestations:
+      signer_workflow: containerd/containerd/.github/workflows/release.yml
+  - version_constraint: semver("> 1.6.38")
+  - version_constraint: semver("<= 1.6.38")
+    no_asset: true
+  - version_constraint: "true"
+    github_artifact_attestations:
+      signer_workflow: containerd/containerd/.github/workflows/release.yml
+all_assets_filter: Asset matches "^containerd-static-[0-9]+"
