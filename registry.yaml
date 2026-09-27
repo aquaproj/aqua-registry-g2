@@ -49,7 +49,12 @@ version_overrides:
     files:
       - name: coreutils
         src: coreutils-{{.Version}}-{{.Arch}}-{{.OS}}/coreutils
+  # The Windows archives of this era hold every utility as an executable of its own
+  # and no multicall coreutils.exe, so there is nothing here for aqua to install.
   - version_constraint: semver("< 0.10.0")
+    supported_envs:
+      - darwin
+      - linux
     files:
       - name: coreutils
         src: coreutils-{{.Version}}-{{.Arch}}-{{.OS}}/coreutils
