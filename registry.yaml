@@ -1,0 +1,10 @@
+name: golang/tools/goyacc
+type: go_install
+repo_owner: golang
+repo_name: tools
+description: Goyacc is a version of yacc for Go. It is written in Go and generates parsers written in Go
+path: golang.org/x/tools/cmd/goyacc
+version_filter: not (Version startsWith "gopls/")
+version_source: github_tag
+files:
+  - name: goyacc
