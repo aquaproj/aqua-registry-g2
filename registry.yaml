@@ -11,10 +11,6 @@ version_overrides:
     files:
       - name: zig
         src: zig-{{.OS}}-{{.Arch}}-{{.Version}}/zig
-    replacements:
-      amd64: x86_64
-      arm64: aarch64
-      darwin: macos
     minisign:
       type: http
       url: https://ziglang.org/builds/zig-{{.OS}}-{{.Arch}}-{{.Version}}.{{.Format}}.minisig
@@ -28,10 +24,6 @@ version_overrides:
     files:
       - name: zig
         src: zig-{{.OS}}-{{.Arch}}-{{.Version}}/zig
-    replacements:
-      amd64: x86_64
-      arm64: aarch64
-      darwin: macos
     minisign:
       type: http
       url: https://ziglang.org/download/{{.Version}}/zig-{{.OS}}-{{.Arch}}-{{.Version}}.{{.Format}}.minisig
@@ -45,10 +37,6 @@ version_overrides:
     files:
       - name: zig
         src: zig-{{.Arch}}-{{.OS}}-{{.Version}}/zig
-    replacements:
-      amd64: x86_64
-      arm64: aarch64
-      darwin: macos
     minisign:
       type: http
       url: https://ziglang.org/download/{{.Version}}/zig-{{.Arch}}-{{.OS}}-{{.Version}}.{{.Format}}.minisig
