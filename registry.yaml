@@ -1,0 +1,11 @@
+type: github_release
+repo_owner: abiosoft
+repo_name: colima
+description: Container runtimes on macOS (and Linux) with minimal setup
+version_overrides:
+  - version_constraint: Version == "v0.7.1"
+  - version_constraint: semver("> 0.2.2")
+  - version_constraint: semver("> 0.1.10")
+  - version_constraint: semver("<= 0.1.10")
+    no_asset: true
+  - version_constraint: "true"
