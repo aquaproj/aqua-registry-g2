@@ -1,0 +1,23 @@
+aliases:
+  - name: mitsuhiko/rye
+type: github_release
+repo_owner: astral-sh
+repo_name: rye
+description: a Hassle-Free Python Experience
+version_overrides:
+  - version_constraint: semver("> 0.3.0")
+    files:
+      - name: rye
+        src: rye-{{.Arch}}-{{.OS}}
+  - version_constraint: semver("> 0.1.2")
+    files:
+      - name: rye
+        src: rye-{{.Arch}}-{{.OS}}
+  - version_constraint: semver("<= 0.1.2")
+    files:
+      - name: rye
+        src: rye-{{.Arch}}-{{.OS}}
+  - version_constraint: "true"
+    files:
+      - name: rye
+        src: rye-{{.Arch}}-{{.OS}}
