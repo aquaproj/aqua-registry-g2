@@ -12,8 +12,6 @@ version_overrides:
     format: raw
     files:
       - name: claude
-    replacements:
-      amd64: x64
     overrides:
       - goos: linux
         variants:
@@ -33,9 +31,6 @@ version_overrides:
     format: tar.gz
     files:
       - name: claude
-    replacements:
-      amd64: x64
-      windows: win32
     checksum:
       type: github_release
       asset: SHASUMS256.txt
