@@ -1,0 +1,45 @@
+type: github_release
+repo_owner: foundry-rs
+repo_name: foundry
+description: Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust
+files:
+  - name: anvil
+  - name: cast
+  - name: chisel
+  - name: forge
+cosign:
+  opts:
+    - --certificate-identity
+    - https://github.com/foundry-rs/foundry/.github/workflows/release.yml@refs/tags/{{.Version}}
+    - --certificate-oidc-issuer
+    - https://token.actions.githubusercontent.com
+    - --certificate-github-workflow-repository
+    - foundry-rs/foundry
+    - --certificate-github-workflow-ref
+    - refs/tags/{{.Version}}
+  bundle:
+    type: github_release
+    asset: '{{.Asset}}.sigstore.json'
+github_artifact_attestations:
+  predicate_type: https://spdx.dev/Document/v2.3
+  signer_workflow: foundry-rs/foundry/.github/workflows/release.yml
+version_overrides:
+  - version_constraint: Version startsWith "nightly-"
+  - version_constraint: Version startsWith "rc-" || semver("<= 1.7.0")
+  - version_constraint: "true"
+    cosign:
+      opts:
+        - --certificate-identity
+        - https://github.com/foundry-rs/foundry/.github/workflows/release.yml@refs/tags/{{.Version}}
+        - --certificate-oidc-issuer
+        - https://token.actions.githubusercontent.com
+        - --certificate-github-workflow-repository
+        - foundry-rs/foundry
+        - --certificate-github-workflow-ref
+        - refs/tags/{{.Version}}
+      bundle:
+        type: github_release
+        asset: '{{.AssetWithoutExt}}.sigstore.json'
+    github_artifact_attestations:
+      predicate_type: https://spdx.dev/Document/v2.3
+      signer_workflow: foundry-rs/foundry/.github/workflows/release.yml
