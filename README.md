@@ -18,6 +18,7 @@ requests, which merge when their checks pass.
 
 - [CONTRIBUTING.md](CONTRIBUTING.md): For users and outside contributors.
 - [MAINTAINING.md](MAINTAINING.md): For maintainers.
+- [CONSUMING.md](CONSUMING.md): For developers of other tools that read this registry.
 
 ## Branches and Directory Structure
 

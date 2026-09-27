@@ -1,12 +1,12 @@
-# Consuming
+# Using aqua-registry-g2 from other tools
 
 aqua-registry-g2 is a registry for aqua.
-See also [For Non aqua users](CONTRIBUTING.md#for-non-aqua-users).
+See also [For non-aqua users](CONTRIBUTING.md#for-non-aqua-users).
 
-But aqua-registry-g2 is valuable for not only aqua but also other tools.
-Some tools used aqua-registry, so maybe they migrate to aqua-registry-g2.
+But aqua-registry-g2 can be useful for other tools as well.
+Some tools use aqua-registry and may migrate to aqua-registry-g2.
 
-This document is for this kind of tool maintainers.
+This document is for maintainers of such tools.
 We don't guarantee anything, but we hope this will be helpful.
 
 Please see also [README.md](README.md), [CONTRIBUTING.md](CONTRIBUTING.md), and [MAINTAINING.md](MAINTAINING.md).
@@ -17,9 +17,17 @@ In aqua-registry, tools could fetch registry.yaml from the repository root or `p
 
 e.g. [pkgs/cli/cli/registry.yaml](https://github.com/aquaproj/aqua-registry/blob/main/pkgs/cli/cli/registry.yaml)
 
-In case of aqua-registry-g2, [`registry.json` can be fetched from each package branch per package version](README.md#package-branches).
+In aqua-registry-g2, [`registry.json` can be fetched from each package branch per package version](README.md#package-branches).
 
 e.g. [grafana/k6 v2.3.0](https://github.com/aquaproj/aqua-registry-g2/blob/pkg_grafana_2fk6/versions/v2.3.0/registry-1.json)
+
+A tool fetches it from the raw URL:
+
+```
+https://raw.githubusercontent.com/aquaproj/aqua-registry-g2/<branch>/versions/<version>/registry-1.json
+```
+
+e.g. https://raw.githubusercontent.com/aquaproj/aqua-registry-g2/pkg_grafana_2fk6/versions/v2.3.0/registry-1.json
 
 `1` of `registry-1.json` is the registry schema version.
 
