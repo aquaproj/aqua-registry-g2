@@ -1,0 +1,14 @@
+type: github_release
+repo_owner: binwiederhier
+repo_name: ntfy
+description: Send push notifications to your phone or desktop using PUT/POST
+overrides:
+  - goos: darwin
+    files:
+      - name: ntfy
+        src: ntfy_{{trimV .Version}}_{{.OS}}_all/ntfy
+files:
+  - name: ntfy
+    src: ntfy_{{trimV .Version}}_{{.OS}}_{{.Arch}}/ntfy
+version_overrides:
+  - version_constraint: "true"
