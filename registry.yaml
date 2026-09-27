@@ -1,0 +1,10 @@
+type: github_release
+repo_owner: qdrant
+repo_name: qdrant
+description: High-performance, massive-scale Vector Database for the next generation of AI
+version_overrides:
+  - version_constraint: semver("<= 1.1.3") || Version == "v1.3.1"
+    no_asset: true
+  - version_constraint: Version == "v1.3.0"
+  - version_constraint: semver("< 1.8.0")
+  - version_constraint: "true"
