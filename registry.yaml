@@ -1,0 +1,23 @@
+type: github_release
+repo_owner: linkerd
+repo_name: linkerd2
+description: Ultralight, security-first service mesh for Kubernetes. Main repo for Linkerd 2.x
+version_prefix: edge-
+files:
+  - name: linkerd
+version_overrides:
+  - version_constraint: Version == "stable-2.9.0"
+    no_asset: true
+  - version_constraint: semver("<= 2.8.1")
+    version_prefix: stable-
+  - version_constraint: semver("<= 2.10.0")
+    version_prefix: stable-
+  - version_constraint: Version startsWith "stable-"
+  - version_constraint: semver("<= 20.7.5")
+    version_prefix: edge-
+  - version_constraint: semver("<= 21.3.2")
+    version_prefix: edge-
+  - version_constraint: semver("<= 25.9.3")
+    version_prefix: edge-
+  - version_constraint: "true"
+all_assets_filter: not (Asset matches "conduit")
