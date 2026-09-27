@@ -1,0 +1,7 @@
+type: github_release
+repo_owner: gcla
+repo_name: termshark
+description: A terminal UI for tshark, inspired by Wireshark
+files:
+  - name: termshark
+    src: termshark_{{trimV .Version}}_{{.OS}}_{{.Arch}}/termshark
