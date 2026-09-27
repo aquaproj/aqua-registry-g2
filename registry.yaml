@@ -21,9 +21,6 @@ version_overrides:
         src: '{{.AssetWithoutExt}}/bin/npm'
       - name: npx
         src: '{{.AssetWithoutExt}}/bin/npx'
-    replacements:
-      amd64: x64
-      windows: win
     overrides:
       - goos: linux
         variants:
@@ -58,9 +55,6 @@ version_overrides:
         src: '{{.AssetWithoutExt}}/bin/npm'
       - name: npx
         src: '{{.AssetWithoutExt}}/bin/npx'
-    replacements:
-      amd64: x64
-      windows: win
     overrides:
       - goos: linux
         variants:
@@ -94,9 +88,6 @@ version_overrides:
         src: '{{.AssetWithoutExt}}/bin/npm'
       - name: npx
         src: '{{.AssetWithoutExt}}/bin/npx'
-    replacements:
-      amd64: x64
-      windows: win
     overrides:
       - goos: linux
         variants:
