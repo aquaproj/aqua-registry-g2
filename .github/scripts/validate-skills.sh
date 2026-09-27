@@ -22,17 +22,27 @@ fail() {
 	failed=1
 }
 
+# reason is what yq says about a file it couldn't read, on one line.
+reason() {
+	yq --front-matter=extract "$1" "$2" 2>&1 >/dev/null | tr '\n' ' '
+}
+
 check() {
 	local file="$1" dir name description
 	dir=$(basename "$(dirname "$file")")
 
 	# yq reads the front matter as YAML and says where it stopped when it can't, which is
 	# the whole of what this is for. Everything after it is about what the values say.
-	if ! name=$(yq --front-matter=extract --exit-status '.name' "$file" 2>&1); then
-		fail "$file" "the front matter isn't readable as YAML: $name"
+	#
+	# Only its output is captured, never its diagnostics: aqua installs a tool the first
+	# time it is asked for and says so on standard error, and a value with that in it
+	# fails every check below for a reason that has nothing to do with the file. The
+	# message is read by asking again, which only happens when something is wrong.
+	if ! name=$(yq --front-matter=extract --exit-status '.name' "$file" 2>/dev/null); then
+		fail "$file" "the front matter isn't readable as YAML: $(reason '.name' "$file")"
 		return
 	fi
-	if ! description=$(yq --front-matter=extract --exit-status '.description' "$file" 2>&1); then
+	if ! description=$(yq --front-matter=extract --exit-status '.description' "$file" 2>/dev/null); then
 		fail "$file" "no description: it is what a session matches a request against"
 		return
 	fi
@@ -55,6 +65,10 @@ check() {
 }
 
 main() {
+	# Installed before anything is read, because aqua installs on first use and says so on
+	# standard error -- which would otherwise arrive in the middle of the first file.
+	yq --version >/dev/null
+
 	shopt -s nullglob
 	local files=(skills/*/SKILL.md)
 	if [ ${#files[@]} -eq 0 ]; then
