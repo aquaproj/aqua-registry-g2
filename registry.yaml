@@ -1,0 +1,9 @@
+type: github_release
+repo_owner: Melkeydev
+repo_name: go-blueprint
+description: Go-blueprint allows users to spin up a quick Go project using a popular framework
+version_overrides:
+  - version_constraint: Version == "v0.2.4"
+    replacements:
+      amd64: x86
+  - version_constraint: "true"
