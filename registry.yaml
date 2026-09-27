@@ -7,9 +7,6 @@ version_overrides:
     files:
       - name: rg
         src: ripgrep-{{.Version}}-{{.Arch}}-{{.OS}}/rg
-    replacements:
-      amd64: x86_64
-      windows: pc-windows-msvc
     overrides:
       - goos: windows
         files:
@@ -18,11 +15,6 @@ version_overrides:
     files:
       - name: rg
         src: xrep-{{.Version}}-{{.Arch}}-{{.OS}}/rg
-    replacements:
-      amd64: x86_64
-      darwin: apple-darwin
-      linux: unknown-linux-musl
-      windows: pc-windows-msvc
     overrides:
       - goos: windows
         files:
@@ -31,35 +23,18 @@ version_overrides:
     files:
       - name: rg
         src: '{{.AssetWithoutExt}}/rg'
-    replacements:
-      amd64: x86_64
-      darwin: apple-darwin
-      linux: unknown-linux-musl
   - version_constraint: Version == "0.0.15"
     files:
       - name: rg
         src: ripgrep-{{.Version}}-{{.Arch}}-{{.OS}}/rg
-    replacements:
-      amd64: x86_64
-      darwin: apple-darwin
-      linux: unknown-linux-musl
   - version_constraint: Version == "0.1.2"
     files:
       - name: rg
         src: ripgrep-{{.Version}}-{{.Arch}}-{{.OS}}/rg
-    replacements:
-      amd64: x86_64
-      darwin: apple-darwin
-      linux: unknown-linux-musl
   - version_constraint: Version == "0.1.11"
     files:
       - name: rg
         src: ripgrep-{{.Version}}-{{.Arch}}-{{.OS}}/rg
-    replacements:
-      amd64: x86_64
-      darwin: apple-darwin
-      linux: unknown-linux-musl
-      windows: pc-windows-msvc
     overrides:
       - goos: windows
         files:
@@ -68,18 +43,10 @@ version_overrides:
     files:
       - name: rg
         src: ripgrep-{{.Version}}-{{.Arch}}-{{.OS}}/rg
-    replacements:
-      amd64: x86_64
-      darwin: apple-darwin
-      linux: unknown-linux-musl
   - version_constraint: Version == "0.1.17"
     files:
       - name: rg
         src: ripgrep-{{.Version}}-{{.Arch}}-{{.OS}}/rg
-    replacements:
-      amd64: x86_64
-      darwin: apple-darwin
-      windows: pc-windows-msvc
     overrides:
       - goos: windows
         files:
@@ -88,29 +55,14 @@ version_overrides:
     files:
       - name: rg
         src: ripgrep-{{.Version}}-{{.Arch}}-{{.OS}}/rg
-    replacements:
-      amd64: x86_64
-      arm64: aarch64
-      darwin: apple-darwin
-      windows: pc-windows-msvc
   - version_constraint: semver("> 0.1.16")
     files:
       - name: rg
         src: ripgrep-{{.Version}}-{{.Arch}}-{{.OS}}/rg
-    replacements:
-      amd64: x86_64
-      darwin: apple-darwin
-      linux: unknown-linux-musl
-      windows: pc-windows-msvc
   - version_constraint: semver("> 0.1.10")
     files:
       - name: rg
         src: ripgrep-{{.Version}}-{{.Arch}}-{{.OS}}/rg
-    replacements:
-      amd64: x86_64
-      darwin: apple-darwin
-      linux: unknown-linux-musl
-      windows: pc-windows-msvc
     overrides:
       - goos: windows
         files:
@@ -119,19 +71,10 @@ version_overrides:
     files:
       - name: rg
         src: ripgrep-{{.Version}}-{{.Arch}}-{{.OS}}/rg
-    replacements:
-      amd64: x86_64
-      darwin: apple-darwin
-      linux: unknown-linux-musl
   - version_constraint: semver("> 0.1.1")
     files:
       - name: rg
         src: ripgrep-{{.Version}}-{{.Arch}}-{{.OS}}/rg
-    replacements:
-      amd64: x86_64
-      darwin: apple-darwin
-      linux: unknown-linux-musl
-      windows: pc-windows-msvc
     overrides:
       - goos: windows
         files:
@@ -140,11 +83,6 @@ version_overrides:
     files:
       - name: rg
         src: ripgrep-{{.Version}}-{{.Arch}}-{{.OS}}/rg
-    replacements:
-      amd64: x86_64
-      darwin: apple-darwin
-      linux: unknown-linux-musl
-      windows: pc-windows-msvc
     overrides:
       - goos: windows
         files:
@@ -152,24 +90,10 @@ version_overrides:
   - version_constraint: semver("> 0.0.9")
     files:
       - name: xrep
-    replacements:
-      amd64: x86_64
-      darwin: apple-darwin
-      linux: unknown-linux-musl
-      windows: pc-windows-msvc
   - version_constraint: semver("<= 0.0.9")
     files:
       - name: xrep
-    replacements:
-      amd64: x86_64
-      darwin: apple-darwin
-      linux: unknown-linux-musl
   - version_constraint: "true"
     files:
       - name: rg
         src: ripgrep-{{.Version}}-{{.Arch}}-{{.OS}}/rg
-    replacements:
-      amd64: x86_64
-      arm64: aarch64
-      darwin: apple-darwin
-      windows: pc-windows-msvc
