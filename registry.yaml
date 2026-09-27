@@ -1,0 +1,14 @@
+name: cloudflare/cfssl/mkbundle
+type: github_release
+repo_owner: cloudflare
+repo_name: cfssl
+description: 'CFSSL: Cloudflare''s PKI and TLS toolkit'
+version_overrides:
+  - version_constraint: semver("> 1.6.3")
+  - version_constraint: semver("> 1.3.4")
+  - version_constraint: semver("> 1.2.0")
+    no_asset: true
+  - version_constraint: "true"
+all_assets_filter: |
+  let words = ["mkbundle", "checksums.txt", "SHA256SUMS"];
+  any(words, {Asset matches #})
