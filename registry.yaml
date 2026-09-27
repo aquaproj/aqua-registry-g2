@@ -1,0 +1,94 @@
+type: github_release
+repo_owner: smallstep
+repo_name: certificates
+description: A private certificate authority (X.509 & SSH) & ACME server for secure automated certificate management, so you can use TLS everywhere & SSO for SSH
+version_filter: not (Version matches "-rc")
+files:
+  - name: step-ca
+    src: step-ca_{{.OS}}_{{.Arch}}/step-ca
+version_overrides:
+  - version_constraint: Version in ["v0.15.1", "v0.17.5", "v0.30.0"]
+    no_asset: true
+  - version_constraint: semver("<= 0.13.3")
+    files:
+      - name: step-ca
+        src: step-certificates_{{trimV .Version}}/bin/step-ca
+  - version_constraint: semver("<= 0.14.1")
+    files:
+      - name: step-ca
+        src: step-certificates_{{trimV .Version}}-dev/bin/step-ca
+  - version_constraint: semver("<= 0.15.8")
+    files:
+      - name: step-ca
+        src: step-certificates_{{trimV .Version}}/bin/step-ca
+  - version_constraint: semver("<= 0.15.15")
+    files:
+      - name: step-ca
+        src: step-ca_{{trimV .Version}}/bin/step-ca
+  - version_constraint: semver("<= 0.17.2")
+    files:
+      - name: step-ca
+        src: step-ca_{{trimV .Version}}/bin/step-ca
+  - version_constraint: semver("<= 0.17.4")
+    files:
+      - name: step-ca
+        src: step-ca_{{trimV .Version}}/bin/step-ca
+  - version_constraint: semver("<= 0.22.1")
+    files:
+      - name: step-ca
+        src: step-ca_{{trimV .Version}}/bin/step-ca
+  - version_constraint: semver("<= 0.24.2")
+    files:
+      - name: step-ca
+        src: step-ca_{{trimV .Version}}/step-ca
+    checksum:
+      type: github_release
+      asset: checksums.txt
+      algorithm: sha256
+      cosign:
+        opts:
+          - --certificate
+          - https://github.com/smallstep/certificates/releases/download/{{.Version}}/checksums.txt.pem
+          - --certificate-identity
+          - https://github.com/smallstep/certificates/.github/workflows/release.yml@refs/tags/{{.Version}}
+          - --certificate-oidc-issuer
+          - https://token.actions.githubusercontent.com
+          - --signature
+          - https://github.com/smallstep/certificates/releases/download/{{.Version}}/checksums.txt.sig
+  - version_constraint: semver("< 0.30.0-rc2")
+    checksum:
+      type: github_release
+      asset: checksums.txt
+      algorithm: sha256
+      cosign:
+        opts:
+          - --certificate
+          - https://github.com/smallstep/certificates/releases/download/{{.Version}}/checksums.txt.pem
+          - --certificate-identity
+          - https://github.com/smallstep/workflows/.github/workflows/goreleaser.yml@refs/heads/main
+          - --certificate-oidc-issuer
+          - https://token.actions.githubusercontent.com
+          - --signature
+          - https://github.com/smallstep/certificates/releases/download/{{.Version}}/checksums.txt.sig
+          - --certificate-github-workflow-repository
+          - smallstep/certificates
+          - --certificate-github-workflow-ref
+          - refs/tags/{{.Version}}
+  - version_constraint: "true"
+    checksum:
+      type: github_release
+      asset: checksums.txt
+      algorithm: sha256
+      cosign:
+        opts:
+          - --certificate-identity
+          - https://github.com/smallstep/workflows/.github/workflows/goreleaser.yml@refs/heads/main
+          - --certificate-oidc-issuer
+          - https://token.actions.githubusercontent.com
+          - --certificate-github-workflow-repository
+          - smallstep/certificates
+          - --certificate-github-workflow-ref
+          - refs/tags/{{.Version}}
+        bundle:
+          type: github_release
+          asset: checksums.txt.sigstore.json
