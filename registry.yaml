@@ -1,0 +1,36 @@
+type: github_release
+repo_owner: FiloSottile
+repo_name: age
+description: A simple, modern and secure encryption tool (and Go library) with small explicit keys, no config options, and UNIX-style composability
+files:
+  - name: age
+    src: age/age
+  - name: age-keygen
+    src: age/age-keygen
+github_artifact_attestations:
+  signer_workflow: FiloSottile/age/.github/workflows/build.yml
+version_overrides:
+  - version_constraint: Version == "v1.0.0-beta1"
+    no_asset: true
+  - version_constraint: Version == "v1.0.0-beta2"
+  # The darwin/amd64 assets of both versions were signed by a workflow that backfilled
+  # them rather than by the one that built the release.
+  # https://github.com/FiloSottile/age/pull/676
+  - version_constraint: Version in ["v1.3.0", "v1.3.1"]
+    github_artifact_attestations:
+      signer_workflow: FiloSottile/age/.github/workflows/build.yml
+    overrides:
+      - goos: darwin
+        goarch: amd64
+        github_artifact_attestations:
+          signer_workflow: FiloSottile/age/.github/workflows/darwin-amd64-backfill.yml
+  - version_constraint: semver("> 1.2.1")
+    github_artifact_attestations:
+      signer_workflow: FiloSottile/age/.github/workflows/build.yml
+  - version_constraint: semver("> 1.0.0-rc.1")
+  - version_constraint: semver("> 1.0.0-beta5")
+  - version_constraint: semver("<= 1.0.0-beta5")
+    no_asset: true
+  - version_constraint: "true"
+    github_artifact_attestations:
+      signer_workflow: FiloSottile/age/.github/workflows/build.yml
