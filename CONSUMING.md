@@ -21,6 +21,10 @@ In aqua-registry-g2, [`registry.json` can be fetched from each package branch pe
 
 e.g. [grafana/k6 v2.3.0](https://github.com/aquaproj/aqua-registry-g2/blob/pkg_grafana_2fk6/versions/v2.3.0/registry-1.json)
 
+This is the main difference from aqua-registry.
+A registry.yaml covers every version of a package, so a tool has to evaluate it for the version it installs: `version_constraint`, `version_overrides`, and templates such as `{{.Version}}` in the asset name.
+A registry.json covers one version and is already resolved: the asset name, the format, the files in the archive, and the checksum are written as they are, so a tool reads it without evaluating anything.
+
 A tool fetches it from the raw URL:
 
 ```
