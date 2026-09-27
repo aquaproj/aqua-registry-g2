@@ -28,7 +28,7 @@ configured to sign.
 - [MAINTAINING.md](MAINTAINING.md): what a maintainer does, with the premises each procedure
   rests on.
 - [skills/](skills): one procedure each, as a skill.
-- [docs/review-pr.md](docs/review-pr.md): how to read a pull request ar2 opened, and what CI
-  has already established about it.
+- [skills/review-pull-request](skills/review-pull-request/SKILL.md): how to read a pull request
+  ar2 opened, and what CI has already established about it.
 - [CONTRIBUTING.md](CONTRIBUTING.md): for outside contributors. This repository takes issues
   and not pull requests.
