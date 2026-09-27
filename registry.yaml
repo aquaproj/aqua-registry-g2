@@ -1,0 +1,60 @@
+aliases:
+  - name: oam-dev/kubevela
+type: github_release
+repo_owner: kubevela
+repo_name: kubevela
+description: The Modern Application Platform
+files:
+  - name: vela
+version_overrides:
+  - version_constraint: Version in ["v1.7.0", "v1.7.1"]
+    no_asset: true
+  - version_constraint: Version == "v0.3.4"
+    files:
+      - name: vela
+        src: '{{.OS}}-{{.Arch}}/vela'
+  - version_constraint: Version in ["v1.3.3"]
+  - version_constraint: semver("<= 0.0.1.1")
+    no_asset: true
+  - version_constraint: semver("<= 0.0.3")
+  - version_constraint: semver("<= 0.3.0")
+    files:
+      - name: vela
+        src: '{{.OS}}-{{.Arch}}/vela'
+  - version_constraint: semver("<= 0.3.3")
+    files:
+      - name: vela
+        src: '{{.OS}}-{{.Arch}}/vela'
+  - version_constraint: semver("<= 1.1.13")
+    files:
+      - name: vela
+        src: '{{.OS}}-{{.Arch}}/vela'
+  - version_constraint: semver("<= 1.6.7")
+    files:
+      - name: vela
+        src: '{{.OS}}-{{.Arch}}/vela'
+  - version_constraint: semver("<= 1.10.2")
+    files:
+      - name: vela
+        src: '{{.OS}}-{{.Arch}}/vela'
+  - version_constraint: "true"
+    files:
+      - name: vela
+        src: '{{.OS}}-{{.Arch}}/vela'
+    checksum:
+      type: github_release
+      asset: sha256sums.txt
+      algorithm: sha256
+      cosign:
+        opts:
+          - --certificate
+          - https://github.com/kubevela/kubevela/releases/download/{{.Version}}/sha256sums.txt-keyless.pem
+          - --certificate-identity
+          - https://github.com/kubevela/kubevela/.github/workflows/release.yml@refs/tags/{{.Version}}
+          - --certificate-oidc-issuer
+          - https://token.actions.githubusercontent.com
+          - --signature
+          - https://github.com/kubevela/kubevela/releases/download/{{.Version}}/sha256sums.txt-keyless.sig
+    slsa_provenance:
+      type: github_release
+      asset: multiple.intoto.jsonl
