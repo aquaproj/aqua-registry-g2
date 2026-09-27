@@ -1,0 +1,47 @@
+type: github_release
+repo_owner: lima-vm
+repo_name: lima
+description: Linux virtual machines, with a focus on running containers
+github_artifact_attestations:
+  signer_workflow: lima-vm/lima/.github/workflows/release.yml
+version_overrides:
+  - version_constraint: Version == "v0.7.0"
+    no_asset: true
+  - version_constraint: Version == "v0.1.0"
+    files:
+      - name: lima
+        src: bin/lima
+      - name: limactl
+        src: bin/limactl
+  - version_constraint: semver("> 2.1.0")
+    files:
+      - name: lima
+        src: bin/lima
+      - name: limactl
+        src: bin/limactl
+    github_artifact_attestations:
+      signer_workflow: lima-vm/lima/.github/workflows/release.yml
+    overrides:
+      - goos: windows
+        files:
+          - name: limactl
+            src: bin/limactl
+  - version_constraint: semver("<= 2.1.0")
+    files:
+      - name: lima
+        src: bin/lima
+      - name: limactl
+        src: bin/limactl
+  - version_constraint: "true"
+    files:
+      - name: lima
+        src: bin/lima
+      - name: limactl
+        src: bin/limactl
+    github_artifact_attestations:
+      signer_workflow: lima-vm/lima/.github/workflows/release.yml
+    overrides:
+      - goos: windows
+        files:
+          - name: limactl
+            src: bin/limactl
