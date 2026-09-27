@@ -1,4 +1,9 @@
-# Reviewing a pull request from ar2
+---
+name: review-pull-request
+description: Read a pull request ar2 opened in aqua-registry-g2 and decide whether it can merge, which means working out which case it stopped for, what CI has already established, and what only a person can catch. Use when a pull request is waiting for a person, when asked why one hasn't merged itself, and when asked to review the registry's open pull requests.
+---
+
+# Review a pull request from ar2
 
 Most of them merge themselves. A run generates `versions/<version>/registry-1.json` for
 each version a package is missing, opens one pull request per package, and turns on
@@ -136,7 +141,7 @@ release, so both are written by hand.
 
 So when a pull request is waiting on `files[].src`, and the asset it names belongs to
 something other than the package, the filter is what to fix. It is in the definition, and
-the fix is [How To Fix registry.yaml](../MAINTAINING.md#how-to-fix-registryyaml) followed
+the fix is [fixing the definition](../fix-definition/SKILL.md) followed
 by generating the versions again. A package the registry hasn't taken over yet has its
 definition in the pull request itself, converted from aqua-registry, where the filter came
 from that repository's `scaffold.yaml`; there it is the pull request that is wrong and

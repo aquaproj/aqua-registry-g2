@@ -43,106 +43,31 @@ request for one aqua-registry already has needs nothing: the order reaches it.
 
 ## How To Support a new version
 
-Wait, or run [ar2.yaml](.github/workflows/ar2.yaml):
+[skills/generate-versions](skills/generate-versions/SKILL.md).
 
-```sh
-gh workflow run ar2.yaml -f limit=<how many package versions>                 # one run
-gh workflow run ar2.yaml -f limit=<how many package versions> -f chain=forever
-```
-
-A run generates the versions the registry is missing, most starred package first and newest
-version first, and opens one pull request per package. Most of them merge themselves; what to
-do about one that doesn't is [How To Review pull requests](#how-to-review-pull-requests). The job
-summary says what was generated, what wasn't, and how far the registry has got.
-
-To stop a chain, cancel the run that is going.
-
-### How the cadence works
-
-There is no schedule. A run dispatches the next one, which is what `chain` asks for:
-`forever` keeps going, a number counts down, and `0` is a single run. The cadence is then
-however long a run takes rather than whenever GitHub gets to a cron -- a workflow asking for
-every ten minutes is triggered every few hours -- and the registry spends no time idle.
-
-Nothing is dispatched after a cancellation, and a run that hit its timeout counts as one, so
-a run that got stuck ends the chain rather than handing the same state to another run to get
-stuck on. A failure does not end it, because a rate limit or a repository that didn't answer
-would otherwise stop the registry until somebody noticed; five failures in a row do, with a
-comment on the monitoring issue.
-
-`limit` bounds the versions attempted, not the versions generated, so a package that fails
-every time can't spend a whole run.
+Or wait: a run dispatches the next one, so the registry generates what it is missing without
+anybody asking.
 
 ## How To Fix registry.yaml
 
-By hand, as a pull request into the package's branch.
+[skills/fix-definition](skills/fix-definition/SKILL.md).
 
-The branch name is the package name escaped, which
-[README.md](README.md#the-branch-name) gives the rule for: `cli/cli` is on
-`pkg_cli_2fcli`.
-
-```sh
-git fetch origin pkg_cli_2fcli
-git switch pkg_cli_2fcli
-```
-
-Fixing the definition doesn't change anything already generated from it. Two things
-usually follow:
-
-- [How To Fix registry.json](#how-to-fix-registryjson), for the versions generated under
-  the old definition.
-- [How To Fix index.json](#how-to-fix-indexjson), when the change touched what the
-  catalogue holds: the description, the link, the search words, the aliases.
+A package's definition is the one file in this registry a person writes. Everything generated
+from it follows, so two things usually follow an edit as well.
 
 ## How To Fix registry.json
 
-Never by hand. Fix `registry.yaml` first, then run
-[regenerate.yaml](.github/workflows/regenerate.yaml) to generate the affected versions
-again:
+[skills/regenerate-versions](skills/regenerate-versions/SKILL.md).
 
-```sh
-gh workflow run regenerate.yaml -f name=<package name> -f versions="<version>..."
-gh workflow run regenerate.yaml -f name=<package name> -f dry_run=true
-```
-
-Naming no version does every version the registry holds, which for a package with a long
-history is a large pull request. `dry_run` says which versions would change and commits
-nothing. The pull request it opens is never set to auto-merge, so it is read.
-
-### What it does with them
-
-Only the versions whose file actually changes are committed, so pointing it at a whole
-package to find out whether anything moved comes to nothing when nothing did.
-
-A version whose upstream release was changed after the fact is a different problem.
-Regenerating it produces a different checksum for the same version, which is what a release
-being rewritten looks like and what a lock file exists to catch. Decide whether to publish
-the new file rather than regenerating by reflex.
-
-`ar2 regenerate --dry-run` answers the same question locally, since it writes nothing. The
-run that commits has to be the workflow, for the reason at the top of this guide.
+Never by hand: fix the definition, then generate the affected versions again. It replaces what
+the registry already serves, so nothing about it is automatic.
 
 ## How To Fix index.json
 
-After editing a definition, run [index.yaml](.github/workflows/index.yaml) and name the
-package:
+[skills/refresh-index](skills/refresh-index/SKILL.md).
 
-```sh
-gh workflow run index.yaml -f packages="<package name>..."
-```
-
-Naming none reconciles the whole catalogue, which is what the schedule does twice an hour: it
-lists every package branch and adds whatever the catalogue is missing, so a package whose
-pull request merged is listed without anybody doing anything.
-
-### What the reconciliation doesn't notice
-
-An entry that is out of date. It asks which packages are missing, and a package whose
-description or aliases changed isn't missing -- which is why a definition edited by hand needs
-the package named.
-
-`ar2 validate-index` checks that a name isn't both a package and another package's alias, and
-runs on every pull request into `main`.
+The schedule reconciles the catalogue twice an hour. What it can't notice is an entry that is
+out of date, which is why a definition edited by hand needs its package named.
 
 ## How To Fix aliases.json
 
@@ -150,107 +75,40 @@ Not directly. It is rendered from the entries in `index.json`, in the commit tha
 -- [index.yaml](.github/workflows/index.yaml) writes both files together -- so a missing
 alias is a missing `aliases` entry in the package's `registry.yaml`:
 
-1. [How To Fix registry.yaml](#how-to-fix-registryyaml), to add the alias.
-2. [How To Fix index.json](#how-to-fix-indexjson), to read the entry out of the definition
-   again.
+1. [skills/fix-definition](skills/fix-definition/SKILL.md), to add the alias.
+2. [skills/refresh-index](skills/refresh-index/SKILL.md), to read the entry out of the
+   definition again.
 
-A transfer GitHub reports needs none of this. See below.
+A transfer GitHub reports needs none of this: see
+[skills/rename-package](skills/rename-package/SKILL.md).
 
 ## How To Rename a package
 
-Usually nothing. A repository that was renamed or transferred is noticed by the run itself:
-the sweep asks GitHub for each package's versions and gets the name the repository answers
-to, so the move costs no extra request, and the run makes it before generating anything. The
-job summary reports it under Renamed.
+[skills/rename-package](skills/rename-package/SKILL.md).
 
-A rename GitHub can't see is the other case -- one repository that starts publishing several
-commands, say, where the package's name changes and the repository's doesn't. That is
-[rename.yaml](.github/workflows/rename.yaml) and nothing else:
-
-```sh
-gh workflow run rename.yaml -f from=<old package name> -f to=<new package name>
-```
-
-### What a rename moves
-
-Everything: the branch the generated versions live on, the path aqua fetches them from, the
-entry the catalogue lists the package under. The old name stays as an alias, which is how a
-configuration still asking for it resolves.
-
-The branch is carried over rather than the versions generated again -- each of them was
-downloaded, hashed and opened on six machines to get there -- with the old commit as the new
-branch's parent, so nothing is copied. The old branch is left behind: deleting it is an
-administrator's decision, and nothing reads it once the catalogue names the package under its
-new name.
+Usually nothing: a run notices a repository that answers to another name and moves the package
+itself. The other case is a rename GitHub can't see.
 
 ## How To Ignore a package
 
-A package the registry doesn't take on. Nothing was ever published for it, and the reason
-is why: an asset whose name carries something only the installing machine knows, downloads
-refused from the addresses CI runs on, a command deleted upstream.
+[skills/ignore-package](skills/ignore-package/SKILL.md).
 
-`ignored_packages` in [ar2.yaml](ar2.yaml), as a pull request into `main`. Each entry
-carries its reason, because the next person to wonder why a package isn't here reads that
-file and nothing else. They are dropped before anything asks GitHub about them, so a
-package whose repository is gone stops costing a request every run.
-
-This is not a package being removed, and the two aren't degrees of the same thing. See
-below.
+A package the registry doesn't take on, with the reason it doesn't. Not the same as removing
+one, which takes away what was published.
 
 ## How To Remove a package
 
-Not something this registry does. What it publishes for a version is meant to stay what it
-was, and somebody's configuration may name the package. Two things override that: a
-package aqua can't install whatever is generated for it, and malware, which goes without
-asking.
+[skills/remove-package](skills/remove-package/SKILL.md).
 
-When it is decided, it is three things at once, and the command does all of them.
-
-```sh
-gh workflow run remove_package.yaml -f name=<package name> -f reason="<why>"
-```
-
-1. The package stops being generated: it goes into `ignored_packages`, with the reason.
-2. It stops being listed: its entry goes from `index.json`, and its aliases from
-   `aliases.json` with it.
-3. It stops being held: the files under `versions/` go off its branch.
-
-Any one alone leaves a state nobody meant. An entry for a package that can't be fetched,
-or files nothing lists that the next run adds to.
-
-It opens two pull requests, because 1 and 2 are on `main` and 3 is on the package's
-branch. Merge the one into `main` first: a package still in the order has its files
-generated again by the next run, whatever the other one did. The second pull request says
-so and points at the first.
-
-The branch itself stays. A ruleset forbids deleting a package branch and no app bypasses
-it, so what was published stays readable in its history.
-
-### What removing cannot reach
-
-A lock file that already holds the package. It carries the URL and the checksum of every
-file it needs, which is the point of it, and nothing here takes that away. What step 3
-stops is `aqua lock update` resolving those versions, so nobody new installs the package.
-
-Steps 1 and 2 don't stop an install either, which is worth being clear about: nothing
-resolves a package through `index.json`. A name in `aqua.yaml` is turned into
-`pkg_<encoded>/versions/<version>/registry-1.json` and fetched directly, so a package with
-no entry is one nothing can search for and anything already naming it still installs. Only
-step 3 changes that.
-
-Where the difference matters -- malware -- saying so where people will read it reaches
-them and a registry change doesn't. That is the part to do first.
+Not something this registry does, beyond malware and a package aqua can't install at all. When
+it is decided it is three things at once, and one command does all of them.
 
 ## How To Review pull requests
 
-Most of them merge themselves, and the trust in that comes from CI rather than from
-anyone's judgement: it downloads every asset the generated files describe, on a machine of
-the environment each entry is for, checks the checksums, opens the archives and verifies
-every signature the entries claim.
+[skills/review-pull-request](skills/review-pull-request/SKILL.md).
 
-So a pull request waiting for a person is one ar2 decided it could not answer for, or one
-a person asked for. Its body says which, and what to do about each is in
-[docs/review-pr.md](docs/review-pr.md).
+Most merge themselves. One waiting for a person is one ar2 couldn't answer for, or one a person
+asked for, and its body says which.
 
 ## The state
 
@@ -307,15 +165,10 @@ gh api "repos/aquaproj/aqua-registry-g2/contents/.github/workflows/test.yaml?ref
 
 ## How To Update ar2
 
-Renovate raises the pinned version in `aqua/aqua.yaml`, and autofix.ci records the
-checksums, which is what makes such a pull request mergeable. A bump by hand records them
-in the same commit instead:
+[skills/update-ar2](skills/update-ar2/SKILL.md).
 
-```sh
-aqua upc -prune
-```
-
-Releasing ar2 is a signed tag on its repository; the release workflow does the rest.
+Renovate raises the pin and autofix.ci records the checksums. A bump by hand does both in one
+commit.
 
 ## How To Update the schema of registry.json
 
