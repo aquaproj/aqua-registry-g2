@@ -1,0 +1,30 @@
+aliases:
+  - name: MHNightCat/superfile
+type: github_release
+repo_owner: yorukot
+repo_name: superfile
+description: Pretty fancy and modern terminal file manager
+version_overrides:
+  - version_constraint: Version == "v1.0.0"
+    files:
+      - name: spf
+  - version_constraint: Version == "v1.1.7"
+    files:
+      - name: spf
+        src: dist/{{.AssetWithoutExt}}/spf
+  - version_constraint: semver("> 1.6.0-rc1")
+    files:
+      - name: spf
+        src: dist/{{.AssetWithoutExt}}/spf
+  - version_constraint: semver("> 1.1.1")
+    files:
+      - name: spf
+        src: dist/{{.AssetWithoutExt}}/spf
+  - version_constraint: semver("<= 1.1.1")
+    files:
+      - name: spf
+        src: dist/{{.AssetWithoutExt}}/spf
+  - version_constraint: "true"
+    files:
+      - name: spf
+        src: dist/{{.AssetWithoutExt}}/spf
