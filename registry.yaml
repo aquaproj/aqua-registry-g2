@@ -1,0 +1,70 @@
+type: github_release
+repo_owner: ImageMagick
+repo_name: ImageMagick
+description: ImageMagick is a free and open-source software suite for displaying, creating, converting, modifying, and editing raster images
+github_artifact_attestations:
+  signer_workflow: ImageMagick/ImageMagick/.github/workflows/release.yml
+version_overrides:
+  - version_constraint: Version == "7.1.2-19"
+    github_artifact_attestations:
+      signer_workflow: ImageMagick/ImageMagick/.github/workflows/release.yml
+    overrides:
+      - goos: windows
+        files:
+          - name: compare
+          - name: composite
+          - name: conjure
+          - name: identify
+          - name: magick
+          - name: mogrify
+          - name: montage
+          - name: stream
+  - version_constraint: semver("> 7.1.2-18")
+    github_artifact_attestations:
+      signer_workflow: ImageMagick/ImageMagick/.github/workflows/release.yml
+    overrides:
+      - goos: linux
+        files:
+          - name: magick
+      - goos: windows
+        files:
+          - name: compare
+          - name: composite
+          - name: conjure
+          - name: identify
+          - name: magick
+          - name: mogrify
+          - name: montage
+          - name: stream
+  - version_constraint: semver("<= 7.1.2-18")
+    overrides:
+      - goos: linux
+        files:
+          - name: magick
+      - goos: windows
+        files:
+          - name: compare
+          - name: composite
+          - name: conjure
+          - name: identify
+          - name: magick
+          - name: mogrify
+          - name: montage
+          - name: stream
+  - version_constraint: "true"
+    github_artifact_attestations:
+      signer_workflow: ImageMagick/ImageMagick/.github/workflows/release.yml
+    overrides:
+      - goos: linux
+        files:
+          - name: magick
+      - goos: windows
+        files:
+          - name: compare
+          - name: composite
+          - name: conjure
+          - name: identify
+          - name: magick
+          - name: mogrify
+          - name: montage
+          - name: stream
