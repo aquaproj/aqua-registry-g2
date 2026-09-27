@@ -13,8 +13,6 @@ version_overrides:
   - version_constraint: "true"
     url: https://storage.googleapis.com/flutter_infra_release/releases/{{.Vars.channel}}/{{.OS}}/flutter_{{.OS}}_{{trimV .Version}}-{{.Vars.channel}}.{{.Format}}
     format: zip
-    replacements:
-      darwin: macos
     vars:
       - name: channel
         default: stable
