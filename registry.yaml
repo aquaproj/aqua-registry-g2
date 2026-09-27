@@ -4,9 +4,6 @@ repo_name: pandoc
 description: Universal markup converter
 version_overrides:
   - version_constraint: semver("> 3.1.1")
-    replacements:
-      amd64: x86_64
-      darwin: macOS
     overrides:
       - goos: linux
         files:
@@ -16,8 +13,6 @@ version_overrides:
             src: pandoc-{{.Version}}/bin/pandoc-lua
           - name: pandoc-server
             src: pandoc-{{.Version}}/bin/pandoc-server
-        replacements:
-          amd64: amd64
       - goos: darwin
         files:
           - name: pandoc
@@ -38,21 +33,14 @@ version_overrides:
         src: pandoc-{{.Version}}/bin/pandoc-lua
       - name: pandoc-server
         src: pandoc-{{.Version}}/bin/pandoc-server
-    replacements:
-      darwin: macOS
     overrides:
       - goos: windows
         files:
           - name: pandoc
             src: pandoc-{{.Version}}/pandoc
-        replacements:
-          amd64: x86_64
   - version_constraint: semver("< 3.0.0")
     error_message: This version is too old. Please upgrade to 3.0.0 or a newer version.
   - version_constraint: "true"
-    replacements:
-      amd64: x86_64
-      darwin: macOS
     overrides:
       - goos: linux
         files:
@@ -62,8 +50,6 @@ version_overrides:
             src: pandoc-{{.Version}}/bin/pandoc-lua
           - name: pandoc-server
             src: pandoc-{{.Version}}/bin/pandoc-server
-        replacements:
-          amd64: amd64
       - goos: darwin
         files:
           - name: pandoc
