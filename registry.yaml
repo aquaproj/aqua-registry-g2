@@ -1,0 +1,133 @@
+type: github_release
+repo_owner: pnpm
+repo_name: pnpm
+description: Fast, disk space efficient package manager
+github_artifact_attestations:
+  signer_workflow: pnpm/pnpm/.github/workflows/release.yml
+version_overrides:
+  - version_constraint: Version == "v7.0.0-alpha.1"
+    no_asset: true
+  - version_constraint: semver(">= 12.0.0")
+    files:
+      - name: pnpm
+      - name: pn
+        src: pnpm
+        link: pn
+      - name: pnpx
+        src: pnpm
+        link: pnpx
+        hard: true
+      - name: pnx
+        src: pnpm
+        link: pnx
+        hard: true
+    github_artifact_attestations:
+      signer_workflow: pnpm/pnpm/.github/workflows/release.yml
+    overrides:
+      - goos: linux
+        variants:
+          - key: libc
+            value: glibc
+      - goos: linux
+        variants:
+          - key: libc
+            value: musl
+  - version_constraint: semver("> 11.0.6")
+    files:
+      - name: pnpm
+      - name: pn
+        src: pnpm
+        link: pn
+      - name: pnpx
+        src: pnpm
+        link: pnpx
+        hard: true
+      - name: pnx
+        src: pnpm
+        link: pnx
+        hard: true
+    github_artifact_attestations:
+      signer_workflow: pnpm/pnpm/.github/workflows/release.yml
+    overrides:
+      - goos: linux
+        variants:
+          - key: libc
+            value: glibc
+      - goos: linux
+        variants:
+          - key: libc
+            value: musl
+  - version_constraint: semver("> 11.0.4")
+    files:
+      - name: pnpm
+      - name: pn
+        src: pnpm
+        link: pn
+    github_artifact_attestations:
+      signer_workflow: pnpm/pnpm/.github/workflows/release.yml
+    overrides:
+      - goos: linux
+        variants:
+          - key: libc
+            value: glibc
+      - goos: linux
+        variants:
+          - key: libc
+            value: musl
+  - version_constraint: semver(">= 11.0.0")
+    files:
+      - name: pnpm
+      - name: pn
+        src: pnpm
+        link: pn
+    overrides:
+      - goos: linux
+        variants:
+          - key: libc
+            value: glibc
+      - goos: linux
+        variants:
+          - key: libc
+            value: musl
+  - version_constraint: semver("> 10.26.1")
+    files:
+      - name: pnpm
+        link: pnpm
+        hard: true
+  - version_constraint: semver("> 7.0.0-alpha.0")
+    files:
+      - name: pnpm
+        link: pnpm
+        hard: true
+  - version_constraint: semver("> 6.20.0")
+  - version_constraint: semver("> 6.18.0")
+  - version_constraint: semver("> 6.16.1")
+  - version_constraint: semver("> 6.12.1")
+  - version_constraint: semver("> 6.11.5")
+  - version_constraint: semver("<= 6.11.5")
+    no_asset: true
+  - version_constraint: "true"
+    files:
+      - name: pnpm
+      - name: pn
+        src: pnpm
+        link: pn
+      - name: pnpx
+        src: pnpm
+        link: pnpx
+        hard: true
+      - name: pnx
+        src: pnpm
+        link: pnx
+        hard: true
+    github_artifact_attestations:
+      signer_workflow: pnpm/pnpm/.github/workflows/release.yml
+    overrides:
+      - goos: linux
+        variants:
+          - key: libc
+            value: glibc
+      - goos: linux
+        variants:
+          - key: libc
+            value: musl
