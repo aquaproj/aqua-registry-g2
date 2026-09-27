@@ -1,0 +1,58 @@
+type: github_release
+repo_owner: docker
+repo_name: compose
+description: Define and run multi-container applications with Docker
+files:
+  - name: docker-cli-plugin-docker-compose
+cosign:
+  opts:
+    - --certificate-identity
+    - https://github.com/docker/github-builder/.github/workflows/bake.yml@a492c6d04fd3315f67230809b44d60cc0acd50b3
+    - --certificate-oidc-issuer
+    - https://token.actions.githubusercontent.com
+    - --certificate-github-workflow-repository
+    - docker/compose
+    - --certificate-github-workflow-ref
+    - refs/tags/{{.Version}}
+  bundle:
+    type: github_release
+    asset: '{{.Asset}}.sigstore.json'
+version_overrides:
+  - version_constraint: Version == "v2.0.0-rc.3"
+  - version_constraint: Version == "v2.0.0"
+  - version_constraint: Version == "v2.10.0"
+  - version_constraint: semver("> 5.0.2")
+    cosign:
+      opts:
+        - --certificate-identity-regexp
+        - ^https://github\.com/docker/github-builder/\.github/workflows/bake\.yml@
+        - --certificate-oidc-issuer
+        - https://token.actions.githubusercontent.com
+        - --certificate-github-workflow-repository
+        - docker/compose
+        - --certificate-github-workflow-ref
+        - refs/tags/{{.Version}}
+      bundle:
+        type: github_release
+        asset: docker-compose-{{.OS}}-{{.Arch}}.sigstore.json
+  - version_constraint: semver("> 2.9.0")
+  - version_constraint: semver("> 1.29.2")
+  - version_constraint: semver("> 1.17.1")
+  - version_constraint: semver("> 1.4.2")
+  - version_constraint: semver("> 1.0.1")
+  - version_constraint: semver("> 0.5.2")
+  - version_constraint: semver("<= 0.5.2")
+  - version_constraint: "true"
+    cosign:
+      opts:
+        - --certificate-identity-regexp
+        - ^https://github\.com/docker/github-builder/\.github/workflows/bake\.yml@
+        - --certificate-oidc-issuer
+        - https://token.actions.githubusercontent.com
+        - --certificate-github-workflow-repository
+        - docker/compose
+        - --certificate-github-workflow-ref
+        - refs/tags/{{.Version}}
+      bundle:
+        type: github_release
+        asset: docker-compose-{{.OS}}-{{.Arch}}.sigstore.json
