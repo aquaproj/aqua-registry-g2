@@ -1,6 +1,6 @@
 ---
 name: remove-package
-description: Stop aqua-registry-g2 serving a package it has published: malware, or a package aqua can't install whatever is generated for it. Use only for those, confirm before dispatching, and never as a way to fix a package that is merely wrong.
+description: Stop aqua-registry-g2 serving a package it has published, which is for malware and for a package aqua can't install whatever is generated for it. Use only for those, confirm before dispatching, and never as a way to fix a package that is merely wrong.
 ---
 
 # Stop the registry serving a package

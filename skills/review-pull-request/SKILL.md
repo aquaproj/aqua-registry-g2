@@ -1,6 +1,6 @@
 ---
 name: review-pull-request
-description: Read a pull request ar2 opened in aqua-registry-g2 and decide whether it can merge: which cases it stops for, what CI has already established, and what only a person can catch. Use when a pull request is waiting for a person, when asked why one hasn't merged itself, and when asked to review the registry's open pull requests.
+description: Read a pull request ar2 opened in aqua-registry-g2 and decide whether it can merge, which means working out which case it stopped for, what CI has already established, and what only a person can catch. Use when a pull request is waiting for a person, when asked why one hasn't merged itself, and when asked to review the registry's open pull requests.
 ---
 
 # Review a pull request from ar2

@@ -1,6 +1,6 @@
 ---
 name: rename-package
-description: Move a package in aqua-registry-g2 to the name it has now, keeping the old name as an alias. Use for a rename GitHub can't see, such as one repository that starts publishing several commands. A repository that was renamed or transferred needs nothing: a run notices and moves it.
+description: Move a package in aqua-registry-g2 to the name it has now, keeping the old name as an alias. Use for a rename GitHub can't see, such as one repository that starts publishing several commands. A repository that was renamed or transferred needs nothing, since a run notices and moves it.
 ---
 
 # Move a package to the name it has now
