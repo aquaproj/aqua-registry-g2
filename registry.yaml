@@ -1,0 +1,20 @@
+aliases:
+  - name: kyleconroy/sqlc
+type: github_release
+repo_owner: sqlc-dev
+repo_name: sqlc
+description: Generate type-safe code from SQL
+version_overrides:
+  - version_constraint: Version == "v1.17.1"
+    no_asset: true
+  - version_constraint: semver("> 1.24.0")
+    format: tar.gz
+  - version_constraint: semver("> 1.17.0")
+  - version_constraint: semver("> 1.15.0")
+  - version_constraint: semver("> 1.8.0")
+  - version_constraint: semver("> 1.6.0")
+  - version_constraint: semver("> 1.4.0")
+  - version_constraint: semver("> 0.1.0")
+  - version_constraint: semver("<= 0.1.0")
+  - version_constraint: "true"
+    format: tar.gz
