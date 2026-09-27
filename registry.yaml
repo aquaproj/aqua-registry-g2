@@ -9,9 +9,6 @@ version_overrides:
     files:
       - name: codegraph
         src: '{{.AssetWithoutExt}}/bin/codegraph'
-    replacements:
-      amd64: x64
-      windows: win32
     github_artifact_attestations:
       signer_workflow: colbymchenry/codegraph/.github/workflows/release.yml
     overrides:
@@ -23,9 +20,6 @@ version_overrides:
     files:
       - name: codegraph
         src: '{{.AssetWithoutExt}}/bin/codegraph'
-    replacements:
-      amd64: x64
-      windows: win32
     overrides:
       - goos: windows
         files:
@@ -35,9 +29,6 @@ version_overrides:
     files:
       - name: codegraph
         src: '{{.AssetWithoutExt}}/bin/codegraph'
-    replacements:
-      amd64: x64
-      windows: win32
     overrides:
       - goos: windows
         files:
@@ -49,9 +40,6 @@ version_overrides:
     files:
       - name: codegraph
         src: '{{.AssetWithoutExt}}/bin/codegraph'
-    replacements:
-      amd64: x64
-      windows: win32
     github_artifact_attestations:
       signer_workflow: colbymchenry/codegraph/.github/workflows/release.yml
     overrides:
