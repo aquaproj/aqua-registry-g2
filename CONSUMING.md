@@ -31,7 +31,7 @@ https://raw.githubusercontent.com/aquaproj/aqua-registry-g2/<branch>/versions/<v
 
 e.g. https://raw.githubusercontent.com/aquaproj/aqua-registry-g2/pkg_grafana_2fk6/versions/v2.3.0/registry-1.json
 
-`1` of `registry-1.json` is the registry schema version.
+`1` of `registry-1.json` is the major version of the registry schema. See [README.md](README.md#schema-version) for what a reader should do when a new one arrives.
 
 ## How To List available packages
 
