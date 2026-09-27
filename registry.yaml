@@ -1,0 +1,15 @@
+type: github_release
+repo_owner: mfontanini
+repo_name: presenterm
+description: A markdown terminal slideshow tool
+version_overrides:
+  - version_constraint: semver("> 0.2.0")
+    files:
+      - name: presenterm
+        src: presenterm-{{trimV .Version}}/presenterm
+  - version_constraint: semver("<= 0.2.0")
+    no_asset: true
+  - version_constraint: "true"
+    files:
+      - name: presenterm
+        src: presenterm-{{trimV .Version}}/presenterm
