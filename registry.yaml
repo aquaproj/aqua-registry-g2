@@ -1,0 +1,15 @@
+type: github_release
+repo_owner: thanos-io
+repo_name: thanos
+description: Highly available Prometheus setup with long term storage capabilities. A CNCF Incubating project
+version_overrides:
+  - version_constraint: semver("> 0.1.0-rc.1")
+    files:
+      - name: thanos
+        src: '{{.AssetWithoutExt}}/thanos'
+  - version_constraint: semver("<= 0.1.0-rc.1")
+    no_asset: true
+  - version_constraint: "true"
+    files:
+      - name: thanos
+        src: '{{.AssetWithoutExt}}/thanos'
