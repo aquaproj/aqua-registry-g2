@@ -1,0 +1,19 @@
+type: github_release
+repo_owner: upx
+repo_name: upx
+description: UPX - the Ultimate Packer for eXecutables
+version_overrides:
+  - version_constraint: Version in ["v3.00", "v3.99"]
+    no_asset: true
+  - version_constraint: Version == "v3.91"
+    files:
+      - name: upx
+        src: '{{.AssetWithoutExt}}/upx'
+  - version_constraint: semver("<= 3.94.0")
+    files:
+      - name: upx
+        src: '{{.AssetWithoutExt}}/upx'
+  - version_constraint: "true"
+    files:
+      - name: upx
+        src: '{{.AssetWithoutExt}}/upx'
