@@ -16,9 +16,6 @@ version_overrides:
       - name: bunx
         src: '{{.AssetWithoutExt}}/bun'
         link: bunx
-    replacements:
-      amd64: x64
-      arm64: aarch64
   - version_constraint: semver("> 0.1.4")
     files:
       - name: bun
@@ -26,9 +23,6 @@ version_overrides:
       - name: bunx
         src: '{{.AssetWithoutExt}}/bun'
         link: bunx
-    replacements:
-      amd64: x64
-      arm64: aarch64
   - version_constraint: semver("<= 0.1.4")
     files:
       - name: bun
@@ -36,9 +30,6 @@ version_overrides:
       - name: bunx
         src: '{{.AssetWithoutExt}}/bun'
         link: bunx
-    replacements:
-      amd64: x64
-      arm64: aarch64
   - version_constraint: "true"
     files:
       - name: bun
@@ -46,7 +37,4 @@ version_overrides:
       - name: bunx
         src: '{{.AssetWithoutExt}}/bun'
         link: bunx
-    replacements:
-      amd64: x64
-      arm64: aarch64
 all_assets_filter: not ((Asset matches "profile") or (Asset matches "baseline"))
