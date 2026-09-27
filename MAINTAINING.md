@@ -62,6 +62,10 @@ from it follows, so two things usually follow an edit as well.
 Never by hand: fix the definition, then generate the affected versions again. It replaces what
 the registry already serves, so nothing about it is automatic.
 
+The same skill finishes a pull request of versions waiting for a definition, which is the other
+way round: those versions aren't in the registry at all, and what generates them is the
+definition written on that pull request's own branch.
+
 ## How To Fix index.json
 
 [skills/refresh-index](skills/refresh-index/SKILL.md).

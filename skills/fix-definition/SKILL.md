@@ -16,6 +16,11 @@ git fetch origin pkg_cli_2fcli
 git switch pkg_cli_2fcli
 ```
 
+A definition also goes on the head branch of a pull request whose versions are
+[waiting for one](../review-pull-request/SKILL.md#the-pull-request-is-versions-waiting-for-a-definition).
+Those versions aren't in the registry, so the definition that describes them has nowhere else
+to be, and putting it there is what lets them and it merge together.
+
 Fixing the definition doesn't change anything already generated from it. Two things
 usually follow:
 
