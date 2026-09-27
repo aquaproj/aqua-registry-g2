@@ -1,0 +1,86 @@
+---
+name: tidy
+# Take out of the definitions what a release can be read for.
+#
+# A definition should say the part a release can't answer. The replacements say how the
+# release writes a platform, which the parser reads off the asset names for itself, and the
+# conversion stopped writing them in; the definitions written before it still say them, and
+# nothing else would ever reach those.
+#
+# Nothing generated changes, so the pull requests merge themselves once their checks pass.
+# One per package, because there is a branch per package.
+on:
+  workflow_dispatch:
+    inputs:
+      packages:
+        description: the packages to tidy, separated by spaces; empty means every one
+        required: false
+        default: ""
+      limit:
+        description: how many pull requests one run opens
+        required: false
+        default: "20"
+      dry_run:
+        description: say which definitions would change and commit nothing
+        type: boolean
+        required: false
+        default: false
+      log_level:
+        description: how much the run says about what it is doing
+        required: false
+        default: info
+permissions: {}
+# One at a time. Two of these would commit to the same head branches, and the second would
+# reset what the first put there.
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+jobs:
+  tidy:
+    runs-on: ubuntu-24.04
+    environment: ar2
+    timeout-minutes: 30
+    permissions:
+      # Committing to the head branches.
+      contents: write
+      # Opening the pull requests and turning on auto-merge.
+      pull-requests: write
+    steps:
+      # For aqua/aqua.yaml, which pins the ar2 version and its checksum.
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: aquaproj/aqua-installer@96a9bc20066c5bf5e275b41019cfc165b25f4e2e # v4.0.5
+        with:
+          aqua_version: v2.63.0
+      # No branch token, although this environment holds the key: a tidy is for a package
+      # whose definition is already on its branch, so creating one is something it has no
+      # business being able to do.
+      - uses: actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1 # v3.2.0
+        id: pr_token
+        with:
+          client-id: ${{ vars.AR2_PR_CLIENT_ID }}
+          private-key: ${{ secrets.AR2_PR_PRIVATE_KEY }}
+      # The packages are one field and each is its own argument, so they are split on
+      # spaces rather than interpolated into the command line.
+      - run: |
+          args=()
+          for package in $PACKAGES; do
+            args+=("$package")
+          done
+          if [ "$DRY_RUN" = "true" ]; then
+            args+=(--dry-run)
+          fi
+          ar2 tidy \
+            --log-level "$LOG_LEVEL" \
+            --limit "$LIMIT" \
+            --g2-owner "${GITHUB_REPOSITORY%/*}" \
+            --g2-repo "${GITHUB_REPOSITORY#*/}" \
+            "${args[@]}"
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          AR2_PR_TOKEN: ${{ steps.pr_token.outputs.token }}
+          PACKAGES: ${{ inputs.packages }}
+          LIMIT: ${{ inputs.limit }}
+          DRY_RUN: ${{ inputs.dry_run }}
+          LOG_LEVEL: ${{ inputs.log_level }}
