@@ -1,0 +1,31 @@
+aliases:
+  - name: zyedidia/micro
+type: github_release
+repo_owner: micro-editor
+repo_name: micro
+description: A modern and intuitive terminal-based text editor
+version_overrides:
+  - version_constraint: Version == "v2.0.8"
+    files:
+      - name: micro
+        src: micro-{{trimV .Version}}/micro
+  - version_constraint: semver("> 2.0.10")
+    files:
+      - name: micro
+        src: micro-{{trimV .Version}}/micro
+  - version_constraint: semver("> 1.4.1")
+    files:
+      - name: micro
+        src: micro-{{trimV .Version}}/micro
+  - version_constraint: semver("> 1.0rc1")
+    files:
+      - name: micro
+        src: micro-{{trimV .Version}}/micro
+  - version_constraint: semver("<= 1.0rc1")
+    files:
+      - name: micro
+        src: micro-{{trimV .Version}}/micro
+  - version_constraint: "true"
+    files:
+      - name: micro
+        src: micro-{{trimV .Version}}/micro
