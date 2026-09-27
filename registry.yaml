@@ -1,0 +1,35 @@
+type: github_release
+repo_owner: max-sixty
+repo_name: worktrunk
+description: Worktrunk is a CLI for Git worktree management, designed for parallel AI agent workflows
+version_overrides:
+  - version_constraint: semver("> 0.1.12")
+    files:
+      - name: wt
+        src: '{{.AssetWithoutExt}}/wt'
+      - name: git-wt
+        src: '{{.AssetWithoutExt}}/git-wt'
+    overrides:
+      - goos: windows
+        files:
+          - name: wt
+          - name: git-wt
+  - version_constraint: semver("<= 0.1.12")
+    files:
+      - name: wt
+        src: '{{.AssetWithoutExt}}/wt'
+    overrides:
+      - goos: windows
+        files:
+          - name: wt
+  - version_constraint: "true"
+    files:
+      - name: wt
+        src: '{{.AssetWithoutExt}}/wt'
+      - name: git-wt
+        src: '{{.AssetWithoutExt}}/git-wt'
+    overrides:
+      - goos: windows
+        files:
+          - name: wt
+          - name: git-wt
