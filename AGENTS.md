@@ -25,6 +25,8 @@ configured to sign.
 ## Where things are
 
 - [README.md](README.md): what the repository holds and how it is laid out.
+- [docs/why.md](docs/why.md): why there is a second generation -- the problems aqua-registry
+  had and what this registry does about each.
 - [MAINTAINING.md](MAINTAINING.md): what a maintainer does, with the premises each procedure
   rests on.
 - [skills/](skills): one procedure each, as a skill.

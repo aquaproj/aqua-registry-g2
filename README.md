@@ -2,9 +2,8 @@
 
 The second generation of [aqua-registry](https://github.com/aquaproj/aqua-registry).
 
-A registry aqua reads as JSON rather than as YAML it has to evaluate. What a version
-resolves to -- the asset name, the format, the files inside the archive, the checksum --
-is decided once, when it is generated, rather than every time somebody installs it.
+A registry aqua reads as JSON rather than as YAML it has to evaluate. Why that is, and what
+aqua-registry couldn't do well, is in [docs/why.md](docs/why.md).
 
 ## Status
 
