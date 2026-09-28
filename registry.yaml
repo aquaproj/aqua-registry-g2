@@ -24,23 +24,6 @@ github_artifact_attestations:
   signer_workflow: fission/fission/.github/workflows/release.yaml
 version_overrides:
   - version_constraint: semver("> 1.21.0")
-    checksum:
-      type: github_release
-      asset: checksums.txt
-      algorithm: sha256
-      cosign:
-        opts:
-          - --certificate-oidc-issuer
-          - https://token.actions.githubusercontent.com
-          - --certificate-identity
-          - https://github.com/fission/fission/.github/workflows/release.yaml@refs/tags/{{.Version}}
-          - --certificate-github-workflow-repository
-          - fission/fission
-          - --certificate-github-workflow-ref
-          - refs/tags/{{.Version}}
-        bundle:
-          type: github_release
-          asset: checksums.txt.sig.bundle
     cosign:
       opts:
         - --certificate-oidc-issuer
@@ -79,23 +62,6 @@ version_overrides:
   - version_constraint: semver("> 1.12.0")
   - version_constraint: semver("<= 1.12.0")
   - version_constraint: "true"
-    checksum:
-      type: github_release
-      asset: checksums.txt
-      algorithm: sha256
-      cosign:
-        opts:
-          - --certificate-oidc-issuer
-          - https://token.actions.githubusercontent.com
-          - --certificate-identity
-          - https://github.com/fission/fission/.github/workflows/release.yaml@refs/tags/{{.Version}}
-          - --certificate-github-workflow-repository
-          - fission/fission
-          - --certificate-github-workflow-ref
-          - refs/tags/{{.Version}}
-        bundle:
-          type: github_release
-          asset: checksums.txt.sig.bundle
     cosign:
       opts:
         - --certificate-oidc-issuer
