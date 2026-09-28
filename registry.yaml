@@ -2,6 +2,11 @@ type: github_release
 repo_owner: fission
 repo_name: fission
 description: Fast and Simple Serverless Functions for Kubernetes
+# The release carries the Kubernetes manifests that install Fission, an SBOM of each
+# image it builds, and the command line client. The inference took an SBOM for Linux,
+# and the signature the definition names then pointed beside that rather than beside
+# the client.
+all_assets_filter: Asset matches "^fission-[^-]+-(darwin|linux|windows)-(amd64|arm64)(\\.exe)?$"
 cosign:
   opts:
     - --certificate-oidc-issuer
