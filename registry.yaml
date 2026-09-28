@@ -5,10 +5,6 @@ description: Easy and Repeatable Kubernetes Development
 url: https://storage.googleapis.com/skaffold/releases/{{.Version}}/skaffold-{{.OS}}-{{.Arch}}
 overrides:
   - goos: windows
-    checksum:
-      type: http
-      url: https://storage.googleapis.com/skaffold/releases/{{.Version}}/skaffold-{{.OS}}-{{.Arch}}.exe.sha256
-      algorithm: sha256
 files:
   - name: skaffold
     src: skaffold-{{.OS}}-{{.Arch}}
@@ -16,7 +12,3 @@ supported_envs:
   - darwin
   - linux
   - amd64
-checksum:
-  type: http
-  url: https://storage.googleapis.com/skaffold/releases/{{.Version}}/skaffold-{{.OS}}-{{.Arch}}.sha256
-  algorithm: sha256
