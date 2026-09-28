@@ -6,20 +6,6 @@ version_overrides:
   - version_constraint: semver("> 1.6.2")
     files:
       - name: tofu
-    checksum:
-      type: github_release
-      asset: tofu_{{trimV .Version}}_SHA256SUMS
-      algorithm: sha256
-      cosign:
-        opts:
-          - --certificate
-          - https://github.com/opentofu/opentofu/releases/download/{{.Version}}/tofu_{{trimV .Version}}_SHA256SUMS.pem
-          - --certificate-identity-regexp
-          - ^https://github\.com/opentofu/opentofu/\.github/workflows/release\.yml@refs/heads/(main|v\d+\..+)$
-          - --certificate-oidc-issuer
-          - https://token.actions.githubusercontent.com
-          - --signature
-          - https://github.com/opentofu/opentofu/releases/download/{{.Version}}/tofu_{{trimV .Version}}_SHA256SUMS.sig
     cosign:
       opts:
         - --certificate
@@ -33,20 +19,6 @@ version_overrides:
   - version_constraint: semver("> 1.6.0-rc1")
     files:
       - name: tofu
-    checksum:
-      type: github_release
-      asset: tofu_{{trimV .Version}}_SHA256SUMS
-      algorithm: sha256
-      cosign:
-        opts:
-          - --certificate
-          - https://github.com/opentofu/opentofu/releases/download/{{.Version}}/tofu_{{trimV .Version}}_SHA256SUMS.pem
-          - --certificate-identity-regexp
-          - ^https://github\.com/opentofu/opentofu/\.github/workflows/release\.yml@refs/heads/(main|v\d+\..+)$
-          - --certificate-oidc-issuer
-          - https://token.actions.githubusercontent.com
-          - --signature
-          - https://github.com/opentofu/opentofu/releases/download/{{.Version}}/tofu_{{trimV .Version}}_SHA256SUMS.sig
     cosign:
       opts:
         - --certificate
@@ -60,54 +32,12 @@ version_overrides:
   - version_constraint: semver("> 1.6.0-beta4")
     files:
       - name: tofu
-    checksum:
-      type: github_release
-      asset: tofu_{{trimV .Version}}_SHA256SUMS
-      algorithm: sha256
-      cosign:
-        opts:
-          - --certificate
-          - https://github.com/opentofu/opentofu/releases/download/{{.Version}}/tofu_{{trimV .Version}}_SHA256SUMS.pem
-          - --certificate-identity-regexp
-          - ^https://github\.com/opentofu/opentofu/\.github/workflows/release\.yml@refs/heads/(main|v\d+\..+)$
-          - --certificate-oidc-issuer
-          - https://token.actions.githubusercontent.com
-          - --signature
-          - https://github.com/opentofu/opentofu/releases/download/{{.Version}}/tofu_{{trimV .Version}}_SHA256SUMS.sig
   - version_constraint: semver("<= 1.6.0-beta4")
     files:
       - name: tofu
-    checksum:
-      type: github_release
-      asset: tofu_{{trimV .Version}}_SHA256SUMS
-      algorithm: sha256
-      cosign:
-        opts:
-          - --certificate
-          - https://github.com/opentofu/opentofu/releases/download/{{.Version}}/tofu_{{trimV .Version}}_SHA256SUMS.pem
-          - --certificate-identity
-          - https://github.com/opentofu/opentofu/.github/workflows/release.yml@refs/tags/{{.Version}}
-          - --certificate-oidc-issuer
-          - https://token.actions.githubusercontent.com
-          - --signature
-          - https://github.com/opentofu/opentofu/releases/download/{{.Version}}/tofu_{{trimV .Version}}_SHA256SUMS.sig
   - version_constraint: "true"
     files:
       - name: tofu
-    checksum:
-      type: github_release
-      asset: tofu_{{trimV .Version}}_SHA256SUMS
-      algorithm: sha256
-      cosign:
-        opts:
-          - --certificate
-          - https://github.com/opentofu/opentofu/releases/download/{{.Version}}/tofu_{{trimV .Version}}_SHA256SUMS.pem
-          - --certificate-identity-regexp
-          - ^https://github\.com/opentofu/opentofu/\.github/workflows/release\.yml@refs/heads/(main|v\d+\..+)$
-          - --certificate-oidc-issuer
-          - https://token.actions.githubusercontent.com
-          - --signature
-          - https://github.com/opentofu/opentofu/releases/download/{{.Version}}/tofu_{{trimV .Version}}_SHA256SUMS.sig
     cosign:
       opts:
         - --certificate
