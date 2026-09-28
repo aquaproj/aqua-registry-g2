@@ -31,10 +31,6 @@ version_overrides:
     format: tar.gz
     files:
       - name: claude
-    checksum:
-      type: github_release
-      asset: SHASUMS256.txt
-      algorithm: sha256
     overrides:
       - goos: linux
         variants:
