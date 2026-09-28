@@ -46,21 +46,15 @@ version_overrides:
   - version_constraint: semver("> 1.22.17")
     url: https://dl.k8s.io/{{.Version}}/bin/{{.OS}}/{{.Arch}}/kubectl
     format: raw
-    overrides:
-      - goos: windows
   - version_constraint: semver("> 1.20.15")
     url: https://dl.k8s.io/{{.Version}}/bin/{{.OS}}/{{.Arch}}/kubectl
     format: raw
     windows_arm_emulation: true
-    overrides:
-      - goos: windows
   - version_constraint: semver("> 1.15.3")
     url: https://dl.k8s.io/{{.Version}}/bin/{{.OS}}/{{.Arch}}/kubectl
     format: raw
     rosetta2: true
     windows_arm_emulation: true
-    overrides:
-      - goos: windows
   - version_constraint: semver("> 1.2.7")
     url: https://dl.k8s.io/{{.Version}}/bin/{{.OS}}/{{.Arch}}/kubectl
     format: raw
