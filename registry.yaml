@@ -24,23 +24,7 @@ version_overrides:
     files:
       - name: mise
         src: mise/bin/mise
-    checksum:
-      type: github_release
-      asset: SHASUMS512.txt
-      algorithm: sha512
-      minisign:
-        type: github_release
-        asset: SHASUMS512.txt.minisig
-        public_key: RWTC3g8W3z4RZK3V3qv7fa1QY4JEWyBtqIHW+85QlJpZc5yG+uNYNBSZ
   - version_constraint: "true"
     files:
       - name: mise
         src: mise/bin/mise
-    checksum:
-      type: github_release
-      asset: SHASUMS512.txt
-      algorithm: sha512
-      minisign:
-        type: github_release
-        asset: SHASUMS512.txt.minisig
-        public_key: RWTC3g8W3z4RZK3V3qv7fa1QY4JEWyBtqIHW+85QlJpZc5yG+uNYNBSZ
