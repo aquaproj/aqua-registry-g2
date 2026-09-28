@@ -6,72 +6,18 @@ version_overrides:
   - version_constraint: semver("> 2.0.0")
     files:
       - name: flux
-    checksum:
-      type: github_release
-      asset: flux_{{trimV .Version}}_checksums.txt
-      algorithm: sha256
-      cosign:
-        opts:
-          - --certificate-identity
-          - https://github.com/fluxcd/flux2/.github/workflows/release.yaml@refs/tags/{{.Version}}
-          - --certificate-oidc-issuer
-          - https://token.actions.githubusercontent.com
-          - --signature
-          - https://github.com/fluxcd/flux2/releases/download/{{.Version}}/flux_{{trimV .Version}}_checksums.txt.sig
-          - --certificate
-          - https://github.com/fluxcd/flux2/releases/download/{{.Version}}/flux_{{trimV .Version}}_checksums.txt.pem
-          - --certificate-github-workflow-repository
-          - fluxcd/flux2
-          - --certificate-github-workflow-ref
-          - refs/tags/{{.Version}}
     slsa_provenance:
       type: github_release
       asset: provenance.intoto.jsonl
   - version_constraint: semver("> 0.25.2")
     files:
       - name: flux
-    checksum:
-      type: github_release
-      asset: flux_{{trimV .Version}}_checksums.txt
-      algorithm: sha256
-      cosign:
-        opts:
-          - --certificate-identity
-          - https://github.com/fluxcd/flux2/.github/workflows/release.yaml@refs/tags/{{.Version}}
-          - --certificate-oidc-issuer
-          - https://token.actions.githubusercontent.com
-          - --signature
-          - https://github.com/fluxcd/flux2/releases/download/{{.Version}}/flux_{{trimV .Version}}_checksums.txt.sig
-          - --certificate
-          - https://github.com/fluxcd/flux2/releases/download/{{.Version}}/flux_{{trimV .Version}}_checksums.txt.pem
-          - --certificate-github-workflow-repository
-          - fluxcd/flux2
-          - --certificate-github-workflow-ref
-          - refs/tags/{{.Version}}
   - version_constraint: semver("<= 0.25.2")
     files:
       - name: flux
   - version_constraint: "true"
     files:
       - name: flux
-    checksum:
-      type: github_release
-      asset: flux_{{trimV .Version}}_checksums.txt
-      algorithm: sha256
-      cosign:
-        opts:
-          - --certificate-identity
-          - https://github.com/fluxcd/flux2/.github/workflows/release.yaml@refs/tags/{{.Version}}
-          - --certificate-oidc-issuer
-          - https://token.actions.githubusercontent.com
-          - --signature
-          - https://github.com/fluxcd/flux2/releases/download/{{.Version}}/flux_{{trimV .Version}}_checksums.txt.sig
-          - --certificate
-          - https://github.com/fluxcd/flux2/releases/download/{{.Version}}/flux_{{trimV .Version}}_checksums.txt.pem
-          - --certificate-github-workflow-repository
-          - fluxcd/flux2
-          - --certificate-github-workflow-ref
-          - refs/tags/{{.Version}}
     slsa_provenance:
       type: github_release
       asset: provenance.intoto.jsonl
