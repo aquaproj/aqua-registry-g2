@@ -9,23 +9,6 @@ version_overrides:
     files:
       - name: glow
         src: '{{.AssetWithoutExt}}/glow'
-    checksum:
-      type: github_release
-      asset: checksums.txt
-      algorithm: sha256
-      cosign:
-        opts:
-          - --certificate-identity
-          - https://github.com/charmbracelet/meta/.github/workflows/goreleaser.yml@refs/heads/main
-          - --certificate-oidc-issuer
-          - https://token.actions.githubusercontent.com
-          - --certificate-github-workflow-repository
-          - charmbracelet/glow
-          - --certificate-github-workflow-ref
-          - refs/tags/{{.Version}}
-        bundle:
-          type: github_release
-          asset: checksums.txt.sigstore.json
   - version_constraint: semver("> 1.4.1")
     files:
       - name: glow
@@ -38,20 +21,3 @@ version_overrides:
     files:
       - name: glow
         src: '{{.AssetWithoutExt}}/glow'
-    checksum:
-      type: github_release
-      asset: checksums.txt
-      algorithm: sha256
-      cosign:
-        opts:
-          - --certificate-identity
-          - https://github.com/charmbracelet/meta/.github/workflows/goreleaser.yml@refs/heads/main
-          - --certificate-oidc-issuer
-          - https://token.actions.githubusercontent.com
-          - --certificate-github-workflow-repository
-          - charmbracelet/glow
-          - --certificate-github-workflow-ref
-          - refs/tags/{{.Version}}
-        bundle:
-          type: github_release
-          asset: checksums.txt.sigstore.json
