@@ -18,40 +18,12 @@ version_overrides:
     no_asset: true
   - version_constraint: semver(">= 11.0.0")
     url: https://archive.apache.org/dist/tomcat/tomcat-11/v{{.SemVer}}/bin/apache-tomcat-{{.SemVer}}.{{.Format}}
-    checksum:
-      type: http
-      url: https://archive.apache.org/dist/tomcat/tomcat-11/v{{.SemVer}}/bin/apache-tomcat-{{.SemVer}}.{{.Format}}.sha512
-      file_format: regexp
-      algorithm: sha512
-      pattern:
-        checksum: ^(\b[A-Fa-f0-9]{128}\b)
   - version_constraint: semver(">= 10.0.0")
     url: https://archive.apache.org/dist/tomcat/tomcat-10/v{{.SemVer}}/bin/apache-tomcat-{{.SemVer}}.{{.Format}}
-    checksum:
-      type: http
-      url: https://archive.apache.org/dist/tomcat/tomcat-10/v{{.SemVer}}/bin/apache-tomcat-{{.SemVer}}.{{.Format}}.sha512
-      file_format: regexp
-      algorithm: sha512
-      pattern:
-        checksum: ^(\b[A-Fa-f0-9]{128}\b)
   - version_constraint: semver(">= 9.0.2")
     url: https://archive.apache.org/dist/tomcat/tomcat-9/v{{.SemVer}}/bin/apache-tomcat-{{.SemVer}}.{{.Format}}
-    checksum:
-      type: http
-      url: https://archive.apache.org/dist/tomcat/tomcat-9/v{{.SemVer}}/bin/apache-tomcat-{{.SemVer}}.{{.Format}}.sha512
-      file_format: regexp
-      algorithm: sha512
-      pattern:
-        checksum: ^(\b[A-Fa-f0-9]{128}\b)
   - version_constraint: semver(">= 9.0.0")
     url: https://archive.apache.org/dist/tomcat/tomcat-9/v{{.SemVer}}/bin/apache-tomcat-{{.SemVer}}.{{.Format}}
-    checksum:
-      type: http
-      url: https://archive.apache.org/dist/tomcat/tomcat-9/v{{.SemVer}}/bin/apache-tomcat-{{.SemVer}}.{{.Format}}.md5
-      file_format: regexp
-      algorithm: md5
-      pattern:
-        checksum: ^(\b[A-Fa-f0-9]{32}\b)
   - version_constraint: semver("< 9.0.0")
     no_asset: true
   - version_constraint: "true"
