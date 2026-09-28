@@ -4,40 +4,8 @@ repo_name: chezmoi
 description: Manage your dotfiles across multiple diverse machines, securely
 version_overrides:
   - version_constraint: semver("> 2.70.5")
-    checksum:
-      type: github_release
-      asset: chezmoi_{{trimV .Version}}_checksums.txt
-      algorithm: sha256
-      cosign:
-        opts:
-          - --key
-          - https://github.com/twpayne/chezmoi/releases/download/{{.Version}}/chezmoi_cosign.pub
-        bundle:
-          type: github_release
-          asset: chezmoi_{{trimV .Version}}_checksums.txt.sigstore.json
   - version_constraint: semver("> 2.68.1")
-    checksum:
-      type: github_release
-      asset: chezmoi_{{trimV .Version}}_checksums.txt
-      algorithm: sha256
-      cosign:
-        opts:
-          - --key
-          - https://github.com/twpayne/chezmoi/releases/download/{{.Version}}/chezmoi_cosign.pub
-          - --signature
-          - https://github.com/twpayne/chezmoi/releases/download/{{.Version}}/chezmoi_{{trimV .Version}}_checksums.txt.sig
   - version_constraint: semver("> 2.67.1")
-    checksum:
-      type: github_release
-      asset: chezmoi_{{trimV .Version}}_checksums.txt
-      algorithm: sha256
-      cosign:
-        opts:
-          - --key
-          - https://github.com/twpayne/chezmoi/releases/download/{{.Version}}/chezmoi_cosign.pub
-        bundle:
-          type: github_release
-          asset: chezmoi_{{trimV .Version}}_checksums.txt.sigstore.json
     overrides:
       - goos: linux
         goarch: arm64
@@ -45,16 +13,6 @@ version_overrides:
           - name: chezmoi
             src: usr/bin/chezmoi
   - version_constraint: semver("> 2.66.1")
-    checksum:
-      type: github_release
-      asset: chezmoi_{{trimV .Version}}_checksums.txt
-      algorithm: sha256
-      cosign:
-        opts:
-          - --signature
-          - https://github.com/twpayne/chezmoi/releases/download/{{.Version}}/chezmoi_{{trimV .Version}}_checksums.txt.sig
-          - --key
-          - https://github.com/twpayne/chezmoi/releases/download/{{.Version}}/chezmoi_cosign.pub
     overrides:
       - goos: linux
         goarch: arm64
@@ -62,16 +20,6 @@ version_overrides:
           - name: chezmoi
             src: usr/bin/chezmoi
   - version_constraint: semver("> 2.29.4")
-    checksum:
-      type: github_release
-      asset: chezmoi_{{trimV .Version}}_checksums.txt
-      algorithm: sha256
-      cosign:
-        opts:
-          - --signature
-          - https://github.com/twpayne/chezmoi/releases/download/{{.Version}}/chezmoi_{{trimV .Version}}_checksums.txt.sig
-          - --key
-          - https://github.com/twpayne/chezmoi/releases/download/{{.Version}}/chezmoi_cosign.pub
     overrides:
       - goos: linux
         goarch: arm64
@@ -97,14 +45,3 @@ version_overrides:
   - version_constraint: semver("> 0.0.5")
   - version_constraint: semver("<= 0.0.5")
   - version_constraint: "true"
-    checksum:
-      type: github_release
-      asset: chezmoi_{{trimV .Version}}_checksums.txt
-      algorithm: sha256
-      cosign:
-        opts:
-          - --key
-          - https://github.com/twpayne/chezmoi/releases/download/{{.Version}}/chezmoi_cosign.pub
-        bundle:
-          type: github_release
-          asset: chezmoi_{{trimV .Version}}_checksums.txt.sigstore.json
