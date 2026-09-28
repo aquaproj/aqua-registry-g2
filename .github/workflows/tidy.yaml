@@ -1,11 +1,15 @@
 ---
 name: tidy
-# Take out of the definitions what a release can be read for.
+# Take out of the definitions what they don't have to say.
 #
-# A definition should say the part a release can't answer. The replacements say how the
-# release writes a platform, which the parser reads off the asset names for itself, and the
-# conversion stopped writing them in; the definitions written before it still say them, and
-# nothing else would ever reach those.
+# A definition should say the part a release can't answer, and two things in it aren't that.
+# The replacements say how the release writes a platform, which the parser reads off the
+# asset names for itself. The checksum block says where the checksum file is: every entry
+# carries the digest of the asset itself, and a generated entry has nowhere to say that such
+# a file exists, so nothing ever reads it.
+#
+# The conversion stopped writing both in; the definitions written before it still say them,
+# and nothing else would ever reach those.
 #
 # Nothing generated changes, so the pull requests merge themselves once their checks pass.
 # One per package, because there is a branch per package.
