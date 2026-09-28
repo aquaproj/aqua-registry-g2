@@ -10,9 +10,6 @@ version_overrides:
     files:
       - name: blender
         src: blender-{{trimV .Version}}-{{.OS}}-{{.Arch}}/blender
-    replacements:
-      amd64: x64
-      darwin: macos
     overrides:
       - goos: windows
         format: zip
