@@ -48,8 +48,6 @@ version_overrides:
     url: https://dl.k8s.io/{{.Version}}/bin/{{.OS}}/{{.Arch}}/kube-proxy
     format: raw
     windows_arm_emulation: true
-    overrides:
-      - goos: windows
     supported_envs:
       - linux
       - windows
