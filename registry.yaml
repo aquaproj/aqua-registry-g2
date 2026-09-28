@@ -8,10 +8,6 @@ supported_envs:
   - darwin
   - linux
   - amd64
-checksum:
-  type: http
-  url: https://releases.hashicorp.com/consul/{{trimV .Version}}/consul_{{trimV .Version}}_SHA256SUMS
-  algorithm: sha256
 version_overrides:
   - version_constraint: semver(">= 1.11.1")
   - version_constraint: "true"
