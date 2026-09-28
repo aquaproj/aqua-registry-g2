@@ -10,23 +10,6 @@ version_overrides:
     files:
       - name: vhs
         src: '{{.AssetWithoutExt}}/vhs'
-    checksum:
-      type: github_release
-      asset: checksums.txt
-      algorithm: sha256
-      cosign:
-        opts:
-          - --certificate-identity
-          - https://github.com/charmbracelet/meta/.github/workflows/goreleaser.yml@refs/heads/main
-          - --certificate-oidc-issuer
-          - https://token.actions.githubusercontent.com
-          - --certificate-github-workflow-repository
-          - charmbracelet/vhs
-          - --certificate-github-workflow-ref
-          - refs/tags/{{.Version}}
-        bundle:
-          type: github_release
-          asset: checksums.txt.sigstore.json
   - version_constraint: semver("> 0.6.0")
     files:
       - name: vhs
@@ -36,20 +19,3 @@ version_overrides:
     files:
       - name: vhs
         src: '{{.AssetWithoutExt}}/vhs'
-    checksum:
-      type: github_release
-      asset: checksums.txt
-      algorithm: sha256
-      cosign:
-        opts:
-          - --certificate-identity
-          - https://github.com/charmbracelet/meta/.github/workflows/goreleaser.yml@refs/heads/main
-          - --certificate-oidc-issuer
-          - https://token.actions.githubusercontent.com
-          - --certificate-github-workflow-repository
-          - charmbracelet/vhs
-          - --certificate-github-workflow-ref
-          - refs/tags/{{.Version}}
-        bundle:
-          type: github_release
-          asset: checksums.txt.sigstore.json
