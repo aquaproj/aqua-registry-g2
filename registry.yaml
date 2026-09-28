@@ -3,8 +3,6 @@ repo_owner: GoogleContainerTools
 repo_name: skaffold
 description: Easy and Repeatable Kubernetes Development
 url: https://storage.googleapis.com/skaffold/releases/{{.Version}}/skaffold-{{.OS}}-{{.Arch}}
-overrides:
-  - goos: windows
 files:
   - name: skaffold
     src: skaffold-{{.OS}}-{{.Arch}}
