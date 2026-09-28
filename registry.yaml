@@ -23,14 +23,6 @@ version_overrides:
         src: buf/bin/protoc-gen-buf-breaking
       - name: protoc-gen-buf-lint
         src: buf/bin/protoc-gen-buf-lint
-    checksum:
-      type: github_release
-      asset: sha256.txt
-      algorithm: sha256
-      minisign:
-        type: github_release
-        asset: sha256.txt.minisig
-        public_key: RWQ/i9xseZwBVE7pEniCNjlNOeeyp4BQgdZDLQcAohxEAH5Uj5DEKjv6
   - version_constraint: semver("> 0.53.0")
     files:
       - name: buf
@@ -39,14 +31,6 @@ version_overrides:
         src: buf/bin/protoc-gen-buf-breaking
       - name: protoc-gen-buf-lint
         src: buf/bin/protoc-gen-buf-lint
-    checksum:
-      type: github_release
-      asset: sha256.txt
-      algorithm: sha256
-      minisign:
-        type: github_release
-        asset: sha256.txt.minisig
-        public_key: RWQ/i9xseZwBVE7pEniCNjlNOeeyp4BQgdZDLQcAohxEAH5Uj5DEKjv6
   - version_constraint: semver("> 0.45.0")
     files:
       - name: buf
@@ -55,14 +39,6 @@ version_overrides:
         src: buf/bin/protoc-gen-buf-breaking
       - name: protoc-gen-buf-lint
         src: buf/bin/protoc-gen-buf-lint
-    checksum:
-      type: github_release
-      asset: sha256.txt
-      algorithm: sha256
-      minisign:
-        type: github_release
-        asset: sha256.txt.minisig
-        public_key: RWQ/i9xseZwBVE7pEniCNjlNOeeyp4BQgdZDLQcAohxEAH5Uj5DEKjv6
   - version_constraint: semver("> 0.41.0")
     files:
       - name: buf
@@ -87,11 +63,3 @@ version_overrides:
         src: buf/bin/protoc-gen-buf-breaking
       - name: protoc-gen-buf-lint
         src: buf/bin/protoc-gen-buf-lint
-    checksum:
-      type: github_release
-      asset: sha256.txt
-      algorithm: sha256
-      minisign:
-        type: github_release
-        asset: sha256.txt.minisig
-        public_key: RWQ/i9xseZwBVE7pEniCNjlNOeeyp4BQgdZDLQcAohxEAH5Uj5DEKjv6
