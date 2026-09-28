@@ -11,8 +11,6 @@ version_overrides:
     windows_arm_emulation: true
     files:
       - name: atlas
-    overrides:
-      - goos: windows
   - version_constraint: semver("< 0.21.0")
     no_asset: true
   - version_constraint: "true"
@@ -21,5 +19,3 @@ version_overrides:
     windows_arm_emulation: true
     files:
       - name: atlas
-    overrides:
-      - goos: windows
