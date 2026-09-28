@@ -38,19 +38,6 @@ version_overrides:
     files:
       - name: pulumi
         src: pulumi/pulumi
-    checksum:
-      type: github_release
-      asset: SHA512SUMS
-      algorithm: sha512
-      cosign:
-        opts:
-          - --certificate-identity-regexp
-          - ^https://github\.com/pulumi/pulumi/\.github/workflows/sign\.yml@refs/heads/gh-readonly-queue/
-          - --certificate-oidc-issuer
-          - https://token.actions.githubusercontent.com
-        bundle:
-          type: github_release
-          asset: SHA512SUMS.sig
     overrides:
       - goos: windows
         files:
