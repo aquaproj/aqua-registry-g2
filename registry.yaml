@@ -14,7 +14,6 @@ all_assets_filter: Asset matches "^ImageMagick-[^ ]*-(portable-Q16-HDRI-(x64|arm
 replacements:
   windows: portable
   linux: gcc
-  amd64: x64
 # The intoto.jsonl carries a provenance built by ImageMagick's own release workflow, which
 # is not a builder slsa-verifier trusts, so the claim can never verify. Its subjects are
 # the installers rather than these archives in any case. The same workflow is what the
