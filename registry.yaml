@@ -8,9 +8,5 @@ supported_envs:
   - darwin
   - linux
   - amd64
-checksum:
-  type: http
-  url: https://releases.hashicorp.com/vault/{{trimV .Version}}/vault_{{trimV .Version}}_SHA256SUMS
-  algorithm: sha256
 version_overrides:
   - version_constraint: "true"
