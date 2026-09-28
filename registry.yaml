@@ -19,10 +19,6 @@ version_overrides:
     url: https://dl.k8s.io/{{.Version}}/bin/{{.OS}}/{{.Arch}}/kube-proxy
     format: raw
     windows_arm_emulation: true
-    checksum:
-      type: http
-      url: https://dl.k8s.io/{{.Version}}/bin/{{.OS}}/{{.Arch}}/kube-proxy.sha256
-      algorithm: sha256
     cosign:
       opts:
         - --signature
@@ -35,10 +31,6 @@ version_overrides:
         - https://accounts.google.com
     overrides:
       - goos: windows
-        checksum:
-          type: http
-          url: https://dl.k8s.io/{{.Version}}/bin/{{.OS}}/{{.Arch}}/kube-proxy.exe.sha256
-          algorithm: sha256
         cosign:
           opts:
             - --signature
@@ -56,16 +48,8 @@ version_overrides:
     url: https://dl.k8s.io/{{.Version}}/bin/{{.OS}}/{{.Arch}}/kube-proxy
     format: raw
     windows_arm_emulation: true
-    checksum:
-      type: http
-      url: https://dl.k8s.io/{{.Version}}/bin/{{.OS}}/{{.Arch}}/kube-proxy.sha256
-      algorithm: sha256
     overrides:
       - goos: windows
-        checksum:
-          type: http
-          url: https://dl.k8s.io/{{.Version}}/bin/{{.OS}}/{{.Arch}}/kube-proxy.exe.sha256
-          algorithm: sha256
     supported_envs:
       - linux
       - windows
@@ -86,10 +70,6 @@ version_overrides:
     url: https://dl.k8s.io/{{.Version}}/bin/{{.OS}}/{{.Arch}}/kube-proxy
     format: raw
     windows_arm_emulation: true
-    checksum:
-      type: http
-      url: https://dl.k8s.io/{{.Version}}/bin/{{.OS}}/{{.Arch}}/kube-proxy.sha256
-      algorithm: sha256
     cosign:
       opts:
         - --signature
@@ -102,10 +82,6 @@ version_overrides:
         - https://accounts.google.com
     overrides:
       - goos: windows
-        checksum:
-          type: http
-          url: https://dl.k8s.io/{{.Version}}/bin/{{.OS}}/{{.Arch}}/kube-proxy.exe.sha256
-          algorithm: sha256
         cosign:
           opts:
             - --signature
