@@ -1,25 +1,26 @@
+name: typst/typst
 type: github_release
 repo_owner: typst
 repo_name: typst
 description: A new markup-based typesetting system that is powerful and easy to learn
 version_overrides:
-  - version_constraint: semver("> 0.11.1")
-    files:
-      - name: typst
-        src: '{{.AssetWithoutExt}}/typst'
-  - version_constraint: semver("> 0.5.0")
-    files:
-      - name: typst
-        src: '{{.AssetWithoutExt}}/typst'
-  - version_constraint: semver("> 0.2.0")
-    files:
-      - name: typst
-        src: '{{.AssetWithoutExt}}/typst'
-  - version_constraint: semver("<= 0.2.0")
-    files:
-      - name: typst
-        src: '{{.AssetWithoutExt}}/typst'
-  - version_constraint: "true"
-    files:
-      - name: typst
-        src: '{{.AssetWithoutExt}}/typst'
+    - version_constraint: semver("> 0.11.1")
+      files:
+        - name: typst
+          src: '{{.AssetWithoutExt}}/typst'
+    - version_constraint: semver("> 0.5.0")
+      files:
+        - name: typst
+          src: '{{.AssetWithoutExt}}/typst'
+    - version_constraint: semver("> 0.2.0")
+      files:
+        - name: typst
+          src: '{{.AssetWithoutExt}}/typst'
+    - version_constraint: semver("<= 0.2.0")
+      files:
+        - name: typst
+          src: '{{.AssetWithoutExt}}/typst'
+    - version_constraint: "true"
+      files:
+        - name: typst
+          src: '{{.AssetWithoutExt}}/typst'
