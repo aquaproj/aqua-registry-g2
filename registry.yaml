@@ -1,10 +1,11 @@
+name: gitleaks/gitleaks
 aliases:
-  - name: zricethezav/gitleaks
+    - name: zricethezav/gitleaks
 type: github_release
 repo_owner: gitleaks
 repo_name: gitleaks
 description: Find secrets with Gitleaks
 version_overrides:
-  - version_constraint: semver("<= 0.3.0") || Version == "v1.2.1"
-    no_asset: true
-  - version_constraint: "true"
+    - version_constraint: semver("<= 0.3.0") || Version == "v1.2.1"
+      no_asset: true
+    - version_constraint: "true"
