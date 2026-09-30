@@ -1,49 +1,50 @@
+name: rust-lang/rust-analyzer
 type: github_release
 repo_owner: rust-lang
 repo_name: rust-analyzer
 description: A Rust compiler front-end for IDEs
 version_overrides:
-  - version_constraint: Version == "2024-09-23"
-    no_asset: true
-  - version_constraint: Version == "2021-01-11"
-    files:
-      - name: rust-analyzer
-        src: rust-analyzer-{{.Arch}}-{{.OS}}
-  - version_constraint: semver("> 2024-10-28")
-    files:
-      - name: rust-analyzer
-        src: rust-analyzer-{{.Arch}}-{{.OS}}
-    overrides:
-      - goos: windows
-        files:
-          - name: rust-analyzer
-  - version_constraint: semver("> 2024-09-16")
-    files:
-      - name: rust-analyzer
-        src: rust-analyzer-{{.Arch}}-{{.OS}}
-  - version_constraint: semver("> 2021-02-08")
-    files:
-      - name: rust-analyzer
-        src: rust-analyzer-{{.Arch}}-{{.OS}}
-  - version_constraint: semver("> 2021-01-04")
-    files:
-      - name: rust-analyzer
-        src: rust-analyzer-{{.Arch}}-{{.OS}}
-  - version_constraint: semver("> 2020-12-21")
-    files:
-      - name: rust-analyzer
-        src: rust-analyzer-{{.Arch}}-{{.OS}}
-  - version_constraint: semver("> 2020-07-06")
-    files:
-      - name: rust-analyzer
-        src: rust-analyzer-{{.OS}}
-  - version_constraint: semver("> 2020-02-17")
-  - version_constraint: semver("<= 2020-02-17")
-  - version_constraint: "true"
-    files:
-      - name: rust-analyzer
-        src: rust-analyzer-{{.Arch}}-{{.OS}}
-    overrides:
-      - goos: windows
-        files:
-          - name: rust-analyzer
+    - version_constraint: Version == "2024-09-23"
+      no_asset: true
+    - version_constraint: Version == "2021-01-11"
+      files:
+        - name: rust-analyzer
+          src: rust-analyzer-{{.Arch}}-{{.OS}}
+    - version_constraint: semver("> 2024-10-28")
+      files:
+        - name: rust-analyzer
+          src: rust-analyzer-{{.Arch}}-{{.OS}}
+      overrides:
+        - goos: windows
+          files:
+            - name: rust-analyzer
+    - version_constraint: semver("> 2024-09-16")
+      files:
+        - name: rust-analyzer
+          src: rust-analyzer-{{.Arch}}-{{.OS}}
+    - version_constraint: semver("> 2021-02-08")
+      files:
+        - name: rust-analyzer
+          src: rust-analyzer-{{.Arch}}-{{.OS}}
+    - version_constraint: semver("> 2021-01-04")
+      files:
+        - name: rust-analyzer
+          src: rust-analyzer-{{.Arch}}-{{.OS}}
+    - version_constraint: semver("> 2020-12-21")
+      files:
+        - name: rust-analyzer
+          src: rust-analyzer-{{.Arch}}-{{.OS}}
+    - version_constraint: semver("> 2020-07-06")
+      files:
+        - name: rust-analyzer
+          src: rust-analyzer-{{.OS}}
+    - version_constraint: semver("> 2020-02-17")
+    - version_constraint: semver("<= 2020-02-17")
+    - version_constraint: "true"
+      files:
+        - name: rust-analyzer
+          src: rust-analyzer-{{.Arch}}-{{.OS}}
+      overrides:
+        - goos: windows
+          files:
+            - name: rust-analyzer
