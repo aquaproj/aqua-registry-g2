@@ -1,0 +1,223 @@
+type: github_release
+repo_owner: WebAssembly
+repo_name: wabt
+description: The WebAssembly Binary Toolkit
+files:
+  - name: spectest-interp
+    src: wabt-{{.Version}}/bin/spectest-interp
+  - name: wasm-decompile
+    src: wabt-{{.Version}}/bin/wasm-decompile
+  - name: wasm-interp
+    src: wabt-{{.Version}}/bin/wasm-interp
+  - name: wasm-objdump
+    src: wabt-{{.Version}}/bin/wasm-objdump
+  - name: wasm-stats
+    src: wabt-{{.Version}}/bin/wasm-stats
+  - name: wasm-strip
+    src: wabt-{{.Version}}/bin/wasm-strip
+  - name: wasm-validate
+    src: wabt-{{.Version}}/bin/wasm-validate
+  - name: wasm2c
+    src: wabt-{{.Version}}/bin/wasm2c
+  - name: wasm2wat
+    src: wabt-{{.Version}}/bin/wasm2wat
+  - name: wast2json
+    src: wabt-{{.Version}}/bin/wast2json
+  - name: wat-desugar
+    src: wabt-{{.Version}}/bin/wat-desugar
+  - name: wat2wasm
+    src: wabt-{{.Version}}/bin/wat2wasm
+replacements:
+  darwin: macos-12
+  linux: ubuntu
+version_overrides:
+  - version_constraint: semver(">= 1.0.39")
+  - version_constraint: semver(">= 1.0.35")
+    replacements:
+      darwin: macos-14
+      linux: ubuntu-20.04
+  - version_constraint: Version == "1.0.34"
+  - version_constraint: Version == "1.0.33"
+    files:
+      - name: spectest-interp
+        src: wabt-{{.Version}}/bin/spectest-interp
+      - name: wasm-interp
+        src: wabt-{{.Version}}/bin/wasm-interp
+      - name: wasm-objdump
+        src: wabt-{{.Version}}/bin/wasm-objdump
+      - name: wasm-opcodecnt
+        src: wabt-{{.Version}}/bin/wasm-opcodecnt
+      - name: wasm-validate
+        src: wabt-{{.Version}}/bin/wasm-validate
+      - name: wasm2c
+        src: wabt-{{.Version}}/bin/wasm2c
+      - name: wasm2wat
+        src: wabt-{{.Version}}/bin/wasm2wat
+      - name: wast2json
+        src: wabt-{{.Version}}/bin/wast2json
+      - name: wat-desugar
+        src: wabt-{{.Version}}/bin/wat-desugar
+      - name: wat2wasm
+        src: wabt-{{.Version}}/bin/wat2wasm
+  - version_constraint: semver(">= 1.0.17")
+    files:
+      - name: spectest-interp
+        src: wabt-{{.Version}}/bin/spectest-interp
+      - name: wasm-interp
+        src: wabt-{{.Version}}/bin/wasm-interp
+      - name: wasm-objdump
+        src: wabt-{{.Version}}/bin/wasm-objdump
+      - name: wasm-opcodecnt
+        src: wabt-{{.Version}}/bin/wasm-opcodecnt
+      - name: wasm-validate
+        src: wabt-{{.Version}}/bin/wasm-validate
+      - name: wasm2c
+        src: wabt-{{.Version}}/bin/wasm2c
+      - name: wasm2wat
+        src: wabt-{{.Version}}/bin/wasm2wat
+      - name: wast2json
+        src: wabt-{{.Version}}/bin/wast2json
+      - name: wat-desugar
+        src: wabt-{{.Version}}/bin/wat-desugar
+      - name: wat2wasm
+        src: wabt-{{.Version}}/bin/wat2wasm
+    replacements:
+      linux: ubuntu
+  - version_constraint: semver(">= 1.0.15")
+    files:
+      - name: wasm-decompile
+        src: wabt-{{.Version}}/wasm-decompile
+      - name: wasm-interp
+        src: wabt-{{.Version}}/wasm-interp
+      - name: wasm-objdump
+        src: wabt-{{.Version}}/wasm-objdump
+    overrides:
+      - goos: windows
+        files:
+          - name: wasm-decompile
+          - name: wasm-interp
+          - name: wasm-objdump
+          - name: wasm-opcodecnt
+          - name: wasm-strip
+          - name: wasm-validate
+          - name: wasm2c
+          - name: wasm2wat
+          - name: wast2json
+          - name: wat-desugar
+          - name: wat2wasm
+  - version_constraint: semver(">= 1.0.14")
+    files:
+      - name: wasm-decompile
+      - name: wasm-interp
+      - name: wasm-objdump
+      - name: wasm-opcodecnt
+      - name: wasm-strip
+      - name: wasm-validate
+      - name: wasm2c
+      - name: wasm2wat
+      - name: wast2json
+      - name: wat-desugar
+      - name: wat2wasm
+  - version_constraint: semver(">= 1.0.13")
+    files:
+      - name: wasm-decompile
+        src: wabt-{{.Version}}/wasm-decompile
+      - name: wasm-interp
+        src: wabt-{{.Version}}/wasm-interp
+      - name: wasm-objdump
+        src: wabt-{{.Version}}/wasm-objdump
+    overrides:
+      - goos: windows
+        files:
+          - name: wasm-decompile
+          - name: wasm-interp
+          - name: wasm-objdump
+          - name: wasm-opcodecnt
+          - name: wasm-strip
+          - name: wasm-validate
+          - name: wasm2c
+          - name: wasm2wat
+          - name: wast2json
+          - name: wat-desugar
+          - name: wat2wasm
+  - version_constraint: semver(">= 1.0.5")
+    files:
+      - name: spectest-interp
+        src: wabt-{{.Version}}/spectest-interp
+      - name: wasm-interp
+        src: wabt-{{.Version}}/wasm-interp
+      - name: wasm-objdump
+        src: wabt-{{.Version}}/wasm-objdump
+      - name: wasm-opcodecnt
+        src: wabt-{{.Version}}/wasm-opcodecnt
+      - name: wasm-validate
+        src: wabt-{{.Version}}/wasm-validate
+      - name: wasm2c
+        src: wabt-{{.Version}}/wasm2c
+      - name: wasm2wat
+        src: wabt-{{.Version}}/wasm2wat
+      - name: wast2json
+        src: wabt-{{.Version}}/wast2json
+      - name: wat-desugar
+        src: wabt-{{.Version}}/wat-desugar
+      - name: wat2wasm
+        src: wabt-{{.Version}}/wat2wasm
+    overrides:
+      - goos: windows
+        files:
+          - name: spectest-interp
+          - name: wabt-unittests
+          - name: wasm-interp
+          - name: wasm-objdump
+          - name: wasm-opcodecnt
+          - name: wasm-validate
+          - name: wasm2c
+          - name: wasm2wat
+          - name: wast2json
+          - name: wat-desugar
+          - name: wat2wasm
+  - version_constraint: semver(">= 1.0.3")
+    files:
+      - name: spectest-interp
+        src: wabt-{{.Version}}/spectest-interp
+      - name: wasm-interp
+        src: wabt-{{.Version}}/wasm-interp
+      - name: wasm-objdump
+        src: wabt-{{.Version}}/wasm-objdump
+      - name: wasm-opcodecnt
+        src: wabt-{{.Version}}/wasm-opcodecnt
+      - name: wasm-validate
+        src: wabt-{{.Version}}/wasm-validate
+      - name: wasm2c
+        src: wabt-{{.Version}}/wasm2c
+      - name: wasm2wat
+        src: wabt-{{.Version}}/wasm2wat
+      - name: wast2json
+        src: wabt-{{.Version}}/wast2json
+      - name: wat-desugar
+        src: wabt-{{.Version}}/wat-desugar
+      - name: wat2wasm
+        src: wabt-{{.Version}}/wat2wasm
+  - version_constraint: semver("< 1.0.3")
+    files:
+      - name: spectest-interp
+        src: wabt-{{.Version}}/spectest-interp
+      - name: wasm-interp
+        src: wabt-{{.Version}}/wasm-interp
+      - name: wasm-objdump
+        src: wabt-{{.Version}}/wasm-objdump
+      - name: wasm-opcodecnt
+        src: wabt-{{.Version}}/wasm-opcodecnt
+      - name: wasm-validate
+        src: wabt-{{.Version}}/wasm-validate
+      - name: wasm2c
+        src: wabt-{{.Version}}/wasm2c
+      - name: wasm2wat
+        src: wabt-{{.Version}}/wasm2wat
+      - name: wast2json
+        src: wabt-{{.Version}}/wast2json
+      - name: wat-desugar
+        src: wabt-{{.Version}}/wat-desugar
+      - name: wat2wasm
+        src: wabt-{{.Version}}/wat2wasm
+  - version_constraint: "true"
