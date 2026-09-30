@@ -1,25 +1,26 @@
+name: kubernetes-sigs/kustomize
 type: github_release
 repo_owner: kubernetes-sigs
 repo_name: kustomize
 description: Customization of kubernetes YAML configurations
 version_prefix: kustomize/
 version_overrides:
-  - version_constraint: semver(">= 5.2.1")
-  - version_constraint: semver(">= 5.2.0")
-    files:
-      - name: kustomize
-        src: output/kustomize
-  - version_constraint: semver(">= 5.1.0")
-  - version_constraint: semver(">= 4.5.4")
-  - version_constraint: semver(">= 4.4.1")
-  - version_constraint: semver(">= 4.2.0")
-  - version_constraint: semver(">= 3.8.6")
-  - version_constraint: semver(">= 3.7.0")
-  - version_constraint: semver(">= 3.5.5")
-  - version_constraint: semver(">= 3.3.0")
-  - version_constraint: semver(">= 3.2.1")
-  - version_constraint: semver(">= 2.1.0")
-    version_prefix: ""
-  - version_constraint: semver(">= 1.0.1")
-    version_prefix: ""
-  - version_constraint: "true"
+    - version_constraint: semver(">= 5.2.1")
+    - version_constraint: semver(">= 5.2.0")
+      files:
+        - name: kustomize
+          src: output/kustomize
+    - version_constraint: semver(">= 5.1.0")
+    - version_constraint: semver(">= 4.5.4")
+    - version_constraint: semver(">= 4.4.1")
+    - version_constraint: semver(">= 4.2.0")
+    - version_constraint: semver(">= 3.8.6")
+    - version_constraint: semver(">= 3.7.0")
+    - version_constraint: semver(">= 3.5.5")
+    - version_constraint: semver(">= 3.3.0")
+    - version_constraint: semver(">= 3.2.1")
+    - version_constraint: semver(">= 2.1.0")
+      version_prefix: ""
+    - version_constraint: semver(">= 1.0.1")
+      version_prefix: ""
+    - version_constraint: "true"
