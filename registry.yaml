@@ -1,15 +1,16 @@
+name: pressly/goose
 type: github_release
 repo_owner: pressly
 repo_name: goose
 description: A database migration tool. Supports SQL migrations and Go functions
 version_overrides:
-  - version_constraint: Version == "v3.13.0"
-    no_asset: true
-  - version_constraint: Version == "v1.0"
-  - version_constraint: semver("> 3.1.0")
-  - version_constraint: semver("> 2.7.0-rc5")
-    no_asset: true
-  - version_constraint: semver("> 2.4.5")
-  - version_constraint: semver("<= 2.4.5")
-    no_asset: true
-  - version_constraint: "true"
+    - version_constraint: Version == "v3.13.0"
+      no_asset: true
+    - version_constraint: Version == "v1.0"
+    - version_constraint: semver("> 3.1.0")
+    - version_constraint: semver("> 2.7.0-rc5")
+      no_asset: true
+    - version_constraint: semver("> 2.4.5")
+    - version_constraint: semver("<= 2.4.5")
+      no_asset: true
+    - version_constraint: "true"
