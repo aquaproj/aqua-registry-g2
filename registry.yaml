@@ -1,9 +1,10 @@
+name: vi/websocat
 type: github_release
 repo_owner: vi
 repo_name: websocat
 description: Command-line client for WebSockets, like netcat (or curl) for ws:// with advanced socat-like functions
 version_overrides:
-  - version_constraint: semver(">= 1.10.0")
-  - version_constraint: "true"
-    replacements:
-      linux: linux64
+    - version_constraint: semver(">= 1.10.0")
+    - version_constraint: "true"
+      replacements:
+        linux: linux64
