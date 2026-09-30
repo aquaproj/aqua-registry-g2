@@ -1,25 +1,26 @@
+name: ast-grep/ast-grep
 type: github_release
 repo_owner: ast-grep
 repo_name: ast-grep
 description: A CLI tool for code structural search, lint and rewriting. Written in Rust
 version_overrides:
-  - version_constraint: Version == "0.14.0"
-    files:
-      - name: sg
-  - version_constraint: semver("> 0.22.0")
-    files:
-      - name: sg
-      - name: ast-grep
-  - version_constraint: semver("> 0.13.2")
-    files:
-      - name: sg
-  - version_constraint: semver("> 0.6.6")
-    files:
-      - name: sg
-  - version_constraint: semver("<= 0.6.6")
-    files:
-      - name: sg
-  - version_constraint: "true"
-    files:
-      - name: sg
-      - name: ast-grep
+    - version_constraint: Version == "0.14.0"
+      files:
+        - name: sg
+    - version_constraint: semver("> 0.22.0")
+      files:
+        - name: sg
+        - name: ast-grep
+    - version_constraint: semver("> 0.13.2")
+      files:
+        - name: sg
+    - version_constraint: semver("> 0.6.6")
+      files:
+        - name: sg
+    - version_constraint: semver("<= 0.6.6")
+      files:
+        - name: sg
+    - version_constraint: "true"
+      files:
+        - name: sg
+        - name: ast-grep
