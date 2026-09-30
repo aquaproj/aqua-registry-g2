@@ -1,19 +1,20 @@
+name: charmbracelet/gum
 type: github_release
 repo_owner: charmbracelet
 repo_name: gum
 description: A tool for glamorous shell scripts
 version_overrides:
-  - version_constraint: semver(">= 2.0.0")
-    files:
-      - name: gum
-        src: '{{.AssetWithoutExt}}/gum'
-  - version_constraint: semver("> 0.13.0")
-    files:
-      - name: gum
-        src: '{{.AssetWithoutExt}}/gum'
-  - version_constraint: semver("> 0.8.0")
-  - version_constraint: semver("<= 0.8.0")
-  - version_constraint: "true"
-    files:
-      - name: gum
-        src: '{{.AssetWithoutExt}}/gum'
+    - version_constraint: semver(">= 2.0.0")
+      files:
+        - name: gum
+          src: '{{.AssetWithoutExt}}/gum'
+    - version_constraint: semver("> 0.13.0")
+      files:
+        - name: gum
+          src: '{{.AssetWithoutExt}}/gum'
+    - version_constraint: semver("> 0.8.0")
+    - version_constraint: semver("<= 0.8.0")
+    - version_constraint: "true"
+      files:
+        - name: gum
+          src: '{{.AssetWithoutExt}}/gum'
