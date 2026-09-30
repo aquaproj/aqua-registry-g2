@@ -1,13 +1,14 @@
+name: GoogleCloudPlatform/terraformer
 type: github_release
 repo_owner: GoogleCloudPlatform
 repo_name: terraformer
 description: CLI tool to generate terraform files from existing infrastructure (reverse Terraform). Infrastructure to Code
 version_overrides:
-  - version_constraint: semver("> 0.8.24")
-  - version_constraint: semver("> 0.8.18")
-  - version_constraint: semver("> 0.8.12")
-  - version_constraint: semver("> 0.8.3")
-  - version_constraint: semver("<= 0.8.3")
-    no_asset: true
-  - version_constraint: "true"
+    - version_constraint: semver("> 0.8.24")
+    - version_constraint: semver("> 0.8.18")
+    - version_constraint: semver("> 0.8.12")
+    - version_constraint: semver("> 0.8.3")
+    - version_constraint: semver("<= 0.8.3")
+      no_asset: true
+    - version_constraint: "true"
 all_assets_filter: Asset matches "all"
