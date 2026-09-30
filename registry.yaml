@@ -1,8 +1,9 @@
+name: k8sgpt-ai/k8sgpt
 type: github_release
 repo_owner: k8sgpt-ai
 repo_name: k8sgpt
 description: Giving Kubernetes Superpowers to everyone
 version_overrides:
-  - version_constraint: semver(">= v0.3.33, <= v0.3.36") || semver(">= v0.3.42, <= v0.3.44")
-    no_asset: true
-  - version_constraint: "true"
+    - version_constraint: semver(">= v0.3.33, <= v0.3.36") || semver(">= v0.3.42, <= v0.3.44")
+      no_asset: true
+    - version_constraint: "true"
