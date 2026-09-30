@@ -1,0 +1,14 @@
+name: woodpecker-ci/woodpecker/woodpecker-cli
+type: github_release
+repo_owner: woodpecker-ci
+repo_name: woodpecker
+description: Woodpecker is a simple yet powerful CI/CD engine with great extensibility
+version_overrides:
+  - version_constraint: semver("<= 0.11.0")
+    no_asset: true
+  - version_constraint: Version in ["v0.14.0-rc.2", "v0.15.0-rc1", "v2.2.0", "v2.2.1"]
+    no_asset: true
+  - version_constraint: semver("<= 0.14.4")
+    files:
+      - name: woodpecker
+  - version_constraint: "true"
