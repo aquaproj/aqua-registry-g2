@@ -1,26 +1,27 @@
+name: go-acme/lego
 type: github_release
 repo_owner: go-acme
 repo_name: lego
 description: Let's Encrypt/ACME client and library written in Go
 github_artifact_attestations:
-  signer_workflow: go-acme/lego/.github/workflows/release.yml
+    signer_workflow: go-acme/lego/.github/workflows/release.yml
 version_overrides:
-  - version_constraint: Version == "v0.1.0"
-  - version_constraint: Version == "v4.4.0"
-  - version_constraint: semver(">= 4.30.1")
-    github_artifact_attestations:
-      signer_workflow: go-acme/lego/.github/workflows/release.yml
-  - version_constraint: semver("> 4.3.1")
-  - version_constraint: semver("> 4.2.0")
-  - version_constraint: semver("> 0.4.1")
-  - version_constraint: semver("> 0.3.1")
-    files:
-      - name: lego
-        src: lego_{{.OS}}_{{.Arch}}
-  - version_constraint: semver("<= 0.3.1")
-    files:
-      - name: lego
-        src: lego/lego
-  - version_constraint: "true"
-    github_artifact_attestations:
-      signer_workflow: go-acme/lego/.github/workflows/release.yml
+    - version_constraint: Version == "v0.1.0"
+    - version_constraint: Version == "v4.4.0"
+    - version_constraint: semver(">= 4.30.1")
+      github_artifact_attestations:
+        signer_workflow: go-acme/lego/.github/workflows/release.yml
+    - version_constraint: semver("> 4.3.1")
+    - version_constraint: semver("> 4.2.0")
+    - version_constraint: semver("> 0.4.1")
+    - version_constraint: semver("> 0.3.1")
+      files:
+        - name: lego
+          src: lego_{{.OS}}_{{.Arch}}
+    - version_constraint: semver("<= 0.3.1")
+      files:
+        - name: lego
+          src: lego/lego
+    - version_constraint: "true"
+      github_artifact_attestations:
+        signer_workflow: go-acme/lego/.github/workflows/release.yml
