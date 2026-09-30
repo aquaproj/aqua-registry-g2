@@ -1,25 +1,26 @@
+name: jqlang/jq
 aliases:
-  - name: stedolan/jq
+    - name: stedolan/jq
 type: github_release
 repo_owner: jqlang
 repo_name: jq
 description: Command-line JSON processor
 version_prefix: jq-
 github_artifact_attestations:
-  signer_workflow: jqlang/jq/.github/workflows/ci.yml
+    signer_workflow: jqlang/jq/.github/workflows/ci.yml
 version_overrides:
-  - version_constraint: Version == "jq-1.5rc1"
-  - version_constraint: Version == "jq-1.5rc2"
-  - version_constraint: semver(">= 1.8.0")
-    github_artifact_attestations:
-      signer_workflow: jqlang/jq/.github/workflows/ci.yml
-  - version_constraint: semver("> 1.6")
-  - version_constraint: semver("> 1.4")
-    replacements:
-      linux: linux64
-  - version_constraint: semver("> 1.2")
-  - version_constraint: semver("<= 1.2")
-    no_asset: true
-  - version_constraint: "true"
-    github_artifact_attestations:
-      signer_workflow: jqlang/jq/.github/workflows/ci.yml
+    - version_constraint: Version == "jq-1.5rc1"
+    - version_constraint: Version == "jq-1.5rc2"
+    - version_constraint: semver(">= 1.8.0")
+      github_artifact_attestations:
+        signer_workflow: jqlang/jq/.github/workflows/ci.yml
+    - version_constraint: semver("> 1.6")
+    - version_constraint: semver("> 1.4")
+      replacements:
+        linux: linux64
+    - version_constraint: semver("> 1.2")
+    - version_constraint: semver("<= 1.2")
+      no_asset: true
+    - version_constraint: "true"
+      github_artifact_attestations:
+        signer_workflow: jqlang/jq/.github/workflows/ci.yml
