@@ -1,9 +1,6 @@
+name: kubernetes/kompose
 type: github_release
 repo_owner: kubernetes
 repo_name: kompose
 description: Go from Docker Compose to Kubernetes
-# Every build is published twice: as the executable itself, and as a tar.gz holding it
-# under the name of the target it was built for. The inference took the tar.gz, whose one
-# file isn't called kompose, so nothing named the command was in it. The executable is the
-# asset aqua-registry has always installed.
 all_assets_filter: Asset matches "^kompose-(darwin|linux|windows)-(amd64|arm64)(\\.exe)?$"
