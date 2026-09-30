@@ -1,8 +1,9 @@
+name: axllent/mailpit
 type: github_release
 repo_owner: axllent
 repo_name: mailpit
 description: An email and SMTP testing tool with API for developers
 version_overrides:
-  - version_constraint: Version == "v1.6.15"
-    no_asset: true
-  - version_constraint: "true"
+    - version_constraint: Version == "v1.6.15"
+      no_asset: true
+    - version_constraint: "true"
