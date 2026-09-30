@@ -1,33 +1,34 @@
+name: starship/starship
 type: github_release
 repo_owner: starship
 repo_name: starship
 description: The minimal, blazing-fast, and infinitely customizable prompt for any shell
 version_overrides:
-  - version_constraint: Version in ["v0.14.0", "v0.32.0", "v0.35.0", "v0.37.1", "v0.41.2"]
-    no_asset: true
-  - version_constraint: Version == "v0.31.0"
-  - version_constraint: Version == "v0.39.0"
-  - version_constraint: Version == "v1.20.0"
-  - version_constraint: Version == "v1.22.0"
-  - version_constraint: semver("<= 0.8.0")
-    files:
-      - name: starship
-        src: '{{.Arch}}-{{.OS}}/starship'
-  - version_constraint: semver("<= 0.8.3")
-    no_asset: true
-  - version_constraint: semver("<= 0.15.0")
-    files:
-      - name: starship
-        src: '{{.Arch}}-{{.OS}}/starship'
-  - version_constraint: semver("<= 0.19.0")
-    files:
-      - name: starship
-        src: '{{.Arch}}-{{.OS}}/starship'
-  - version_constraint: semver("<= 0.26.2")
-    files:
-      - name: starship
-        src: target/{{.Arch}}-{{.OS}}/release/starship
-  - version_constraint: semver("<= 0.26.4")
-  - version_constraint: semver("<= 0.48.0")
-  - version_constraint: semver("<= 0.50.0")
-  - version_constraint: "true"
+    - version_constraint: Version in ["v0.14.0", "v0.32.0", "v0.35.0", "v0.37.1", "v0.41.2"]
+      no_asset: true
+    - version_constraint: Version == "v0.31.0"
+    - version_constraint: Version == "v0.39.0"
+    - version_constraint: Version == "v1.20.0"
+    - version_constraint: Version == "v1.22.0"
+    - version_constraint: semver("<= 0.8.0")
+      files:
+        - name: starship
+          src: '{{.Arch}}-{{.OS}}/starship'
+    - version_constraint: semver("<= 0.8.3")
+      no_asset: true
+    - version_constraint: semver("<= 0.15.0")
+      files:
+        - name: starship
+          src: '{{.Arch}}-{{.OS}}/starship'
+    - version_constraint: semver("<= 0.19.0")
+      files:
+        - name: starship
+          src: '{{.Arch}}-{{.OS}}/starship'
+    - version_constraint: semver("<= 0.26.2")
+      files:
+        - name: starship
+          src: target/{{.Arch}}-{{.OS}}/release/starship
+    - version_constraint: semver("<= 0.26.4")
+    - version_constraint: semver("<= 0.48.0")
+    - version_constraint: semver("<= 0.50.0")
+    - version_constraint: "true"
