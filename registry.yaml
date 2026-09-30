@@ -1,14 +1,15 @@
+name: bazelbuild/bazel
 type: github_release
 repo_owner: bazelbuild
 repo_name: bazel
 description: a fast, scalable, multi-language and extensible build system
 version_overrides:
-  - version_constraint: semver("> 5.0.0")
-  - version_constraint: semver("> 4.0.0")
-  - version_constraint: semver("> 3.3.1")
-  - version_constraint: semver("> 0.11.1")
-  - version_constraint: semver("> 0.3.1")
-  - version_constraint: semver("<= 0.3.1")
-    no_asset: true
-  - version_constraint: "true"
+    - version_constraint: semver("> 5.0.0")
+    - version_constraint: semver("> 4.0.0")
+    - version_constraint: semver("> 3.3.1")
+    - version_constraint: semver("> 0.11.1")
+    - version_constraint: semver("> 0.3.1")
+    - version_constraint: semver("<= 0.3.1")
+      no_asset: true
+    - version_constraint: "true"
 all_assets_filter: not (Asset matches "installer") and not (Asset matches "deb")
