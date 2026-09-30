@@ -1,15 +1,16 @@
+name: benbjohnson/litestream
 type: github_release
 repo_owner: benbjohnson
 repo_name: litestream
 description: Streaming replication for SQLite
 version_overrides:
-  - version_constraint: Version == "v0.3.3"
-  - version_constraint: Version == "v0.3.8-beta0"
-  - version_constraint: Version == "v0.3.10"
-  - version_constraint: Version == "v0.3.11-beta1"
-  - version_constraint: Version == "v0.3.11-beta2"
-  - version_constraint: semver("> 0.3.13")
-  - version_constraint: semver("> 0.3.10-beta2")
-  - version_constraint: semver("> 0.3.9")
-    no_asset: true
-  - version_constraint: "true"
+    - version_constraint: Version == "v0.3.3"
+    - version_constraint: Version == "v0.3.8-beta0"
+    - version_constraint: Version == "v0.3.10"
+    - version_constraint: Version == "v0.3.11-beta1"
+    - version_constraint: Version == "v0.3.11-beta2"
+    - version_constraint: semver("> 0.3.13")
+    - version_constraint: semver("> 0.3.10-beta2")
+    - version_constraint: semver("> 0.3.9")
+      no_asset: true
+    - version_constraint: "true"
