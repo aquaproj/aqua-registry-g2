@@ -1,45 +1,46 @@
+name: pulumi/pulumi
 type: github_release
 repo_owner: pulumi
 repo_name: pulumi
 description: Pulumi - Infrastructure as Code in any programming language
 version_overrides:
-  - version_constraint: Version == "v3.0.0-rc.1"
-    no_asset: true
-  - version_constraint: Version in ["v2.11.0", "v2.15.1", "v2.15.5", "v2.16.1"]
-  - version_constraint: Version == "v3.39.4"
-    files:
-      - name: pulumi
-        src: pulumi/pulumi
-    overrides:
-      - goos: windows
-        files:
-          - name: pulumi
-            src: pulumi/bin/pulumi.exe
-  - version_constraint: semver("<= 2.20.0")
-    no_asset: true
-  - version_constraint: semver("<= 2.22.0")
-    files:
-      - name: pulumi
-        src: pulumi/pulumi
-  - version_constraint: semver("<= 3.2.1")
-    files:
-      - name: pulumi
-        src: pulumi/pulumi
-  - version_constraint: semver("<= 3.39.3")
-    files:
-      - name: pulumi
-        src: pulumi/pulumi
-    overrides:
-      - goos: windows
-        files:
-          - name: pulumi
-            src: pulumi/bin/pulumi.exe
-  - version_constraint: "true"
-    files:
-      - name: pulumi
-        src: pulumi/pulumi
-    overrides:
-      - goos: windows
-        files:
-          - name: pulumi
-            src: pulumi/bin/pulumi.exe
+    - version_constraint: Version == "v3.0.0-rc.1"
+      no_asset: true
+    - version_constraint: Version in ["v2.11.0", "v2.15.1", "v2.15.5", "v2.16.1"]
+    - version_constraint: Version == "v3.39.4"
+      files:
+        - name: pulumi
+          src: pulumi/pulumi
+      overrides:
+        - goos: windows
+          files:
+            - name: pulumi
+              src: pulumi/bin/pulumi.exe
+    - version_constraint: semver("<= 2.20.0")
+      no_asset: true
+    - version_constraint: semver("<= 2.22.0")
+      files:
+        - name: pulumi
+          src: pulumi/pulumi
+    - version_constraint: semver("<= 3.2.1")
+      files:
+        - name: pulumi
+          src: pulumi/pulumi
+    - version_constraint: semver("<= 3.39.3")
+      files:
+        - name: pulumi
+          src: pulumi/pulumi
+      overrides:
+        - goos: windows
+          files:
+            - name: pulumi
+              src: pulumi/bin/pulumi.exe
+    - version_constraint: "true"
+      files:
+        - name: pulumi
+          src: pulumi/pulumi
+      overrides:
+        - goos: windows
+          files:
+            - name: pulumi
+              src: pulumi/bin/pulumi.exe
