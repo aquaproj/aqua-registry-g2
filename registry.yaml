@@ -1,8 +1,9 @@
+name: caddyserver/caddy
 type: github_release
 repo_owner: caddyserver
 repo_name: caddy
 description: Fast, multi-platform web server with automatic HTTPS
 version_overrides:
-  - version_constraint: semver("> 2.5.2")
-  - version_constraint: semver("<= 2.5.2")
-  - version_constraint: "true"
+    - version_constraint: semver("> 2.5.2")
+    - version_constraint: semver("<= 2.5.2")
+    - version_constraint: "true"
