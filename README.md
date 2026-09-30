@@ -30,20 +30,21 @@ be updated by hand.
 
 ### Package branches
 
-A package branch is named `pkg_<encoded name>`.
+A package branch is named `pkg_<id>`.
 
 ```
 .github/workflows/test.yaml
 registry.yaml
 versions/
-  <version>/
+  <escaped version>/
     registry-1.json
 ```
 
 - `registry.yaml`: the definition of the package. It holds what a release can't be read
-  for, and `registry-1.json` is generated from it.
-- `versions/<version>/registry-1.json`: the static registry file, which is what aqua
-  reads. One per version, written once. We call it `registry.json` for short.
+  for, and `registry-1.json` is generated from it. It also names the package, which is how
+  the branch says which one it holds -- its own name doesn't.
+- `versions/<escaped version>/registry-1.json`: the static registry file, which is what
+  aqua reads. One per version, written once. We call it `registry.json` for short.
 
 #### Schema version
 
@@ -64,21 +65,41 @@ ones if that isn't there.
 
 #### The branch name
 
-Every character outside `[A-Za-z0-9.-]` becomes an underscore and two lowercase hex
-digits. The underscore is escaped too, which is what makes the mapping reversible where
-turning a slash into two underscores would not, since package names contain underscores.
+A branch is named after the package's id: a number this registry hands out once, and never
+changes. The package's name is not in it.
 
-| package | branch |
+| package | id | branch |
+| --- | --- | --- |
+| `cli/cli` | `1790772769` | `pkg_1790772769` |
+| `kubernetes-sigs/kustomize` | `1790772903` | `pkg_1790772903` |
+
+Because a name changes. A repository is renamed or transferred, or a package is split out of
+one, and a branch named after the package then has to be moved -- while everything that
+wrote the old name down is left pointing at nothing. An id doesn't move, so what a rename
+changes is one line in a table.
+
+[names.json](#main) is that table. The definition on a branch names its own package, so what
+the table says can be checked against what the branches say rather than believed.
+
+#### Escaping a version
+
+A version is a directory under `versions/`, and its name is escaped: every character outside
+`[A-Za-z0-9.-]` becomes an underscore and two lowercase hex digits. The underscore is
+escaped too, which is what makes the mapping reversible where turning a slash into two
+underscores would not, since versions contain underscores.
+
+| version | directory |
 | --- | --- |
-| `cli/cli` | `pkg_cli_2fcli` |
-| `ipinfo/cli/grepip` | `pkg_ipinfo_2fcli_2fgrepip` |
-| `sue445/plant_erd` | `pkg_sue445_2fplant_5ferd` |
-| `sr.ht/~charles/rq` | `pkg_sr.ht_2f_7echarles_2frq` |
+| `v1.2.3` | `v1.2.3` |
+| `kustomize/v5.8.1` | `kustomize_2fv5.8.1` |
+| `@yarnpkg/cli/4.16.0` | `_40yarnpkg_2fcli_2f4.16.0` |
+| `apps_v1.80.0` | `apps_5fv1.80.0` |
 
-The result holds no slash, so it is a single ref segment: `ipinfo/cli` and
-`ipinfo/cli/grepip` can be branches at the same time, which a slash would turn into a
-directory and a file of the same name. It stays within `[A-Za-z0-9._-]` too, so a raw URL
-needs no further escaping.
+Nearly every version needs no escaping. What it is for is the ones that hold a slash:
+written as they are, one version's directory would be another's parent, and the versions a
+package has couldn't be told from the first segments of their tags -- every kustomize release
+would be a directory called `kustomize`. The result holds no slash, and stays within
+`[A-Za-z0-9._-]`, so a raw URL needs no further escaping.
 
 ### main
 
@@ -86,14 +107,15 @@ needs no further escaping.
 
 ```
 .github/workflows/
-aliases.json
 ar2.yaml
 index.json
+names.json
 template/ # template of package branches
 ```
 
 - `index.json`: the package list. This is what `aqua g` searches.
-- `aliases.json`: the package alias list. This is used to resolve package names, and is
-  rendered from the aliases in `index.json`.
+- `names.json`: what resolves a name. It maps every package's name to the id of the branch
+  holding it, and every name a package used to have to the name it has now. It is rendered
+  from `index.json` in the same commit, so the two can't describe different registries.
 - `ar2.yaml`: this registry's configuration for [ar2](https://github.com/aquaproj/ar2).
 - `template/`: the files a package branch starts with.

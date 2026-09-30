@@ -5,8 +5,8 @@ description: Read a pull request ar2 opened in aqua-registry-g2 and decide wheth
 
 # Review a pull request from ar2
 
-Most of them merge themselves. A run generates `versions/<version>/registry-1.json` for
-each version a package is missing, opens one pull request per package, and turns on
+Most of them merge themselves. A run generates `versions/<escaped version>/registry-1.json`
+for each version a package is missing, opens one pull request per package, and turns on
 auto-merge; CI downloads every asset the files describe, on a machine of the
 environment each entry is for, and opens it. A pull request that merges without anyone
 reading it is the normal case, and the trust in it comes from that check rather than

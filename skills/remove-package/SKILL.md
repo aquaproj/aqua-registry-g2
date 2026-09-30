@@ -17,8 +17,8 @@ gh workflow run remove_package.yaml -f name=<package name> -f reason="<why>"
 ```
 
 1. The package stops being generated: it goes into `ignored_packages`, with the reason.
-2. It stops being listed: its entry goes from `index.json`, and its aliases from
-   `aliases.json` with it.
+2. It stops being listed: its entry goes from `index.json`, and its names from
+   `names.json` with it.
 3. It stops being held: the files under `versions/` go off its branch.
 
 Any one alone leaves a state nobody meant. An entry for a package that can't be fetched,
@@ -38,11 +38,11 @@ A lock file that already holds the package. It carries the URL and the checksum 
 file it needs, which is the point of it, and nothing here takes that away. What step 3
 stops is `aqua lock update` resolving those versions, so nobody new installs the package.
 
-Steps 1 and 2 don't stop an install either, which is worth being clear about: nothing
-resolves a package through `index.json`. A name in `aqua.yaml` is turned into
-`pkg_<encoded>/versions/<version>/registry-1.json` and fetched directly, so a package with
-no entry is one nothing can search for and anything already naming it still installs. Only
-step 3 changes that.
+Step 1 doesn't stop an install either, which is worth being clear about: nothing resolves a
+package through `index.json`. A name in `aqua.yaml` is resolved through `names.json` and the
+file fetched from `pkg_<id>/versions/<escaped version>/registry-1.json`, so a package still
+in that table installs whatever the catalogue says. Step 2 takes it out of both, which is
+what stops a name resolving at all, and step 3 takes away what it resolved to.
 
 Where the difference matters -- malware -- saying so where people will read it reaches
 them and a registry change doesn't. That is the part to do first.
