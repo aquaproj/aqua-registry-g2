@@ -7,14 +7,18 @@ description: Edit a package's definition, registry.yaml on its own branch, which
 
 By hand, as a pull request into the package's branch.
 
-The branch name is the package name escaped, which
-[README.md](../../README.md#the-branch-name) gives the rule for: `cli/cli` is on
-`pkg_cli_2fcli`.
+The branch is named after the package's id rather than after the package, so the branch has
+to be looked up. `ar2 show` says which it is:
 
 ```sh
-git fetch origin pkg_cli_2fcli
-git switch pkg_cli_2fcli
+ar2 show cli/cli    # package, id, branch, description, aliases
+git fetch origin pkg_1790772769
+git switch pkg_1790772769
 ```
+
+The definition names its own package, which is how the branch says which one it holds. Leave
+that line alone unless the package is being [renamed](../rename-package/SKILL.md): a branch
+naming another package is a branch nothing can find.
 
 A definition also goes on the head branch of a pull request whose versions are
 [waiting for one](../review-pull-request/SKILL.md#the-pull-request-is-versions-waiting-for-a-definition).

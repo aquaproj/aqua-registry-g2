@@ -20,7 +20,7 @@ running locally is the part that only reads:
 ```sh
 ar2 regenerate <package name> --dry-run   # which versions would change
 ar2 test                                  # check generated files against the releases
-ar2 validate-index                        # check index.json and aliases.json agree
+ar2 validate-index                        # check index.json says what aqua reads it for
 ```
 
 Two more rules shape the rest. A pull request is required on `main` and on every
@@ -73,7 +73,7 @@ definition written on that pull request's own branch.
 The schedule reconciles the catalogue twice an hour. What it can't notice is an entry that is
 out of date, which is why a definition edited by hand needs its package named.
 
-## How To Fix aliases.json
+## How To Fix names.json
 
 Not directly. It is rendered from the entries in `index.json`, in the commit that writes them
 -- [index.yaml](.github/workflows/index.yaml) writes both files together -- so a missing
@@ -90,8 +90,12 @@ A transfer GitHub reports needs none of this: see
 
 [skills/rename-package](skills/rename-package/SKILL.md).
 
-Usually nothing: a run notices a repository that answers to another name and moves the package
-itself. The other case is a rename GitHub can't see.
+Usually nothing: a run notices a repository that answers to another name and renames the
+package itself. The other case is a rename GitHub can't see.
+
+The branch doesn't move, because it is named after the package's id rather than after the
+package. What moves is the definition on it, which is the only thing that says which package
+the branch holds, and the entry the catalogue lists it under.
 
 ## How To Ignore a package
 

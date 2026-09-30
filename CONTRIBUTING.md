@@ -42,15 +42,15 @@ The mutable versions like `latest`, `develop`, and `nightly` aren't supported.
 
 index.json is automatically updated by GitHub Actions via schedule event.
 
-## How To Fix aliases.json
+## How To Fix names.json
 
-aliases.json is automatically updated via GitHub Actions.
+names.json is automatically updated via GitHub Actions.
 So we don't need to fix it manually.
-It is rendered from the aliases in index.json, so a missing alias is a missing alias in the package's registry.yaml.
+It is rendered from index.json, so a missing alias is a missing alias in the package's registry.yaml.
 
 A repository transfer needs nothing.
-We notice the repository answering to another name, move the package to that name, and keep the old one as an alias, so a configuration still asking for it keeps working.
+We notice the repository answering to another name, rename the package to that name, and keep the old one as an alias, so a configuration still asking for it keeps working.
 This takes two steps that run on their own schedules, so please wait for a while.
 
-- [.github/workflows/index.yaml](.github/workflows/index.yaml): Periodically updates index.json and aliases.json together.
-- [.github/workflows/ar2.yaml](.github/workflows/ar2.yaml): Moves a package whose repository was renamed or transferred.
+- [.github/workflows/index.yaml](.github/workflows/index.yaml): Periodically updates index.json and names.json together.
+- [.github/workflows/ar2.yaml](.github/workflows/ar2.yaml): Renames a package whose repository was renamed or transferred.
