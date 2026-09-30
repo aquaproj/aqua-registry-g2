@@ -1,3 +1,4 @@
+name: apache/tomcat
 type: http
 repo_owner: apache
 repo_name: tomcat
@@ -5,26 +6,26 @@ description: Apache Tomcat
 format: tar.gz
 version_source: github_tag
 overrides:
-  - files:
-      - name: catalina.bat
-        src: apache-tomcat-{{.SemVer}}/bin/catalina.bat
-    envs:
-      - windows
+    - files:
+        - name: catalina.bat
+          src: apache-tomcat-{{.SemVer}}/bin/catalina.bat
+      envs:
+        - windows
 files:
-  - name: catalina.sh
-    src: apache-tomcat-{{.SemVer}}/bin/catalina.sh
+    - name: catalina.sh
+      src: apache-tomcat-{{.SemVer}}/bin/catalina.sh
 version_overrides:
-  - version_constraint: semver(">= 12.0.0")
-    no_asset: true
-  - version_constraint: semver(">= 11.0.0")
-    url: https://archive.apache.org/dist/tomcat/tomcat-11/v{{.SemVer}}/bin/apache-tomcat-{{.SemVer}}.{{.Format}}
-  - version_constraint: semver(">= 10.0.0")
-    url: https://archive.apache.org/dist/tomcat/tomcat-10/v{{.SemVer}}/bin/apache-tomcat-{{.SemVer}}.{{.Format}}
-  - version_constraint: semver(">= 9.0.2")
-    url: https://archive.apache.org/dist/tomcat/tomcat-9/v{{.SemVer}}/bin/apache-tomcat-{{.SemVer}}.{{.Format}}
-  - version_constraint: semver(">= 9.0.0")
-    url: https://archive.apache.org/dist/tomcat/tomcat-9/v{{.SemVer}}/bin/apache-tomcat-{{.SemVer}}.{{.Format}}
-  - version_constraint: semver("< 9.0.0")
-    no_asset: true
-  - version_constraint: "true"
-    no_asset: true
+    - version_constraint: semver(">= 12.0.0")
+      no_asset: true
+    - version_constraint: semver(">= 11.0.0")
+      url: https://archive.apache.org/dist/tomcat/tomcat-11/v{{.SemVer}}/bin/apache-tomcat-{{.SemVer}}.{{.Format}}
+    - version_constraint: semver(">= 10.0.0")
+      url: https://archive.apache.org/dist/tomcat/tomcat-10/v{{.SemVer}}/bin/apache-tomcat-{{.SemVer}}.{{.Format}}
+    - version_constraint: semver(">= 9.0.2")
+      url: https://archive.apache.org/dist/tomcat/tomcat-9/v{{.SemVer}}/bin/apache-tomcat-{{.SemVer}}.{{.Format}}
+    - version_constraint: semver(">= 9.0.0")
+      url: https://archive.apache.org/dist/tomcat/tomcat-9/v{{.SemVer}}/bin/apache-tomcat-{{.SemVer}}.{{.Format}}
+    - version_constraint: semver("< 9.0.0")
+      no_asset: true
+    - version_constraint: "true"
+      no_asset: true
