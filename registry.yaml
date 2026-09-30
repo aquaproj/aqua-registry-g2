@@ -1,12 +1,13 @@
+name: antonmedv/fx
 type: github_release
 repo_owner: antonmedv
 repo_name: fx
 description: Command-line tool and terminal JSON viewer
 version_overrides:
-  - version_constraint: semver(">= 21.0.0")
-  - version_constraint: "true"
-    files:
-      - name: fx
-        src: fx-{{.OS}}
-    replacements:
-      windows: win.exe
+    - version_constraint: semver(">= 21.0.0")
+    - version_constraint: "true"
+      files:
+        - name: fx
+          src: fx-{{.OS}}
+      replacements:
+        windows: win.exe
