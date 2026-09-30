@@ -1,22 +1,19 @@
+name: ogham/exa
 type: github_release
 repo_owner: ogham
 repo_name: exa
 description: A modern replacement for ‘ls’
 version_overrides:
-  # From 0.10.0 the archive holds bin/exa.
-  - version_constraint: semver(">= 0.10.0")
-    files:
-      - name: exa
-        src: bin/exa
-  # Before it, the archive holds one file, named after the target it was built for:
-  # exa-linux-x86_64 and exa-macos-x86_64. Nothing about the release says so, and the
-  # asset name doesn't either -- it carries the version, which the file doesn't.
-  - version_constraint: "true"
-    files:
-      - name: exa
-        src: exa-linux-x86_64
-    overrides:
-      - goos: darwin
-        files:
-          - name: exa
-            src: exa-macos-x86_64
+    - version_constraint: semver(">= 0.10.0")
+      files:
+        - name: exa
+          src: bin/exa
+    - version_constraint: "true"
+      files:
+        - name: exa
+          src: exa-linux-x86_64
+      overrides:
+        - goos: darwin
+          files:
+            - name: exa
+              src: exa-macos-x86_64
