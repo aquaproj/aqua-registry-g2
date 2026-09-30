@@ -1,18 +1,19 @@
+name: openclaw/gogcli
 aliases:
-  - name: steipete/gogcli
+    - name: steipete/gogcli
 type: github_release
 repo_owner: openclaw
 repo_name: gogcli
 description: 'Google Suite CLI: Gmail, GCal, GDrive, GContacts'
 files:
-  - name: gog
+    - name: gog
 version_overrides:
-  - version_constraint: semver("> 0.5.0")
-    files:
-      - name: gog
-  - version_constraint: semver("<= 0.5.0")
-    files:
-      - name: gog
-  - version_constraint: "true"
-    files:
-      - name: gog
+    - version_constraint: semver("> 0.5.0")
+      files:
+        - name: gog
+    - version_constraint: semver("<= 0.5.0")
+      files:
+        - name: gog
+    - version_constraint: "true"
+      files:
+        - name: gog
