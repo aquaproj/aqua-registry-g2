@@ -1,0 +1,76 @@
+---
+name: identify
+# Put every package on the branch named after its id.
+#
+# A package's branch was named after the package, which made the name the address of
+# everything: the branch, the path aqua fetches a version from, the entry the catalogue
+# lists it under. A repository that is renamed then has to be moved everywhere, and
+# anything that wrote the old name down points at nothing. An id doesn't change when a
+# name does.
+#
+# This runs once. A second run sees the branches the first made and has nothing to do, so
+# it is also how a run that stopped partway is finished.
+#
+# Dispatch it with dry_run first: it walks every package the catalogue lists, and a
+# package branch can't be deleted by anything here once it exists.
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: say what it would do and create nothing
+        type: boolean
+        required: false
+        default: true
+      log_level:
+        description: how much the run says about what it is doing
+        required: false
+        default: info
+permissions: {}
+# Two of these at once would both create the same branches, and the second would fail on
+# every one the first got to.
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+jobs:
+  identify:
+    runs-on: ubuntu-24.04
+    # The same environment as a run: this creates package branches, which is what the
+    # branch key is for.
+    environment: ar2
+    # It creates a branch per package, so the whole registry is a few thousand requests.
+    timeout-minutes: 60
+    permissions:
+      # Creating the branches.
+      contents: write
+    steps:
+      # For index.json, which says what to do, and aqua/aqua.yaml, which pins the ar2
+      # version and its checksum.
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: aquaproj/aqua-installer@96a9bc20066c5bf5e275b41019cfc165b25f4e2e # v4.0.5
+        with:
+          aqua_version: v2.63.0
+      - uses: actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1 # v3.2.0
+        id: branch_token
+        with:
+          client-id: ${{ vars.AR2_BRANCH_CLIENT_ID }}
+          private-key: ${{ secrets.AR2_BRANCH_PRIVATE_KEY }}
+      - run: |
+          args=()
+          if [ "$DRY_RUN" = "true" ]; then
+            args+=(--dry-run)
+          fi
+          ar2 identify \
+            --log-level "$LOG_LEVEL" \
+            --g2-owner "${GITHUB_REPOSITORY%/*}" \
+            --g2-repo "${GITHUB_REPOSITORY#*/}" \
+            "${args[@]}"
+        env:
+          # The branch key reads as well as creates here. Reading every package takes
+          # more requests than GITHUB_TOKEN is allowed in an hour, and the key is in the
+          # job for the branches either way.
+          GITHUB_TOKEN: ${{ steps.branch_token.outputs.token }}
+          AR2_BRANCH_TOKEN: ${{ steps.branch_token.outputs.token }}
+          DRY_RUN: ${{ inputs.dry_run }}
+          LOG_LEVEL: ${{ inputs.log_level }}
