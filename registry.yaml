@@ -1,21 +1,22 @@
+name: github/copilot-cli
 type: github_release
 repo_owner: github
 repo_name: copilot-cli
 description: GitHub Copilot CLI brings the power of Copilot coding agent directly to your terminal
 files:
-  - name: copilot
+    - name: copilot
 version_overrides:
-  - version_constraint: Version == "v0.0.366-5"
-    files:
-      - name: copilot
-  - version_constraint: semver("> 0.0.370-0")
-    files:
-      - name: copilot
-  - version_constraint: semver("> 0.0.366-3")
-    files:
-      - name: copilot
-  - version_constraint: semver("<= 0.0.366-3")
-    no_asset: true
-  - version_constraint: "true"
-    files:
-      - name: copilot
+    - version_constraint: Version == "v0.0.366-5"
+      files:
+        - name: copilot
+    - version_constraint: semver("> 0.0.370-0")
+      files:
+        - name: copilot
+    - version_constraint: semver("> 0.0.366-3")
+      files:
+        - name: copilot
+    - version_constraint: semver("<= 0.0.366-3")
+      no_asset: true
+    - version_constraint: "true"
+      files:
+        - name: copilot
