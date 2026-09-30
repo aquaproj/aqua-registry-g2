@@ -1,25 +1,26 @@
+name: bytecodealliance/wasmtime
 type: github_release
 repo_owner: bytecodealliance
 repo_name: wasmtime
 description: A lightweight WebAssembly runtime that is fast, secure, and standards-compliant
 version_filter: not (Version == "dev")
 files:
-  - name: wasmtime
-    src: wasmtime-{{.Version}}-{{.Arch}}-{{.OS}}/wasmtime
+    - name: wasmtime
+      src: wasmtime-{{.Version}}-{{.Arch}}-{{.OS}}/wasmtime
 github_artifact_attestations:
-  signer_workflow: bytecodealliance/wasmtime/.github/workflows/publish-artifacts.yml
+    signer_workflow: bytecodealliance/wasmtime/.github/workflows/publish-artifacts.yml
 version_overrides:
-  - version_constraint: Version == "v0.34.1"
-  - version_constraint: Version == "cranelift-v0.60.0"
-  - version_constraint: semver(">= 28.0.0")
-    github_artifact_attestations:
-      signer_workflow: bytecodealliance/wasmtime/.github/workflows/publish-artifacts.yml
-  - version_constraint: semver("> 25.0.3")
-  - version_constraint: semver("> 21.0.2")
-  - version_constraint: semver("> 0.36.0")
-  - version_constraint: semver("> 0.15.0")
-  - version_constraint: semver("<= 0.15.0")
-  - version_constraint: "true"
-    github_artifact_attestations:
-      signer_workflow: bytecodealliance/wasmtime/.github/workflows/publish-artifacts.yml
+    - version_constraint: Version == "v0.34.1"
+    - version_constraint: Version == "cranelift-v0.60.0"
+    - version_constraint: semver(">= 28.0.0")
+      github_artifact_attestations:
+        signer_workflow: bytecodealliance/wasmtime/.github/workflows/publish-artifacts.yml
+    - version_constraint: semver("> 25.0.3")
+    - version_constraint: semver("> 21.0.2")
+    - version_constraint: semver("> 0.36.0")
+    - version_constraint: semver("> 0.15.0")
+    - version_constraint: semver("<= 0.15.0")
+    - version_constraint: "true"
+      github_artifact_attestations:
+        signer_workflow: bytecodealliance/wasmtime/.github/workflows/publish-artifacts.yml
 all_assets_filter: not (Asset matches "-c-api")
