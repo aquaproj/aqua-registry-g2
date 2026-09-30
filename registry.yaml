@@ -1,11 +1,12 @@
+name: anchore/grype
 type: github_release
 repo_owner: anchore
 repo_name: grype
 description: A vulnerability scanner for container images and filesystems
 version_overrides:
-  - version_constraint: semver("> 0.71.0")
-  - version_constraint: semver("> 0.31.1")
-  - version_constraint: semver("> 0.23.0")
-  - version_constraint: semver("> 0.2.0")
-  - version_constraint: semver("<= 0.2.0")
-  - version_constraint: "true"
+    - version_constraint: semver("> 0.71.0")
+    - version_constraint: semver("> 0.31.1")
+    - version_constraint: semver("> 0.23.0")
+    - version_constraint: semver("> 0.2.0")
+    - version_constraint: semver("<= 0.2.0")
+    - version_constraint: "true"
