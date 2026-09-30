@@ -1,15 +1,16 @@
+name: air-verse/air
 aliases:
-  - name: cosmtrek/air
+    - name: cosmtrek/air
 type: github_release
 repo_owner: air-verse
 repo_name: air
 description: Live reload for Go apps
 version_overrides:
-  - version_constraint: Version == "v1.12.2"
-  - version_constraint: Version == "v1.12.3"
-  - version_constraint: semver("> 1.27.3")
-  - version_constraint: semver("> 1.15.1")
-  - version_constraint: semver("> 1.12.1")
-  - version_constraint: semver("<= 1.12.1")
-    no_asset: true
-  - version_constraint: "true"
+    - version_constraint: Version == "v1.12.2"
+    - version_constraint: Version == "v1.12.3"
+    - version_constraint: semver("> 1.27.3")
+    - version_constraint: semver("> 1.15.1")
+    - version_constraint: semver("> 1.12.1")
+    - version_constraint: semver("<= 1.12.1")
+      no_asset: true
+    - version_constraint: "true"
