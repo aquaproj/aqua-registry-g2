@@ -1,3 +1,4 @@
+name: ariga/atlas
 type: http
 repo_owner: ariga
 repo_name: atlas
@@ -6,11 +7,11 @@ url: https://release.ariga.io/atlas/atlas-{{.OS}}-{{.Arch}}-{{.Version}}
 format: raw
 windows_arm_emulation: true
 supported_envs:
-  - darwin
-  - linux
-  - windows
+    - darwin
+    - linux
+    - windows
 version_overrides:
-  - version_constraint: semver(">= 0.22.0")
-  - version_constraint: semver("< 0.21.0")
-    no_asset: true
-  - version_constraint: "true"
+    - version_constraint: semver(">= 0.22.0")
+    - version_constraint: semver("< 0.21.0")
+      no_asset: true
+    - version_constraint: "true"
