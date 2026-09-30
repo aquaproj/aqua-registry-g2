@@ -1,36 +1,37 @@
+name: siderolabs/talos
 aliases:
-  - name: talos-systems/talos
+    - name: talos-systems/talos
 type: github_release
 repo_owner: siderolabs
 repo_name: talos
 description: Talos Linux is a modern Linux distribution built for Kubernetes
 version_filter: not (Version matches "-(alpha|beta|rc)")
 files:
-  - name: talosctl
+    - name: talosctl
 cosign:
-  opts:
-    - --certificate-identity
-    - https://github.com/siderolabs/talos/.github/workflows/ci.yaml@refs/tags/{{.Version}}
-    - --certificate-oidc-issuer
-    - https://token.actions.githubusercontent.com
-    - --certificate-github-workflow-repository
-    - siderolabs/talos
-    - --certificate-github-workflow-ref
-    - refs/tags/{{.Version}}
-  bundle:
-    type: github_release
-    asset: '{{.Asset}}.sigstore.json'
+    opts:
+        - --certificate-identity
+        - https://github.com/siderolabs/talos/.github/workflows/ci.yaml@refs/tags/{{.Version}}
+        - --certificate-oidc-issuer
+        - https://token.actions.githubusercontent.com
+        - --certificate-github-workflow-repository
+        - siderolabs/talos
+        - --certificate-github-workflow-ref
+        - refs/tags/{{.Version}}
+    bundle:
+        type: github_release
+        asset: '{{.Asset}}.sigstore.json'
 version_overrides:
-  - version_constraint: Version == "v1.2.9"
-  - version_constraint: semver("> 1.11.3")
-  - version_constraint: semver("> 1.8.4")
-  - version_constraint: semver("> 0.12.3")
-  - version_constraint: semver("> 0.10.4")
-  - version_constraint: semver("> 0.3.3")
-  - version_constraint: semver("> 0.2.0")
-    files:
-      - name: osctl
-  - version_constraint: semver("<= 0.2.0")
-    files:
-      - name: osctl
-  - version_constraint: "true"
+    - version_constraint: Version == "v1.2.9"
+    - version_constraint: semver("> 1.11.3")
+    - version_constraint: semver("> 1.8.4")
+    - version_constraint: semver("> 0.12.3")
+    - version_constraint: semver("> 0.10.4")
+    - version_constraint: semver("> 0.3.3")
+    - version_constraint: semver("> 0.2.0")
+      files:
+        - name: osctl
+    - version_constraint: semver("<= 0.2.0")
+      files:
+        - name: osctl
+    - version_constraint: "true"
