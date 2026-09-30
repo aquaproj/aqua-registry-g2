@@ -144,6 +144,16 @@
       "description": "VictoriaMetrics: fast, cost-effective monitoring solution and time series database"
     },
     {
+      "name": "WebAssembly/binaryen",
+      "id": "1790790577",
+      "description": "Optimizer and compiler/toolchain library for WebAssembly"
+    },
+    {
+      "name": "WebAssembly/wabt",
+      "id": "1790790580",
+      "description": "The WebAssembly Binary Toolkit"
+    },
+    {
       "name": "Wilfred/difftastic",
       "id": "1790772710",
       "description": "a structural diff that understands syntax"
@@ -196,6 +206,11 @@
       "name": "ajeetdsouza/zoxide",
       "id": "1790772718",
       "description": "A smarter cd command. Supports all major shells"
+    },
+    {
+      "name": "alexellis/k3sup",
+      "id": "1790790583",
+      "description": "bootstrap K3s over SSH in \u003c 60s"
     },
     {
       "name": "alibaba/open-code-review",
@@ -449,6 +464,11 @@
       "name": "cheat/cheat",
       "id": "1790772766",
       "description": "cheat allows you to create and view interactive cheatsheets on the command-line. It was designed to help remind *nix system administrators of options for commands that they use frequently, but not frequently enough to remember"
+    },
+    {
+      "name": "chmln/sd",
+      "id": "1790790586",
+      "description": "Intuitive find \u0026 replace CLI (sed alternative)"
     },
     {
       "name": "cli/cli",
@@ -901,6 +921,12 @@
       "description": "GoMock is a mocking framework for the Go programming language"
     },
     {
+      "name": "golang/tools/godoc",
+      "id": "1790790589",
+      "description": "Godoc extracts and generates documentation for Go programs",
+      "link": "https://pkg.go.dev/golang.org/x/tools/cmd/godoc"
+    },
+    {
       "name": "golang/tools/goimports",
       "id": "1790772852",
       "description": "updates your Go import lines, adding missing ones and removing unreferenced ones",
@@ -910,9 +936,21 @@
       ]
     },
     {
+      "name": "golang/tools/gomvpkg",
+      "id": "1790790591",
+      "description": "The gomvpkg command moves go packages, updating import declarations",
+      "link": "https://pkg.go.dev/golang.org/x/tools/cmd/gomvpkg"
+    },
+    {
       "name": "golang/tools/goyacc",
       "id": "1790772853",
       "description": "Goyacc is a version of yacc for Go. It is written in Go and generates parsers written in Go"
+    },
+    {
+      "name": "golang/tools/guru",
+      "id": "1790790593",
+      "description": "A tool for answering questions about Go source code",
+      "link": "https://pkg.go.dev/golang.org/x/tools/cmd/guru"
     },
     {
       "name": "golang/tools/stringer",
@@ -1153,6 +1191,11 @@
       "description": ":cherry_blossom: A command-line fuzzy finder"
     },
     {
+      "name": "k8sgpt-ai/k8sgpt",
+      "id": "1790790595",
+      "description": "Giving Kubernetes Superpowers to everyone"
+    },
+    {
       "name": "kellyjonbrazil/jc",
       "id": "1790772897",
       "description": "CLI tool and python library that converts the output of popular command-line tools, file-types, and common strings to JSON, YAML, or Dictionaries. This allows piping of output to tools like jq and simplifying automation scripts"
@@ -1281,6 +1324,14 @@
       ]
     },
     {
+      "name": "kubevela/kubevela",
+      "id": "1790790598",
+      "description": "The Modern Application Platform",
+      "aliases": [
+        "oam-dev/kubevela"
+      ]
+    },
+    {
       "name": "kyverno/kyverno",
       "id": "1790772920",
       "description": "Cloud Native Policy Management"
@@ -1383,6 +1434,11 @@
       "description": "Review-first terminal diff viewer for agentic coders"
     },
     {
+      "name": "mozilla/sccache",
+      "id": "1790790601",
+      "description": "Sccache is a ccache-like tool. It is used as a compiler wrapper and avoids compilation when possible. Sccache has the capability to utilize caching in remote storage environments, including various cloud storage options, or alternatively, in local storage"
+    },
+    {
       "name": "muesli/duf",
       "id": "1790772939",
       "description": "Disk Usage/Free Utility - a better 'df' alternative"
@@ -1464,6 +1520,11 @@
       "description": "OpenTofu lets you declaratively manage your cloud infrastructure"
     },
     {
+      "name": "operator-framework/operator-sdk",
+      "id": "1790790604",
+      "description": "SDK for building Kubernetes applications. Provides high level APIs, useful abstractions, and project scaffolding"
+    },
+    {
       "name": "orf/gping",
       "id": "1790772954",
       "description": "Ping, but with a graph"
@@ -1500,6 +1561,11 @@
       "name": "peco/peco",
       "id": "1790772960",
       "description": "Simplistic interactive filtering tool"
+    },
+    {
+      "name": "pemistahl/grex",
+      "id": "1790790607",
+      "description": "A command-line tool and library for generating regular expressions from user-provided test cases"
     },
     {
       "name": "phiresky/ripgrep-all",
@@ -1583,6 +1649,15 @@
       "name": "realm/SwiftLint",
       "id": "1790772976",
       "description": "A tool to enforce Swift style and conventions"
+    },
+    {
+      "name": "redpanda-data/connect",
+      "id": "1790790610",
+      "description": "Fancy stream processing made operationally mundane",
+      "aliases": [
+        "Jeffail/benthos",
+        "benthosdev/benthos"
+      ]
     },
     {
       "name": "redpanda-data/redpanda",
@@ -1765,6 +1840,11 @@
       "description": "Define your dev environment as code. For microservice apps on Kubernetes"
     },
     {
+      "name": "timvisee/ffsend",
+      "id": "1790790613",
+      "description": "Easily and securely share files from the command line. A fully featured Firefox Send client"
+    },
+    {
       "name": "tinygo-org/tinygo",
       "id": "1790773011",
       "description": "Go compiler for small places. Microcontrollers, WebAssembly (WASM/WASI), and command-line tools. Based on LLVM"
@@ -1835,6 +1915,11 @@
       "description": "A high-performance observability data pipeline"
     },
     {
+      "name": "vektra/mockery",
+      "id": "1790790616",
+      "description": "A mock code autogenerator for Go"
+    },
+    {
       "name": "velero-io/velero",
       "id": "1790773025",
       "description": "Backup and migrate Kubernetes applications and their persistent volumes",
@@ -1882,9 +1967,19 @@
       ]
     },
     {
+      "name": "watchexec/watchexec",
+      "id": "1790790619",
+      "description": "Executes commands in response to file modifications"
+    },
+    {
       "name": "weaviate/weaviate",
       "id": "1790773033",
       "description": "Weaviate is an open-source vector database that stores both objects and vectors, allowing for the combination of vector search with structured filtering with the fault tolerance and scalability of a cloud-native database"
+    },
+    {
+      "name": "woodpecker-ci/woodpecker/woodpecker-cli",
+      "id": "1790790622",
+      "description": "Woodpecker is a simple yet powerful CI/CD engine with great extensibility"
     },
     {
       "name": "wtfutil/wtf",
