@@ -1,10 +1,11 @@
+name: tsl0922/ttyd
 type: github_release
 repo_owner: tsl0922
 repo_name: ttyd
 description: Share your terminal over the web
 version_overrides:
-  - version_constraint: semver(">= 1.7.3")
-  - version_constraint: semver(">= 1.7.0")
-    replacements:
-      windows: win10
-  - version_constraint: "true"
+    - version_constraint: semver(">= 1.7.3")
+    - version_constraint: semver(">= 1.7.0")
+      replacements:
+        windows: win10
+    - version_constraint: "true"
