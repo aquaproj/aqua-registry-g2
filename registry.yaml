@@ -1,25 +1,20 @@
+name: securego/gosec
 type: github_release
 repo_owner: securego
 repo_name: gosec
 description: Go security checker
 version_overrides:
-  - version_constraint: semver("> 2.24.0")
-    # From 2.25.0 every asset has a .sigstore.json beside it, and the signature in it was
-    # made with the key the repository keeps at cosign.pub rather than with a workflow's
-    # identity. The release doesn't carry that key, so no reading of the asset list can
-    # find it, and a bundle with no certificate in it has no identity to be held to:
-    # without this the entries claimed one and cosign answered that there was no
-    # certificate to match.
-    cosign:
-      bundle:
-        type: github_release
-        asset: "{{.Asset}}.sigstore.json"
-      opts:
-        - --key
-        - https://raw.githubusercontent.com/securego/gosec/refs/tags/{{.Version}}/cosign.pub
-  - version_constraint: semver(">= 2.10.0")
-  - version_constraint: semver("> 2.8.1")
-  - version_constraint: semver("> 2.7.0")
-  - version_constraint: semver("> 2.0.0")
-  - version_constraint: semver("<= 2.0.0")
-  - version_constraint: "true"
+    - version_constraint: semver("> 2.24.0")
+      cosign:
+        opts:
+            - --key
+            - https://raw.githubusercontent.com/securego/gosec/refs/tags/{{.Version}}/cosign.pub
+        bundle:
+            type: github_release
+            asset: '{{.Asset}}.sigstore.json'
+    - version_constraint: semver(">= 2.10.0")
+    - version_constraint: semver("> 2.8.1")
+    - version_constraint: semver("> 2.7.0")
+    - version_constraint: semver("> 2.0.0")
+    - version_constraint: semver("<= 2.0.0")
+    - version_constraint: "true"
