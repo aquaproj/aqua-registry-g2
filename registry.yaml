@@ -1,8 +1,9 @@
+name: operator-framework/operator-sdk
 type: github_release
 repo_owner: operator-framework
 repo_name: operator-sdk
 description: SDK for building Kubernetes applications. Provides high level APIs, useful abstractions, and project scaffolding
 version_overrides:
-  - version_constraint: semver("<= 0.0.6") or Version == "v1.34.0"
-    no_asset: true
-  - version_constraint: "true"
+    - version_constraint: semver("<= 0.0.6") or Version == "v1.34.0"
+      no_asset: true
+    - version_constraint: "true"
