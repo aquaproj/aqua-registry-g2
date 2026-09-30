@@ -1,45 +1,46 @@
+name: wtfutil/wtf
 type: github_release
 repo_owner: wtfutil
 repo_name: wtf
 description: The personal information dashboard for your terminal
 files:
-  - name: wtfutil
+    - name: wtfutil
 version_overrides:
-  - version_constraint: Version == "v0.39.2"
-    files:
-      - name: wtfutil
-        src: '{{.AssetWithoutExt}}/wtfutil'
-  - version_constraint: semver("> 0.46.1")
-    files:
-      - name: wtfutil
-  - version_constraint: semver("> 0.35.0")
-    files:
-      - name: wtfutil
-        src: '{{.AssetWithoutExt}}/wtfutil'
-  - version_constraint: semver("> 0.19.0")
-    files:
-      - name: wtfutil
-        src: '{{.AssetWithoutExt}}/wtfutil'
-  - version_constraint: semver("> 0.14.0")
-    files:
-      - name: wtfutil
-        src: '{{.AssetWithoutExt}}/wtfutil'
-  - version_constraint: semver("> 0.9.1")
-    files:
-      - name: wtfutil
-        src: '{{.AssetWithoutExt}}/wtf'
-  - version_constraint: semver("> 0.0.10")
-    files:
-      - name: wtfutil
-        src: '{{.AssetWithoutExt}}/wtf'
-  - version_constraint: semver("> 0.0.7")
-    files:
-      - name: wtfutil
-        src: '{{.AssetWithoutExt}}/wtf'
-  - version_constraint: semver("<= 0.0.7")
-    files:
-      - name: wtfutil
-        src: wtf
-  - version_constraint: "true"
-    files:
-      - name: wtfutil
+    - version_constraint: Version == "v0.39.2"
+      files:
+        - name: wtfutil
+          src: '{{.AssetWithoutExt}}/wtfutil'
+    - version_constraint: semver("> 0.46.1")
+      files:
+        - name: wtfutil
+    - version_constraint: semver("> 0.35.0")
+      files:
+        - name: wtfutil
+          src: '{{.AssetWithoutExt}}/wtfutil'
+    - version_constraint: semver("> 0.19.0")
+      files:
+        - name: wtfutil
+          src: '{{.AssetWithoutExt}}/wtfutil'
+    - version_constraint: semver("> 0.14.0")
+      files:
+        - name: wtfutil
+          src: '{{.AssetWithoutExt}}/wtfutil'
+    - version_constraint: semver("> 0.9.1")
+      files:
+        - name: wtfutil
+          src: '{{.AssetWithoutExt}}/wtf'
+    - version_constraint: semver("> 0.0.10")
+      files:
+        - name: wtfutil
+          src: '{{.AssetWithoutExt}}/wtf'
+    - version_constraint: semver("> 0.0.7")
+      files:
+        - name: wtfutil
+          src: '{{.AssetWithoutExt}}/wtf'
+    - version_constraint: semver("<= 0.0.7")
+      files:
+        - name: wtfutil
+          src: wtf
+    - version_constraint: "true"
+      files:
+        - name: wtfutil
