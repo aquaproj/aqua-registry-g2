@@ -1,47 +1,48 @@
+name: twpayne/chezmoi
 type: github_release
 repo_owner: twpayne
 repo_name: chezmoi
 description: Manage your dotfiles across multiple diverse machines, securely
 version_overrides:
-  - version_constraint: semver("> 2.70.5")
-  - version_constraint: semver("> 2.68.1")
-  - version_constraint: semver("> 2.67.1")
-    overrides:
-      - goos: linux
-        goarch: arm64
-        files:
-          - name: chezmoi
-            src: usr/bin/chezmoi
-  - version_constraint: semver("> 2.66.1")
-    overrides:
-      - goos: linux
-        goarch: arm64
-        files:
-          - name: chezmoi
-            src: usr/bin/chezmoi
-  - version_constraint: semver("> 2.29.4")
-    overrides:
-      - goos: linux
-        goarch: arm64
-        files:
-          - name: chezmoi
-            src: usr/bin/chezmoi
-  - version_constraint: semver("> 2.27.1")
-    overrides:
-      - goos: linux
-        goarch: arm64
-        files:
-          - name: chezmoi
-            src: usr/bin/chezmoi
-  - version_constraint: semver("> 2.21.1")
-  - version_constraint: semver("> 2.13.1")
-  - version_constraint: semver("> 2.1.5")
-  - version_constraint: semver("> 2.0.6")
-  - version_constraint: semver("> 2.0.3")
-  - version_constraint: semver("> 1.8.11")
-  - version_constraint: semver("> 1.7.10")
-  - version_constraint: semver("> 1.7.5")
-  - version_constraint: semver("> 1.5.10")
-  - version_constraint: semver("> 0.0.5")
-  - version_constraint: semver("<= 0.0.5")
-  - version_constraint: "true"
+    - version_constraint: semver("> 2.70.5")
+    - version_constraint: semver("> 2.68.1")
+    - version_constraint: semver("> 2.67.1")
+      overrides:
+        - goos: linux
+          goarch: arm64
+          files:
+            - name: chezmoi
+              src: usr/bin/chezmoi
+    - version_constraint: semver("> 2.66.1")
+      overrides:
+        - goos: linux
+          goarch: arm64
+          files:
+            - name: chezmoi
+              src: usr/bin/chezmoi
+    - version_constraint: semver("> 2.29.4")
+      overrides:
+        - goos: linux
+          goarch: arm64
+          files:
+            - name: chezmoi
+              src: usr/bin/chezmoi
+    - version_constraint: semver("> 2.27.1")
+      overrides:
+        - goos: linux
+          goarch: arm64
+          files:
+            - name: chezmoi
+              src: usr/bin/chezmoi
+    - version_constraint: semver("> 2.21.1")
+    - version_constraint: semver("> 2.13.1")
+    - version_constraint: semver("> 2.1.5")
+    - version_constraint: semver("> 2.0.6")
+    - version_constraint: semver("> 2.0.3")
+    - version_constraint: semver("> 1.8.11")
+    - version_constraint: semver("> 1.7.10")
+    - version_constraint: semver("> 1.7.5")
+    - version_constraint: semver("> 1.5.10")
+    - version_constraint: semver("> 0.0.5")
+    - version_constraint: semver("<= 0.0.5")
+    - version_constraint: "true"
