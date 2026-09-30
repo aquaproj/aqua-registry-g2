@@ -1,22 +1,23 @@
+name: google/osv-scanner
 type: github_release
 repo_owner: google
 repo_name: osv-scanner
 description: Vulnerability scanner written in Go which uses the data provided by https://osv.dev
 version_overrides:
-  - version_constraint: Version == "v1.4.2"
-  - version_constraint: semver("> 1.6.2")
-    slsa_provenance:
-      type: github_release
-      asset: multiple.intoto.jsonl
-  - version_constraint: semver("> 1.0.0")
-    slsa_provenance:
-      type: github_release
-      asset: multiple.intoto.jsonl
-  - version_constraint: semver("<= 1.0.0")
-    slsa_provenance:
-      type: github_release
-      asset: multiple.intoto.jsonl
-  - version_constraint: "true"
-    slsa_provenance:
-      type: github_release
-      asset: multiple.intoto.jsonl
+    - version_constraint: Version == "v1.4.2"
+    - version_constraint: semver("> 1.6.2")
+      slsa_provenance:
+        type: github_release
+        asset: multiple.intoto.jsonl
+    - version_constraint: semver("> 1.0.0")
+      slsa_provenance:
+        type: github_release
+        asset: multiple.intoto.jsonl
+    - version_constraint: semver("<= 1.0.0")
+      slsa_provenance:
+        type: github_release
+        asset: multiple.intoto.jsonl
+    - version_constraint: "true"
+      slsa_provenance:
+        type: github_release
+        asset: multiple.intoto.jsonl
