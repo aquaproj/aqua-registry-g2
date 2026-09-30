@@ -1,9 +1,10 @@
+name: sharkdp/hyperfine
 type: github_release
 repo_owner: sharkdp
 repo_name: hyperfine
 description: A command-line benchmarking tool
 files:
-  - name: hyperfine
-    src: hyperfine-{{.Version}}-{{.Arch}}-{{.OS}}/hyperfine
+    - name: hyperfine
+      src: hyperfine-{{.Version}}-{{.Arch}}-{{.OS}}/hyperfine
 replacements:
-  "386": i686
+    "386": i686
