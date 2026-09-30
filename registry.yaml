@@ -1,11 +1,12 @@
+name: nektos/act
 type: github_release
 repo_owner: nektos
 repo_name: act
 description: Run your GitHub Actions locally
 version_overrides:
-  - version_constraint: semver("> 0.2.24")
-  - version_constraint: semver("> 0.2.22")
-  - version_constraint: semver("> 0.2.3")
-  - version_constraint: semver("> 0.1.3")
-  - version_constraint: semver("<= 0.1.3")
-  - version_constraint: "true"
+    - version_constraint: semver("> 0.2.24")
+    - version_constraint: semver("> 0.2.22")
+    - version_constraint: semver("> 0.2.3")
+    - version_constraint: semver("> 0.1.3")
+    - version_constraint: semver("<= 0.1.3")
+    - version_constraint: "true"
