@@ -1,8 +1,9 @@
+name: svenstaro/miniserve
 type: github_release
 repo_owner: svenstaro
 repo_name: miniserve
 description: For when you really just want to serve some files over HTTP right now
 version_overrides:
-  - version_constraint: Version == "v0.10.1"
-    no_asset: true
-  - version_constraint: "true"
+    - version_constraint: Version == "v0.10.1"
+      no_asset: true
+    - version_constraint: "true"
