@@ -1,65 +1,66 @@
+name: bufbuild/buf
 type: github_release
 repo_owner: bufbuild
 repo_name: buf
 description: The best way of working with Protocol Buffers
 files:
-  - name: buf
-  - name: protoc-gen-buf-breaking
-  - name: protoc-gen-buf-lint
+    - name: buf
+    - name: protoc-gen-buf-breaking
+    - name: protoc-gen-buf-lint
 version_overrides:
-  - version_constraint: Version == "v0.42.0"
-    files:
-      - name: buf
-        src: buf/bin/buf
-      - name: protoc-gen-buf-breaking
-        src: buf/bin/protoc-gen-buf-breaking
-      - name: protoc-gen-buf-lint
-        src: buf/bin/protoc-gen-buf-lint
-  - version_constraint: semver(">= 1.36.0")
-    files:
-      - name: buf
-        src: buf/bin/buf
-      - name: protoc-gen-buf-breaking
-        src: buf/bin/protoc-gen-buf-breaking
-      - name: protoc-gen-buf-lint
-        src: buf/bin/protoc-gen-buf-lint
-  - version_constraint: semver("> 0.53.0")
-    files:
-      - name: buf
-        src: buf/bin/buf
-      - name: protoc-gen-buf-breaking
-        src: buf/bin/protoc-gen-buf-breaking
-      - name: protoc-gen-buf-lint
-        src: buf/bin/protoc-gen-buf-lint
-  - version_constraint: semver("> 0.45.0")
-    files:
-      - name: buf
-        src: buf/bin/buf
-      - name: protoc-gen-buf-breaking
-        src: buf/bin/protoc-gen-buf-breaking
-      - name: protoc-gen-buf-lint
-        src: buf/bin/protoc-gen-buf-lint
-  - version_constraint: semver("> 0.41.0")
-    files:
-      - name: buf
-        src: buf/bin/buf
-      - name: protoc-gen-buf-breaking
-        src: buf/bin/protoc-gen-buf-breaking
-      - name: protoc-gen-buf-lint
-        src: buf/bin/protoc-gen-buf-lint
-  - version_constraint: semver("<= 0.41.0")
-    files:
-      - name: buf
-        src: buf/bin/buf
-      - name: protoc-gen-buf-breaking
-        src: buf/bin/protoc-gen-buf-breaking
-      - name: protoc-gen-buf-lint
-        src: buf/bin/protoc-gen-buf-lint
-  - version_constraint: "true"
-    files:
-      - name: buf
-        src: buf/bin/buf
-      - name: protoc-gen-buf-breaking
-        src: buf/bin/protoc-gen-buf-breaking
-      - name: protoc-gen-buf-lint
-        src: buf/bin/protoc-gen-buf-lint
+    - version_constraint: Version == "v0.42.0"
+      files:
+        - name: buf
+          src: buf/bin/buf
+        - name: protoc-gen-buf-breaking
+          src: buf/bin/protoc-gen-buf-breaking
+        - name: protoc-gen-buf-lint
+          src: buf/bin/protoc-gen-buf-lint
+    - version_constraint: semver(">= 1.36.0")
+      files:
+        - name: buf
+          src: buf/bin/buf
+        - name: protoc-gen-buf-breaking
+          src: buf/bin/protoc-gen-buf-breaking
+        - name: protoc-gen-buf-lint
+          src: buf/bin/protoc-gen-buf-lint
+    - version_constraint: semver("> 0.53.0")
+      files:
+        - name: buf
+          src: buf/bin/buf
+        - name: protoc-gen-buf-breaking
+          src: buf/bin/protoc-gen-buf-breaking
+        - name: protoc-gen-buf-lint
+          src: buf/bin/protoc-gen-buf-lint
+    - version_constraint: semver("> 0.45.0")
+      files:
+        - name: buf
+          src: buf/bin/buf
+        - name: protoc-gen-buf-breaking
+          src: buf/bin/protoc-gen-buf-breaking
+        - name: protoc-gen-buf-lint
+          src: buf/bin/protoc-gen-buf-lint
+    - version_constraint: semver("> 0.41.0")
+      files:
+        - name: buf
+          src: buf/bin/buf
+        - name: protoc-gen-buf-breaking
+          src: buf/bin/protoc-gen-buf-breaking
+        - name: protoc-gen-buf-lint
+          src: buf/bin/protoc-gen-buf-lint
+    - version_constraint: semver("<= 0.41.0")
+      files:
+        - name: buf
+          src: buf/bin/buf
+        - name: protoc-gen-buf-breaking
+          src: buf/bin/protoc-gen-buf-breaking
+        - name: protoc-gen-buf-lint
+          src: buf/bin/protoc-gen-buf-lint
+    - version_constraint: "true"
+      files:
+        - name: buf
+          src: buf/bin/buf
+        - name: protoc-gen-buf-breaking
+          src: buf/bin/protoc-gen-buf-breaking
+        - name: protoc-gen-buf-lint
+          src: buf/bin/protoc-gen-buf-lint
