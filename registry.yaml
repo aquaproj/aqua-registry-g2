@@ -1,11 +1,12 @@
+name: PowerShell/PowerShell
 type: github_release
 repo_owner: PowerShell
 repo_name: PowerShell
 description: PowerShell for every system
 files:
-  - name: pwsh
+    - name: pwsh
 version_overrides:
-  - version_constraint: semver("<= 6.1.6")
-  - version_constraint: semver("<= 7.0.13")
-  - version_constraint: semver("<= 7.4.7") || (semver(">= 7.5.0-preview.1, <= 7.5.1")) || (semver(">= 7.6.0-preview.1, <= 7.6.0-preview.4"))
-  - version_constraint: "true"
+    - version_constraint: semver("<= 6.1.6")
+    - version_constraint: semver("<= 7.0.13")
+    - version_constraint: semver("<= 7.4.7") || (semver(">= 7.5.0-preview.1, <= 7.5.1")) || (semver(">= 7.6.0-preview.1, <= 7.6.0-preview.4"))
+    - version_constraint: "true"
