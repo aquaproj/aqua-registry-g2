@@ -1,22 +1,23 @@
+name: ClementTsang/bottom
 type: github_release
 repo_owner: ClementTsang
 repo_name: bottom
 description: Yet another cross-platform graphical process/system monitor
 version_filter: not (Version == "nightly")
 files:
-  - name: btm
+    - name: btm
 github_artifact_attestations:
-  signer_workflow: ClementTsang/bottom/.github/workflows/build_releases.yml
+    signer_workflow: ClementTsang/bottom/.github/workflows/build_releases.yml
 version_overrides:
-  - version_constraint: Version in ["0.1.0-alpha-1", "0.1.0-alpha-4"]
-  - version_constraint: Version == "0.1.0-alpha-3"
-  - version_constraint: Version == "0.2.0"
-  - version_constraint: Version == "0.5.0"
-  - version_constraint: semver("<= 0.1.2")
-    no_asset: true
-  - version_constraint: semver("<= 0.4.7")
-  - version_constraint: semver("<= 0.6.8")
-  - version_constraint: semver("< 0.10.0")
-  - version_constraint: "true"
-    github_artifact_attestations:
-      signer_workflow: ClementTsang/bottom/.github/workflows/build_releases.yml
+    - version_constraint: Version in ["0.1.0-alpha-1", "0.1.0-alpha-4"]
+    - version_constraint: Version == "0.1.0-alpha-3"
+    - version_constraint: Version == "0.2.0"
+    - version_constraint: Version == "0.5.0"
+    - version_constraint: semver("<= 0.1.2")
+      no_asset: true
+    - version_constraint: semver("<= 0.4.7")
+    - version_constraint: semver("<= 0.6.8")
+    - version_constraint: semver("< 0.10.0")
+    - version_constraint: "true"
+      github_artifact_attestations:
+        signer_workflow: ClementTsang/bottom/.github/workflows/build_releases.yml
