@@ -1,15 +1,16 @@
+name: ipfs/kubo
 aliases:
-  - name: ipfs/go-ipfs
+    - name: ipfs/go-ipfs
 type: github_release
 repo_owner: ipfs
 repo_name: kubo
 description: IPFS is a global, versioned, peer-to-peer filesystem
 files:
-  - name: ipfs
-    src: kubo/ipfs
+    - name: ipfs
+      src: kubo/ipfs
 version_overrides:
-  - version_constraint: semver(">= 0.14.0")
-  - version_constraint: "true"
-    files:
-      - name: ipfs
-        src: go-ipfs/ipfs
+    - version_constraint: semver(">= 0.14.0")
+    - version_constraint: "true"
+      files:
+        - name: ipfs
+          src: go-ipfs/ipfs
