@@ -1,77 +1,78 @@
+name: vectordotdev/vector
 type: github_release
 repo_owner: vectordotdev
 repo_name: vector
 description: A high-performance observability data pipeline
 version_filter: not (Version startsWith "vdev-")
 version_overrides:
-  - version_constraint: Version == "v0.3.0"
-    files:
-      - name: vector
-        src: vector-{{trimV .Version}}/bin/vector
-  - version_constraint: semver("> 0.50.0")
-    files:
-      - name: vector
-        src: vector-{{.Arch}}-{{.OS}}/bin/vector
-    overrides:
-      - goos: windows
-        files:
-          - name: vector
-            src: bin/vector
-  - version_constraint: semver("> 0.43.1")
-    files:
-      - name: vector
-        src: vector-{{.Arch}}-{{.OS}}/bin/vector
-    overrides:
-      - goos: windows
-        files:
-          - name: vector
-            src: bin/vector
-  - version_constraint: semver("> 0.42.0")
-    files:
-      - name: vector
-        src: bin/vector
-    overrides:
-      - goos: linux
-        files:
-          - name: vector
-            src: vector-{{.Arch}}-{{.OS}}/bin/vector
-  - version_constraint: semver("> 0.33.0")
-    files:
-      - name: vector
-        src: vector-{{.Arch}}-{{.OS}}/bin/vector
-    overrides:
-      - goos: windows
-        files:
-          - name: vector
-            src: bin/vector
-  - version_constraint: semver("> 0.10.0")
-    files:
-      - name: vector
-        src: vector-{{.Arch}}-{{.OS}}/bin/vector
-    overrides:
-      - goos: windows
-        files:
-          - name: vector
-            src: bin/vector
-  - version_constraint: semver("> 0.5.0")
-    files:
-      - name: vector
-        src: vector-{{.Arch}}-{{.OS}}/bin/vector
-    overrides:
-      - goos: windows
-        files:
-          - name: vector
-            src: bin/vector
-  - version_constraint: semver("<= 0.5.0")
-    files:
-      - name: vector
-        src: vector-{{.Arch}}-{{.OS}}/bin/vector
-  - version_constraint: "true"
-    files:
-      - name: vector
-        src: vector-{{.Arch}}-{{.OS}}/bin/vector
-    overrides:
-      - goos: windows
-        files:
-          - name: vector
-            src: bin/vector
+    - version_constraint: Version == "v0.3.0"
+      files:
+        - name: vector
+          src: vector-{{trimV .Version}}/bin/vector
+    - version_constraint: semver("> 0.50.0")
+      files:
+        - name: vector
+          src: vector-{{.Arch}}-{{.OS}}/bin/vector
+      overrides:
+        - goos: windows
+          files:
+            - name: vector
+              src: bin/vector
+    - version_constraint: semver("> 0.43.1")
+      files:
+        - name: vector
+          src: vector-{{.Arch}}-{{.OS}}/bin/vector
+      overrides:
+        - goos: windows
+          files:
+            - name: vector
+              src: bin/vector
+    - version_constraint: semver("> 0.42.0")
+      files:
+        - name: vector
+          src: bin/vector
+      overrides:
+        - goos: linux
+          files:
+            - name: vector
+              src: vector-{{.Arch}}-{{.OS}}/bin/vector
+    - version_constraint: semver("> 0.33.0")
+      files:
+        - name: vector
+          src: vector-{{.Arch}}-{{.OS}}/bin/vector
+      overrides:
+        - goos: windows
+          files:
+            - name: vector
+              src: bin/vector
+    - version_constraint: semver("> 0.10.0")
+      files:
+        - name: vector
+          src: vector-{{.Arch}}-{{.OS}}/bin/vector
+      overrides:
+        - goos: windows
+          files:
+            - name: vector
+              src: bin/vector
+    - version_constraint: semver("> 0.5.0")
+      files:
+        - name: vector
+          src: vector-{{.Arch}}-{{.OS}}/bin/vector
+      overrides:
+        - goos: windows
+          files:
+            - name: vector
+              src: bin/vector
+    - version_constraint: semver("<= 0.5.0")
+      files:
+        - name: vector
+          src: vector-{{.Arch}}-{{.OS}}/bin/vector
+    - version_constraint: "true"
+      files:
+        - name: vector
+          src: vector-{{.Arch}}-{{.OS}}/bin/vector
+      overrides:
+        - goos: windows
+          files:
+            - name: vector
+              src: bin/vector
