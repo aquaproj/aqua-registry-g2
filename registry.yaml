@@ -1,37 +1,38 @@
+name: tinygo-org/tinygo
 type: github_release
 repo_owner: tinygo-org
 repo_name: tinygo
 description: Go compiler for small places. Microcontrollers, WebAssembly (WASM/WASI), and command-line tools. Based on LLVM
 version_overrides:
-  - version_constraint: Version == "v0.1"
-    files:
-      - name: tinygo
-        src: tinygo/bin/tinygo
-  - version_constraint: Version == "v0.7.1"
-    files:
-      - name: tinygo
-        src: tinygo/bin/tinygo
-  - version_constraint: Version == "v0.8.0"
-    files:
-      - name: tinygo
-        src: tinygo/bin/tinygo
-  - version_constraint: Version in ["v0.13.0", "v0.22.0", "v0.25.0-beta1"]
-    files:
-      - name: tinygo
-        src: tinygo/bin/tinygo
-  - version_constraint: semver("<= 0.4.1")
-    files:
-      - name: tinygo
-        src: tinygo/bin/tinygo
-  - version_constraint: semver("<= 0.7.0")
-    files:
-      - name: tinygo
-        src: tinygo/bin/tinygo
-  - version_constraint: semver("<= 0.30.0")
-    files:
-      - name: tinygo
-        src: tinygo/bin/tinygo
-  - version_constraint: "true"
-    files:
-      - name: tinygo
-        src: tinygo/bin/tinygo
+    - version_constraint: Version == "v0.1"
+      files:
+        - name: tinygo
+          src: tinygo/bin/tinygo
+    - version_constraint: Version == "v0.7.1"
+      files:
+        - name: tinygo
+          src: tinygo/bin/tinygo
+    - version_constraint: Version == "v0.8.0"
+      files:
+        - name: tinygo
+          src: tinygo/bin/tinygo
+    - version_constraint: Version in ["v0.13.0", "v0.22.0", "v0.25.0-beta1"]
+      files:
+        - name: tinygo
+          src: tinygo/bin/tinygo
+    - version_constraint: semver("<= 0.4.1")
+      files:
+        - name: tinygo
+          src: tinygo/bin/tinygo
+    - version_constraint: semver("<= 0.7.0")
+      files:
+        - name: tinygo
+          src: tinygo/bin/tinygo
+    - version_constraint: semver("<= 0.30.0")
+      files:
+        - name: tinygo
+          src: tinygo/bin/tinygo
+    - version_constraint: "true"
+      files:
+        - name: tinygo
+          src: tinygo/bin/tinygo
