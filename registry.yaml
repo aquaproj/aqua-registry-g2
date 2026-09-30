@@ -1,37 +1,38 @@
+name: velero-io/velero
 aliases:
-  - name: vmware-tanzu/velero
+    - name: vmware-tanzu/velero
 type: github_release
 repo_owner: velero-io
 repo_name: velero
 description: Backup and migrate Kubernetes applications and their persistent volumes
 version_overrides:
-  - version_constraint: Version == "v0.8.0-rc.1"
-    files:
-      - name: ark
-  - version_constraint: Version == "v0.10.0-beta.1"
-    files:
-      - name: ark
-  - version_constraint: Version == "v1.10.0-rc.2"
-    files:
-      - name: velero
-        src: '{{.AssetWithoutExt}}/velero'
-  - version_constraint: semver("> 1.10.3")
-    files:
-      - name: velero
-        src: '{{.AssetWithoutExt}}/velero'
-  - version_constraint: semver("> 0.10.2")
-    files:
-      - name: velero
-        src: '{{.AssetWithoutExt}}/velero'
-  - version_constraint: semver("> 0.5.1")
-    files:
-      - name: ark
-  - version_constraint: semver("> 0.4.0")
-    files:
-      - name: ark
-  - version_constraint: semver("<= 0.4.0")
-    no_asset: true
-  - version_constraint: "true"
-    files:
-      - name: velero
-        src: '{{.AssetWithoutExt}}/velero'
+    - version_constraint: Version == "v0.8.0-rc.1"
+      files:
+        - name: ark
+    - version_constraint: Version == "v0.10.0-beta.1"
+      files:
+        - name: ark
+    - version_constraint: Version == "v1.10.0-rc.2"
+      files:
+        - name: velero
+          src: '{{.AssetWithoutExt}}/velero'
+    - version_constraint: semver("> 1.10.3")
+      files:
+        - name: velero
+          src: '{{.AssetWithoutExt}}/velero'
+    - version_constraint: semver("> 0.10.2")
+      files:
+        - name: velero
+          src: '{{.AssetWithoutExt}}/velero'
+    - version_constraint: semver("> 0.5.1")
+      files:
+        - name: ark
+    - version_constraint: semver("> 0.4.0")
+      files:
+        - name: ark
+    - version_constraint: semver("<= 0.4.0")
+      no_asset: true
+    - version_constraint: "true"
+      files:
+        - name: velero
+          src: '{{.AssetWithoutExt}}/velero'
