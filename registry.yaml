@@ -1,19 +1,20 @@
+name: goreleaser/goreleaser
 type: github_release
 repo_owner: goreleaser
 repo_name: goreleaser
 description: Deliver Go binaries as fast and easily as possible
 github_artifact_attestations:
-  signer_workflow: goreleaser/goreleaser/.github/workflows/release.yml
+    signer_workflow: goreleaser/goreleaser/.github/workflows/release.yml
 version_overrides:
-  - version_constraint: semver("< 0.182.0")
-  - version_constraint: semver("<= 1.2.1")
-  - version_constraint: semver("< 2.7.0")
-  - version_constraint: semver("<= 2.12.7")
-    github_artifact_attestations:
-      signer_workflow: goreleaser/goreleaser/.github/workflows/release.yml
-  - version_constraint: Version in ["v2.15.0", "v2.15.1"]
-    github_artifact_attestations:
-      signer_workflow: goreleaser/goreleaser/.github/workflows/release.yml
-  - version_constraint: "true"
-    github_artifact_attestations:
-      signer_workflow: goreleaser/goreleaser/.github/workflows/release.yml
+    - version_constraint: semver("< 0.182.0")
+    - version_constraint: semver("<= 1.2.1")
+    - version_constraint: semver("< 2.7.0")
+    - version_constraint: semver("<= 2.12.7")
+      github_artifact_attestations:
+        signer_workflow: goreleaser/goreleaser/.github/workflows/release.yml
+    - version_constraint: Version in ["v2.15.0", "v2.15.1"]
+      github_artifact_attestations:
+        signer_workflow: goreleaser/goreleaser/.github/workflows/release.yml
+    - version_constraint: "true"
+      github_artifact_attestations:
+        signer_workflow: goreleaser/goreleaser/.github/workflows/release.yml
