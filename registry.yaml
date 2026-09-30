@@ -1,69 +1,70 @@
+name: j178/prek
 type: github_release
 repo_owner: j178
 repo_name: prek
 description: Better `pre-commit`, re-engineered in Rust
 github_artifact_attestations:
-  signer_workflow: j178/prek/.github/workflows/release.yml
+    signer_workflow: j178/prek/.github/workflows/release.yml
 version_overrides:
-  - version_constraint: semver("> 0.3.0")
-    files:
-      - name: prek
-        src: '{{.AssetWithoutExt}}/prek'
-    github_artifact_attestations:
-      signer_workflow: j178/prek/.github/workflows/release.yml
-    overrides:
-      - goos: windows
-        files:
-          - name: prek
-  - version_constraint: semver("> 0.1.6")
-    files:
-      - name: prek
-        src: '{{.AssetWithoutExt}}/prek'
-    overrides:
-      - goos: windows
-        files:
-          - name: prek
-  - version_constraint: semver("> 0.0.28")
-    files:
-      - name: prek
-        src: '{{.AssetWithoutExt}}/prek'
-    overrides:
-      - goos: windows
-        files:
-          - name: prek
-  - version_constraint: semver("> 0.0.22")
-    files:
-      - name: prek
-        src: '{{.AssetWithoutExt}}/prek'
-    overrides:
-      - goos: windows
-        files:
-          - name: prek
-  - version_constraint: semver("> 0.0.5")
-    files:
-      - name: prek
-        src: '{{.AssetWithoutExt}}/prefligit'
-    overrides:
-      - goos: windows
-        files:
-          - name: prek
-            src: prefligit
-  - version_constraint: semver("<= 0.0.5")
-    files:
-      - name: prek
-        src: '{{.AssetWithoutExt}}/pre-commit'
-    overrides:
-      - goos: windows
-        files:
-          - name: prek
-            src: pre-commit
-  - version_constraint: "true"
-    files:
-      - name: prek
-        src: '{{.AssetWithoutExt}}/prek'
-    github_artifact_attestations:
-      signer_workflow: j178/prek/.github/workflows/release.yml
-    overrides:
-      - goos: windows
-        files:
-          - name: prek
+    - version_constraint: semver("> 0.3.0")
+      files:
+        - name: prek
+          src: '{{.AssetWithoutExt}}/prek'
+      github_artifact_attestations:
+        signer_workflow: j178/prek/.github/workflows/release.yml
+      overrides:
+        - goos: windows
+          files:
+            - name: prek
+    - version_constraint: semver("> 0.1.6")
+      files:
+        - name: prek
+          src: '{{.AssetWithoutExt}}/prek'
+      overrides:
+        - goos: windows
+          files:
+            - name: prek
+    - version_constraint: semver("> 0.0.28")
+      files:
+        - name: prek
+          src: '{{.AssetWithoutExt}}/prek'
+      overrides:
+        - goos: windows
+          files:
+            - name: prek
+    - version_constraint: semver("> 0.0.22")
+      files:
+        - name: prek
+          src: '{{.AssetWithoutExt}}/prek'
+      overrides:
+        - goos: windows
+          files:
+            - name: prek
+    - version_constraint: semver("> 0.0.5")
+      files:
+        - name: prek
+          src: '{{.AssetWithoutExt}}/prefligit'
+      overrides:
+        - goos: windows
+          files:
+            - name: prek
+              src: prefligit
+    - version_constraint: semver("<= 0.0.5")
+      files:
+        - name: prek
+          src: '{{.AssetWithoutExt}}/pre-commit'
+      overrides:
+        - goos: windows
+          files:
+            - name: prek
+              src: pre-commit
+    - version_constraint: "true"
+      files:
+        - name: prek
+          src: '{{.AssetWithoutExt}}/prek'
+      github_artifact_attestations:
+        signer_workflow: j178/prek/.github/workflows/release.yml
+      overrides:
+        - goos: windows
+          files:
+            - name: prek
