@@ -13,6 +13,12 @@ name: index
 # It runs on demand here. It belongs on a schedule in the real registry, where nobody
 # is watching for a package that quietly never arrived.
 #
+# It reads the branches named after a package's id and takes each package's name out of
+# the definition on its branch, because a branch named after an id says nothing about
+# which package it holds. A branch holding nothing but its claim to a package -- which is
+# what a branch is created with -- is waiting for the pull request that brings its
+# definition, and there is nothing to describe the package with until then.
+#
 # Not a create event: GitHub reads the workflow from the ref that was created, and a
 # package branch is an orphan carrying only the branch template. index.yaml lives on
 # main and would never be there, so the event fires and nothing runs.
