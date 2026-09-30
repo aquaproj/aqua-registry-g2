@@ -1,1 +1,11 @@
 name: kunchenguid/no-mistakes
+type: github_release
+repo_owner: kunchenguid
+repo_name: no-mistakes
+description: git push no-mistakes
+version_overrides:
+  - version_constraint: Version == "v1.8.1"
+    no_asset: true
+  - version_constraint: Version == "channels"
+    no_asset: true
+  - version_constraint: "true"
