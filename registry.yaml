@@ -1,3 +1,4 @@
+name: flutter/flutter
 type: http
 repo_owner: flutter
 repo_name: flutter
@@ -5,22 +6,22 @@ description: Flutter SDK - Google's UI toolkit for building beautiful, natively 
 version_filter: Version matches "^\\d+\\.\\d+\\.\\d+$"
 version_source: github_tag
 files:
-  - name: flutter
-    src: flutter/bin/flutter
-  - name: dart
-    src: flutter/bin/dart
+    - name: flutter
+      src: flutter/bin/flutter
+    - name: dart
+      src: flutter/bin/dart
 version_overrides:
-  - version_constraint: "true"
-    url: https://storage.googleapis.com/flutter_infra_release/releases/{{.Vars.channel}}/{{.OS}}/flutter_{{.OS}}_{{trimV .Version}}-{{.Vars.channel}}.{{.Format}}
-    format: zip
-    vars:
-      - name: channel
-        default: stable
-    overrides:
-      - goos: linux
-        format: tar.xz
-      - goos: windows
-        goarch: arm64
-        url: https://storage.googleapis.com/flutter_infra_release/releases/{{.Vars.channel}}/{{.OS}}/flutter_{{.OS}}_{{trimV .Version}}-{{.Vars.channel}}.{{.Format}}
-      - goarch: arm64
-        url: https://storage.googleapis.com/flutter_infra_release/releases/{{.Vars.channel}}/{{.OS}}/flutter_{{.OS}}_{{.Arch}}_{{trimV .Version}}-{{.Vars.channel}}.{{.Format}}
+    - version_constraint: "true"
+      url: https://storage.googleapis.com/flutter_infra_release/releases/{{.Vars.channel}}/{{.OS}}/flutter_{{.OS}}_{{trimV .Version}}-{{.Vars.channel}}.{{.Format}}
+      format: zip
+      vars:
+        - name: channel
+          default: stable
+      overrides:
+        - goos: linux
+          format: tar.xz
+        - goos: windows
+          goarch: arm64
+          url: https://storage.googleapis.com/flutter_infra_release/releases/{{.Vars.channel}}/{{.OS}}/flutter_{{.OS}}_{{trimV .Version}}-{{.Vars.channel}}.{{.Format}}
+        - goarch: arm64
+          url: https://storage.googleapis.com/flutter_infra_release/releases/{{.Vars.channel}}/{{.OS}}/flutter_{{.OS}}_{{.Arch}}_{{trimV .Version}}-{{.Vars.channel}}.{{.Format}}
