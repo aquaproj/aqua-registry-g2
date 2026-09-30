@@ -1,40 +1,41 @@
+name: redpanda-data/connect
 aliases:
-  - name: Jeffail/benthos
-  - name: benthosdev/benthos
+    - name: Jeffail/benthos
+    - name: benthosdev/benthos
 type: github_release
 repo_owner: redpanda-data
 repo_name: connect
 description: Fancy stream processing made operationally mundane
 files:
-  - name: benthos
-  - name: redpanda-connect
+    - name: benthos
+    - name: redpanda-connect
 version_overrides:
-  - version_constraint: semver("<= 0.11.1") or Version == "v1.7.8"
-    no_asset: true
-  - version_constraint: semver("<= 0.11.1")
-    files:
-      - name: benthos
-  - version_constraint: semver("<= 3.7.0")
-    files:
-      - name: benthos
-  - version_constraint: semver("<= 3.43.0-rc1")
-    files:
-      - name: benthos
-  - version_constraint: semver("<= 3.54.1")
-    files:
-      - name: benthos
-  - version_constraint: semver("<= 4.27.0")
-    files:
-      - name: benthos
-  - version_constraint: semver("<= 4.66.1")
-    files:
-      - name: redpanda-connect
-  - version_constraint: Version == "v4.67.5"
-    files:
-      - name: redpanda-connect
-  - version_constraint: Version == "v4.68.0"
-    files:
-      - name: redpanda-connect
-  - version_constraint: "true"
-    files:
-      - name: redpanda-connect
+    - version_constraint: semver("<= 0.11.1") or Version == "v1.7.8"
+      no_asset: true
+    - version_constraint: semver("<= 0.11.1")
+      files:
+        - name: benthos
+    - version_constraint: semver("<= 3.7.0")
+      files:
+        - name: benthos
+    - version_constraint: semver("<= 3.43.0-rc1")
+      files:
+        - name: benthos
+    - version_constraint: semver("<= 3.54.1")
+      files:
+        - name: benthos
+    - version_constraint: semver("<= 4.27.0")
+      files:
+        - name: benthos
+    - version_constraint: semver("<= 4.66.1")
+      files:
+        - name: redpanda-connect
+    - version_constraint: Version == "v4.67.5"
+      files:
+        - name: redpanda-connect
+    - version_constraint: Version == "v4.68.0"
+      files:
+        - name: redpanda-connect
+    - version_constraint: "true"
+      files:
+        - name: redpanda-connect
