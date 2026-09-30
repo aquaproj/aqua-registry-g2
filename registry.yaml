@@ -1,17 +1,18 @@
+name: charmbracelet/crush
 type: github_release
 repo_owner: charmbracelet
 repo_name: crush
 description: The glamourous AI coding agent for your favourite terminal
 version_overrides:
-  - version_constraint: semver("> 0.20.0")
-    files:
-      - name: crush
-        src: crush_{{trimV .Version}}_{{.OS}}_{{.Arch}}/crush
-  - version_constraint: semver("<= 0.20.0")
-    files:
-      - name: crush
-        src: crush_{{trimV .Version}}_{{.OS}}_{{.Arch}}/crush
-  - version_constraint: "true"
-    files:
-      - name: crush
-        src: crush_{{trimV .Version}}_{{.OS}}_{{.Arch}}/crush
+    - version_constraint: semver("> 0.20.0")
+      files:
+        - name: crush
+          src: crush_{{trimV .Version}}_{{.OS}}_{{.Arch}}/crush
+    - version_constraint: semver("<= 0.20.0")
+      files:
+        - name: crush
+          src: crush_{{trimV .Version}}_{{.OS}}_{{.Arch}}/crush
+    - version_constraint: "true"
+      files:
+        - name: crush
+          src: crush_{{trimV .Version}}_{{.OS}}_{{.Arch}}/crush
