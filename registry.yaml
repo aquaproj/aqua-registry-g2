@@ -1,20 +1,16 @@
+name: qarmin/czkawka
 type: github_release
 repo_owner: qarmin
 repo_name: czkawka
 description: Multi functional app to find duplicates, empty folders, similar images etc
 version_filter: Version != "Nightly"
 version_overrides:
-  - version_constraint: Version == "1.0.1"
-  - version_constraint: Version == "1.3.0"
-  - version_constraint: semver("> 11.0.1")
-  - version_constraint: semver("> 9.0.0")
-  - version_constraint: semver("> 2.3.2")
-  - version_constraint: semver("> 2.3.0")
-    no_asset: true
-  - version_constraint: "true"
-# One release carries several programs and several builds of each: czkawka_cli and the two
-# GUIs, czkawka_gui and krokiet, and for the command line one a plain build beside builds
-# with extra image codecs compiled in and a musl build. Excluding the GUI by name left
-# krokiet, and the inference took it -- and for darwin/amd64, which has no command line
-# build at all, a shell script. The plain build per target is what aqua-registry installs.
+    - version_constraint: Version == "1.0.1"
+    - version_constraint: Version == "1.3.0"
+    - version_constraint: semver("> 11.0.1")
+    - version_constraint: semver("> 9.0.0")
+    - version_constraint: semver("> 2.3.2")
+    - version_constraint: semver("> 2.3.0")
+      no_asset: true
+    - version_constraint: "true"
 all_assets_filter: Asset matches "^(linux|mac)_czkawka_cli_(x86_64|arm64)$|^windows_czkawka_cli\\.exe$"
