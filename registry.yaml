@@ -1,10 +1,7 @@
+name: mikefarah/yq
 type: github_release
 repo_owner: mikefarah
 repo_name: yq
 description: yq is a portable command-line YAML processor
 version_filter: Version matches "^v[0-9]"
-# Every build is published twice: as the executable itself, and as an archive holding it
-# under the name of the target it was built for. The inference took the archive, whose one
-# file isn't called yq, so nothing named the command was in it. The executable is the asset
-# aqua-registry has always installed.
 all_assets_filter: Asset matches "^yq_(darwin|linux|windows)_(amd64|arm64)(\\.exe)?$"
