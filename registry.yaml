@@ -1,9 +1,10 @@
+name: go-delve/delve
 type: github_release
 repo_owner: go-delve
 repo_name: delve
 description: Delve is a debugger for the Go programming language
 files:
-  - name: dlv
+    - name: dlv
 version_overrides:
-  - version_constraint: semver("<= 1.26.1") or Version in ["v1.27.0", "v1.27.1"]
-  - version_constraint: "true"
+    - version_constraint: semver("<= 1.26.1") or Version in ["v1.27.0", "v1.27.1"]
+    - version_constraint: "true"
