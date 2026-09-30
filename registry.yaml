@@ -1,29 +1,30 @@
+name: fujiapple852/trippy
 type: github_release
 repo_owner: fujiapple852
 repo_name: trippy
 description: A network diagnostic tool
 files:
-  - name: trip
+    - name: trip
 version_overrides:
-  - version_constraint: Version == "0.6.0"
-    files:
-      - name: trip
-        src: '{{.AssetWithoutExt}}/trip'
-  - version_constraint: Version == "0.7.0"
-    files:
-      - name: trip
-        src: '{{.AssetWithoutExt}}/trip'
-  - version_constraint: Version == "0.8.0"
-    files:
-      - name: trip
-        src: '{{.AssetWithoutExt}}/trip'
-  - version_constraint: semver("> 0.5.0")
-    files:
-      - name: trip
-        src: '{{.AssetWithoutExt}}/trip'
-  - version_constraint: semver("<= 0.5.0")
-    no_asset: true
-  - version_constraint: "true"
-    files:
-      - name: trip
-        src: '{{.AssetWithoutExt}}/trip'
+    - version_constraint: Version == "0.6.0"
+      files:
+        - name: trip
+          src: '{{.AssetWithoutExt}}/trip'
+    - version_constraint: Version == "0.7.0"
+      files:
+        - name: trip
+          src: '{{.AssetWithoutExt}}/trip'
+    - version_constraint: Version == "0.8.0"
+      files:
+        - name: trip
+          src: '{{.AssetWithoutExt}}/trip'
+    - version_constraint: semver("> 0.5.0")
+      files:
+        - name: trip
+          src: '{{.AssetWithoutExt}}/trip'
+    - version_constraint: semver("<= 0.5.0")
+      no_asset: true
+    - version_constraint: "true"
+      files:
+        - name: trip
+          src: '{{.AssetWithoutExt}}/trip'
