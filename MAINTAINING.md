@@ -100,7 +100,9 @@ tags is skipped, having no release list to read a date from.
 
 ## How To Fix versions.json
 
-Dispatch [versions.yaml](.github/workflows/versions.yaml), which also runs twice an hour.
+Dispatch [versions.yaml](.github/workflows/versions.yaml), which also asks to run twice an
+hour. A scheduled workflow runs when GitHub gets to it, and in this repository that has been
+a few hours, so dispatching it is how a list is brought up to date now.
 
 ```sh
 gh workflow run versions.yaml -f dry_run=true

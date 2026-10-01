@@ -14,7 +14,11 @@ name: versions
 # where everything else that writes runs.
 on:
   # Every half hour, on the odd minutes, for the reason index.yaml gives: a schedule runs
-  # when GitHub gets to it, and the top of the hour is when everyone else asked too.
+  # when GitHub gets to it, and the top of the hour is when everyone else asked too. What
+  # it has answered with here is a few hours between runs, so this is the cadence of a
+  # list catching up rather than of anything a reader waits on. When a reader does wait on
+  # it, the thing to do is what ar2's own chain does: dispatch the next run at the end of
+  # one, which makes the cadence however long a run takes.
   schedule:
     - cron: "17,47 * * * *"
   workflow_dispatch:
