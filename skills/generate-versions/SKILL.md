@@ -1,6 +1,6 @@
 ---
 name: generate-versions
-description: Generate the versions aqua-registry-g2 is missing, which is how a package gets a new release, and start or stop the chain of runs that does it. Use when a version is missing from the registry, when asked to run the backfill, or when asked how often the registry updates itself.
+description: Generate the versions aqua-registry-g2 is missing, which is how a package gets a new release, for a named package or for whatever the order reaches, and start or stop the chain of runs that does it. Use when a version is missing from the registry, when asked to generate a particular package now, when asked to run the backfill, or when asked how often the registry updates itself.
 ---
 
 # Generate the versions the registry is missing
@@ -18,6 +18,23 @@ do about one that doesn't is [reviewing it](../review-pull-request/SKILL.md). Th
 summary says what was generated, what wasn't, and how far the registry has got.
 
 To stop a chain, cancel the run that is going.
+
+### Generating one package now
+
+Name it, and the run works through the named packages instead of the order:
+
+```sh
+gh workflow run ar2.yaml -f packages="ko-build/ko"
+gh workflow run ar2.yaml -f packages="ko-build/ko sigstore/cosign" -f limit=20
+```
+
+Nothing else changes: each one is taken over, generated and put to a pull request the way the
+order would have, whenever its turn came. Which is what makes it worth naming one -- a package
+the order reaches in a week, because something was fixed and it is the package that was
+waiting for it, or one an issue is asking about.
+
+A package aqua-registry doesn't have isn't in the order to be named, and the run says so
+rather than doing nothing quietly. [Adding it](../add-package/SKILL.md) is what puts it there.
 
 ### How the cadence works
 
