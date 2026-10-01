@@ -1,0 +1,50 @@
+---
+name: sweep legacy branches
+# Delete the branches named after a package, now that every package is held on a branch
+# named after its id.
+#
+# One-off. 'ar2 identify' carried each package over to a branch named after its id and left
+# the old one alone, because a ruleset forbids deleting a package branch and no app bypassed
+# it. They stay readable but nothing reads them, and every sweep of the registry walks them,
+# so the number of branches is twice what it has to be until this runs.
+#
+# Dispatch it with dry_run first. A deleted branch is gone, and what a package branch holds
+# was downloaded, hashed and opened on six machines to get there.
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: say what it would delete and delete nothing
+        type: boolean
+        required: false
+        default: true
+permissions: {}
+# Two of these at once would both delete the same branches, and the second would fail on
+# every one the first got to.
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+jobs:
+  sweep:
+    runs-on: ubuntu-24.04
+    # The same environment as a run: deleting a package branch is what the branch key
+    # bypasses the ruleset for.
+    environment: ar2
+    timeout-minutes: 30
+    permissions:
+      # Deleting the branches.
+      contents: write
+    steps:
+      # For names.json, which says which packages have been carried over.
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1 # v3.2.0
+        id: branch_token
+        with:
+          client-id: ${{ vars.AR2_BRANCH_CLIENT_ID }}
+          private-key: ${{ secrets.AR2_BRANCH_PRIVATE_KEY }}
+      - run: python3 .github/workflows/sweep_legacy_branches.py
+        env:
+          GH_TOKEN: ${{ steps.branch_token.outputs.token }}
+          DRY_RUN: ${{ inputs.dry_run }}
