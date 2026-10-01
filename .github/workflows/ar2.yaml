@@ -7,6 +7,10 @@ name: ar2
 on:
   workflow_dispatch:
     inputs:
+      packages:
+        description: packages to work through instead of the order, separated by spaces; empty is the order itself
+        required: false
+        default: ""
       limit:
         description: how many package versions to generate in this run
         required: false
@@ -86,15 +90,24 @@ jobs:
         run: echo "at=$(date +%s)" >> "$GITHUB_OUTPUT"
       - id: generate
         run: |
+          # The packages are one field and each is its own argument, so they are split
+          # on spaces rather than interpolated into the command line. Empty leaves the
+          # arguments off, which is the order itself.
+          args=()
+          for package in $PACKAGES; do
+            args+=("$package")
+          done
           ar2 run \
             --log-level "$LOG_LEVEL" \
             --limit "$LIMIT" \
             --g2-owner "${GITHUB_REPOSITORY%/*}" \
-            --g2-repo "${GITHUB_REPOSITORY#*/}"
+            --g2-repo "${GITHUB_REPOSITORY#*/}" \
+            "${args[@]}"
         env:
           GITHUB_TOKEN: ${{ github.token }}
           AR2_BRANCH_TOKEN: ${{ steps.branch_token.outputs.token }}
           AR2_PR_TOKEN: ${{ steps.pr_token.outputs.token }}
+          PACKAGES: ${{ inputs.packages }}
           LIMIT: ${{ inputs.limit }}
           LOG_LEVEL: ${{ inputs.log_level }}
 
