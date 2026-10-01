@@ -98,6 +98,19 @@ It has an end. Once every package is filled in, a run reads the registry, finds 
 do and writes nothing, so there is no schedule for it. A package whose versions are its
 tags is skipped, having no release list to read a date from.
 
+## How To Fix versions.json
+
+Dispatch [versions.yaml](.github/workflows/versions.yaml), which also runs twice an hour.
+
+```sh
+gh workflow run versions.yaml -f dry_run=true
+gh workflow run versions.yaml -f packages="cli/cli"
+```
+
+The list is derived from `versions/`, so there is nothing to fix by hand: what a run writes
+is what the branch holds. A list is left alone when it names the current `versions` tree,
+which is what makes a sweep over the whole registry two requests a package.
+
 ## How To Fix index.json
 
 [skills/refresh-index](skills/refresh-index/SKILL.md).
