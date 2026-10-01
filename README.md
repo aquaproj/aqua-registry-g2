@@ -78,7 +78,7 @@ one, and a branch named after the package then has to be moved -- while everythi
 wrote the old name down is left pointing at nothing. An id doesn't move, so what a rename
 changes is one line in a table.
 
-[names.json](#main) is that table. The definition on a branch names its own package, so what
+[names.json](names.json) is that table. The definition on a branch names its own package, so what
 the table says can be checked against what the branches say rather than believed.
 
 #### Escaping a version
