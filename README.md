@@ -35,6 +35,7 @@ A package branch is named `pkg_<id>`.
 ```
 .github/workflows/test.yaml
 registry.yaml
+versions.json
 versions/
   <escaped version>/
     registry-1.json
@@ -45,6 +46,9 @@ versions/
   the branch says which one it holds -- its own name doesn't.
 - `versions/<escaped version>/registry-1.json`: the static registry file, which is what
   aqua reads. One per version, written once. We call it `registry.json` for short.
+- `versions.json`: the versions above as one list, with the date each release was published
+  and the digest of the file the registry serves for it. It is derived from `versions/`,
+  which stays the thing that decides what the registry holds.
 
 #### Schema version
 

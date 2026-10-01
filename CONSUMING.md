@@ -46,6 +46,45 @@ Fetch [index.json](index.json).
 
 ## How To List available versions
 
+Fetch `versions.json` from the package branch.
+
+```sh
+gh api 'repos/aquaproj/aqua-registry-g2/contents/versions.json?ref=pkg_1790772860' \
+  --jq '.content' | base64 -d
+```
+
+```json
+{
+  "source": "3c910ec7e3f6eff4cfe2a4bd8528cc4b54e71715",
+  "versions": [
+    {
+      "version": "v1.3.0",
+      "published_at": "2026-09-15T14:24:34Z",
+      "digest": "sha256:1b4f0e9851971998e732078544c96b36c3d01cedf7caa332359d6f1d83567014"
+    }
+  ]
+}
+```
+
+- `version` is the release's tag, as upstream writes it rather than as the branch escapes it.
+- `published_at` is when the release was published, RFC 3339 in UTC. It is what a cooldown
+  asks about -- don't take a release until it has stood for some days -- and the only thing
+  that orders the versions of a package whose tags aren't semver. It is empty where there is
+  no release to ask, which is a package whose versions are tags.
+- `digest` is the SHA-256 of the `registry-1.json` the registry serves for that version, so
+  a reader that has the file can tell whether it is still the one the registry holds.
+- `source` is the sha of the `versions` tree the list was made from. It is what says whether
+  the list is still the branch's: compare it with that tree, which is one request.
+
+The newest release comes first, and a version with no date comes after every version that
+has one.
+
+The list is derived, and `versions/` is what decides what the registry holds. A list that
+hasn't caught up is possible -- it is written within the half hour -- and the tree is right
+when they disagree.
+
+### From the tree
+
 Each directory in `versions/` of a package branch is a version, [escaped](README.md#escaping-a-version).
 
 e.g. [grafana/k6](https://github.com/aquaproj/aqua-registry-g2/tree/pkg_1790772860/versions)
