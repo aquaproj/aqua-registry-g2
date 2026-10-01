@@ -24,8 +24,15 @@ ar2 validate-index                        # check index.json says what aqua read
 ```
 
 Two more rules shape the rest. A pull request is required on `main` and on every
-`pkg_*` branch. A package branch cannot be deleted, by anyone but an administrator:
-the ruleset forbids it and has no bypass actor.
+`pkg_*` branch. A package branch cannot be deleted or rewritten, by anyone but an
+administrator: that ruleset forbids both and has no bypass actor.
+
+The two requirements are separate rulesets on purpose. `AR2_BRANCH_*` bypasses the one
+asking for a pull request and its checks, so it can push onto a package branch; it does
+not bypass the one forbidding deletion and a force push, so what it can do to a branch is
+add to it. What that is for is a file the review has nothing to say about, which so far is
+one thing: [filling in the dates](#how-to-fill-in-when-a-release-was-published) of the
+versions generated before registry.json recorded them.
 
 Two Apps, because two of the things a run does are things `GITHUB_TOKEN` can't.
 `AR2_BRANCH_*` creates package branches, which has to get past the ruleset requiring
@@ -65,6 +72,31 @@ the registry already serves, so nothing about it is automatic.
 The same skill finishes a pull request of versions waiting for a definition, which is the other
 way round: those versions aren't in the registry at all, and what generates them is the
 definition written on that pull request's own branch.
+
+## How To Fill in when a release was published
+
+Dispatch [dates.yaml](.github/workflows/dates.yaml).
+
+```sh
+gh workflow run dates.yaml -f dry_run=true          # what it would write
+gh workflow run dates.yaml
+gh workflow run dates.yaml -f packages="cli/cli"
+```
+
+`registry.json` says when the release it was generated from was published, from ar2 v0.5.0
+on. The files written before that don't, and nothing can work it out from them: the version
+string doesn't say it, and a package whose tags aren't semver has nothing else to order its
+releases by.
+
+Nothing is generated again. The date is read off the release, the one field is added, and
+the file is rendered the way a generation renders it, so the same version generated again
+comes out the same bytes. That is why it is pushed onto the package branches rather than
+opened as a pull request each: hundreds of pull requests, every one asserting what its own
+diff proves.
+
+It has an end. Once every package is filled in, a run reads the registry, finds nothing to
+do and writes nothing, so there is no schedule for it. A package whose versions are its
+tags is skipped, having no release list to read a date from.
 
 ## How To Fix index.json
 
