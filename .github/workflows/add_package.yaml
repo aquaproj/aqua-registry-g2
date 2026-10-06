@@ -60,7 +60,7 @@ jobs:
           persist-credentials: false
       - uses: aquaproj/aqua-installer@82d0e83878a8657c4a6f2ff1755d3bfbfc67f329 # v4.1.0
         with:
-          aqua_version: v2.63.0
+          aqua_version: v2.64.0
       # A package that isn't in the registry has no branch, and creating one has to get
       # past the ruleset requiring status checks that a brand new branch can't have.
       - uses: actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1 # v3.2.0

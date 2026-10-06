@@ -37,7 +37,7 @@ jobs:
           persist-credentials: false
       - uses: aquaproj/aqua-installer@82d0e83878a8657c4a6f2ff1755d3bfbfc67f329 # v4.1.0
         with:
-          aqua_version: v2.63.0
+          aqua_version: v2.64.0
           # -a includes the global configuration. Without it the packages pinned there
           # are not linked and the command isn't found.
           aqua_opts: -l -a
@@ -116,7 +116,7 @@ jobs:
           persist-credentials: false
       - uses: aquaproj/aqua-installer@82d0e83878a8657c4a6f2ff1755d3bfbfc67f329 # v4.1.0
         with:
-          aqua_version: v2.63.0
+          aqua_version: v2.64.0
           aqua_opts: -l -a
       # The entries of this environment, on a machine of this environment. An archive
       # is opened by its format rather than by its platform, so this is not what makes
