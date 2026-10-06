@@ -64,7 +64,7 @@ jobs:
           persist-credentials: false
       - uses: aquaproj/aqua-installer@96a9bc20066c5bf5e275b41019cfc165b25f4e2e # v4.0.5
         with:
-          aqua_version: v2.63.0
+          aqua_version: v2.64.0
       # The app that bypasses the pull request requirement on the package branches, which
       # is what lets a list be pushed onto one. It holds no pull-requests permission, so
       # the bypass can't be turned into a way to merge something unchecked.
