@@ -4,6 +4,9 @@ repo_owner: microsoft
 repo_name: vscode
 description: Visual Studio Code
 link: https://code.visualstudio.com/
+replacements:
+  windows: win32
+  amd64: x64
 version_overrides:
   - version_constraint: semver(">= 1.73.0")
     url: https://update.code.visualstudio.com/{{trimV .Version}}/cli-{{.OS}}-{{.Arch}}/stable
