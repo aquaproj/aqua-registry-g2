@@ -57,8 +57,6 @@ jobs:
       - uses: aquaproj/aqua-installer@82d0e83878a8657c4a6f2ff1755d3bfbfc67f329 # v4.1.0
         with:
           aqua_version: v2.64.0
-          # ar2 is installed here rather than on its first use, so a run that
-          # cannot have it fails before it has done anything.
           packages: ar2
       # The token that commits the catalogue and opens its pull request. A pull
       # request opened or updated with GITHUB_TOKEN gets its checks in an
