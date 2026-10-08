@@ -46,6 +46,7 @@ jobs:
       - uses: aquaproj/aqua-installer@82d0e83878a8657c4a6f2ff1755d3bfbfc67f329 # v4.1.0
         with:
           aqua_version: v2.64.0
+          packages: ar2
       # No branch token, although this environment holds the key: a package being removed
       # is one the registry holds, so every branch this touches is already there.
       - uses: actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1 # v3.2.0
