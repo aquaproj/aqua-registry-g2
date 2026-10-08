@@ -49,6 +49,9 @@ jobs:
       - uses: aquaproj/aqua-installer@82d0e83878a8657c4a6f2ff1755d3bfbfc67f329 # v4.1.0
         with:
           aqua_version: v2.64.0
+          # ar2 is installed here rather than on its first use, so a run that
+          # cannot have it fails before it has done anything.
+          packages: ar2
       - uses: actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1 # v3.2.0
         id: branch_token
         with:
