@@ -4,6 +4,9 @@ repo_owner: blender
 repo_name: blender
 description: Blender is a free and open-source 3D computer graphics software
 version_source: github_tag
+replacements:
+  darwin: macos
+  amd64: x64
 version_overrides:
     - version_constraint: "true"
       url: https://download.blender.org/release/Blender{{(semver .Version).Major}}.{{(semver .Version).Minor}}/blender-{{trimV .Version}}-{{.OS}}-{{.Arch}}.{{.Format}}
