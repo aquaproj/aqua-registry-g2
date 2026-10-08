@@ -7,4 +7,6 @@ url: https://repo1.maven.org/maven2/io/grpc/protoc-gen-grpc-java/{{trimV .Versio
 format: raw
 windows_arm_emulation: true
 replacements:
+  darwin: osx
+  amd64: x86_64
   arm64: aarch_64
