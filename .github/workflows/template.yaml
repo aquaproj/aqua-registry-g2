@@ -1,0 +1,89 @@
+---
+name: template
+# Write the template onto the package branches that hold something else.
+#
+# A package branch is created holding the files in template/, because a workflow for a
+# branch is read from that branch. They are copied once and never updated, so a file added
+# to the template afterwards isn't on the branches made before it, and a call that has to
+# change doesn't change on them by itself. This is what moves either.
+#
+# Dispatched by hand. Nothing here needs a schedule: a new branch gets the template when it
+# is created, so what this is for is a template that has changed, which is a thing someone
+# just did.
+on:
+  workflow_dispatch:
+    inputs:
+      branches:
+        description: the package branches to write, separated by spaces; empty is every one
+        required: false
+        default: ""
+      limit:
+        description: how many branches this run writes to, 0 for as many as there are
+        required: false
+        default: "0"
+      dry_run:
+        description: say which branches would be written to without writing
+        type: boolean
+        required: false
+        default: true
+      log_level:
+        description: how much the run says about what it is doing
+        required: false
+        default: info
+permissions: {}
+# Never alongside something else writing to the package branches: a push onto a branch
+# another run has just moved would be rejected.
+concurrency:
+  group: ar2
+  cancel-in-progress: false
+jobs:
+  template:
+    runs-on: ubuntu-24.04
+    # The app key lives here rather than at the repository level, so a workflow on any
+    # other ref can't read it. The environment only lets main deploy to it.
+    environment: ar2
+    timeout-minutes: 30
+    permissions:
+      # Reading aqua/aqua.yaml for the ar2 version, and the template itself. The writing is
+      # the app's, through the API.
+      contents: read
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: aquaproj/aqua-installer@82d0e83878a8657c4a6f2ff1755d3bfbfc67f329 # v4.1.0
+        with:
+          aqua_version: v2.64.0
+          packages: ar2
+      # The app that bypasses the pull request requirement on the package branches, which
+      # is what lets the template be pushed onto one. It holds no pull-requests permission,
+      # so the bypass can't be turned into a way to merge something unchecked.
+      - uses: actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1 # v3.2.0
+        id: branch_token
+        with:
+          client-id: ${{ vars.AR2_BRANCH_CLIENT_ID }}
+          private-key: ${{ secrets.AR2_BRANCH_PRIVATE_KEY }}
+      - run: |
+          # The branches are one field and each is its own argument, so they are split on
+          # spaces rather than interpolated into the command line. Empty leaves the
+          # argument off, which is every package branch.
+          args=()
+          for branch in $BRANCHES; do
+            args+=(--branch "$branch")
+          done
+          if [ "$DRY_RUN" = "true" ]; then
+            args+=(--dry-run)
+          fi
+          ar2 template \
+            --log-level "$LOG_LEVEL" \
+            --limit "$LIMIT" \
+            --g2-owner "${GITHUB_REPOSITORY%/*}" \
+            --g2-repo "${GITHUB_REPOSITORY#*/}" \
+            "${args[@]}"
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          AR2_BRANCH_TOKEN: ${{ steps.branch_token.outputs.token }}
+          BRANCHES: ${{ inputs.branches }}
+          LIMIT: ${{ inputs.limit }}
+          DRY_RUN: ${{ inputs.dry_run }}
+          LOG_LEVEL: ${{ inputs.log_level }}
