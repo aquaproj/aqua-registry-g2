@@ -5,6 +5,10 @@ repo_name: zig
 description: General-purpose programming language and toolchain for maintaining robust, optimal, and reusable software
 link: https://ziglang.org/
 version_source: github_tag
+replacements:
+  darwin: macos
+  amd64: x86_64
+  arm64: aarch64
 version_overrides:
     - version_constraint: Version contains "-dev"
       url: https://ziglang.org/builds/zig-{{.OS}}-{{.Arch}}-{{.Version}}.{{.Format}}
