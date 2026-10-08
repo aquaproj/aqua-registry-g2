@@ -1,0 +1,26 @@
+---
+# Ask for this branch's list of versions to be written again, after a version is added to
+# it or taken off it.
+#
+# A push workflow is read from the branch that was pushed, so this has to be on the package
+# branch itself rather than on main. It is copied here when the branch is created and is
+# never updated again, which is why it holds nothing but the call: what it calls lives on
+# main, where it can be improved for every package at once.
+#
+# Don't add jobs to this file. Add them to wc_versions.yaml on main.
+name: versions
+on:
+  push:
+    # The versions, and nothing else. versions.json is at the root of the branch, so the
+    # write this run asks for doesn't start another run.
+    paths:
+      - versions/**
+permissions: {}
+jobs:
+  versions:
+    # The full form rather than a relative path, which would resolve against this branch.
+    uses: aquaproj/aqua-registry-g2/.github/workflows/wc_versions.yaml@main
+    permissions:
+      # Asking for the list to be written, which is a repository_dispatch.
+      contents: write
+  # Don't add jobs to this file. Add them to wc_versions.yaml on main.
