@@ -1,0 +1,58 @@
+---
+name: versions (update)
+# Write a package branch's list of versions, when that branch says it has changed.
+#
+# The branch says so through a repository_dispatch, which is what the push workflow on it
+# raises. A workflow triggered that way is read from the default branch, so this runs with
+# main's secrets where the branch's own workflow couldn't: the app that pushes onto a
+# package branch keeps its key in the ar2 environment, and only main may deploy to it.
+#
+# versions.yaml sweeps every branch on a schedule, and this is what makes a list current
+# within a minute of a version merging rather than whenever GitHub gets to the sweep. The
+# sweep stays as what catches a branch this missed.
+on:
+  repository_dispatch:
+    types:
+      - versions
+permissions: {}
+# One run per branch. Not one run at a time: several packages merge at once, each writing
+# to its own branch, and a shared group would leave GitHub cancelling the pending ones --
+# which is a list not written rather than a list written later.
+concurrency:
+  group: versions--${{ github.event.client_payload.branch }}
+  cancel-in-progress: false
+jobs:
+  update:
+    runs-on: ubuntu-24.04
+    # The app key lives here rather than at the repository level, so a workflow on any
+    # other ref can't read it. The environment only lets main deploy to it.
+    environment: ar2
+    timeout-minutes: 15
+    permissions:
+      # Reading aqua/aqua.yaml for the ar2 version. The writing is the app's.
+      contents: read
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: aquaproj/aqua-installer@96a9bc20066c5bf5e275b41019cfc165b25f4e2e # v4.0.5
+        with:
+          aqua_version: v2.63.0
+      - uses: actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1 # v3.2.0
+        id: branch_token
+        with:
+          client-id: ${{ vars.AR2_BRANCH_CLIENT_ID }}
+          private-key: ${{ secrets.AR2_BRANCH_PRIVATE_KEY }}
+      # The branch comes from the payload, so it is passed as an environment variable
+      # rather than interpolated into the script: what a dispatch says is what whoever
+      # raised it said. 'ar2 versions' reads the branch and writes what it holds, so a
+      # branch that isn't one writes nothing.
+      - run: |
+          ar2 versions \
+            --branch "$BRANCH" \
+            --g2-owner "${GITHUB_REPOSITORY%/*}" \
+            --g2-repo "${GITHUB_REPOSITORY#*/}"
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          AR2_BRANCH_TOKEN: ${{ steps.branch_token.outputs.token }}
+          BRANCH: ${{ github.event.client_payload.branch }}
