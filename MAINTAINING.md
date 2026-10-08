@@ -135,9 +135,9 @@ branch. So the branch's own workflow needs no secret, and the one with the key n
 anywhere but main.
 
 The caller on the branch is copied from the template when the branch is created and never
-updated, like the test one. The branches that existed before it did get it from
-[distribute_versions_caller.yaml](.github/workflows/distribute_versions_caller.yaml), which
-goes once they all have it.
+updated afterwards, like the test one, so it holds nothing but the call. A branch that
+predates a template file doesn't have it, and what puts it there is
+[bringing the template up to date](#how-to-bring-the-template-up-to-date).
 
 ## How To Fix index.json
 
