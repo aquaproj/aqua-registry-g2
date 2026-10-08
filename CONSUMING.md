@@ -80,10 +80,13 @@ The newest release comes first, and a version with no date comes after every ver
 has one.
 
 The list is derived, and `versions/` is what decides what the registry holds. A list that
-hasn't caught up is possible, and the tree is right when they disagree. How far behind it can
-be is however long GitHub takes to run the sweep that writes it: the schedule asks for twice
-an hour and GitHub answers at its own pace, which in this repository has been a few hours.
-A reader that must not miss a version reads the tree.
+hasn't caught up is possible, and the tree is right when they disagree.
+
+A version merging onto a package branch asks for that branch's list to be written, so a list
+is normally current within a minute of the version appearing. What that doesn't cover -- a
+run that failed, a branch that changed before this was built -- a sweep over every branch
+does, and the sweep runs when GitHub gets to it, which has been a few hours. So a reader
+that must not miss a version reads the tree.
 
 ### From the tree
 

@@ -100,18 +100,44 @@ tags is skipped, having no release list to read a date from.
 
 ## How To Fix versions.json
 
-Dispatch [versions.yaml](.github/workflows/versions.yaml), which also asks to run twice an
-hour. A scheduled workflow runs when GitHub gets to it, and in this repository that has been
-a few hours, so dispatching it is how a list is brought up to date now.
+A version merging writes its branch's list by itself, so normally there is nothing to do.
+The list is derived from `versions/`, so there is nothing to fix by hand either: what a run
+writes is what the branch holds.
+
+Dispatch [versions.yaml](.github/workflows/versions.yaml) to sweep every branch, which it
+also asks to do twice an hour.
 
 ```sh
 gh workflow run versions.yaml -f dry_run=true
 gh workflow run versions.yaml -f packages="cli/cli"
 ```
 
-The list is derived from `versions/`, so there is nothing to fix by hand: what a run writes
-is what the branch holds. A list is left alone when it names the current `versions` tree,
-which is what makes a sweep over the whole registry two requests a package.
+A scheduled workflow runs when GitHub gets to it, and in this repository that has been a few
+hours, so the sweep is what catches a list a merge didn't write rather than what keeps them
+current. A list is left alone when it names the current `versions` tree, which is what makes
+a sweep over the whole registry two requests a package.
+
+### How a merge writes the list
+
+A package branch can't write its own list: the app that may push onto one keeps its key in
+the `ar2` environment, only main may deploy to that, and a push workflow runs on the branch
+that was pushed. Three files carry the news across that line without carrying the key back.
+
+| where | what |
+| --- | --- |
+| the package branch | [`versions.yaml`](template/.github/workflows/versions.yaml), on `versions/**`, calling main |
+| main | [`wc_versions.yaml`](.github/workflows/wc_versions.yaml), which raises a `repository_dispatch` naming the branch |
+| main | [`versions_update.yaml`](.github/workflows/versions_update.yaml), triggered by it, which writes the list |
+
+What makes it work is that `repository_dispatch` is one of the two events GitHub raises even
+when `GITHUB_TOKEN` sends them, and that a workflow it triggers is read from the default
+branch. So the branch's own workflow needs no secret, and the one with the key never runs
+anywhere but main.
+
+The caller on the branch is copied from the template when the branch is created and never
+updated afterwards, like the test one, so it holds nothing but the call. A branch that
+predates a template file doesn't have it, and what puts it there is
+[bringing the template up to date](#how-to-bring-the-template-up-to-date).
 
 ## How To Fix index.json
 
