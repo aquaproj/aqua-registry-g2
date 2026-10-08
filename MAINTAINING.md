@@ -137,7 +137,27 @@ anywhere but main.
 The caller on the branch is copied from the template when the branch is created and never
 updated afterwards, like the test one, so it holds nothing but the call. A branch that
 predates a template file doesn't have it, and what puts it there is
-[bringing the template up to date](#how-to-bring-the-template-up-to-date).
+[the template](#how-to-change-what-a-package-branch-holds).
+
+## How To Change what a package branch holds
+
+Dispatch [template.yaml](.github/workflows/template.yaml) after changing `template/`.
+
+```sh
+gh workflow run template.yaml -f dry_run=true
+gh workflow run template.yaml -f dry_run=false
+gh workflow run template.yaml -f branches="pkg_1790772767" -f dry_run=false
+```
+
+A package branch is created holding the files in `template/`, because a workflow for a
+branch is read from that branch rather than from main. They are copied once and never
+updated, so a file added to the template isn't on the branches made before it, and a call
+that has to change doesn't change on them by itself.
+
+It writes one way and deletes nothing: what the template names is written where a branch
+holds something else, and what a branch holds and the template doesn't -- the definition,
+the versions, the list of them -- is left alone. So a file taken out of the template stays
+where it was copied, and taking it off the branches is not this.
 
 ## How To Fix index.json
 
