@@ -11,6 +11,11 @@
 name: versions
 on:
   push:
+    # This branch, and not the head branch of a pull request for it. A head branch is cut
+    # from here, so it holds the versions too and a push to it looks like a push to this
+    # one -- and what the list would be written onto then is somebody's pull request.
+    branches:
+      - pkg_*
     # The versions, and nothing else. versions.json is at the root of the branch, so the
     # write this run asks for doesn't start another run.
     paths:
