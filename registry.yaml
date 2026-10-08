@@ -5,6 +5,8 @@ repo_name: flutter
 description: Flutter SDK - Google's UI toolkit for building beautiful, natively compiled applications
 version_filter: Version matches "^\\d+\\.\\d+\\.\\d+$"
 version_source: github_tag
+replacements:
+  darwin: macos
 files:
     - name: flutter
       src: flutter/bin/flutter
