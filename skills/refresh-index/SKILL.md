@@ -22,11 +22,18 @@ until then.
 The entry's id is the branch the definition was read from. Nothing is minted there: the branch
 exists, so where the package is has an answer already.
 
-### What the reconciliation doesn't notice
+### What the reconciliation notices
 
-An entry that is out of date. It asks which packages are missing, and a package whose
-description or aliases changed isn't missing -- which is why a definition edited by hand needs
-the package named.
+Both a package the catalogue is missing and an entry that is out of date: every definition is
+read and every entry is compared against the one its definition makes now. Naming a package
+narrows the work, not what is noticed.
+
+What it doesn't do is remove. An entry with no definition behind it is either a package waiting
+for the pull request that brings its definition, or an orphan -- somebody's decision rather than
+a reconciliation's.
+
+A definition merging asks for the reconciliation itself, so the catalogue follows it by about a
+minute; the schedule is what catches a merge that didn't ask.
 
 `ar2 validate-index` checks that a name isn't both a package and another package's alias, and
 that no two packages claim one id. It runs on every pull request into `main`.

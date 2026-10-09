@@ -41,6 +41,18 @@ so the bypass can't become a way to merge something unchecked. `AR2_PR_*` commit
 head branches and opens the pull requests, because a pull request opened with
 `GITHUB_TOKEN` gets its checks in an approval-required state and would never auto-merge.
 
+## The checks on a pull request into main
+
+[test.yaml](.github/workflows/test.yaml) calls [wc_main.yaml](.github/workflows/wc_main.yaml)
+and one job decides the merge: `status-check-main` fails when the call didn't pass, so jobs
+can be added to the reusable workflow without touching the ruleset.
+
+[actionlint.yaml](.github/workflows/actionlint.yaml) is apart from it on purpose. What it
+reads is the workflows themselves, so it has to answer when they are what is broken -- a
+reusable workflow that won't parse takes every job calling it with it. It holds one job,
+which is therefore the check the ruleset requires, and it installs no aqua: the action
+carries actionlint.
+
 ## How To Add packages
 
 [skills/add-package](skills/add-package/SKILL.md).
@@ -163,8 +175,16 @@ where it was copied, and taking it off the branches is not this.
 
 [skills/refresh-index](skills/refresh-index/SKILL.md).
 
-The schedule reconciles the catalogue twice an hour. What it can't notice is an entry that is
-out of date, which is why a definition edited by hand needs its package named.
+The schedule reconciles the catalogue twice an hour, and what it reconciles is both the
+packages the catalogue is missing and the entries that are out of date: every definition is
+read and every entry compared against what its definition says now. Naming a package narrows
+the work rather than what is noticed.
+
+A definition merging asks for the reconciliation itself, the way a version asks for its
+list: the branch raises a `repository_dispatch` through
+[wc_index.yaml](.github/workflows/wc_index.yaml) and [index.yaml](.github/workflows/index.yaml)
+answers it. So the catalogue follows a definition by about a minute, and the schedule is
+what catches a merge that didn't ask.
 
 ## How To Fix names.json
 
