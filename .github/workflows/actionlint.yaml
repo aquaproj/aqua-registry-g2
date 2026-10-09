@@ -1,0 +1,29 @@
+---
+name: actionlint
+# Check the workflows, on its own.
+#
+# Apart from the other checks on purpose. What it reads is the workflows themselves, so it
+# is the check that has to answer when they are what is broken: a reusable workflow that
+# won't parse takes every job that calls it with it, and this one calls nothing. It holds a
+# single job for the same reason, so the job is the check the ruleset requires.
+#
+# It is also the one check here that doesn't install aqua. The action carries actionlint,
+# which is what lets the registry's aqua.yaml say nothing about it.
+on: pull_request
+permissions: {}
+concurrency:
+  group: ${{ github.workflow }}--${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  actionlint:
+    runs-on: ubuntu-26.04
+    timeout-minutes: 10
+    permissions:
+      contents: read
+      # Saying what it found on the pull request, which is the action's own doing.
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: suzuki-shunsuke/actionlint-action@bbce1e825be8286c27e00c3f6c42adccf5955fba # v0.2.1
