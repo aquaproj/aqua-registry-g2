@@ -2,7 +2,7 @@ name: cli/cli
 type: github_release
 repo_owner: cli
 repo_name: cli
-description: GitHub’s official command line tool
+descriptio: GitHub’s official command line tool
 files:
     - name: gh
       src: gh_{{trimV .Version}}_{{.OS}}_{{.Arch}}/bin/gh
