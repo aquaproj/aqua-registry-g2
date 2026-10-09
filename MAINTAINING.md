@@ -41,6 +41,18 @@ so the bypass can't become a way to merge something unchecked. `AR2_PR_*` commit
 head branches and opens the pull requests, because a pull request opened with
 `GITHUB_TOKEN` gets its checks in an approval-required state and would never auto-merge.
 
+## The checks on a pull request into main
+
+[test.yaml](.github/workflows/test.yaml) calls [wc_main.yaml](.github/workflows/wc_main.yaml)
+and one job decides the merge: `status-check-main` fails when the call didn't pass, so jobs
+can be added to the reusable workflow without touching the ruleset.
+
+[actionlint.yaml](.github/workflows/actionlint.yaml) is apart from it on purpose. What it
+reads is the workflows themselves, so it has to answer when they are what is broken -- a
+reusable workflow that won't parse takes every job calling it with it. It holds one job,
+which is therefore the check the ruleset requires, and it installs no aqua: the action
+carries actionlint.
+
 ## How To Add packages
 
 [skills/add-package](skills/add-package/SKILL.md).
