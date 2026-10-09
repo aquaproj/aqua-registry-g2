@@ -42,6 +42,11 @@ jobs:
           # -a includes the global configuration. Without it the packages pinned there
           # are not linked and the command isn't found.
           aqua_opts: -l -a
+      # The definition, whatever else the pull request touches. It is the only thing
+      # that says which package this branch holds, and nothing else on the way in reads
+      # it: one that had stopped being YAML merged, and the package then generated
+      # nothing while a run said so in a log nobody was watching.
+      - run: ar2 validate-definition
       # Only what this pull request adds or changes is checked. A package accumulates
       # versions and the ones already merged were checked when they arrived, so
       # checking them again would download every asset the package ever published.
