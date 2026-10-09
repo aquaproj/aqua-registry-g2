@@ -1,0 +1,10 @@
+---
+# The labels actionlint doesn't know yet.
+#
+# ubuntu-26.04 is a GitHub-hosted runner -- actions/runner-images lists it, beside
+# ubuntu-24.04 -- and actionlint's newest release, v1.7.12 from March, was cut before it
+# existed. This is where a label it hasn't learned is declared, which is the same list it
+# reads for a self-hosted one. It goes once actionlint ships the label.
+self-hosted-runner:
+  labels:
+    - ubuntu-26.04
