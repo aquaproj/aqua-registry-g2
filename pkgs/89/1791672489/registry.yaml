@@ -1,0 +1,19 @@
+name: dagucloud/dagu
+aliases:
+  - name: yohamta/dagu
+  - name: hotaruswarm/dagu
+  - name: dagu-dev/dagu
+  - name: daguflow/dagu
+  - name: dagu-org/dagu
+type: github_release
+repo_owner: dagucloud
+repo_name: dagu
+repo_id: 484434975
+description: Self-hosted workflow engine for scripts, cron jobs, containers, and ops automation. YAML workflows, retries, logs, approvals, and optional distributed workers
+version_overrides:
+  - version_constraint: semver("> 1.17.3")
+  - version_constraint: semver("> 1.10.5")
+  - version_constraint: semver("> 1.0.2")
+  - version_constraint: semver("<= 1.0.2")
+    error_message: The version is too old. Please upgrade to a newer version.
+  - version_constraint: "true"
