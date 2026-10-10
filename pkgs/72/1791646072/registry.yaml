@@ -1,0 +1,16 @@
+name: lxc/incus
+type: github_release
+repo_owner: lxc
+repo_name: incus
+description: Powerful system container and virtual machine manager
+github_artifact_attestations:
+  signer_workflow: lxc/incus/.github/workflows/release.yml
+version_overrides:
+  - version_constraint: semver(">= 6.23.0")
+    github_artifact_attestations:
+      signer_workflow: lxc/incus/.github/workflows/release.yml
+  - version_constraint: semver("> 0.1.0")
+  - version_constraint: semver("<= 0.1.0")
+  - version_constraint: "true"
+    github_artifact_attestations:
+      signer_workflow: lxc/incus/.github/workflows/release.yml
