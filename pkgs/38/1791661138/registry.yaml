@@ -1,0 +1,11 @@
+name: charmbracelet/freeze
+type: github_release
+repo_owner: charmbracelet
+repo_name: freeze
+repo_id: 741230168
+description: Generate images of code and terminal output
+version_overrides:
+  - version_constraint: "true"
+    files:
+      - name: freeze
+        src: '{{.AssetWithoutExt}}/freeze'
