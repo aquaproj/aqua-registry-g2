@@ -1,0 +1,159 @@
+name: commercialhaskell/stack
+type: github_release
+repo_owner: commercialhaskell
+repo_name: stack
+repo_id: 34817922
+description: The Haskell Tool Stack
+version_overrides:
+  - version_constraint: Version == "v0.0.2-beta"
+    files:
+      - name: stack
+        src: '{{.AssetWithoutExt}}'
+  - version_constraint: Version == "v0.0.3-beta"
+    files:
+      - name: stack
+        src: '{{.AssetWithoutExt}}'
+  - version_constraint: Version == "v1.1.2"
+    files:
+      - name: stack
+        src: '{{.AssetWithoutExt}}/stack'
+    overrides:
+      - goos: windows
+        files:
+          - name: stack
+  - version_constraint: Version == "v1.6.0.20171022"
+    files:
+      - name: stack
+        src: '{{.AssetWithoutExt}}/stack'
+  - version_constraint: Version == "v1.6.0.20171202"
+    files:
+      - name: stack
+        src: '{{.AssetWithoutExt}}/stack'
+  - version_constraint: Version == "v1.6.1"
+    files:
+      - name: stack
+        src: '{{.AssetWithoutExt}}/stack'
+  - version_constraint: Version == "rc/v2.7.0.1"
+    files:
+      - name: stack
+        src: '{{.AssetWithoutExt}}/stack'
+  - version_constraint: Version == "rc/v2.7.0.3"
+    files:
+      - name: stack
+        src: '{{.AssetWithoutExt}}/stack'
+  - version_constraint: Version == "v2.7.1"
+    files:
+      - name: stack
+        src: '{{.AssetWithoutExt}}/stack'
+  - version_constraint: Version == "rc/v2.9.0.1"
+    files:
+      - name: stack
+        src: '{{.AssetWithoutExt}}/stack'
+  - version_constraint: Version == "v2.9.1"
+    files:
+      - name: stack
+        src: '{{.AssetWithoutExt}}/stack'
+  - version_constraint: Version == "rc/v2.9.2.1"
+    files:
+      - name: stack
+        src: '{{.AssetWithoutExt}}/stack'
+  - version_constraint: Version == "v2.9.3"
+    files:
+      - name: stack
+        src: '{{.AssetWithoutExt}}/stack'
+  - version_constraint: Version == "rc/v2.11.0.1"
+    files:
+      - name: stack
+        src: '{{.AssetWithoutExt}}/stack'
+  - version_constraint: Version == "v2.11.1"
+    files:
+      - name: stack
+        src: '{{.AssetWithoutExt}}/stack'
+  - version_constraint: Version == "rc/v2.13.0.1"
+    files:
+      - name: stack
+        src: '{{.AssetWithoutExt}}/stack'
+  - version_constraint: Version == "v2.13.1"
+    files:
+      - name: stack
+        src: '{{.AssetWithoutExt}}/stack'
+  - version_constraint: Version == "rc/v2.15.0.1"
+    files:
+      - name: stack
+        src: '{{.AssetWithoutExt}}/stack'
+  - version_constraint: Version == "rc/v2.15.4.1"
+    files:
+      - name: stack
+        src: '{{.AssetWithoutExt}}/stack'
+  - version_constraint: semver("> 2.15.3")
+    files:
+      - name: stack
+        src: '{{.AssetWithoutExt}}/stack'
+  - version_constraint: semver("> 2.7.5")
+    files:
+      - name: stack
+        src: '{{.AssetWithoutExt}}/stack'
+  - version_constraint: semver("> 2.5.1")
+    files:
+      - name: stack
+        src: '{{.AssetWithoutExt}}/stack'
+  - version_constraint: semver("> 2.3.1")
+    files:
+      - name: stack
+        src: '{{.AssetWithoutExt}}/stack'
+  - version_constraint: semver("> 2.1.3")
+    files:
+      - name: stack
+        src: '{{.AssetWithoutExt}}/stack'
+  - version_constraint: semver("> 2.1.0.3")
+    files:
+      - name: stack
+        src: '{{.AssetWithoutExt}}/stack'
+  - version_constraint: semver("> 1.9.3")
+    files:
+      - name: stack
+        src: '{{.AssetWithoutExt}}/stack'
+  - version_constraint: semver("> 1.6.5")
+    files:
+      - name: stack
+        src: '{{.AssetWithoutExt}}/stack'
+  - version_constraint: semver("> 1.5.1")
+    files:
+      - name: stack
+        src: '{{.AssetWithoutExt}}/stack'
+  - version_constraint: semver("> 1.1.0")
+    files:
+      - name: stack
+        src: '{{.AssetWithoutExt}}/stack'
+  - version_constraint: semver("> 0.1.5.0")
+    files:
+      - name: stack
+        src: '{{.AssetWithoutExt}}/stack'
+    overrides:
+      - goos: windows
+        files:
+          - name: stack
+  - version_constraint: semver("> 0.1.3.1")
+    files:
+      - name: stack
+        src: '{{.AssetWithoutExt}}/stack'
+    overrides:
+      - goos: windows
+        files:
+          - name: stack
+  - version_constraint: semver("> 0.1.1.0")
+    files:
+      - name: stack
+        src: '{{.AssetWithoutExt}}'
+  - version_constraint: semver("> 0.0.0-beta")
+    files:
+      - name: stack
+        src: '{{.AssetWithoutExt}}'
+  - version_constraint: semver("<= 0.0.0-beta")
+    files:
+      - name: stack
+        src: '{{.AssetWithoutExt}}'
+  - version_constraint: "true"
+    files:
+      - name: stack
+        src: '{{.AssetWithoutExt}}/stack'
