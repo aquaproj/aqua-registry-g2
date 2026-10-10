@@ -20,8 +20,7 @@ The `ar2` commands that only read can be run directly: `ar2 state`,
 Editing files by hand is the other half, and it is ordinary git: a package's `registry.yaml`
 (`pkgs/<shard>/<id>/registry.yaml`) is written that way, and so is anything else on `main`. It
 needs a pull request -- `main` requires one -- and the commit has to be signed, which it is when
-git is configured to sign. The `pkg_*` branches each package used to be kept on are frozen;
-nothing is written to them.
+git is configured to sign.
 
 ## Where things are
 

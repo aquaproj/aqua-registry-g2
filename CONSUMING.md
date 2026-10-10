@@ -38,7 +38,7 @@ https://raw.githubusercontent.com/aquaproj/aqua-registry-g2/main/pkgs/<shard>/<i
 
 e.g. https://raw.githubusercontent.com/aquaproj/aqua-registry-g2/main/pkgs/60/1790772860/versions/v2.3.0/registry-1.json
 
-Until 2026-10 each package was kept on a branch of its own, `pkg_<id>`, at the root of it. Those branches are still there and no longer change, so a URL naming one keeps answering for the versions it held then and never for a newer one.
+Until 2026-10 each package was kept on a branch of its own, `pkg_<id>`, at the root of it. Those branches are deleted, so a URL naming one no longer answers.
 
 `1` of `registry-1.json` is the major version of the registry schema. See [README.md](README.md#schema-version) for what a reader should do when a new one arrives.
 

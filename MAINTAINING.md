@@ -32,9 +32,8 @@ opened with `GITHUB_TOKEN` gets its checks in an approval-required state and wou
 auto-merge. It is a bypass actor for nothing, so the checks still decide what merges.
 
 Until 2026-10 each package was kept on an orphan branch of its own, `pkg_<id>`, and a second
-App, `AR2_BRANCH_*`, created them past the rulesets guarding them. The branches are still
-there, frozen, and nothing writes to them
-([#695](https://github.com/aquaproj/aqua-registry-g2/issues/695)).
+App, `AR2_BRANCH_*`, created them past the rulesets guarding them. The branches, the
+rulesets and the App are gone ([#695](https://github.com/aquaproj/aqua-registry-g2/issues/695)).
 
 ## The checks on a pull request into main
 
