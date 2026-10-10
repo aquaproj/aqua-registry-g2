@@ -1,0 +1,12 @@
+name: grafana/mimir/mimirtool
+type: github_release
+repo_owner: grafana
+repo_name: mimir
+repo_id: 385634291
+description: Grafana Mimir provides horizontally scalable, highly available, multi-tenant, long-term storage for Prometheus
+version_prefix: mimir-
+version_overrides:
+  - version_constraint: Version == "mimir-3.2.0-rc.0"
+    no_asset: true
+  - version_constraint: "true"
+all_assets_filter: not (Asset matches "mimir-")
