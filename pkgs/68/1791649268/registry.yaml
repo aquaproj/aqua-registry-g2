@@ -1,0 +1,15 @@
+name: alpkeskin/mosint
+type: go_install
+repo_owner: alpkeskin
+repo_name: mosint
+repo_id: 299054922
+description: An automated e-mail OSINT tool
+version_overrides:
+  - version_constraint: Version == "v2.3.1"
+    type: go_build
+    files:
+      - name: mosint
+        src: .
+        dir: mosint-{{trimV .Version}}
+  - version_constraint: "true"
+    path: github.com/alpkeskin/mosint/v{{(semver .Version).Major}}/cmd/mosint
