@@ -1,0 +1,31 @@
+name: dprint/dprint
+type: github_release
+repo_owner: dprint
+repo_name: dprint
+repo_id: 192136193
+description: Pluggable and configurable code formatting platform written in Rust
+github_artifact_attestations:
+  signer_workflow: dprint/dprint/.github/workflows/ci.generated.yml
+  source_ref: refs/tags/0.61.1
+  source_digest: 173d604559beabecde9746b18701e714ebc3158d
+  cert_oidc_issuer: https://token.actions.githubusercontent.com
+  deny_self_hosted_runners: true
+version_overrides:
+  - version_constraint: semver("> 0.57.0")
+    github_artifact_attestations:
+      signer_workflow: dprint/dprint/.github/workflows/ci.generated.yml
+      source_ref: refs/tags/0.61.1
+      source_digest: 173d604559beabecde9746b18701e714ebc3158d
+      cert_oidc_issuer: https://token.actions.githubusercontent.com
+      deny_self_hosted_runners: true
+  - version_constraint: semver(">= 0.52.0")
+  - version_constraint: semver(">= 0.34.0")
+  - version_constraint: semver(">= 0.14.0")
+  - version_constraint: semver("< 0.14.0")
+  - version_constraint: "true"
+    github_artifact_attestations:
+      signer_workflow: dprint/dprint/.github/workflows/ci.generated.yml
+      source_ref: refs/tags/0.61.1
+      source_digest: 173d604559beabecde9746b18701e714ebc3158d
+      cert_oidc_issuer: https://token.actions.githubusercontent.com
+      deny_self_hosted_runners: true
