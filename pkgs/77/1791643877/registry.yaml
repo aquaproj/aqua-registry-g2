@@ -1,0 +1,8 @@
+name: pachyderm/pachyderm
+type: github_release
+repo_owner: pachyderm
+repo_name: pachyderm
+description: Data-Centric Pipelines and Data Versioning
+files:
+  - name: pachctl
+    src: pachctl_{{trimV .Version}}_{{.OS}}_{{.Arch}}/pachctl
