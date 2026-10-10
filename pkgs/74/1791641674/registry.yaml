@@ -1,0 +1,16 @@
+name: cloudquery/cloudquery
+type: github_release
+repo_owner: cloudquery
+repo_name: cloudquery
+description: The open source high performance data integration platform built for developers
+version_prefix: cli-
+version_overrides:
+  - version_constraint: semver(">= 1.0.0")
+  - version_constraint: semver(">= 0.32.7")
+    version_prefix: cli/
+  - version_constraint: semver(">= 0.32.5")
+    version_prefix: cli/
+    files:
+      - name: cloudquery
+        src: cli
+  - version_constraint: "true"
