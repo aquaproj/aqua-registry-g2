@@ -1,0 +1,18 @@
+name: kubernetes-sigs/cluster-api
+type: github_release
+repo_owner: kubernetes-sigs
+repo_name: cluster-api
+repo_id: 124157517
+description: Home for Cluster API, a subproject of sig-cluster-lifecycle
+files:
+  - name: clusterctl
+    src: clusterctl-{{.OS}}-{{.Arch}}
+version_overrides:
+  - version_constraint: semver("> 1.0.5")
+  - version_constraint: semver("> 0.4.0")
+  - version_constraint: semver("> 0.3.25")
+  - version_constraint: semver("> 0.3.23")
+  - version_constraint: semver("> 0.1.10")
+  - version_constraint: semver("> 0.0.0-alpha.2")
+    no_asset: true
+  - version_constraint: "true"
