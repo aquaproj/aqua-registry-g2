@@ -1,0 +1,29 @@
+name: k0sproject/k0s
+type: github_release
+repo_owner: k0sproject
+repo_name: k0s
+description: k0s - The Zero Friction Kubernetes
+version_filter: not (Version matches "-(alpha|beta|rc)")
+version_overrides:
+  - version_constraint: semver("<= 0.8.1")
+  - version_constraint: semver("<= 1.27.16+k0s.0")
+  - version_constraint: semver("<= 1.28.15+k0s.0")
+  - version_constraint: (semver("<= 1.32.3+k0s.0") && semver(">= 1.32.0+k0s.0")) || (semver("<= 1.31.7+k0s.0") && semver(">= 1.31.0+k0s.0")) || (semver("<= 1.30.11+k0s.0") && semver(">= 1.30.0+k0s.0")) || semver("<= 1.29.15+k0s.0")
+    cosign:
+      opts:
+        - --insecure-ignore-tlog
+      signature:
+        type: github_release
+        asset: '{{.Asset}}.sig'
+      key:
+        type: github_release
+        asset: cosign.pub
+  - version_constraint: "true"
+    cosign:
+      signature:
+        type: github_release
+        asset: '{{.Asset}}.sig'
+      key:
+        type: github_release
+        asset: cosign.pub
+all_assets_filter: not (Asset matches "^(airgap-images-|k0s-airgap-bundle-|sonobuoy-conformance-results-)")
