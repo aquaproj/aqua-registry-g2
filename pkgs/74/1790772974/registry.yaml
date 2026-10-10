@@ -1,0 +1,16 @@
+name: qarmin/czkawka
+type: github_release
+repo_owner: qarmin
+repo_name: czkawka
+description: Multi functional app to find duplicates, empty folders, similar images etc
+version_filter: Version != "Nightly"
+version_overrides:
+    - version_constraint: Version == "1.0.1"
+    - version_constraint: Version == "1.3.0"
+    - version_constraint: semver("> 11.0.1")
+    - version_constraint: semver("> 9.0.0")
+    - version_constraint: semver("> 2.3.2")
+    - version_constraint: semver("> 2.3.0")
+      no_asset: true
+    - version_constraint: "true"
+all_assets_filter: Asset matches "^(linux|mac)_czkawka_cli_(x86_64|arm64)$|^windows_czkawka_cli\\.exe$"

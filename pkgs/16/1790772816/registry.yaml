@@ -1,0 +1,56 @@
+name: fish-shell/fish-shell
+type: github_release
+repo_owner: fish-shell
+repo_name: fish-shell
+description: The user-friendly command line shell
+files:
+    - name: fish
+    - name: fish_indent
+    - name: fish_key_reader
+version_overrides:
+    - version_constraint: Version == "4.0.1"
+      overrides:
+        - goos: darwin
+          files:
+            - name: fish
+              src: fish.pkg/Payload/usr/local/bin/fish
+            - name: fish_indent
+              src: fish.pkg/Payload/usr/local/bin/fish_indent
+            - name: fish_key_reader
+              src: fish.pkg/Payload/usr/local/bin/fish_key_reader
+    - version_constraint: semver("> 4.0.2")
+      files:
+        - name: fish
+      overrides:
+        - goos: darwin
+          files:
+            - name: fish
+              src: fish.pkg/Payload/usr/local/bin/fish
+            - name: fish_indent
+              src: fish.pkg/Payload/usr/local/bin/fish_indent
+            - name: fish_key_reader
+              src: fish.pkg/Payload/usr/local/bin/fish_key_reader
+    - version_constraint: semver(">= 4.0.0")
+      overrides:
+        - goos: darwin
+          files:
+            - name: fish
+              src: fish.pkg/Payload/usr/local/bin/fish
+            - name: fish_indent
+              src: fish.pkg/Payload/usr/local/bin/fish_indent
+            - name: fish_key_reader
+              src: fish.pkg/Payload/usr/local/bin/fish_key_reader
+    - version_constraint: semver("< 4.0.0")
+      no_asset: true
+    - version_constraint: "true"
+      files:
+        - name: fish
+      overrides:
+        - goos: darwin
+          files:
+            - name: fish
+              src: fish.pkg/Payload/usr/local/bin/fish
+            - name: fish_indent
+              src: fish.pkg/Payload/usr/local/bin/fish_indent
+            - name: fish_key_reader
+              src: fish.pkg/Payload/usr/local/bin/fish_key_reader

@@ -1,0 +1,14 @@
+name: psf/black
+type: github_release
+repo_owner: psf
+repo_name: black
+description: The uncompromising Python code formatter
+version_overrides:
+    - version_constraint: Version == "22.8.0"
+    - version_constraint: semver("> 25.9.0")
+    - version_constraint: semver("> 21.5b1")
+    - version_constraint: semver("> 20.8b1")
+    - version_constraint: semver("> 19.10b0")
+      no_asset: true
+    - version_constraint: semver("<= 19.10b0")
+    - version_constraint: "true"

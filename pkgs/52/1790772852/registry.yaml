@@ -1,0 +1,13 @@
+name: golang/tools/goimports
+aliases:
+  - name: golang.org/x/tools/cmd/goimports
+type: go_install
+repo_owner: golang
+repo_name: tools
+description: updates your Go import lines, adding missing ones and removing unreferenced ones
+link: https://pkg.go.dev/golang.org/x/tools/cmd/goimports
+path: golang.org/x/tools/cmd/goimports
+version_filter: not (Version startsWith "gopls/")
+version_source: github_tag
+files:
+  - name: goimports

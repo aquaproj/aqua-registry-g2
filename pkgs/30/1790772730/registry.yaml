@@ -1,0 +1,43 @@
+name: argoproj/argo-cd
+type: github_release
+repo_owner: argoproj
+repo_name: argo-cd
+description: Declarative continuous deployment for Kubernetes
+files:
+    - name: argocd
+slsa_provenance:
+    type: github_release
+    asset: argocd-cli.intoto.jsonl
+version_overrides:
+    - version_constraint: semver(">= 2.7.0-rc1")
+    - version_constraint: semver(">= 2.5.0-rc3")
+      slsa_provenance:
+        enabled: false
+    - version_constraint: semver(">= 2.5.0-rc1")
+      slsa_provenance:
+        enabled: false
+    - version_constraint: semver(">= 2.4.15")
+      slsa_provenance:
+        enabled: false
+    - version_constraint: semver(">= 2.4.0-rc1")
+      slsa_provenance:
+        enabled: false
+    - version_constraint: semver(">= 2.3.11")
+      slsa_provenance:
+        enabled: false
+    - version_constraint: semver(">= 2.3.10")
+      slsa_provenance:
+        enabled: false
+    - version_constraint: semver(">= 2.3.0-rc1")
+      slsa_provenance:
+        enabled: false
+    - version_constraint: semver(">= 2.2.15")
+      slsa_provenance:
+        enabled: false
+    - version_constraint: semver(">= 1.4.3")
+      slsa_provenance:
+        enabled: false
+    - version_constraint: semver("< 1.4.3")
+      slsa_provenance:
+        enabled: false
+    - version_constraint: "true"

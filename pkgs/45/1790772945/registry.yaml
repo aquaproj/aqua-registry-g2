@@ -1,0 +1,18 @@
+name: nushell/nushell
+type: github_release
+repo_owner: nushell
+repo_name: nushell
+description: A new type of shell
+overrides:
+    - goos: windows
+      files:
+        - name: nu
+          src: nu.exe
+files:
+    - name: nu
+      src: nu-{{.Version}}-{{.Arch}}-{{.OS}}/nu
+version_overrides:
+    - version_constraint: semver(">= 0.71.0")
+    - version_constraint: "true"
+      files:
+        - name: nu

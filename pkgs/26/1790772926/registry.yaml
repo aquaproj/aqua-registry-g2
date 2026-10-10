@@ -1,0 +1,13 @@
+name: lsd-rs/lsd
+type: github_release
+repo_owner: lsd-rs
+repo_name: lsd
+description: The next gen ls command
+files:
+    - name: lsd
+      src: lsd-{{.Version}}-{{.Arch}}-{{.OS}}/lsd
+version_overrides:
+    - version_constraint: Version == "0.16.0"
+    - version_constraint: Version == "0.20.0"
+      no_asset: true
+    - version_constraint: "true"

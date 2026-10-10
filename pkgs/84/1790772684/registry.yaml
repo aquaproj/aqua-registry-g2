@@ -1,0 +1,11 @@
+name: Automattic/harper/harper-cli
+type: github_release
+repo_owner: Automattic
+repo_name: harper
+description: The Grammar Checker for Developers
+version_filter: semver(">= 0.13.0")
+# One release carries every program harper ships: the language server, the editor
+# extensions as vsix files, the browser plugins, the desktop application as a dmg. The
+# inference took harper-ls and the dmg for this package. harper-cli is the one built per
+# target triple, and aqua-registry installs the glibc build on Linux.
+all_assets_filter: Asset matches "^harper-cli-(x86_64|aarch64)-(apple-darwin|unknown-linux-gnu|pc-windows-msvc)\\.(tar\\.gz|zip)$"

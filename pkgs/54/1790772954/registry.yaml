@@ -1,0 +1,16 @@
+name: orf/gping
+type: github_release
+repo_owner: orf
+repo_name: gping
+description: Ping, but with a graph
+version_filter: |
+    not (Version startsWith "pinger-")
+version_overrides:
+    - version_constraint: Version == "v1.2.1"
+    - version_constraint: semver("> 1.18.0")
+      version_prefix: gping-
+    - version_constraint: semver("> 1.2.0")
+      version_prefix: gping-
+    - version_constraint: semver("<= 1.2.0")
+    - version_constraint: "true"
+      version_prefix: gping-

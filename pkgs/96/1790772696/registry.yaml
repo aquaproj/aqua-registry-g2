@@ -1,0 +1,12 @@
+name: GoogleCloudPlatform/terraformer/aws
+type: github_release
+repo_owner: GoogleCloudPlatform
+repo_name: terraformer
+description: CLI tool to generate terraform files from existing infrastructure (reverse Terraform). Infrastructure to Code
+files:
+  - name: terraformer
+    src: terraformer-aws-{{.OS}}-{{.Arch}}
+# The release carries a build per provider -- aws, google, alicloud, and thirty more -- and
+# an "all" build carrying every one of them. Nothing about the asset names says which of
+# them this package is, and the inference took the "all" build.
+all_assets_filter: Asset matches "^terraformer-aws-(darwin|linux|windows)-(amd64|arm64)(\\.exe)?$"

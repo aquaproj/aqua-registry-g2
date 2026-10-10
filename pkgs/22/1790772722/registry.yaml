@@ -1,0 +1,17 @@
+name: anchore/syft
+type: github_release
+repo_owner: anchore
+repo_name: syft
+description: CLI tool and library for generating a Software Bill of Materials from container images and filesystems
+version_overrides:
+    - version_constraint: Version == "v0.26.0"
+    - version_constraint: Version == "v0.27.0"
+    - version_constraint: Version == "v0.36.0"
+    - version_constraint: semver("> 0.103.1")
+    - version_constraint: semver(">= 0.37.10")
+    - version_constraint: semver("> 0.35.1")
+    - version_constraint: semver("> 0.25.0")
+    - version_constraint: semver("> 0.24.0")
+    - version_constraint: semver("> 0.5.0")
+    - version_constraint: semver("<= 0.5.0")
+    - version_constraint: "true"

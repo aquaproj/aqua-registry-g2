@@ -1,0 +1,14 @@
+name: fullstorydev/grpcurl
+type: github_release
+repo_owner: fullstorydev
+repo_name: grpcurl
+description: 'Like cURL, but for gRPC: Command-line tool for interacting with gRPC servers'
+version_overrides:
+    - version_constraint: Version in ["v1.3.2", "v1.5.1"]
+      no_asset: true
+    - version_constraint: Version == "v1.8.5"
+    - version_constraint: semver("<= 1.8.0")
+    - version_constraint: semver("<= 1.8.2")
+    - version_constraint: semver("<= 1.8.4")
+      no_asset: true
+    - version_constraint: "true"

@@ -1,0 +1,8 @@
+name: grafana/k6
+type: github_release
+repo_owner: grafana
+repo_name: k6
+description: A modern load testing tool, using Go and JavaScript
+files:
+    - name: k6
+      src: k6-{{.Version}}-{{.OS}}-{{.Arch}}/k6

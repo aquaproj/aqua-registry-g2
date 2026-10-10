@@ -1,0 +1,9 @@
+name: cloudflare/cloudflared
+type: github_release
+repo_owner: cloudflare
+repo_name: cloudflared
+description: Cloudflare Tunnel client
+version_overrides:
+    - version_constraint: semver("<= 2021.3.4")
+      error_message: This version is too old. Please update.
+    - version_constraint: "true"

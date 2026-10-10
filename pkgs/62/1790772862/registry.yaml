@@ -1,0 +1,42 @@
+name: gravitational/teleport
+type: http
+repo_owner: gravitational
+repo_name: teleport
+description: Client Tools for teleport - The easiest, and most secure way to access and protect all of your infrastructure
+overrides:
+    - goos: linux
+      format: tar.gz
+      url: https://cdn.teleport.dev/teleport-{{.Version}}-linux-{{.Arch}}-bin.{{.Format}}
+      files:
+        - name: tbot
+          src: teleport/tbot
+        - name: tctl
+          src: teleport/tctl
+        - name: teleport
+          src: teleport/teleport
+        - name: tsh
+          src: teleport/tsh
+    - goos: darwin
+      format: tar.gz
+      url: https://cdn.teleport.dev/teleport-{{.Version}}-darwin-{{.Arch}}-bin.{{.Format}}
+      files:
+        - name: tbot
+          src: teleport/tbot
+        - name: tctl
+          src: teleport/tctl.app/Contents/MacOS/tctl
+        - name: teleport
+          src: teleport/teleport
+        - name: tsh
+          src: teleport/tsh.app/Contents/MacOS/tsh
+    - goos: windows
+      format: zip
+      url: https://cdn.teleport.dev/teleport-{{.Version}}-windows-amd64-bin.{{.Format}}
+      files:
+        - name: tbot
+        - name: tctl
+        - name: tsh
+files:
+    - name: tbot
+    - name: tctl
+    - name: teleport
+    - name: tsh

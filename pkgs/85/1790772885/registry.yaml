@@ -1,0 +1,31 @@
+name: jdx/mise
+aliases:
+    - name: jdxcode/rtx
+    - name: jdx/rtx
+type: github_release
+repo_owner: jdx
+repo_name: mise
+description: dev tools, env vars, task runner
+version_overrides:
+    - version_constraint: semver("<= 2023.12.9")
+      files:
+        - name: rtx
+          src: rtx/bin/rtx
+    - version_constraint: semver("<= 2024.0.0")
+      files:
+        - name: rtx
+          src: rtx/bin/rtx
+    - version_constraint: semver("<= 2024.12.17")
+      files:
+        - name: mise
+          src: mise/bin/mise
+    - version_constraint: semver(">= 2025.7.13, <= 2025.7.15")
+      no_asset: true
+    - version_constraint: semver("<= 2025.8.21")
+      files:
+        - name: mise
+          src: mise/bin/mise
+    - version_constraint: "true"
+      files:
+        - name: mise
+          src: mise/bin/mise

@@ -1,0 +1,16 @@
+name: cheat/cheat
+type: github_release
+repo_owner: cheat
+repo_name: cheat
+description: cheat allows you to create and view interactive cheatsheets on the command-line. It was designed to help remind *nix system administrators of options for commands that they use frequently, but not frequently enough to remember
+files:
+    - name: cheat
+      src: cheat-{{.OS}}-{{.Arch}}
+version_overrides:
+    - version_constraint: semver(">= 4.2.4")
+    - version_constraint: "true"
+      overrides:
+        - goos: windows
+          files:
+            - name: cheat
+              src: dist/cheat-windows-amd64.exe

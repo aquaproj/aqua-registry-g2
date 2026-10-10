@@ -1,0 +1,9 @@
+name: direnv/direnv
+type: github_release
+repo_owner: direnv
+repo_name: direnv
+description: unclutter your .profile
+version_overrides:
+    - version_constraint: semver("<= 2.3.0") or Version in ["v2.7.0", "v2.8.0"]
+      no_asset: true
+    - version_constraint: "true"

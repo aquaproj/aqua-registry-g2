@@ -1,0 +1,30 @@
+name: kyverno/kyverno
+type: github_release
+repo_owner: kyverno
+repo_name: kyverno
+description: Cloud Native Policy Management
+version_filter: not (Version matches "-(alpha|beta|rc)")
+cosign:
+    opts:
+        - --certificate-identity
+        - https://github.com/kyverno/kyverno/.github/workflows/release.yaml@refs/tags/{{.Version}}
+        - --certificate-oidc-issuer
+        - https://token.actions.githubusercontent.com
+        - --certificate-github-workflow-repository
+        - kyverno/kyverno
+        - --certificate-github-workflow-ref
+        - refs/tags/{{.Version}}
+    bundle:
+        type: github_release
+        asset: '{{.Asset}}.sigstore.json'
+version_overrides:
+    - version_constraint: Version == "v1.5.5"
+      no_asset: true
+    - version_constraint: semver(">= 1.17.2")
+    - version_constraint: semver("> 1.10.7")
+    - version_constraint: semver("> 1.10.0")
+    - version_constraint: semver("> 1.5.8")
+    - version_constraint: semver("> 1.1.5")
+    - version_constraint: semver("<= 1.1.5")
+      no_asset: true
+    - version_constraint: "true"

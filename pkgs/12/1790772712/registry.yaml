@@ -1,0 +1,12 @@
+name: a-h/templ
+type: github_release
+repo_owner: a-h
+repo_name: templ
+description: A language for writing HTML user interfaces in Go
+version_overrides:
+    - version_constraint: semver(">= 0.2.639")
+    - version_constraint: semver("> 0.2.194")
+    - version_constraint: semver("> 0.0.148")
+    - version_constraint: semver("> 0.0.126")
+    - version_constraint: semver("<= 0.0.126")
+    - version_constraint: "true"

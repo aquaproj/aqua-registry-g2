@@ -1,0 +1,22 @@
+name: swaggo/swag
+type: github_release
+repo_owner: swaggo
+repo_name: swag
+description: Automatically generate RESTful API documentation with Swagger 2.0 for Go
+version_overrides:
+    - version_constraint: Version == "v1.7.0"
+    - version_constraint: Version == "v1.7.1"
+      files:
+        - name: swag
+          src: swag_{{.OS}}_{{.Arch}}/swag
+    - version_constraint: Version == "v1.8.2"
+    - version_constraint: Version == "v1.8.10"
+    - version_constraint: Version == "v1.16.3"
+    - version_constraint: semver("> 1.16.2")
+    - version_constraint: semver("> 1.8.9")
+    - version_constraint: semver("> 1.8.1")
+    - version_constraint: semver("> 1.6.9")
+    - version_constraint: semver("> 1.4.0")
+    - version_constraint: semver("<= 1.4.0")
+      no_asset: true
+    - version_constraint: "true"

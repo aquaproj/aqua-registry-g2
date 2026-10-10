@@ -1,0 +1,22 @@
+name: sharkdp/hexyl
+type: github_release
+repo_owner: sharkdp
+repo_name: hexyl
+description: A command-line hex viewer
+version_overrides:
+    - version_constraint: semver("> 0.15.0")
+      files:
+        - name: hexyl
+          src: '{{.AssetWithoutExt}}/hexyl'
+    - version_constraint: semver("> 0.8.0")
+      files:
+        - name: hexyl
+          src: '{{.AssetWithoutExt}}/hexyl'
+    - version_constraint: semver("<= 0.8.0")
+      files:
+        - name: hexyl
+          src: '{{.AssetWithoutExt}}/hexyl'
+    - version_constraint: "true"
+      files:
+        - name: hexyl
+          src: '{{.AssetWithoutExt}}/hexyl'

@@ -1,0 +1,11 @@
+name: juicedata/juicefs
+type: github_release
+repo_owner: juicedata
+repo_name: juicefs
+description: JuiceFS is a distributed POSIX file system built on top of Redis and S3
+version_overrides:
+    - version_constraint: semver("> 1.0.0-beta2")
+    - version_constraint: semver("> 0.12.0")
+    - version_constraint: semver("<= 0.12.0")
+      no_asset: true
+    - version_constraint: "true"

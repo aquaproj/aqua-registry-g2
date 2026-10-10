@@ -1,0 +1,9 @@
+name: gopasspw/gopass
+type: github_release
+repo_owner: gopasspw
+repo_name: gopass
+description: The slightly more awesome standard unix password manager for teams
+version_overrides:
+    - version_constraint: semver("> 1.16.1")
+    - version_constraint: semver("<= 1.16.1")
+    - version_constraint: "true"
