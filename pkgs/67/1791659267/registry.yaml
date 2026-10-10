@@ -1,0 +1,15 @@
+name: domcyrus/rustnet
+type: github_release
+repo_owner: domcyrus
+repo_name: rustnet
+repo_id: 973688295
+description: Per-process network monitoring for your terminal with deep packet inspection. Cross-platform, sandboxed
+files:
+  - name: rustnet
+    src: '{{.AssetWithoutExt}}/rustnet'
+version_overrides:
+  - version_constraint: semver("> 0.17.0")
+  - version_constraint: semver("> 0.10.0")
+  - version_constraint: semver("<= 0.10.0")
+    no_asset: true
+  - version_constraint: "true"
