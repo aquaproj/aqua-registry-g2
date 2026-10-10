@@ -1,0 +1,23 @@
+name: alexpasmantier/television
+type: github_release
+repo_owner: alexpasmantier
+repo_name: television
+description: The revolution will (not) be televised
+files:
+  - name: tv
+version_overrides:
+  - version_constraint: semver("> 0.11.3")
+    files:
+      - name: tv
+        src: '{{.AssetWithoutExt}}/tv'
+  - version_constraint: semver("> 0.10.9")
+    files:
+      - name: tv
+        src: '{{.AssetWithoutExt}}/tv'
+  - version_constraint: semver("> 0.4.15")
+  - version_constraint: semver("<= 0.4.15")
+    no_asset: true
+  - version_constraint: "true"
+    files:
+      - name: tv
+        src: '{{.AssetWithoutExt}}/tv'
