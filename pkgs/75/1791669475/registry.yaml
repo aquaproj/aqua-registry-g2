@@ -1,0 +1,21 @@
+name: txn2/kubefwd
+type: github_release
+repo_owner: txn2
+repo_name: kubefwd
+repo_id: 143650971
+description: Bulk port forwarding Kubernetes services for local development
+version_overrides:
+  - version_constraint: Version == "v1.13.1"
+  - version_constraint: semver(">= 1.24.1")
+  - version_constraint: semver("> 1.18.1")
+  - version_constraint: semver("> 1.14.7")
+  - version_constraint: semver("> 1.14.2")
+    files:
+      - name: kubefwd
+        src: '{{.AssetWithoutExt}}/kubefwd'
+  - version_constraint: semver("> 1.9.4")
+  - version_constraint: semver("> 1.8.2")
+  - version_constraint: semver(">= 1.4.10")
+  - version_constraint: semver("< 1.4.10")
+    no_asset: true
+  - version_constraint: "true"
