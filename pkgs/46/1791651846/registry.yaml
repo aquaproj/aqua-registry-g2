@@ -1,0 +1,14 @@
+name: rebuy-de/aws-nuke
+type: github_release
+repo_owner: rebuy-de
+repo_name: aws-nuke
+repo_id: 74891203
+description: Nuke a whole AWS account and delete all its resources
+overrides:
+  - goos: windows
+    files:
+      - name: aws-nuke
+        src: aws-nuke-{{.Version}}-windows-{{.Arch}}.exe
+files:
+  - name: aws-nuke
+    src: aws-nuke-{{.Version}}-{{.OS}}-{{.Arch}}
