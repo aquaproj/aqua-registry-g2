@@ -1,0 +1,11 @@
+name: bjesus/pipet
+type: github_release
+repo_owner: bjesus
+repo_name: pipet
+repo_id: 850417985
+description: a swiss-army tool for scraping and extracting data from online assets, made for hackers
+version_overrides:
+  - version_constraint: "true"
+    files:
+      - name: pipet
+        src: pipet-{{.OS}}-{{.Arch}}
