@@ -1,0 +1,13 @@
+name: dalance/procs
+type: github_release
+repo_owner: dalance
+repo_name: procs
+description: A modern replacement for ps written in Rust
+version_overrides:
+  - version_constraint: semver(">= 0.13.3")
+  - version_constraint: "true"
+    overrides:
+      - goos: windows
+        files:
+          - name: procs
+            src: target/x86_64-pc-windows-msvc/release/procs.exe
