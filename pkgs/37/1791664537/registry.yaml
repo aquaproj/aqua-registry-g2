@@ -1,0 +1,17 @@
+name: charmbracelet/mods
+type: github_release
+repo_owner: charmbracelet
+repo_name: mods
+repo_id: 620999276
+description: AI on the command line
+version_overrides:
+  - version_constraint: semver("> 1.2.1")
+    files:
+      - name: mods
+        src: '{{.AssetWithoutExt}}/mods'
+  - version_constraint: semver("> 0.2.0")
+  - version_constraint: semver("<= 0.2.0")
+  - version_constraint: "true"
+    files:
+      - name: mods
+        src: '{{.AssetWithoutExt}}/mods'
