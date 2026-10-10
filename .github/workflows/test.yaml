@@ -9,11 +9,17 @@ on:
     # opened, and the check that reads it has to run again when it is.
     types: [opened, synchronize, reopened, labeled, unlabeled]
 permissions: {}
+# Any other label put on or taken off is nothing to check, and ar2 labels every pull request
+# it opens a moment after opening it. Such a run gets a group of its own, so that it doesn't
+# cancel the run the pull request was opened with -- a cancelled run's status-check-main
+# fails, and a failure blocks the merge whatever the run beside it says -- and it skips
+# every job.
 concurrency:
-  group: ${{ github.workflow }}--${{ github.ref }}
+  group: ${{ github.workflow }}--${{ github.ref }}--${{ (github.event.action == 'labeled' || github.event.action == 'unlabeled') && github.event.label.name != 'replaces-published' && github.run_id || 'checks' }}
   cancel-in-progress: true
 jobs:
   test:
+    if: (github.event.action != 'labeled' && github.event.action != 'unlabeled') || github.event.label.name == 'replaces-published'
     uses: ./.github/workflows/wc_main.yaml
     permissions:
       contents: read
