@@ -1,0 +1,15 @@
+name: revive-lint/revive
+aliases:
+  - name: mgechev/revive
+type: github_release
+repo_owner: revive-lint
+repo_name: revive
+repo_id: 96237042
+description: ~6x faster, stricter, configurable, extensible, and beautiful drop-in replacement for golint
+version_overrides:
+  - version_constraint: semver("> 1.3.2")
+  - version_constraint: semver("> 1.2.2")
+  - version_constraint: semver("> 1.0.3")
+  - version_constraint: semver("<= 1.0.3")
+    no_asset: true
+  - version_constraint: "true"
