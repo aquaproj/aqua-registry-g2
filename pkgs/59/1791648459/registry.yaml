@@ -1,0 +1,47 @@
+name: ynqa/jnv
+type: github_release
+repo_owner: ynqa
+repo_name: jnv
+repo_id: 773832743
+description: Interactive JSON filter using jq
+version_overrides:
+  - version_constraint: Version == "v0.1.0"
+    files:
+      - name: jnv
+        src: '{{.AssetWithoutExt}}/jnv'
+  - version_constraint: Version == "v0.3.0"
+    files:
+      - name: jnv
+        src: '{{.AssetWithoutExt}}/jnv'
+    overrides:
+      - goos: windows
+        files:
+          - name: jnv
+  - version_constraint: semver("> 0.5.0")
+    files:
+      - name: jnv
+        src: '{{.AssetWithoutExt}}/jnv'
+    overrides:
+      - goos: windows
+        files:
+          - name: jnv
+  - version_constraint: semver("> 0.2.3")
+    files:
+      - name: jnv
+        src: '{{.AssetWithoutExt}}/jnv'
+    overrides:
+      - goos: windows
+        files:
+          - name: jnv
+  - version_constraint: semver("<= 0.2.3")
+    files:
+      - name: jnv
+        src: '{{.AssetWithoutExt}}/jnv'
+  - version_constraint: "true"
+    files:
+      - name: jnv
+        src: '{{.AssetWithoutExt}}/jnv'
+    overrides:
+      - goos: windows
+        files:
+          - name: jnv
