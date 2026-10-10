@@ -1,0 +1,12 @@
+name: devspace-sh/devspace
+aliases:
+  - name: loft-sh/devspace
+type: github_release
+repo_owner: devspace-sh
+repo_name: devspace
+repo_id: 145153231
+description: DevSpace - The Fastest Developer Tool for Kubernetes  Automate your deployment workflow with DevSpace and develop software directly inside Kubernetes
+version_overrides:
+  - version_constraint: Version == "v6.2.0-alpha.0"
+    no_asset: true
+  - version_constraint: "true"
