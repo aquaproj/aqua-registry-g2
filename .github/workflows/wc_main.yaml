@@ -2,6 +2,14 @@
 name: main (workflow_call)
 on: workflow_call
 jobs:
+  # What the pull request does to the packages under pkgs/.
+  packages:
+    uses: ./.github/workflows/wc_packages.yaml
+    permissions:
+      contents: read
+      pull-requests: read
+      issues: read
+
   index:
     runs-on: ubuntu-24.04
     timeout-minutes: 15
@@ -10,9 +18,13 @@ jobs:
     env:
       AQUA_GLOBAL_CONFIG: ${{ github.workspace }}/aqua/aqua.yaml
     steps:
+      # The files at the root -- index.json and names.json -- and the pin. Not the
+      # packages, which are most of the repository and none of what is read here.
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
+          sparse-checkout: |
+            aqua
       - uses: aquaproj/aqua-installer@82d0e83878a8657c4a6f2ff1755d3bfbfc67f329 # v4.1.0
         with:
           aqua_version: v2.64.0
@@ -35,6 +47,8 @@ jobs:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
+          sparse-checkout: |
+            aqua
       - uses: aquaproj/aqua-installer@82d0e83878a8657c4a6f2ff1755d3bfbfc67f329 # v4.1.0
         with:
           aqua_version: v2.64.0
@@ -60,6 +74,11 @@ jobs:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
+          sparse-checkout: |
+            .github
+            .claude
+            aqua
+            skills
       - uses: aquaproj/aqua-installer@82d0e83878a8657c4a6f2ff1755d3bfbfc67f329 # v4.1.0
         with:
           aqua_version: v2.64.0
