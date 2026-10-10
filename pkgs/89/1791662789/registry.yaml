@@ -1,0 +1,11 @@
+name: werf/werf
+type: http
+repo_owner: werf
+repo_name: werf
+repo_id: 50365232
+description: A solution for implementing efficient and consistent software delivery to Kubernetes facilitating best practices.
+version_overrides:
+  - version_constraint: "true"
+    url: https://tuf.werf.io/targets/releases/{{trimV .Version}}/{{.OS}}-{{.Arch}}/bin/werf
+    format: raw
+    windows_arm_emulation: true
