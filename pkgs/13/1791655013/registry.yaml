@@ -1,0 +1,53 @@
+name: apache/maven
+type: http
+repo_owner: apache
+repo_name: maven
+repo_id: 206483
+description: Apache Maven core
+version_filter: not (Version matches "-(rc|alpha|beta)")
+version_prefix: maven-
+version_overrides:
+  - version_constraint: semver("> 3.3.1")
+    url: https://archive.apache.org/dist/maven/maven-{{(semver .SemVer).Major}}/{{.SemVer}}/binaries/apache-maven-{{.SemVer}}-bin.{{.Format}}
+    format: tar.gz
+    files:
+      - name: mvn
+        src: apache-maven-{{.SemVer}}/bin/mvn
+    overrides:
+      - goos: windows
+        files:
+          - name: mvn
+            src: apache-maven-{{.SemVer}}/bin/mvn.cmd
+  - version_constraint: semver("> 3.2.5")
+    url: https://archive.apache.org/dist/maven/maven-{{(semver .SemVer).Major}}/{{.SemVer}}/binaries/apache-maven-{{.SemVer}}-bin.{{.Format}}
+    format: tar.gz
+    files:
+      - name: mvn
+        src: apache-maven-{{.SemVer}}/bin/mvn
+    overrides:
+      - goos: windows
+        files:
+          - name: mvn
+            src: apache-maven-{{.SemVer}}/bin/mvn.cmd
+  - version_constraint: semver("<= 3.2.5")
+    url: https://archive.apache.org/dist/maven/maven-{{(semver .SemVer).Major}}/{{.SemVer}}/binaries/apache-maven-{{.SemVer}}-bin.{{.Format}}
+    format: tar.gz
+    files:
+      - name: mvn
+        src: apache-maven-{{.SemVer}}/bin/mvn
+    overrides:
+      - goos: windows
+        files:
+          - name: mvn
+            src: apache-maven-{{.SemVer}}/bin/mvn.bat
+  - version_constraint: "true"
+    url: https://archive.apache.org/dist/maven/maven-{{(semver .SemVer).Major}}/{{.SemVer}}/binaries/apache-maven-{{.SemVer}}-bin.{{.Format}}
+    format: tar.gz
+    files:
+      - name: mvn
+        src: apache-maven-{{.SemVer}}/bin/mvn
+    overrides:
+      - goos: windows
+        files:
+          - name: mvn
+            src: apache-maven-{{.SemVer}}/bin/mvn.cmd
