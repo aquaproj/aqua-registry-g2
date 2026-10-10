@@ -1,0 +1,16 @@
+name: sigstore/cosign
+type: github_release
+repo_owner: sigstore
+repo_name: cosign
+description: Code signing and transparency for containers and binaries
+version_filter: not (Version matches "-dev$")
+cosign:
+  opts:
+    - --certificate-identity
+    - keyless@projectsigstore.iam.gserviceaccount.com
+    - --certificate-oidc-issuer
+    - https://accounts.google.com
+  bundle:
+    type: github_release
+    asset: '{{.Asset}}.sigstore.json'
+all_assets_filter: Asset matches "^cosign"
