@@ -1,7 +1,14 @@
+name: runxhq/runx
 type: github_release
 repo_owner: runxhq
 repo_name: runx
 description: the governed runtime for agent skill workflows, off the leash but on the record
+version_prefix: cli-
 files:
   - name: runx
   - name: runx-js-worker
+version_overrides:
+  - version_constraint: semver(">= 0.8.0")
+  - version_constraint: "true"
+    files:
+      - name: runx
