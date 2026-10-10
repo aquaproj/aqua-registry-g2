@@ -1,0 +1,37 @@
+name: luau-lang/luau
+type: github_release
+repo_owner: luau-lang
+repo_name: luau
+repo_id: 148821256
+description: A fast, small, safe, gradually typed embeddable scripting language derived from Lua
+version_overrides:
+  - version_constraint: semver("> 0.644")
+    files:
+      - name: luau
+      - name: luau-analyze
+      - name: luau-ast
+      - name: luau-compile
+    replacements:
+      linux: ubuntu
+  - version_constraint: semver("> 0.622")
+    files:
+      - name: luau
+      - name: luau-analyze
+      - name: luau-compile
+    replacements:
+      linux: ubuntu
+  - version_constraint: semver("<= 0.622")
+    files:
+      - name: luau
+      - name: luau-analyze
+      - name: luau-compile
+    replacements:
+      linux: ubuntu
+  - version_constraint: "true"
+    files:
+      - name: luau
+      - name: luau-analyze
+      - name: luau-ast
+      - name: luau-compile
+    replacements:
+      linux: ubuntu
