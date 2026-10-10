@@ -1,0 +1,36 @@
+name: ossf/scorecard
+type: github_release
+repo_owner: ossf
+repo_name: scorecard
+repo_id: 302670797
+description: OpenSSF Scorecard - Security health metrics for Open Source
+version_overrides:
+  - version_constraint: semver("<= 1.0.0") || Version == "v4.9.0"
+    no_asset: true
+  - version_constraint: Version == "v1.1.0"
+  - version_constraint: semver("<= 2.1.2")
+  - version_constraint: Version == "v2.1.3"
+  - version_constraint: semver("<= 3.0.1")
+  - version_constraint: semver("<= 4.4.0")
+    files:
+      - name: scorecard
+        src: scorecard-{{.OS}}-{{.Arch}}
+  - version_constraint: Version == "v4.5.0"
+    files:
+      - name: scorecard
+        src: scorecard-{{.OS}}-{{.Arch}}
+  - version_constraint: semver("<= 4.8.0")
+    files:
+      - name: scorecard
+        src: scorecard-{{.OS}}-{{.Arch}}
+  - version_constraint: semver("<= 5.0.0")
+    files:
+      - name: scorecard
+        src: scorecard-{{.OS}}-{{.Arch}}
+    slsa_provenance:
+      type: github_release
+      asset: multiple.intoto.jsonl
+  - version_constraint: "true"
+    slsa_provenance:
+      type: github_release
+      asset: multiple.intoto.jsonl
