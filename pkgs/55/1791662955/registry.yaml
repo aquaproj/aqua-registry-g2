@@ -1,0 +1,25 @@
+name: hashicorp/waypoint
+type: http
+repo_owner: hashicorp
+repo_name: waypoint
+repo_id: 259191284
+description: A tool to build, deploy, and release any application on any platform
+version_filter: Version matches "^v\\d+\\.\\d+\\.\\d+"
+version_overrides:
+  - version_constraint: semver(">= 0.10.0")
+    url: https://releases.hashicorp.com/waypoint/{{trimV .Version}}/waypoint_{{trimV .Version}}_{{.OS}}_{{.Arch}}.zip
+    supported_envs:
+      - darwin
+      - linux
+      - amd64
+  - version_constraint: semver("< 0.10.0")
+    url: https://releases.hashicorp.com/waypoint/{{trimV .Version}}/waypoint_{{trimV .Version}}_{{.OS}}_{{.Arch}}.zip
+    supported_envs:
+      - darwin
+      - amd64
+  - version_constraint: "true"
+    url: https://releases.hashicorp.com/waypoint/{{trimV .Version}}/waypoint_{{trimV .Version}}_{{.OS}}_{{.Arch}}.zip
+    supported_envs:
+      - darwin
+      - linux
+      - amd64
