@@ -1,0 +1,25 @@
+name: amber-lang/amber
+aliases:
+  - name: Ph0enixKM/Amber
+type: github_release
+repo_owner: amber-lang
+repo_name: amber
+repo_id: 516106592
+description: Amber the programming language compiled to bash
+version_overrides:
+  - version_constraint: semver(">= 0.5.0-alpha")
+    files:
+      - name: amber
+  - version_constraint: semver("> 0.3.1-alpha")
+    files:
+      - name: amber
+        src: '{{.AssetWithoutExt}}/amber'
+    overrides:
+      - goos: linux
+        goarch: arm64
+        files:
+          - name: amber
+  - version_constraint: semver("<= 0.3.1-alpha")
+  - version_constraint: "true"
+    files:
+      - name: amber
