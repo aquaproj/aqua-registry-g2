@@ -1,0 +1,20 @@
+name: bufbuild/protoc-gen-validate
+type: github_release
+repo_owner: bufbuild
+repo_name: protoc-gen-validate
+repo_id: 105711679
+description: Protocol Buffer Validation - Being replaced by github.com/bufbuild/protovalidate
+files:
+  - name: protoc-gen-validate
+  - name: protoc-gen-validate-cpp
+  - name: protoc-gen-validate-go
+  - name: protoc-gen-validate-java
+version_overrides:
+  - version_constraint: semver("> 1.1.0")
+  - version_constraint: semver("> 1.0.2")
+    no_asset: true
+  - version_constraint: semver("> 0.9.1")
+  - version_constraint: semver("> 0.6.13")
+  - version_constraint: semver("<= 0.6.13")
+    no_asset: true
+  - version_constraint: "true"
