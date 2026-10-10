@@ -1,0 +1,21 @@
+name: version-fox/vfox
+type: github_release
+repo_owner: version-fox
+repo_name: vfox
+repo_id: 729446906
+description: A cross-platform and extendable version manager with support for Java, Node.js, Golang, Python, Flutter, .NET & more
+version_overrides:
+  - version_constraint: Version == "v0.2.5"
+    no_asset: true
+  - version_constraint: semver("> 1.0.8")
+    files:
+      - name: vfox
+        src: '{{.AssetWithoutExt}}/vfox'
+  - version_constraint: semver("<= 1.0.8")
+    files:
+      - name: vfox
+        src: '{{.AssetWithoutExt}}/vfox'
+  - version_constraint: "true"
+    files:
+      - name: vfox
+        src: '{{.AssetWithoutExt}}/vfox'
