@@ -1,0 +1,14 @@
+name: nubjs/nub
+type: github_release
+repo_owner: nubjs
+repo_name: nub
+repo_id: 1258607058
+description: The fast all-in-one Node.js toolkit
+files:
+  - name: nub
+    src: bin/nub
+  - name: nubx
+    src: bin/nub
+  - name: nubr
+    src: bin/nub
+all_assets_filter: not (Asset matches "launcher")
