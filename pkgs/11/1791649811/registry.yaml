@@ -1,0 +1,34 @@
+name: ankitpokhrel/jira-cli
+type: github_release
+repo_owner: ankitpokhrel
+repo_name: jira-cli
+repo_id: 314995099
+description: Feature-rich interactive Jira command line
+version_overrides:
+  - version_constraint: semver("> 1.4.0")
+    files:
+      - name: jira
+        src: jira_{{trimV .Version}}_{{.OS}}_{{.Arch}}/bin/jira
+    overrides:
+      - goos: windows
+        files:
+          - name: jira
+            src: bin/jira
+  - version_constraint: semver("<= 1.4.0")
+    files:
+      - name: jira
+        src: jira_{{trimV .Version}}_{{.OS}}_{{.Arch}}/bin/jira
+    overrides:
+      - goos: windows
+        files:
+          - name: jira
+            src: bin/jira
+  - version_constraint: "true"
+    files:
+      - name: jira
+        src: jira_{{trimV .Version}}_{{.OS}}_{{.Arch}}/bin/jira
+    overrides:
+      - goos: windows
+        files:
+          - name: jira
+            src: bin/jira
