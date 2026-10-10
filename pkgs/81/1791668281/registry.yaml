@@ -1,0 +1,14 @@
+name: open-policy-agent/gatekeeper
+type: github_release
+repo_owner: open-policy-agent
+repo_name: gatekeeper
+repo_id: 154894457
+description: Gatekeeper - Policy Controller for Kubernetes
+files:
+  - name: gator
+version_overrides:
+  - version_constraint: Version == "v3.12.0-rc.0" || semver("<= 3.7.0-beta.2")
+    no_asset: true
+  - version_constraint: "true"
+    files:
+      - name: gator
