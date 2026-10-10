@@ -1,0 +1,39 @@
+name: YS-L/csvlens
+type: github_release
+repo_owner: YS-L
+repo_name: csvlens
+repo_id: 396072317
+description: Command line csv viewer
+version_overrides:
+  - version_constraint: semver("> 0.12.0")
+    files:
+      - name: csvlens
+        src: csvlens-{{.Arch}}-{{.OS}}/csvlens
+    overrides:
+      - goos: windows
+        files:
+          - name: csvlens
+  - version_constraint: semver(">= 0.10.0")
+    files:
+      - name: csvlens
+        src: csvlens-{{.Arch}}-{{.OS}}/csvlens
+    overrides:
+      - goos: windows
+        files:
+          - name: csvlens
+  - version_constraint: semver("< 0.10.0")
+    files:
+      - name: csvlens
+        src: csvlens-{{.Arch}}-{{.OS}}/csvlens
+    overrides:
+      - goos: windows
+        files:
+          - name: csvlens
+  - version_constraint: "true"
+    files:
+      - name: csvlens
+        src: csvlens-{{.Arch}}-{{.OS}}/csvlens
+    overrides:
+      - goos: windows
+        files:
+          - name: csvlens
