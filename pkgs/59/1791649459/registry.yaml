@@ -1,0 +1,74 @@
+name: quarto-dev/quarto-cli
+type: github_release
+repo_owner: quarto-dev
+repo_name: quarto-cli
+repo_id: 298579934
+description: Open-source scientific and technical publishing system built on Pandoc
+files:
+  - name: quarto
+version_overrides:
+  - version_constraint: Version in ["v1.1.106", "v1.3.6"]
+    files:
+      - name: quarto
+        src: bin/quarto
+    overrides:
+      - goos: linux
+        files:
+          - name: quarto
+            src: quarto-{{trimV .Version}}/bin/quarto
+  - version_constraint: Version in ["v1.2.127", "v1.4.49"]
+    files:
+      - name: quarto
+        src: quarto-{{trimV .Version}}/bin/quarto
+  - version_constraint: semver("<= 1.1.29")
+    files:
+      - name: quarto
+        src: bin/quarto
+    overrides:
+      - goos: linux
+        files:
+          - name: quarto
+            src: quarto-{{trimV .Version}}/bin/quarto
+  - version_constraint: semver("<= 1.1.33")
+    files:
+      - name: quarto
+        src: quarto-{{trimV .Version}}/bin/quarto
+  - version_constraint: semver("<= 1.2.3")
+    files:
+      - name: quarto
+        src: bin/quarto
+    overrides:
+      - goos: linux
+        files:
+          - name: quarto
+            src: quarto-{{trimV .Version}}/bin/quarto
+  - version_constraint: semver("<= 1.2.7")
+    files:
+      - name: quarto
+        src: bin/quarto
+    overrides:
+      - goos: linux
+        files:
+          - name: quarto
+            src: quarto-{{trimV .Version}}/bin/quarto
+  - version_constraint: semver("<= 1.3.179")
+    files:
+      - name: quarto
+        src: bin/quarto
+    overrides:
+      - goos: linux
+        files:
+          - name: quarto
+            src: quarto-{{trimV .Version}}/bin/quarto
+  - version_constraint: "true"
+    files:
+      - name: quarto
+        src: bin/quarto
+    overrides:
+      - goos: linux
+        files:
+          - name: quarto
+            src: quarto-{{trimV .Version}}/bin/quarto
+all_assets_filter: |
+  let words = ["\\.pkg", "rhel7"];
+  not any(words, {Asset matches #})
