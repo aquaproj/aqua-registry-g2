@@ -1,0 +1,28 @@
+name: dotenvx/dotenvx
+type: github_release
+repo_owner: dotenvx
+repo_name: dotenvx
+repo_id: 720267554
+description: a better dotenv–from the creator of `dotenv`
+version_overrides:
+  - version_constraint: Version == "v0.2.8"
+    files:
+      - name: dotenv
+  - version_constraint: semver("> 0.44.5")
+  - version_constraint: semver("> 0.2.19")
+  - version_constraint: semver("> 0.2.10")
+    files:
+      - name: dotenv
+  - version_constraint: semver("> 0.2.7")
+    files:
+      - name: dotenv
+  - version_constraint: semver("> 0.1.18")
+    files:
+      - name: dotenv
+  - version_constraint: semver("> 0.1.7")
+    files:
+      - name: git-dotenv
+  - version_constraint: semver("<= 0.1.7")
+    files:
+      - name: git-dotenv
+  - version_constraint: "true"
