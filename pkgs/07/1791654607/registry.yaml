@@ -1,0 +1,30 @@
+name: qpdf/qpdf
+type: github_release
+repo_owner: qpdf
+repo_name: qpdf
+repo_id: 4539167
+description: Content-preserving PDF document transformer
+version_filter: Version startsWith "release-qpdf-" or Version matches "^v[0-9]"
+version_overrides:
+  - version_constraint: Version == "vcpkg-cache-v1"
+    no_asset: true
+  - version_constraint: Version startsWith "release-qpdf-"
+    error_message: Please use v11.0.0 or later
+  - version_constraint: semver("<= 12.2.0")
+    files:
+      - name: qpdf
+        src: bin/qpdf
+    overrides:
+      - goos: windows
+        files:
+          - name: qpdf
+            src: qpdf-{{trimV .Version}}-mingw64/bin/qpdf
+  - version_constraint: "true"
+    files:
+      - name: qpdf
+        src: bin/qpdf
+    overrides:
+      - goos: windows
+        files:
+          - name: qpdf
+            src: qpdf-{{trimV .Version}}-mingw64/bin/qpdf
