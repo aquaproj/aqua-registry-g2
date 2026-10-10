@@ -1,0 +1,37 @@
+name: mstange/samply
+type: github_release
+repo_owner: mstange
+repo_name: samply
+repo_id: 266852617
+description: Command-line sampling profiler for macOS, Linux, and Windows
+version_prefix: samply-v
+version_overrides:
+  - version_constraint: semver("= 0.12.0")
+    files:
+      - name: samply
+        src: samply-{{.Arch}}-{{.OS}}/samply
+    overrides:
+      - goos: windows
+        files:
+          - name: samply
+            src: samply.exe
+  - version_constraint: semver("> 0.11.0")
+    files:
+      - name: samply
+        src: samply-{{.Arch}}-{{.OS}}/samply
+    overrides:
+      - goos: windows
+        files:
+          - name: samply
+            src: samply.exe
+  - version_constraint: semver("<= 0.11.0")
+    no_asset: true
+  - version_constraint: "true"
+    files:
+      - name: samply
+        src: samply-{{.Arch}}-{{.OS}}/samply
+    overrides:
+      - goos: windows
+        files:
+          - name: samply
+            src: samply.exe
