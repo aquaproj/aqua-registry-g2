@@ -1,0 +1,27 @@
+name: awslabs/aidlc-workflows
+type: github_release
+repo_owner: awslabs
+repo_name: aidlc-workflows
+repo_id: 1096054771
+description: AI-Driven Life Cycle (AI-DLC) adaptive workflow steering rules for AI coding agents
+files:
+  - name: aidlc
+github_artifact_attestations:
+  signer_workflow: awslabs/aidlc-workflows/.github/workflows/release.yml
+  source_ref: refs/tags/v2.11.0
+  source_digest: 6a378b53c0a4fe0641ed7d8de8dfff94264d5b6a
+  cert_oidc_issuer: https://token.actions.githubusercontent.com
+  deny_self_hosted_runners: true
+version_overrides:
+  - version_constraint: semver("<= 2.7.0")
+    no_asset: true
+  - version_constraint: Version contains "-preview."
+    github_artifact_attestations:
+      signer_workflow: awslabs/aidlc-workflows/.github/workflows/preview-release.yml
+  - version_constraint: "true"
+    github_artifact_attestations:
+      signer_workflow: awslabs/aidlc-workflows/.github/workflows/release.yml
+      source_ref: refs/tags/v2.11.0
+      source_digest: 6a378b53c0a4fe0641ed7d8de8dfff94264d5b6a
+      cert_oidc_issuer: https://token.actions.githubusercontent.com
+      deny_self_hosted_runners: true
