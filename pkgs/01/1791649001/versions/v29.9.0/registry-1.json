@@ -1,0 +1,40 @@
+{
+  "assets": [
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "static",
+      "type": "http",
+      "repo_owner": "docker",
+      "repo_name": "cli",
+      "asset": "docker-rootless-extras-29.9.0.tgz",
+      "url": "https://download.docker.com/linux/static/stable/x86_64/docker-rootless-extras-29.9.0.tgz",
+      "checksum": "6b4a2e085a1e4ade5ba3de99fd770a0a9b53c719e6bf6b1632242bf4b068adb6",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "rootlesskit",
+          "src": "docker-rootless-extras/rootlesskit"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "linked_libc": "static",
+      "type": "http",
+      "repo_owner": "docker",
+      "repo_name": "cli",
+      "asset": "docker-rootless-extras-29.9.0.tgz",
+      "url": "https://download.docker.com/linux/static/stable/aarch64/docker-rootless-extras-29.9.0.tgz",
+      "checksum": "f1b76a0721101e15c1eabeccf08751c0d42206defe06422de2e4b8897fc0f129",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "rootlesskit",
+          "src": "docker-rootless-extras/rootlesskit"
+        }
+      ]
+    }
+  ]
+}
