@@ -1,0 +1,30 @@
+name: rhysd/actionlint
+type: github_release
+repo_owner: rhysd
+repo_name: actionlint
+repo_id: 370668507
+description: ':octocat: Static checker for GitHub Actions workflow files'
+github_artifact_attestations:
+  signer_workflow: rhysd/actionlint/.github/workflows/release.yaml
+  source_ref: refs/tags/v1.7.12
+  source_digest: 914e7df21a07ef503a81201c76d2b11c789d3fca
+  cert_oidc_issuer: https://token.actions.githubusercontent.com
+  deny_self_hosted_runners: true
+version_overrides:
+  - version_constraint: semver("> 1.7.10")
+    github_artifact_attestations:
+      signer_workflow: rhysd/actionlint/.github/workflows/release.yaml
+      source_ref: refs/tags/v1.7.12
+      source_digest: 914e7df21a07ef503a81201c76d2b11c789d3fca
+      cert_oidc_issuer: https://token.actions.githubusercontent.com
+      deny_self_hosted_runners: true
+  - version_constraint: semver("> 1.6.1")
+  - version_constraint: semver("> 1.4.0")
+  - version_constraint: semver("<= 1.4.0")
+  - version_constraint: "true"
+    github_artifact_attestations:
+      signer_workflow: rhysd/actionlint/.github/workflows/release.yaml
+      source_ref: refs/tags/v1.7.12
+      source_digest: 914e7df21a07ef503a81201c76d2b11c789d3fca
+      cert_oidc_issuer: https://token.actions.githubusercontent.com
+      deny_self_hosted_runners: true
