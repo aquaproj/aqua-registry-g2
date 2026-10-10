@@ -1,0 +1,58 @@
+---
+name: rewrite
+# Write every published file the way a generation writes it now (#743): repo_id in each
+# definition and on each entry, cosign's command line as fields, registry.json indented.
+#
+# Run once, with the chain stopped until its pull request merges. It opens one pull request,
+# which wc_packages.yaml checks with ar2 rewrite --verify instead of downloading every asset
+# again. A version merged while it is open conflicts with it, since both write the package's
+# versions.json.
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: say what would be rewritten without writing anything
+        type: boolean
+        required: false
+        default: true
+permissions: {}
+jobs:
+  rewrite:
+    runs-on: ubuntu-24.04
+    # The environment holding the pull request app's key, which only main may deploy to.
+    environment: ar2
+    timeout-minutes: 30
+    permissions:
+      # Reading the packages.
+      contents: read
+    steps:
+      # For aqua/aqua.yaml, which pins the ar2 version and its checksum.
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+          sparse-checkout: |
+            aqua
+      - uses: aquaproj/aqua-installer@82d0e83878a8657c4a6f2ff1755d3bfbfc67f329 # v4.1.0
+        with:
+          aqua_version: v2.64.0
+          packages: ar2
+      # The token that commits to the head branch and opens the pull request. One opened
+      # with GITHUB_TOKEN gets its checks in an approval-required state.
+      - uses: actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1 # v3.2.0
+        id: pr_token
+        with:
+          client-id: ${{ vars.AR2_PR_CLIENT_ID }}
+          private-key: ${{ secrets.AR2_PR_PRIVATE_KEY }}
+      - run: |
+          args=()
+          if [ "$DRY_RUN" = true ]; then
+            args+=(--dry-run)
+          fi
+          ar2 rewrite \
+            --g2-owner "${GITHUB_REPOSITORY%/*}" \
+            --g2-repo "${GITHUB_REPOSITORY#*/}" \
+            "${args[@]}"
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          AR2_PR_TOKEN: ${{ steps.pr_token.outputs.token }}
+          DRY_RUN: ${{ inputs.dry_run }}

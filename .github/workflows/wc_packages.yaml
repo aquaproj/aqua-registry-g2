@@ -159,3 +159,38 @@ jobs:
           # assets without a token runs into the anonymous rate limit.
           GITHUB_TOKEN: ${{ github.token }}
           AQUA_GITHUB_TOKEN: ${{ github.token }}
+
+  # The pull request rewriting every published file. See ar2 rewrite --verify.
+  rewrite:
+    if: github.head_ref == 'ar2_rewrite'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    env:
+      AQUA_GLOBAL_CONFIG: ${{ github.workspace }}/aqua/aqua.yaml
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+          sparse-checkout: |
+            aqua
+      - uses: aquaproj/aqua-installer@82d0e83878a8657c4a6f2ff1755d3bfbfc67f329 # v4.1.0
+        with:
+          aqua_version: v2.64.0
+          packages: ar2
+          aqua_opts: -l -a
+      # Every definition and registry.json in the pull request has to be exactly what
+      # rewriting the base gives, and every versions.json what its files give.
+      #
+      # The base is where the pull request branched off, not the base branch's tip: a version
+      # merged since is on main and not in the pull request, which says nothing about it.
+      - run: |
+          base=$(gh api "repos/$GITHUB_REPOSITORY/compare/$BASE_SHA...$HEAD_SHA" --jq .merge_base_commit.sha)
+          ar2 rewrite --verify --base "$base" --head "$HEAD_SHA" \
+            --g2-owner "${GITHUB_REPOSITORY%/*}" --g2-repo "${GITHUB_REPOSITORY#*/}"
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+          GITHUB_TOKEN: ${{ github.token }}
+          AQUA_GITHUB_TOKEN: ${{ github.token }}

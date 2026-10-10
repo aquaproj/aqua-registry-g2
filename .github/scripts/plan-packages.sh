@@ -45,6 +45,25 @@ if [ "$labeller" = User ] && jq -e --arg l "$REQUIRED_LABEL" 'index($l)' <<< "$L
 	replaces=true
 fi
 
+# The pull request rewriting every published file in the form a generation writes now is
+# checked by deriving it again from its base (ar2 rewrite --verify, in wc_packages.yaml),
+# rather than by downloading every asset a second time. Nothing about a release changes in
+# it, so there is nothing for these checks to add.
+#
+# It replaces every published file all the same, so it waits for the label like any other.
+if [ "$HEAD_REF" = ar2_rewrite ]; then
+	if ! $replaces; then
+		fail "this pull request rewrites every published file. A person labels it $REQUIRED_LABEL to allow that."
+	fi
+	echo "The pull request that rewrites the published files is checked by ar2 rewrite --verify." >> "$GITHUB_STEP_SUMMARY"
+	{
+		echo "packages="
+		echo "files="
+		echo "count=0"
+	} >> "$GITHUB_OUTPUT"
+	exit "$failed"
+fi
+
 gh api "repos/$GITHUB_REPOSITORY/pulls/$NUMBER/files" --paginate \
 	--jq '.[] | [.status, .filename, (.previous_filename // "")] | @tsv' > changes.tsv
 
