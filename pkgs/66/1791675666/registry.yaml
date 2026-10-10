@@ -1,0 +1,25 @@
+name: kashav/fsql
+type: github_release
+repo_owner: kashav
+repo_name: fsql
+repo_id: 89662045
+description: Search for files using a fun query language
+files:
+  - name: fsql
+    src: fsql-{{.OS}}-{{.Arch}}/fsql
+version_overrides:
+  - version_constraint: semver(">= 0.5.1")
+  - version_constraint: semver("= 0.5.0")
+    files:
+      - name: fsql
+  - version_constraint: semver("= 0.4.0")
+    files:
+      - name: fsql
+        src: '{{.OS}}-{{.Arch}}/fsql'
+  - version_constraint: semver(">= 0.3.0")
+    files:
+      - name: fsql
+        src: '{{.OS}}-{{.Arch}}/fsql'
+  - version_constraint: "true"
+    files:
+      - name: fsql
