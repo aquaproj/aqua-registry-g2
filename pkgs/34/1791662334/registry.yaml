@@ -1,0 +1,14 @@
+name: gomods/athens
+type: github_release
+repo_owner: gomods
+repo_name: athens
+repo_id: 122872932
+description: A Go module datastore and proxy
+version_overrides:
+  - version_constraint: Version == "v0.15.0"
+    no_asset: true
+  - version_constraint: semver("> 0.12.1")
+  - version_constraint: semver("> 0.10.0")
+  - version_constraint: semver("<= 0.10.0")
+    no_asset: true
+  - version_constraint: "true"
