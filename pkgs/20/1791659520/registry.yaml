@@ -1,0 +1,29 @@
+name: arduino/arduino-cli
+type: github_release
+repo_owner: arduino
+repo_name: arduino-cli
+repo_id: 144036833
+description: Arduino command line tool
+version_overrides:
+  - version_constraint: Version == "0.4.0"
+  - version_constraint: Version == "0.5.0"
+  - version_constraint: Version == "0.6.0"
+  - version_constraint: Version == "0.7.0"
+  - version_constraint: Version == "0.7.2"
+  - version_constraint: Version == "0.9.0"
+  - version_constraint: Version == "0.11.0"
+  - version_constraint: Version == "0.12.0"
+  - version_constraint: Version == "0.12.1"
+  - version_constraint: Version == "0.13.0"
+  - version_constraint: Version == "0.14.0"
+  - version_constraint: semver("> 0.34.2")
+  - version_constraint: semver("> 0.31.0")
+  - version_constraint: semver("> 0.28.0")
+  - version_constraint: semver("> 0.24.0")
+  - version_constraint: semver("> 0.10.0")
+  - version_constraint: semver("> 0.8.0")
+  - version_constraint: semver("> 0.7.1")
+  - version_constraint: semver("> 0.2.1-alpha.preview")
+  - version_constraint: semver("<= 0.2.1-alpha.preview")
+    no_asset: true
+  - version_constraint: "true"
