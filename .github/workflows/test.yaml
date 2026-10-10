@@ -3,7 +3,11 @@
 #
 # Don't add jobs to this file. Add them to wc_main.yaml.
 name: test
-on: pull_request
+on:
+  pull_request:
+    # labeled and unlabeled too: replaces-published is put on after the pull request is
+    # opened, and the check that reads it has to run again when it is.
+    types: [opened, synchronize, reopened, labeled, unlabeled]
 permissions: {}
 concurrency:
   group: ${{ github.workflow }}--${{ github.ref }}
@@ -13,6 +17,9 @@ jobs:
     uses: ./.github/workflows/wc_main.yaml
     permissions:
       contents: read
+      # Reading which files the pull request touches, and who labelled it.
+      pull-requests: read
+      issues: read
   # The one check the ruleset requires. It is named apart from the package branches'
   # check of the same purpose, so that neither can stand in for the other while it
   # hasn't started.

@@ -1,0 +1,179 @@
+---
+# The checks of what a pull request does to the packages under pkgs/.
+#
+# A package's pull request is merged without a person reading it, so the trust in what was
+# generated comes from here. Called from wc_main.yaml for every pull request into main; one
+# that touches no package plans nothing and checks nothing.
+name: packages (workflow_call)
+on: workflow_call
+jobs:
+  # What to check and where. The jobs are worked out from the files rather than fixed
+  # here: an entry for an environment nobody thought of would otherwise go unchecked,
+  # which is the one thing a merge gate must not do.
+  plan:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    outputs:
+      count: ${{ steps.plan.outputs.count }}
+      files: ${{ steps.plan.outputs.files }}
+      packages: ${{ steps.plan.outputs.packages }}
+      matrix: ${{ steps.matrix.outputs.matrix }}
+    env:
+      AQUA_GLOBAL_CONFIG: ${{ github.workspace }}/aqua/aqua.yaml
+    permissions:
+      contents: read
+      # Reading which files the pull request touches.
+      pull-requests: read
+      # Reading who put a label on it.
+      issues: read
+    steps:
+      # The registry holds every package, so only what is read is checked out: the
+      # tooling here, and the packages the pull request touches once they are known.
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+          sparse-checkout: |
+            .github
+            aqua
+      - id: plan
+        run: bash .github/scripts/plan-packages.sh
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          NUMBER: ${{ github.event.pull_request.number }}
+          HEAD_REF: ${{ github.head_ref }}
+          LABELS: ${{ toJSON(github.event.pull_request.labels.*.name) }}
+      - if: steps.plan.outputs.packages != ''
+        run: echo "$PACKAGES" | xargs git sparse-checkout add
+        env:
+          PACKAGES: ${{ steps.plan.outputs.packages }}
+      - if: steps.plan.outputs.packages != ''
+        uses: aquaproj/aqua-installer@82d0e83878a8657c4a6f2ff1755d3bfbfc67f329 # v4.1.0
+        with:
+          aqua_version: v2.64.0
+          packages: ar2
+          # -a includes the global configuration. Without it the packages pinned there
+          # are not linked and the command isn't found.
+          aqua_opts: -l -a
+      # The definition of every package the pull request touches, whatever else it
+      # touches. It is the only thing that says which package a directory holds, and
+      # nothing else on the way in reads it: one that had stopped being YAML merged, and
+      # the package then generated nothing while a run said so in a log nobody was
+      # watching. A package whose definition is gone is one being removed, and has none
+      # to read.
+      - if: steps.plan.outputs.packages != ''
+        run: |
+          for dir in $PACKAGES; do
+            if [ -f "$dir/registry.yaml" ]; then
+              ar2 validate-definition "$dir/registry.yaml"
+            fi
+          done
+        env:
+          PACKAGES: ${{ steps.plan.outputs.packages }}
+      - if: steps.plan.outputs.count == '0'
+        run: echo "This pull request adds or changes no generated registry file." >> "$GITHUB_STEP_SUMMARY"
+      # One job per environment the files describe, on a machine of that environment.
+      # An environment with no runner to answer for it fails here rather than being
+      # passed over quietly.
+      - id: matrix
+        if: steps.plan.outputs.count != '0'
+        run: |
+          : > matrix.jsonl
+          while read -r env; do
+            os=${env%%/*}
+            arch=${env##*/}
+            case "$env" in
+              linux/amd64) runner=ubuntu-24.04 ;;
+              linux/arm64) runner=ubuntu-24.04-arm ;;
+              darwin/amd64) runner=macos-15-intel ;;
+              darwin/arm64) runner=macos-15 ;;
+              windows/amd64) runner=windows-2025 ;;
+              windows/arm64) runner=windows-11-arm ;;
+              *)
+                echo "::error::no runner answers for $env, so its entry can't be checked"
+                exit 1
+                ;;
+            esac
+            jq -n -c --arg env "$env" --arg os "$os" --arg arch "$arch" --arg runner "$runner" \
+              '{env: $env, os: $os, arch: $arch, runner: $runner}' >> matrix.jsonl
+          done < <(echo "$FILES" | xargs ar2 test --environments)
+          echo "matrix=$(jq -s -c . matrix.jsonl)" >> "$GITHUB_OUTPUT"
+          jq -s -c . matrix.jsonl
+        env:
+          FILES: ${{ steps.plan.outputs.files }}
+          AQUA_GITHUB_TOKEN: ${{ github.token }}
+
+  test:
+    needs: plan
+    if: needs.plan.outputs.count != '0'
+    strategy:
+      fail-fast: false
+      matrix:
+        include: ${{ fromJSON(needs.plan.outputs.matrix) }}
+    runs-on: ${{ matrix.runner }}
+    timeout-minutes: 30
+    defaults:
+      run:
+        # The Windows runners default to PowerShell, and these steps are written for
+        # the shell the other runners use.
+        shell: bash
+    env:
+      AQUA_GLOBAL_CONFIG: ${{ github.workspace }}/aqua/aqua.yaml
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+          sparse-checkout: |
+            aqua
+      - run: echo "$PACKAGES" | xargs git sparse-checkout add
+        env:
+          PACKAGES: ${{ needs.plan.outputs.packages }}
+      - uses: aquaproj/aqua-installer@82d0e83878a8657c4a6f2ff1755d3bfbfc67f329 # v4.1.0
+        with:
+          aqua_version: v2.64.0
+          packages: ar2
+          aqua_opts: -l -a
+      # The entries of this environment, on a machine of this environment, a package at a
+      # time: the package's name is read from its definition, and it is what an
+      # attestation is verified against.
+      - run: |
+          for dir in $PACKAGES; do
+            files=()
+            for file in $FILES; do
+              case $file in
+                "$dir"/*) files+=("$file") ;;
+              esac
+            done
+            if [ "${#files[@]}" -eq 0 ]; then
+              continue
+            fi
+            ar2 test --definition "$dir/registry.yaml" --os "$OS" --arch "$ARCH" "${files[@]}"
+          done
+        env:
+          OS: ${{ matrix.os }}
+          ARCH: ${{ matrix.arch }}
+          PACKAGES: ${{ needs.plan.outputs.packages }}
+          FILES: ${{ needs.plan.outputs.files }}
+          # Verifying an attestation asks GitHub about the artifact, and downloading
+          # assets without a token runs into the anonymous rate limit.
+          GITHUB_TOKEN: ${{ github.token }}
+          AQUA_GITHUB_TOKEN: ${{ github.token }}
+
+  # The pull request that moves every package off its branch. See verify-consolidation.sh.
+  consolidation:
+    if: github.head_ref == 'ar2_consolidate'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+          sparse-checkout: |
+            .github
+      - run: bash .github/scripts/verify-consolidation.sh
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
