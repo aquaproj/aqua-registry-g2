@@ -1,0 +1,22 @@
+name: google/go-containerregistry
+type: github_release
+repo_owner: google
+repo_name: go-containerregistry
+repo_id: 125253663
+description: Go library and CLIs for working with container registries
+files:
+  - name: crane
+  - name: gcrane
+version_overrides:
+  - version_constraint: Version in ["v0.15.0", "v0.16.0"]
+    no_asset: true
+  - version_constraint: semver("<= 0.1.0")
+  - version_constraint: semver("<= 0.1.4")
+  - version_constraint: semver("<= 0.5.0")
+  - version_constraint: semver("<= 0.8.0")
+  - version_constraint: semver("<= 0.12.1")
+  - version_constraint: semver("<= 0.19.1")
+    slsa_provenance:
+      type: github_release
+      asset: multiple.intoto.jsonl
+  - version_constraint: "true"
