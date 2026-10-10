@@ -1,0 +1,13 @@
+name: mr-karan/doggo
+type: github_release
+repo_owner: mr-karan
+repo_name: doggo
+repo_id: 319848237
+description: ':dog: Command-line DNS Client for Humans. Written in Golang'
+version_overrides:
+  - version_constraint: semver("> 1.1.7")
+  - version_constraint: semver("> 0.5.7")
+    files:
+      - name: doggo
+        src: '{{.AssetWithoutExt}}/doggo'
+  - version_constraint: "true"
