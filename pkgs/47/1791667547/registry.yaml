@@ -1,0 +1,46 @@
+name: smallstep/cli
+type: github_release
+repo_owner: smallstep
+repo_name: cli
+repo_id: 141352703
+description: A zero trust swiss army knife for working with X509, OAuth, JWT, OATH OTP, etc
+version_filter: not (Version matches "-rc[0-9.]+$")
+files:
+  - name: step
+    src: step_{{.OS}}_{{.Arch}}/bin/step
+version_overrides:
+  - version_constraint: Version in ["v0.15.1", "v0.27.0", "v0.28.1", "v0.28.4", "v0.30.3-rc1"]
+    no_asset: true
+  - version_constraint: Version == "v0.0.1"
+    files:
+      - name: step
+        src: step_{{trimV .Version}}/bin/step
+  - version_constraint: Version == "v0.14.0"
+    files:
+      - name: step
+        src: step_{{trimV .Version}}/bin/step
+  - version_constraint: Version == "v0.14.1"
+    files:
+      - name: step
+        src: step_{{trimV .Version}}-dev/bin/step
+  - version_constraint: semver("<= 0.13.3")
+    files:
+      - name: step
+        src: step_{{trimV .Version}}/bin/step
+  - version_constraint: semver("<= 0.15.3")
+    files:
+      - name: step
+        src: step_{{trimV .Version}}/bin/step
+  - version_constraint: semver("<= 0.17.6")
+    files:
+      - name: step
+        src: step_{{trimV .Version}}/bin/step
+  - version_constraint: semver("<= 0.22.0")
+    files:
+      - name: step
+        src: step_{{trimV .Version}}/bin/step
+  - version_constraint: semver("<= 0.24.4")
+    files:
+      - name: step
+        src: step_{{trimV .Version}}/bin/step
+  - version_constraint: "true"

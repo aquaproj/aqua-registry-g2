@@ -1,0 +1,161 @@
+{
+  "published_at": "2026-09-25T20:09:06Z",
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "smallstep",
+      "repo_name": "cli",
+      "repo_id": 141352703,
+      "asset": "step_darwin_0.31.0_amd64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "4b928a936e9d2ff3bfa6f7638003a9e46c702a27cf515169c6e5996ade8cd23e",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "step",
+          "src": "step_darwin_amd64/bin/step"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "step_darwin_0.31.0_amd64.tar.gz.sigstore.json"
+        },
+        "certificate_identity_regexp": "^https://github\\.com/smallstep/cli/\\.github/workflows/.+\\.ya?ml@refs/tags/\\Qv0.31.0\\E$",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "smallstep",
+      "repo_name": "cli",
+      "repo_id": 141352703,
+      "asset": "step_darwin_0.31.0_arm64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "91963c7c1ef6654dda61ff2f99cff2b8e95efce198d8c7b3532a00a8f253bf41",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "step",
+          "src": "step_darwin_arm64/bin/step"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "step_darwin_0.31.0_arm64.tar.gz.sigstore.json"
+        },
+        "certificate_identity_regexp": "^https://github\\.com/smallstep/cli/\\.github/workflows/.+\\.ya?ml@refs/tags/\\Qv0.31.0\\E$",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "smallstep",
+      "repo_name": "cli",
+      "repo_id": 141352703,
+      "asset": "step_linux_0.31.0_amd64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "a7e13726efa8782f3d5459174dacf602ab3514b9431f2d42a6a75950b7685e5f",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "step",
+          "src": "step_linux_amd64/bin/step"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "step_linux_0.31.0_amd64.tar.gz.sigstore.json"
+        },
+        "certificate_identity_regexp": "^https://github\\.com/smallstep/cli/\\.github/workflows/.+\\.ya?ml@refs/tags/\\Qv0.31.0\\E$",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "smallstep",
+      "repo_name": "cli",
+      "repo_id": 141352703,
+      "asset": "step_linux_0.31.0_arm64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "9937964c7d47de47a511cd775bd07101b8ee9854db210abd402c69093f0a6fd4",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "step",
+          "src": "step_linux_arm64/bin/step"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "step_linux_0.31.0_arm64.tar.gz.sigstore.json"
+        },
+        "certificate_identity_regexp": "^https://github\\.com/smallstep/cli/\\.github/workflows/.+\\.ya?ml@refs/tags/\\Qv0.31.0\\E$",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "smallstep",
+      "repo_name": "cli",
+      "repo_id": 141352703,
+      "asset": "step_windows_0.31.0_amd64.zip",
+      "format": "zip",
+      "checksum": "3b8dc1245fb1dffe3b57bf10cac9b3da9808ed42f7274f869085e1086214d0f4",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "step",
+          "src": "step_windows_amd64/bin/step.exe"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "step_windows_0.31.0_amd64.zip.sigstore.json"
+        },
+        "certificate_identity_regexp": "^https://github\\.com/smallstep/cli/\\.github/workflows/.+\\.ya?ml@refs/tags/\\Qv0.31.0\\E$",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "smallstep",
+      "repo_name": "cli",
+      "repo_id": 141352703,
+      "asset": "step_windows_0.31.0_arm64.zip",
+      "format": "zip",
+      "checksum": "f5be7139b78db9d051274c029cc3aefa7d87c16d4867a430eddfebdc8689d922",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "step",
+          "src": "step_windows_arm64/bin/step.exe"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "step_windows_0.31.0_arm64.zip.sigstore.json"
+        },
+        "certificate_identity_regexp": "^https://github\\.com/smallstep/cli/\\.github/workflows/.+\\.ya?ml@refs/tags/\\Qv0.31.0\\E$",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    }
+  ]
+}
