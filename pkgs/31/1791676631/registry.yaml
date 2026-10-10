@@ -1,0 +1,34 @@
+name: UsefulSoftwareCo/executor
+type: github_release
+repo_owner: UsefulSoftwareCo
+repo_name: executor
+repo_id: 1152424189
+description: Connect AI agents to OpenAPI, MCP, and GraphQL services
+version_filter: Version != "graph-slices"
+version_overrides:
+  - version_constraint: semver("> 1.3.0-beta.5")
+    overrides:
+      - goos: linux
+        asset: executor-{{.OS}}-{{.Arch}}-musl.{{.Format}}
+        variants:
+          - key: libc
+            value: musl
+  - version_constraint: semver("> 1.1.9")
+    no_asset: true
+  - version_constraint: semver("<= 1.1.9")
+    files:
+      - name: executor
+        src: '{{.AssetWithoutExt}}/executor'
+    overrides:
+      - goos: windows
+        files:
+          - name: executor
+            src: '{{.AssetWithoutExt}}/executor.cmd'
+  - version_constraint: "true"
+    overrides:
+      - goos: linux
+        asset: executor-{{.OS}}-{{.Arch}}-musl.{{.Format}}
+        variants:
+          - key: libc
+            value: musl
+all_assets_filter: not ((Asset startsWith "Executor") or (Asset startsWith "executor-desktop"))
