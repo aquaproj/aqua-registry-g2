@@ -1,0 +1,21 @@
+name: firecow/gitlab-ci-local
+type: github_release
+repo_owner: firecow
+repo_name: gitlab-ci-local
+repo_id: 231806480
+description: Tired of pushing to test your .gitlab-ci.yml
+version_overrides:
+  - version_constraint: semver("> 4.65.1")
+  - version_constraint: semver("> 4.9.7")
+    files:
+      - name: gitlab-ci-local
+        src: '{{.AssetWithoutExt}}'
+  - version_constraint: semver("> 4.9.0")
+    files:
+      - name: gitlab-ci-local
+        src: '{{.AssetWithoutExt}}'
+  - version_constraint: semver("<= 4.9.0")
+    files:
+      - name: gitlab-ci-local
+        src: '{{.AssetWithoutExt}}'
+  - version_constraint: "true"
