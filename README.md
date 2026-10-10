@@ -22,8 +22,8 @@ requests, which merge when their checks pass.
 ## Directory Structure
 
 Everything is on `main`. Each package is a directory under `pkgs/`, named after the package's
-id; until 2026-10 each was an orphan branch of its own, `pkg_<id>`, and those branches are
-still there, frozen ([#695](https://github.com/aquaproj/aqua-registry-g2/issues/695)).
+id. Until 2026-10 each was an orphan branch of its own, `pkg_<id>`; those branches were
+deleted once every package was here ([#695](https://github.com/aquaproj/aqua-registry-g2/issues/695)).
 
 Most of these files are generated and maintained by GitHub Actions, so they don't need to
 be updated by hand.
