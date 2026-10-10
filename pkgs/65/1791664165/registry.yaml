@@ -1,0 +1,37 @@
+name: topgrade-rs/topgrade
+type: github_release
+repo_owner: topgrade-rs
+repo_name: topgrade
+repo_id: 549714010
+description: Upgrade all the things
+github_artifact_attestations:
+  signer_workflow: topgrade-rs/topgrade/.github/workflows/create_release_assets.yml
+  source_ref: refs/heads/main
+  source_digest: 710856320124b85228e42846d133b3fd1a3ab5ae
+  cert_oidc_issuer: https://token.actions.githubusercontent.com
+  deny_self_hosted_runners: true
+version_overrides:
+  - version_constraint: Version in ["v9.1.0", "v10.2.5"]
+    no_asset: true
+  - version_constraint: Version == "v10.0.0"
+  - version_constraint: Version == "v10.0.1"
+  - version_constraint: Version == "v11.0.0"
+  - version_constraint: semver("<= 10.1.0-cd1")
+    no_asset: true
+  - version_constraint: semver("<= 10.1.0-cd5")
+  - version_constraint: semver("<= 10.1.0-rc1")
+    no_asset: true
+  - version_constraint: semver("<= 10.2.2")
+  - version_constraint: semver("<= 10.2.4")
+  - version_constraint: semver("<= 14.0.1")
+  - version_constraint: semver("< 16.1.0")
+  - version_constraint: Version == "v16.2.0"
+    github_artifact_attestations:
+      signer_workflow: topgrade-rs/topgrade/.github/workflows/create_release_assets.yml
+  - version_constraint: "true"
+    github_artifact_attestations:
+      signer_workflow: topgrade-rs/topgrade/.github/workflows/create_release_assets.yml
+      source_ref: refs/heads/main
+      source_digest: 710856320124b85228e42846d133b3fd1a3ab5ae
+      cert_oidc_issuer: https://token.actions.githubusercontent.com
+      deny_self_hosted_runners: true
