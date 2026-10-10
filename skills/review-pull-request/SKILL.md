@@ -26,8 +26,8 @@ CI has already established, for every entry in the pull request:
 - an entry for `linux/amd64` was checked on a Linux amd64 machine, and so on for the
   six environments
 
-None of that needs reading again. The generated files are one line each and nothing is
-learned by looking at them.
+None of that needs reading again. The generated files are indented, so a diff says which
+field moved, but what CI established about them isn't learned again by reading them.
 
 ## The version is verifiable with less than the one before it
 
