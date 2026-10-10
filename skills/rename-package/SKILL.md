@@ -20,17 +20,16 @@ gh workflow run rename.yaml -f from=<old package name> -f to=<new package name>
 
 ### What a rename moves
 
-Not the branch, which is named after the package's id. That is what an id is for: nothing that
+Not the package's directory, which is named after the package's id. That is what an id is for: nothing that
 wrote it down is left pointing at nothing, and the versions -- each downloaded, hashed and
 opened on six machines to get there -- stay where they are.
 
-Two things move. The definition on the branch, because it is the only thing that says which
-package the branch holds, and a branch naming the old one would be found under a name nobody
-uses. And the entry the catalogue lists the package under, which is what a name is resolved
+Two things move. The definition, because it is the only thing that says which package the
+directory holds, and a directory naming the old one would be found under a name nobody uses. And the entry the catalogue lists the package under, which is what a name is resolved
 through. The old name stays as an alias, so a configuration still asking for it resolves.
 
-The definition goes through a pull request, since committing onto a package branch takes one.
-The catalogue is brought to the new name straight away, ahead of it: both names are the same
-branch, so a reader resolves either of them to it. What the pull request settles is which name
-the registry answers for when a run next asks -- until it merges, a run asking for the new name
-finds no branch and would take the package over as a new one.
+The definition goes through a pull request, since committing onto `main` takes one. The
+catalogue is brought to the new name straight away, ahead of it: both names are the same id, so
+a reader resolves either of them to it. What the pull request settles is which name the
+registry answers for when a run next asks -- until it merges, a run asking for the new name
+finds nothing under it and would take the package over as a new one.

@@ -65,8 +65,8 @@ generated that were right are in the package's own pull request, which merged wi
 for these.
 
 What they need is the definition to describe that era — a `version_overrides` entry with its
-own `files` — and the definition goes on this branch rather than on the package's, so that the
-versions and what makes them true arrive together. Then
+own `files` — and the definition goes on this branch rather than straight onto `main`, so that
+the versions and what makes them true arrive together. Then
 [generate them again from it](../regenerate-versions/SKILL.md#what-is-waiting-for-a-definition)
 and let the checks decide.
 
@@ -104,7 +104,7 @@ confirmed rather than reporting a problem.
 Four steps:
 
 1. Read the constraints the body names.
-2. Open `registry.yaml` on the package's branch and check its overrides are
+2. Open `registry.yaml` in the package's directory and check its overrides are
    aqua-registry's, in aqua-registry's order. The top-level `version_constraint` is
    gone, which is expected: there is none here, and it was `"false"` there.
 3. For each version the body lists, work out which override matches first in that
@@ -126,7 +126,7 @@ do. Step 4 is checking that it does.
 
 ## The pull request replaces what the registry already serves
 
-> Generated again by `ar2 regenerate`, from the definition on the package's branch
+> Generated again by `ar2 regenerate`, from the package's definition.
 
 Not a version being added: a version being replaced. Somebody found a definition wrong
 and fixed it, and these are the files that were generated under the old one.
@@ -134,12 +134,13 @@ and fixed it, and these are the files that were generated under the old one.
 Auto-merge is never on for these, whatever the files look like, because what CI
 establishes is the same as always — the assets download, the checksums match, the
 archives open, the signatures verify — and none of that says replacing the old file was
-right. Only the versions whose file actually changed are in it.
+right. Only the versions whose file actually changed are in it. The checks refuse it until a
+person labels it `replaces-published`, which is the conclusion of that reading.
 
 What to check is the definition rather than the release: read the change that prompted
-it on the package's branch, and confirm the new files are what that change should
-produce. `git diff` between the pull request and the package branch shows what moved in
-each version; the old file stays in the branch's history either way.
+it in the package's directory, and confirm the new files are what that change should
+produce. The pull request's diff shows what moved in each version; the old file stays in
+`main`'s history either way.
 
 If that definition change also touched what the catalogue holds -- the description, the
 link, the search words, the aliases -- `ar2 index <package>` brings the entry along.

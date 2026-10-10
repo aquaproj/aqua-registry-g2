@@ -19,36 +19,47 @@ requests, which merge when their checks pass.
 - [MAINTAINING.md](MAINTAINING.md): For maintainers.
 - [CONSUMING.md](CONSUMING.md): For developers of other tools that read this registry.
 
-## Branches and Directory Structure
+## Directory Structure
 
-One branch per package, plus `main`. A package branch is an orphan: it shares no history
-with `main` or with any other package, which is what keeps one package's commits out of
-another's.
+Everything is on `main`. Each package is a directory under `pkgs/`, named after the package's
+id; until 2026-10 each was an orphan branch of its own, `pkg_<id>`, and those branches are
+still there, frozen ([#695](https://github.com/aquaproj/aqua-registry-g2/issues/695)).
 
 Most of these files are generated and maintained by GitHub Actions, so they don't need to
 be updated by hand.
 
-### Package branches
-
-A package branch is named `pkg_<id>`.
-
 ```
-.github/workflows/test.yaml
-registry.yaml
-versions.json
-versions/
-  <escaped version>/
-    registry-1.json
+.github/workflows/
+ar2.yaml
+index.json
+names.json
+pkgs/
+  <last two digits of id>/
+    <id>/
+      registry.yaml
+      versions.json
+      versions/
+        <escaped version>/
+          registry-1.json
 ```
+
+- `index.json`: the package list. This is what `aqua g` searches.
+- `names.json`: what resolves a name. It maps every package's name to its id, and every
+  name a package used to have to the name it has now. It is rendered from `index.json` in
+  the same commit, so the two can't describe different registries.
+- `ar2.yaml`: this registry's configuration for [ar2](https://github.com/aquaproj/ar2).
+
+### A package's directory
 
 - `registry.yaml`: the definition of the package. It holds what a release can't be read
   for, and `registry-1.json` is generated from it. It also names the package, which is how
-  the branch says which one it holds -- its own name doesn't.
+  the directory says which one it holds -- its own name doesn't.
 - `versions/<escaped version>/registry-1.json`: the static registry file, which is what
   aqua reads. One per version, written once. We call it `registry.json` for short.
 - `versions.json`: the versions above as one list, with the date each release was published
-  and the digest of the file the registry serves for it. It is derived from `versions/`,
-  which stays the thing that decides what the registry holds.
+  and the digest of the file the registry serves for it. It is written in the same pull
+  request as the versions it lists, and `versions/` stays the thing that decides what the
+  registry holds.
 
 #### Schema version
 
@@ -67,23 +78,29 @@ There is only one schema so far.
 So a reader asks for the newest `registry-<major>.json` it knows, and steps down to older
 ones if that isn't there.
 
-#### The branch name
+#### The directory's name
 
-A branch is named after the package's id: a number this registry hands out once, and never
-changes. The package's name is not in it.
+A package's directory is named after its id: a number this registry hands out once, and
+never changes. The package's name is not in it.
 
-| package | id | branch |
+| package | id | directory |
 | --- | --- | --- |
-| `cli/cli` | `1790772769` | `pkg_1790772769` |
-| `kubernetes-sigs/kustomize` | `1790772903` | `pkg_1790772903` |
+| `cli/cli` | `1790772767` | `pkgs/67/1790772767` |
+| `kubernetes-sigs/kustomize` | `1790772903` | `pkgs/03/1790772903` |
 
 Because a name changes. A repository is renamed or transferred, or a package is split out of
-one, and a branch named after the package then has to be moved -- while everything that
+one, and a directory named after the package then has to be moved -- while everything that
 wrote the old name down is left pointing at nothing. An id doesn't move, so what a rename
 changes is one line in a table.
 
-[names.json](names.json) is that table. The definition on a branch names its own package, so what
-the table says can be checked against what the branches say rather than believed.
+[names.json](names.json) is that table. The definition in a directory names its own
+package, so what the table says can be checked against what the definitions say rather than
+believed.
+
+The id is the second it was minted, so its last two digits are as good as uniform, and they
+are what spreads the packages over a hundred directories. A directory every commit writes
+again stays small that way, where one holding every package would be rewritten whole by
+each version added to any of them.
 
 #### Escaping a version
 
@@ -104,22 +121,3 @@ written as they are, one version's directory would be another's parent, and the 
 package has couldn't be told from the first segments of their tags -- every kustomize release
 would be a directory called `kustomize`. The result holds no slash, and stays within
 `[A-Za-z0-9._-]`, so a raw URL needs no further escaping.
-
-### main
-
-`main` holds no package.
-
-```
-.github/workflows/
-ar2.yaml
-index.json
-names.json
-template/ # template of package branches
-```
-
-- `index.json`: the package list. This is what `aqua g` searches.
-- `names.json`: what resolves a name. It maps every package's name to the id of the branch
-  holding it, and every name a package used to have to the name it has now. It is rendered
-  from `index.json` in the same commit, so the two can't describe different registries.
-- `ar2.yaml`: this registry's configuration for [ar2](https://github.com/aquaproj/ar2).
-- `template/`: the files a package branch starts with.

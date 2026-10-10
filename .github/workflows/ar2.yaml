@@ -42,7 +42,7 @@ jobs:
     environment: ar2
     timeout-minutes: 30
     permissions:
-      # Creating the package branch and committing to the head branch.
+      # Committing to the head branch.
       contents: write
       # Opening the pull request and turning on auto-merge.
       pull-requests: write
@@ -66,16 +66,6 @@ jobs:
         with:
           aqua_version: v2.64.0
           packages: ar2
-      # A separate token for creating package branches. Creating one has to get
-      # past the ruleset requiring status checks, which a brand new branch can't
-      # have; this app is a bypass actor for that ruleset. It holds no
-      # pull-requests permission, so the bypass can't be turned into a way to
-      # merge something unchecked.
-      - uses: actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1 # v3.2.0
-        id: branch_token
-        with:
-          client-id: ${{ vars.AR2_BRANCH_CLIENT_ID }}
-          private-key: ${{ secrets.AR2_BRANCH_PRIVATE_KEY }}
       # The token that commits to the head branch and opens the pull request. A pull
       # request opened or updated with GITHUB_TOKEN gets its checks in an
       # approval-required state, so nothing would run until someone pressed a button
@@ -106,7 +96,6 @@ jobs:
             "${args[@]}"
         env:
           GITHUB_TOKEN: ${{ github.token }}
-          AR2_BRANCH_TOKEN: ${{ steps.branch_token.outputs.token }}
           AR2_PR_TOKEN: ${{ steps.pr_token.outputs.token }}
           PACKAGES: ${{ inputs.packages }}
           LIMIT: ${{ inputs.limit }}

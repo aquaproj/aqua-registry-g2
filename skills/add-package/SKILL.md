@@ -33,13 +33,13 @@ installation or Actions.
 
 ## What it writes
 
-Two things, and neither follows from the other: the definition, as a pull request into the
-package's branch, and the package's place in the order. Nothing is generated here -- the
+Two things, and neither follows from the other: the definition, as a pull request into `main`
+that puts it in the package's directory, and the package's place in the order. Nothing is generated here -- the
 package joins at the current lap, so the next run of the ar2 workflow reaches it and opens
 the pull requests for its versions.
 
 Either half may be there already, so it is dispatched again after a failure rather than
-unpicked. A branch that has a definition keeps it, and a package that is in the order keeps
+unpicked. A package that has a definition keeps it, and a package that is in the order keeps
 its turns.
 
 ## What to read on the pull request

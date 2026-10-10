@@ -1,6 +1,6 @@
 ---
 name: refresh-index
-description: Bring index.json and names.json up to what the package branches say, for one package or all of them. Use when a package is missing from the catalogue or from search, when an alias a repository rename left behind isn't resolving, or after editing a definition's description, link, search words or aliases.
+description: Bring index.json and names.json up to what the definitions say, for one package or all of them. Use when a package is missing from the catalogue or from search, when an alias a repository rename left behind isn't resolving, or after editing a definition's description, link, search words or aliases.
 ---
 
 # Bring the catalogue up to the definitions
@@ -13,14 +13,14 @@ gh workflow run index.yaml -f packages="<package name>..."
 ```
 
 Naming none reconciles the whole catalogue, which is what the schedule does twice an hour: it
-reads the definition on every package branch and adds whatever the catalogue is missing, so a
-package whose pull request merged is listed without anybody doing anything. A branch holding
-nothing but its claim to a package -- which is what a branch is created with -- is waiting for
-the pull request that brings its definition, and there is nothing to describe the package with
-until then.
+reads every package's definition and adds whatever the catalogue is missing, so a package
+whose pull request merged is listed without anybody doing anything; a definition merging also
+asks for it straight away. A definition holding nothing but a claim to a package is waiting
+for the pull request that brings the rest of it, and there is nothing to describe the package
+with until then.
 
-The entry's id is the branch the definition was read from. Nothing is minted there: the branch
-exists, so where the package is has an answer already.
+The entry's id is the directory the definition was read from. Nothing is minted there: the
+package has one, so where it is has an answer already.
 
 ### What the reconciliation notices
 

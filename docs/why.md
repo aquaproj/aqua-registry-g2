@@ -53,7 +53,7 @@ a tool reads it as it is. It is written once, and replaced only when the definit
 from turns out to be wrong: generated again from the fixed definition and reviewed by a
 person, never edited by hand.
 
-The definition, `registry.yaml` on each package's branch, is still there. It holds what a
+The definition, `registry.yaml` in each package's directory, is still there. It holds what a
 release can't be read for -- a filter narrowing which assets are the command, the path of a
 file inside an archive, aliases -- and it is the one file a person writes.
 

@@ -20,9 +20,7 @@ jobs:
       # Reading which files the pull request touches, and who labelled it.
       pull-requests: read
       issues: read
-  # The one check the ruleset requires. It is named apart from the package branches'
-  # check of the same purpose, so that neither can stand in for the other while it
-  # hasn't started.
+  # The one check the ruleset requires.
   status-check-main:
     runs-on: ubuntu-24.04
     if: always() && (contains(needs.*.result, 'failure') || contains(needs.*.result, 'cancelled'))

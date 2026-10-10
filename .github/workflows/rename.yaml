@@ -7,9 +7,9 @@ name: rename
 # for the rename GitHub can't see: a repository that starts publishing several commands,
 # say, where the package's name changes and the repository's doesn't.
 #
-# The branch is carried over rather than the versions generated again, with the old commit
-# as the new branch's parent, and the old name becomes an alias so a configuration still
-# asking for it keeps working.
+# The package's directory stays where it is, being named after its id rather than its name.
+# What moves is the definition, which says the new name, and the catalogue's entry; the old
+# name becomes an alias so a configuration still asking for it keeps working.
 on:
   workflow_dispatch:
     inputs:
@@ -32,12 +32,11 @@ concurrency:
 jobs:
   rename:
     runs-on: ubuntu-24.04
-    # The same environment as a run: the new name needs a branch created, which is what
-    # the branch key is for.
+    # The same environment as a run, which holds the pull request key.
     environment: ar2
     timeout-minutes: 15
     permissions:
-      # Creating the branch under the new name and committing the catalogue.
+      # Committing the definition and the catalogue to their head branches.
       contents: write
       # Opening the catalogue's pull request.
       pull-requests: write
@@ -51,11 +50,6 @@ jobs:
           aqua_version: v2.64.0
           packages: ar2
       - uses: actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1 # v3.2.0
-        id: branch_token
-        with:
-          client-id: ${{ vars.AR2_BRANCH_CLIENT_ID }}
-          private-key: ${{ secrets.AR2_BRANCH_PRIVATE_KEY }}
-      - uses: actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1 # v3.2.0
         id: pr_token
         with:
           client-id: ${{ vars.AR2_PR_CLIENT_ID }}
@@ -67,7 +61,6 @@ jobs:
             --g2-repo "${GITHUB_REPOSITORY#*/}"
         env:
           GITHUB_TOKEN: ${{ github.token }}
-          AR2_BRANCH_TOKEN: ${{ steps.branch_token.outputs.token }}
           AR2_PR_TOKEN: ${{ steps.pr_token.outputs.token }}
           FROM: ${{ inputs.from }}
           TO: ${{ inputs.to }}
