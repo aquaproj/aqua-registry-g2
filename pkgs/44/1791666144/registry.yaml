@@ -1,0 +1,29 @@
+name: Qovery/Replibyte
+type: github_release
+repo_owner: Qovery
+repo_name: Replibyte
+repo_id: 459739627
+description: Seed your development database with real data
+version_overrides:
+  - version_constraint: Version == "v0.2.0"
+    no_asset: true
+  - version_constraint: Version == "v0.4.2"
+    files:
+      - name: replibyte
+        src: replibyte_{{.Version}}_{{.Arch}}-{{.OS}}
+  - version_constraint: Version == "v0.4.3"
+    files:
+      - name: replibyte
+        src: replibyte_{{.Version}}_{{.Arch}}-{{.OS}}
+  - version_constraint: semver("> 0.4.1")
+    files:
+      - name: replibyte
+  - version_constraint: semver("> 0.1.8")
+    files:
+      - name: replibyte
+  - version_constraint: semver("<= 0.1.8")
+    files:
+      - name: replibyte
+  - version_constraint: "true"
+    files:
+      - name: replibyte
