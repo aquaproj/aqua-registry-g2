@@ -1,0 +1,39 @@
+name: aws/aws-sam-cli
+type: github_release
+repo_owner: aws
+repo_name: aws-sam-cli
+description: CLI tool to build, test, debug, and deploy Serverless applications using AWS SAM
+files:
+  - name: sam
+version_overrides:
+  - version_constraint: semver("> 1.103.0")
+    files:
+      - name: sam
+        src: dist/sam
+    overrides:
+      - goos: darwin
+        files:
+          - name: sam
+            src: aws-sam-cli.pkg/Payload/aws-sam-cli/sam
+  - version_constraint: semver("> 1.65.0")
+    files:
+      - name: sam
+        src: dist/sam
+    overrides:
+      - goos: darwin
+        files:
+          - name: sam
+            src: aws-sam-cli.pkg/Payload/aws-sam-cli/sam
+  - version_constraint: semver("<= 1.65.0")
+    files:
+      - name: sam
+        src: dist/sam
+  - version_constraint: "true"
+    files:
+      - name: sam
+        src: dist/sam
+    overrides:
+      - goos: darwin
+        files:
+          - name: sam
+            src: aws-sam-cli.pkg/Payload/aws-sam-cli/sam
