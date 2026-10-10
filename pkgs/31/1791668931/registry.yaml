@@ -1,0 +1,35 @@
+name: oxipng/oxipng
+aliases:
+  - name: shssoichiro/oxipng
+type: github_release
+repo_owner: oxipng
+repo_name: oxipng
+repo_id: 49436331
+description: Multithreaded PNG optimizer written in Rust
+version_overrides:
+  - version_constraint: Version in ["v0.11.0", "v0.14.0"]
+  - version_constraint: Version == "v0.14.3"
+  - version_constraint: semver("<= 0.10.0") || Version in ["v0.17.0", "v2.2.1"]
+    no_asset: true
+  - version_constraint: semver("<= 0.15.1")
+  - version_constraint: semver("<= 3.0.0")
+  - version_constraint: Version == "v3.0.1"
+    files:
+      - name: oxipng
+        src: oxipng-{{trimV .Version}}-{{.Arch}}-{{.OS}}/oxipng
+    overrides:
+      - goos: windows
+        files:
+          - name: oxipng
+  - version_constraint: semver("<= 8.0.0")
+    files:
+      - name: oxipng
+        src: oxipng-{{trimV .Version}}-{{.Arch}}-{{.OS}}/oxipng
+    overrides:
+      - goos: windows
+        files:
+          - name: oxipng
+  - version_constraint: "true"
+    files:
+      - name: oxipng
+        src: oxipng-{{trimV .Version}}-{{.Arch}}-{{.OS}}/oxipng
