@@ -1,0 +1,23 @@
+name: tree-sitter/tree-sitter
+type: github_release
+repo_owner: tree-sitter
+repo_name: tree-sitter
+description: An incremental parsing system for programming tools
+files:
+    - name: tree-sitter
+      src: tree-sitter-{{.OS}}-{{.Arch}}
+github_artifact_attestations:
+    signer_workflow: tree-sitter/tree-sitter/.github/workflows/release.yml
+version_overrides:
+    - version_constraint: Version == "v0.20.8"
+    - version_constraint: semver("> 0.25.10")
+      github_artifact_attestations:
+        signer_workflow: tree-sitter/tree-sitter/.github/workflows/release.yml
+    - version_constraint: semver("> 0.24.7")
+    - version_constraint: semver("> 0.24.4")
+    - version_constraint: semver("> 0.20.7")
+    - version_constraint: semver("> 0.18.0")
+    - version_constraint: semver("<= 0.18.0")
+    - version_constraint: "true"
+      github_artifact_attestations:
+        signer_workflow: tree-sitter/tree-sitter/.github/workflows/release.yml

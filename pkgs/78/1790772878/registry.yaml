@@ -1,0 +1,24 @@
+name: iawia002/lux
+aliases:
+    - name: iawia002/annie
+type: github_release
+repo_owner: iawia002
+repo_name: lux
+description: Fast and simple video download library and CLI tool written in Go
+version_overrides:
+    - version_constraint: semver(">= 0.17.2")
+    - version_constraint: semver(">= 0.14.0")
+    - version_constraint: semver(">= 0.12.0")
+    - version_constraint: semver(">= 0.11.0")
+      files:
+        - name: annie
+    - version_constraint: semver(">= 0.6.6")
+      files:
+        - name: annie
+    - version_constraint: semver(">= 0.6.3")
+      files:
+        - name: annie
+    - version_constraint: semver("< 0.6.3")
+      files:
+        - name: annie
+    - version_constraint: "true"

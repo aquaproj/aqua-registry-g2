@@ -1,0 +1,33 @@
+name: kubernetes-sigs/kubebuilder
+type: github_release
+repo_owner: kubernetes-sigs
+repo_name: kubebuilder
+description: Kubebuilder - SDK for building Kubernetes APIs using CRDs
+version_overrides:
+    - version_constraint: Version == "v1.9-alpha.30"
+      no_asset: true
+    - version_constraint: Version == "release-0.1.6"
+      files:
+        - name: kubebuilder
+          src: '{{.AssetWithoutExt}}/bin/kubebuilder'
+    - version_constraint: Version == "v1beta1.2"
+      files:
+        - name: kubebuilder
+          src: kubebuilder/bin/kubebuilder
+    - version_constraint: semver("> 3.3.0")
+    - version_constraint: semver("> 2.3.2")
+    - version_constraint: semver("> 2.0.0")
+      files:
+        - name: kubebuilder
+          src: '{{.AssetWithoutExt}}/bin/kubebuilder'
+    - version_constraint: semver("> 1.0.0-beta1.1")
+      files:
+        - name: kubebuilder
+          src: '{{.AssetWithoutExt}}/bin/kubebuilder'
+    - version_constraint: semver("> 0.1.12")
+      no_asset: true
+    - version_constraint: semver("<= 0.1.12")
+      files:
+        - name: kubebuilder
+          src: '{{.AssetWithoutExt}}/bin/kubebuilder'
+    - version_constraint: "true"

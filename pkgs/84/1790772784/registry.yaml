@@ -1,0 +1,17 @@
+name: containerd/nerdctl
+type: github_release
+repo_owner: containerd
+repo_name: nerdctl
+description: 'contaiNERD CTL - Docker-compatible CLI for containerd, with support for Compose, Rootless, eStargz, OCIcrypt, IPFS, '
+github_artifact_attestations:
+    signer_workflow: containerd/nerdctl/.github/workflows/release.yml
+version_overrides:
+    - version_constraint: Version == "v0.0.1"
+    - version_constraint: semver("> 2.0.4")
+      github_artifact_attestations:
+        signer_workflow: containerd/nerdctl/.github/workflows/release.yml
+    - version_constraint: semver("> 0.8.1")
+    - version_constraint: semver("<= 0.8.1")
+    - version_constraint: "true"
+      github_artifact_attestations:
+        signer_workflow: containerd/nerdctl/.github/workflows/release.yml

@@ -1,0 +1,20 @@
+name: helm/helm
+type: http
+repo_owner: helm
+repo_name: helm
+description: The Kubernetes Package Manager
+url: https://get.helm.sh/helm-{{.Version}}-{{.OS}}-{{.Arch}}.tar.gz
+files:
+    - name: helm
+      src: '{{.OS}}-{{.Arch}}/helm'
+supported_envs:
+    - darwin
+    - linux
+    - amd64
+version_overrides:
+    - version_constraint: semver(">= 3.6.0")
+    - version_constraint: semver(">= 3.1.0")
+      rosetta2: true
+    - version_constraint: semver("< 3.1.0")
+      rosetta2: true
+    - version_constraint: "true"

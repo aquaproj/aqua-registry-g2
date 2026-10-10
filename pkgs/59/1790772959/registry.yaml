@@ -1,0 +1,60 @@
+name: oxc-project/oxc/oxlint
+type: github_release
+repo_owner: oxc-project
+repo_name: oxc
+description: The linter for oxc
+version_filter: Version matches "^apps_v" || Version matches "^oxlint_v"
+files:
+  - name: oxlint
+    src: '{{.AssetWithoutExt}}'
+version_overrides:
+  - version_constraint: Version in ["apps_v1.47.0", "oxlint_v0.0.9", "oxlint_v0.1.1"]
+    no_asset: true
+  - version_constraint: semver("<= 0.0.8")
+    version_prefix: oxlint_v
+    files:
+      - name: oxlint
+        src: oxlint-{{.OS}}-{{.Arch}}
+  - version_constraint: semver("<= 0.0.19")
+    version_prefix: oxlint_v
+    files:
+      - name: oxlint
+        src: oxlint-{{.OS}}-{{.Arch}}
+  - version_constraint: semver("<= 0.2.2")
+    version_prefix: oxlint_v
+    files:
+      - name: oxlint
+        src: oxlint-{{.OS}}-{{.Arch}}
+  - version_constraint: semver("< 1.17.0")
+    version_prefix: oxlint_v
+    files:
+      - name: oxlint
+        src: oxlint-{{.OS}}-{{.Arch}}
+    overrides:
+      - goos: linux
+        files:
+          - name: oxlint
+            src: oxlint-{{.OS}}-{{.Arch}}-gnu
+  - version_constraint: semver(">= 1.17.0")
+    version_prefix: oxlint_v
+    error_message: |
+      This version is unavailable.
+      < 1.17.0: The version prefix is oxlint_v e.g. oxlint_v1.16.0
+      >= 1.17.0, < 1.28.0: These versions are unavailable
+      >= 1.28.0: The version prefix is apps_v e.g. apps_v1.28.0
+  - version_constraint: semver("< 1.28.0")
+    version_prefix: apps_v
+    error_message: |
+      The version was too old. Please ugrade to 1.28.0 or later.
+      < 1.17.0: The version prefix is oxlint_v
+      >= 1.17.0, < 1.28.0: These versions are unavailable
+      >= 1.28.0: The version prefix is apps_v
+  - version_constraint: semver("<= 1.43.0")
+    version_prefix: apps_v
+  - version_constraint: semver("<= 1.51.0")
+    version_prefix: apps_v
+  - version_constraint: semver("<= 1.53.0")
+    version_prefix: apps_v
+    no_asset: true
+  - version_constraint: "true"
+    version_prefix: apps_v

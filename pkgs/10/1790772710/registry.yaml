@@ -1,0 +1,11 @@
+name: Wilfred/difftastic
+type: github_release
+repo_owner: Wilfred
+repo_name: difftastic
+description: a structural diff that understands syntax
+files:
+    - name: difft
+version_overrides:
+    - version_constraint: Version == "0.51.0"
+      no_asset: true
+    - version_constraint: "true"

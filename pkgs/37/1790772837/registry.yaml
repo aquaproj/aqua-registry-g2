@@ -1,0 +1,84 @@
+name: gleam-lang/gleam
+type: github_release
+repo_owner: gleam-lang
+repo_name: gleam
+description: A friendly language for building type-safe, scalable systems
+cosign:
+    opts:
+        - --certificate-identity
+        - https://github.com/gleam-lang/gleam/.github/workflows/release.yaml@refs/tags/{{.Version}}
+        - --certificate-oidc-issuer
+        - https://token.actions.githubusercontent.com
+        - --certificate-github-workflow-repository
+        - gleam-lang/gleam
+        - --certificate-github-workflow-ref
+        - refs/tags/{{.Version}}
+    bundle:
+        type: github_release
+        asset: '{{.Asset}}.sigstore.json'
+github_artifact_attestations:
+    predicate_type: https://spdx.dev/Document/v2.3
+    signer_workflow: gleam-lang/gleam/.github/workflows/release.yaml
+version_overrides:
+    - version_constraint: Version == "v0.12.0-rc3"
+    - version_constraint: Version == "v1.3.0-rc1"
+    - version_constraint: semver("> 1.10.0")
+      cosign:
+        opts:
+            - --certificate-identity
+            - https://github.com/gleam-lang/gleam/.github/workflows/release.yaml@refs/tags/{{.Version}}
+            - --certificate-oidc-issuer
+            - https://token.actions.githubusercontent.com
+            - --certificate-github-workflow-repository
+            - gleam-lang/gleam
+            - --certificate-github-workflow-ref
+            - refs/tags/{{.Version}}
+        bundle:
+            type: github_release
+            asset: '{{.Asset}}.sigstore'
+      github_artifact_attestations:
+        predicate_type: https://spdx.dev/Document/v2.3
+        signer_workflow: gleam-lang/gleam/.github/workflows/release.yaml
+    - version_constraint: semver("> 1.9.1")
+      cosign:
+        opts:
+            - --certificate-identity
+            - https://github.com/gleam-lang/gleam/.github/workflows/release.yaml@refs/tags/{{.Version}}
+            - --certificate-oidc-issuer
+            - https://token.actions.githubusercontent.com
+            - --certificate-github-workflow-repository
+            - gleam-lang/gleam
+            - --certificate-github-workflow-ref
+            - refs/tags/{{.Version}}
+        bundle:
+            type: github_release
+            asset: '{{.Asset}}.sigstore'
+      github_artifact_attestations:
+        predicate_type: https://spdx.dev/Document/v2.3
+        signer_workflow: gleam-lang/gleam/.github/workflows/release.yaml
+    - version_constraint: semver("> 1.9.1")
+      github_artifact_attestations:
+        predicate_type: https://spdx.dev/Document/v2.3
+        signer_workflow: gleam-lang/gleam/.github/workflows/release.yaml
+    - version_constraint: semver("> 0.22.1")
+    - version_constraint: semver("> 0.18.2")
+    - version_constraint: semver("> 0.18.0-rc3")
+    - version_constraint: semver("> 0.6.0")
+    - version_constraint: semver("<= 0.6.0")
+    - version_constraint: "true"
+      cosign:
+        opts:
+            - --certificate-identity
+            - https://github.com/gleam-lang/gleam/.github/workflows/release.yaml@refs/tags/{{.Version}}
+            - --certificate-oidc-issuer
+            - https://token.actions.githubusercontent.com
+            - --certificate-github-workflow-repository
+            - gleam-lang/gleam
+            - --certificate-github-workflow-ref
+            - refs/tags/{{.Version}}
+        bundle:
+            type: github_release
+            asset: '{{.Asset}}.sigstore'
+      github_artifact_attestations:
+        predicate_type: https://spdx.dev/Document/v2.3
+        signer_workflow: gleam-lang/gleam/.github/workflows/release.yaml

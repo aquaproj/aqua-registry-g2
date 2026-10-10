@@ -1,0 +1,9 @@
+name: open-policy-agent/opa
+type: github_release
+repo_owner: open-policy-agent
+repo_name: opa
+description: Open Policy Agent (OPA) is an open source, general-purpose policy engine
+version_overrides:
+    - version_constraint: Version == "v0.5.2"
+      no_asset: true
+    - version_constraint: "true"

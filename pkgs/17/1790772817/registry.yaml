@@ -1,0 +1,76 @@
+name: fission/fission
+type: github_release
+repo_owner: fission
+repo_name: fission
+description: Fast and Simple Serverless Functions for Kubernetes
+cosign:
+    opts:
+        - --certificate-oidc-issuer
+        - https://token.actions.githubusercontent.com
+        - --certificate-identity
+        - https://github.com/fission/fission/.github/workflows/release.yaml@refs/tags/{{.Version}}
+        - --certificate-github-workflow-repository
+        - fission/fission
+        - --certificate-github-workflow-ref
+        - refs/tags/{{.Version}}
+    bundle:
+        type: github_release
+        asset: '{{.Asset}}.sigstore.json'
+github_artifact_attestations:
+    signer_workflow: fission/fission/.github/workflows/release.yaml
+version_overrides:
+    - version_constraint: semver("> 1.21.0")
+      cosign:
+        opts:
+            - --certificate-oidc-issuer
+            - https://token.actions.githubusercontent.com
+            - --certificate-identity
+            - https://github.com/fission/fission/.github/workflows/release.yaml@refs/tags/{{.Version}}
+            - --certificate-github-workflow-repository
+            - fission/fission
+            - --certificate-github-workflow-ref
+            - refs/tags/{{.Version}}
+        bundle:
+            type: github_release
+            asset: '{{.Asset}}.sig.bundle'
+      github_artifact_attestations:
+        signer_workflow: fission/fission/.github/workflows/release.yaml
+    - version_constraint: semver("> 1.20.5")
+      cosign:
+        opts:
+            - --certificate
+            - https://github.com/fission/fission/releases/download/{{.Version}}/{{.Asset}}.pem
+            - --certificate-identity
+            - https://github.com/fission/fission/.github/workflows/release.yaml@refs/tags/{{.Version}}
+            - --certificate-oidc-issuer
+            - https://token.actions.githubusercontent.com
+            - --signature
+            - https://github.com/fission/fission/releases/download/{{.Version}}/{{.Asset}}.sig
+            - --certificate-github-workflow-repository
+            - fission/fission
+            - --certificate-github-workflow-ref
+            - refs/tags/{{.Version}}
+      slsa_provenance:
+        type: github_release
+        asset: fission_{{.Version}}.intoto.jsonl
+    - version_constraint: semver("> 1.17.0-rc2")
+    - version_constraint: semver("> 1.14.1")
+    - version_constraint: semver("> 1.12.0")
+    - version_constraint: semver("<= 1.12.0")
+    - version_constraint: "true"
+      cosign:
+        opts:
+            - --certificate-oidc-issuer
+            - https://token.actions.githubusercontent.com
+            - --certificate-identity
+            - https://github.com/fission/fission/.github/workflows/release.yaml@refs/tags/{{.Version}}
+            - --certificate-github-workflow-repository
+            - fission/fission
+            - --certificate-github-workflow-ref
+            - refs/tags/{{.Version}}
+        bundle:
+            type: github_release
+            asset: '{{.Asset}}.sig.bundle'
+      github_artifact_attestations:
+        signer_workflow: fission/fission/.github/workflows/release.yaml
+all_assets_filter: Asset matches "^fission-[^-]+-(darwin|linux|windows)-(amd64|arm64)(\\.exe)?$"

@@ -1,0 +1,40 @@
+name: Genymobile/scrcpy
+type: github_release
+repo_owner: Genymobile
+repo_name: scrcpy
+description: Display and control your Android device
+version_overrides:
+    - version_constraint: Version == "v1.5-fixversion"
+      files:
+        - name: scrcpy
+          src: scrcpy-{{.OS}}/scrcpy
+    - version_constraint: Version == "v3.0"
+      files:
+        - name: scrcpy
+          src: '{{.AssetWithoutExt}}/scrcpy'
+    - version_constraint: semver("> 2.7.0")
+      files:
+        - name: scrcpy
+          src: '{{.AssetWithoutExt}}/scrcpy'
+      overrides:
+        - goos: windows
+          files:
+            - name: scrcpy
+              src: '{{.AssetWithoutExt}}/scrcpy'
+    - version_constraint: semver("> 1.1.0")
+      files:
+        - name: scrcpy
+          src: '{{.AssetWithoutExt}}/scrcpy'
+    - version_constraint: semver("<= 1.1.0")
+      files:
+        - name: scrcpy
+          src: scrcpy-windows-{{.Version}}/scrcpy
+    - version_constraint: "true"
+      files:
+        - name: scrcpy
+          src: '{{.AssetWithoutExt}}/scrcpy'
+      overrides:
+        - goos: windows
+          files:
+            - name: scrcpy
+              src: '{{.AssetWithoutExt}}/scrcpy'

@@ -1,0 +1,13 @@
+name: grafana/loki/logcli
+type: github_release
+repo_owner: grafana
+repo_name: loki
+description: LogCLI is the command-line interface to Grafana Loki
+# The release carries a family of programs -- loki, logcli, loki-canary, lokitool,
+# promtail -- as a zip per target each, and the inference took loki for the package. It
+# also carries an rpm and a deb of each, and builds for freebsd and 32-bit arm. What
+# this package is is logcli, which is what aqua-registry has always installed.
+all_assets_filter: Asset matches "^logcli-(darwin|linux|windows)-(amd64|arm64)(\\.exe)?\\.zip$"
+files:
+  - name: logcli
+    src: logcli-{{.OS}}-{{.Arch}}

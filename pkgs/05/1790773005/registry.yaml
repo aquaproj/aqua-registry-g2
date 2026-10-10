@@ -1,0 +1,25 @@
+name: syncthing/syncthing
+type: github_release
+repo_owner: syncthing
+repo_name: syncthing
+description: Open Source Continuous File Synchronization
+version_filter: not (Version matches "-rc")
+files:
+    - name: syncthing
+      src: syncthing-{{.OS}}-{{.Arch}}-{{.Version}}/syncthing
+github_artifact_attestations:
+    signer_workflow: syncthing/syncthing/.github/workflows/build-syncthing.yaml
+version_overrides:
+    - version_constraint: Version == "v0.12.25"
+    - version_constraint: semver("<= 0.13.3")
+      no_asset: true
+    - version_constraint: Version in ["v0.14.22", "v1.6.0", "v1.20.0"]
+      no_asset: true
+    - version_constraint: semver("<= 0.14.48")
+    - version_constraint: semver("<= 1.5.0")
+    - version_constraint: semver("<= 1.12.1")
+    - version_constraint: semver("<= 1.18.2")
+    - version_constraint: semver("<= 2.0.13")
+    - version_constraint: "true"
+      github_artifact_attestations:
+        signer_workflow: syncthing/syncthing/.github/workflows/build-syncthing.yaml

@@ -1,0 +1,54 @@
+name: kubescape/kubescape
+type: github_release
+repo_owner: kubescape
+repo_name: kubescape
+description: Kubescape is an open-source Kubernetes security platform for your IDE, CI/CD pipelines, and clusters. It includes risk analysis, security, compliance, and misconfiguration scanning, saving Kubernetes users and administrators precious time, effort, and resources
+github_artifact_attestations:
+    signer_workflow: kubescape/kubescape/.github/workflows/02-release.yaml
+version_overrides:
+    - version_constraint: Version == "v1.0.98"
+      no_asset: true
+    - version_constraint: Version == "v1.0.108"
+      replacements:
+        linux: ubuntu
+    - version_constraint: Version == "v2.0.169"
+      replacements:
+        linux: ubuntu
+    - version_constraint: semver(">= 4.0.10")
+      github_artifact_attestations:
+        signer_workflow: kubescape/kubescape/.github/workflows/02-release.yaml
+    - version_constraint: semver("> 3.0.46")
+    - version_constraint: semver("> 3.0.3")
+      files:
+        - name: kubescape
+          src: '{{.AssetWithoutExt}}'
+      replacements:
+        linux: ubuntu
+    - version_constraint: semver("> 2.2.6")
+      replacements:
+        linux: ubuntu
+    - version_constraint: semver("> 2.1.1")
+      replacements:
+        linux: ubuntu
+    - version_constraint: semver("> 2.0.183")
+      replacements:
+        linux: ubuntu
+    - version_constraint: semver("> 2.0.168")
+      replacements:
+        linux: ubuntu
+    - version_constraint: semver("> 2.0.147")
+      replacements:
+        linux: ubuntu
+    - version_constraint: semver("> 1.0.107")
+      replacements:
+        linux: ubuntu
+    - version_constraint: semver("> 1.0.97")
+      replacements:
+        linux: ubuntu
+    - version_constraint: semver("> 0.0.38")
+      replacements:
+        linux: ubuntu
+    - version_constraint: semver("<= 0.0.38")
+    - version_constraint: "true"
+      github_artifact_attestations:
+        signer_workflow: kubescape/kubescape/.github/workflows/02-release.yaml

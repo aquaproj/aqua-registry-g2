@@ -1,0 +1,37 @@
+name: erebe/wstunnel
+type: github_release
+repo_owner: erebe
+repo_name: wstunnel
+description: Tunnel all your traffic over Websocket or HTTP2 - Bypass firewalls/DPI
+version_overrides:
+  - version_constraint: Version == "1.0"
+  - version_constraint: Version in ["1.1", "1.2"]
+    overrides:
+      - goos: windows
+        files:
+          - name: wstunnel
+            src: wstunnel_{{.OS}}_{{.Arch}}/wstunnel
+  - version_constraint: Version == "2.0"
+    overrides:
+      - goos: windows
+        files:
+          - name: wstunnel
+            src: wstunnel_{{.OS}}_{{.Arch}}/wstunnel
+  - version_constraint: Version == "v0.1.5"
+  - version_constraint: Version == "v3.0"
+  - version_constraint: Version == "v3.1"
+    overrides:
+      - goos: linux
+        goarch: arm64
+        files:
+          - name: wstunnel
+            src: wstunnel/wstunnel
+  - version_constraint: Version == "v4.0"
+  - version_constraint: Version == "v4.1"
+    overrides:
+      - goos: linux
+        goarch: arm64
+        files:
+          - name: wstunnel
+            src: wstunnel_{{.Arch}}
+  - version_constraint: "true"

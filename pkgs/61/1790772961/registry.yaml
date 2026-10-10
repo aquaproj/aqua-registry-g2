@@ -1,0 +1,32 @@
+name: phiresky/ripgrep-all
+type: github_release
+repo_owner: phiresky
+repo_name: ripgrep-all
+description: 'rga: ripgrep, but also search in PDFs, E-Books, Office documents, zip, tar.gz, etc'
+version_filter: not (Version contains "v1.0.0")
+files:
+    - name: rga
+version_overrides:
+    - version_constraint: Version == "v0.10.8"
+      no_asset: true
+    - version_constraint: Version == "v0.9.5"
+      files:
+        - name: rga
+          src: '{{.AssetWithoutExt}}/rga'
+    - version_constraint: Version == "v0.10.9"
+      files:
+        - name: rga
+          src: '{{.AssetWithoutExt}}/rga'
+    - version_constraint: semver("> 0.10.6")
+      files:
+        - name: rga
+          src: '{{.AssetWithoutExt}}/rga'
+    - version_constraint: semver("<= 0.10.6")
+      files:
+        - name: rga
+          src: '{{.AssetWithoutExt}}/rga'
+    - version_constraint: "true"
+      files:
+        - name: rga
+          src: '{{.AssetWithoutExt}}/rga'
+all_assets_filter: not (Asset matches "gnueabihf")

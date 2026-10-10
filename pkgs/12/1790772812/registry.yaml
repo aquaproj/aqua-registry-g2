@@ -1,0 +1,193 @@
+name: fastfetch-cli/fastfetch
+type: github_release
+repo_owner: fastfetch-cli
+repo_name: fastfetch
+description: An actively maintained, feature-rich and performance oriented, neofetch like system information tool
+version_overrides:
+    - version_constraint: Version in ["1.10.2", "2.1.2", "2.7.0"]
+      files:
+        - name: fastfetch
+          src: '{{.AssetWithoutExt}}/usr/bin/fastfetch'
+      overrides:
+        - goos: windows
+          goarch: amd64
+          files:
+            - name: fastfetch
+        - goos: windows
+          goarch: arm64
+          files:
+            - name: fastfetch
+          replacements:
+            windows: WinArm64
+    - version_constraint: Version in ["2.0.2", "2.0.3", "2.2.0", "2.3.2", "2.7.1"]
+      files:
+        - name: fastfetch
+          src: '{{.AssetWithoutExt}}/usr/bin/fastfetch'
+      overrides:
+        - goos: windows
+          files:
+            - name: fastfetch
+    - version_constraint: Version == "2.8.2"
+      files:
+        - name: fastfetch
+          src: '{{.AssetWithoutExt}}/usr/bin/fastfetch'
+      overrides:
+        - goos: windows
+          files:
+            - name: fastfetch
+    - version_constraint: Version == "2.8.3"
+      files:
+        - name: fastfetch
+          src: '{{.AssetWithoutExt}}/usr/bin/fastfetch'
+      overrides:
+        - goos: windows
+          files:
+            - name: fastfetch
+    - version_constraint: Version == "1.2.1"
+      files:
+        - name: fastfetch
+          src: '{{.AssetWithoutExt}}/bin/fastfetch'
+    - version_constraint: Version == "1.8.0"
+      files:
+        - name: fastfetch
+          src: '{{.AssetWithoutExt}}/usr/bin/fastfetch'
+    - version_constraint: Version == "1.8.1"
+      files:
+        - name: fastfetch
+          src: '{{.AssetWithoutExt}}/usr/bin/fastfetch'
+      overrides:
+        - goos: windows
+          files:
+            - name: fastfetch
+    - version_constraint: Version == "1.8.2"
+      files:
+        - name: fastfetch
+          src: '{{.AssetWithoutExt}}/usr/bin/fastfetch'
+      replacements:
+        windows: Win7
+      overrides:
+        - goos: windows
+          files:
+            - name: fastfetch
+    - version_constraint: Version in ["2.8.5", "2.8.7", "2.9.0", "2.13.0"]
+      files:
+        - name: fastfetch
+          src: '{{.AssetWithoutExt}}/usr/bin/fastfetch'
+      overrides:
+        - goos: windows
+          files:
+            - name: fastfetch
+    - version_constraint: semver("<= 1.2.0")
+      files:
+        - name: fastfetch
+          src: fastfetch-{{.OS}}-{{.Arch}}/usr/bin/fastfetch
+    - version_constraint: semver("<= 1.7.0")
+      files:
+        - name: fastfetch
+          src: '{{.AssetWithoutExt}}/usr/bin/fastfetch'
+    - version_constraint: semver("<= 1.7.5")
+      files:
+        - name: fastfetch
+          src: '{{.AssetWithoutExt}}/usr/bin/fastfetch'
+    - version_constraint: semver("<= 1.9.1")
+      files:
+        - name: fastfetch
+          src: '{{.AssetWithoutExt}}/usr/bin/fastfetch'
+      overrides:
+        - goos: windows
+          files:
+            - name: fastfetch
+    - version_constraint: semver("<= 1.12.2")
+      files:
+        - name: fastfetch
+          src: '{{.AssetWithoutExt}}/usr/bin/fastfetch'
+      overrides:
+        - goos: windows
+          files:
+            - name: fastfetch
+    - version_constraint: semver("<= 2.0.5")
+      files:
+        - name: fastfetch
+          src: '{{.AssetWithoutExt}}/usr/bin/fastfetch'
+      overrides:
+        - goos: windows
+          goarch: amd64
+          files:
+            - name: fastfetch
+        - goos: windows
+          goarch: arm64
+          files:
+            - name: fastfetch
+          replacements:
+            windows: WinArm64
+    - version_constraint: semver("<= 2.1.1")
+      files:
+        - name: fastfetch
+          src: '{{.AssetWithoutExt}}/usr/bin/fastfetch'
+      overrides:
+        - goos: windows
+          files:
+            - name: fastfetch
+    - version_constraint: semver("<= 2.6.0")
+      files:
+        - name: fastfetch
+          src: '{{.AssetWithoutExt}}/usr/bin/fastfetch'
+      overrides:
+        - goos: windows
+          goarch: amd64
+          files:
+            - name: fastfetch
+        - goos: windows
+          goarch: arm64
+          files:
+            - name: fastfetch
+          replacements:
+            windows: WinArm64
+    - version_constraint: semver("<= 2.6.3")
+      files:
+        - name: fastfetch
+          src: '{{.AssetWithoutExt}}/usr/bin/fastfetch'
+      overrides:
+        - goos: windows
+          files:
+            - name: fastfetch
+    - version_constraint: semver("<= 2.9.2")
+      files:
+        - name: fastfetch
+          src: '{{.AssetWithoutExt}}/usr/bin/fastfetch'
+      overrides:
+        - goos: windows
+          files:
+            - name: fastfetch
+    - version_constraint: semver("<= 2.11.4")
+      files:
+        - name: fastfetch
+          src: '{{.AssetWithoutExt}}/usr/bin/fastfetch'
+      overrides:
+        - goos: windows
+          files:
+            - name: fastfetch
+    - version_constraint: semver("<= 2.40.0")
+      files:
+        - name: fastfetch
+          src: '{{.AssetWithoutExt}}/usr/bin/fastfetch'
+      overrides:
+        - goos: windows
+          files:
+            - name: fastfetch
+    - version_constraint: semver("<= 2.45.0")
+      files:
+        - name: fastfetch
+          src: '{{.AssetWithoutExt}}/usr/bin/fastfetch'
+      overrides:
+        - goos: windows
+          files:
+            - name: fastfetch
+    - version_constraint: "true"
+      files:
+        - name: fastfetch
+          src: '{{.AssetWithoutExt}}/usr/bin/fastfetch'
+      overrides:
+        - goos: windows
+          files:
+            - name: fastfetch

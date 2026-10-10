@@ -1,0 +1,22 @@
+name: schollz/croc
+type: github_release
+repo_owner: schollz
+repo_name: croc
+description: Easily and securely send things from one computer to another
+version_overrides:
+    - version_constraint: Version == "v3.0.2"
+      no_asset: true
+    - version_constraint: Version == "v3.0.7"
+      no_asset: true
+    - version_constraint: Version == "v9.6.0"
+    - version_constraint: semver("> 9.6.6")
+    - version_constraint: semver("> 9.5.6")
+    - version_constraint: semver("> 9.3.0")
+    - version_constraint: semver("> 8.6.7")
+    - version_constraint: semver("> 4.0.3")
+    - version_constraint: semver("> 3.0.6")
+    - version_constraint: semver("> 3.0.1")
+    - version_constraint: semver("> 0.5.0")
+    - version_constraint: semver("> 0.3.2")
+    - version_constraint: semver("<= 0.3.2")
+    - version_constraint: "true"

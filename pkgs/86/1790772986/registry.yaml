@@ -1,0 +1,20 @@
+name: securego/gosec
+type: github_release
+repo_owner: securego
+repo_name: gosec
+description: Go security checker
+version_overrides:
+    - version_constraint: semver("> 2.24.0")
+      cosign:
+        opts:
+            - --key
+            - https://raw.githubusercontent.com/securego/gosec/refs/tags/{{.Version}}/cosign.pub
+        bundle:
+            type: github_release
+            asset: '{{.Asset}}.sigstore.json'
+    - version_constraint: semver(">= 2.10.0")
+    - version_constraint: semver("> 2.8.1")
+    - version_constraint: semver("> 2.7.0")
+    - version_constraint: semver("> 2.0.0")
+    - version_constraint: semver("<= 2.0.0")
+    - version_constraint: "true"

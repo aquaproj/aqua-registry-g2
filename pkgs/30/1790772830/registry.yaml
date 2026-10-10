@@ -1,0 +1,14 @@
+name: git-lfs/git-lfs
+type: github_release
+repo_owner: git-lfs
+repo_name: git-lfs
+description: Git extension for versioning large files
+files:
+    - name: git-lfs
+      src: git-lfs-{{trimV .Version}}/git-lfs
+version_overrides:
+    - version_constraint: semver(">= 3.2.0")
+    - version_constraint: "true"
+      files:
+        - name: git-lfs
+          src: git-lfs

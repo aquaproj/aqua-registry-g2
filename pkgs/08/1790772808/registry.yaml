@@ -1,0 +1,15 @@
+name: esengine/DeepSeek-Reasonix
+type: github_release
+repo_owner: esengine
+repo_name: DeepSeek-Reasonix
+description: DeepSeek-native AI coding agent for the terminal
+version_filter: Version startsWith "v"
+version_overrides:
+    - version_constraint: semver(">= 1.0.0")
+      files:
+        - name: reasonix
+    - version_constraint: semver("< 1.0.0")
+      no_asset: true
+    - version_constraint: "true"
+      files:
+        - name: reasonix

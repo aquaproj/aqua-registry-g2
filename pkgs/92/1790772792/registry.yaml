@@ -1,0 +1,17 @@
+name: denisidoro/navi
+type: github_release
+repo_owner: denisidoro
+repo_name: navi
+description: An interactive cheatsheet tool for the command-line
+version_overrides:
+    - version_constraint: Version == "v2.15.0"
+    - version_constraint: Version == "v2.15.1"
+    - version_constraint: Version == "v2.24.0"
+    - version_constraint: semver("> 2.20.1")
+    - version_constraint: semver("> 2.19.0")
+    - version_constraint: semver("> 2.14.0")
+    - version_constraint: semver("> 2.1.1")
+    - version_constraint: semver("> 1.0.0")
+    - version_constraint: semver("<= 1.0.0")
+      no_asset: true
+    - version_constraint: "true"

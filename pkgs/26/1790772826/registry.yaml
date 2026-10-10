@@ -1,0 +1,30 @@
+name: getsops/sops
+aliases:
+    - name: mozilla/sops
+type: github_release
+repo_owner: getsops
+repo_name: sops
+description: Simple and flexible tool for managing secrets
+version_overrides:
+    - version_constraint: Version == "v3.8.0-rc.1"
+      slsa_provenance:
+        type: github_release
+        asset: provenance.intoto.jsonl
+    - version_constraint: semver("> 3.12.2")
+      slsa_provenance:
+        type: github_release
+        asset: sops-{{.Version}}.intoto.jsonl
+    - version_constraint: semver("> 3.9.4")
+      slsa_provenance:
+        type: github_release
+        asset: sops-{{.Version}}.intoto.jsonl
+    - version_constraint: semver("> 3.7.3")
+      slsa_provenance:
+        type: github_release
+        asset: sops-{{.Version}}.intoto.jsonl
+    - version_constraint: semver("> 3.7.1")
+    - version_constraint: semver("<= 3.7.1")
+    - version_constraint: "true"
+      slsa_provenance:
+        type: github_release
+        asset: sops-{{.Version}}.intoto.jsonl

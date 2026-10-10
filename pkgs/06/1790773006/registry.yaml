@@ -1,0 +1,24 @@
+name: tailscale/tailscale
+type: http
+repo_owner: tailscale
+repo_name: tailscale
+description: The easiest, most secure way to use WireGuard and 2FA
+url: https://pkgs.tailscale.com/stable/tailscale_{{trimV .Version}}_{{.Arch}}.{{.Format}}
+format: tgz
+overrides:
+    - goos: darwin
+      format: pkg
+      url: https://pkgs.tailscale.com/stable/Tailscale-{{trimV .Version}}-macos.{{.Format}}
+      files:
+        - name: tailscale
+          src: Distribution.pkg/Payload/Contents/MacOS/Tailscale
+files:
+    - name: tailscale
+      src: '{{.AssetWithoutExt}}/tailscale'
+    - name: tailscaled
+      src: '{{.AssetWithoutExt}}/tailscaled'
+supported_envs:
+    - linux
+    - darwin
+version_overrides:
+    - version_constraint: "true"

@@ -1,0 +1,36 @@
+name: astral-sh/ty
+type: github_release
+repo_owner: astral-sh
+repo_name: ty
+description: An extremely fast Python type checker and language server, written in Rust
+github_artifact_attestations:
+    signer_workflow: astral-sh/ty/.github/workflows/release.yml
+version_overrides:
+    - version_constraint: semver("> 0.0.23")
+      files:
+        - name: ty
+          src: ty-{{.Arch}}-{{.OS}}/ty
+      github_artifact_attestations:
+        signer_workflow: astral-sh/ty/.github/workflows/release.yml
+      overrides:
+        - goos: windows
+          files:
+            - name: ty
+    - version_constraint: semver("<= 0.0.23")
+      files:
+        - name: ty
+          src: ty-{{.Arch}}-{{.OS}}/ty
+      overrides:
+        - goos: windows
+          files:
+            - name: ty
+    - version_constraint: "true"
+      files:
+        - name: ty
+          src: ty-{{.Arch}}-{{.OS}}/ty
+      github_artifact_attestations:
+        signer_workflow: astral-sh/ty/.github/workflows/release.yml
+      overrides:
+        - goos: windows
+          files:
+            - name: ty
