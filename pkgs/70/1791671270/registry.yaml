@@ -1,0 +1,11 @@
+name: linebender/resvg
+type: github_release
+repo_owner: linebender
+repo_name: resvg
+repo_id: 72125332
+description: An SVG rendering library
+version_overrides:
+  - version_constraint: semver("<= 0.15.0")
+    error_message: This version is not supported. Please use a newer version.
+  - version_constraint: "true"
+all_assets_filter: not (Asset matches "usvg")
