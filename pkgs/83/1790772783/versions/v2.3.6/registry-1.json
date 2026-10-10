@@ -32,7 +32,11 @@
         }
       ],
       "github_artifact_attestations": {
-        "signer_workflow": "containerd/containerd/.github/workflows/release.yml"
+        "signer_workflow": "containerd/containerd/.github/workflows/release.yml",
+        "source_ref": "refs/tags/v2.3.6",
+        "source_digest": "ee2735368117d2eb259779949d5e75cdafec9761",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
       }
     },
     {
@@ -66,7 +70,11 @@
         }
       ],
       "github_artifact_attestations": {
-        "signer_workflow": "containerd/containerd/.github/workflows/release.yml"
+        "signer_workflow": "containerd/containerd/.github/workflows/release.yml",
+        "source_ref": "refs/tags/v2.3.6",
+        "source_digest": "ee2735368117d2eb259779949d5e75cdafec9761",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
       }
     }
   ]
