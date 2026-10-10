@@ -1,0 +1,14 @@
+name: whalebrew/whalebrew
+type: github_release
+repo_owner: whalebrew
+repo_name: whalebrew
+repo_id: 79717956
+description: Homebrew, but with Docker images
+version_overrides:
+  - version_constraint: Version == "0.2.5"
+  - version_constraint: semver("> 0.3.1")
+  - version_constraint: semver("> 0.2.4")
+  - version_constraint: semver("> 0.2.1")
+  - version_constraint: semver("> 0.1.0")
+    no_asset: true
+  - version_constraint: "true"
