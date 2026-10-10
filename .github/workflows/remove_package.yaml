@@ -6,9 +6,10 @@ name: remove a package
 # stay what it was, and somebody's configuration may name the package. Two things override
 # that -- a package aqua can't install whatever is generated for it, and malware.
 #
-# It opens two pull requests, one into main carrying the registry's configuration and the
-# catalogue, and one into the package's branch taking the generated files away. The first
-# has to merge first, or the next run generates the files again; the second says so.
+# It opens two pull requests into main, one carrying the registry's configuration and the
+# catalogue, and one taking the generated files out of the package's directory. The first
+# has to merge first, or the next run generates the files again; the second says so. The
+# second changes published files, so it waits for a person to label it replaces-published.
 on:
   workflow_dispatch:
     inputs:
@@ -47,8 +48,6 @@ jobs:
         with:
           aqua_version: v2.64.0
           packages: ar2
-      # No branch token, although this environment holds the key: a package being removed
-      # is one the registry holds, so every branch this touches is already there.
       - uses: actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1 # v3.2.0
         id: pr_token
         with:

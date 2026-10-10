@@ -24,18 +24,6 @@ fail() {
 	failed=1
 }
 
-# The pull request moving every package off its branch is checked by comparing objects
-# rather than by downloading every asset again. See verify-consolidation.sh.
-if [ "$HEAD_REF" = ar2_consolidate ]; then
-	echo "The pull request that moves the packages is checked by verify-consolidation.sh." >> "$GITHUB_STEP_SUMMARY"
-	{
-		echo "packages="
-		echo "files="
-		echo "count=0"
-	} >> "$GITHUB_OUTPUT"
-	exit 0
-fi
-
 # The package an ar2 head branch is for: ar2_<id> or ar2_<id>_<version>. Any other ar2_
 # branch -- the catalogue's, a removal's first half -- is for no package.
 head_id=""

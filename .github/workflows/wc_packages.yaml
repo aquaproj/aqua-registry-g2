@@ -159,21 +159,3 @@ jobs:
           # assets without a token runs into the anonymous rate limit.
           GITHUB_TOKEN: ${{ github.token }}
           AQUA_GITHUB_TOKEN: ${{ github.token }}
-
-  # The pull request that moves every package off its branch. See verify-consolidation.sh.
-  consolidation:
-    if: github.head_ref == 'ar2_consolidate'
-    runs-on: ubuntu-24.04
-    timeout-minutes: 15
-    permissions:
-      contents: read
-    steps:
-      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-        with:
-          persist-credentials: false
-          sparse-checkout: |
-            .github
-      - run: bash .github/scripts/verify-consolidation.sh
-        env:
-          BASE_SHA: ${{ github.event.pull_request.base.sha }}
-          HEAD_SHA: ${{ github.event.pull_request.head.sha }}

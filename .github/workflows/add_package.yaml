@@ -3,8 +3,8 @@ name: add a package
 # Put a package the registry doesn't have into it, which is what an issue asking for one
 # is answered with.
 #
-# It writes two things: the package's definition, on a branch of its own as a pull
-# request, and its place in the order the runs work through. Nothing is generated here --
+# It writes two things: the package's definition, as a pull request into main, and its
+# place in the order the runs work through. Nothing is generated here --
 # the package joins the order at the current lap, so the next run of the ar2 workflow
 # reaches it.
 on:
@@ -40,12 +40,12 @@ concurrency:
 jobs:
   add:
     runs-on: ubuntu-24.04
-    # The same environment as a run: this creates a package branch and opens a pull
-    # request, so it needs the same two keys.
+    # The same environment as a run: this opens a pull request, so it needs the same
+    # key.
     environment: ar2
     timeout-minutes: 15
     permissions:
-      # Creating the package branch and committing to the head branch.
+      # Committing to the head branch.
       contents: write
       # Opening the pull request.
       pull-requests: write
@@ -62,13 +62,6 @@ jobs:
         with:
           aqua_version: v2.64.0
           packages: ar2
-      # A package that isn't in the registry has no branch, and creating one has to get
-      # past the ruleset requiring status checks that a brand new branch can't have.
-      - uses: actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1 # v3.2.0
-        id: branch_token
-        with:
-          client-id: ${{ vars.AR2_BRANCH_CLIENT_ID }}
-          private-key: ${{ secrets.AR2_BRANCH_PRIVATE_KEY }}
       # A pull request opened with GITHUB_TOKEN gets its checks in an approval-required
       # state, so nothing would run until someone pressed a button.
       - uses: actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1 # v3.2.0
@@ -97,7 +90,6 @@ jobs:
             "${args[@]}"
         env:
           GITHUB_TOKEN: ${{ github.token }}
-          AR2_BRANCH_TOKEN: ${{ steps.branch_token.outputs.token }}
           AR2_PR_TOKEN: ${{ steps.pr_token.outputs.token }}
           NAME: ${{ inputs.name }}
           REPO: ${{ inputs.repo }}

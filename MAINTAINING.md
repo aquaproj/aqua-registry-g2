@@ -23,29 +23,41 @@ ar2 test                                  # check generated files against the re
 ar2 validate-index                        # check index.json says what aqua reads it for
 ```
 
-Two more rules shape the rest. A pull request is required on `main` and on every
-`pkg_*` branch. A package branch cannot be deleted or rewritten, by anyone but an
-administrator: that ruleset forbids both and has no bypass actor.
+One more rule shapes the rest. A pull request and its checks are required on `main`, which
+holds every package, and nothing bypasses that. `main` cannot be deleted or rewritten either.
 
-The two requirements are separate rulesets on purpose. `AR2_BRANCH_*` bypasses the one
-asking for a pull request and its checks, so it can push onto a package branch; it does
-not bypass the one forbidding deletion and a force push, so what it can do to a branch is
-add to it. What that is for is a file the review has nothing to say about, which so far is
-one thing: [filling in the dates](#how-to-fill-in-when-a-release-was-published) of the
-versions generated before registry.json recorded them.
+One App, because one of the things a run does is something `GITHUB_TOKEN` can't.
+`AR2_PR_*` commits to the head branches and opens the pull requests, because a pull request
+opened with `GITHUB_TOKEN` gets its checks in an approval-required state and would never
+auto-merge. It is a bypass actor for nothing, so the checks still decide what merges.
 
-Two Apps, because two of the things a run does are things `GITHUB_TOKEN` can't.
-`AR2_BRANCH_*` creates package branches, which has to get past the ruleset requiring
-status checks that a brand new branch can't have; it holds no pull-requests permission,
-so the bypass can't become a way to merge something unchecked. `AR2_PR_*` commits to the
-head branches and opens the pull requests, because a pull request opened with
-`GITHUB_TOKEN` gets its checks in an approval-required state and would never auto-merge.
+Until 2026-10 each package was kept on an orphan branch of its own, `pkg_<id>`, and a second
+App, `AR2_BRANCH_*`, created them past the rulesets guarding them. The branches are still
+there, frozen, and nothing writes to them
+([#695](https://github.com/aquaproj/aqua-registry-g2/issues/695)).
 
 ## The checks on a pull request into main
 
 [test.yaml](.github/workflows/test.yaml) calls [wc_main.yaml](.github/workflows/wc_main.yaml)
 and one job decides the merge: `status-check-main` fails when the call didn't pass, so jobs
 can be added to the reusable workflow without touching the ruleset.
+
+What a pull request does to the packages is [wc_packages.yaml](.github/workflows/wc_packages.yaml),
+called from there:
+
+- [plan-packages.sh](.github/scripts/plan-packages.sh) works out which packages the pull
+  request touches, and refuses what no pull request may do. A package's pull request from
+  `ar2_<id>` touches that package's directory and nothing else, and one from any other
+  `ar2_` branch touches no package. A `registry-*.json` already published is changed or
+  removed only once a person has labelled the pull request `replaces-published` -- the
+  label's event is read for who put it there, because ar2 labels its own pull requests. When
+  every package had a branch of its own, a pull request couldn't reach another package; on
+  `main` that is this check.
+- Each package's definition is validated, and every `registry-*.json` added or changed is
+  checked with `ar2 test` on a machine of each environment it describes.
+
+Everything checks out only what it reads. `pkgs/` is most of the repository and none of
+what the other checks look at.
 
 [actionlint.yaml](.github/workflows/actionlint.yaml) is apart from it on purpose. What it
 reads is the workflows themselves, so it has to answer when they are what is broken -- a
@@ -85,91 +97,18 @@ The same skill finishes a pull request of versions waiting for a definition, whi
 way round: those versions aren't in the registry at all, and what generates them is the
 definition written on that pull request's own branch.
 
-## How To Fill in when a release was published
-
-Dispatch [dates.yaml](.github/workflows/dates.yaml).
-
-```sh
-gh workflow run dates.yaml -f dry_run=true          # what it would write
-gh workflow run dates.yaml
-gh workflow run dates.yaml -f packages="cli/cli"
-```
-
-`registry.json` says when the release it was generated from was published, from ar2 v0.5.0
-on. The files written before that don't, and nothing can work it out from them: the version
-string doesn't say it, and a package whose tags aren't semver has nothing else to order its
-releases by.
-
-Nothing is generated again. The date is read off the release, the one field is added, and
-the file is rendered the way a generation renders it, so the same version generated again
-comes out the same bytes. That is why it is pushed onto the package branches rather than
-opened as a pull request each: hundreds of pull requests, every one asserting what its own
-diff proves.
-
-It has an end. Once every package is filled in, a run reads the registry, finds nothing to
-do and writes nothing, so there is no schedule for it. A package whose versions are its
-tags is skipped, having no release list to read a date from.
-
 ## How To Fix versions.json
 
-A version merging writes its branch's list by itself, so normally there is nothing to do.
-The list is derived from `versions/`, so there is nothing to fix by hand either: what a run
-writes is what the branch holds.
+A pull request changing a package's versions writes its list in the same commit, so normally
+there is nothing to do. The list is derived from `versions/`, so there is nothing to fix by
+hand either: what ar2 writes is what the directory holds.
 
-Dispatch [versions.yaml](.github/workflows/versions.yaml) to sweep every branch, which it
-also asks to do twice an hour.
-
-```sh
-gh workflow run versions.yaml -f dry_run=true
-gh workflow run versions.yaml -f packages="cli/cli"
-```
-
-A scheduled workflow runs when GitHub gets to it, and in this repository that has been a few
-hours, so the sweep is what catches a list a merge didn't write rather than what keeps them
-current. A list is left alone when it names the current `versions` tree, which is what makes
-a sweep over the whole registry two requests a package.
-
-### How a merge writes the list
-
-A package branch can't write its own list: the app that may push onto one keeps its key in
-the `ar2` environment, only main may deploy to that, and a push workflow runs on the branch
-that was pushed. Three files carry the news across that line without carrying the key back.
-
-| where | what |
-| --- | --- |
-| the package branch | [`versions.yaml`](template/.github/workflows/versions.yaml), on `versions/**`, calling main |
-| main | [`wc_versions.yaml`](.github/workflows/wc_versions.yaml), which raises a `repository_dispatch` naming the branch |
-| main | [`versions_update.yaml`](.github/workflows/versions_update.yaml), triggered by it, which writes the list |
-
-What makes it work is that `repository_dispatch` is one of the two events GitHub raises even
-when `GITHUB_TOKEN` sends them, and that a workflow it triggers is read from the default
-branch. So the branch's own workflow needs no secret, and the one with the key never runs
-anywhere but main.
-
-The caller on the branch is copied from the template when the branch is created and never
-updated afterwards, like the test one, so it holds nothing but the call. A branch that
-predates a template file doesn't have it, and what puts it there is
-[the template](#how-to-change-what-a-package-branch-holds).
-
-## How To Change what a package branch holds
-
-Dispatch [template.yaml](.github/workflows/template.yaml) after changing `template/`.
-
-```sh
-gh workflow run template.yaml -f dry_run=true
-gh workflow run template.yaml -f dry_run=false
-gh workflow run template.yaml -f branches="pkg_1790772767" -f dry_run=false
-```
-
-A package branch is created holding the files in `template/`, because a workflow for a
-branch is read from that branch rather than from main. They are copied once and never
-updated, so a file added to the template isn't on the branches made before it, and a call
-that has to change doesn't change on them by itself.
-
-It writes one way and deletes nothing: what the template names is written where a branch
-holds something else, and what a branch holds and the template doesn't -- the definition,
-the versions, the list of them -- is left alone. So a file taken out of the template stays
-where it was copied, and taking it off the branches is not this.
+The one pull request that leaves the list alone is the one of versions waiting for a
+definition. The package's other pull requests write the list in the meantime, so writing it
+there too would conflict with whichever of them merged first. Once it merges the list is
+behind, and the package's next pull request writes it again: the list records the sha of the
+`versions` tree it was made from, and a list whose `source` isn't that tree any more is made
+again from every version rather than added to.
 
 ## How To Fix index.json
 
@@ -180,11 +119,9 @@ packages the catalogue is missing and the entries that are out of date: every de
 read and every entry compared against what its definition says now. Naming a package narrows
 the work rather than what is noticed.
 
-A definition merging asks for the reconciliation itself, the way a version asks for its
-list: the branch raises a `repository_dispatch` through
-[wc_index.yaml](.github/workflows/wc_index.yaml) and [index.yaml](.github/workflows/index.yaml)
-answers it. So the catalogue follows a definition by about a minute, and the schedule is
-what catches a merge that didn't ask.
+A definition merging asks for the reconciliation itself: [index.yaml](.github/workflows/index.yaml)
+runs on a push to `main` that changes a `pkgs/*/*/registry.yaml`. So the catalogue follows a
+definition by about a minute, and the schedule is what catches a merge that didn't ask.
 
 ## How To Fix names.json
 
@@ -206,9 +143,9 @@ A transfer GitHub reports needs none of this: see
 Usually nothing: a run notices a repository that answers to another name and renames the
 package itself. The other case is a rename GitHub can't see.
 
-The branch doesn't move, because it is named after the package's id rather than after the
-package. What moves is the definition on it, which is the only thing that says which package
-the branch holds, and the entry the catalogue lists it under.
+The package's directory doesn't move, because it is named after the package's id rather than
+after the package. What moves is the definition in it, which is the only thing that says which
+package the directory holds, and the entry the catalogue lists it under.
 
 ## How To Ignore a package
 
@@ -255,34 +192,6 @@ been generated -- with the things that decide it: how many turns it has had, how
 the order that leaves it, whether it already holds every version the last sweep saw, and
 whether its history has ever been walked. A name the order doesn't hold says so, which is
 itself the answer.
-
-## The package branch template
-
-`template/` is copied when a branch is created and never again. Whatever it holds is
-therefore frozen on every branch that exists, and changing it later is a commit to each of
-them, one pull request each. There are dozens of branches now and there will be thousands,
-so the rule is to copy as little as can be copied and to read the rest from `main`.
-
-The CI is where that is possible, and it is worth seeing why. A `pull_request` workflow is
-read from the branch the pull request targets, so it cannot live on `main` -- but it can be
-a caller that does nothing except invoke a reusable workflow there, which is what the
-template's one file is: it calls `wc_test.yaml@main` and holds no checks of its own. The
-checks are therefore on `main`, where changing them reaches every package at once, and what
-is frozen is only the caller -- its trigger, the ref it calls, the permissions it passes,
-and the `status-check` job the ruleset requires. Nothing has needed to change there.
-
-Anything else that wants to be in the template deserves the same question first: what about
-this will have to change, and can that part be read from `main` instead of copied? A file
-that genuinely has to be copied is a file to be sure about before thousands of branches
-carry it.
-
-Whether the branches are still in step can be read without cloning them, since the file is
-identical everywhere when it is:
-
-```sh
-git hash-object template/.github/workflows/test.yaml
-gh api "repos/aquaproj/aqua-registry-g2/contents/.github/workflows/test.yaml?ref=<branch>" --jq .sha
-```
 
 ## How To Update ar2
 

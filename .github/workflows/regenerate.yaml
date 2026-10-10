@@ -4,7 +4,8 @@ name: regenerate
 #
 # What the registry serves is frozen per version, so a definition that was wrong is wrong
 # in every file generated under it, and a run won't touch them: it generates what is
-# missing. Fix registry.yaml on the package's branch first, then dispatch this.
+# missing. Fix the package's registry.yaml first, then dispatch this. What it opens replaces
+# published files, so the checks wait for a person to label it replaces-published.
 #
 # Only the versions whose file actually changes are committed, so dispatching it for a
 # package where nothing moved comes to nothing.
@@ -61,9 +62,6 @@ jobs:
         with:
           aqua_version: v2.64.0
           packages: ar2
-      # No branch token, although this environment holds the key: a regeneration is for a
-      # package the registry already holds, so the branch is there and creating one is
-      # something it has no business being able to do.
       - uses: actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1 # v3.2.0
         id: pr_token
         with:

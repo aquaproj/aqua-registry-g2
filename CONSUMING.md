@@ -18,9 +18,9 @@ In aqua-registry, tools could fetch registry.yaml from the repository root or `p
 
 e.g. [pkgs/cli/cli/registry.yaml](https://github.com/aquaproj/aqua-registry/blob/main/pkgs/cli/cli/registry.yaml)
 
-In aqua-registry-g2, [`registry.json` can be fetched from each package branch per package version](README.md#package-branches).
+In aqua-registry-g2, [`registry.json` can be fetched from each package's directory per package version](README.md#a-packages-directory).
 
-e.g. [grafana/k6 v2.3.0](https://github.com/aquaproj/aqua-registry-g2/blob/pkg_1790772860/versions/v2.3.0/registry-1.json)
+e.g. [grafana/k6 v2.3.0](https://github.com/aquaproj/aqua-registry-g2/blob/main/pkgs/60/1790772860/versions/v2.3.0/registry-1.json)
 
 This is the main difference from aqua-registry.
 A registry.yaml covers every version of a package, so a tool has to evaluate it for the version it installs: `version_constraint`, `version_overrides`, and templates such as `{{.Version}}` in the asset name.
@@ -29,14 +29,16 @@ A registry.json covers one version and is already resolved: the asset name, the 
 A tool fetches it from the raw URL:
 
 ```
-https://raw.githubusercontent.com/aquaproj/aqua-registry-g2/pkg_<id>/versions/<escaped version>/registry-1.json
+https://raw.githubusercontent.com/aquaproj/aqua-registry-g2/main/pkgs/<shard>/<id>/versions/<escaped version>/registry-1.json
 ```
 
-`<id>` is the id of the branch holding the package, which [names.json](#how-to-resolve-a-package-name) gives for a name. The package's name is not in the branch name: a name changes, and an id doesn't.
+`<id>` is the package's id, which [names.json](#how-to-resolve-a-package-name) gives for a name, and `<shard>` is the id's last two digits. The package's name is not in the path: a name changes, and an id doesn't.
 
 `<escaped version>` is the version escaped as [README.md](README.md#escaping-a-version) describes. Nearly every version is written as it is; one that holds a slash isn't, e.g. `kustomize/v5.8.1` is `kustomize_2fv5.8.1`.
 
-e.g. https://raw.githubusercontent.com/aquaproj/aqua-registry-g2/pkg_1790772860/versions/v2.3.0/registry-1.json
+e.g. https://raw.githubusercontent.com/aquaproj/aqua-registry-g2/main/pkgs/60/1790772860/versions/v2.3.0/registry-1.json
+
+Until 2026-10 each package was kept on a branch of its own, `pkg_<id>`, at the root of it. Those branches are still there and no longer change, so a URL naming one keeps answering for the versions it held then and never for a newer one.
 
 `1` of `registry-1.json` is the major version of the registry schema. See [README.md](README.md#schema-version) for what a reader should do when a new one arrives.
 
@@ -46,10 +48,10 @@ Fetch [index.json](index.json).
 
 ## How To List available versions
 
-Fetch `versions.json` from the package branch.
+Fetch `versions.json` from the package's directory.
 
 ```sh
-gh api 'repos/aquaproj/aqua-registry-g2/contents/versions.json?ref=pkg_1790772860' \
+gh api 'repos/aquaproj/aqua-registry-g2/contents/pkgs/60/1790772860/versions.json' \
   --jq '.content' | base64 -d
 ```
 
@@ -66,7 +68,7 @@ gh api 'repos/aquaproj/aqua-registry-g2/contents/versions.json?ref=pkg_179077286
 }
 ```
 
-- `version` is the release's tag, as upstream writes it rather than as the branch escapes it.
+- `version` is the release's tag, as upstream writes it rather than as the directory escapes it.
 - `published_at` is when the release was published, RFC 3339 in UTC. It is what a cooldown
   asks about -- don't take a release until it has stood for some days -- and the only thing
   that orders the versions of a package whose tags aren't semver. It is empty where there is
@@ -74,7 +76,7 @@ gh api 'repos/aquaproj/aqua-registry-g2/contents/versions.json?ref=pkg_179077286
 - `digest` is the SHA-256 of the `registry-1.json` the registry serves for that version, so
   a reader that has the file can tell whether it is still the one the registry holds.
 - `source` is the sha of the `versions` tree the list was made from. It is what says whether
-  the list is still the branch's: compare it with that tree, which is one request.
+  the list is still the package's: compare it with that tree, which is one request.
 
 The newest release comes first, and a version with no date comes after every version that
 has one.
@@ -82,22 +84,24 @@ has one.
 The list is derived, and `versions/` is what decides what the registry holds. A list that
 hasn't caught up is possible, and the tree is right when they disagree.
 
-A version merging onto a package branch asks for that branch's list to be written, so a list
-is normally current within a minute of the version appearing. What that doesn't cover -- a
-run that failed, a branch that changed before this was built -- a sweep over every branch
-does, and the sweep runs when GitHub gets to it, which has been a few hours. So a reader
-that must not miss a version reads the tree.
+The list is written in the same pull request as the versions it lists, so it is normally
+current the moment they are. What that doesn't cover is the pull request of versions that
+waited for somebody to write their definition: it leaves the list alone, because the
+package's other pull requests write it in the meantime and the two would conflict. Once
+it merges, the list is behind until the package's next pull request, which notices that
+`source` isn't the directory any more and writes the list again. So a reader that must
+not miss a version reads the tree.
 
 ### From the tree
 
-Each directory in `versions/` of a package branch is a version, [escaped](README.md#escaping-a-version).
+Each directory in `versions/` of a package's directory is a version, [escaped](README.md#escaping-a-version).
 
-e.g. [grafana/k6](https://github.com/aquaproj/aqua-registry-g2/tree/pkg_1790772860/versions)
+e.g. [grafana/k6](https://github.com/aquaproj/aqua-registry-g2/tree/main/pkgs/60/1790772860/versions)
 
 A tool can list them with GitHub's Git Trees API:
 
 ```sh
-gh api 'repos/aquaproj/aqua-registry-g2/git/trees/pkg_1790772860:versions' \
+gh api 'repos/aquaproj/aqua-registry-g2/git/trees/main:pkgs/60/1790772860/versions' \
   --jq '.tree[] | select(.type == "tree") | .path'
 ```
 
@@ -122,7 +126,7 @@ Fetch [names.json](names.json). It holds two tables.
 }
 ```
 
-- `ids`: the package's name to the id of the branch holding it. This is what a tool resolves a name with before fetching anything.
+- `ids`: the package's name to its id. This is what a tool resolves a name with before fetching anything.
 - `aliases`: a name a package used to have to the name it has now, e.g. `stedolan/jq`, the name before the repository moved, to `jqlang/jq`. `ids` answers for the name it has, so resolve through `aliases` first when a name isn't in `ids`.
 
 One table for every name rather than a file per name, because a tool usually resolves many packages at once.
