@@ -1,0 +1,28 @@
+name: vmware-archive/octant
+aliases:
+  - name: vmware-tanzu/octant
+type: github_release
+repo_owner: vmware-archive
+repo_name: octant
+description: Highly extensible platform for developers to better understand the complexity of Kubernetes clusters
+version_overrides:
+  - version_constraint: semver("> 0.24.0")
+    files:
+      - name: octant
+        src: '{{.AssetWithoutExt}}/octant'
+  - version_constraint: semver("> 0.17.0")
+    files:
+      - name: octant
+        src: '{{.AssetWithoutExt}}/octant'
+  - version_constraint: semver("> 0.8.0")
+    files:
+      - name: octant
+        src: '{{.AssetWithoutExt}}/octant'
+  - version_constraint: semver("<= 0.8.0")
+    files:
+      - name: octant
+        src: '{{.AssetWithoutExt}}/octant'
+  - version_constraint: "true"
+    files:
+      - name: octant
+        src: '{{.AssetWithoutExt}}/octant'
