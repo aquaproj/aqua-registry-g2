@@ -1,0 +1,11 @@
+name: hashicorp/boundary
+type: http
+repo_owner: hashicorp
+repo_name: boundary
+repo_id: 232630362
+description: Boundary enables identity-based access management for dynamic infrastructure
+url: https://releases.hashicorp.com/boundary/{{trimV .Version}}/boundary_{{trimV .Version}}_{{.OS}}_{{.Arch}}.zip
+supported_envs:
+  - darwin
+  - linux
+  - windows/amd64
