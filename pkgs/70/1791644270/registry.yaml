@@ -1,0 +1,59 @@
+name: Byron/dua-cli
+type: github_release
+repo_owner: Byron
+repo_name: dua-cli
+description: View disk space usage and delete unwanted data, fast
+version_filter: not (Version startsWith "dua-core-")
+files:
+  - name: dua
+github_artifact_attestations:
+  signer_workflow: Byron/dua-cli/.github/workflows/release.yml
+version_overrides:
+  - version_constraint: Version in ["v2.12.0", "v2.14.9", "v2.18.1", "v2.29.3"]
+    no_asset: true
+  - version_constraint: Version == "v2.10.3"
+    files:
+      - name: dua
+        src: '{{.AssetWithoutExt}}/dua'
+  - version_constraint: Version == "v2.20.0"
+    files:
+      - name: dua
+        src: '{{.AssetWithoutExt}}/dua'
+  - version_constraint: Version == "v2.21.0"
+    files:
+      - name: dua
+        src: '{{.AssetWithoutExt}}/dua'
+  - version_constraint: Version == "v2.28.0"
+    files:
+      - name: dua
+        src: '{{.AssetWithoutExt}}/dua'
+  - version_constraint: semver("<= 2.5.0")
+    files:
+      - name: dua
+        src: '{{.AssetWithoutExt}}/dua'
+  - version_constraint: semver("<= 2.27.2")
+    files:
+      - name: dua
+        src: '{{.AssetWithoutExt}}/dua'
+  - version_constraint: Version == "v2.31.0"
+    files:
+      - name: dua
+        src: '{{.AssetWithoutExt}}/dua'
+  - version_constraint: semver("<= 2.37.0")
+    files:
+      - name: dua
+        src: '{{.AssetWithoutExt}}/dua'
+  - version_constraint: Version == "v2.37.1"
+    files:
+      - name: dua
+        src: '{{.AssetWithoutExt}}/dua'
+  - version_constraint: semver("<= 2.39.0")
+    files:
+      - name: dua
+        src: '{{.AssetWithoutExt}}/dua'
+  - version_constraint: "true"
+    files:
+      - name: dua
+        src: '{{.AssetWithoutExt}}/dua'
+    github_artifact_attestations:
+      signer_workflow: Byron/dua-cli/.github/workflows/release.yml
