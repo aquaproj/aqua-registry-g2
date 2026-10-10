@@ -1,0 +1,16 @@
+name: vale-cli/vale
+aliases:
+  - name: errata-ai/vale
+type: github_release
+repo_owner: vale-cli
+repo_name: vale
+repo_id: 81020247
+description: ':pencil: A markup-aware linter for prose built with speed and extensibility in mind'
+version_overrides:
+  - version_constraint: Version == "v1.0.0"
+    no_asset: true
+  - version_constraint: Version == "v1.1.6-alpha"
+    files:
+      - name: vale
+        src: bin/vale
+  - version_constraint: "true"
