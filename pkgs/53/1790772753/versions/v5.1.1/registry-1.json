@@ -1,1 +1,81 @@
-{"assets":[{"os":"linux","arch":"amd64","linked_libc":"glibc","type":"http","repo_owner":"blender","repo_name":"blender","asset":"blender-5.1.1-linux-x64.tar.xz","url":"https://download.blender.org/release/Blender5.1/blender-5.1.1-linux-x64.tar.xz","format":"tar.xz","checksum":"6f9fff89fef154ef7974d1a1c4b916ab4bc1f5618bcb48d5befee1bd0a7c7f2a","checksum_algorithm":"sha256","files":[{"name":"blender","src":"blender-5.1.1-linux-x64/blender"}]},{"os":"windows","arch":"amd64","type":"http","repo_owner":"blender","repo_name":"blender","asset":"blender-5.1.1-windows-x64.zip","url":"https://download.blender.org/release/Blender5.1/blender-5.1.1-windows-x64.zip","format":"zip","checksum":"307123caa3bad0c1d04ec373a2f22f622c403eecb34b9c646ede104906b04ced","checksum_algorithm":"sha256","files":[{"name":"blender","src":"blender-5.1.1-windows-x64/blender.exe"}]},{"os":"windows","arch":"arm64","type":"http","repo_owner":"blender","repo_name":"blender","asset":"blender-5.1.1-windows-arm64.zip","url":"https://download.blender.org/release/Blender5.1/blender-5.1.1-windows-arm64.zip","format":"zip","checksum":"a4069826a296681c7dc2eab4f812de7312424263287dd5bed6fe33b512a30674","checksum_algorithm":"sha256","files":[{"name":"blender","src":"blender-5.1.1-windows-arm64/blender.exe"}]},{"os":"darwin","arch":"arm64","type":"http","repo_owner":"blender","repo_name":"blender","asset":"blender-5.1.1-macos-arm64.dmg","url":"https://download.blender.org/release/Blender5.1/blender-5.1.1-macos-arm64.dmg","format":"dmg","checksum":"ff6219b3aaab4d9adf548b9a32b3b31764fe740b6c741d16660c5c0f4ffe9841","checksum_algorithm":"sha256","files":[{"name":"blender","src":"Blender.app/Contents/MacOS/Blender"}]}]}
+{
+  "assets": [
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "glibc",
+      "type": "http",
+      "repo_owner": "blender",
+      "repo_name": "blender",
+      "repo_id": 213916896,
+      "asset": "blender-5.1.1-linux-x64.tar.xz",
+      "url": "https://download.blender.org/release/Blender5.1/blender-5.1.1-linux-x64.tar.xz",
+      "format": "tar.xz",
+      "checksum": "6f9fff89fef154ef7974d1a1c4b916ab4bc1f5618bcb48d5befee1bd0a7c7f2a",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "blender",
+          "src": "blender-5.1.1-linux-x64/blender"
+        }
+      ]
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "http",
+      "repo_owner": "blender",
+      "repo_name": "blender",
+      "repo_id": 213916896,
+      "asset": "blender-5.1.1-windows-x64.zip",
+      "url": "https://download.blender.org/release/Blender5.1/blender-5.1.1-windows-x64.zip",
+      "format": "zip",
+      "checksum": "307123caa3bad0c1d04ec373a2f22f622c403eecb34b9c646ede104906b04ced",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "blender",
+          "src": "blender-5.1.1-windows-x64/blender.exe"
+        }
+      ]
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "type": "http",
+      "repo_owner": "blender",
+      "repo_name": "blender",
+      "repo_id": 213916896,
+      "asset": "blender-5.1.1-windows-arm64.zip",
+      "url": "https://download.blender.org/release/Blender5.1/blender-5.1.1-windows-arm64.zip",
+      "format": "zip",
+      "checksum": "a4069826a296681c7dc2eab4f812de7312424263287dd5bed6fe33b512a30674",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "blender",
+          "src": "blender-5.1.1-windows-arm64/blender.exe"
+        }
+      ]
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "http",
+      "repo_owner": "blender",
+      "repo_name": "blender",
+      "repo_id": 213916896,
+      "asset": "blender-5.1.1-macos-arm64.dmg",
+      "url": "https://download.blender.org/release/Blender5.1/blender-5.1.1-macos-arm64.dmg",
+      "format": "dmg",
+      "checksum": "ff6219b3aaab4d9adf548b9a32b3b31764fe740b6c741d16660c5c0f4ffe9841",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "blender",
+          "src": "Blender.app/Contents/MacOS/Blender"
+        }
+      ]
+    }
+  ]
+}

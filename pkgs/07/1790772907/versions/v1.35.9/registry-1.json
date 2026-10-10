@@ -1,1 +1,66 @@
-{"assets":[{"os":"linux","arch":"amd64","type":"http","repo_owner":"kubernetes","repo_name":"kubernetes","asset":"kube-aggregator","url":"https://dl.k8s.io/v1.35.9/bin/linux/amd64/kube-aggregator","format":"raw","checksum":"236ef38919b83295b9b77871c617b848fe44a082ce15a69b713288ca9df7f3df","checksum_algorithm":"sha256","files":[{"name":"kube-aggregator","src":"kube-aggregator"}],"cosign":{"opts":["--signature","https://dl.k8s.io/v1.35.9/bin/linux/amd64/kube-aggregator.sig","--certificate","https://dl.k8s.io/v1.35.9/bin/linux/amd64/kube-aggregator.cert","--certificate-identity","krel-staging@k8s-releng-prod.iam.gserviceaccount.com","--certificate-oidc-issuer","https://accounts.google.com"]}},{"os":"linux","arch":"arm64","type":"http","repo_owner":"kubernetes","repo_name":"kubernetes","asset":"kube-aggregator","url":"https://dl.k8s.io/v1.35.9/bin/linux/arm64/kube-aggregator","format":"raw","checksum":"caa3768709a5d7fc277513aa829a1aab54560974862703358fb9df2e106f172f","checksum_algorithm":"sha256","files":[{"name":"kube-aggregator","src":"kube-aggregator"}],"cosign":{"opts":["--signature","https://dl.k8s.io/v1.35.9/bin/linux/arm64/kube-aggregator.sig","--certificate","https://dl.k8s.io/v1.35.9/bin/linux/arm64/kube-aggregator.cert","--certificate-identity","krel-staging@k8s-releng-prod.iam.gserviceaccount.com","--certificate-oidc-issuer","https://accounts.google.com"]}}]}
+{
+  "assets": [
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "type": "http",
+      "repo_owner": "kubernetes",
+      "repo_name": "kubernetes",
+      "repo_id": 20580498,
+      "asset": "kube-aggregator",
+      "url": "https://dl.k8s.io/v1.35.9/bin/linux/amd64/kube-aggregator",
+      "format": "raw",
+      "checksum": "236ef38919b83295b9b77871c617b848fe44a082ce15a69b713288ca9df7f3df",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "kube-aggregator",
+          "src": "kube-aggregator"
+        }
+      ],
+      "cosign": {
+        "signature": {
+          "type": "http",
+          "url": "https://dl.k8s.io/v1.35.9/bin/linux/amd64/kube-aggregator.sig"
+        },
+        "certificate": {
+          "type": "http",
+          "url": "https://dl.k8s.io/v1.35.9/bin/linux/amd64/kube-aggregator.cert"
+        },
+        "certificate_identity": "krel-staging@k8s-releng-prod.iam.gserviceaccount.com",
+        "certificate_oidc_issuer": "https://accounts.google.com"
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "type": "http",
+      "repo_owner": "kubernetes",
+      "repo_name": "kubernetes",
+      "repo_id": 20580498,
+      "asset": "kube-aggregator",
+      "url": "https://dl.k8s.io/v1.35.9/bin/linux/arm64/kube-aggregator",
+      "format": "raw",
+      "checksum": "caa3768709a5d7fc277513aa829a1aab54560974862703358fb9df2e106f172f",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "kube-aggregator",
+          "src": "kube-aggregator"
+        }
+      ],
+      "cosign": {
+        "signature": {
+          "type": "http",
+          "url": "https://dl.k8s.io/v1.35.9/bin/linux/arm64/kube-aggregator.sig"
+        },
+        "certificate": {
+          "type": "http",
+          "url": "https://dl.k8s.io/v1.35.9/bin/linux/arm64/kube-aggregator.cert"
+        },
+        "certificate_identity": "krel-staging@k8s-releng-prod.iam.gserviceaccount.com",
+        "certificate_oidc_issuer": "https://accounts.google.com"
+      }
+    }
+  ]
+}

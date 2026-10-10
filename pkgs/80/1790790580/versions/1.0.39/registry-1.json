@@ -1,1 +1,255 @@
-{"published_at":"2025-11-04T19:48:46Z","assets":[{"os":"linux","arch":"amd64","linked_libc":"glibc","type":"github_release","repo_owner":"WebAssembly","repo_name":"wabt","asset":"wabt-1.0.39-linux-x64.tar.gz","format":"tar.gz","checksum":"1df1254b6639f5f1f89665907ee8cd0cd30114f40483515e583cccb86240840f","checksum_algorithm":"sha256","files":[{"name":"spectest-interp","src":"wabt-1.0.39/bin/spectest-interp"},{"name":"wasm-decompile","src":"wabt-1.0.39/bin/wasm-decompile"},{"name":"wasm-interp","src":"wabt-1.0.39/bin/wasm-interp"},{"name":"wasm-objdump","src":"wabt-1.0.39/bin/wasm-objdump"},{"name":"wasm-stats","src":"wabt-1.0.39/bin/wasm-stats"},{"name":"wasm-strip","src":"wabt-1.0.39/bin/wasm-strip"},{"name":"wasm-validate","src":"wabt-1.0.39/bin/wasm-validate"},{"name":"wasm2c","src":"wabt-1.0.39/bin/wasm2c"},{"name":"wasm2wat","src":"wabt-1.0.39/bin/wasm2wat"},{"name":"wast2json","src":"wabt-1.0.39/bin/wast2json"},{"name":"wat-desugar","src":"wabt-1.0.39/bin/wat-desugar"},{"name":"wat2wasm","src":"wabt-1.0.39/bin/wat2wasm"}]},{"os":"linux","arch":"arm64","linked_libc":"glibc","type":"github_release","repo_owner":"WebAssembly","repo_name":"wabt","asset":"wabt-1.0.39-linux-arm64.tar.gz","format":"tar.gz","checksum":"57a94e8b09084ab919c5b95559c1db8be87a0848384b84853d4d274ccaa5b46d","checksum_algorithm":"sha256","files":[{"name":"spectest-interp","src":"wabt-1.0.39/bin/spectest-interp"},{"name":"wasm-decompile","src":"wabt-1.0.39/bin/wasm-decompile"},{"name":"wasm-interp","src":"wabt-1.0.39/bin/wasm-interp"},{"name":"wasm-objdump","src":"wabt-1.0.39/bin/wasm-objdump"},{"name":"wasm-stats","src":"wabt-1.0.39/bin/wasm-stats"},{"name":"wasm-strip","src":"wabt-1.0.39/bin/wasm-strip"},{"name":"wasm-validate","src":"wabt-1.0.39/bin/wasm-validate"},{"name":"wasm2c","src":"wabt-1.0.39/bin/wasm2c"},{"name":"wasm2wat","src":"wabt-1.0.39/bin/wasm2wat"},{"name":"wast2json","src":"wabt-1.0.39/bin/wast2json"},{"name":"wat-desugar","src":"wabt-1.0.39/bin/wat-desugar"},{"name":"wat2wasm","src":"wabt-1.0.39/bin/wat2wasm"}]},{"os":"darwin","arch":"arm64","type":"github_release","repo_owner":"WebAssembly","repo_name":"wabt","asset":"wabt-1.0.39-macos-arm64.tar.gz","format":"tar.gz","checksum":"168a83f22125a77d96ecb230341ed0e2b06b970aadb57eb89d2ed06f9b7f8aca","checksum_algorithm":"sha256","files":[{"name":"spectest-interp","src":"wabt-1.0.39/bin/spectest-interp"},{"name":"wasm-decompile","src":"wabt-1.0.39/bin/wasm-decompile"},{"name":"wasm-interp","src":"wabt-1.0.39/bin/wasm-interp"},{"name":"wasm-objdump","src":"wabt-1.0.39/bin/wasm-objdump"},{"name":"wasm-stats","src":"wabt-1.0.39/bin/wasm-stats"},{"name":"wasm-strip","src":"wabt-1.0.39/bin/wasm-strip"},{"name":"wasm-validate","src":"wabt-1.0.39/bin/wasm-validate"},{"name":"wasm2c","src":"wabt-1.0.39/bin/wasm2c"},{"name":"wasm2wat","src":"wabt-1.0.39/bin/wasm2wat"},{"name":"wast2json","src":"wabt-1.0.39/bin/wast2json"},{"name":"wat-desugar","src":"wabt-1.0.39/bin/wat-desugar"},{"name":"wat2wasm","src":"wabt-1.0.39/bin/wat2wasm"}]},{"os":"windows","arch":"amd64","type":"github_release","repo_owner":"WebAssembly","repo_name":"wabt","asset":"wabt-1.0.39-windows-x64.tar.gz","format":"tar.gz","checksum":"c2215e52d3beff6cc0b6496aaef652399327084b9709ac5ec037b910c311a6c9","checksum_algorithm":"sha256","files":[{"name":"spectest-interp","src":"wabt-1.0.39/bin/spectest-interp.exe"},{"name":"wasm-decompile","src":"wabt-1.0.39/bin/wasm-decompile.exe"},{"name":"wasm-interp","src":"wabt-1.0.39/bin/wasm-interp.exe"},{"name":"wasm-objdump","src":"wabt-1.0.39/bin/wasm-objdump.exe"},{"name":"wasm-stats","src":"wabt-1.0.39/bin/wasm-stats.exe"},{"name":"wasm-strip","src":"wabt-1.0.39/bin/wasm-strip.exe"},{"name":"wasm-validate","src":"wabt-1.0.39/bin/wasm-validate.exe"},{"name":"wasm2c","src":"wabt-1.0.39/bin/wasm2c.exe"},{"name":"wasm2wat","src":"wabt-1.0.39/bin/wasm2wat.exe"},{"name":"wast2json","src":"wabt-1.0.39/bin/wast2json.exe"},{"name":"wat-desugar","src":"wabt-1.0.39/bin/wat-desugar.exe"},{"name":"wat2wasm","src":"wabt-1.0.39/bin/wat2wasm.exe"}]}]}
+{
+  "published_at": "2025-11-04T19:48:46Z",
+  "assets": [
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "WebAssembly",
+      "repo_name": "wabt",
+      "repo_id": 42467830,
+      "asset": "wabt-1.0.39-linux-x64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "1df1254b6639f5f1f89665907ee8cd0cd30114f40483515e583cccb86240840f",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "spectest-interp",
+          "src": "wabt-1.0.39/bin/spectest-interp"
+        },
+        {
+          "name": "wasm-decompile",
+          "src": "wabt-1.0.39/bin/wasm-decompile"
+        },
+        {
+          "name": "wasm-interp",
+          "src": "wabt-1.0.39/bin/wasm-interp"
+        },
+        {
+          "name": "wasm-objdump",
+          "src": "wabt-1.0.39/bin/wasm-objdump"
+        },
+        {
+          "name": "wasm-stats",
+          "src": "wabt-1.0.39/bin/wasm-stats"
+        },
+        {
+          "name": "wasm-strip",
+          "src": "wabt-1.0.39/bin/wasm-strip"
+        },
+        {
+          "name": "wasm-validate",
+          "src": "wabt-1.0.39/bin/wasm-validate"
+        },
+        {
+          "name": "wasm2c",
+          "src": "wabt-1.0.39/bin/wasm2c"
+        },
+        {
+          "name": "wasm2wat",
+          "src": "wabt-1.0.39/bin/wasm2wat"
+        },
+        {
+          "name": "wast2json",
+          "src": "wabt-1.0.39/bin/wast2json"
+        },
+        {
+          "name": "wat-desugar",
+          "src": "wabt-1.0.39/bin/wat-desugar"
+        },
+        {
+          "name": "wat2wasm",
+          "src": "wabt-1.0.39/bin/wat2wasm"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "WebAssembly",
+      "repo_name": "wabt",
+      "repo_id": 42467830,
+      "asset": "wabt-1.0.39-linux-arm64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "57a94e8b09084ab919c5b95559c1db8be87a0848384b84853d4d274ccaa5b46d",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "spectest-interp",
+          "src": "wabt-1.0.39/bin/spectest-interp"
+        },
+        {
+          "name": "wasm-decompile",
+          "src": "wabt-1.0.39/bin/wasm-decompile"
+        },
+        {
+          "name": "wasm-interp",
+          "src": "wabt-1.0.39/bin/wasm-interp"
+        },
+        {
+          "name": "wasm-objdump",
+          "src": "wabt-1.0.39/bin/wasm-objdump"
+        },
+        {
+          "name": "wasm-stats",
+          "src": "wabt-1.0.39/bin/wasm-stats"
+        },
+        {
+          "name": "wasm-strip",
+          "src": "wabt-1.0.39/bin/wasm-strip"
+        },
+        {
+          "name": "wasm-validate",
+          "src": "wabt-1.0.39/bin/wasm-validate"
+        },
+        {
+          "name": "wasm2c",
+          "src": "wabt-1.0.39/bin/wasm2c"
+        },
+        {
+          "name": "wasm2wat",
+          "src": "wabt-1.0.39/bin/wasm2wat"
+        },
+        {
+          "name": "wast2json",
+          "src": "wabt-1.0.39/bin/wast2json"
+        },
+        {
+          "name": "wat-desugar",
+          "src": "wabt-1.0.39/bin/wat-desugar"
+        },
+        {
+          "name": "wat2wasm",
+          "src": "wabt-1.0.39/bin/wat2wasm"
+        }
+      ]
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "WebAssembly",
+      "repo_name": "wabt",
+      "repo_id": 42467830,
+      "asset": "wabt-1.0.39-macos-arm64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "168a83f22125a77d96ecb230341ed0e2b06b970aadb57eb89d2ed06f9b7f8aca",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "spectest-interp",
+          "src": "wabt-1.0.39/bin/spectest-interp"
+        },
+        {
+          "name": "wasm-decompile",
+          "src": "wabt-1.0.39/bin/wasm-decompile"
+        },
+        {
+          "name": "wasm-interp",
+          "src": "wabt-1.0.39/bin/wasm-interp"
+        },
+        {
+          "name": "wasm-objdump",
+          "src": "wabt-1.0.39/bin/wasm-objdump"
+        },
+        {
+          "name": "wasm-stats",
+          "src": "wabt-1.0.39/bin/wasm-stats"
+        },
+        {
+          "name": "wasm-strip",
+          "src": "wabt-1.0.39/bin/wasm-strip"
+        },
+        {
+          "name": "wasm-validate",
+          "src": "wabt-1.0.39/bin/wasm-validate"
+        },
+        {
+          "name": "wasm2c",
+          "src": "wabt-1.0.39/bin/wasm2c"
+        },
+        {
+          "name": "wasm2wat",
+          "src": "wabt-1.0.39/bin/wasm2wat"
+        },
+        {
+          "name": "wast2json",
+          "src": "wabt-1.0.39/bin/wast2json"
+        },
+        {
+          "name": "wat-desugar",
+          "src": "wabt-1.0.39/bin/wat-desugar"
+        },
+        {
+          "name": "wat2wasm",
+          "src": "wabt-1.0.39/bin/wat2wasm"
+        }
+      ]
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "WebAssembly",
+      "repo_name": "wabt",
+      "repo_id": 42467830,
+      "asset": "wabt-1.0.39-windows-x64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "c2215e52d3beff6cc0b6496aaef652399327084b9709ac5ec037b910c311a6c9",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "spectest-interp",
+          "src": "wabt-1.0.39/bin/spectest-interp.exe"
+        },
+        {
+          "name": "wasm-decompile",
+          "src": "wabt-1.0.39/bin/wasm-decompile.exe"
+        },
+        {
+          "name": "wasm-interp",
+          "src": "wabt-1.0.39/bin/wasm-interp.exe"
+        },
+        {
+          "name": "wasm-objdump",
+          "src": "wabt-1.0.39/bin/wasm-objdump.exe"
+        },
+        {
+          "name": "wasm-stats",
+          "src": "wabt-1.0.39/bin/wasm-stats.exe"
+        },
+        {
+          "name": "wasm-strip",
+          "src": "wabt-1.0.39/bin/wasm-strip.exe"
+        },
+        {
+          "name": "wasm-validate",
+          "src": "wabt-1.0.39/bin/wasm-validate.exe"
+        },
+        {
+          "name": "wasm2c",
+          "src": "wabt-1.0.39/bin/wasm2c.exe"
+        },
+        {
+          "name": "wasm2wat",
+          "src": "wabt-1.0.39/bin/wasm2wat.exe"
+        },
+        {
+          "name": "wast2json",
+          "src": "wabt-1.0.39/bin/wast2json.exe"
+        },
+        {
+          "name": "wat-desugar",
+          "src": "wabt-1.0.39/bin/wat-desugar.exe"
+        },
+        {
+          "name": "wat2wasm",
+          "src": "wabt-1.0.39/bin/wat2wasm.exe"
+        }
+      ]
+    }
+  ]
+}

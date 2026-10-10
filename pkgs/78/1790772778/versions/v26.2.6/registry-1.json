@@ -1,1 +1,101 @@
-{"assets":[{"os":"darwin","arch":"amd64","type":"http","repo_owner":"cockroachdb","repo_name":"cockroach","asset":"cockroach-v26.2.6.darwin-10.9-amd64.tgz","url":"https://binaries.cockroachdb.com/cockroach-v26.2.6.darwin-10.9-amd64.tgz","format":"tgz","checksum":"c955ff48f01e04224b5f0dbf14d76bfee2508ae790342bf6938ead278f3b4e15","checksum_algorithm":"sha256","files":[{"name":"cockroach","src":"cockroach-v26.2.6.darwin-10.9-amd64/cockroach"}]},{"os":"darwin","arch":"arm64","type":"http","repo_owner":"cockroachdb","repo_name":"cockroach","asset":"cockroach-v26.2.6.darwin-11.0-arm64.tgz","url":"https://binaries.cockroachdb.com/cockroach-v26.2.6.darwin-11.0-arm64.tgz","format":"tgz","checksum":"f0876a544d7bdffff6e146819850bc19e5c2f69dfcf66baf6b1fd30d715f4504","checksum_algorithm":"sha256","files":[{"name":"cockroach","src":"cockroach-v26.2.6.darwin-11.0-arm64/cockroach"}]},{"os":"linux","arch":"amd64","linked_libc":"glibc","type":"http","repo_owner":"cockroachdb","repo_name":"cockroach","asset":"cockroach-v26.2.6.linux-amd64.tgz","url":"https://binaries.cockroachdb.com/cockroach-v26.2.6.linux-amd64.tgz","format":"tgz","checksum":"cd89dd377527de35ba9204b014d180ac973246854c7ad6f7db7fc59607da30ff","checksum_algorithm":"sha256","files":[{"name":"cockroach","src":"cockroach-v26.2.6.linux-amd64/cockroach"}]},{"os":"linux","arch":"arm64","linked_libc":"glibc","type":"http","repo_owner":"cockroachdb","repo_name":"cockroach","asset":"cockroach-v26.2.6.linux-arm64.tgz","url":"https://binaries.cockroachdb.com/cockroach-v26.2.6.linux-arm64.tgz","format":"tgz","checksum":"2df0fc5ef57d2d3637e8ab485c963cfeeb87939be8e93945b33619207f5dc6ce","checksum_algorithm":"sha256","files":[{"name":"cockroach","src":"cockroach-v26.2.6.linux-arm64/cockroach"}]},{"os":"windows","arch":"amd64","type":"http","repo_owner":"cockroachdb","repo_name":"cockroach","asset":"cockroach-v26.2.6.windows-6.2-amd64.zip","url":"https://binaries.cockroachdb.com/cockroach-v26.2.6.windows-6.2-amd64.zip","format":"zip","checksum":"5a0eda85bd36f4eb6c84b0d9f118ca12117f683809bb7fa2779bd8e2dcb531a7","checksum_algorithm":"sha256","files":[{"name":"cockroach","src":"cockroach-v26.2.6.windows-6.2-amd64/cockroach.exe"}]}]}
+{
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "http",
+      "repo_owner": "cockroachdb",
+      "repo_name": "cockroach",
+      "repo_id": 16563587,
+      "asset": "cockroach-v26.2.6.darwin-10.9-amd64.tgz",
+      "url": "https://binaries.cockroachdb.com/cockroach-v26.2.6.darwin-10.9-amd64.tgz",
+      "format": "tgz",
+      "checksum": "c955ff48f01e04224b5f0dbf14d76bfee2508ae790342bf6938ead278f3b4e15",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "cockroach",
+          "src": "cockroach-v26.2.6.darwin-10.9-amd64/cockroach"
+        }
+      ]
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "http",
+      "repo_owner": "cockroachdb",
+      "repo_name": "cockroach",
+      "repo_id": 16563587,
+      "asset": "cockroach-v26.2.6.darwin-11.0-arm64.tgz",
+      "url": "https://binaries.cockroachdb.com/cockroach-v26.2.6.darwin-11.0-arm64.tgz",
+      "format": "tgz",
+      "checksum": "f0876a544d7bdffff6e146819850bc19e5c2f69dfcf66baf6b1fd30d715f4504",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "cockroach",
+          "src": "cockroach-v26.2.6.darwin-11.0-arm64/cockroach"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "glibc",
+      "type": "http",
+      "repo_owner": "cockroachdb",
+      "repo_name": "cockroach",
+      "repo_id": 16563587,
+      "asset": "cockroach-v26.2.6.linux-amd64.tgz",
+      "url": "https://binaries.cockroachdb.com/cockroach-v26.2.6.linux-amd64.tgz",
+      "format": "tgz",
+      "checksum": "cd89dd377527de35ba9204b014d180ac973246854c7ad6f7db7fc59607da30ff",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "cockroach",
+          "src": "cockroach-v26.2.6.linux-amd64/cockroach"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "linked_libc": "glibc",
+      "type": "http",
+      "repo_owner": "cockroachdb",
+      "repo_name": "cockroach",
+      "repo_id": 16563587,
+      "asset": "cockroach-v26.2.6.linux-arm64.tgz",
+      "url": "https://binaries.cockroachdb.com/cockroach-v26.2.6.linux-arm64.tgz",
+      "format": "tgz",
+      "checksum": "2df0fc5ef57d2d3637e8ab485c963cfeeb87939be8e93945b33619207f5dc6ce",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "cockroach",
+          "src": "cockroach-v26.2.6.linux-arm64/cockroach"
+        }
+      ]
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "http",
+      "repo_owner": "cockroachdb",
+      "repo_name": "cockroach",
+      "repo_id": 16563587,
+      "asset": "cockroach-v26.2.6.windows-6.2-amd64.zip",
+      "url": "https://binaries.cockroachdb.com/cockroach-v26.2.6.windows-6.2-amd64.zip",
+      "format": "zip",
+      "checksum": "5a0eda85bd36f4eb6c84b0d9f118ca12117f683809bb7fa2779bd8e2dcb531a7",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "cockroach",
+          "src": "cockroach-v26.2.6.windows-6.2-amd64/cockroach.exe"
+        }
+      ]
+    }
+  ]
+}

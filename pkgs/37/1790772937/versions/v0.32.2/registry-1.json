@@ -1,1 +1,279 @@
-{"published_at":"2026-08-04T13:59:05Z","assets":[{"os":"darwin","arch":"amd64","type":"github_release","repo_owner":"moby","repo_name":"buildkit","asset":"buildkit-v0.32.2.darwin-amd64.tar.gz","format":"tar.gz","checksum":"c1e230aec90b79d6a70c28a24f7b13a0427596f95110427ae906621d9011838d","checksum_algorithm":"sha256","files":[{"name":"buildctl","src":"bin/buildctl"}],"cosign":{"opts":["--certificate-identity","https://github.com/docker/github-builder/.github/workflows/bake.yml@3415a188caae9a0da7fba83bc06985776e0b1790","--certificate-oidc-issuer","https://token.actions.githubusercontent.com","--certificate-github-workflow-repository","moby/buildkit","--certificate-github-workflow-ref","refs/tags/v0.32.2"],"bundle":{"type":"github_release","asset":"buildkit-v0.32.2.darwin-amd64.sigstore.json"}}},{"os":"darwin","arch":"arm64","type":"github_release","repo_owner":"moby","repo_name":"buildkit","asset":"buildkit-v0.32.2.darwin-arm64.tar.gz","format":"tar.gz","checksum":"a404ae44f4ea5c533d22363543c873f94429ebc803da2e2a73b3b4f051cdd92a","checksum_algorithm":"sha256","files":[{"name":"buildctl","src":"bin/buildctl"}],"cosign":{"opts":["--certificate-identity","https://github.com/docker/github-builder/.github/workflows/bake.yml@3415a188caae9a0da7fba83bc06985776e0b1790","--certificate-oidc-issuer","https://token.actions.githubusercontent.com","--certificate-github-workflow-repository","moby/buildkit","--certificate-github-workflow-ref","refs/tags/v0.32.2"],"bundle":{"type":"github_release","asset":"buildkit-v0.32.2.darwin-arm64.sigstore.json"}}},{"os":"linux","arch":"amd64","linked_libc":"static","type":"github_release","repo_owner":"moby","repo_name":"buildkit","asset":"buildkit-v0.32.2.linux-amd64.tar.gz","format":"tar.gz","checksum":"2975d0f651ad96ba8b80b9992ae1f9a964f4408569af5b6dc36544165c3926af","checksum_algorithm":"sha256","files":[{"name":"buildctl","src":"bin/buildctl"},{"name":"buildkit-cni-bridge","src":"bin/buildkit-cni-bridge"},{"name":"buildkit-cni-firewall","src":"bin/buildkit-cni-firewall"},{"name":"buildkit-cni-host-local","src":"bin/buildkit-cni-host-local"},{"name":"buildkit-cni-loopback","src":"bin/buildkit-cni-loopback"},{"name":"buildkit-qemu-aarch64","src":"bin/buildkit-qemu-aarch64"},{"name":"buildkit-qemu-arm","src":"bin/buildkit-qemu-arm"},{"name":"buildkit-qemu-i386","src":"bin/buildkit-qemu-i386"},{"name":"buildkit-qemu-ppc64le","src":"bin/buildkit-qemu-ppc64le"},{"name":"buildkit-qemu-riscv64","src":"bin/buildkit-qemu-riscv64"},{"name":"buildkit-qemu-s390x","src":"bin/buildkit-qemu-s390x"},{"name":"buildkit-runc","src":"bin/buildkit-runc"},{"name":"buildkitd","src":"bin/buildkitd"}],"cosign":{"opts":["--certificate-identity","https://github.com/docker/github-builder/.github/workflows/bake.yml@3415a188caae9a0da7fba83bc06985776e0b1790","--certificate-oidc-issuer","https://token.actions.githubusercontent.com","--certificate-github-workflow-repository","moby/buildkit","--certificate-github-workflow-ref","refs/tags/v0.32.2"],"bundle":{"type":"github_release","asset":"buildkit-v0.32.2.linux-amd64.sigstore.json"}}},{"os":"linux","arch":"arm64","linked_libc":"static","type":"github_release","repo_owner":"moby","repo_name":"buildkit","asset":"buildkit-v0.32.2.linux-arm64.tar.gz","format":"tar.gz","checksum":"9e8f46bf309ec0ab262967be5538a4dbe06be756a82621f98253933bac5dcf92","checksum_algorithm":"sha256","files":[{"name":"buildctl","src":"bin/buildctl"},{"name":"buildkit-cni-bridge","src":"bin/buildkit-cni-bridge"},{"name":"buildkit-cni-firewall","src":"bin/buildkit-cni-firewall"},{"name":"buildkit-cni-host-local","src":"bin/buildkit-cni-host-local"},{"name":"buildkit-cni-loopback","src":"bin/buildkit-cni-loopback"},{"name":"buildkit-qemu-arm","src":"bin/buildkit-qemu-arm"},{"name":"buildkit-qemu-i386","src":"bin/buildkit-qemu-i386"},{"name":"buildkit-qemu-ppc64le","src":"bin/buildkit-qemu-ppc64le"},{"name":"buildkit-qemu-riscv64","src":"bin/buildkit-qemu-riscv64"},{"name":"buildkit-qemu-s390x","src":"bin/buildkit-qemu-s390x"},{"name":"buildkit-qemu-x86_64","src":"bin/buildkit-qemu-x86_64"},{"name":"buildkit-runc","src":"bin/buildkit-runc"},{"name":"buildkitd","src":"bin/buildkitd"}],"cosign":{"opts":["--certificate-identity","https://github.com/docker/github-builder/.github/workflows/bake.yml@3415a188caae9a0da7fba83bc06985776e0b1790","--certificate-oidc-issuer","https://token.actions.githubusercontent.com","--certificate-github-workflow-repository","moby/buildkit","--certificate-github-workflow-ref","refs/tags/v0.32.2"],"bundle":{"type":"github_release","asset":"buildkit-v0.32.2.linux-arm64.sigstore.json"}}},{"os":"windows","arch":"amd64","type":"github_release","repo_owner":"moby","repo_name":"buildkit","asset":"buildkit-v0.32.2.windows-amd64.tar.gz","format":"tar.gz","checksum":"b682a0dabd29137b2a5eecfcd62cd134944dffb09939b5308e1b77044a01331a","checksum_algorithm":"sha256","files":[{"name":"buildctl","src":"bin/buildctl.exe"},{"name":"buildkitd","src":"bin/buildkitd.exe"}],"cosign":{"opts":["--certificate-identity","https://github.com/docker/github-builder/.github/workflows/bake.yml@3415a188caae9a0da7fba83bc06985776e0b1790","--certificate-oidc-issuer","https://token.actions.githubusercontent.com","--certificate-github-workflow-repository","moby/buildkit","--certificate-github-workflow-ref","refs/tags/v0.32.2"],"bundle":{"type":"github_release","asset":"buildkit-v0.32.2.windows-amd64.sigstore.json"}}},{"os":"windows","arch":"arm64","type":"github_release","repo_owner":"moby","repo_name":"buildkit","asset":"buildkit-v0.32.2.windows-arm64.tar.gz","format":"tar.gz","checksum":"43bdbfcc33e1b0c73bb81298b3b8c8eeee61637c700a26c1ba134831b94a90c8","checksum_algorithm":"sha256","files":[{"name":"buildctl","src":"bin/buildctl.exe"},{"name":"buildkitd","src":"bin/buildkitd.exe"}],"cosign":{"opts":["--certificate-identity","https://github.com/docker/github-builder/.github/workflows/bake.yml@3415a188caae9a0da7fba83bc06985776e0b1790","--certificate-oidc-issuer","https://token.actions.githubusercontent.com","--certificate-github-workflow-repository","moby/buildkit","--certificate-github-workflow-ref","refs/tags/v0.32.2"],"bundle":{"type":"github_release","asset":"buildkit-v0.32.2.windows-arm64.sigstore.json"}}}]}
+{
+  "published_at": "2026-08-04T13:59:05Z",
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "moby",
+      "repo_name": "buildkit",
+      "repo_id": 92969352,
+      "asset": "buildkit-v0.32.2.darwin-amd64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "c1e230aec90b79d6a70c28a24f7b13a0427596f95110427ae906621d9011838d",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "buildctl",
+          "src": "bin/buildctl"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "buildkit-v0.32.2.darwin-amd64.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/docker/github-builder/.github/workflows/bake.yml@3415a188caae9a0da7fba83bc06985776e0b1790",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "certificate_github_workflow_repository": "moby/buildkit",
+        "certificate_github_workflow_ref": "refs/tags/v0.32.2"
+      }
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "moby",
+      "repo_name": "buildkit",
+      "repo_id": 92969352,
+      "asset": "buildkit-v0.32.2.darwin-arm64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "a404ae44f4ea5c533d22363543c873f94429ebc803da2e2a73b3b4f051cdd92a",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "buildctl",
+          "src": "bin/buildctl"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "buildkit-v0.32.2.darwin-arm64.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/docker/github-builder/.github/workflows/bake.yml@3415a188caae9a0da7fba83bc06985776e0b1790",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "certificate_github_workflow_repository": "moby/buildkit",
+        "certificate_github_workflow_ref": "refs/tags/v0.32.2"
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "moby",
+      "repo_name": "buildkit",
+      "repo_id": 92969352,
+      "asset": "buildkit-v0.32.2.linux-amd64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "2975d0f651ad96ba8b80b9992ae1f9a964f4408569af5b6dc36544165c3926af",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "buildctl",
+          "src": "bin/buildctl"
+        },
+        {
+          "name": "buildkit-cni-bridge",
+          "src": "bin/buildkit-cni-bridge"
+        },
+        {
+          "name": "buildkit-cni-firewall",
+          "src": "bin/buildkit-cni-firewall"
+        },
+        {
+          "name": "buildkit-cni-host-local",
+          "src": "bin/buildkit-cni-host-local"
+        },
+        {
+          "name": "buildkit-cni-loopback",
+          "src": "bin/buildkit-cni-loopback"
+        },
+        {
+          "name": "buildkit-qemu-aarch64",
+          "src": "bin/buildkit-qemu-aarch64"
+        },
+        {
+          "name": "buildkit-qemu-arm",
+          "src": "bin/buildkit-qemu-arm"
+        },
+        {
+          "name": "buildkit-qemu-i386",
+          "src": "bin/buildkit-qemu-i386"
+        },
+        {
+          "name": "buildkit-qemu-ppc64le",
+          "src": "bin/buildkit-qemu-ppc64le"
+        },
+        {
+          "name": "buildkit-qemu-riscv64",
+          "src": "bin/buildkit-qemu-riscv64"
+        },
+        {
+          "name": "buildkit-qemu-s390x",
+          "src": "bin/buildkit-qemu-s390x"
+        },
+        {
+          "name": "buildkit-runc",
+          "src": "bin/buildkit-runc"
+        },
+        {
+          "name": "buildkitd",
+          "src": "bin/buildkitd"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "buildkit-v0.32.2.linux-amd64.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/docker/github-builder/.github/workflows/bake.yml@3415a188caae9a0da7fba83bc06985776e0b1790",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "certificate_github_workflow_repository": "moby/buildkit",
+        "certificate_github_workflow_ref": "refs/tags/v0.32.2"
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "moby",
+      "repo_name": "buildkit",
+      "repo_id": 92969352,
+      "asset": "buildkit-v0.32.2.linux-arm64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "9e8f46bf309ec0ab262967be5538a4dbe06be756a82621f98253933bac5dcf92",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "buildctl",
+          "src": "bin/buildctl"
+        },
+        {
+          "name": "buildkit-cni-bridge",
+          "src": "bin/buildkit-cni-bridge"
+        },
+        {
+          "name": "buildkit-cni-firewall",
+          "src": "bin/buildkit-cni-firewall"
+        },
+        {
+          "name": "buildkit-cni-host-local",
+          "src": "bin/buildkit-cni-host-local"
+        },
+        {
+          "name": "buildkit-cni-loopback",
+          "src": "bin/buildkit-cni-loopback"
+        },
+        {
+          "name": "buildkit-qemu-arm",
+          "src": "bin/buildkit-qemu-arm"
+        },
+        {
+          "name": "buildkit-qemu-i386",
+          "src": "bin/buildkit-qemu-i386"
+        },
+        {
+          "name": "buildkit-qemu-ppc64le",
+          "src": "bin/buildkit-qemu-ppc64le"
+        },
+        {
+          "name": "buildkit-qemu-riscv64",
+          "src": "bin/buildkit-qemu-riscv64"
+        },
+        {
+          "name": "buildkit-qemu-s390x",
+          "src": "bin/buildkit-qemu-s390x"
+        },
+        {
+          "name": "buildkit-qemu-x86_64",
+          "src": "bin/buildkit-qemu-x86_64"
+        },
+        {
+          "name": "buildkit-runc",
+          "src": "bin/buildkit-runc"
+        },
+        {
+          "name": "buildkitd",
+          "src": "bin/buildkitd"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "buildkit-v0.32.2.linux-arm64.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/docker/github-builder/.github/workflows/bake.yml@3415a188caae9a0da7fba83bc06985776e0b1790",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "certificate_github_workflow_repository": "moby/buildkit",
+        "certificate_github_workflow_ref": "refs/tags/v0.32.2"
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "moby",
+      "repo_name": "buildkit",
+      "repo_id": 92969352,
+      "asset": "buildkit-v0.32.2.windows-amd64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "b682a0dabd29137b2a5eecfcd62cd134944dffb09939b5308e1b77044a01331a",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "buildctl",
+          "src": "bin/buildctl.exe"
+        },
+        {
+          "name": "buildkitd",
+          "src": "bin/buildkitd.exe"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "buildkit-v0.32.2.windows-amd64.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/docker/github-builder/.github/workflows/bake.yml@3415a188caae9a0da7fba83bc06985776e0b1790",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "certificate_github_workflow_repository": "moby/buildkit",
+        "certificate_github_workflow_ref": "refs/tags/v0.32.2"
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "moby",
+      "repo_name": "buildkit",
+      "repo_id": 92969352,
+      "asset": "buildkit-v0.32.2.windows-arm64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "43bdbfcc33e1b0c73bb81298b3b8c8eeee61637c700a26c1ba134831b94a90c8",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "buildctl",
+          "src": "bin/buildctl.exe"
+        },
+        {
+          "name": "buildkitd",
+          "src": "bin/buildkitd.exe"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "buildkit-v0.32.2.windows-arm64.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/docker/github-builder/.github/workflows/bake.yml@3415a188caae9a0da7fba83bc06985776e0b1790",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "certificate_github_workflow_repository": "moby/buildkit",
+        "certificate_github_workflow_ref": "refs/tags/v0.32.2"
+      }
+    }
+  ]
+}
