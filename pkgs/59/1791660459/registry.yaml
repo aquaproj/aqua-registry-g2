@@ -1,0 +1,21 @@
+name: stern/stern
+type: github_release
+repo_owner: stern
+repo_name: stern
+repo_id: 306013800
+description: ⎈ Multi pod and container log tailing for Kubernetes -- Friendly fork of https://github.com/wercker/stern
+version_overrides:
+  - version_constraint: Version == "v1.20.1"
+    files:
+      - name: stern
+        src: '{{.AssetWithoutExt}}/stern'
+  - version_constraint: semver("> 1.20.0")
+  - version_constraint: semver("> 1.14.0")
+    files:
+      - name: stern
+        src: '{{.AssetWithoutExt}}/stern'
+  - version_constraint: semver("<= 1.14.0")
+    files:
+      - name: stern
+        src: '{{.AssetWithoutExt}}/stern'
+  - version_constraint: "true"
