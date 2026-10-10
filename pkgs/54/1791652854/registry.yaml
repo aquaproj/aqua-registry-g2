@@ -1,0 +1,41 @@
+name: snyk/cli
+type: github_release
+repo_owner: snyk
+repo_name: cli
+repo_id: 45247496
+description: Snyk CLI scans and monitors your projects for security vulnerabilities
+files:
+  - name: snyk
+version_overrides:
+  - version_constraint: Version == "v1.1036.0"
+    no_asset: true
+  - version_constraint: semver("> 1.1229.0")
+    overrides:
+      - goos: linux
+        goarch: arm64
+        asset: snyk-{{.OS}}-{{.Arch}}
+        variants:
+          - key: libc
+            value: glibc
+      - goos: linux
+        goarch: arm64
+        asset: snyk-alpine-{{.Arch}}
+        variants:
+          - key: libc
+            value: musl
+  - version_constraint: semver("> 1.850.0")
+  - version_constraint: semver("<= 1.850.0")
+  - version_constraint: "true"
+    overrides:
+      - goos: linux
+        goarch: arm64
+        asset: snyk-{{.OS}}-{{.Arch}}
+        variants:
+          - key: libc
+            value: glibc
+      - goos: linux
+        goarch: arm64
+        asset: snyk-alpine-{{.Arch}}
+        variants:
+          - key: libc
+            value: musl
