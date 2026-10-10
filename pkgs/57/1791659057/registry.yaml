@@ -1,0 +1,14 @@
+name: lc/gau
+type: github_release
+repo_owner: lc
+repo_name: gau
+repo_id: 242879301
+description: Fetch known URLs from AlienVault's Open Threat Exchange, the Wayback Machine, and Common Crawl
+version_overrides:
+  - version_constraint: semver(">= 2.2.0")
+  - version_constraint: semver(">= 1.0.1")
+  - version_constraint: Version == "v1.0"
+    files:
+      - name: gau
+        src: gau-{{.OS}}-{{.Arch}}
+  - version_constraint: "true"
