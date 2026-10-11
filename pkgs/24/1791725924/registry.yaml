@@ -1,0 +1,23 @@
+name: zyedidia/eget
+type: github_release
+repo_owner: zyedidia
+repo_name: eget
+repo_id: 397091905
+description: Easily install prebuilt binaries from GitHub
+version_overrides:
+  - version_constraint: Version == "v0.1.0"
+    files:
+      - name: eget
+        src: '{{.AssetWithoutExt}}/eget'
+  - version_constraint: semver("> 1.0.1")
+    files:
+      - name: eget
+        src: '{{.AssetWithoutExt}}/eget'
+  - version_constraint: semver("<= 1.0.1")
+    files:
+      - name: eget
+        src: '{{.AssetWithoutExt}}/eget'
+  - version_constraint: "true"
+    files:
+      - name: eget
+        src: '{{.AssetWithoutExt}}/eget'
