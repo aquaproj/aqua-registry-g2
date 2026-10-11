@@ -1,0 +1,17 @@
+name: rs/curlie
+type: github_release
+repo_owner: rs
+repo_name: curlie
+repo_id: 134918912
+description: The power of curl, the ease of use of httpie
+version_overrides:
+  - version_constraint: Version == "v0.0.1"
+    files:
+      - name: http
+  - version_constraint: semver("> 1.7.2")
+  - version_constraint: semver("> 1.6.0")
+  - version_constraint: semver("> 1.0.0")
+  - version_constraint: semver("<= 1.0.0")
+    files:
+      - name: http
+  - version_constraint: "true"
