@@ -1,0 +1,29 @@
+name: google/go-jsonnet
+type: github_release
+repo_owner: google
+repo_name: go-jsonnet
+repo_id: 52051221
+files:
+  - name: jsonnet
+  - name: jsonnet-deps
+  - name: jsonnet-lint
+  - name: jsonnetfmt
+version_overrides:
+  - version_constraint: Version == "v0.17.0"
+    files:
+      - name: jsonnet
+      - name: jsonnetfmt
+  - version_constraint: Version == "v0.18.0"
+    files:
+      - name: jsonnet
+      - name: jsonnetfmt
+  - version_constraint: Version == "v0.20.0"
+  - version_constraint: Version == "v0.21.0"
+  - version_constraint: semver(">= 0.20.0")
+  - version_constraint: semver("> 0.16.0")
+    files:
+      - name: jsonnet
+      - name: jsonnetfmt
+  - version_constraint: semver("<= 0.16.0")
+    no_asset: true
+  - version_constraint: "true"
