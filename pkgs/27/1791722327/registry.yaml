@@ -1,0 +1,19 @@
+name: idursun/jjui
+type: github_release
+repo_owner: idursun
+repo_name: jjui
+repo_id: 854270174
+description: Jujutsu UI (jjui) is a Text User Interface (TUI) designed for interacting with the Jujutsu version control system
+version_overrides:
+  - version_constraint: semver("> 0.7.1")
+    files:
+      - name: jjui
+        src: '{{.AssetWithoutExt}}'
+  - version_constraint: semver("<= 0.7.1")
+    files:
+      - name: jjui
+        src: release/{{.AssetWithoutExt}}
+  - version_constraint: "true"
+    files:
+      - name: jjui
+        src: '{{.AssetWithoutExt}}'
