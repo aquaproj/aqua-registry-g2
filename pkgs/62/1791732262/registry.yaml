@@ -1,0 +1,20 @@
+name: PaddiM8/kalker
+type: github_release
+repo_owner: PaddiM8
+repo_name: kalker
+repo_id: 269425900
+description: Kalker is a calculator program that supports user-defined variables, functions, differentiation, and integration
+files:
+  - name: kalker
+    src: target/release/kalker
+version_overrides:
+  - version_constraint: semver(">= 1.0.0")
+  - version_constraint: semver(">= 0.3.4")
+    files:
+      - name: kalker
+        src: target/release/kalk
+  - version_constraint: semver(">= 0.3.3")
+    files:
+      - name: kalker
+        src: target/release/kalk
+  - version_constraint: "true"
