@@ -48,8 +48,10 @@ called from there:
   request touches, and refuses what no pull request may do. A package's pull request from
   `ar2_<id>` touches that package's directory and nothing else, and one from any other
   `ar2_` branch touches no package. A `registry-*.json` already published is changed or
-  removed only once a person has labelled the pull request `replaces-published` -- the
-  label's event is read for who put it there, because ar2 labels its own pull requests. When
+  removed only by a pull request that isn't set to merge itself: a person merging it is
+  what says the change was read and is meant. ar2 labels such a pull request
+  `replaces-published` and doesn't turn auto-merge on, and the checks run again when
+  auto-merge is turned on or off. When
   every package had a branch of its own, a pull request couldn't reach another package; on
   `main` that is this check.
 - Each package's definition is validated, and every `registry-*.json` added or changed is

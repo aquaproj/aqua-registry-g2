@@ -5,7 +5,7 @@ name: regenerate
 # What the registry serves is frozen per version, so a definition that was wrong is wrong
 # in every file generated under it, and a run won't touch them: it generates what is
 # missing. Fix the package's registry.yaml first, then dispatch this. What it opens replaces
-# published files, so the checks wait for a person to label it replaces-published.
+# published files, so it is labelled replaces-published and left for a person to merge.
 #
 # Only the versions whose file actually changes are committed, so dispatching it for a
 # package where nothing moved comes to nothing.
