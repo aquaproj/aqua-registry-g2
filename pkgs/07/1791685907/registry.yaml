@@ -1,0 +1,74 @@
+name: kubernetes/node-problem-detector
+type: github_release
+repo_owner: kubernetes
+repo_name: node-problem-detector
+repo_id: 59044721
+description: This is a place for various problem detectors running on the Kubernetes nodes
+version_filter: not (Version matches "-(alpha|beta|rc)$")
+files:
+  - name: node-problem-detector
+    src: bin/{{.FileName}}
+  - name: health-checker
+    src: bin/{{.FileName}}
+  - name: log-counter
+    src: bin/{{.FileName}}
+version_overrides:
+  - version_constraint: Version == "v0.8.11"
+    no_asset: true
+  - version_constraint: Version == "v0.8.8"
+    overrides:
+      - goos: windows
+        files:
+          - name: node-problem-detector.exe
+            src: bin/{{.FileName}}
+          - name: health-checker.exe
+            src: bin/{{.FileName}}
+  - version_constraint: Version == "v0.8.12"
+    overrides:
+      - goos: windows
+        files:
+          - name: node-problem-detector.exe
+            src: bin/{{.FileName}}
+          - name: health-checker.exe
+            src: bin/{{.FileName}}
+  - version_constraint: Version == "v0.8.13"
+    overrides:
+      - goos: windows
+        files:
+          - name: node-problem-detector.exe
+            src: bin/{{.FileName}}
+          - name: health-checker.exe
+            src: bin/{{.FileName}}
+  - version_constraint: semver("> 0.8.15")
+    overrides:
+      - goos: windows
+        files:
+          - name: node-problem-detector.exe
+            src: bin/{{.FileName}}
+          - name: health-checker.exe
+            src: bin/{{.FileName}}
+  - version_constraint: semver("> 0.8.10")
+    overrides:
+      - goos: windows
+        files:
+          - name: node-problem-detector.exe
+            src: bin/{{.FileName}}
+          - name: health-checker.exe
+            src: bin/{{.FileName}}
+  - version_constraint: semver("> 0.8.7")
+    overrides:
+      - goos: windows
+        files:
+          - name: node-problem-detector.exe
+            src: bin/{{.FileName}}
+          - name: health-checker.exe
+            src: bin/{{.FileName}}
+  - version_constraint: semver("<= 0.8.7")
+  - version_constraint: "true"
+    overrides:
+      - goos: windows
+        files:
+          - name: node-problem-detector.exe
+            src: bin/{{.FileName}}
+          - name: health-checker.exe
+            src: bin/{{.FileName}}

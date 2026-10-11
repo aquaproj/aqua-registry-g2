@@ -1,0 +1,81 @@
+{
+  "published_at": "2026-07-11T17:10:35Z",
+  "assets": [
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "kubernetes",
+      "repo_name": "node-problem-detector",
+      "repo_id": 59044721,
+      "asset": "node-problem-detector-v1.36.0-linux_amd64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "a8cb1b9f64ebc1865e5e9e099f61ef5f0f39f7aa4fdc4b298861d31a27603cbd",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "node-problem-detector",
+          "src": "bin/node-problem-detector"
+        },
+        {
+          "name": "health-checker",
+          "src": "bin/health-checker"
+        },
+        {
+          "name": "log-counter",
+          "src": "bin/log-counter"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "kubernetes",
+      "repo_name": "node-problem-detector",
+      "repo_id": 59044721,
+      "asset": "node-problem-detector-v1.36.0-linux_arm64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "5ecb98f34a5fbe2154869b8f6629498f019a87720da11ca46634b6b9c08dbae9",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "node-problem-detector",
+          "src": "bin/node-problem-detector"
+        },
+        {
+          "name": "health-checker",
+          "src": "bin/health-checker"
+        },
+        {
+          "name": "log-counter",
+          "src": "bin/log-counter"
+        }
+      ]
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "kubernetes",
+      "repo_name": "node-problem-detector",
+      "repo_id": 59044721,
+      "asset": "node-problem-detector-v1.36.0-windows_amd64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "2ead26f35091b265c414bc36d6cc04264644e5f6f0cde0f66179075846ae3ef2",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "node-problem-detector.exe",
+          "src": "bin/node-problem-detector.exe"
+        },
+        {
+          "name": "health-checker.exe",
+          "src": "bin/health-checker.exe"
+        }
+      ]
+    }
+  ]
+}
