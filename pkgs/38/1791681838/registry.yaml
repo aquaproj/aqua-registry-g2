@@ -1,0 +1,59 @@
+name: str4d/rage
+type: github_release
+repo_owner: str4d
+repo_name: rage
+repo_id: 213749542
+description: A simple, secure and modern file encryption tool (and Rust library) with small explicit keys, no config options, and UNIX-style composability
+files:
+  - name: rage
+    src: rage/{{.FileName}}
+  - name: rage-keygen
+    src: rage/{{.FileName}}
+version_overrides:
+  - version_constraint: Version == "v0.1.0"
+    no_asset: true
+  - version_constraint: Version == "v0.1.1"
+    overrides:
+      - goos: linux
+        goarch: amd64
+        files:
+          - name: rage
+            src: rage/{{.FileName}}
+          - name: rage-keygen
+            src: rage/{{.FileName}}
+          - name: rage-mount
+            src: rage/{{.FileName}}
+  - version_constraint: semver("> 0.10.1")
+    overrides:
+      - goos: linux
+        goarch: amd64
+        files:
+          - name: rage
+            src: rage/{{.FileName}}
+          - name: rage-keygen
+            src: rage/{{.FileName}}
+          - name: rage-mount
+            src: rage/{{.FileName}}
+  - version_constraint: semver("<= 0.10.1")
+    overrides:
+      - goos: linux
+        goarch: amd64
+        files:
+          - name: rage
+            src: rage/{{.FileName}}
+          - name: rage-keygen
+            src: rage/{{.FileName}}
+          - name: rage-mount
+            src: rage/{{.FileName}}
+  - version_constraint: "true"
+    overrides:
+      - goos: linux
+        goarch: amd64
+        files:
+          - name: rage
+            src: rage/{{.FileName}}
+          - name: rage-keygen
+            src: rage/{{.FileName}}
+          - name: rage-mount
+            src: rage/{{.FileName}}
+all_assets_filter: not (Asset matches ".deb$")
