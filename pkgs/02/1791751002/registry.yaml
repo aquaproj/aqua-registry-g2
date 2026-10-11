@@ -1,0 +1,55 @@
+name: moonrepo/proto
+type: github_release
+repo_owner: moonrepo
+repo_name: proto
+repo_id: 602787735
+description: A pluggable multi-language version manager
+version_overrides:
+  - version_constraint: semver("> 0.24.2")
+    files:
+      - name: proto
+        src: '{{.AssetWithoutExt}}/proto'
+    overrides:
+      - goos: windows
+        files:
+          - name: proto
+  - version_constraint: semver("> 0.20.4")
+    files:
+      - name: proto
+        src: '{{.AssetWithoutExt}}/proto'
+    overrides:
+      - goos: windows
+        files:
+          - name: proto
+  - version_constraint: semver("> 0.14.1")
+    files:
+      - name: proto
+        src: '{{.AssetWithoutExt}}/proto'
+    overrides:
+      - goos: windows
+        files:
+          - name: proto
+  - version_constraint: semver("> 0.8.2")
+    files:
+      - name: proto
+        src: '{{.AssetWithoutExt}}/proto'
+    overrides:
+      - goos: windows
+        files:
+          - name: proto
+  - version_constraint: semver("<= 0.8.2")
+    files:
+      - name: proto
+        src: '{{.AssetWithoutExt}}/proto'
+    overrides:
+      - goos: windows
+        files:
+          - name: proto
+  - version_constraint: "true"
+    files:
+      - name: proto
+        src: '{{.AssetWithoutExt}}/proto'
+    overrides:
+      - goos: windows
+        files:
+          - name: proto
