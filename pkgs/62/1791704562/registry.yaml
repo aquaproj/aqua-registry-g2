@@ -1,0 +1,11 @@
+name: openclaw/wacli
+type: github_release
+repo_owner: openclaw
+repo_name: wacli
+repo_id: 1115165326
+description: WhatsApp in your terminal
+version_overrides:
+  - version_constraint: semver(">= 0.10.0")
+  - version_constraint: semver("< 0.10.0")
+    error_message: Please upgrade to version 0.10.0 or higher
+  - version_constraint: "true"
