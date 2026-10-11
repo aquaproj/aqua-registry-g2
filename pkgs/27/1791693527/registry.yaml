@@ -4,3 +4,8 @@ repo_owner: hairyhenderson
 repo_name: gomplate
 repo_id: 50242144
 description: A flexible commandline tool for template rendering. Supports lots of local and remote datasources
+overrides:
+  - goos: windows
+    files:
+      - name: gomplate
+        src: gomplate_windows-amd64
