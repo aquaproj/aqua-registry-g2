@@ -1,0 +1,21 @@
+name: amir20/dtop
+type: github_release
+repo_owner: amir20
+repo_name: dtop
+repo_id: 1005815924
+description: Terminal dashboard for Docker monitoring across multiple hosts with Dozzle integration
+version_overrides:
+  - version_constraint: semver("> 0.3.8")
+    files:
+      - name: dtop
+        src: '{{.AssetWithoutExt}}/dtop'
+  - version_constraint: semver("> 0.2.0")
+    files:
+      - name: dtop
+        src: '{{.AssetWithoutExt}}/dtop'
+  - version_constraint: semver("> 0.0.4")
+  - version_constraint: semver("<= 0.0.4")
+  - version_constraint: "true"
+    files:
+      - name: dtop
+        src: '{{.AssetWithoutExt}}/dtop'
