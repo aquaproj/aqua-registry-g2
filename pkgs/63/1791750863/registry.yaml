@@ -1,0 +1,11 @@
+name: getporter/porter/porter
+type: github_release
+repo_owner: getporter
+repo_name: porter
+repo_id: 155893691
+description: Porter enables you to package your application artifact, client tools, configuration and deployment logic together as an installer that you can distribute, and install with a single command
+version_overrides:
+  - version_constraint: semver("> 1.0.0")
+  - version_constraint: semver("<= 1.0.0")
+    no_asset: true
+  - version_constraint: "true"
