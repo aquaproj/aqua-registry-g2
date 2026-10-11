@@ -1,0 +1,14 @@
+name: theryangeary/choose
+type: github_release
+repo_owner: theryangeary
+repo_name: choose
+repo_id: 207951619
+description: A human-friendly and fast alternative to cut (and sometimes awk)
+version_overrides:
+  - version_constraint: Version == "v1.3.0"
+    no_asset: true
+  - version_constraint: Version == "v1.3.6"
+  - version_constraint: Version == "v1.3.5"
+    replacements:
+      windows: pc-window-gnu
+  - version_constraint: "true"
