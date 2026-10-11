@@ -1,0 +1,13 @@
+name: rancher-archives/rke
+aliases:
+  - name: rancher/rke
+type: github_release
+repo_owner: rancher-archives
+repo_name: rke
+repo_id: 108337180
+description: Rancher Kubernetes Engine (RKE), an extremely simple, lightning fast Kubernetes distribution that runs entirely within containers
+version_overrides:
+  - version_constraint: Version == "v0.0.10-dev"
+  - version_constraint: Version in ["v0.2.1-rc2", "v1.3.5-alpha1",  "v1.3.8-rc1",  "v1.5.6-rc2",  "v1.4.16-rc2", "v1.5.0-rc1"]
+    no_asset: true
+  - version_constraint: "true"
