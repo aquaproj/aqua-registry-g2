@@ -1,0 +1,19 @@
+name: srl-labs/containerlab
+type: github_release
+repo_owner: srl-labs
+repo_name: containerlab
+repo_id: 290960521
+description: container-based networking labs
+version_filter: semver(">= 0.1.0")
+version_overrides:
+  - version_constraint: Version == "v0.6.1"
+  - version_constraint: semver("> 0.53.0")
+  - version_constraint: semver("> 0.20.1")
+  - version_constraint: semver("> 0.10.4")
+  - version_constraint: semver("> 0.9.1")
+  - version_constraint: semver("> 0.6.0")
+  - version_constraint: semver("<= 0.6.0")
+    files:
+      - name: container-lab
+  - version_constraint: "true"
+all_assets_filter: not (Asset matches "pkg")
