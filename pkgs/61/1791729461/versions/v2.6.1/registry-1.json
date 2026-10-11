@@ -1,0 +1,151 @@
+{
+  "published_at": "2026-09-29T22:25:06Z",
+  "assets": [
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "aubepkg",
+      "repo_name": "aube",
+      "repo_id": 1214542327,
+      "asset": "aube-v2.6.1-x86_64-unknown-linux-musl.tar.gz",
+      "format": "tar.gz",
+      "checksum": "d69ab74a5e21f4dcaf5a41899a623114d6df77c11a170089ade86348bbc2b234",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "aube",
+          "src": "aube"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "aubepkg/aube/.github/workflows/release.yml",
+        "source_ref": "refs/heads/main",
+        "source_digest": "bd94e42f54d3b5e3dd102716b7197f316cb5f4ed",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com"
+      },
+      "packslip": {
+        "identity": "https://github.com/aubepkg/aube/.github/workflows/release.yml@refs/heads/main",
+        "issuer": "https://token.actions.githubusercontent.com"
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "aubepkg",
+      "repo_name": "aube",
+      "repo_id": 1214542327,
+      "asset": "aube-v2.6.1-aarch64-unknown-linux-musl.tar.gz",
+      "format": "tar.gz",
+      "checksum": "521b5cb38cf6c07c1a43a6bce2d3c34c603a26b47a05ff8b5f6112cdadf18996",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "aube",
+          "src": "aube"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "aubepkg/aube/.github/workflows/release.yml",
+        "source_ref": "refs/heads/main",
+        "source_digest": "bd94e42f54d3b5e3dd102716b7197f316cb5f4ed",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      },
+      "packslip": {
+        "identity": "https://github.com/aubepkg/aube/.github/workflows/release.yml@refs/heads/main",
+        "issuer": "https://token.actions.githubusercontent.com"
+      }
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "aubepkg",
+      "repo_name": "aube",
+      "repo_id": 1214542327,
+      "asset": "aube-v2.6.1-aarch64-apple-darwin.tar.gz",
+      "format": "tar.gz",
+      "checksum": "a36856db187dd8f2c3cbf651de1384a2d0748d7cc5507671e6ec02751f00c032",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "aube",
+          "src": "aube"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "aubepkg/aube/.github/workflows/release.yml",
+        "source_ref": "refs/heads/main",
+        "source_digest": "bd94e42f54d3b5e3dd102716b7197f316cb5f4ed",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      },
+      "packslip": {
+        "identity": "https://github.com/aubepkg/aube/.github/workflows/release.yml@refs/heads/main",
+        "issuer": "https://token.actions.githubusercontent.com"
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "aubepkg",
+      "repo_name": "aube",
+      "repo_id": 1214542327,
+      "asset": "aube-v2.6.1-x86_64-pc-windows-msvc.zip",
+      "format": "zip",
+      "checksum": "f6399466cc0e0c2f52248b56477182d4857a8a02d518936b055a3a67f0f25f87",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "aube",
+          "src": "aube.exe"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "aubepkg/aube/.github/workflows/release.yml",
+        "source_ref": "refs/heads/main",
+        "source_digest": "bd94e42f54d3b5e3dd102716b7197f316cb5f4ed",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      },
+      "packslip": {
+        "identity": "https://github.com/aubepkg/aube/.github/workflows/release.yml@refs/heads/main",
+        "issuer": "https://token.actions.githubusercontent.com"
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "aubepkg",
+      "repo_name": "aube",
+      "repo_id": 1214542327,
+      "asset": "aube-v2.6.1-aarch64-pc-windows-msvc.zip",
+      "format": "zip",
+      "checksum": "29b1fbbe535f8460ccccf6f69574e9bca8b3e1536d0f5fe06b6d9c5eaa1b7aaf",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "aube",
+          "src": "aube.exe"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "aubepkg/aube/.github/workflows/release.yml",
+        "source_ref": "refs/heads/main",
+        "source_digest": "bd94e42f54d3b5e3dd102716b7197f316cb5f4ed",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      },
+      "packslip": {
+        "identity": "https://github.com/aubepkg/aube/.github/workflows/release.yml@refs/heads/main",
+        "issuer": "https://token.actions.githubusercontent.com"
+      }
+    }
+  ]
+}
