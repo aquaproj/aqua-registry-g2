@@ -1,0 +1,21 @@
+name: xo/dbtpl
+aliases:
+  - name: xo/xo
+type: github_release
+repo_owner: xo
+repo_name: dbtpl
+repo_id: 51139948
+description: Command line tool to generate idiomatic Go code for SQL databases supporting PostgreSQL, MySQL, SQLite, Oracle, and Microsoft SQL Server
+files:
+  - name: xo
+  - name: dbtpl
+version_overrides:
+  - version_constraint: semver("> 1.0.2")
+    files:
+      - name: dbtpl
+  - version_constraint: semver("<= 1.0.2")
+    files:
+      - name: xo
+  - version_constraint: "true"
+    files:
+      - name: dbtpl
