@@ -1,0 +1,29 @@
+name: altsem/gitu
+type: github_release
+repo_owner: altsem
+repo_name: gitu
+repo_id: 735138868
+description: A TUI Git client inspired by Magit
+version_overrides:
+  - version_constraint: semver("> 0.29.0")
+    files:
+      - name: gitu
+        src: '{{.AssetWithoutExt}}/gitu'
+  - version_constraint: semver("> 0.19.1")
+    files:
+      - name: gitu
+        src: '{{.AssetWithoutExt}}/gitu'
+  - version_constraint: semver("> 0.18.3")
+    files:
+      - name: gitu
+        src: '{{.AssetWithoutExt}}/gitu'
+  - version_constraint: semver("> 0.17.1")
+    no_asset: true
+  - version_constraint: semver("<= 0.17.1")
+    files:
+      - name: gitu
+        src: '{{.AssetWithoutExt}}/gitu'
+  - version_constraint: "true"
+    files:
+      - name: gitu
+        src: '{{.AssetWithoutExt}}/gitu'
