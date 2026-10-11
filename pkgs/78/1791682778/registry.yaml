@@ -1,0 +1,11 @@
+name: kiali/kiali
+type: github_release
+repo_owner: kiali
+repo_name: kiali
+repo_id: 120181748
+description: Kiali project, observability for the Istio service mesh
+version_overrides:
+  - version_constraint: semver("> 2.14.0")
+  - version_constraint: semver("<= 2.14.0")
+    no_asset: true
+  - version_constraint: "true"
