@@ -1,0 +1,26 @@
+name: git-town/git-town
+type: github_release
+repo_owner: git-town
+repo_name: git-town
+repo_id: 19825320
+description: Git workflow automation to keep branches in sync and reduce merge conflicts
+version_overrides:
+  - version_constraint: semver("> 10.0.2")
+    replacements:
+      amd64: intel_64
+      arm64: arm_64
+  - version_constraint: semver("> 7.6.0")
+    replacements:
+      amd64: intel_64
+      arm64: arm_64
+  - version_constraint: semver("> 7.3.0")
+    replacements:
+      amd64: intel_64
+      arm64: arm_64
+  - version_constraint: semver("> 3.1.0")
+  - version_constraint: semver("<= 3.1.0")
+    no_asset: true
+  - version_constraint: "true"
+    replacements:
+      amd64: intel_64
+      arm64: arm_64
