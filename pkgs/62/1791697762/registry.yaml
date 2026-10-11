@@ -1,0 +1,26 @@
+name: bvaisvil/zenith
+type: github_release
+repo_owner: bvaisvil
+repo_name: zenith
+repo_id: 208680637
+description: Zenith - sort of like top or htop but with zoom-able charts, CPU, GPU, network, and disk usage
+version_overrides:
+  - version_constraint: Version == "v0.5.6"
+    files:
+      - name: zenith
+        src: '{{.AssetWithoutExt}}/zenith'
+    overrides:
+      - goos: darwin
+        files:
+          - name: zenith
+            src: macos/zenith
+  - version_constraint: Version == "0.13.1"
+  - version_constraint: Version == "0.14.0"
+  - version_constraint: Version == "0.14.1"
+    overrides:
+      - goos: linux
+        goarch: arm64
+        files:
+          - name: zenith
+            src: '{{.AssetWithoutExt}}'
+  - version_constraint: "true"
