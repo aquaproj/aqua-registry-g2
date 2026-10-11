@@ -1,0 +1,13 @@
+name: robscott/kube-capacity
+type: github_release
+repo_owner: robscott
+repo_name: kube-capacity
+repo_id: 168855888
+description: A simple CLI that provides an overview of the resource requests, limits, and utilization in a Kubernetes cluster
+files:
+  - name: kube-capacity
+    src: kube-capacity
+  - name: kubectl-resource_capacity
+    src: kube-capacity
+version_overrides:
+  - version_constraint: "true"
