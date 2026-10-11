@@ -1,0 +1,9 @@
+name: minishift/minishift
+type: github_release
+repo_owner: minishift
+repo_name: minishift
+repo_id: 62728051
+description: Run OpenShift 3.x locally
+files:
+  - name: minishift
+    src: minishift-{{trimV .Version}}-{{.OS}}-{{.Arch}}/minishift
