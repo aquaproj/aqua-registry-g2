@@ -1,0 +1,12 @@
+name: grafana/tanka
+type: github_release
+repo_owner: grafana
+repo_name: tanka
+repo_id: 197374067
+description: Flexible, reusable and concise configuration for Kubernetes
+files:
+  - name: tk
+version_overrides:
+  - version_constraint: Version == "v0.27.0"
+    no_asset: true
+  - version_constraint: "true"
