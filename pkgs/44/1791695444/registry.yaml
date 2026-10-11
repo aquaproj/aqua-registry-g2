@@ -1,0 +1,20 @@
+name: GitTools/GitVersion
+aliases:
+  - name: gittools/gitversion
+type: github_release
+repo_owner: GitTools
+repo_name: GitVersion
+repo_id: 12399790
+description: From git log to SemVer in no time
+files:
+  - name: gitversion
+github_artifact_attestations:
+  signer_workflow: GitTools/GitVersion/.github/workflows/ci.yml
+version_overrides:
+  - version_constraint: semver("> 6.0.3")
+    github_artifact_attestations:
+      signer_workflow: GitTools/GitVersion/.github/workflows/ci.yml
+  - version_constraint: semver("<= 6.0.3")
+  - version_constraint: "true"
+    github_artifact_attestations:
+      signer_workflow: GitTools/GitVersion/.github/workflows/ci.yml
