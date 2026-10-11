@@ -1,0 +1,78 @@
+name: GitGuardian/ggshield
+type: github_release
+repo_owner: GitGuardian
+repo_name: ggshield
+repo_id: 257326204
+description: Detect and validate 500+ types of hardcoded secrets with advanced checks. Use it as a pre-commit hook, GitHub Action, or CLI for proactive secret detection and security
+github_artifact_attestations:
+  signer_workflow: GitGuardian/ggshield/.github/workflows/tag.yml
+version_overrides:
+  - version_constraint: semver("> 1.50.4")
+    files:
+      - name: ggshield
+        src: ggshield-{{trimV .Version}}-{{.Arch}}-{{.OS}}/ggshield
+    github_artifact_attestations:
+      signer_workflow: GitGuardian/ggshield/.github/workflows/tag.yml
+    overrides:
+      - goos: windows
+        files:
+          - name: ggshield
+            src: ggshield-{{trimV .Version}}-{{.Arch}}-{{.OS}}/ggshield
+      - goos: linux
+        files:
+          - name: ggshield
+            src: ggshield-{{trimV .Version}}-{{.Arch}}-{{.OS}}/ggshield
+  - version_constraint: semver("> 1.30.2")
+    files:
+      - name: ggshield
+        src: ggshield-{{trimV .Version}}-{{.Arch}}-{{.OS}}/ggshield
+    overrides:
+      - goos: windows
+        files:
+          - name: ggshield
+            src: ggshield-{{trimV .Version}}-{{.Arch}}-{{.OS}}/ggshield
+      - goos: linux
+        files:
+          - name: ggshield
+            src: ggshield-{{trimV .Version}}-{{.Arch}}-{{.OS}}/ggshield
+  - version_constraint: semver("> 1.28.0")
+    overrides:
+      - goos: linux
+        files:
+          - name: ggshield
+            src: ggshield-{{trimV .Version}}-{{.Arch}}-{{.OS}}/ggshield
+      - goos: darwin
+        files:
+          - name: ggshield
+            src: Payload/opt/gitguardian/ggshield-{{trimV .Version}}/ggshield
+      - goos: windows
+        files:
+          - name: ggshield
+            src: ggshield-{{trimV .Version}}-{{.Arch}}-{{.OS}}/ggshield
+  - version_constraint: semver("> 1.26.0")
+    overrides:
+      - goos: linux
+        files:
+          - name: ggshield
+            src: ggshield-{{trimV .Version}}-{{.Arch}}-{{.OS}}/ggshield
+      - goos: darwin
+        files:
+          - name: ggshield
+            src: Payload/opt/gitguardian/ggshield-{{trimV .Version}}/ggshield
+  - version_constraint: semver("<= 1.26.0")
+    no_asset: true
+  - version_constraint: "true"
+    files:
+      - name: ggshield
+        src: ggshield-{{trimV .Version}}-{{.Arch}}-{{.OS}}/ggshield
+    github_artifact_attestations:
+      signer_workflow: GitGuardian/ggshield/.github/workflows/tag.yml
+    overrides:
+      - goos: windows
+        files:
+          - name: ggshield
+            src: ggshield-{{trimV .Version}}-{{.Arch}}-{{.OS}}/ggshield
+      - goos: linux
+        files:
+          - name: ggshield
+            src: ggshield-{{trimV .Version}}-{{.Arch}}-{{.OS}}/ggshield
