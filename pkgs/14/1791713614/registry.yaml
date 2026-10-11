@@ -1,0 +1,31 @@
+name: EmbarkStudios/cargo-deny
+type: github_release
+repo_owner: EmbarkStudios
+repo_name: cargo-deny
+repo_id: 186371129
+description: Cargo plugin for linting your dependencies
+version_overrides:
+  - version_constraint: Version == "0.6.5"
+    files:
+      - name: cargo-deny
+        src: '{{.AssetWithoutExt}}/cargo-deny'
+  - version_constraint: semver("> 0.14.22")
+    files:
+      - name: cargo-deny
+        src: '{{.AssetWithoutExt}}/cargo-deny'
+  - version_constraint: semver("> 0.9.0")
+    files:
+      - name: cargo-deny
+        src: '{{.AssetWithoutExt}}/cargo-deny'
+  - version_constraint: semver("> 0.6.4")
+    files:
+      - name: cargo-deny
+        src: '{{.AssetWithoutExt}}/cargo-deny'
+  - version_constraint: semver("<= 0.6.4")
+    files:
+      - name: cargo-deny
+        src: '{{.AssetWithoutExt}}/cargo-deny'
+  - version_constraint: "true"
+    files:
+      - name: cargo-deny
+        src: '{{.AssetWithoutExt}}/cargo-deny'
