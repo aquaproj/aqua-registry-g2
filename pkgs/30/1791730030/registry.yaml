@@ -1,0 +1,10 @@
+name: Macchina-CLI/macchina
+type: github_release
+repo_owner: Macchina-CLI
+repo_name: macchina
+repo_id: 328027219
+description: A system information frontend with an emphasis on performance
+version_overrides:
+  - version_constraint: semver("<= 0.5.9") or Version == "0.6.5"
+    no_asset: true
+  - version_constraint: "true"
