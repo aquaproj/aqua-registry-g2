@@ -1,0 +1,13 @@
+name: vmware/govmomi/vcsim
+type: github_release
+repo_owner: vmware
+repo_name: govmomi
+repo_id: 22883982
+description: A vCenter and ESXi API based simulator
+version_overrides:
+  - version_constraint: Version == "v0.25.0"
+  - version_constraint: semver("> 0.27.4")
+  - version_constraint: semver("> 0.24.0")
+  - version_constraint: semver("<= 0.24.0")
+    no_asset: true
+  - version_constraint: "true"
