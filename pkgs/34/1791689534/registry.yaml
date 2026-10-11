@@ -1,0 +1,9 @@
+name: TaKO8Ki/gobang
+type: github_release
+repo_owner: TaKO8Ki
+repo_name: gobang
+repo_id: 376203069
+description: A cross-platform TUI database management tool written in Rust
+files:
+  - name: gobang
+    src: gobang-{{trimV .Version}}-{{.Arch}}-{{.OS}}/gobang
