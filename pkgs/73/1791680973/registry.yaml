@@ -1,0 +1,11 @@
+name: kevwan/tproxy
+type: github_release
+repo_owner: kevwan
+repo_name: tproxy
+repo_id: 503167251
+description: A cli tool to proxy and analyze TCP connections
+version_overrides:
+  - version_constraint: semver("> 0.2.1")
+  - version_constraint: semver("<= 0.2.1")
+    no_asset: true
+  - version_constraint: "true"
