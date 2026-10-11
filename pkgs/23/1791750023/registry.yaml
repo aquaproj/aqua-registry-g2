@@ -1,0 +1,14 @@
+name: hidetatz/kubecolor
+type: github_release
+repo_owner: hidetatz
+repo_name: kubecolor
+repo_id: 302255735
+description: colorizes kubectl output
+version_overrides:
+  - version_constraint: Version == "v0.0.17"
+  - version_constraint: semver("> 0.0.20")
+  - version_constraint: semver("> 0.0.16")
+  - version_constraint: semver("> 0.0.6")
+  - version_constraint: semver("<= 0.0.6")
+    no_asset: true
+  - version_constraint: "true"
