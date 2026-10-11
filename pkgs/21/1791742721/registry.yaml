@@ -1,0 +1,26 @@
+name: containerd/stargz-snapshotter
+type: github_release
+repo_owner: containerd
+repo_name: stargz-snapshotter
+repo_id: 213618352
+description: |-
+  Fast container image distribution plugin with lazy pulling
+
+  ## How to set up
+
+  Please see:
+
+  https://github.com/containerd/stargz-snapshotter/blob/main/docs/INSTALL.md
+  https://github.com/containerd/stargz-snapshotter/blob/main/docs/rootless.md
+files:
+  - name: containerd-stargz-grpc
+  - name: ctr-remote
+  - name: stargz-store
+  - name: stargz-store-helper
+version_overrides:
+  - version_constraint: semver("> 0.3.0")
+  - version_constraint: semver("<= 0.3.0")
+    files:
+      - name: containerd-stargz-grpc
+      - name: ctr-remote
+  - version_constraint: "true"
