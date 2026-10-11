@@ -1,0 +1,10 @@
+name: rgwood/systemctl-tui
+type: github_release
+repo_owner: rgwood
+repo_name: systemctl-tui
+repo_id: 679066208
+description: A fast, simple TUI for interacting with systemd services and their logs
+version_overrides:
+  - version_constraint: Version == "v0.3.0"
+    no_asset: true
+  - version_constraint: "true"
