@@ -1,0 +1,21 @@
+name: zquestz/s
+type: github_release
+repo_owner: zquestz
+repo_name: s
+repo_id: 50270924
+description: Open a web search in your terminal
+version_overrides:
+  - version_constraint: semver("> 0.5.14")
+    files:
+      - name: s
+        src: '{{.AssetWithoutExt}}/s'
+  - version_constraint: semver("> 0.2.1")
+    files:
+      - name: s
+        src: '{{.AssetWithoutExt}}/s'
+  - version_constraint: semver("<= 0.2.1")
+    no_asset: true
+  - version_constraint: "true"
+    files:
+      - name: s
+        src: '{{.AssetWithoutExt}}/s'
