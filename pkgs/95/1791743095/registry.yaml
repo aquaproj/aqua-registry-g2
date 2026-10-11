@@ -1,0 +1,14 @@
+name: AlexanderGrooff/mermaid-ascii
+type: github_release
+repo_owner: AlexanderGrooff
+repo_name: mermaid-ascii
+repo_id: 605908758
+description: Render Mermaid graphs inside your terminal
+version_overrides:
+  - version_constraint: Version == "0.3.0"
+    no_asset: true
+  - version_constraint: semver("> 0.1.0")
+  - version_constraint: semver("> 0.0.2")
+  - version_constraint: semver("<= 0.0.2")
+    no_asset: true
+  - version_constraint: "true"
