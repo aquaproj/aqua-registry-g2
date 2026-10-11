@@ -1,0 +1,16 @@
+name: aduros/wasm4
+type: github_release
+repo_owner: aduros
+repo_name: wasm4
+repo_id: 393196822
+description: Build retro games using WebAssembly for a fantasy console
+files:
+  - name: w4
+version_overrides:
+  - version_constraint: Version == "v1.0.9"
+    files:
+      - name: w4
+        src: wasm4-{{.OS}}/w4
+  - version_constraint: "true"
+    files:
+      - name: w4
