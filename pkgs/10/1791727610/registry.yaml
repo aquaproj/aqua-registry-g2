@@ -1,0 +1,9 @@
+name: cycloidio/inframap
+type: github_release
+repo_owner: cycloidio
+repo_name: inframap
+repo_id: 277649384
+description: Read your tfstate or HCL to generate a graph specific for each provider, showing only the resources that are most important/relevant
+files:
+  - name: inframap
+    src: inframap-{{.OS}}-{{.Arch}}
