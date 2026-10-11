@@ -23,6 +23,11 @@ version_overrides:
         src: fvm/fvm
     overrides:
       - goos: windows
+        goarch: arm64
+        files:
+          - name: fvm
+            src: fvm/fvm.bat
+      - goos: windows
         files:
           - name: fvm
             src: fvm/fvm
