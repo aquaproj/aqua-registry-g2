@@ -1,0 +1,33 @@
+name: mitsuhiko/minijinja
+type: github_release
+repo_owner: mitsuhiko
+repo_name: minijinja
+repo_id: 406663386
+description: MiniJinja is a powerful but minimal dependency template engine for Rust compatible with Jinja/Jinja2
+files:
+  - name: minijinja-cli
+version_overrides:
+  - version_constraint: semver("> 2.3.1")
+    files:
+      - name: minijinja-cli
+        src: '{{.AssetWithoutExt}}/minijinja-cli'
+    overrides:
+      - goos: windows
+        files:
+          - name: minijinja-cli
+  - version_constraint: semver("<= 2.3.1")
+    files:
+      - name: minijinja-cli
+        src: '{{.AssetWithoutExt}}/minijinja-cli'
+    overrides:
+      - goos: windows
+        files:
+          - name: minijinja-cli
+  - version_constraint: "true"
+    files:
+      - name: minijinja-cli
+        src: '{{.AssetWithoutExt}}/minijinja-cli'
+    overrides:
+      - goos: windows
+        files:
+          - name: minijinja-cli
