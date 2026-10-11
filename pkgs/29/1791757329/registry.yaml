@@ -1,0 +1,31 @@
+name: stackrox/stackrox/roxctl
+type: http
+repo_owner: stackrox
+repo_name: stackrox
+repo_id: 434017296
+description: CLI for StackRox Kubernetes Security Platform
+link: https://www.stackrox.io/
+version_overrides:
+  - version_constraint: semver("> 4.4.8")
+    url: https://mirror.openshift.com/pub/rhacs/assets/{{.Version}}/bin/{{.OS}}/roxctl
+    format: raw
+    overrides:
+      - goos: windows
+        url: https://mirror.openshift.com/pub/rhacs/assets/{{.Version}}/bin/windows/roxctl.exe
+      - goarch: arm64
+        url: https://mirror.openshift.com/pub/rhacs/assets/{{.Version}}/bin/{{.OS}}/roxctl-arm64
+  - version_constraint: semver("<= 4.4.8")
+    url: https://mirror.openshift.com/pub/rhacs/assets/{{.Version}}/bin/{{.OS}}/roxctl
+    format: raw
+    supported_envs:
+      - linux/amd64
+      - darwin
+      - windows
+  - version_constraint: "true"
+    url: https://mirror.openshift.com/pub/rhacs/assets/{{.Version}}/bin/{{.OS}}/roxctl
+    format: raw
+    overrides:
+      - goos: windows
+        url: https://mirror.openshift.com/pub/rhacs/assets/{{.Version}}/bin/windows/roxctl.exe
+      - goarch: arm64
+        url: https://mirror.openshift.com/pub/rhacs/assets/{{.Version}}/bin/{{.OS}}/roxctl-arm64
