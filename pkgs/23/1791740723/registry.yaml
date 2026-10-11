@@ -1,0 +1,12 @@
+name: containrrr/shoutrrr
+type: github_release
+repo_owner: containrrr
+repo_name: shoutrrr
+repo_id: 180732115
+description: Notification library for gophers and their furry friends
+version_overrides:
+  - version_constraint: semver("> 0.7.1")
+  - version_constraint: semver("> 0.6.1")
+    replacements:
+      arm64: arm64v8
+  - version_constraint: "true"
