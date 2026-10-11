@@ -1,0 +1,19 @@
+name: taiki-e/cargo-llvm-cov
+type: github_release
+repo_owner: taiki-e
+repo_name: cargo-llvm-cov
+repo_id: 330211847
+description: Cargo subcommand to easily use LLVM source-based code coverage (-C instrument-coverage)
+github_artifact_attestations:
+  signer_workflow: taiki-e/github-actions/.github/workflows/rust-release.yml
+version_overrides:
+  - version_constraint: semver("> 0.8.4")
+    github_artifact_attestations:
+      signer_workflow: taiki-e/github-actions/.github/workflows/rust-release.yml
+  - version_constraint: semver("> 0.4.4")
+  - version_constraint: semver("> 0.1.15")
+  - version_constraint: semver("> 0.1.0-alpha.4")
+  - version_constraint: semver("<= 0.1.0-alpha.4")
+  - version_constraint: "true"
+    github_artifact_attestations:
+      signer_workflow: taiki-e/github-actions/.github/workflows/rust-release.yml
