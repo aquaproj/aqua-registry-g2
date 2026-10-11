@@ -1,0 +1,32 @@
+name: blst-security/cherrybomb
+type: github_release
+repo_owner: blst-security
+repo_name: cherrybomb
+repo_id: 428941557
+description: Stop half-done APIs! Cherrybomb is a CLI tool that helps you avoid undefined user behaviour by auditing your API specifications, validating them and running API security tests
+version_overrides:
+  - version_constraint: Version == "v1.0.1"
+    supported_envs:
+      - darwin
+  - version_constraint: semver("> 1.0.0")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: semver("> 0.7.0")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: semver("> 0.6.0")
+    no_asset: true
+  - version_constraint: semver("> 0.4.2")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: semver("<= 0.4.2")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: "true"
+    supported_envs:
+      - linux/amd64
+      - darwin
