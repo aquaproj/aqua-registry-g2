@@ -1,0 +1,12 @@
+name: utkuozdemir/pv-migrate
+type: github_release
+repo_owner: utkuozdemir
+repo_name: pv-migrate
+repo_id: 170209617
+description: CLI tool to easily migrate Kubernetes persistent volumes
+version_overrides:
+  - version_constraint: Version == "v0.1.0"
+    files:
+      - name: pv-migrate
+        src: bin/{{.OS}}/pv-migrate
+  - version_constraint: "true"
