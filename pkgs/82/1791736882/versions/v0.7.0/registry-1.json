@@ -1,0 +1,157 @@
+{
+  "published_at": "2026-09-04T07:32:12Z",
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "spinel-coop",
+      "repo_name": "rv",
+      "repo_id": 1018217161,
+      "asset": "rv-x86_64-apple-darwin.tar.xz",
+      "format": "tar.xz",
+      "checksum": "3c2c3e62635162d7dee2b62e22925b5dc4448a187f4708d1a29dc8ec08f02a3c",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "rv",
+          "src": "rv-x86_64-apple-darwin/rv"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "spinel-coop/rv/.github/workflows/release.yml",
+        "source_ref": "refs/tags/v0.7.0",
+        "source_digest": "f4a7575f77bd900cce783fb992b0b95bc008dcf5",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "spinel-coop",
+      "repo_name": "rv",
+      "repo_id": 1018217161,
+      "asset": "rv-aarch64-apple-darwin.tar.xz",
+      "format": "tar.xz",
+      "checksum": "817f52155f786a4297210d928e8c84e43e3abdc4d7c56c0e11942fc5973caad8",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "rv",
+          "src": "rv-aarch64-apple-darwin/rv"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "spinel-coop/rv/.github/workflows/release.yml",
+        "source_ref": "refs/tags/v0.7.0",
+        "source_digest": "f4a7575f77bd900cce783fb992b0b95bc008dcf5",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "spinel-coop",
+      "repo_name": "rv",
+      "repo_id": 1018217161,
+      "asset": "rv-x86_64-unknown-linux-musl.tar.xz",
+      "format": "tar.xz",
+      "checksum": "fce9eecd18f61b0b6986d9e76efd7f45a44cc7a953b06431dffc4d5e9c409c79",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "rv",
+          "src": "rv-x86_64-unknown-linux-musl/rv"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "spinel-coop/rv/.github/workflows/release.yml",
+        "source_ref": "refs/tags/v0.7.0",
+        "source_digest": "f4a7575f77bd900cce783fb992b0b95bc008dcf5",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "spinel-coop",
+      "repo_name": "rv",
+      "repo_id": 1018217161,
+      "asset": "rv-aarch64-unknown-linux-musl.tar.xz",
+      "format": "tar.xz",
+      "checksum": "ab457a078f1a871bf00decc884fbb5ae040af874e5e78070c0a77a6f2324eeaa",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "rv",
+          "src": "rv-aarch64-unknown-linux-musl/rv"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "spinel-coop/rv/.github/workflows/release.yml",
+        "source_ref": "refs/tags/v0.7.0",
+        "source_digest": "f4a7575f77bd900cce783fb992b0b95bc008dcf5",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "spinel-coop",
+      "repo_name": "rv",
+      "repo_id": 1018217161,
+      "asset": "rv-x86_64-pc-windows-msvc.zip",
+      "format": "zip",
+      "checksum": "6bf6e23350d78f51f4d3c62cf173b27c15f3ea36051bf8e098e3bfbbe7e3ae2e",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "rv",
+          "src": "rv.exe"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "spinel-coop/rv/.github/workflows/release.yml",
+        "source_ref": "refs/tags/v0.7.0",
+        "source_digest": "f4a7575f77bd900cce783fb992b0b95bc008dcf5",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "spinel-coop",
+      "repo_name": "rv",
+      "repo_id": 1018217161,
+      "asset": "rv-aarch64-pc-windows-msvc.zip",
+      "format": "zip",
+      "checksum": "7a370514da1e3660ac5c41e556fbcdca7395c1692b816a0d00027457c7f5b972",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "rv",
+          "src": "rv.exe"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "spinel-coop/rv/.github/workflows/release.yml",
+        "source_ref": "refs/tags/v0.7.0",
+        "source_digest": "f4a7575f77bd900cce783fb992b0b95bc008dcf5",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    }
+  ]
+}
