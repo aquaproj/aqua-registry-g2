@@ -1,0 +1,17 @@
+name: mitsuhiko/insta
+type: github_release
+repo_owner: mitsuhiko
+repo_name: insta
+repo_id: 165561258
+description: A snapshot testing library for rust
+files:
+  - name: cargo-insta
+version_overrides:
+  - version_constraint: "true"
+    files:
+      - name: cargo-insta
+        src: '{{.AssetWithoutExt}}/cargo-insta'
+    overrides:
+      - goos: windows
+        files:
+          - name: cargo-insta
