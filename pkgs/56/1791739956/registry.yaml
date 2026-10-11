@@ -1,0 +1,14 @@
+name: superfly/flyctl
+type: github_release
+repo_owner: superfly
+repo_name: flyctl
+repo_id: 199060308
+description: Command line tools for fly.io services
+files:
+  - name: flyctl
+  - name: fly
+    src: flyctl
+version_overrides:
+  - version_constraint: Version in ["v0.1.144", "v0.2.73", "v0.3.0", "v0.3.11"]
+    no_asset: true
+  - version_constraint: "true"
