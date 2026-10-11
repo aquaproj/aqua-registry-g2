@@ -1,0 +1,19 @@
+name: AOMediaCodec/libavif
+type: github_release
+repo_owner: AOMediaCodec
+repo_name: libavif
+repo_id: 191218735
+description: Library for encoding and decoding AVIF files
+version_overrides:
+  - version_constraint: semver("> 1.1.1")
+    files:
+      - name: avifenc
+      - name: avifdec
+      - name: avifgainmaputil
+  - version_constraint: semver("<= 1.1.1")
+    no_asset: true
+  - version_constraint: "true"
+    files:
+      - name: avifenc
+      - name: avifdec
+      - name: avifgainmaputil
