@@ -1,0 +1,10 @@
+name: moncho/dry
+type: github_release
+repo_owner: moncho
+repo_name: dry
+repo_id: 45923375
+description: dry - A Docker manager for the terminal @
+version_overrides:
+  - version_constraint: Version in ["v0.3-beta.2", "v0.9-beta.6"] or semver("> 0.3-beta.10, <= 0.4-beta.5")
+    no_asset: true
+  - version_constraint: "true"
