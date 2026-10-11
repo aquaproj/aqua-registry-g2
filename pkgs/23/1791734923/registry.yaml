@@ -1,0 +1,22 @@
+name: kubepug/kubepug
+aliases:
+  - name: rikatz/kubepug
+type: github_release
+repo_owner: kubepug
+repo_name: kubepug
+repo_id: 232220881
+description: Kubernetes PreUpGrade (Checker)
+cosign:
+  opts:
+    - --signature
+    - https://github.com/kubepug/kubepug/releases/download/{{.Version}}/kubepug_darwin_amd64.tar.gz.sig
+    - --certificate
+    - https://github.com/kubepug/kubepug/releases/download/{{.Version}}/kubepug_darwin_amd64.tar.gz.pem
+    - --certificate-identity
+    - https://github.com/kubepug/kubepug/.github/workflows/release.yaml@refs/tags/{{.Version}}
+    - --certificate-oidc-issuer
+    - https://token.actions.githubusercontent.com
+version_overrides:
+  - version_constraint: Version == "v1.2.1"
+    no_asset: true
+  - version_constraint: "true"
