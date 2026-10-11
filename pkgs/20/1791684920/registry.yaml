@@ -1,0 +1,10 @@
+name: minio/mc
+type: github_release
+repo_owner: minio
+repo_name: mc
+repo_id: 29329884
+description: Unix like utilities for object store
+minisign:
+  type: github_release
+  asset: '{{.Asset}}.minisig'
+  public_key: RWTx5Zr1tiHQLwG9keckT0c45M3AGeHD6IvimQHpyRywVWGbP1aVSGav
