@@ -1,0 +1,23 @@
+name: dyoshikawa/rulesync
+type: github_release
+repo_owner: dyoshikawa
+repo_name: rulesync
+repo_id: 1004340390
+description: A Utility CLI for AI Coding Agents
+github_artifact_attestations:
+  signer_workflow: dyoshikawa/rulesync/.github/workflows/publish-assets.yml
+version_overrides:
+  - version_constraint: Version == "v6.7.1"
+    no_asset: true
+  - version_constraint: semver("> 14.1.0")
+    github_artifact_attestations:
+      signer_workflow: dyoshikawa/rulesync/.github/workflows/publish-assets.yml
+  - version_constraint: semver("> 5.5.1")
+  - version_constraint: semver("> 4.0.0")
+  - version_constraint: semver("> 3.17.1")
+  - version_constraint: semver("> 3.14.0")
+  - version_constraint: semver("<= 3.14.0")
+    no_asset: true
+  - version_constraint: "true"
+    github_artifact_attestations:
+      signer_workflow: dyoshikawa/rulesync/.github/workflows/publish-assets.yml
