@@ -1,0 +1,12 @@
+name: awslabs/eks-node-viewer
+type: github_release
+repo_owner: awslabs
+repo_name: eks-node-viewer
+repo_id: 575555632
+description: EKS Node Viewer
+version_overrides:
+  - version_constraint: semver("> 0.2.1")
+  - version_constraint: semver("> 0.1.0")
+  - version_constraint: semver("<= 0.1.0")
+    no_asset: true
+  - version_constraint: "true"
