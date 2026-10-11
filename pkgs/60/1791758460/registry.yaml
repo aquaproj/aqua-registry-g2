@@ -1,0 +1,17 @@
+name: marcosnils/bin
+type: github_release
+repo_owner: marcosnils
+repo_name: bin
+repo_id: 266547868
+description: Effortless binary manager
+version_overrides:
+  - version_constraint: Version == "v0.17.1"
+  - version_constraint: semver("> 0.17.0")
+  - version_constraint: semver("> 0.8.0")
+  - version_constraint: semver("> 0.3.0")
+  - version_constraint: semver("<= 0.3.0")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: "true"
