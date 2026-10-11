@@ -1,0 +1,24 @@
+name: kptdev/kpt
+aliases:
+  - name: GoogleContainerTools/kpt
+type: github_release
+repo_owner: kptdev
+repo_name: kpt
+repo_id: 208908993
+description: Automate Kubernetes Configuration Editing
+version_filter: |
+  not (Version startsWith "porch/" or Version startsWith "package-examples/")
+version_overrides:
+  - version_constraint: Version == "v1.0.0-beta.22"
+  - version_constraint: Version == "v1.0.0-beta.36"
+  - version_constraint: semver("> 1.0.0-beta.55")
+  - version_constraint: semver("> 1.0.0-beta.51")
+    slsa_provenance:
+      type: github_release
+      asset: multiple.intoto.jsonl
+  - version_constraint: semver("> 1.0.0-beta.49")
+  - version_constraint: semver("> 1.0.0-beta.35")
+    slsa_provenance:
+      type: github_release
+      asset: multiple.intoto.jsonl
+  - version_constraint: "true"
