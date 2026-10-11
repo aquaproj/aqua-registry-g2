@@ -1,0 +1,15 @@
+name: ycd/dstp
+type: github_release
+repo_owner: ycd
+repo_name: dstp
+repo_id: 425524682
+description: Run common networking tests against any site
+version_overrides:
+  - version_constraint: Version == "v0.4.20"
+    no_asset: true
+  - version_constraint: semver("> 0.4.0")
+  - version_constraint: semver("> 0.1.3")
+  - version_constraint: semver("> 0.1.1")
+  - version_constraint: semver("<= 0.1.1")
+    no_asset: true
+  - version_constraint: "true"
