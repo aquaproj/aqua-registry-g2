@@ -1,0 +1,27 @@
+name: crazywhalecc/static-php-cli
+type: github_release
+repo_owner: crazywhalecc
+repo_name: static-php-cli
+repo_id: 361670419
+description: Build standalone PHP binaries on Linux, macOS, FreeBSD, Windows, with PHP project together, with popular extensions included
+files:
+  - name: spc
+version_overrides:
+  - version_constraint: Version == "2.0.0-beta2"
+    files:
+      - name: spc
+        src: spc-{{.OS}}-{{.Arch}}
+  - version_constraint: Version == "2.0-rc3"
+    files:
+      - name: spc
+  - version_constraint: semver("> 2.1.0-beta.2")
+    files:
+      - name: spc
+  - version_constraint: semver("> 2.0.0-rc6")
+    files:
+      - name: spc
+  - version_constraint: semver("<= 2.0.0-rc6")
+    no_asset: true
+  - version_constraint: "true"
+    files:
+      - name: spc
