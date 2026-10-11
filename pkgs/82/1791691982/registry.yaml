@@ -1,0 +1,21 @@
+name: open-policy-agent/conftest
+type: github_release
+repo_owner: open-policy-agent
+repo_name: conftest
+repo_id: 178249461
+description: Write tests against structured configuration data using the Open Policy Agent Rego query language
+github_artifact_attestations:
+  signer_workflow: open-policy-agent/conftest/.github/workflows/release.yaml
+version_overrides:
+  - version_constraint: Version == "v0.44.0"
+    no_asset: true
+  - version_constraint: Version == "0.9.1"
+  - version_constraint: semver("> 0.70.0")
+    github_artifact_attestations:
+      signer_workflow: open-policy-agent/conftest/.github/workflows/release.yaml
+  - version_constraint: semver("> 0.27.0")
+  - version_constraint: semver("> 0.20.0")
+  - version_constraint: semver("<= 0.20.0")
+  - version_constraint: "true"
+    github_artifact_attestations:
+      signer_workflow: open-policy-agent/conftest/.github/workflows/release.yaml
