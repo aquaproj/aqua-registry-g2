@@ -1,0 +1,15 @@
+name: thomasschafer/scooter
+type: github_release
+repo_owner: thomasschafer
+repo_name: scooter
+repo_id: 832342301
+description: Interactive find and replace in the terminal
+version_overrides:
+  - version_constraint: Version == "v0.1.1"
+    no_asset: true
+  - version_constraint: semver("> 0.2.2")
+  - version_constraint: semver("<= 0.2.2")
+    files:
+      - name: scooter
+        src: scooter-{{.Arch}}-{{.OS}}
+  - version_constraint: "true"
