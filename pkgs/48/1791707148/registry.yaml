@@ -1,0 +1,15 @@
+name: yassinebenaid/bunster
+type: github_release
+repo_owner: yassinebenaid
+repo_name: bunster
+repo_id: 831420946
+description: Compile shell scripts to static binaries
+version_overrides:
+  - version_constraint: semver("> 0.7.1")
+  - version_constraint: semver("> 0.6.0")
+    files:
+      - name: bunster
+        src: bunster_{{.OS}}-{{.Arch}}
+  - version_constraint: semver("<= 0.6.0")
+    no_asset: true
+  - version_constraint: "true"
