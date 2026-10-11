@@ -1,0 +1,14 @@
+name: 01mf02/jaq
+type: github_release
+repo_owner: 01mf02
+repo_name: jaq
+repo_id: 318753449
+description: A jq clone focussed on correctness, speed, and simplicity
+version_overrides:
+  - version_constraint: Version == "v1.0.0-gamma"
+  - version_constraint: semver("> 2.0.0-alpha.1")
+  - version_constraint: semver("> 1.3.0")
+  - version_constraint: semver("> 1.0.0-beta")
+  - version_constraint: semver("<= 1.0.0-beta")
+    no_asset: true
+  - version_constraint: "true"
