@@ -1,0 +1,9 @@
+name: hashicorp/terraform-mcp-server
+type: go_install
+repo_owner: hashicorp
+repo_name: terraform-mcp-server
+repo_id: 969282615
+description: The Terraform MCP Server provides seamless integration with Terraform ecosystem, enabling advanced automation and interaction capabilities for Infrastructure as Code (IaC) development
+version_overrides:
+  - version_constraint: "true"
+    path: github.com/hashicorp/terraform-mcp-server/cmd/terraform-mcp-server
