@@ -1,0 +1,41 @@
+name: versity/versitygw
+type: github_release
+repo_owner: versity
+repo_name: versitygw
+repo_id: 636903576
+description: A simple to deploy but feature rich S3 object storage server for your filesystem
+version_overrides:
+  - version_constraint: Version == "v0.1"
+  - version_constraint: Version == "v0.4"
+  - version_constraint: Version == "v0.5"
+  - version_constraint: Version == "v0.14"
+    files:
+      - name: versitygw
+        src: cmd/versitygw
+  - version_constraint: semver("> 1.3.0")
+    files:
+      - name: versitygw
+        src: versitygw_{{.Version}}_{{.OS}}_{{.Arch}}/versitygw
+    overrides:
+      - goos: windows
+        files:
+          - name: versitygw
+            src: versitygw_{{.Version}}_{{.OS}}_{{.Arch}}/versitygw
+  - version_constraint: semver("> 0.13.0")
+    files:
+      - name: versitygw
+        src: versitygw_{{.Version}}_{{.OS}}_{{.Arch}}/versitygw
+  - version_constraint: semver("> 0.3.0")
+    files:
+      - name: versitygw
+        src: cmd/versitygw
+  - version_constraint: semver("<= 0.3.0")
+  - version_constraint: "true"
+    files:
+      - name: versitygw
+        src: versitygw_{{.Version}}_{{.OS}}_{{.Arch}}/versitygw
+    overrides:
+      - goos: windows
+        files:
+          - name: versitygw
+            src: versitygw_{{.Version}}_{{.OS}}_{{.Arch}}/versitygw
