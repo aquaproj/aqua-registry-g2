@@ -1,0 +1,13 @@
+name: fortio/fortio
+type: github_release
+repo_owner: fortio
+repo_name: fortio
+repo_id: 106351459
+description: Fortio load testing library, command line tool, advanced echo server and web UI in go (golang). Allows to specify a set query-per-second load and record latency histograms and other useful stats
+overrides:
+  - goos: windows
+    files:
+      - name: fortio
+files:
+  - name: fortio
+    src: usr/bin/fortio
