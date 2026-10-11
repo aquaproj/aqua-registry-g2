@@ -1,0 +1,19 @@
+name: veeso/termscp
+type: github_release
+repo_owner: veeso
+repo_name: termscp
+repo_id: 310881039
+description: A feature rich terminal UI file transfer and explorer with support for SCP/SFTP/FTP/S3
+version_overrides:
+  - version_constraint: semver(">= 1.0.0")
+  - version_constraint: semver(">= 0.8.1")
+  - version_constraint: semver(">= 0.6.1")
+  - version_constraint: semver("< 0.6.1")
+    replacements:
+      windows: msvc
+    overrides:
+      - goos: linux
+        files:
+          - name: termscp
+            src: usr/local/bin/termscp
+  - version_constraint: "true"
