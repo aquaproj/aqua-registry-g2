@@ -1,0 +1,17 @@
+name: santhosh-tekuri/jsonschema
+type: github_release
+repo_owner: santhosh-tekuri
+repo_name: jsonschema
+repo_id: 90798191
+description: JSONSchema (draft 2020-12, draft 2019-09, draft-7, draft-6, draft-4) Validation using Go
+files:
+  - name: jv
+version_overrides:
+  - version_constraint: semver("> 5.3.1")
+    files:
+      - name: jv
+  - version_constraint: semver("<= 5.3.1")
+    no_asset: true
+  - version_constraint: "true"
+    files:
+      - name: jv
