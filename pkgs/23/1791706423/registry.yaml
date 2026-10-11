@@ -1,0 +1,12 @@
+name: bazelbuild/bazelisk
+type: github_release
+repo_owner: bazelbuild
+repo_name: bazelisk
+repo_id: 149661467
+description: A user-friendly launcher for Bazel
+version_overrides:
+  - version_constraint: Version == "v0.0.6"
+    no_asset: true
+  - version_constraint: Version == "v1.7.0"
+    no_asset: true
+  - version_constraint: "true"
