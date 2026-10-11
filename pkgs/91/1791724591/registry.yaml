@@ -1,0 +1,97 @@
+name: axodotdev/cargo-dist
+type: github_release
+repo_owner: axodotdev
+repo_name: cargo-dist
+repo_id: 551088529
+description: shippable application packaging
+files:
+  - name: dist
+github_artifact_attestations:
+  signer_workflow: axodotdev/cargo-dist/.github/workflows/release.yml
+version_overrides:
+  - version_constraint: semver("<= 0.0.4-prerelease.1")
+    files:
+      - name: cargo-dist
+        src: '{{.AssetWithoutExt}}/cargo-dist'
+    overrides:
+      - goos: windows
+        files:
+          - name: cargo-dist
+  - version_constraint: semver("<= 0.0.6-prerelease.7")
+    files:
+      - name: cargo-dist
+        src: '{{.AssetWithoutExt}}/cargo-dist'
+    overrides:
+      - goos: windows
+        files:
+          - name: cargo-dist
+  - version_constraint: semver("<= 0.1.0-prerelease.2")
+    files:
+      - name: cargo-dist
+        src: '{{.AssetWithoutExt}}/cargo-dist'
+    overrides:
+      - goos: windows
+        files:
+          - name: cargo-dist
+  - version_constraint: semver("<= 0.4.0-prerelease.2")
+    files:
+      - name: cargo-dist
+        src: '{{.AssetWithoutExt}}/cargo-dist'
+    overrides:
+      - goos: windows
+        files:
+          - name: cargo-dist
+  - version_constraint: semver("<= 0.6.0-prerelease.2")
+    files:
+      - name: cargo-dist
+        src: '{{.AssetWithoutExt}}/cargo-dist'
+    overrides:
+      - goos: windows
+        files:
+          - name: cargo-dist
+  - version_constraint: semver("<= 0.16.0-prerelease.5")
+    files:
+      - name: cargo-dist
+        src: '{{.AssetWithoutExt}}/cargo-dist'
+    overrides:
+      - goos: windows
+        files:
+          - name: cargo-dist
+  - version_constraint: semver("<= 0.23.0")
+    files:
+      - name: cargo-dist
+        src: '{{.AssetWithoutExt}}/cargo-dist'
+    github_artifact_attestations:
+      signer_workflow: axodotdev/cargo-dist/.github/workflows/release.yml
+    overrides:
+      - goos: windows
+        files:
+          - name: cargo-dist
+  - version_constraint: Version == "v0.28.1-prerelease.1"
+    files:
+      - name: dist
+        src: '{{.AssetWithoutExt}}/dist'
+    overrides:
+      - goos: windows
+        files:
+          - name: dist
+  - version_constraint: semver(">= 1.0.0-rc.1")
+    files:
+      - name: dist
+        src: '{{.AssetWithoutExt}}/dist'
+    github_artifact_attestations:
+      signer_workflow: axodotdev/cargo-dist/.github/workflows/release.yml
+    overrides:
+      - goos: windows
+        files:
+          - name: dist
+  - version_constraint: "true"
+    files:
+      - name: dist
+        src: '{{.AssetWithoutExt}}/dist'
+    github_artifact_attestations:
+      signer_workflow: axodotdev/cargo-dist/.github/workflows/release.yml
+    overrides:
+      - goos: windows
+        files:
+          - name: dist
