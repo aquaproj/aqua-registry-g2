@@ -1,0 +1,15 @@
+name: sinclairtarget/git-who
+type: github_release
+repo_owner: sinclairtarget
+repo_name: git-who
+repo_id: 899941526
+description: Git blame for file trees
+version_overrides:
+  - version_constraint: Version == "v0.2"
+    files:
+      - name: git-who
+        src: '{{.OS}}_{{.Arch}}/git-who'
+  - version_constraint: "true"
+    files:
+      - name: git-who
+        src: '{{.OS}}_{{.Arch}}/git-who'
