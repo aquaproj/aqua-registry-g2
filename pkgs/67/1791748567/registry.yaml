@@ -1,0 +1,17 @@
+name: kubecolor/kubecolor
+type: github_release
+repo_owner: kubecolor
+repo_name: kubecolor
+repo_id: 540576983
+description: Colorize your kubectl output
+github_artifact_attestations:
+  signer_workflow: kubecolor/kubecolor/.github/workflows/release.yml
+version_overrides:
+  - version_constraint: semver(">= 0.5.1")
+    github_artifact_attestations:
+      signer_workflow: kubecolor/kubecolor/.github/workflows/release.yml
+  - version_constraint: semver("> 0.0.21")
+  - version_constraint: semver("<= 0.0.21")
+  - version_constraint: "true"
+    github_artifact_attestations:
+      signer_workflow: kubecolor/kubecolor/.github/workflows/release.yml
