@@ -1,0 +1,19 @@
+name: minamijoyo/tfmigrate
+type: github_release
+repo_owner: minamijoyo
+repo_name: tfmigrate
+repo_id: 275169025
+description: A Terraform / OpenTofu state migration tool for GitOps
+version_overrides:
+  - version_constraint: semver("> 0.2.12")
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver("<= 0.2.12")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: "true"
+    supported_envs:
+      - linux
+      - darwin
