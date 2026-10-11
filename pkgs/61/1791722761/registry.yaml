@@ -1,0 +1,9 @@
+name: noborus/trdsql
+type: github_release
+repo_owner: noborus
+repo_name: trdsql
+repo_id: 96136924
+description: CLI tool that can execute SQL queries on CSV, LTSV, JSON and TBLN. Can output to various formats
+files:
+  - name: trdsql
+    src: trdsql_{{.Version}}_{{.OS}}_{{.Arch}}/trdsql
