@@ -1,0 +1,9 @@
+name: cycloidio/terracognita
+type: github_release
+repo_owner: cycloidio
+repo_name: terracognita
+repo_id: 169991093
+description: Reads from existing public and private cloud providers (reverse Terraform) and generates your infrastructure as code on Terraform configuration
+files:
+  - name: terracognita
+    src: terracognita-{{.OS}}-{{.Arch}}
