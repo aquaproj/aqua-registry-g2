@@ -1,0 +1,54 @@
+name: wasmCloud/wasmCloud/wash
+type: github_release
+repo_owner: wasmCloud
+repo_name: wasmCloud
+repo_id: 304403692
+description: wasmCloud is an open source Cloud Native Computing Foundation (CNCF) project that enables teams to build, manage, and scale polyglot apps across any cloud, K8s, or edge
+version_prefix: wash-v
+cosign:
+  opts:
+    - --certificate-identity
+    - https://github.com/wasmCloud/wasmCloud/.github/workflows/release-tag.yml@refs/heads/main
+    - --certificate-oidc-issuer
+    - https://token.actions.githubusercontent.com
+  bundle:
+    type: github_release
+    asset: '{{.Asset}}.sigstore.json'
+github_artifact_attestations:
+  signer_workflow: wasmCloud/wasmCloud/.github/workflows/release-tag.yml
+version_overrides:
+  - version_constraint: semver(">= 2.1.0")
+    cosign:
+      opts:
+        - --certificate-oidc-issuer
+        - https://token.actions.githubusercontent.com
+        - --certificate-identity
+        - https://github.com/wasmCloud/wasmCloud/.github/workflows/release-tag.yml@refs/heads/main
+      bundle:
+        type: github_release
+        asset: wash.sigstore.json
+    github_artifact_attestations:
+      signer_workflow: wasmCloud/wasmCloud/.github/workflows/release-tag.yml
+  - version_constraint: semver("> 2.0.5")
+    github_artifact_attestations:
+      signer_workflow: wasmCloud/wasmCloud/.github/workflows/release-tag.yml
+  - version_constraint: semver("> 2.0.1")
+    github_artifact_attestations:
+      signer_workflow: wasmCloud/wasmCloud/.github/workflows/wash.yml
+  - version_constraint: semver(">= 2.0.0")
+    github_artifact_attestations:
+      signer_workflow: wasmCloud/wasmCloud/.github/workflows/wash.yml
+  - version_constraint: semver("< 2.0.0")
+    version_prefix: wash-v
+  - version_constraint: "true"
+    cosign:
+      opts:
+        - --certificate-oidc-issuer
+        - https://token.actions.githubusercontent.com
+        - --certificate-identity
+        - https://github.com/wasmCloud/wasmCloud/.github/workflows/release-tag.yml@refs/heads/main
+      bundle:
+        type: github_release
+        asset: wash.sigstore.json
+    github_artifact_attestations:
+      signer_workflow: wasmCloud/wasmCloud/.github/workflows/release-tag.yml
