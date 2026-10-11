@@ -1,0 +1,14 @@
+name: itaysk/kubectl-neat
+type: github_release
+repo_owner: itaysk
+repo_name: kubectl-neat
+repo_id: 198226595
+description: Clean up Kubernetes yaml and json output to make it readable
+version_overrides:
+  - version_constraint: semver("> 2.0.2")
+  - version_constraint: semver("> 1.0.0")
+  - version_constraint: semver("<= 1.0.0")
+    files:
+      - name: kubectl-neat
+        src: dist/{{.OS}}/kubectl-neat
+  - version_constraint: "true"
