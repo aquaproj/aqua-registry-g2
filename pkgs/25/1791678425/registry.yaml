@@ -1,0 +1,15 @@
+name: yvgude/lean-ctx
+type: github_release
+repo_owner: yvgude
+repo_name: lean-ctx
+repo_id: 1189918673
+description: Local-first context intelligence layer for AI agents
+version_filter: not (Version startsWith "vscode-")
+version_overrides:
+  - version_constraint: semver("> 3.1.5")
+  - version_constraint: semver("> 2.4.0")
+  - version_constraint: semver("> 1.7.0")
+  - version_constraint: semver("> 1.6.0")
+  - version_constraint: semver("<= 1.6.0")
+    no_asset: true
+  - version_constraint: "true"
