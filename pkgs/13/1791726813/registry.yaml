@@ -1,0 +1,15 @@
+name: ipinfo/cli/grepip
+type: github_release
+repo_owner: ipinfo
+repo_name: cli
+repo_id: 306538237
+description: Official Command Line Interface for the IPinfo API (IP geolocation and other types of IP data)
+version_filter: Version startsWith "grepip-"
+overrides:
+  - goos: windows
+    files:
+      - name: grepip
+        src: grepip_{{trimPrefix "grepip-" .Version}}_{{.OS}}_{{.Arch}}.exe
+files:
+  - name: grepip
+    src: grepip_{{trimPrefix "grepip-" .Version}}_{{.OS}}_{{.Arch}}
