@@ -1,0 +1,27 @@
+name: mfridman/tparse
+type: github_release
+repo_owner: mfridman
+repo_name: tparse
+repo_id: 153669921
+description: CLI tool for summarizing go test output. Pipe friendly. CI/CD friendly
+version_overrides:
+  - version_constraint: semver("> 0.12.2")
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver("> 0.11.1")
+    no_asset: true
+  - version_constraint: semver("> 0.8.3")
+  - version_constraint: semver("> 0.7.4")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("<= 0.7.4")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: "true"
+    supported_envs:
+      - linux
+      - darwin
