@@ -1,0 +1,14 @@
+name: GoogleContainerTools/container-structure-test
+type: github_release
+repo_owner: GoogleContainerTools
+repo_name: container-structure-test
+repo_id: 108044834
+description: validate the structure of your container images
+version_overrides:
+  - version_constraint: semver("> 1.17.0")
+  - version_constraint: semver("> 1.16.0")
+  - version_constraint: semver("<= 1.16.0")
+    files:
+      - name: container-structure-test
+        src: container-structure-test-{{.OS}}-{{.Arch}}
+  - version_constraint: "true"
