@@ -1,0 +1,76 @@
+name: tofuutils/tenv
+type: github_release
+repo_owner: tofuutils
+repo_name: tenv
+repo_id: 739378779
+description: OpenTofu / Terraform version manager
+files:
+  - name: tenv
+  - name: terraform
+  - name: tofu
+  - name: terragrunt
+  - name: tf
+  - name: atmos
+cosign:
+  opts:
+    - --signature
+    - https://github.com/tofuutils/tenv/releases/download/{{.Version}}/tenv_v4.15.1_Darwin_x86_64.tar.gz.sig
+    - --certificate
+    - https://github.com/tofuutils/tenv/releases/download/{{.Version}}/tenv_v4.15.1_Darwin_x86_64.tar.gz.pem
+    - --certificate-identity
+    - https://github.com/tofuutils/tenv/.github/workflows/release.yml@refs/tags/{{.Version}}
+    - --certificate-oidc-issuer
+    - https://token.actions.githubusercontent.com
+version_overrides:
+  - version_constraint: Version == "v1.0.6"
+    files:
+      - name: tenv
+      - name: terraform
+      - name: tofu
+  - version_constraint: Version == "v1.0.7"
+    files:
+      - name: tenv
+      - name: terraform
+      - name: tofu
+  - version_constraint: semver("> 1.11.19")
+    files:
+      - name: tenv
+      - name: terraform
+      - name: tofu
+      - name: terragrunt
+      - name: tf
+      - name: atmos
+  - version_constraint: semver("> 1.10.2")
+    files:
+      - name: tenv
+      - name: terraform
+      - name: tofu
+      - name: terragrunt
+      - name: tf
+      - name: atmos
+  - version_constraint: semver("> 1.1.1")
+    files:
+      - name: tenv
+      - name: terraform
+      - name: tofu
+      - name: terragrunt
+      - name: tf
+  - version_constraint: semver("> 1.0.5")
+    files:
+      - name: tenv
+      - name: terraform
+      - name: tofu
+      - name: terragrunt
+  - version_constraint: semver("<= 1.0.5")
+    files:
+      - name: tenv
+      - name: terraform
+      - name: tofu
+  - version_constraint: "true"
+    files:
+      - name: tenv
+      - name: terraform
+      - name: tofu
+      - name: terragrunt
+      - name: tf
+      - name: atmos
