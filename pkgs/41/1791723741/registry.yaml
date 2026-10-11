@@ -1,0 +1,25 @@
+name: MordechaiHadad/bob
+type: github_release
+repo_owner: MordechaiHadad
+repo_name: bob
+repo_id: 456199616
+description: A version manager for neovim
+version_overrides:
+  - version_constraint: semver("> 4.0.3")
+    files:
+      - name: bob
+        src: '{{.AssetWithoutExt}}/bob'
+  - version_constraint: semver("> 2.6.0")
+    files:
+      - name: bob
+        src: '{{.AssetWithoutExt}}/bob'
+  - version_constraint: semver("> 2.0.0")
+  - version_constraint: semver("> 1.2.0")
+  - version_constraint: semver("<= 1.2.0")
+  - version_constraint: "true"
+    files:
+      - name: bob
+        src: '{{.AssetWithoutExt}}/bob'
+all_assets_filter: |
+  let words = ["openssl", "appimage", "rustls"];
+  not any(words, {Asset matches #})
