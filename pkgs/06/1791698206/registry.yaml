@@ -1,0 +1,18 @@
+name: envoyproxy/gateway/envoy-gateway
+type: github_release
+repo_owner: envoyproxy
+repo_name: gateway
+repo_id: 480573177
+description: Manages Envoy Proxy as a Standalone or Kubernetes-based Application Gateway
+version_overrides:
+  - version_constraint: semver(">= 1.2.0")
+    files:
+      - name: envoy-gateway
+        src: bin/{{.OS}}/{{.Arch}}/envoy-gateway
+  - version_constraint: semver("< 1.2.0")
+    no_asset: true
+  - version_constraint: "true"
+    files:
+      - name: envoy-gateway
+        src: bin/{{.OS}}/{{.Arch}}/envoy-gateway
+all_assets_filter: not (Asset matches "egctl")
