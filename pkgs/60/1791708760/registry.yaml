@@ -1,0 +1,10 @@
+name: segmentio/chamber
+type: github_release
+repo_owner: segmentio
+repo_name: chamber
+repo_id: 93906782
+description: CLI for managing secrets
+version_overrides:
+  - version_constraint: Version in ["v2.10.2", "v2.10.5"]
+    no_asset: true
+  - version_constraint: "true"
