@@ -10,6 +10,7 @@ version_overrides:
     overrides:
       - goos: linux
         asset: executor-{{.OS}}-{{.Arch}}-musl.{{.Format}}
+        format: tar.gz
         variants:
           - key: libc
             value: musl
@@ -28,6 +29,7 @@ version_overrides:
     overrides:
       - goos: linux
         asset: executor-{{.OS}}-{{.Arch}}-musl.{{.Format}}
+        format: tar.gz
         variants:
           - key: libc
             value: musl
