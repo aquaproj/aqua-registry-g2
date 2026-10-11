@@ -1,0 +1,13 @@
+name: matthart1983/netwatch
+type: github_release
+repo_owner: matthart1983
+repo_name: netwatch
+repo_id: 1158138526
+description: Real-time network diagnostics in your terminal. One command, zero config, instant visibility
+files:
+  - name: netwatch
+    src: '{{.AssetWithoutExt}}'
+version_overrides:
+  - version_constraint: Version == "v0.8.0"
+    no_asset: true
+  - version_constraint: "true"
