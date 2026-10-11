@@ -1,0 +1,45 @@
+name: carthage-software/mago
+type: github_release
+repo_owner: carthage-software
+repo_name: mago
+repo_id: 878733839
+description: Mago is a toolchain for PHP that aims to provide a set of tools to help developers write better code
+github_artifact_attestations:
+  signer_workflow: carthage-software/mago/.github/workflows/cd.yml
+version_overrides:
+  - version_constraint: Version == "0.0.12"
+    files:
+      - name: mago
+        src: mago-{{.Version}}-{{.Arch}}-{{.OS}}/mago
+  - version_constraint: Version == "0.13.0"
+    files:
+      - name: mago
+        src: mago-{{.Version}}-{{.Arch}}-{{.OS}}/mago
+  - version_constraint: Version == "1.2.0"
+    files:
+      - name: mago
+        src: mago-{{.Version}}-{{.Arch}}-{{.OS}}/mago
+  - version_constraint: Version == "1.2.1"
+    files:
+      - name: mago
+        src: mago-{{.Version}}-{{.Arch}}-{{.OS}}/mago
+  - version_constraint: semver(">= 1.5.0")
+    files:
+      - name: mago
+        src: mago-{{.Version}}-{{.Arch}}-{{.OS}}/mago
+    github_artifact_attestations:
+      signer_workflow: carthage-software/mago/.github/workflows/cd.yml
+  - version_constraint: semver("> 0.0.11")
+    files:
+      - name: mago
+        src: mago-{{.Version}}-{{.Arch}}-{{.OS}}/mago
+  - version_constraint: semver("<= 0.0.11")
+    files:
+      - name: mago
+        src: mago-{{.Version}}-{{.Arch}}-{{.OS}}/mago
+  - version_constraint: "true"
+    files:
+      - name: mago
+        src: mago-{{.Version}}-{{.Arch}}-{{.OS}}/mago
+    github_artifact_attestations:
+      signer_workflow: carthage-software/mago/.github/workflows/cd.yml
