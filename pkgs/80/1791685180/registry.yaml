@@ -1,0 +1,13 @@
+name: mxschmitt/playwright-go
+aliases:
+  - name: playwright-community/playwright-go
+type: go_install
+repo_owner: mxschmitt
+repo_name: playwright-go
+repo_id: 287942241
+description: Playwright for Go a browser automation library to control Chromium, Firefox and WebKit with a single API
+files:
+  - name: playwright
+version_overrides:
+  - version_constraint: "true"
+    path: github.com/playwright-community/playwright-go/cmd/playwright
