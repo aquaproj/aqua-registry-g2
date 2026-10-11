@@ -1,0 +1,27 @@
+name: lycheeverse/lychee
+type: github_release
+repo_owner: lycheeverse
+repo_name: lychee
+repo_id: 285115432
+description: Fast, async, stream-based link checker written in Rust. Finds broken URLs and mail addresses inside Markdown, HTML, reStructuredText, websites and more
+version_filter: not (Version startsWith "lychee-lib-")
+version_overrides:
+  - version_constraint: semver("<= 0.3.1") || Version == "v0.6.0-alpha"
+    no_asset: true
+  - version_constraint: Version == "v0.8.0"
+  - version_constraint: semver("<= 0.5.1-alpha")
+  - version_constraint: semver("<= 0.15.1")
+  - version_constraint: semver("< 0.19.0")
+    version_prefix: lychee-v
+  - version_constraint: semver("< 0.24.0")
+    version_prefix: lychee-v
+  - version_constraint: Version == "lychee-v0.24.0"
+    version_prefix: lychee-v
+    files:
+      - name: lychee
+        src: '{{.AssetWithoutExt}}/lychee'
+  - version_constraint: "true"
+    version_prefix: lychee-v
+    files:
+      - name: lychee
+        src: '{{.AssetWithoutExt}}/lychee'
