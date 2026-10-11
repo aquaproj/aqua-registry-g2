@@ -1,0 +1,18 @@
+name: sl1pm4t/k2tf
+type: github_release
+repo_owner: sl1pm4t
+repo_name: k2tf
+repo_id: 172287819
+description: Kubernetes YAML to Terraform HCL converter
+version_overrides:
+  - version_constraint: semver("> 0.7.0")
+  - version_constraint: semver("> 0.1.1")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("<= 0.1.1")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: "true"
