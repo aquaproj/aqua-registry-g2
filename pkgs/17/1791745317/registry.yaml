@@ -1,0 +1,23 @@
+name: cachix/secretspec
+type: github_release
+repo_owner: cachix
+repo_name: secretspec
+repo_id: 1013984512
+description: Declare secrets once. Store them anywhere
+version_overrides:
+  - version_constraint: Version == "v0.2.0"
+    files:
+      - name: secretspec
+        src: secretspec-{{.Arch}}-{{.OS}}/secretspec
+    overrides:
+      - goos: windows
+        files:
+          - name: secretspec
+  - version_constraint: "true"
+    files:
+      - name: secretspec
+        src: secretspec-{{.Arch}}-{{.OS}}/secretspec
+    overrides:
+      - goos: windows
+        files:
+          - name: secretspec
