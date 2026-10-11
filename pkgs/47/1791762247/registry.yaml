@@ -1,0 +1,22 @@
+name: guumaster/hostctl
+type: github_release
+repo_owner: guumaster
+repo_name: hostctl
+repo_id: 247263781
+description: Your dev tool to manage /etc/hosts like a pro
+version_overrides:
+  - version_constraint: semver("> 1.1.2")
+  - version_constraint: semver("> 1.1.0")
+  - version_constraint: semver("> 1.0.8")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("> 1.0.6")
+    no_asset: true
+  - version_constraint: semver("<= 1.0.6")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: "true"
