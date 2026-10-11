@@ -1,0 +1,16 @@
+name: kcl-lang/kcl
+type: github_release
+repo_owner: kcl-lang
+repo_name: kcl
+repo_id: 488865524
+description: KCL Programming Language (CNCF Sandbox Project). https://kcl-lang.io
+files:
+  - name: kcl-language-server
+  - name: kclvm_cli
+version_overrides:
+  - version_constraint: "true"
+    files:
+      - name: kcl-language-server
+        src: kclvm/bin/kcl-language-server
+      - name: kclvm_cli
+        src: kclvm/bin/kclvm_cli
