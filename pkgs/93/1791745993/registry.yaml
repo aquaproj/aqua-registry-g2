@@ -1,0 +1,51 @@
+name: mike-engel/jwt-cli
+type: github_release
+repo_owner: mike-engel
+repo_name: jwt-cli
+repo_id: 84038847
+description: A super fast CLI tool to decode and encode JWTs built in Rust
+files:
+  - name: jwt
+version_overrides:
+  - version_constraint: Version == "0.3.1"
+    files:
+      - name: jwt-cli
+        src: jwt-cli
+  - version_constraint: Version == "0.4.1"
+    files:
+      - name: jwt-cli
+        src: jwt-cli
+  - version_constraint: Version == "v1.2.0"
+    no_asset: true
+  - version_constraint: Version == "2.2.0"
+    overrides:
+      - goos: linux
+        files:
+          - name: jwt
+            src: target/release/jwt
+  - version_constraint: Version == "2.2.1"
+  - version_constraint: Version == "3.2.0"
+    overrides:
+      - goos: linux
+        files:
+          - name: jwt
+            src: target/release/jwt
+  - version_constraint: semver("> 6.1.0")
+    replacements:
+      linux: linux-musl
+  - version_constraint: semver(">= 3.2.0")
+  - version_constraint: semver(">= 2.2.0")
+  - version_constraint: semver("> 1.1.0")
+  - version_constraint: semver("> 0.9.0")
+  - version_constraint: semver("> 0.7.0")
+    no_asset: true
+  - version_constraint: semver("> 0.4.0")
+  - version_constraint: semver("> 0.3.0")
+    files:
+      - name: jwt-cli
+        src: jwt-cli
+  - version_constraint: semver("<= 0.3.0")
+    no_asset: true
+  - version_constraint: "true"
+    replacements:
+      linux: linux-musl
