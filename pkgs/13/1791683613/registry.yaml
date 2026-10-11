@@ -1,0 +1,14 @@
+name: grafana/alloy
+type: github_release
+repo_owner: grafana
+repo_name: alloy
+repo_id: 764670636
+description: OpenTelemetry Collector distribution with programmable pipelines
+version_overrides:
+  - version_constraint: "true"
+    files:
+      - name: alloy
+        src: '{{.AssetWithoutExt}}'
+all_assets_filter: |
+  let words = ["boringcrypto", "s390x", "installer"];
+  not any(words, {Asset matches #})
