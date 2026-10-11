@@ -1,0 +1,21 @@
+name: google-antigravity/antigravity-cli
+aliases:
+  - name: google.com/antigravity-cli
+type: github_release
+repo_owner: google-antigravity
+repo_name: antigravity-cli
+repo_id: 1237979735
+description: Google Antigravity CLI companion
+files:
+  - name: agy
+version_overrides:
+  - version_constraint: semver(">= 1.0.4")
+    files:
+      - name: agy
+        src: antigravity
+  - version_constraint: semver("< 1.0.4")
+    error_message: The version is old. Please upgrade to 1.0.4 or later.
+  - version_constraint: "true"
+    files:
+      - name: agy
+        src: antigravity
