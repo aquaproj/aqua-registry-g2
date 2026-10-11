@@ -1,0 +1,37 @@
+name: opengrep/opengrep
+type: github_release
+repo_owner: opengrep
+repo_name: opengrep
+repo_id: 903510992
+description: Static code analysis engine to find security issues in code
+version_overrides:
+  - version_constraint: semver("> 1.4.2")
+    cosign:
+      opts:
+        - --certificate
+        - https://github.com/opengrep/opengrep/releases/download/{{.Version}}/{{.Asset}}.cert
+        - --signature
+        - https://github.com/opengrep/opengrep/releases/download/{{.Version}}/{{.Asset}}.sig
+        - --certificate-identity-regexp
+        - https://github.com/opengrep/opengrep.+
+        - --certificate-oidc-issuer
+        - https://token.actions.githubusercontent.com
+        - --certificate-github-workflow-repository
+        - opengrep/opengrep
+  - version_constraint: semver("> 1.1.4")
+  - version_constraint: semver("> 1.0.1")
+  - version_constraint: semver("<= 1.0.1")
+  - version_constraint: "true"
+    cosign:
+      opts:
+        - --certificate
+        - https://github.com/opengrep/opengrep/releases/download/{{.Version}}/{{.Asset}}.cert
+        - --signature
+        - https://github.com/opengrep/opengrep/releases/download/{{.Version}}/{{.Asset}}.sig
+        - --certificate-identity-regexp
+        - https://github.com/opengrep/opengrep.+
+        - --certificate-oidc-issuer
+        - https://token.actions.githubusercontent.com
+        - --certificate-github-workflow-repository
+        - opengrep/opengrep
+all_assets_filter: not (Asset matches "opengrep-core")
