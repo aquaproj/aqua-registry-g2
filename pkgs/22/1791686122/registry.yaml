@@ -1,0 +1,42 @@
+name: apache/maven-mvnd
+type: github_release
+repo_owner: apache
+repo_name: maven-mvnd
+repo_id: 210029529
+description: Apache Maven Daemon
+files:
+  - name: mvnd
+version_overrides:
+  - version_constraint: Version == "0.0.1"
+  - version_constraint: Version == "0.0.2"
+    files:
+      - name: mvnd
+        src: '{{.AssetWithoutExt}}/bin/mvnd'
+  - version_constraint: Version in ["1.0-m6", "1.0-m8"]
+    files:
+      - name: mvnd
+        src: '{{.AssetWithoutExt}}/bin/mvnd'
+  - version_constraint: Version == "1.0-m7"
+    files:
+      - name: mvnd
+        src: '{{.AssetWithoutExt}}/bin/mvnd'
+  - version_constraint: Version == "1.0.2"
+    files:
+      - name: mvnd
+        src: '{{.AssetWithoutExt}}/bin/mvnd'
+  - version_constraint: semver("<= 0.0.8")
+    files:
+      - name: mvnd
+        src: '{{.AssetWithoutExt}}/bin/mvnd'
+  - version_constraint: semver("<= 0.7.1")
+    files:
+      - name: mvnd
+        src: '{{.AssetWithoutExt}}/bin/mvnd'
+  - version_constraint: semver("<= 0.8.1")
+    files:
+      - name: mvnd
+        src: '{{.AssetWithoutExt}}/bin/mvnd'
+  - version_constraint: "true"
+    files:
+      - name: mvnd
+        src: '{{.AssetWithoutExt}}/bin/mvnd'
