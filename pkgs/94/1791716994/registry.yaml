@@ -1,0 +1,12 @@
+name: context-labs/mactop
+type: github_release
+repo_owner: context-labs
+repo_name: mactop
+repo_id: 789247155
+description: mactop - Apple Silicon Monitor Top written in pure Golang! Under 1,000 lines of code
+version_overrides:
+  - version_constraint: semver("> 0.1.2")
+  - version_constraint: semver("<= 0.1.2")
+    files:
+      - name: goasitop
+  - version_constraint: "true"
