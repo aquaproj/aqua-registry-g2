@@ -1,0 +1,15 @@
+name: cpisciotta/xcbeautify
+type: github_release
+repo_owner: cpisciotta
+repo_name: xcbeautify
+repo_id: 148183411
+description: A little beautifier tool for xcodebuild
+version_overrides:
+  - version_constraint: Version == "1.5.0-beta.1"
+    no_asset: true
+  - version_constraint: Version == "0.9.0"
+  - version_constraint: Version == "0.9.1"
+  - version_constraint: semver("> 2.0.0-beta.3")
+  - version_constraint: semver("> 1.7.0")
+    no_asset: true
+  - version_constraint: "true"
