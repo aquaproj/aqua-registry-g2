@@ -1,0 +1,24 @@
+name: pvolok/dekit
+aliases:
+  - name: pvolok/mprocs
+type: github_release
+repo_owner: pvolok
+repo_name: dekit
+repo_id: 401345297
+description: Run multiple commands in parallel
+files:
+  - name: mprocs
+version_overrides:
+  - version_constraint: Version == "v0.1.0"
+  - version_constraint: semver("> 0.9.6")
+    files:
+      - name: dekit
+  - version_constraint: semver("> 0.6.4")
+  - version_constraint: semver("> 0.0.1")
+  - version_constraint: semver("<= 0.0.1")
+    files:
+      - name: mprocs
+        src: dist/{{.OS}}-{{.Arch}}/mprocs
+  - version_constraint: "true"
+    files:
+      - name: dekit
