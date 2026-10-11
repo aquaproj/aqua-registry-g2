@@ -1,0 +1,26 @@
+name: stripe/stripe-cli
+type: github_release
+repo_owner: stripe
+repo_name: stripe-cli
+repo_id: 191848501
+description: A command-line tool for Stripe
+files:
+  - name: stripe
+version_overrides:
+  - version_constraint: Version == "v1.5.10"
+    replacements:
+      darwin: mac-os
+  - version_constraint: Version == "v1.7.2"
+  - version_constraint: Version == "v1.7.5"
+  - version_constraint: Version == "v1.7.6"
+  - version_constraint: Version == "v1.7.7"
+  - version_constraint: Version == "v1.13.2"
+  - version_constraint: semver("> 1.12.3")
+  - version_constraint: semver("> 1.5.9")
+  - version_constraint: semver("> 0.8.2")
+    replacements:
+      darwin: mac-os
+  - version_constraint: semver("<= 0.8.2")
+    replacements:
+      darwin: mac-os
+  - version_constraint: "true"
