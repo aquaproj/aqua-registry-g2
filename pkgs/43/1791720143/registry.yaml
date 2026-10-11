@@ -1,0 +1,11 @@
+name: matryer/moq
+type: github_release
+repo_owner: matryer
+repo_name: moq
+repo_id: 66832342
+description: Interface mocking tool for go generate
+version_overrides:
+  - version_constraint: Version == "v0.1.7"
+  - version_constraint: Version == "v0.3.3"
+    no_asset: true
+  - version_constraint: "true"
