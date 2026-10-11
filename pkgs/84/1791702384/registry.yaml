@@ -1,0 +1,50 @@
+name: jedisct1/minisign
+type: github_release
+repo_owner: jedisct1
+repo_name: minisign
+repo_id: 37023739
+description: A dead simple tool to sign files and verify digital signatures
+version_overrides:
+  - version_constraint: semver("<= 0.3")
+    minisign:
+      type: github_release
+      asset: '{{.Asset}}.minisig'
+      public_key: RWQf6LRCGA9i53mlYecO4IzT51TGPpvWucNSCh1CBM0QTaLn73Y7GFO3
+  - version_constraint: Version == "0.4"
+    no_asset: true
+  - version_constraint: semver("<= 0.8")
+    minisign:
+      type: github_release
+      asset: '{{.Asset}}.minisig'
+      public_key: RWQf6LRCGA9i53mlYecO4IzT51TGPpvWucNSCh1CBM0QTaLn73Y7GFO3
+  - version_constraint: Version == "0.9"
+    minisign:
+      type: github_release
+      asset: '{{.Asset}}.minisig'
+      public_key: RWQf6LRCGA9i53mlYecO4IzT51TGPpvWucNSCh1CBM0QTaLn73Y7GFO3
+  - version_constraint: Version in ["0.10", "0.11"]
+    minisign:
+      type: github_release
+      asset: '{{.Asset}}.minisig'
+      public_key: RWQf6LRCGA9i53mlYecO4IzT51TGPpvWucNSCh1CBM0QTaLn73Y7GFO3
+    overrides:
+      - goos: linux
+        files:
+          - name: minisign
+            src: minisign-{{.OS}}/{{.Arch}}/minisign
+      - goos: windows
+        files:
+          - name: minisign
+            src: minisign-win64/minisign
+  - version_constraint: "true"
+    files:
+      - name: minisign
+        src: minisign-{{.OS}}/{{.Arch}}/minisign
+    minisign:
+      type: github_release
+      asset: '{{.Asset}}.minisig'
+      public_key: RWQf6LRCGA9i53mlYecO4IzT51TGPpvWucNSCh1CBM0QTaLn73Y7GFO3
+    overrides:
+      - goos: darwin
+        files:
+          - name: minisign
