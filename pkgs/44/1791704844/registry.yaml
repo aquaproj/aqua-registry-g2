@@ -1,0 +1,27 @@
+name: Bearer/bearer
+type: github_release
+repo_owner: Bearer
+repo_name: bearer
+repo_id: 542197924
+description: Code security scanning tool (SAST) to discover, filter and prioritize security and privacy risks
+version_overrides:
+  - version_constraint: semver("> 1.43.4")
+    overrides:
+      - goos: linux
+        files:
+          - name: bearer
+            src: usr/bin/bearer
+  - version_constraint: semver("> 0.24.0")
+    overrides:
+      - goos: linux
+        files:
+          - name: bearer
+            src: usr/bin/bearer
+  - version_constraint: semver("<= 0.24.0")
+    no_asset: true
+  - version_constraint: "true"
+    overrides:
+      - goos: linux
+        files:
+          - name: bearer
+            src: usr/bin/bearer
