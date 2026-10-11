@@ -1,0 +1,18 @@
+name: release-plz/release-plz
+type: github_release
+repo_owner: release-plz
+repo_name: release-plz
+repo_id: 439941981
+description: Publish Rust crates from CI with a Release PR
+version_prefix: release-plz-
+version_overrides:
+  - version_constraint: Version in ["release-plz-v0.3.35", "release-plz-v0.3.54", "release-plz-v0.3.109"]
+    no_asset: true
+  - version_constraint: Version in ["release-plz-v0.3.2", "release-plz-v0.3.26"]
+  - version_constraint: semver("<= 0.2.44")
+    no_asset: true
+  - version_constraint: semver("<= 0.3.19")
+  - version_constraint: semver("<= 0.3.45")
+  - version_constraint: semver("<= 0.3.47")
+    no_asset: true
+  - version_constraint: "true"
