@@ -1,0 +1,33 @@
+name: stefanprodan/timoni
+type: github_release
+repo_owner: stefanprodan
+repo_name: timoni
+repo_id: 600428631
+description: Timoni is a package manager for Kubernetes, powered by CUE and inspired by Helm
+packslip:
+  identity_prefix: https://github.com/stefanprodan/timoni/
+  issuer: https://token.actions.githubusercontent.com
+github_artifact_attestations:
+  signer_workflow: stefanprodan/timoni/.github/workflows/release.yaml
+version_overrides:
+  - version_constraint: semver("> 0.29.0")
+    slsa_provenance:
+      type: github_release
+      asset: timoni_{{trimV .Version}}_provenance.intoto.jsonl
+    github_artifact_attestations:
+      signer_workflow: stefanprodan/timoni/.github/workflows/release.yaml
+  - version_constraint: semver(">= 0.10.0")
+    slsa_provenance:
+      type: github_release
+      asset: timoni_{{trimV .Version}}_provenance.intoto.jsonl
+  - version_constraint: semver(">= 0.7.1")
+    slsa_provenance:
+      type: github_release
+      asset: multiple.intoto.jsonl
+  - version_constraint: semver("< 0.7.1")
+  - version_constraint: "true"
+    slsa_provenance:
+      type: github_release
+      asset: timoni_{{trimV .Version}}_provenance.intoto.jsonl
+    github_artifact_attestations:
+      signer_workflow: stefanprodan/timoni/.github/workflows/release.yaml
