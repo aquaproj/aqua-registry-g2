@@ -1,0 +1,64 @@
+name: sagiegurari/cargo-make
+type: github_release
+repo_owner: sagiegurari
+repo_name: cargo-make
+repo_id: 95217595
+description: Rust task runner and build tool
+files:
+  - name: cargo-make
+    src: '{{.AssetWithoutExt}}/{{.FileName}}'
+  - name: makers
+    src: '{{.AssetWithoutExt}}/{{.FileName}}'
+version_overrides:
+  - version_constraint: Version == "0.35.3"
+    no_asset: true
+  - version_constraint: Version == "0.16.5"
+    files:
+      - name: cargo-make
+        src: '{{.AssetWithoutExt}}/{{.FileName}}'
+    overrides:
+      - goos: windows
+        files:
+          - name: cargo-make
+  - version_constraint: Version == "0.19.0"
+    files:
+      - name: cargo-make
+        src: '{{.AssetWithoutExt}}/{{.FileName}}'
+    overrides:
+      - goos: windows
+        files:
+          - name: cargo-make
+  - version_constraint: Version == "0.30.2"
+    files:
+      - name: cargo-make
+        src: '{{.AssetWithoutExt}}/{{.FileName}}'
+    overrides:
+      - goos: windows
+        files:
+          - name: cargo-make
+  - version_constraint: Version == "0.35.14"
+    overrides:
+      - goos: windows
+        files:
+          - name: cargo-make
+          - name: makers
+  - version_constraint: semver("> 0.36.6")
+    overrides:
+      - goos: windows
+        files:
+          - name: cargo-make
+          - name: makers
+  - version_constraint: semver("> 0.15.0")
+    overrides:
+      - goos: windows
+        files:
+          - name: cargo-make
+          - name: makers
+  - version_constraint: semver("<= 0.15.0")
+    no_asset: true
+  - version_constraint: "true"
+    overrides:
+      - goos: windows
+        files:
+          - name: cargo-make
+          - name: makers
