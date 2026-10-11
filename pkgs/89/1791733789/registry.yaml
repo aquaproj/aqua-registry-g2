@@ -1,0 +1,13 @@
+name: yonahd/kor
+type: github_release
+repo_owner: yonahd
+repo_name: kor
+repo_id: 662734440
+description: A Golang Tool to discover unused Kubernetes Resources
+version_overrides:
+  - version_constraint: semver(">= 0.2.0")
+  - version_constraint: semver("< 0.2.0")
+    files:
+      - name: kor
+        src: kor-{{.GOOS}}-{{if eq .GOOS "darwin"}}amd64{{else}}{{.GOARCH}}{{end}}
+  - version_constraint: "true"
