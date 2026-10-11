@@ -1,0 +1,11 @@
+name: zarf-dev/zarf
+type: github_release
+repo_owner: zarf-dev
+repo_name: zarf
+repo_id: 398998426
+description: The Airgap Native Packager Manager for Kubernetes
+version_overrides:
+  - version_constraint: semver(">= 0.51.0")
+  - version_constraint: semver("< 0.51.0")
+    error_message: Please use v0.51.0 or later
+  - version_constraint: "true"
