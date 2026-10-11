@@ -1,0 +1,34 @@
+name: jedisct1/piknik
+type: github_release
+repo_owner: jedisct1
+repo_name: piknik
+repo_id: 63753199
+description: Copy/paste anything over the network
+version_overrides:
+  - version_constraint: semver("> 0.3")
+    files:
+      - name: piknik
+        src: '{{.OS}}/piknik'
+    overrides:
+      - goos: linux
+        files:
+          - name: piknik
+            src: '{{.OS}}-{{.Arch}}/piknik'
+  - version_constraint: semver("<= 0.3")
+    files:
+      - name: piknik
+        src: '{{.OS}}/piknik'
+    overrides:
+      - goos: linux
+        files:
+          - name: piknik
+            src: '{{.OS}}-{{.Arch}}/piknik'
+  - version_constraint: "true"
+    files:
+      - name: piknik
+        src: '{{.OS}}/piknik'
+    overrides:
+      - goos: linux
+        files:
+          - name: piknik
+            src: '{{.OS}}-{{.Arch}}/piknik'
