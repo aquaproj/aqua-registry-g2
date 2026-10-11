@@ -1,0 +1,22 @@
+name: erikjuhani/basalt
+type: github_release
+repo_owner: erikjuhani
+repo_name: basalt
+repo_id: 693752164
+description: TUI Application to manage Obsidian notes directly from the terminal
+version_prefix: basalt/v
+version_overrides:
+  - version_constraint: Version == "basalt/v0.10.4"
+    files:
+      - name: basalt
+        src: target/{{.Arch}}-{{.OS}}/release/basalt
+  - version_constraint: semver("> 0.3.1")
+    files:
+      - name: basalt
+        src: target/{{.Arch}}-{{.OS}}/release/basalt
+  - version_constraint: semver("<= 0.3.1")
+    no_asset: true
+  - version_constraint: "true"
+    files:
+      - name: basalt
+        src: target/{{.Arch}}-{{.OS}}/release/basalt
