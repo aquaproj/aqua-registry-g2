@@ -1,0 +1,11 @@
+name: nextest-rs/nextest/cargo-nextest
+type: github_release
+repo_owner: nextest-rs
+repo_name: nextest
+repo_id: 456728202
+description: A next-generation test runner for Rust
+version_prefix: cargo-nextest-
+version_overrides:
+  - version_constraint: SemVer in ["0.9.85-rc.1", "0.9.41-a.5", "0.9.49-rc.1", "0.9.65", "0.9.69", "0.9.71"] or semver("> 0.9.59, <= 0.9.61-rc.1") or semver("> 0.9.61, <= 0.9.62-a.1") or semver("> 0.9.40, <= 0.9.41-a.3")
+    no_asset: true
+  - version_constraint: "true"
