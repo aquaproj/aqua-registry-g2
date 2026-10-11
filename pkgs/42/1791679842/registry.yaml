@@ -1,0 +1,34 @@
+name: ouch-org/ouch
+type: github_release
+repo_owner: ouch-org
+repo_name: ouch
+repo_id: 349334268
+description: Painless compression and decompression in the terminal
+github_artifact_attestations:
+  signer_workflow: ouch-org/ouch/.github/workflows/draft-release-automatic-trigger.yml
+version_overrides:
+  - version_constraint: Version == "0.1.4"
+  - version_constraint: Version == "0.1.5"
+  - version_constraint: Version == "0.1.6"
+  - version_constraint: Version == "0.2.0"
+  - version_constraint: semver(">= 0.8.0")
+    files:
+      - name: ouch
+        src: '{{.AssetWithoutExt}}/ouch'
+    github_artifact_attestations:
+      signer_workflow: ouch-org/ouch/.github/workflows/draft-release-automatic-trigger.yml
+  - version_constraint: semver("> 0.4.1")
+    files:
+      - name: ouch
+        src: '{{.AssetWithoutExt}}/ouch'
+  - version_constraint: semver("> 0.3.1")
+    files:
+      - name: ouch
+        src: '{{.AssetWithoutExt}}/ouch'
+  - version_constraint: semver("<= 0.3.1")
+  - version_constraint: "true"
+    files:
+      - name: ouch
+        src: '{{.AssetWithoutExt}}/ouch'
+    github_artifact_attestations:
+      signer_workflow: ouch-org/ouch/.github/workflows/draft-release-automatic-trigger.yml
