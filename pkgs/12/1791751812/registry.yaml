@@ -1,0 +1,19 @@
+name: ekristen/aws-nuke
+type: github_release
+repo_owner: ekristen
+repo_name: aws-nuke
+repo_id: 429900219
+description: Remove all the resources from an AWS account
+cosign:
+  opts:
+    - --certificate-identity
+    - https://github.com/ekristen/aws-nuke/.github/workflows/goreleaser.yml@refs/tags/{{.Version}}
+    - --certificate-oidc-issuer
+    - https://token.actions.githubusercontent.com
+  bundle:
+    type: github_release
+    asset: '{{.Asset}}.sigstore.json'
+version_overrides:
+  - version_constraint: Version in ["v3.0.0-beta.25", "v3.0.0-beta.44", "v3.0.0-beta.56", "v3.46.0", "v3.53.0", "v3.62.1", "v3.63.0", "v3.64.3"]
+    no_asset: true
+  - version_constraint: "true"
