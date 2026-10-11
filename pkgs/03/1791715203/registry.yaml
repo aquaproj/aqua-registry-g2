@@ -1,0 +1,115 @@
+name: afnanenayet/diffsitter
+type: github_release
+repo_owner: afnanenayet
+repo_name: diffsitter
+repo_id: 275508429
+description: A tree-sitter based AST difftool to get meaningful semantic diffs
+version_overrides:
+  - version_constraint: Version == "v0.1.1"
+  - version_constraint: Version == "v0.1.5"
+    no_asset: true
+  - version_constraint: Version == "v0.1.6"
+    files:
+      - name: diffsitter
+        src: diffsitter-{{.OS}}-{{.Arch}}/diffsitter
+  - version_constraint: Version == "v0.2.0-3"
+    files:
+      - name: diffsitter
+        src: diffsitter-{{.OS}}-{{.Arch}}/diffsitter
+    overrides:
+      - goos: windows
+        files:
+          - name: diffsitter
+  - version_constraint: Version == "v0.2.0"
+    files:
+      - name: diffsitter
+        src: diffsitter-{{.OS}}-{{.Arch}}/diffsitter
+    overrides:
+      - goos: windows
+        files:
+          - name: diffsitter
+  - version_constraint: Version == "v0.3.0-1"
+    files:
+      - name: diffsitter
+        src: diffsitter-{{.OS}}-{{.Arch}}/diffsitter
+    overrides:
+      - goos: windows
+        files:
+          - name: diffsitter
+  - version_constraint: Version == "v0.3.0"
+    files:
+      - name: diffsitter
+        src: diffsitter-{{.OS}}-{{.Arch}}/diffsitter
+  - version_constraint: Version == "v0.6.5"
+    files:
+      - name: diffsitter
+        src: diffsitter-{{.Arch}}-{{.OS}}/diffsitter
+      - name: git-diffsitter
+        src: diffsitter-{{.Arch}}-{{.OS}}/git-diffsitter
+    overrides:
+      - goos: windows
+        files:
+          - name: diffsitter
+          - name: git-diffsitter
+  - version_constraint: Version == "v0.6.6"
+    files:
+      - name: diffsitter
+        src: diffsitter-{{.Arch}}-{{.OS}}/diffsitter
+      - name: git-diffsitter
+        src: diffsitter-{{.Arch}}-{{.OS}}/git-diffsitter
+    overrides:
+      - goos: windows
+        files:
+          - name: diffsitter
+          - name: git-diffsitter
+  - version_constraint: Version == "v0.7.2"
+    files:
+      - name: diffsitter
+        src: diffsitter-{{.Arch}}-{{.OS}}/diffsitter
+      - name: git-diffsitter
+        src: diffsitter-{{.Arch}}-{{.OS}}/git-diffsitter
+  - version_constraint: Version == "v0.7.3"
+    files:
+      - name: diffsitter
+        src: diffsitter-{{.Arch}}-{{.OS}}/diffsitter
+    overrides:
+      - goos: windows
+        files:
+          - name: diffsitter
+          - name: git-diffsitter
+  - version_constraint: semver("> 0.7.1")
+  - version_constraint: semver("> 0.6.4")
+    files:
+      - name: diffsitter
+        src: diffsitter-{{.Arch}}-{{.OS}}/diffsitter
+      - name: git-diffsitter
+        src: diffsitter-{{.Arch}}-{{.OS}}/git-diffsitter
+    overrides:
+      - goos: windows
+        files:
+          - name: diffsitter
+          - name: git-diffsitter
+  - version_constraint: semver("> 0.2.0-2")
+    files:
+      - name: diffsitter
+        src: diffsitter-{{.OS}}-{{.Arch}}/diffsitter
+      - name: git-diffsitter
+        src: diffsitter-{{.OS}}-{{.Arch}}/git-diffsitter
+    overrides:
+      - goos: windows
+        files:
+          - name: diffsitter
+          - name: git-diffsitter
+  - version_constraint: semver("> 0.1.3")
+    files:
+      - name: diffsitter
+        src: diffsitter-{{.OS}}-{{.Arch}}/diffsitter
+    overrides:
+      - goos: windows
+        files:
+          - name: diffsitter
+  - version_constraint: semver("<= 0.1.3")
+    files:
+      - name: diffsitter
+        src: target/release/diffsitter
+  - version_constraint: "true"
