@@ -1,0 +1,28 @@
+name: rustic-rs/rustic
+type: github_release
+repo_owner: rustic-rs
+repo_name: rustic
+repo_id: 469809167
+description: rustic - fast, encrypted, and deduplicated backups powered by Rust
+version_overrides:
+  - version_constraint: Version == "v0.6.0"
+    no_asset: true
+  - version_constraint: Version == "v0.2.0-rc1"
+    files:
+      - name: rustic
+        src: rustic_0.2.0-rc1_x64_64-unknown-linux-musl
+  - version_constraint: Version == "v0.6.1"
+  - version_constraint: Version == "v0.10.2"
+  - version_constraint: semver("> 0.9.4")
+  - version_constraint: semver("> 0.5.4")
+  - version_constraint: semver("> 0.4.4")
+  - version_constraint: semver("> 0.3.0")
+  - version_constraint: semver("> 0.2.2")
+    files:
+      - name: rustic
+        src: rustic-rs
+  - version_constraint: semver("<= 0.2.2")
+    files:
+      - name: rustic
+        src: rustic-rs
+  - version_constraint: "true"
