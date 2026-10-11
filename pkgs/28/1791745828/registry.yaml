@@ -1,0 +1,27 @@
+name: rvben/rumdl
+type: github_release
+repo_owner: rvben
+repo_name: rumdl
+repo_id: 940812004
+description: A Markdown Linter written in Rust
+github_artifact_attestations:
+  signer_workflow: rvben/rumdl/.github/workflows/release.yml
+version_overrides:
+  - version_constraint: Version == "v0.0.45"
+    no_asset: true
+  - version_constraint: semver("> 0.1.68")
+    github_artifact_attestations:
+      signer_workflow: rvben/rumdl/.github/workflows/release.yml
+  - version_constraint: semver("> 0.0.109")
+  - version_constraint: semver("> 0.0.97")
+  - version_constraint: semver("> 0.0.49")
+  - version_constraint: semver("> 0.0.43")
+    format: zip
+    append_ext: false
+    files:
+      - name: rumdl
+        src: rumdl-{{trimV .Version}}.data/scripts/rumdl
+  - version_constraint: semver("<= 0.0.43")
+  - version_constraint: "true"
+    github_artifact_attestations:
+      signer_workflow: rvben/rumdl/.github/workflows/release.yml
