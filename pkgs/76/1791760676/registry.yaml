@@ -1,0 +1,13 @@
+name: sharkdp/diskus
+type: github_release
+repo_owner: sharkdp
+repo_name: diskus
+repo_id: 155746625
+description: A minimal, fast alternative to 'du -sh'
+files:
+  - name: diskus
+    src: diskus-{{.Version}}-{{.Arch}}-{{.OS}}/diskus
+supported_envs:
+  - darwin
+  - linux
+  - amd64
