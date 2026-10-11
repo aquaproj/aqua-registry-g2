@@ -1,0 +1,10 @@
+name: cloudflare/gokey
+type: github_release
+repo_owner: cloudflare
+repo_name: gokey
+repo_id: 71583866
+description: A simple vaultless password manager in Go
+version_overrides:
+  - version_constraint: Version == "v0.1.0"
+    no_asset: true
+  - version_constraint: "true"
