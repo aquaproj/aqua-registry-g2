@@ -1,0 +1,13 @@
+name: microsoft/kiota
+type: github_release
+repo_owner: microsoft
+repo_name: kiota
+repo_id: 323665366
+description: OpenAPI based HTTP Client code generator
+version_overrides:
+  - version_constraint: semver("> 1.0.1")
+  - version_constraint: semver("<= 1.0.1")
+    files:
+      - name: kiota
+        src: '{{.OS}}-{{.Arch}}/kiota'
+  - version_constraint: "true"
