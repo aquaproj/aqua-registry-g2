@@ -1,0 +1,15 @@
+name: ipinfo/cli/randip
+type: github_release
+repo_owner: ipinfo
+repo_name: cli
+repo_id: 306538237
+description: Official Command Line Interface for the IPinfo API (IP geolocation and other types of IP data)
+version_filter: Version startsWith "randip-"
+overrides:
+  - goos: windows
+    files:
+      - name: randip
+        src: randip_{{trimPrefix "randip-" .Version}}_{{.OS}}_{{.Arch}}.exe
+files:
+  - name: randip
+    src: randip_{{trimPrefix "randip-" .Version}}_{{.OS}}_{{.Arch}}
