@@ -1,0 +1,17 @@
+name: rcoh/angle-grinder
+type: github_release
+repo_owner: rcoh
+repo_name: angle-grinder
+repo_id: 123365228
+description: Slice and dice logs on the command line
+files:
+  - name: agrind
+version_overrides:
+  - version_constraint: Version == "v0.19.3"
+  - version_constraint: Version == "v0.15-alpha1"
+  - version_constraint: semver("> 0.15.0")
+  - version_constraint: semver("> 0.3.0")
+  - version_constraint: semver("<= 0.3.0")
+    files:
+      - name: ag
+  - version_constraint: "true"
