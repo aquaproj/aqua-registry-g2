@@ -1,0 +1,35 @@
+name: containers/podlet
+type: github_release
+repo_owner: containers
+repo_name: podlet
+repo_id: 609093297
+description: Generate Podman Quadlet files from a Podman command, compose file, or existing object
+files:
+  - name: podlet
+    src: '{{.AssetWithoutExt}}/podlet'
+version_overrides:
+  - version_constraint: Version == "v0.2.0"
+    overrides:
+      - goos: windows
+        files:
+          - name: podlet
+  - version_constraint: semver("> 0.3.0")
+    overrides:
+      - goos: windows
+        files:
+          - name: podlet
+  - version_constraint: semver("> 0.1.1")
+    overrides:
+      - goos: windows
+        files:
+          - name: podlet
+  - version_constraint: semver("<= 0.1.1")
+    overrides:
+      - goos: windows
+        files:
+          - name: podlet
+  - version_constraint: "true"
+    overrides:
+      - goos: windows
+        files:
+          - name: podlet
