@@ -1,0 +1,15 @@
+name: argoproj-labs/argocd-image-updater
+type: github_release
+repo_owner: argoproj-labs
+repo_name: argocd-image-updater
+repo_id: 284753690
+description: Automatic container image update for Argo CD
+version_overrides:
+  - version_constraint: Version == "v0.10.1"
+    no_asset: true
+  - version_constraint: Version == "v0.9.1"
+  - version_constraint: semver("> 0.11.3")
+  - version_constraint: semver("> 0.7.0")
+  - version_constraint: semver("<= 0.7.0")
+    no_asset: true
+  - version_constraint: "true"
