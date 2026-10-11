@@ -1,0 +1,20 @@
+name: smithy-lang/smithy
+type: github_release
+repo_owner: smithy-lang
+repo_name: smithy
+repo_id: 177212349
+description: Smithy is a protocol-agnostic interface definition language and set of tools for generating clients, servers, and documentation for any programming language
+windows_ext: .bat
+version_overrides:
+  - version_constraint: semver("> 1.47.0")
+    files:
+      - name: smithy
+        src: smithy-cli-{{.OS}}-{{.Arch}}/bin/smithy
+  - version_constraint: semver("<= 1.47.0")
+    files:
+      - name: smithy
+        src: bin/smithy
+  - version_constraint: "true"
+    files:
+      - name: smithy
+        src: smithy-cli-{{.OS}}-{{.Arch}}/bin/smithy
