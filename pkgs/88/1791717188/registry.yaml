@@ -1,0 +1,10 @@
+name: kubernetes-sigs/aws-iam-authenticator
+type: github_release
+repo_owner: kubernetes-sigs
+repo_name: aws-iam-authenticator
+repo_id: 99036030
+description: A tool to use AWS IAM credentials to authenticate to a Kubernetes cluster
+version_overrides:
+  - version_constraint: Version in ["v0.1.0", "v0.5.4", "v0.5.27", "v0.6.20"]
+    no_asset: true
+  - version_constraint: "true"
