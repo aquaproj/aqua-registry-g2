@@ -1,0 +1,163 @@
+{
+  "published_at": "2026-10-06T08:33:09Z",
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "helm",
+      "repo_name": "chart-testing",
+      "repo_id": 112638589,
+      "asset": "chart-testing_3.15.0_darwin_amd64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "07363d48ac59c337f0d06248e2d7ae23022279b4912014b6eaa28e6a5079f1b2",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "ct",
+          "src": "ct"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "chart-testing_3.15.0_darwin_amd64.tar.gz.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/helm/chart-testing/.github/workflows/release.yaml@refs/heads/main",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "helm",
+      "repo_name": "chart-testing",
+      "repo_id": 112638589,
+      "asset": "chart-testing_3.15.0_darwin_arm64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "cbf7eb16c9d460b12cd330d6366ce998c8f00267904632f272b632bf1c8606fb",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "ct",
+          "src": "ct"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "chart-testing_3.15.0_darwin_arm64.tar.gz.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/helm/chart-testing/.github/workflows/release.yaml@refs/heads/main",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "helm",
+      "repo_name": "chart-testing",
+      "repo_id": 112638589,
+      "asset": "chart-testing_3.15.0_linux_amd64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "467561730f25fe09d5e6cd09a3e1f6aa759871c657a57602947c716d9be2c583",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "ct",
+          "src": "ct"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "chart-testing_3.15.0_linux_amd64.tar.gz.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/helm/chart-testing/.github/workflows/release.yaml@refs/heads/main",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "helm",
+      "repo_name": "chart-testing",
+      "repo_id": 112638589,
+      "asset": "chart-testing_3.15.0_linux_arm64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "732d3187e8d7f9c72ab6775f4ebc374562e384e50f94fc0b2844c002e8bad5e5",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "ct",
+          "src": "ct"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "chart-testing_3.15.0_linux_arm64.tar.gz.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/helm/chart-testing/.github/workflows/release.yaml@refs/heads/main",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "helm",
+      "repo_name": "chart-testing",
+      "repo_id": 112638589,
+      "asset": "chart-testing_3.15.0_windows_amd64.zip",
+      "format": "zip",
+      "checksum": "6499089288d39d818cc0d49b22593b1167a04d5ee25321940f2b7b4d8903a6d7",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "ct",
+          "src": "ct.exe"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "chart-testing_3.15.0_windows_amd64.zip.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/helm/chart-testing/.github/workflows/release.yaml@refs/heads/main",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "helm",
+      "repo_name": "chart-testing",
+      "repo_id": 112638589,
+      "asset": "chart-testing_3.15.0_windows_arm64.zip",
+      "format": "zip",
+      "checksum": "315d370847775a6c28473ee3cc713ab4769b86730b204d23cfcfb1de217c4e23",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "ct",
+          "src": "ct.exe"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "chart-testing_3.15.0_windows_arm64.zip.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/helm/chart-testing/.github/workflows/release.yaml@refs/heads/main",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    }
+  ]
+}

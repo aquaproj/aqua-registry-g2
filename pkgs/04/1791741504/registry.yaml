@@ -1,0 +1,17 @@
+name: helm/chart-testing
+type: github_release
+repo_owner: helm
+repo_name: chart-testing
+repo_id: 112638589
+description: CLI tool for linting and testing Helm charts
+files:
+  - name: ct
+cosign:
+  opts:
+    - --certificate-identity
+    - https://github.com/helm/chart-testing/.github/workflows/release.yaml@refs/heads/main
+    - --certificate-oidc-issuer
+    - https://token.actions.githubusercontent.com
+  bundle:
+    type: github_release
+    asset: '{{.Asset}}.sigstore.json'
