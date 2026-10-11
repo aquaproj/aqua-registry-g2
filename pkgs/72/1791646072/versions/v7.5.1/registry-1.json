@@ -19,7 +19,11 @@
         }
       ],
       "github_artifact_attestations": {
-        "signer_workflow": "lxc/incus/.github/workflows/release.yml"
+        "signer_workflow": "lxc/incus/.github/workflows/release.yml",
+        "source_ref": "refs/tags/v7.5.1",
+        "source_digest": "b20ec6c3cb17eaff28fc1145238b8769e44ce39d",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
       }
     },
     {
