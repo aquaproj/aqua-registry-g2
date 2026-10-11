@@ -1,0 +1,32 @@
+name: alexhallam/tv
+type: github_release
+repo_owner: alexhallam
+repo_name: tv
+repo_id: 363146690
+description: (tv) Tidy Viewer is a cross-platform CLI csv pretty printer that uses column styling to maximize viewer enjoyment
+files:
+  - name: tidy-viewer
+version_overrides:
+  - version_constraint: semver("> 1.6.5")
+  - version_constraint: semver("> 1.5.2")
+    no_asset: true
+  - version_constraint: semver("> 1.4.30")
+    files:
+      - name: tidy-viewer
+        src: '{{.AssetWithoutExt}}/tidy-viewer'
+    overrides:
+      - goos: linux
+        files:
+          - name: tidy-viewer
+            src: usr/bin/tidy-viewer
+  - version_constraint: semver("> 1.4.6")
+    files:
+      - name: tidy-viewer
+        src: '{{.AssetWithoutExt}}/tidy-viewer'
+  - version_constraint: semver("> 0.0.18")
+    files:
+      - name: tidy-viewer
+        src: '{{.AssetWithoutExt}}/tidy-viewer'
+  - version_constraint: semver("<= 0.0.18")
+    error_message: The version is too old. Please upgrade to a newer version.
+  - version_constraint: "true"
