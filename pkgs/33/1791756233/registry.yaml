@@ -1,0 +1,14 @@
+name: sqls-server/sqls
+type: github_release
+repo_owner: sqls-server
+repo_name: sqls
+repo_id: 218044081
+description: SQL language server written in Go
+version_overrides:
+  - version_constraint: semver("> 0.2.20")
+  - version_constraint: semver("> 0.1.0")
+  - version_constraint: semver("<= 0.1.0")
+    files:
+      - name: sqls
+        src: '{{.OS}}-{{.Arch}}/sqls'
+  - version_constraint: "true"
