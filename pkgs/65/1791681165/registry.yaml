@@ -1,0 +1,47 @@
+name: nadoo/glider
+type: github_release
+repo_owner: nadoo
+repo_name: glider
+repo_id: 97128069
+description: glider is a forward proxy with multiple protocols support, and also a dns/dhcp server with ipset management features(like dnsmasq)
+version_overrides:
+  - version_constraint: Version == "v0.5.3"
+    no_asset: true
+  - version_constraint: Version == "v0.7.0"
+    files:
+      - name: glider
+        src: glider-{{.Version}}-{{.OS}}-{{.Arch}}/glider
+  - version_constraint: Version == "v0.15.0"
+    files:
+      - name: glider
+        src: glider_{{trimV .Version}}_{{.OS}}_{{.Arch}}/glider
+  - version_constraint: semver("> 0.16.3")
+    files:
+      - name: glider
+        src: '{{.AssetWithoutExt}}/glider'
+  - version_constraint: semver("> 0.15.2")
+    files:
+      - name: glider
+        src: '{{.AssetWithoutExt}}/glider'
+  - version_constraint: semver("> 0.14.0")
+    files:
+      - name: glider
+        src: '{{.AssetWithoutExt}}/glider'
+  - version_constraint: semver("> 0.13.0")
+    files:
+      - name: glider
+        src: '{{.AssetWithoutExt}}/glider'
+  - version_constraint: semver("> 0.6.11")
+    files:
+      - name: glider
+        src: '{{.AssetWithoutExt}}/glider'
+  - version_constraint: semver("> 0.3.2")
+    files:
+      - name: glider
+  - version_constraint: semver("<= 0.3.2")
+    files:
+      - name: glider
+  - version_constraint: "true"
+    files:
+      - name: glider
+        src: '{{.AssetWithoutExt}}/glider'
