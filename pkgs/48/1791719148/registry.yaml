@@ -1,0 +1,17 @@
+name: sharkdp/vivid
+type: github_release
+repo_owner: sharkdp
+repo_name: vivid
+repo_id: 158295285
+description: A themeable LS_COLORS generator with a rich filetype database
+files:
+  - name: vivid
+    src: vivid-{{.Version}}-{{.Arch}}-{{.OS}}/vivid
+version_overrides:
+  - version_constraint: semver("< 0.8.0")
+  - version_constraint: semver(">= 0.8.0, < 0.11.0")
+  - version_constraint: semver("= 0.11.0")
+    files:
+      - name: vivid
+        src: vivid-v0.10.1-{{.Arch}}-{{.OS}}/vivid
+  - version_constraint: "true"
