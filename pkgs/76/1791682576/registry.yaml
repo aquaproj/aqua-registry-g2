@@ -1,0 +1,19 @@
+name: antonmedv/walk
+aliases:
+  - name: antonmedv/llama
+type: github_release
+repo_owner: antonmedv
+repo_name: walk
+repo_id: 436414970
+description: Terminal file manager
+version_overrides:
+  - version_constraint: Version == "v1.5.0"
+    no_asset: true
+  - version_constraint: semver("> 1.4.0")
+  - version_constraint: semver("> 1.1.0")
+    files:
+      - name: llama
+  - version_constraint: semver("<= 1.1.0")
+    files:
+      - name: llama
+  - version_constraint: "true"
