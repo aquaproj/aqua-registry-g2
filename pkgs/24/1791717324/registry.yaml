@@ -1,0 +1,25 @@
+name: redhat-et/ripwire
+type: github_release
+repo_owner: redhat-et
+repo_name: ripwire
+repo_id: 1316317581
+description: A zero-dependency CLI and MCP server for finding context in codebases
+version_overrides:
+  - version_constraint: Version == "v0.1.0"
+    no_asset: true
+  - version_constraint: semver("> 0.3.5")
+    files:
+      - name: ripwire
+        src: ripwire-{{trimV .Version}}-{{.OS}}-{{.Arch}}/ripwire
+  - version_constraint: semver("> 0.2.2")
+    files:
+      - name: ripwire
+        src: ripwire-0.2.2-{{.OS}}-{{.Arch}}/ripwire
+  - version_constraint: semver("<= 0.2.2")
+    files:
+      - name: ripwire
+        src: ripwire-{{trimV .Version}}-{{.OS}}-{{.Arch}}/ripwire
+  - version_constraint: "true"
+    files:
+      - name: ripwire
+        src: ripwire-{{trimV .Version}}-{{.OS}}-{{.Arch}}/ripwire
