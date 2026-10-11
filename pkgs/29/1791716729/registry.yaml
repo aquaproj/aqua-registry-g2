@@ -1,0 +1,18 @@
+name: praetorian-inc/noseyparker
+type: github_release
+repo_owner: praetorian-inc
+repo_name: noseyparker
+repo_id: 563584480
+description: Nosey Parker is a command-line tool that finds secrets and sensitive information in textual data and Git history
+files:
+  - name: noseyparker
+    src: bin/noseyparker
+version_overrides:
+  - version_constraint: Version == "v0.17.0"
+  - version_constraint: semver("> 0.20.0")
+  - version_constraint: semver("> 0.16.0")
+  - version_constraint: semver("> 0.14.0")
+  - version_constraint: semver("> 0.12.0")
+  - version_constraint: semver("<= 0.12.0")
+    no_asset: true
+  - version_constraint: "true"
