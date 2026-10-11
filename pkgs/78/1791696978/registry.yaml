@@ -1,0 +1,11 @@
+name: dnote/dnote/cli
+type: github_release
+repo_owner: dnote
+repo_name: dnote
+repo_id: 86756976
+description: A simple command line notebook for programmers
+version_filter: Version startsWith "cli-"
+files:
+  - name: dnote
+version_overrides:
+  - version_constraint: "true"
