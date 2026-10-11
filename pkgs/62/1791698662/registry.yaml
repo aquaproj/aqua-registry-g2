@@ -1,0 +1,17 @@
+name: nickel-lang/nickel
+aliases:
+  - name: tweag/nickel
+type: github_release
+repo_owner: nickel-lang
+repo_name: nickel
+repo_id: 164738063
+description: Better configuration for less
+version_overrides:
+  - version_constraint: Version == "1.2.0"
+    no_asset: true
+  - version_constraint: semver("> 1.9.1")
+  - version_constraint: semver("> 1.8.0")
+  - version_constraint: semver("> 0.3.1")
+  - version_constraint: semver("<= 0.3.1")
+    no_asset: true
+  - version_constraint: "true"
