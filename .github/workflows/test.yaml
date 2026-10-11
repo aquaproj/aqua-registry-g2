@@ -5,11 +5,11 @@
 name: test
 on:
   pull_request:
-    # Not labeled or unlabeled. A run for a label would skip every job, and its skipped
-    # status-check-main would be the newest, which GitHub reads as a pass: putting any label
-    # on a failing pull request would have made it mergeable. replaces-published, the one
-    # label the checks read, re-runs this workflow from replaces_published.yaml instead.
-    types: [opened, synchronize, reopened]
+    # auto_merge_enabled and auto_merge_disabled too: a pull request that changes a published
+    # file may not merge itself, so turning auto-merge on has to be checked again. Not
+    # labeled or unlabeled: no label is read, and a run for one would leave a skipped
+    # status-check-main, which GitHub reads as a pass.
+    types: [opened, synchronize, reopened, auto_merge_enabled, auto_merge_disabled]
 permissions: {}
 concurrency:
   group: ${{ github.workflow }}--${{ github.ref }}
@@ -19,9 +19,8 @@ jobs:
     uses: ./.github/workflows/wc_main.yaml
     permissions:
       contents: read
-      # Reading which files the pull request touches, and who labelled it.
+      # Reading which files the pull request touches, and whether it is set to merge itself.
       pull-requests: read
-      issues: read
   # The one check the ruleset requires.
   status-check-main:
     runs-on: ubuntu-24.04

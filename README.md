@@ -75,8 +75,8 @@ There is only one schema so far.
   get them.
 - A new schema doesn't take a published file away. A file goes only with its version: when
   upstream deletes the release or its assets, or when the package is
-  [removed](skills/remove-package/SKILL.md). Either needs a person to label the pull request
-  `replaces-published`.
+  [removed](skills/remove-package/SKILL.md). Either is a pull request labelled
+  `replaces-published` that never merges itself: a person merges it.
 
 So a reader asks for the newest `registry-<major>.json` it knows, and steps down to older
 ones if that isn't there.

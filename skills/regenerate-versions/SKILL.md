@@ -16,9 +16,9 @@ gh workflow run regenerate.yaml -f name=<package name> -f dry_run=true
 
 Naming no version does every version the registry holds, which for a package with a long
 history is a large pull request. `dry_run` says which versions would change and commits
-nothing. The pull request it opens is never set to auto-merge, so it is read, and it replaces
-published files, which the checks refuse until a person labels it `replaces-published`. The
-label is that reading's conclusion.
+nothing. The pull request it opens replaces published files, so it is labelled
+`replaces-published` and never set to auto-merge, and the checks fail it if auto-merge is
+turned on. It is read and merged by a person; merging it is that reading's conclusion.
 
 ### What is waiting for a definition
 

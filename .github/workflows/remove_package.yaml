@@ -9,7 +9,8 @@ name: remove a package
 # It opens two pull requests into main, one carrying the registry's configuration and the
 # catalogue, and one taking the generated files out of the package's directory. The first
 # has to merge first, or the next run generates the files again; the second says so. The
-# second changes published files, so it waits for a person to label it replaces-published.
+# second changes published files, so it is labelled replaces-published and left for a
+# person to merge.
 on:
   workflow_dispatch:
     inputs:
