@@ -1,0 +1,11 @@
+name: x-motemen/ghq
+type: github_release
+repo_owner: x-motemen
+repo_name: ghq
+repo_id: 8026846
+description: Remote repository management made easy
+files:
+  - name: ghq
+    src: ghq_{{.OS}}_{{.Arch}}/ghq
+version_overrides:
+  - version_constraint: "true"
