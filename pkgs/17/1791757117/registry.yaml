@@ -1,0 +1,24 @@
+name: KusionStack/kusion
+type: github_release
+repo_owner: KusionStack
+repo_name: kusion
+repo_id: 488866928
+description: Deliver intentions to Kubernetes and Clouds
+version_overrides:
+  - version_constraint: semver("> 0.10.0")
+  - version_constraint: semver("> 0.7.2")
+  - version_constraint: semver("> 0.5.3")
+    files:
+      - name: kusion
+        src: bin/kusion
+    replacements:
+      linux: ubuntu
+  - version_constraint: semver("> 0.4.1")
+    files:
+      - name: kusion
+        src: bin/kusion
+  - version_constraint: semver("<= 0.4.1")
+    files:
+      - name: kusion
+        src: bin/kusion
+  - version_constraint: "true"
