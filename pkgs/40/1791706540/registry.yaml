@@ -1,0 +1,28 @@
+name: sharkdp/numbat
+type: github_release
+repo_owner: sharkdp
+repo_name: numbat
+repo_id: 517024127
+description: A statically typed programming language for scientific computations with first class support for physical dimensions and units
+version_overrides:
+  - version_constraint: Version == "v1.9.0"
+    files:
+      - name: numbat
+        src: '{{.AssetWithoutExt}}/numbat'
+  - version_constraint: semver("> 1.14.0")
+    files:
+      - name: numbat
+        src: '{{.AssetWithoutExt}}/numbat'
+  - version_constraint: semver("> 1.6.1")
+    files:
+      - name: numbat
+        src: '{{.AssetWithoutExt}}/numbat'
+  - version_constraint: semver("<= 1.6.1")
+    format: tar.gz
+    files:
+      - name: numbat
+        src: numbat/numbat
+  - version_constraint: "true"
+    files:
+      - name: numbat
+        src: '{{.AssetWithoutExt}}/numbat'
