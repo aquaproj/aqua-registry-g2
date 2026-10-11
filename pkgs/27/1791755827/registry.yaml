@@ -1,0 +1,9 @@
+name: itchyny/bed
+type: github_release
+repo_owner: itchyny
+repo_name: bed
+repo_id: 128839303
+description: Binary editor written in Go
+files:
+  - name: bed
+    src: bed_{{.Version}}_{{.OS}}_{{.Arch}}/bed
