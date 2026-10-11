@@ -1,0 +1,115 @@
+{
+  "published_at": "2026-02-02T17:18:53Z",
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "containers",
+      "repo_name": "podlet",
+      "repo_id": 609093297,
+      "asset": "podlet-x86_64-apple-darwin.tar.xz",
+      "format": "tar.xz",
+      "checksum": "59ca6307b088c5add34556e64e723af946aed81c003f23dedfdf1a7c79e2f257",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "podlet",
+          "src": "podlet-x86_64-apple-darwin/podlet"
+        }
+      ]
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "containers",
+      "repo_name": "podlet",
+      "repo_id": 609093297,
+      "asset": "podlet-aarch64-apple-darwin.tar.xz",
+      "format": "tar.xz",
+      "checksum": "456e8040f3a74aef658967b30d58eaf69f5367478fc9064950ff37f5050f1f58",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "podlet",
+          "src": "podlet-aarch64-apple-darwin/podlet"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "containers",
+      "repo_name": "podlet",
+      "repo_id": 609093297,
+      "asset": "podlet-x86_64-unknown-linux-musl.tar.xz",
+      "format": "tar.xz",
+      "checksum": "6ae1668042f9e3243c5e0b1ae5601c27a169ecc006881d03fcdaf2ebb95635d4",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "podlet",
+          "src": "podlet-x86_64-unknown-linux-musl/podlet"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "containers",
+      "repo_name": "podlet",
+      "repo_id": 609093297,
+      "asset": "podlet-aarch64-unknown-linux-gnu.tar.xz",
+      "format": "tar.xz",
+      "checksum": "af5d7e2a4d001e9aa3951b75479de6e6acc34f7af89edf450419b26982574d30",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "podlet",
+          "src": "podlet-aarch64-unknown-linux-gnu/podlet"
+        }
+      ]
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "containers",
+      "repo_name": "podlet",
+      "repo_id": 609093297,
+      "asset": "podlet-x86_64-pc-windows-msvc.zip",
+      "format": "zip",
+      "checksum": "237f6bf7664c421712f3b622e6f78a2affb3d0fbea8bf5553eec377bd4429d9a",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "podlet",
+          "src": "podlet.exe"
+        }
+      ]
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "containers",
+      "repo_name": "podlet",
+      "repo_id": 609093297,
+      "asset": "podlet-aarch64-pc-windows-msvc.zip",
+      "format": "zip",
+      "checksum": "3111fa4f6c3858ec9801ac22c0a8aacc02024ba5d47f4132da7c97eac3ee0a47",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "podlet",
+          "src": "podlet.exe"
+        }
+      ]
+    }
+  ]
+}
