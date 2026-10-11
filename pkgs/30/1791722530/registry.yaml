@@ -1,0 +1,15 @@
+name: runmedev/runme
+aliases:
+  - name: stateful/rdme
+  - name: stateful/runme
+type: github_release
+repo_owner: runmedev
+repo_name: runme
+repo_id: 515087779
+description: DevOps Notebooks Built with Markdown
+version_overrides:
+  - version_constraint: semver("> 0.1.12")
+  - version_constraint: semver("<= 0.1.12")
+    files:
+      - name: rdme
+  - version_constraint: "true"
