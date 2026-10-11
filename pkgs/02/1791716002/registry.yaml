@@ -1,0 +1,36 @@
+name: static-web-server/static-web-server
+type: github_release
+repo_owner: static-web-server
+repo_name: static-web-server
+repo_id: 205869004
+description: A cross-platform, high-performance and asynchronous web server for static files-serving
+version_overrides:
+  - version_constraint: Version == "1.0.0-beta.4"
+    no_asset: true
+  - version_constraint: Version == "1.0.0-beta.2"
+  - version_constraint: Version == "1.0.0-beta.3"
+  - version_constraint: Version == "v2.0.0-beta.5"
+    files:
+      - name: static-web-server
+        src: '{{.AssetWithoutExt}}/static-web-server'
+  - version_constraint: semver("> 2.23.0")
+    files:
+      - name: static-web-server
+        src: '{{.AssetWithoutExt}}/static-web-server'
+  - version_constraint: semver("> 2.0.0-beta.4")
+    files:
+      - name: static-web-server
+        src: '{{.AssetWithoutExt}}/static-web-server'
+  - version_constraint: semver("> 1.19.4")
+  - version_constraint: semver("> 1.16.0")
+    files:
+      - name: static-web-server
+        src: '{{.AssetWithoutExt}}/static-web-server'
+  - version_constraint: semver("> 1.13.0")
+  - version_constraint: semver("> 1.6.0")
+  - version_constraint: semver("> 1.2.0")
+  - version_constraint: semver("<= 1.2.0")
+  - version_constraint: "true"
+    files:
+      - name: static-web-server
+        src: '{{.AssetWithoutExt}}/static-web-server'
