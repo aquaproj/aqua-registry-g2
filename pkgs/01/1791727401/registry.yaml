@@ -1,0 +1,15 @@
+name: ipinfo/cli/range2ip
+type: github_release
+repo_owner: ipinfo
+repo_name: cli
+repo_id: 306538237
+description: Official Command Line Interface for the IPinfo API (IP geolocation and other types of IP data)
+version_filter: Version startsWith "range2ip-"
+overrides:
+  - goos: windows
+    files:
+      - name: range2ip
+        src: range2ip_{{trimPrefix "range2ip-" .Version}}_{{.OS}}_{{.Arch}}.exe
+files:
+  - name: range2ip
+    src: range2ip_{{trimPrefix "range2ip-" .Version}}_{{.OS}}_{{.Arch}}
