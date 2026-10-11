@@ -1,0 +1,14 @@
+name: rustsec/rustsec/cargo-audit
+type: github_release
+repo_owner: rustsec
+repo_name: rustsec
+repo_id: 81192894
+description: Audit your dependencies for crates
+version_prefix: cargo-audit/v
+version_overrides:
+  - version_constraint: Version == "0.17.1"
+    no_asset: true
+  - version_constraint: "true"
+    files:
+      - name: cargo-audit
+        src: cargo-audit-{{.Arch}}-{{.OS}}-v{{.SemVer}}/cargo-audit
