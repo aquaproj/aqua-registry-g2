@@ -1,0 +1,13 @@
+name: arttor/helmify
+type: github_release
+repo_owner: arttor
+repo_name: helmify
+repo_id: 391663444
+description: Creates Helm chart from Kubernetes yaml
+version_overrides:
+  - version_constraint: Version == "v0.3.0"
+  - version_constraint: semver("> 0.4.4")
+  - version_constraint: semver("> 0.2.2")
+  - version_constraint: semver("<= 0.2.2")
+    no_asset: true
+  - version_constraint: "true"
