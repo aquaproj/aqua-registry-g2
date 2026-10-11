@@ -1,0 +1,16 @@
+name: bgreenwell/lstr
+type: github_release
+repo_owner: bgreenwell
+repo_name: lstr
+repo_id: 997508788
+description: A fast, minimalist directory tree viewer, written in Rust
+version_overrides:
+  - version_constraint: Version == "v0.2.1"
+  - version_constraint: "true"
+    files:
+      - name: lstr
+        src: '{{.AssetWithoutExt}}/lstr'
+    overrides:
+      - goos: windows
+        files:
+          - name: lstr
