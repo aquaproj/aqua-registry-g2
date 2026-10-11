@@ -1,0 +1,9 @@
+name: maxpert/marmot
+type: github_release
+repo_owner: maxpert
+repo_name: marmot
+repo_id: 529504107
+description: A distributed SQLite server with MySQL wire compatible interface
+all_assets_filter: |
+  let words = ["arm7"];
+  not any(words, {Asset matches #})
