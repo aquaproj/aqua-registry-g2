@@ -1,0 +1,20 @@
+name: quarylabs/sqruff
+type: github_release
+repo_owner: quarylabs
+repo_name: sqruff
+repo_id: 601303277
+description: Fast SQL formatter/linter
+github_artifact_attestations:
+  signer_workflow: quarylabs/sqruff/.github/workflows/release.yml
+version_overrides:
+  - version_constraint: Version == "v0.12.0"
+  - version_constraint: semver(">= 0.25.14")
+    github_artifact_attestations:
+      signer_workflow: quarylabs/sqruff/.github/workflows/release.yml
+  - version_constraint: semver("> 0.0.9")
+  - version_constraint: semver("> 0.0.4")
+  - version_constraint: semver("> 0.0.2")
+  - version_constraint: semver("<= 0.0.2")
+  - version_constraint: "true"
+    github_artifact_attestations:
+      signer_workflow: quarylabs/sqruff/.github/workflows/release.yml
