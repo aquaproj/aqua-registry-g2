@@ -1,0 +1,17 @@
+name: flux-iac/tofu-controller/tfctl
+aliases:
+  - name: weaveworks/tf-controller
+type: github_release
+repo_owner: flux-iac
+repo_name: tofu-controller
+repo_id: 440496898
+description: A GitOps OpenTofu and Terraform controller for Flux
+version_filter: not (Version matches "-rc")
+version_overrides:
+  - version_constraint: semver("> 0.16.0-rc.7")
+  - version_constraint: semver("> 0.16.0-rc.4")
+  - version_constraint: semver("> 0.15.1")
+  - version_constraint: semver("> 0.9.4")
+  - version_constraint: semver("<= 0.9.4")
+    no_asset: true
+  - version_constraint: "true"
