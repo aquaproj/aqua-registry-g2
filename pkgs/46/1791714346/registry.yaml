@@ -1,0 +1,12 @@
+name: zurawiki/gptcommit
+type: github_release
+repo_owner: zurawiki
+repo_name: gptcommit
+repo_id: 588732058
+description: A git prepare-commit-msg hook for authoring commit messages with GPT-3
+version_overrides:
+  - version_constraint: Version == "v0.1.7"
+  - version_constraint: semver("> 0.5.5")
+  - version_constraint: semver("> 0.5.3")
+    no_asset: true
+  - version_constraint: "true"
