@@ -38,10 +38,14 @@ fi
 # Whether a person labelled the pull request as replacing what is published. The label is
 # read from who put it there, not only from its being there: ar2 labels its own pull
 # requests, and a label it could put on itself would decide nothing.
+#
+# Both are asked of the API rather than read off the event. Putting the label on re-runs the
+# run the pull request already has, and a re-run is given the event it was first run for,
+# from before the label was there.
 replaces=false
 labeller=$(gh api "repos/$GITHUB_REPOSITORY/issues/$NUMBER/events" --paginate \
 	--jq ".[] | select(.event == \"labeled\" and .label.name == \"$REQUIRED_LABEL\") | .actor.type" | tail -n 1)
-if [ "$labeller" = User ] && jq -e --arg l "$REQUIRED_LABEL" 'index($l)' <<< "$LABELS" > /dev/null; then
+if [ "$labeller" = User ] && gh api "repos/$GITHUB_REPOSITORY/issues/$NUMBER/labels" --paginate --jq '.[].name' | grep -qx "$REQUIRED_LABEL"; then
 	replaces=true
 fi
 

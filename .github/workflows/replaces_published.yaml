@@ -1,0 +1,45 @@
+---
+# Checks a pull request again when replaces-published is put on it or taken off.
+#
+# The checks are test.yaml's, and they read the label when they run, so the run the pull
+# request already has is re-run rather than a run of its own started here. A run of its own
+# for a label would have had to skip everything else, and a skipped status-check-main
+# newer than a failing one is a pass to GitHub.
+name: replaces-published
+on:
+  pull_request:
+    types: [labeled, unlabeled]
+permissions: {}
+concurrency:
+  group: ${{ github.workflow }}--${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  rerun:
+    if: github.event.label.name == 'replaces-published'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    permissions:
+      # Re-running test.yaml.
+      actions: write
+    steps:
+      - run: |
+          set -euo pipefail
+          run_id=$(gh run list -R "$GITHUB_REPOSITORY" --workflow test.yaml --event pull_request \
+            --commit "$HEAD_SHA" --limit 1 --json databaseId --jq '.[0].databaseId // empty')
+          if [ -z "$run_id" ]; then
+            echo "::error::no run of test.yaml for $HEAD_SHA to re-run"
+            exit 1
+          fi
+          # A run that is still going is cancelled first: it may have read the labels
+          # before this one changed, and only a finished run can be re-run.
+          if [ "$(gh run view -R "$GITHUB_REPOSITORY" "$run_id" --json status --jq .status)" != completed ]; then
+            gh run cancel -R "$GITHUB_REPOSITORY" "$run_id" || true
+            until [ "$(gh run view -R "$GITHUB_REPOSITORY" "$run_id" --json status --jq .status)" = completed ]; do
+              sleep 10
+            done
+          fi
+          gh run rerun -R "$GITHUB_REPOSITORY" "$run_id"
+          echo "Re-ran https://github.com/$GITHUB_REPOSITORY/actions/runs/$run_id" >> "$GITHUB_STEP_SUMMARY"
+        env:
+          GH_TOKEN: ${{ github.token }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
