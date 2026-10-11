@@ -1,0 +1,14 @@
+name: optiv/Mangle
+type: github_release
+repo_owner: optiv
+repo_name: Mangle
+repo_id: 505984181
+description: Mangle is a tool that manipulates aspects of compiled executables (.exe or DLL) to avoid detection from EDRs
+files:
+  - name: mangle
+version_overrides:
+  - version_constraint: "true"
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
