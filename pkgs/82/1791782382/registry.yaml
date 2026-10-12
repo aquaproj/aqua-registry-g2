@@ -1,0 +1,53 @@
+name: yamafaktory/jql
+type: github_release
+repo_owner: yamafaktory
+repo_name: jql
+repo_id: 147120314
+description: A JSON Query Language CLI tool
+version_prefix: jql-
+supported_envs:
+  - darwin
+  - linux
+  - amd64
+version_overrides:
+  - version_constraint: semver(">= 6.0.7")
+  - version_constraint: semver(">= 6.0.5")
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver(">= 6.0.4")
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver(">= 6.0.3")
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver(">= 5.1.3")
+    version_prefix: ""
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver(">= 5.1.2")
+    version_prefix: ""
+  - version_constraint: semver(">= 5.1.1")
+    version_prefix: ""
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver(">= 5.1.0")
+    version_prefix: ""
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver(">= 3.2.4")
+    version_prefix: ""
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver("< 3.2.4")
+    version_prefix: ""
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: "true"
