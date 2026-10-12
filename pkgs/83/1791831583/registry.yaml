@@ -1,0 +1,24 @@
+name: alcideio/rbac-tool
+type: github_release
+repo_owner: alcideio
+repo_name: rbac-tool
+repo_id: 249234631
+description: Rapid7 | insightCloudSec | Kubernetes RBAC Power Toys - Visualize, Analyze, Generate & Query
+version_overrides:
+  - version_constraint: semver("> 0.10.1")
+  - version_constraint: semver("> 0.6.2")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("> 0.1.0")
+    files:
+      - name: rbac-tool
+        src: '{{.OS}}-{{.Arch}}/rbac-tool'
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("<= 0.1.0")
+    no_asset: true
+  - version_constraint: "true"
