@@ -1,0 +1,11 @@
+name: RasKrebs/sonar
+type: github_release
+repo_owner: RasKrebs
+repo_name: sonar
+repo_id: 1172461735
+description: CLI tool for inspecting and managing services listening on localhost ports
+version_overrides:
+  - version_constraint: "true"
+    supported_envs:
+      - linux
+      - darwin
