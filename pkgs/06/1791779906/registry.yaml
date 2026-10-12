@@ -1,0 +1,47 @@
+name: stackrox/kube-linter
+type: github_release
+repo_owner: stackrox
+repo_name: kube-linter
+repo_id: 287336275
+description: KubeLinter is a static analysis tool that checks Kubernetes YAML files and Helm charts to ensure the applications represented in them adhere to best practices
+version_overrides:
+  - version_constraint: Version in ["0.0.1", "v0.8.0"]
+    no_asset: true
+  - version_constraint: Version == "v0.6.8"
+    cosign:
+      opts:
+        - --key
+        - https://raw.githubusercontent.com/stackrox/kube-linter/refs/tags/{{.Version}}/kubelinter-cosign.pub
+        - --signature
+        - https://github.com/stackrox/kube-linter/releases/download/{{.Version}}/{{.Asset}}.sig
+  - version_constraint: semver("<= 0.4.0")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("<= 0.6.7")
+    cosign:
+      opts:
+        - --key
+        - https://raw.githubusercontent.com/stackrox/kube-linter/refs/tags/{{.Version}}/kubelinter-cosign.pub
+        - --signature
+        - https://github.com/stackrox/kube-linter/releases/download/{{.Version}}/{{.Asset}}.sig
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("<= 0.7.6")
+    cosign:
+      opts:
+        - --key
+        - https://raw.githubusercontent.com/stackrox/kube-linter/refs/tags/{{.Version}}/kubelinter-cosign.pub
+        - --signature
+        - https://github.com/stackrox/kube-linter/releases/download/{{.Version}}/{{.Asset}}.sig
+  - version_constraint: "true"
+    cosign:
+      opts:
+        - --key
+        - https://raw.githubusercontent.com/stackrox/kube-linter/refs/tags/{{.Version}}/kubelinter-cosign.pub
+      bundle:
+        type: github_release
+        asset: '{{.Asset}}.sigstore.json'
