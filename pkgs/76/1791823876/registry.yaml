@@ -1,0 +1,31 @@
+name: bazel-contrib/buildtools/buildifier
+aliases:
+  - name: bazelbuild/buildtools/buildifier
+type: github_release
+repo_owner: bazel-contrib
+repo_name: buildtools
+repo_id: 60805080
+description: Format BUILD, BUILD.bazel and BUCK files in a standard way
+version_overrides:
+  - version_constraint: Version == "0.4.3"
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: Version == "0.25.0"
+    supported_envs:
+      - darwin
+  - version_constraint: Version == "4.0.0"
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("> 3.5.0")
+  - version_constraint: semver("> 0.22.0")
+    supported_envs:
+      - darwin
+      - windows/amd64
+  - version_constraint: semver("<= 0.22.0")
+    supported_envs:
+      - darwin
+  - version_constraint: "true"
+all_assets_filter: Asset matches "^buildifier[.].+([.].+)?$" or Asset matches "^buildifier-.+-.+([.].+)?$" or Asset matches "^buildifier([.].+)?$" or Asset endsWith ".intoto.jsonl"
