@@ -1,0 +1,181 @@
+{
+  "published_at": "2026-09-29T21:14:06Z",
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "astral-sh",
+      "repo_name": "uv",
+      "repo_id": 699532645,
+      "asset": "uv-x86_64-apple-darwin.tar.gz",
+      "format": "tar.gz",
+      "checksum": "2b336763b396ec6afa20c5a8b083538ca7402445b868311979d740a4344c17d8",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "uv",
+          "src": "uv-x86_64-apple-darwin/uv"
+        },
+        {
+          "name": "uvx",
+          "src": "uv-x86_64-apple-darwin/uvx"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "astral-sh/uv/.github/workflows/release.yml",
+        "source_ref": "refs/heads/main",
+        "source_digest": "7af826859382eb191e47467540850caa8f493e5b",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "astral-sh",
+      "repo_name": "uv",
+      "repo_id": 699532645,
+      "asset": "uv-aarch64-apple-darwin.tar.gz",
+      "format": "tar.gz",
+      "checksum": "b88bda573e566ef9bced66b155fe0408626fbbc053aee1c30ba686f0728c9447",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "uv",
+          "src": "uv-aarch64-apple-darwin/uv"
+        },
+        {
+          "name": "uvx",
+          "src": "uv-aarch64-apple-darwin/uvx"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "astral-sh/uv/.github/workflows/release.yml",
+        "source_ref": "refs/heads/main",
+        "source_digest": "7af826859382eb191e47467540850caa8f493e5b",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "astral-sh",
+      "repo_name": "uv",
+      "repo_id": 699532645,
+      "asset": "uv-x86_64-unknown-linux-musl.tar.gz",
+      "format": "tar.gz",
+      "checksum": "d69d543a55ec9cdf9d3d9f2648b0a161847e3dbddc477e3be6b5813a6d46f639",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "uv",
+          "src": "uv-x86_64-unknown-linux-musl/uv"
+        },
+        {
+          "name": "uvx",
+          "src": "uv-x86_64-unknown-linux-musl/uvx"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "astral-sh/uv/.github/workflows/release.yml",
+        "source_ref": "refs/heads/main",
+        "source_digest": "7af826859382eb191e47467540850caa8f493e5b",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "astral-sh",
+      "repo_name": "uv",
+      "repo_id": 699532645,
+      "asset": "uv-aarch64-unknown-linux-musl.tar.gz",
+      "format": "tar.gz",
+      "checksum": "67389a674e62adffa5a395d9a3b80688731c4aa7b33a6def3e62d00f7fec821f",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "uv",
+          "src": "uv-aarch64-unknown-linux-musl/uv"
+        },
+        {
+          "name": "uvx",
+          "src": "uv-aarch64-unknown-linux-musl/uvx"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "astral-sh/uv/.github/workflows/release.yml",
+        "source_ref": "refs/heads/main",
+        "source_digest": "7af826859382eb191e47467540850caa8f493e5b",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "astral-sh",
+      "repo_name": "uv",
+      "repo_id": 699532645,
+      "asset": "uv-x86_64-pc-windows-msvc.zip",
+      "format": "zip",
+      "checksum": "5d223efa0bf00208c3853246af09420419dfbd352536aa6bb8163d6170e23890",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "uv",
+          "src": "uv.exe"
+        },
+        {
+          "name": "uvx",
+          "src": "uvx.exe"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "astral-sh/uv/.github/workflows/release.yml",
+        "source_ref": "refs/heads/main",
+        "source_digest": "7af826859382eb191e47467540850caa8f493e5b",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "astral-sh",
+      "repo_name": "uv",
+      "repo_id": 699532645,
+      "asset": "uv-aarch64-pc-windows-msvc.zip",
+      "format": "zip",
+      "checksum": "93ed53b94e9cec000cacdfd18ca67bc4cb2b6a5f5ec041edd7f2a3dae365ce79",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "uv",
+          "src": "uv.exe"
+        },
+        {
+          "name": "uvx",
+          "src": "uvx.exe"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "astral-sh/uv/.github/workflows/release.yml",
+        "source_ref": "refs/heads/main",
+        "source_digest": "7af826859382eb191e47467540850caa8f493e5b",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    }
+  ]
+}
