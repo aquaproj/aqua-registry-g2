@@ -1,0 +1,29 @@
+name: 8051Enthusiast/biodiff
+type: github_release
+repo_owner: 8051Enthusiast
+repo_name: biodiff
+repo_id: 369979546
+description: Hex diff viewer using alignment algorithms from biology
+version_overrides:
+  - version_constraint: Version == "v0.2.0"
+    supported_envs:
+      - darwin
+      - windows/amd64
+  - version_constraint: Version == "v0.2.1"
+    supported_envs:
+      - darwin
+      - windows/amd64
+  - version_constraint: semver("> 0.1.2")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("<= 0.1.2")
+    supported_envs:
+      - darwin
+      - windows/amd64
+  - version_constraint: "true"
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
