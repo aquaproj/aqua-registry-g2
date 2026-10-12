@@ -1,0 +1,13 @@
+name: gruntwork-io/git-xargs
+type: github_release
+repo_owner: gruntwork-io
+repo_name: git-xargs
+repo_id: 348310601
+description: git-xargs is a command-line tool (CLI) for making updates across multiple Github repositories with a single command
+version_overrides:
+  - version_constraint: Version == "v0.0.2"
+    no_asset: true
+  - version_constraint: semver("> 0.1.8")
+  - version_constraint: semver("> 0.1.6")
+    no_asset: true
+  - version_constraint: "true"
