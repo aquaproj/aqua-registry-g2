@@ -1,0 +1,32 @@
+name: openai/codex
+type: github_release
+repo_owner: openai
+repo_name: codex
+repo_id: 965415649
+description: Lightweight coding agent that runs in your terminal
+version_prefix: rust-
+version_overrides:
+  - version_constraint: semver("> 0.133.0-alpha.1")
+    files:
+      - name: codex
+        src: bin/codex
+  - version_constraint: semver("> 0.19.0")
+    files:
+      - name: codex
+        src: '{{.AssetWithoutExt}}'
+  - version_constraint: semver("<= 0.19.0")
+    files:
+      - name: codex
+        src: '{{.AssetWithoutExt}}'
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: "true"
+    files:
+      - name: codex
+        src: bin/codex
+asset_filters:
+  - version_constraint: semver("> 0.133.0-alpha.1")
+    all_assets_filter: Asset matches "^codex-package-"
+  - version_constraint: "true"
+    all_assets_filter: Asset matches "^codex-(x86_64|aarch64)-"
