@@ -1,0 +1,27 @@
+name: xremap/xremap/sway
+aliases:
+  - name: k0kubun/xremap/sway
+type: github_release
+repo_owner: xremap
+repo_name: xremap
+repo_id: 75132102
+description: Key remapper for X11 and Wayland (for Sway)
+version_overrides:
+  - version_constraint: semver("> 0.9.0")
+    error_message: |
+      The client for sway was dropped.
+      https://github.com/xremap/xremap/pull/479
+  - version_constraint: semver("> 0.4.6")
+    files:
+      - name: xremap
+    supported_envs:
+      - linux
+  - version_constraint: semver("<= 0.4.6")
+    files:
+      - name: xremap
+    supported_envs:
+      - linux/amd64
+  - version_constraint: "true"
+    error_message: |
+      The client for sway was dropped.
+      https://github.com/xremap/xremap/pull/479
