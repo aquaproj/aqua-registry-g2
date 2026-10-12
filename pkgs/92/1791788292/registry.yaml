@@ -1,0 +1,11 @@
+name: GoogleCloudPlatform/berglas
+type: github_release
+repo_owner: GoogleCloudPlatform
+repo_name: berglas
+repo_id: 180709218
+description: A tool for managing secrets on Google Cloud
+version_overrides:
+  - version_constraint: semver("> 0.7.0")
+  - version_constraint: semver("<= 0.7.0")
+    no_asset: true
+  - version_constraint: "true"
