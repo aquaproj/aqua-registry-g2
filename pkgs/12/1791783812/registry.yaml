@@ -1,0 +1,18 @@
+name: golang/go
+type: http
+repo_owner: golang
+repo_name: go
+repo_id: 23096959
+description: The Go programming language
+url: https://golang.org/dl/go{{trimPrefix "go" .Version}}.{{.OS}}-{{.Arch}}.{{.Format}}
+format: tar.gz
+version_filter: Version startsWith "go" and not (Version contains "rc" or Version contains "beta")
+version_source: github_tag
+overrides:
+  - goos: windows
+    format: zip
+files:
+  - name: go
+    src: go/bin/go
+  - name: gofmt
+    src: go/bin/gofmt
