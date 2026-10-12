@@ -1,0 +1,12 @@
+name: rlmcpherson/s3gof3r
+type: github_release
+repo_owner: rlmcpherson
+repo_name: s3gof3r
+repo_id: 11843609
+description: Fast, concurrent, streaming access to Amazon S3, including gof3r, a CLI
+files:
+  - name: gof3r
+    src: gof3r_{{trimV .Version}}_{{.OS}}_{{.Arch}}/gof3r
+supported_envs:
+  - darwin
+  - amd64
