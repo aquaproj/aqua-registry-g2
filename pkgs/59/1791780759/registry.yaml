@@ -1,0 +1,32 @@
+name: cargo-bins/cargo-binstall
+type: github_release
+repo_owner: cargo-bins
+repo_name: cargo-binstall
+repo_id: 321270638
+description: Binary installation for rust projects
+version_filter: Version matches "^v\\d+\\.\\d+\\.\\d+"
+github_artifact_attestations:
+  signer_workflow: cargo-bins/cargo-binstall/.github/workflows/release-cli.yml
+version_overrides:
+  - version_constraint: Version in ["install-cargo-binstall-1.0.0", "v1.4.0"]
+    no_asset: true
+  - version_constraint: semver("<= 0.2.0")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: Version == "v0.3.0"
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("<= 0.7.0")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("<= 0.18.1")
+  - version_constraint: semver("< 1.19.0")
+  - version_constraint: "true"
+    github_artifact_attestations:
+      signer_workflow: cargo-bins/cargo-binstall/.github/workflows/release-cli.yml
