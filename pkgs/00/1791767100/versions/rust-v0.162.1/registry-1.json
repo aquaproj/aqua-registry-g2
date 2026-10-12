@@ -1,0 +1,131 @@
+{
+  "published_at": "2026-10-09T19:44:51Z",
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "openai",
+      "repo_name": "codex",
+      "repo_id": 965415649,
+      "asset": "codex-package-x86_64-apple-darwin.tar.gz",
+      "format": "tar.gz",
+      "checksum": "894ac20afe819d4fa2a4be8cd27c54fd606338b86036e8ed9b6c9978c2dc7aed",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "codex",
+          "src": "bin/codex"
+        }
+      ]
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "openai",
+      "repo_name": "codex",
+      "repo_id": 965415649,
+      "asset": "codex-package-aarch64-apple-darwin.tar.gz",
+      "format": "tar.gz",
+      "checksum": "88e37ccddf5a0f4ea9dc1be13c66a2a94f9c2d1a04f3ace9053d71b3939e885d",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "codex",
+          "src": "bin/codex"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "openai",
+      "repo_name": "codex",
+      "repo_id": 965415649,
+      "asset": "codex-package-x86_64-unknown-linux-musl.tar.gz",
+      "format": "tar.gz",
+      "checksum": "a676f5722aae0d86cbe3764332f08eab1fdd89dc0a300b3ad4ffbf48611fa3e3",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "codex",
+          "src": "bin/codex"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "codex-package-x86_64-unknown-linux-musl.tar.gz.sigstore"
+        },
+        "certificate_identity_regexp": "^https://github\\.com/openai/codex/\\.github/workflows/.+\\.ya?ml@refs/tags/\\Qrust-v0.162.1\\E$",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "openai",
+      "repo_name": "codex",
+      "repo_id": 965415649,
+      "asset": "codex-package-aarch64-unknown-linux-musl.tar.gz",
+      "format": "tar.gz",
+      "checksum": "53a9ce0b94beb27a63fdeb2f7704d95199e17b3898aa33b60461a1a93ac0d88b",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "codex",
+          "src": "bin/codex"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "codex-package-aarch64-unknown-linux-musl.tar.gz.sigstore"
+        },
+        "certificate_identity_regexp": "^https://github\\.com/openai/codex/\\.github/workflows/.+\\.ya?ml@refs/tags/\\Qrust-v0.162.1\\E$",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "openai",
+      "repo_name": "codex",
+      "repo_id": 965415649,
+      "asset": "codex-package-x86_64-pc-windows-msvc.tar.gz",
+      "format": "tar.gz",
+      "checksum": "3e993a82ff393f4530558dcaadb36bb4f0fd1ea7243e621348e40b469f900f6a",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "codex",
+          "src": "bin/codex.exe"
+        }
+      ]
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "openai",
+      "repo_name": "codex",
+      "repo_id": 965415649,
+      "asset": "codex-package-aarch64-pc-windows-msvc.tar.gz",
+      "format": "tar.gz",
+      "checksum": "513db87ad85a52acb76e552e97caed87813e8ca3b861a1d69c9d5b1638bdb74b",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "codex",
+          "src": "bin/codex.exe"
+        }
+      ]
+    }
+  ]
+}
