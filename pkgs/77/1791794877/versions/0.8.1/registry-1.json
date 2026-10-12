@@ -1,0 +1,157 @@
+{
+  "published_at": "2026-07-04T01:50:34Z",
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "ouch-org",
+      "repo_name": "ouch",
+      "repo_id": 349334268,
+      "asset": "ouch-x86_64-apple-darwin.tar.gz",
+      "format": "tar.gz",
+      "checksum": "5f27ea43b4f6a73609c94a0e5c2b6fb6b69a2f842bdecf040183303a6dda6378",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "ouch",
+          "src": "ouch-x86_64-apple-darwin/ouch"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "ouch-org/ouch/.github/workflows/draft-release-automatic-trigger.yml",
+        "source_ref": "refs/tags/0.8.1-rc1",
+        "source_digest": "cf5a79becf577b380ec4c53231b1aef45ad73a12",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "ouch-org",
+      "repo_name": "ouch",
+      "repo_id": 349334268,
+      "asset": "ouch-aarch64-apple-darwin.tar.gz",
+      "format": "tar.gz",
+      "checksum": "ae4b406486c6105913ff86477938a4984636422de2c4766d3c444c580e8bf989",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "ouch",
+          "src": "ouch-aarch64-apple-darwin/ouch"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "ouch-org/ouch/.github/workflows/draft-release-automatic-trigger.yml",
+        "source_ref": "refs/tags/0.8.1-rc1",
+        "source_digest": "cf5a79becf577b380ec4c53231b1aef45ad73a12",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "ouch-org",
+      "repo_name": "ouch",
+      "repo_id": 349334268,
+      "asset": "ouch-x86_64-unknown-linux-musl.tar.gz",
+      "format": "tar.gz",
+      "checksum": "866884b08ea69fbab80bd79162df408519068a8fa232c2055038a1e561ad8f4c",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "ouch",
+          "src": "ouch-x86_64-unknown-linux-musl/ouch"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "ouch-org/ouch/.github/workflows/draft-release-automatic-trigger.yml",
+        "source_ref": "refs/tags/0.8.1-rc1",
+        "source_digest": "cf5a79becf577b380ec4c53231b1aef45ad73a12",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "ouch-org",
+      "repo_name": "ouch",
+      "repo_id": 349334268,
+      "asset": "ouch-aarch64-unknown-linux-musl.tar.gz",
+      "format": "tar.gz",
+      "checksum": "9caf888aa6944887084b917c7872d16a439a82f6ca1754c89816cda5dc957546",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "ouch",
+          "src": "ouch-aarch64-unknown-linux-musl/ouch"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "ouch-org/ouch/.github/workflows/draft-release-automatic-trigger.yml",
+        "source_ref": "refs/tags/0.8.1-rc1",
+        "source_digest": "cf5a79becf577b380ec4c53231b1aef45ad73a12",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "ouch-org",
+      "repo_name": "ouch",
+      "repo_id": 349334268,
+      "asset": "ouch-x86_64-pc-windows-msvc.zip",
+      "format": "zip",
+      "checksum": "a958d9db34bbefd9d7f7288ea4989a78085bc48ab2d92d92a1e5b9776f19e0d5",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "ouch",
+          "src": "ouch-x86_64-pc-windows-msvc/ouch.exe"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "ouch-org/ouch/.github/workflows/draft-release-automatic-trigger.yml",
+        "source_ref": "refs/tags/0.8.1-rc1",
+        "source_digest": "cf5a79becf577b380ec4c53231b1aef45ad73a12",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "ouch-org",
+      "repo_name": "ouch",
+      "repo_id": 349334268,
+      "asset": "ouch-aarch64-pc-windows-msvc.zip",
+      "format": "zip",
+      "checksum": "1c8edacfd3d557be6b8bccaed8d83ac1a5511882f628182bcf0e6887a7de0dfa",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "ouch",
+          "src": "ouch-aarch64-pc-windows-msvc/ouch.exe"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "ouch-org/ouch/.github/workflows/draft-release-automatic-trigger.yml",
+        "source_ref": "refs/tags/0.8.1-rc1",
+        "source_digest": "cf5a79becf577b380ec4c53231b1aef45ad73a12",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    }
+  ]
+}
