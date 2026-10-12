@@ -13,10 +13,6 @@ overrides:
 files:
   - name: taplo
     src: taplo-{{.OS}}-{{.Arch}}
-supported_envs:
-  - darwin
-  - linux
-  - windows/amd64
 version_overrides:
   - version_constraint: not (Version startsWith "release-taplo-cli-") and not (Version startsWith "release-cli-") and semver(">= 0.8.0")
   - version_constraint: Version startsWith "release-taplo-cli-"
