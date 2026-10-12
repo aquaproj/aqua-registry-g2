@@ -1,0 +1,19 @@
+name: FairwindsOps/rbac-lookup
+type: github_release
+repo_owner: FairwindsOps
+repo_name: rbac-lookup
+repo_id: 143233750
+description: Easily find roles and cluster roles attached to any user, service account, or group name in your Kubernetes cluster
+version_overrides:
+  - version_constraint: semver("> 0.6.2")
+  - version_constraint: semver("> 0.4.1")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: semver("> 0.3.2")
+    no_asset: true
+  - version_constraint: semver("<= 0.3.2")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: "true"
