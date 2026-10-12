@@ -1,0 +1,181 @@
+{
+  "published_at": "2026-09-12T04:54:28Z",
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "suzuki-shunsuke",
+      "repo_name": "pinact",
+      "repo_id": 627340432,
+      "asset": "pinact_darwin_amd64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "da5532bd185a9d3a16a1f93774f835574e0c50bc74c2085b9917b9df3e9fbbaa",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "pinact",
+          "src": "pinact"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "suzuki-shunsuke/go-release-workflow/.github/workflows/release.yaml",
+        "source_ref": "refs/tags/v5.0.0",
+        "source_digest": "a4f45e095b184794ac1f82b6b07cc35b0b8cfe7b",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      },
+      "slsa_provenance": {
+        "type": "github_release",
+        "asset": "multiple.intoto.jsonl"
+      }
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "suzuki-shunsuke",
+      "repo_name": "pinact",
+      "repo_id": 627340432,
+      "asset": "pinact_darwin_arm64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "3437ebfc9db720e431e86fd03ed19173b88dcb80b0f177d11a892126108661b5",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "pinact",
+          "src": "pinact"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "suzuki-shunsuke/go-release-workflow/.github/workflows/release.yaml",
+        "source_ref": "refs/tags/v5.0.0",
+        "source_digest": "a4f45e095b184794ac1f82b6b07cc35b0b8cfe7b",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      },
+      "slsa_provenance": {
+        "type": "github_release",
+        "asset": "multiple.intoto.jsonl"
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "suzuki-shunsuke",
+      "repo_name": "pinact",
+      "repo_id": 627340432,
+      "asset": "pinact_linux_amd64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "d005bbb85da80dacdc07816f24a5da723a9f6d1e9f3d3e7e73df33f9caa1358f",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "pinact",
+          "src": "pinact"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "suzuki-shunsuke/go-release-workflow/.github/workflows/release.yaml",
+        "source_ref": "refs/tags/v5.0.0",
+        "source_digest": "a4f45e095b184794ac1f82b6b07cc35b0b8cfe7b",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      },
+      "slsa_provenance": {
+        "type": "github_release",
+        "asset": "multiple.intoto.jsonl"
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "suzuki-shunsuke",
+      "repo_name": "pinact",
+      "repo_id": 627340432,
+      "asset": "pinact_linux_arm64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "d28ca5e9ddd7950da4a808288f8a83f84fc3ca40e86bab970f3adeef33578c0b",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "pinact",
+          "src": "pinact"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "suzuki-shunsuke/go-release-workflow/.github/workflows/release.yaml",
+        "source_ref": "refs/tags/v5.0.0",
+        "source_digest": "a4f45e095b184794ac1f82b6b07cc35b0b8cfe7b",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      },
+      "slsa_provenance": {
+        "type": "github_release",
+        "asset": "multiple.intoto.jsonl"
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "suzuki-shunsuke",
+      "repo_name": "pinact",
+      "repo_id": 627340432,
+      "asset": "pinact_windows_amd64.zip",
+      "format": "zip",
+      "checksum": "df2f590f24c2bfe65a35010bffb4369ba0792c9afaf7fb324b2330895a37d19f",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "pinact",
+          "src": "pinact.exe"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "suzuki-shunsuke/go-release-workflow/.github/workflows/release.yaml",
+        "source_ref": "refs/tags/v5.0.0",
+        "source_digest": "a4f45e095b184794ac1f82b6b07cc35b0b8cfe7b",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      },
+      "slsa_provenance": {
+        "type": "github_release",
+        "asset": "multiple.intoto.jsonl"
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "suzuki-shunsuke",
+      "repo_name": "pinact",
+      "repo_id": 627340432,
+      "asset": "pinact_windows_arm64.zip",
+      "format": "zip",
+      "checksum": "e054b2b99230629307172d70ddab6d6c02cae9cc5d4e40fb647025a2bdeceff4",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "pinact",
+          "src": "pinact.exe"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "suzuki-shunsuke/go-release-workflow/.github/workflows/release.yaml",
+        "source_ref": "refs/tags/v5.0.0",
+        "source_digest": "a4f45e095b184794ac1f82b6b07cc35b0b8cfe7b",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      },
+      "slsa_provenance": {
+        "type": "github_release",
+        "asset": "multiple.intoto.jsonl"
+      }
+    }
+  ]
+}
