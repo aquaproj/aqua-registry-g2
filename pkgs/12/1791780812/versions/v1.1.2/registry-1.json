@@ -1,0 +1,99 @@
+{
+  "published_at": "2026-05-18T09:00:29Z",
+  "assets": [
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "kdash-rs",
+      "repo_name": "kdash",
+      "repo_id": 357436262,
+      "asset": "kdash-linux.tar.gz",
+      "format": "tar.gz",
+      "checksum": "5bd3acb7f560ee52b8badfd8dce1db7299e9eb396685065b5149f0678691715b",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "kdash",
+          "src": "kdash"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "variants": {
+        "libc": "musl"
+      },
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "kdash-rs",
+      "repo_name": "kdash",
+      "repo_id": 357436262,
+      "asset": "kdash-linux-musl.tar.gz",
+      "format": "tar.gz",
+      "checksum": "7c3130a47f68f1d30ba858635e5ede33bb360972d0213bd90116156e0c9e2082",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "kdash",
+          "src": "kdash"
+        }
+      ]
+    },
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "kdash-rs",
+      "repo_name": "kdash",
+      "repo_id": 357436262,
+      "asset": "kdash-macos.tar.gz",
+      "format": "tar.gz",
+      "checksum": "b1ac98d8407e5bfe01fc0de30bf4837640d7921463736c0a24ddf100c7599400",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "kdash",
+          "src": "kdash"
+        }
+      ]
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "kdash-rs",
+      "repo_name": "kdash",
+      "repo_id": 357436262,
+      "asset": "kdash-macos-arm64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "9624193f4b89b7fea38661eece2f8bae26938bcc507bce3961f11f4a74ad33f6",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "kdash",
+          "src": "kdash"
+        }
+      ]
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "kdash-rs",
+      "repo_name": "kdash",
+      "repo_id": 357436262,
+      "asset": "kdash-windows.tar.gz",
+      "format": "tar.gz",
+      "checksum": "38736b94292fa5339b78eb0657da7a48a44769504ad0b5454b05b0f41c60e555",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "kdash",
+          "src": "kdash.exe"
+        }
+      ]
+    }
+  ]
+}
