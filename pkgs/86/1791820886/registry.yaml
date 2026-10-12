@@ -1,0 +1,19 @@
+name: chaqchase/lla
+aliases:
+  - name: triyanox/lla
+type: github_release
+repo_owner: chaqchase
+repo_name: lla
+repo_id: 672935720
+description: A modern alternative to ls
+version_overrides:
+  - version_constraint: semver("> 0.2.7")
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver("<= 0.2.7")
+    no_asset: true
+  - version_constraint: "true"
+    supported_envs:
+      - linux
+      - darwin
