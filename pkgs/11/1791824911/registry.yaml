@@ -1,0 +1,16 @@
+name: bodaay/HuggingFaceModelDownloader
+type: github_release
+repo_owner: bodaay
+repo_name: HuggingFaceModelDownloader
+repo_id: 657057869
+description: Simple go utility to download HuggingFace Models and Datasets
+version_overrides:
+  - version_constraint: semver("> 1.0.0")
+    files:
+      - name: hfdownloader
+  - version_constraint: semver("<= 1.0.0")
+    files:
+      - name: hfdownloader
+  - version_constraint: "true"
+    files:
+      - name: hfdownloader
