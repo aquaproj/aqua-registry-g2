@@ -1,0 +1,20 @@
+name: project-copacetic/copacetic
+type: github_release
+repo_owner: project-copacetic
+repo_name: copacetic
+repo_id: 587859813
+description: CLI tool for directly patching container images using reports from vulnerability scanners
+files:
+  - name: copa
+supported_envs:
+  - linux
+  - darwin
+version_overrides:
+  - version_constraint: semver(">= 0.3.0")
+  - version_constraint: semver(">= 0.2.0")
+    supported_envs:
+      - linux/amd64
+  - version_constraint: semver("< 0.2.0")
+    supported_envs:
+      - linux/amd64
+  - version_constraint: "true"
