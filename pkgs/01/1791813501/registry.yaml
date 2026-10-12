@@ -1,0 +1,34 @@
+name: kcp-dev/kcp/kubectl-kcp
+type: github_release
+repo_owner: kcp-dev
+repo_name: kcp
+repo_id: 353364259
+description: kubectl plugins for kcp
+version_overrides:
+  - version_constraint: semver("> 0.24.0")
+    files:
+      - name: kubectl-kcp
+        src: bin/kubectl-kcp
+  - version_constraint: semver("> 0.8.2")
+    files:
+      - name: kubectl-kcp
+        src: bin/kubectl-kcp
+      - name: kubectl-workspace
+        src: bin/kubectl-workspace
+      - name: kubectl-ws
+        src: bin/kubectl-workspace
+      - name: kubectl-workspaces
+        src: bin/kubectl-workspace
+  - version_constraint: semver("<= 0.8.2")
+    files:
+      - name: kubectl-kcp
+        src: bin/kubectl-kcp
+      - name: kubectl-ws
+        src: bin/kubectl-ws
+      - name: kubectl-workspaces
+        src: bin/kubectl-workspaces
+  - version_constraint: "true"
+    files:
+      - name: kubectl-kcp
+        src: bin/kubectl-kcp
+all_assets_filter: Asset matches "^kubectl-kcp-plugin_.+_.+_.+[.].+([.].+)?$" or Asset endsWith ".intoto.jsonl"
