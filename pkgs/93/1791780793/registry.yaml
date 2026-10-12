@@ -1,0 +1,30 @@
+name: create-go-app/cli
+type: github_release
+repo_owner: create-go-app
+repo_name: cli
+repo_id: 230986271
+description: Create a new production-ready project with backend, frontend and deploy automation by running one CLI command
+files:
+  - name: cgapp
+version_overrides:
+  - version_constraint: semver(">= 4.0.0")
+  - version_constraint: semver(">= 1.7.0")
+    supported_envs:
+      - darwin
+      - amd64
+  - version_constraint: semver(">= 1.6.3")
+    supported_envs:
+      - darwin
+      - amd64
+  - version_constraint: semver(">= 1.0.0")
+    supported_envs:
+      - darwin
+      - amd64
+  - version_constraint: semver("< 1.0.0")
+    files:
+      - name: cgapp
+        src: cli
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: "true"
