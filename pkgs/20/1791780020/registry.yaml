@@ -1,0 +1,22 @@
+name: loeffel-io/ls-lint
+type: github_release
+repo_owner: loeffel-io
+repo_name: ls-lint
+repo_id: 240896563
+description: An extremely fast directory and filename linter - Bring some structure to your project filesystem
+supported_envs:
+  - darwin
+  - linux
+  - amd64
+version_overrides:
+  - version_constraint: semver(">= 2.0.0")
+  - version_constraint: semver(">= 1.10.0-beta.1")
+  - version_constraint: semver(">= 1.1.0")
+    supported_envs:
+      - darwin
+      - amd64
+  - version_constraint: semver("< 1.1.0")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: "true"
