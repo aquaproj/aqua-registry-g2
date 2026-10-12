@@ -1,0 +1,25 @@
+name: tamasfe/taplo/full
+type: github_release
+repo_owner: tamasfe
+repo_name: taplo
+repo_id: 266330343
+description: A TOML toolkit written in Rust
+overrides:
+  - goos: windows
+    format: zip
+    files:
+      - name: taplo
+        src: taplo.exe
+files:
+  - name: taplo
+    src: taplo-full-{{.OS}}-{{.Arch}}
+version_overrides:
+  - version_constraint: not (Version startsWith "release-taplo-cli-") and not (Version startsWith "release-cli-") and semver(">= 0.8.0")
+  - version_constraint: Version startsWith "release-taplo-cli-"
+    files:
+      - name: taplo
+  - version_constraint: Version startsWith "release-cli-" and semverWithVersion(">= 0.6.0", trimPrefix(Version, "release-cli-"))
+    files:
+      - name: taplo
+  - version_constraint: "true"
+all_assets_filter: Asset startsWith "taplo-full-"
