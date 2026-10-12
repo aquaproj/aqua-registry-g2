@@ -1,0 +1,130 @@
+{
+  "assets": [
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "glibc",
+      "type": "http",
+      "repo_owner": "kubernetes",
+      "repo_name": "kubernetes",
+      "repo_id": 20580498,
+      "asset": "kubelet",
+      "url": "https://dl.k8s.io/v1.35.8/bin/linux/amd64/kubelet",
+      "format": "raw",
+      "checksum": "6971b9f95e54dbed67a2271abe6e78f8cc2894494649f3cf39e4b25a82dca923",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "kubelet",
+          "src": "kubelet"
+        }
+      ],
+      "cosign": {
+        "signature": {
+          "type": "http",
+          "url": "https://dl.k8s.io/v1.35.8/bin/linux/amd64/kubelet.sig"
+        },
+        "certificate": {
+          "type": "http",
+          "url": "https://dl.k8s.io/v1.35.8/bin/linux/amd64/kubelet.cert"
+        },
+        "certificate_identity": "krel-staging@k8s-releng-prod.iam.gserviceaccount.com",
+        "certificate_oidc_issuer": "https://accounts.google.com"
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "linked_libc": "glibc",
+      "type": "http",
+      "repo_owner": "kubernetes",
+      "repo_name": "kubernetes",
+      "repo_id": 20580498,
+      "asset": "kubelet",
+      "url": "https://dl.k8s.io/v1.35.8/bin/linux/arm64/kubelet",
+      "format": "raw",
+      "checksum": "7744f84c49df6dff7d0a0471f9acef31568c02459659de83aa279cf3a04b1714",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "kubelet",
+          "src": "kubelet"
+        }
+      ],
+      "cosign": {
+        "signature": {
+          "type": "http",
+          "url": "https://dl.k8s.io/v1.35.8/bin/linux/arm64/kubelet.sig"
+        },
+        "certificate": {
+          "type": "http",
+          "url": "https://dl.k8s.io/v1.35.8/bin/linux/arm64/kubelet.cert"
+        },
+        "certificate_identity": "krel-staging@k8s-releng-prod.iam.gserviceaccount.com",
+        "certificate_oidc_issuer": "https://accounts.google.com"
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "http",
+      "repo_owner": "kubernetes",
+      "repo_name": "kubernetes",
+      "repo_id": 20580498,
+      "asset": "kubelet.exe",
+      "url": "https://dl.k8s.io/v1.35.8/bin/windows/amd64/kubelet.exe",
+      "format": "raw",
+      "checksum": "606aef6d6c8e3d47349d79bb96dfe2d5d1b83415dbce826ff3fa799a3cf95de9",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "kubelet",
+          "src": "kubelet.exe"
+        }
+      ],
+      "cosign": {
+        "signature": {
+          "type": "http",
+          "url": "https://dl.k8s.io/v1.35.8/bin/windows/amd64/kubelet.exe.sig"
+        },
+        "certificate": {
+          "type": "http",
+          "url": "https://dl.k8s.io/v1.35.8/bin/windows/amd64/kubelet.exe.cert"
+        },
+        "certificate_identity": "krel-staging@k8s-releng-prod.iam.gserviceaccount.com",
+        "certificate_oidc_issuer": "https://accounts.google.com"
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "type": "http",
+      "repo_owner": "kubernetes",
+      "repo_name": "kubernetes",
+      "repo_id": 20580498,
+      "asset": "kubelet.exe",
+      "url": "https://dl.k8s.io/v1.35.8/bin/windows/amd64/kubelet.exe",
+      "format": "raw",
+      "checksum": "606aef6d6c8e3d47349d79bb96dfe2d5d1b83415dbce826ff3fa799a3cf95de9",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "kubelet",
+          "src": "kubelet.exe"
+        }
+      ],
+      "cosign": {
+        "signature": {
+          "type": "http",
+          "url": "https://dl.k8s.io/v1.35.8/bin/windows/amd64/kubelet.exe.sig"
+        },
+        "certificate": {
+          "type": "http",
+          "url": "https://dl.k8s.io/v1.35.8/bin/windows/amd64/kubelet.exe.cert"
+        },
+        "certificate_identity": "krel-staging@k8s-releng-prod.iam.gserviceaccount.com",
+        "certificate_oidc_issuer": "https://accounts.google.com"
+      }
+    }
+  ]
+}
