@@ -1,0 +1,11 @@
+name: Owloops/updo
+type: github_release
+repo_owner: Owloops
+repo_name: updo
+repo_id: 735917479
+description: Uptime monitoring CLI tool with alerting and advanced settings
+version_overrides:
+  - version_constraint: Version == "v0.0.2"
+    no_asset: true
+  - version_constraint: "true"
+all_assets_filter: not (Asset matches "pkg")
