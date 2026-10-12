@@ -1,0 +1,14 @@
+name: miniscruff/changie
+type: github_release
+repo_owner: miniscruff
+repo_name: changie
+repo_id: 318873948
+description: Automated changelog tool for preparing releases with lots of customization options
+version_overrides:
+  - version_constraint: semver("> 0.3.0")
+  - version_constraint: semver("<= 0.3.0")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: "true"
