@@ -1,0 +1,24 @@
+name: lusingander/stu
+type: github_release
+repo_owner: lusingander
+repo_name: stu
+repo_id: 443060159
+description: TUI explorer application for Amazon S3 (AWS S3)
+version_overrides:
+  - version_constraint: semver("> 0.6.5")
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver("> 0.4.0")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: semver("> 0.2.4")
+    supported_envs:
+      - darwin
+  - version_constraint: semver("<= 0.2.4")
+    no_asset: true
+  - version_constraint: "true"
+    supported_envs:
+      - linux
+      - darwin
