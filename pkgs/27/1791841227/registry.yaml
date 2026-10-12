@@ -1,0 +1,17 @@
+name: nektro/zigmod
+type: github_release
+repo_owner: nektro
+repo_name: zigmod
+repo_id: 311485985
+description: Zig package manager
+version_prefix: r
+version_overrides:
+  - version_constraint: semver("> 100")
+    supported_envs:
+      - darwin
+      - linux
+  - version_constraint: semver("<= 100")
+  - version_constraint: "true"
+    supported_envs:
+      - darwin
+      - linux
