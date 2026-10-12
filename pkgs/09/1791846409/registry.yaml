@@ -1,0 +1,16 @@
+name: kanisterio/kanister
+type: github_release
+repo_owner: kanisterio
+repo_name: kanister
+repo_id: 111599187
+description: An extensible framework for application-level data management on Kubernetes
+files:
+  - name: kanctl
+supported_envs:
+  - linux/amd64
+version_overrides:
+  - version_constraint: semver(">= 0.84.0")
+  - version_constraint: "true"
+    supported_envs:
+      - darwin
+      - linux/amd64
