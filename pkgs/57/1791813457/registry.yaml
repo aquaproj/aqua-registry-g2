@@ -1,0 +1,21 @@
+name: sqldef/sqldef/mysqldef
+aliases:
+  - name: k0kubun/sqldef/mysqldef
+type: github_release
+repo_owner: sqldef
+repo_name: sqldef
+repo_id: 146057993
+description: Idempotent schema management for MySQL
+files:
+  - name: mysqldef
+supported_envs:
+  - darwin
+  - linux
+  - windows/amd64
+version_overrides:
+  - version_constraint: semver(">= 0.1.1")
+  - version_constraint: "true"
+    supported_envs:
+      - darwin
+      - linux/amd64
+all_assets_filter: Asset matches "^mysqldef_.+_.+[.].+([.].+)?$" or Asset endsWith ".intoto.jsonl"
