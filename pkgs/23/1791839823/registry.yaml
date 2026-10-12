@@ -1,0 +1,19 @@
+name: opencontainers/umoci
+type: github_release
+repo_owner: opencontainers
+repo_name: umoci
+repo_id: 72283469
+description: umoci modifies Open Container images
+version_overrides:
+  - version_constraint: semver("> 0.4.7")
+    supported_envs:
+      - linux
+  - version_constraint: semver("> 0.2.1")
+    supported_envs:
+      - linux/amd64
+  - version_constraint: semver("<= 0.2.1")
+    supported_envs:
+      - linux/amd64
+  - version_constraint: "true"
+    supported_envs:
+      - linux
