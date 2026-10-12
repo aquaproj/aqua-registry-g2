@@ -1,0 +1,19 @@
+name: vladimirvivien/ktop
+type: github_release
+repo_owner: vladimirvivien
+repo_name: ktop
+repo_id: 77647025
+description: A top-like tool for your Kubernetes clusters
+version_overrides:
+  - version_constraint: semver("> 0.1.0")
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver("<= 0.1.0")
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: "true"
+    supported_envs:
+      - linux
+      - darwin
