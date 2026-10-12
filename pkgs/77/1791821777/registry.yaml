@@ -1,0 +1,28 @@
+name: ovh/venom
+type: github_release
+repo_owner: ovh
+repo_name: venom
+repo_id: 82285879
+description: Manage and run your integration tests with efficiency - Venom run executors (script, HTTP Request, web, imap, etc... ) and assertions
+version_overrides:
+  - version_constraint: Version == "v0.11.0"
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: Version == "v0.21.1"
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver("> 1.1.0-beta.2")
+  - version_constraint: semver("> 1.0.1")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("> 0.16.0")
+  - version_constraint: semver("<= 0.16.0")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: "true"
