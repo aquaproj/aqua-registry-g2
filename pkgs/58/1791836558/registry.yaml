@@ -1,0 +1,12 @@
+name: mattn/memo
+type: github_release
+repo_owner: mattn
+repo_name: memo
+repo_id: 81241955
+description: Memo Life For You
+files:
+  - name: memo
+    src: memo_{{.Version}}_{{.OS}}_amd64/memo
+supported_envs:
+  - darwin
+  - amd64
