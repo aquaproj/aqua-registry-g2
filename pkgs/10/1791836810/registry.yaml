@@ -1,0 +1,12 @@
+name: Azure/aks-engine
+type: github_release
+repo_owner: Azure
+repo_name: aks-engine
+repo_id: 155447233
+description: AKS Engine deploys and manages Kubernetes clusters in Azure
+files:
+  - name: aks-engine
+    src: aks-engine-{{.Version}}-{{.OS}}-{{.Arch}}/aks-engine
+supported_envs:
+  - darwin
+  - amd64
