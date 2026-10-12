@@ -1,0 +1,17 @@
+name: checkmake/checkmake
+aliases:
+  - name: mrtazz/checkmake
+type: github_release
+repo_owner: checkmake
+repo_name: checkmake
+repo_id: 66408063
+description: Linter/analyzer for Makefiles
+version_overrides:
+  - version_constraint: Version == "0.2.0"
+    no_asset: true
+  - version_constraint: semver("> 0.2.2")
+  - version_constraint: semver("<= 0.2.2")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: "true"
