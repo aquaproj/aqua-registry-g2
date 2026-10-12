@@ -1,0 +1,104 @@
+{
+  "assets": [
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "type": "http",
+      "repo_owner": "cri-o",
+      "repo_name": "cri-o",
+      "repo_id": 67828134,
+      "asset": "cri-o.amd64.v1.36.7.tar.gz",
+      "url": "https://storage.googleapis.com/cri-o/artifacts/cri-o.amd64.v1.36.7.tar.gz",
+      "checksum": "f53a462b04cc70306203c5a2ed34865bb38532e3184b4650ff1e6a62deb71246",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "conmon",
+          "src": "cri-o/bin/conmon"
+        },
+        {
+          "name": "conmonrs",
+          "src": "cri-o/bin/conmonrs"
+        },
+        {
+          "name": "crictl",
+          "src": "cri-o/bin/crictl"
+        },
+        {
+          "name": "crio",
+          "src": "cri-o/bin/crio"
+        },
+        {
+          "name": "crun",
+          "src": "cri-o/bin/crun"
+        },
+        {
+          "name": "pinns",
+          "src": "cri-o/bin/pinns"
+        },
+        {
+          "name": "runc",
+          "src": "cri-o/bin/runc"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "http",
+          "url": "https://storage.googleapis.com/cri-o/artifacts/cri-o.amd64.v1.36.7.tar.gz.bundle"
+        },
+        "certificate_identity": "https://github.com/cri-o/packaging/.github/workflows/obs.yml@refs/heads/main",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "type": "http",
+      "repo_owner": "cri-o",
+      "repo_name": "cri-o",
+      "repo_id": 67828134,
+      "asset": "cri-o.arm64.v1.36.7.tar.gz",
+      "url": "https://storage.googleapis.com/cri-o/artifacts/cri-o.arm64.v1.36.7.tar.gz",
+      "checksum": "40ea2ee961b51b3da33122cd207116db50a69e9a142fe5613205e6a8f9580edb",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "conmon",
+          "src": "cri-o/bin/conmon"
+        },
+        {
+          "name": "conmonrs",
+          "src": "cri-o/bin/conmonrs"
+        },
+        {
+          "name": "crictl",
+          "src": "cri-o/bin/crictl"
+        },
+        {
+          "name": "crio",
+          "src": "cri-o/bin/crio"
+        },
+        {
+          "name": "crun",
+          "src": "cri-o/bin/crun"
+        },
+        {
+          "name": "pinns",
+          "src": "cri-o/bin/pinns"
+        },
+        {
+          "name": "runc",
+          "src": "cri-o/bin/runc"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "http",
+          "url": "https://storage.googleapis.com/cri-o/artifacts/cri-o.arm64.v1.36.7.tar.gz.bundle"
+        },
+        "certificate_identity": "https://github.com/cri-o/packaging/.github/workflows/obs.yml@refs/heads/main",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    }
+  ]
+}
