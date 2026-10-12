@@ -1,0 +1,15 @@
+name: josephburnett/jd
+type: github_release
+repo_owner: josephburnett
+repo_name: jd
+repo_id: 72809829
+description: JSON diff and patch
+version_overrides:
+  - version_constraint: semver(">= 1.6.1")
+  - version_constraint: semver(">= 1.5.0")
+  - version_constraint: Version == "v1.4.0"
+  - version_constraint: semver(">= 1.2.0")
+  - version_constraint: semver("< 1.2.0")
+    supported_envs:
+      - linux/amd64
+  - version_constraint: "true"
