@@ -1,0 +1,91 @@
+name: KhronosGroup/KTX-Software
+type: github_release
+repo_owner: KhronosGroup
+repo_name: KTX-Software
+repo_id: 12136516
+description: KTX (Khronos Texture) Library and Tools
+version_overrides:
+  - version_constraint: Version == "v4.0.0"
+    overrides:
+      - goos: linux
+        files:
+          - name: ktx2check
+            src: '{{.AssetWithoutExt}}/bin/ktx2check'
+          - name: ktxinfo
+            src: '{{.AssetWithoutExt}}/bin/ktxinfo'
+          - name: ktx2ktx2
+            src: '{{.AssetWithoutExt}}/bin/ktx2ktx2'
+          - name: ktxsc
+            src: '{{.AssetWithoutExt}}/bin/ktxsc'
+          - name: toktx
+            src: '{{.AssetWithoutExt}}/bin/toktx'
+    supported_envs:
+      - linux/amd64
+  - version_constraint: Version == "v4.1.0"
+    overrides:
+      - goos: linux
+        files:
+          - name: ktx2check
+            src: '{{.AssetWithoutExt}}/bin/ktx2check'
+          - name: ktxinfo
+            src: '{{.AssetWithoutExt}}/bin/ktxinfo'
+          - name: ktx2ktx2
+            src: '{{.AssetWithoutExt}}/bin/ktx2ktx2'
+          - name: ktxsc
+            src: '{{.AssetWithoutExt}}/bin/ktxsc'
+          - name: toktx
+            src: '{{.AssetWithoutExt}}/bin/toktx'
+    supported_envs:
+      - linux/amd64
+  - version_constraint: semver("> 4.2.1")
+    overrides:
+      - goos: linux
+        files:
+          - name: ktx
+            src: '{{.AssetWithoutExt}}/bin/ktx'
+          - name: ktx2check
+            src: '{{.AssetWithoutExt}}/bin/ktx2check'
+          - name: ktxinfo
+            src: '{{.AssetWithoutExt}}/bin/ktxinfo'
+          - name: ktx2ktx2
+            src: '{{.AssetWithoutExt}}/bin/ktx2ktx2'
+          - name: ktxsc
+            src: '{{.AssetWithoutExt}}/bin/ktxsc'
+          - name: toktx
+            src: '{{.AssetWithoutExt}}/bin/toktx'
+    supported_envs:
+      - linux
+  - version_constraint: semver("<= 4.2.1")
+    overrides:
+      - goos: linux
+        files:
+          - name: ktx2check
+            src: '{{.AssetWithoutExt}}/bin/ktx2check'
+          - name: ktxinfo
+            src: '{{.AssetWithoutExt}}/bin/ktxinfo'
+          - name: ktx2ktx2
+            src: '{{.AssetWithoutExt}}/bin/ktx2ktx2'
+          - name: ktxsc
+            src: '{{.AssetWithoutExt}}/bin/ktxsc'
+          - name: toktx
+            src: '{{.AssetWithoutExt}}/bin/toktx'
+    supported_envs:
+      - linux
+  - version_constraint: "true"
+    overrides:
+      - goos: linux
+        files:
+          - name: ktx
+            src: '{{.AssetWithoutExt}}/bin/ktx'
+          - name: ktx2check
+            src: '{{.AssetWithoutExt}}/bin/ktx2check'
+          - name: ktxinfo
+            src: '{{.AssetWithoutExt}}/bin/ktxinfo'
+          - name: ktx2ktx2
+            src: '{{.AssetWithoutExt}}/bin/ktx2ktx2'
+          - name: ktxsc
+            src: '{{.AssetWithoutExt}}/bin/ktxsc'
+          - name: toktx
+            src: '{{.AssetWithoutExt}}/bin/toktx'
+    supported_envs:
+      - linux
