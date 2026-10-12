@@ -1,0 +1,12 @@
+name: Arriven/db1000n
+type: github_release
+repo_owner: Arriven
+repo_name: db1000n
+repo_id: 463855335
+version_overrides:
+  - version_constraint: semver("> 0.7.2")
+  - version_constraint: semver("> 0.7.0")
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: "true"
