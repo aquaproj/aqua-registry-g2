@@ -1,0 +1,10 @@
+name: google/go-licenses
+type: go_install
+repo_owner: google
+repo_name: go-licenses
+repo_id: 221192652
+description: A lightweight tool to report on the licenses used by a Go package and its dependencies. Highlight! Versioned external URL to licenses can be found at the same time
+version_overrides:
+  - version_constraint: semver(">= 2.0.0")
+    path: github.com/google/go-licenses/v{{(semver .Version).Major}}
+  - version_constraint: "true"
