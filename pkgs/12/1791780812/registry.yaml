@@ -1,0 +1,22 @@
+name: kdash-rs/kdash
+type: github_release
+repo_owner: kdash-rs
+repo_name: kdash
+repo_id: 357436262
+description: A simple and fast dashboard for Kubernetes
+supported_envs:
+  - darwin
+  - amd64
+version_overrides:
+  - version_constraint: semver(">= 0.4.3")
+  - version_constraint: semver(">= 0.3.3")
+    replacements:
+      linux: linux-musl
+    supported_envs:
+      - darwin
+      - linux
+      - amd64
+  - version_constraint: semver(">= 0.0.4")
+    replacements:
+      linux: linux-musl
+  - version_constraint: "true"
