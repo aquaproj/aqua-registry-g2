@@ -1,0 +1,32 @@
+name: dnote/dnote/cli
+type: github_release
+repo_owner: dnote
+repo_name: dnote
+repo_id: 86756976
+description: A simple command line notebook for programmers
+version_filter: Version startsWith "cli-"
+files:
+  - name: dnote
+supported_envs:
+  - darwin
+  - linux
+  - amd64
+version_overrides:
+  - version_constraint: semverWithVersion(">= 0.11.1", trimPrefix(Version, "cli-"))
+  - version_constraint: semverWithVersion(">= 0.6.3", trimPrefix(Version, "cli-"))
+    supported_envs:
+      - darwin
+      - amd64
+  - version_constraint: semver(">= 0.4.8")
+    supported_envs:
+      - darwin
+      - amd64
+  - version_constraint: semver("= 0.4.7")
+    supported_envs:
+      - darwin
+      - linux/amd64
+  - version_constraint: semver("< 0.4.7")
+    supported_envs:
+      - darwin
+      - amd64
+  - version_constraint: "true"
