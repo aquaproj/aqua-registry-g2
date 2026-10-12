@@ -1,0 +1,12 @@
+name: odigos-io/odigos
+type: github_release
+repo_owner: odigos-io
+repo_name: odigos
+repo_id: 501095512
+description: Distributed tracing without code changes.  Instantly monitor any application using OpenTelemetry and eBPF
+version_overrides:
+  - version_constraint: Version == "v0.1.6"
+  - version_constraint: Version in ["v1.0.1-greatwall", "odiglet/v1.0.122"] or semver("<= 0.1.3")
+    no_asset: true
+  - version_constraint: "true"
+all_assets_filter: not (Asset matches "^ui_")
