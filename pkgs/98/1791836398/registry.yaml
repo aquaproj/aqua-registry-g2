@@ -1,0 +1,30 @@
+name: tldr-pages/tlrc
+type: github_release
+repo_owner: tldr-pages
+repo_name: tlrc
+repo_id: 628100992
+description: A tldr client written in Rust
+files:
+  - name: tldr
+github_artifact_attestations:
+  signer_workflow: tldr-pages/tlrc/.github/workflows/build-release.yml
+version_overrides:
+  - version_constraint: semver(">= 1.9.3")
+    github_artifact_attestations:
+      signer_workflow: tldr-pages/tlrc/.github/workflows/build-release.yml
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("< 1.9.3")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: "true"
+    github_artifact_attestations:
+      signer_workflow: tldr-pages/tlrc/.github/workflows/build-release.yml
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
