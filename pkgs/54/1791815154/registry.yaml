@@ -1,0 +1,45 @@
+name: regclient/regclient/regsync
+type: github_release
+repo_owner: regclient
+repo_name: regclient
+repo_id: 294181202
+description: Docker and OCI image mirroring tool
+files:
+  - name: regsync
+supported_envs:
+  - darwin
+  - linux
+  - amd64
+cosign:
+  opts:
+    - --certificate-identity
+    - https://github.com/regclient/regclient/.github/workflows/go.yml@refs/tags/{{.Version}}
+    - --certificate-oidc-issuer
+    - https://token.actions.githubusercontent.com
+  bundle:
+    type: github_release
+    asset: '{{.Asset}}.sigstore.json'
+version_overrides:
+  - version_constraint: semver(">= 0.11.6")
+    cosign:
+      opts:
+        - --certificate-identity
+        - https://github.com/regclient/regclient/.github/workflows/go.yml@refs/tags/{{.Version}}
+        - --certificate-oidc-issuer
+        - https://token.actions.githubusercontent.com
+      bundle:
+        type: github_release
+        asset: regsync-{{.OS}}-{{.Arch}}.sigstore.json
+  - version_constraint: semver(">= 0.3.9")
+  - version_constraint: semver("< 0.3.9")
+  - version_constraint: "true"
+    cosign:
+      opts:
+        - --certificate-identity
+        - https://github.com/regclient/regclient/.github/workflows/go.yml@refs/tags/{{.Version}}
+        - --certificate-oidc-issuer
+        - https://token.actions.githubusercontent.com
+      bundle:
+        type: github_release
+        asset: regsync-{{.OS}}-{{.Arch}}.sigstore.json
+all_assets_filter: Asset matches "^regsync-.+-.+([.].+)?$" or Asset matches "^regsync-.+-.+[.]sigstore[.]json([.].+)?$" or Asset endsWith ".intoto.jsonl"

@@ -1,0 +1,163 @@
+{
+  "published_at": "2026-09-02T15:06:31Z",
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "regclient",
+      "repo_name": "regclient",
+      "repo_id": 294181202,
+      "asset": "regctl-darwin-amd64",
+      "format": "raw",
+      "checksum": "d651381c58357e9b9446cec172761c7418b7621da57960d438175d8f4c5b479d",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "regctl",
+          "src": "regctl-darwin-amd64"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "regctl-darwin-amd64.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/regclient/regclient/.github/workflows/go.yml@refs/tags/v0.11.6",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "regclient",
+      "repo_name": "regclient",
+      "repo_id": 294181202,
+      "asset": "regctl-darwin-arm64",
+      "format": "raw",
+      "checksum": "5b52b71861abc300ab513e87a4c3794cff6508035ac7f6b6bdfa1fa5688c0040",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "regctl",
+          "src": "regctl-darwin-arm64"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "regctl-darwin-arm64.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/regclient/regclient/.github/workflows/go.yml@refs/tags/v0.11.6",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "regclient",
+      "repo_name": "regclient",
+      "repo_id": 294181202,
+      "asset": "regctl-linux-amd64",
+      "format": "raw",
+      "checksum": "8e0e62a497fcdb8048d18aa927a139613176ba0531f412bc541044e28f9856bd",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "regctl",
+          "src": "regctl-linux-amd64"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "regctl-linux-amd64.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/regclient/regclient/.github/workflows/go.yml@refs/tags/v0.11.6",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "regclient",
+      "repo_name": "regclient",
+      "repo_id": 294181202,
+      "asset": "regctl-linux-arm64",
+      "format": "raw",
+      "checksum": "a9b71a3ee79b2d1dbbd7d51fd5e8fa214722c192864235d3d8764463c751a1ff",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "regctl",
+          "src": "regctl-linux-arm64"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "regctl-linux-arm64.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/regclient/regclient/.github/workflows/go.yml@refs/tags/v0.11.6",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "regclient",
+      "repo_name": "regclient",
+      "repo_id": 294181202,
+      "asset": "regctl-windows-amd64.exe",
+      "format": "raw",
+      "checksum": "02778e22c482d437e14fc06ee1e8504aa8f0f0d2ac266a89ab80c8a5503c8024",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "regctl",
+          "src": "regctl-windows-amd64.exe"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "regctl-windows-amd64.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/regclient/regclient/.github/workflows/go.yml@refs/tags/v0.11.6",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "regclient",
+      "repo_name": "regclient",
+      "repo_id": 294181202,
+      "asset": "regctl-windows-amd64.exe",
+      "format": "raw",
+      "checksum": "02778e22c482d437e14fc06ee1e8504aa8f0f0d2ac266a89ab80c8a5503c8024",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "regctl",
+          "src": "regctl-windows-amd64.exe"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "regctl-windows-amd64.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/regclient/regclient/.github/workflows/go.yml@refs/tags/v0.11.6",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    }
+  ]
+}

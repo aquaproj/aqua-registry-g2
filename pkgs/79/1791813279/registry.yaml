@@ -1,0 +1,60 @@
+name: jreleaser/jreleaser/standalone
+type: github_release
+repo_owner: jreleaser
+repo_name: jreleaser
+repo_id: 316752534
+description: Release projects quickly and easily with JReleaser
+files:
+  - name: jreleaser
+    src: '{{.AssetWithoutExt}}/bin/jreleaser'
+  - name: java
+    src: '{{.AssetWithoutExt}}/bin/java'
+  - name: keytool
+    src: '{{.AssetWithoutExt}}/bin/keytool'
+  - name: rmiregistry
+    src: '{{.AssetWithoutExt}}/bin/rmiregistry'
+version_overrides:
+  - version_constraint: semver(">= 1.13.0")
+    slsa_provenance:
+      type: github_release
+      asset: jreleaser-all-{{trimV .Version}}.intoto.jsonl
+      source_tag: '-'
+  - version_constraint: semver("> 0.8.0")
+  - version_constraint: semver("> 0.5.0")
+    overrides:
+      - goos: windows
+        files:
+          - name: jreleaser
+            src: '{{.AssetWithoutExt}}/bin/jreleaser.bat'
+          - name: java
+            src: '{{.AssetWithoutExt}}/bin/java'
+          - name: keytool
+            src: '{{.AssetWithoutExt}}/bin/keytool'
+          - name: rmiregistry
+            src: '{{.AssetWithoutExt}}/bin/rmiregistry'
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("<= 0.5.0")
+    overrides:
+      - goos: windows
+        files:
+          - name: jreleaser
+            src: '{{.AssetWithoutExt}}/bin/jreleaser.bat'
+          - name: java
+            src: '{{.AssetWithoutExt}}/bin/java'
+          - name: keytool
+            src: '{{.AssetWithoutExt}}/bin/keytool'
+          - name: rmiregistry
+            src: '{{.AssetWithoutExt}}/bin/rmiregistry'
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: "true"
+    slsa_provenance:
+      type: github_release
+      asset: jreleaser-all-{{trimV .Version}}.intoto.jsonl
+      source_tag: '-'
+all_assets_filter: (Asset contains "standalone") or (Asset contains "checksum")
