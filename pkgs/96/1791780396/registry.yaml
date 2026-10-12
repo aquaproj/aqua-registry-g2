@@ -1,0 +1,23 @@
+name: jkfran/killport
+type: github_release
+repo_owner: jkfran
+repo_name: killport
+repo_id: 615362447
+description: A command-line tool to easily kill processes running on a specified port
+version_overrides:
+  - version_constraint: Version == "v0.1.0"
+    supported_envs:
+      - linux
+  - version_constraint: Version == "v0.5.0"
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver("<= 0.8.0") || Version == "v1.0.0"
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver("< 2.0.0")
+  - version_constraint: "true"
+    files:
+      - name: killport
+        src: '{{.AssetWithoutExt}}/killport'
