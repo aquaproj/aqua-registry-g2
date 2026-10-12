@@ -1,0 +1,12 @@
+name: buildkite/agent
+type: github_release
+repo_owner: buildkite
+repo_name: agent
+repo_id: 16347164
+description: The Buildkite Agent is an open-source toolkit written in Golang for securely running build jobs on any device or network
+files:
+  - name: buildkite-agent
+supported_envs:
+  - linux
+  - darwin
+  - amd64
