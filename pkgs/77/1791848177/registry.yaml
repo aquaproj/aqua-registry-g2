@@ -1,0 +1,10 @@
+name: kubernetes-sigs/controller-tools/controller-gen
+type: go_install
+repo_owner: kubernetes-sigs
+repo_name: controller-tools
+repo_id: 137424839
+description: controller-gen - Generate Kubernetes API extension resources and code
+path: sigs.k8s.io/controller-tools/cmd/controller-gen
+version_filter: not (Version startsWith "envtest-")
+files:
+  - name: controller-gen
