@@ -1,0 +1,27 @@
+name: cyberark/kubeletctl
+type: github_release
+repo_owner: cyberark
+repo_name: kubeletctl
+repo_id: 253574487
+description: A client for kubelet
+version_overrides:
+  - version_constraint: Version == "v1.10"
+    supported_envs:
+      - linux/amd64
+      - windows
+  - version_constraint: Version == "v1.11"
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("> 1.9")
+  - version_constraint: semver("> 1.3")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("<= 1.3")
+    supported_envs:
+      - linux/amd64
+      - windows
+  - version_constraint: "true"
