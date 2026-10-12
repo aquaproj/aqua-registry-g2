@@ -1,0 +1,19 @@
+name: kyoh86/richgo
+type: github_release
+repo_owner: kyoh86
+repo_name: richgo
+repo_id: 78035735
+description: Enrich `go test` outputs with text decorations
+version_overrides:
+  - version_constraint: semver("> 0.3.10")
+  - version_constraint: semver("> 0.3.6")
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver("> 0.2.2")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: semver("<= 0.2.2")
+    no_asset: true
+  - version_constraint: "true"
