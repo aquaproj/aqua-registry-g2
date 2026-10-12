@@ -1,0 +1,20 @@
+name: FairwindsOps/nova
+type: github_release
+repo_owner: FairwindsOps
+repo_name: nova
+repo_id: 265260634
+description: Find outdated or deprecated Helm charts running in your cluster
+version_overrides:
+  - version_constraint: semver("> 2.3.2")
+  - version_constraint: semver("> 2.0.1")
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver("<= 2.0.1")
+    files:
+      - name: nova
+        src: Nova
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: "true"
