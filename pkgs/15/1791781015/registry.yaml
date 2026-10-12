@@ -1,0 +1,96 @@
+name: foresterre/cargo-msrv
+type: github_release
+repo_owner: foresterre
+repo_name: cargo-msrv
+repo_id: 211614229
+description: Find the minimum supported Rust version (MSRV) for your project
+version_overrides:
+  - version_constraint: Version == "v0.2.0"
+    supported_envs:
+      - windows
+  - version_constraint: Version == "v0.11.1-testing.1"
+    supported_envs:
+      - windows
+  - version_constraint: Version == "v0.11.1-testing.2"
+    supported_envs:
+      - linux/amd64
+      - windows
+  - version_constraint: Version == "v0.11.1-testing.3"
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("<= 0.7.0") or semver("> 0.10.0, <= 0.12.0") or Version in ["v0.11.0", "v0.15.0", "v0.16.0-beta.12", "v0.16.0-beta.16", "v0.16.0-beta.21", "v0.17.0"]
+    no_asset: true
+  - version_constraint: semver("<= 0.14.2") or Version == "v0.15.1"
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("<= 0.16.0-beta.3")
+    no_asset: true
+  - version_constraint: semver("<= 0.16.0-beta.5")
+    files:
+      - name: cargo-msrv
+        src: '{{.AssetWithoutExt}}/cargo-msrv'
+    supported_envs:
+      - linux/amd64
+      - windows
+  - version_constraint: semver("<= 0.16.0-beta.8")
+    files:
+      - name: cargo-msrv
+        src: '{{.AssetWithoutExt}}/cargo-msrv'
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("<= 0.16.0-beta.10")
+    no_asset: true
+  - version_constraint: Version == "v0.16.0-beta.11"
+    files:
+      - name: cargo-msrv
+        src: '{{.AssetWithoutExt}}/cargo-msrv'
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("<= 0.16.0-beta.15")
+    files:
+      - name: cargo-msrv
+        src: '{{.AssetWithoutExt}}/cargo-msrv'
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("<= 0.16.0-beta.20")
+    files:
+      - name: cargo-msrv
+        src: '{{.AssetWithoutExt}}/cargo-msrv'
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("<= 0.16.1")
+    files:
+      - name: cargo-msrv
+        src: '{{.AssetWithoutExt}}/cargo-msrv'
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("<= 0.16.3")
+    files:
+      - name: cargo-msrv
+        src: '{{.AssetWithoutExt}}/cargo-msrv'
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: "true"
+    files:
+      - name: cargo-msrv
+        src: '{{.AssetWithoutExt}}/cargo-msrv'
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
