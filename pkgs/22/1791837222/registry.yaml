@@ -1,0 +1,18 @@
+name: DataDog/pup
+aliases:
+  - name: datadog-labs/pup
+type: github_release
+repo_owner: DataDog
+repo_name: pup
+repo_id: 1149169439
+description: Give your AI agent a Pup — a CLI companion with 200+ commands across 33+ Datadog products
+version_overrides:
+  - version_constraint: semver("> 0.21.0")
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver("<= 0.21.0")
+  - version_constraint: "true"
+    supported_envs:
+      - linux
+      - darwin
