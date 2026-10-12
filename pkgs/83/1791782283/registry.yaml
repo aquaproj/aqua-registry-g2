@@ -1,0 +1,25 @@
+name: perses/perses
+type: github_release
+repo_owner: perses
+repo_name: perses
+repo_id: 333211722
+description: The CNCF sandbox for observability visualisation. Already supports Prometheus, Tempo, Loki and Pyroscope - more data sources to come
+files:
+  - name: perses
+  - name: percli
+version_overrides:
+  - version_constraint: Version in ["v0.2.0", "v0.6.0", "v0.9.0", "v0.21.0", "v0.42.0"]
+    no_asset: true
+  - version_constraint: semver("<= 0.3.1")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("<= 0.4.1")
+    no_asset: true
+  - version_constraint: semver("<= 0.29.1")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: "true"
