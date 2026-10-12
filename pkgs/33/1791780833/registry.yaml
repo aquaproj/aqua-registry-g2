@@ -1,0 +1,25 @@
+name: birdayz/kaf
+type: github_release
+repo_owner: birdayz
+repo_name: kaf
+repo_id: 148390440
+description: Modern CLI for Apache Kafka, written in Go
+version_overrides:
+  - version_constraint: semver(">= 0.2.6")
+  - version_constraint: semver(">= 0.2.5")
+  - version_constraint: semver(">= 0.2.4")
+  - version_constraint: semver(">= 0.1.44")
+  - version_constraint: semver(">= 0.1.43")
+    supported_envs:
+      - darwin
+      - linux
+      - amd64
+  - version_constraint: semver(">= 0.1.6")
+    supported_envs:
+      - darwin
+      - amd64
+  - version_constraint: semver("< 0.1.6")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: "true"
