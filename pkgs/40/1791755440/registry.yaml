@@ -22,3 +22,4 @@ version_overrides:
   - version_constraint: semver("<= 0.1.5")
     no_asset: true
   - version_constraint: "true"
+all_assets_filter: 'Asset matches "^piped-.+-.+([.].+)?$" or Asset matches "^piped_.+_.+_.+([.].+)?$" or Asset endsWith ".intoto.jsonl"'

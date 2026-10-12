@@ -64,3 +64,4 @@ version_overrides:
   - version_constraint: semver("<= 23.0.1")
     no_asset: true
   - version_constraint: "true"
+all_assets_filter: '(Asset matches "^truffleruby-community-.+-.+-.+[.].+([.].+)?$" and not (Asset contains "-jvm-")) or Asset endsWith ".intoto.jsonl"'
