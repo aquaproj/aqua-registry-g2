@@ -1,0 +1,25 @@
+name: github-release/github-release
+type: github_release
+repo_owner: github-release
+repo_name: github-release
+repo_id: 16349521
+description: Commandline app to create and edit releases on Github (and upload artifacts)
+overrides:
+  - goos: windows
+    format: zip
+    files:
+      - name: github-release
+        src: bin/windows/{{.Arch}}/github-release.exe
+files:
+  - name: github-release
+    src: '{{.OS}}-{{.Arch}}-github-release'
+supported_envs:
+  - darwin
+  - amd64
+version_overrides:
+  - version_constraint: semver(">= 0.8.0")
+  - version_constraint: semver(">= 0.5.0")
+    files:
+      - name: github-release
+        src: bin/{{.OS}}/{{.Arch}}/github-release
+  - version_constraint: "true"
