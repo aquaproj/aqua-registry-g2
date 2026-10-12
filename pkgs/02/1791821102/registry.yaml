@@ -1,0 +1,19 @@
+name: dduan/tre
+type: github_release
+repo_owner: dduan
+repo_name: tre
+repo_id: 169966359
+description: Tree command, improved
+version_overrides:
+  - version_constraint: Version == "0.3.0"
+  - version_constraint: semver("> 0.2.3")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("<= 0.2.3")
+  - version_constraint: "true"
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
