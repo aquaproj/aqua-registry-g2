@@ -1,0 +1,25 @@
+name: TimothyYe/skm
+type: github_release
+repo_owner: TimothyYe
+repo_name: skm
+repo_id: 106516564
+description: A simple and powerful SSH keys manager
+version_overrides:
+  - version_constraint: semver("> 0.8.5")
+  - version_constraint: semver("> 0.8.1")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("> 0.7.0")
+    version_prefix: V
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("<= 0.7.0")
+    version_prefix: V
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: "true"
