@@ -1,0 +1,25 @@
+name: project-zot/zot
+type: github_release
+repo_owner: project-zot
+repo_name: zot
+repo_id: 193163140
+description: zot - A scale-out production-ready vendor-neutral OCI-native container image/artifact registry (purely based on OCI Distribution Specification)
+version_filter: Version matches "^v[0-9]+.[0-9]+.[0-9]+$"
+version_overrides:
+  - version_constraint: semver("<= 1.2.1") or Version in ["1.3.2", "1.3.6"]
+    no_asset: true
+  - version_constraint: semver("<= 1.3.5")
+    supported_envs:
+      - linux/amd64
+  - version_constraint: semver("<= 1.3.7")
+    supported_envs:
+      - linux
+  - version_constraint: semver("<= 2.0.1")
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: "true"
+    supported_envs:
+      - linux
+      - darwin
+all_assets_filter: (Asset matches "checksum") or ((Asset matches "^zot") and (not (Asset matches "-(debug|exporter|minimal)$")))
