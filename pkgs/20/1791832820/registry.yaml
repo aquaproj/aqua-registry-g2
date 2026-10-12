@@ -1,0 +1,12 @@
+name: boyter/cs
+type: github_release
+repo_owner: boyter
+repo_name: cs
+repo_id: 198756440
+description: Code search tool with CLI, TUI, MCP and HTTP support that requires no indexing
+version_overrides:
+  - version_constraint: Version == "v1.0.0"
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: "true"
