@@ -1,0 +1,192 @@
+{
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "http",
+      "repo_owner": "kubernetes",
+      "repo_name": "kubernetes",
+      "repo_id": 20580498,
+      "asset": "kubectl",
+      "url": "https://dl.k8s.io/v1.34.11/bin/darwin/amd64/kubectl",
+      "format": "raw",
+      "checksum": "49e6f1dbfef237b64dd2887a22b03bed16c6aab8883d4c7300eea4d76bfcd095",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "kubectl",
+          "src": "kubectl"
+        }
+      ],
+      "cosign": {
+        "signature": {
+          "type": "http",
+          "url": "https://dl.k8s.io/v1.34.11/bin/darwin/amd64/kubectl.sig"
+        },
+        "certificate": {
+          "type": "http",
+          "url": "https://dl.k8s.io/v1.34.11/bin/darwin/amd64/kubectl.cert"
+        },
+        "certificate_identity": "krel-staging@k8s-releng-prod.iam.gserviceaccount.com",
+        "certificate_oidc_issuer": "https://accounts.google.com"
+      }
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "http",
+      "repo_owner": "kubernetes",
+      "repo_name": "kubernetes",
+      "repo_id": 20580498,
+      "asset": "kubectl",
+      "url": "https://dl.k8s.io/v1.34.11/bin/darwin/arm64/kubectl",
+      "format": "raw",
+      "checksum": "d9e0946a4446cfd66495676273aa71c64566a49e63580136eb138ef6b562c4d9",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "kubectl",
+          "src": "kubectl"
+        }
+      ],
+      "cosign": {
+        "signature": {
+          "type": "http",
+          "url": "https://dl.k8s.io/v1.34.11/bin/darwin/arm64/kubectl.sig"
+        },
+        "certificate": {
+          "type": "http",
+          "url": "https://dl.k8s.io/v1.34.11/bin/darwin/arm64/kubectl.cert"
+        },
+        "certificate_identity": "krel-staging@k8s-releng-prod.iam.gserviceaccount.com",
+        "certificate_oidc_issuer": "https://accounts.google.com"
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "static",
+      "type": "http",
+      "repo_owner": "kubernetes",
+      "repo_name": "kubernetes",
+      "repo_id": 20580498,
+      "asset": "kubectl",
+      "url": "https://dl.k8s.io/v1.34.11/bin/linux/amd64/kubectl",
+      "format": "raw",
+      "checksum": "8efbb9435132a190920eb65a47a8c1ecf755ad85ab57a600c9bedbab460bb7a8",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "kubectl",
+          "src": "kubectl"
+        }
+      ],
+      "cosign": {
+        "signature": {
+          "type": "http",
+          "url": "https://dl.k8s.io/v1.34.11/bin/linux/amd64/kubectl.sig"
+        },
+        "certificate": {
+          "type": "http",
+          "url": "https://dl.k8s.io/v1.34.11/bin/linux/amd64/kubectl.cert"
+        },
+        "certificate_identity": "krel-staging@k8s-releng-prod.iam.gserviceaccount.com",
+        "certificate_oidc_issuer": "https://accounts.google.com"
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "linked_libc": "static",
+      "type": "http",
+      "repo_owner": "kubernetes",
+      "repo_name": "kubernetes",
+      "repo_id": 20580498,
+      "asset": "kubectl",
+      "url": "https://dl.k8s.io/v1.34.11/bin/linux/arm64/kubectl",
+      "format": "raw",
+      "checksum": "5b045a4712674c88a56fd98eef4285689738b7fbe8735e1b9ee3509521af5cb4",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "kubectl",
+          "src": "kubectl"
+        }
+      ],
+      "cosign": {
+        "signature": {
+          "type": "http",
+          "url": "https://dl.k8s.io/v1.34.11/bin/linux/arm64/kubectl.sig"
+        },
+        "certificate": {
+          "type": "http",
+          "url": "https://dl.k8s.io/v1.34.11/bin/linux/arm64/kubectl.cert"
+        },
+        "certificate_identity": "krel-staging@k8s-releng-prod.iam.gserviceaccount.com",
+        "certificate_oidc_issuer": "https://accounts.google.com"
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "http",
+      "repo_owner": "kubernetes",
+      "repo_name": "kubernetes",
+      "repo_id": 20580498,
+      "asset": "kubectl.exe",
+      "url": "https://dl.k8s.io/v1.34.11/bin/windows/amd64/kubectl.exe",
+      "format": "raw",
+      "checksum": "8e352ca98d4cbba570731b0254705f88ef11dc0fd831d845e8b5bd21003bd778",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "kubectl",
+          "src": "kubectl.exe"
+        }
+      ],
+      "cosign": {
+        "signature": {
+          "type": "http",
+          "url": "https://dl.k8s.io/v1.34.11/bin/windows/amd64/kubectl.exe.sig"
+        },
+        "certificate": {
+          "type": "http",
+          "url": "https://dl.k8s.io/v1.34.11/bin/windows/amd64/kubectl.exe.cert"
+        },
+        "certificate_identity": "krel-staging@k8s-releng-prod.iam.gserviceaccount.com",
+        "certificate_oidc_issuer": "https://accounts.google.com"
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "type": "http",
+      "repo_owner": "kubernetes",
+      "repo_name": "kubernetes",
+      "repo_id": 20580498,
+      "asset": "kubectl.exe",
+      "url": "https://dl.k8s.io/v1.34.11/bin/windows/arm64/kubectl.exe",
+      "format": "raw",
+      "checksum": "c67c3e8dc96809504a2f65a2a91b0830c0a7038984a789b8b555309a502e38dc",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "kubectl",
+          "src": "kubectl.exe"
+        }
+      ],
+      "cosign": {
+        "signature": {
+          "type": "http",
+          "url": "https://dl.k8s.io/v1.34.11/bin/windows/arm64/kubectl.exe.sig"
+        },
+        "certificate": {
+          "type": "http",
+          "url": "https://dl.k8s.io/v1.34.11/bin/windows/arm64/kubectl.exe.cert"
+        },
+        "certificate_identity": "krel-staging@k8s-releng-prod.iam.gserviceaccount.com",
+        "certificate_oidc_issuer": "https://accounts.google.com"
+      }
+    }
+  ]
+}
