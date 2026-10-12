@@ -1,0 +1,12 @@
+name: Pluralith/pluralith-cli
+type: github_release
+repo_owner: Pluralith
+repo_name: pluralith-cli
+repo_id: 364957844
+description: A tool for Terraform state visualisation and automated generation of infrastructure documentation
+files:
+  - name: pluralith
+    src: '{{.OS}}/pluralith'
+supported_envs:
+  - darwin
+  - amd64
