@@ -1,0 +1,65 @@
+name: jreleaser/jreleaser
+type: github_release
+repo_owner: jreleaser
+repo_name: jreleaser
+repo_id: 316752534
+description: ':rocket: Release projects quickly and easily with JReleaser'
+version_filter: not (Version == "early-access")
+version_overrides:
+  - version_constraint: semver("> 1.24.0")
+    files:
+      - name: jreleaser
+        src: '{{.AssetWithoutExt}}/bin/{{.AssetWithoutExt}}'
+    slsa_provenance:
+      type: github_release
+      asset: jreleaser-all-{{trimV .Version}}.intoto.jsonl
+      source_tag: '-'
+  - version_constraint: semver("> 1.16.0")
+    files:
+      - name: jreleaser
+        src: '{{.AssetWithoutExt}}/bin/jreleaser'
+    slsa_provenance:
+      type: github_release
+      asset: jreleaser-all-{{trimV .Version}}.intoto.jsonl
+      source_tag: '-'
+  - version_constraint: semver("> 1.10.0")
+    files:
+      - name: jreleaser
+        src: '{{.AssetWithoutExt}}/bin/jreleaser'
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("> 1.5.1")
+    files:
+      - name: jreleaser
+        src: '{{.AssetWithoutExt}}/bin/jreleaser'
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: semver("> 1.2.0")
+    files:
+      - name: jreleaser
+        src: '{{.AssetWithoutExt}}/bin/jreleaser'
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("> 1.0.0")
+    files:
+      - name: jreleaser
+        src: '{{.AssetWithoutExt}}/bin/jreleaser'
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: semver("<= 1.0.0")
+    no_asset: true
+  - version_constraint: "true"
+    files:
+      - name: jreleaser
+        src: '{{.AssetWithoutExt}}/bin/{{.AssetWithoutExt}}'
+    slsa_provenance:
+      type: github_release
+      asset: jreleaser-all-{{trimV .Version}}.intoto.jsonl
+      source_tag: '-'
+all_assets_filter: Asset matches "^jreleaser-native-"
