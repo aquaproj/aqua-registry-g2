@@ -1,0 +1,11 @@
+name: yassinebridi/serpl
+type: github_release
+repo_owner: yassinebridi
+repo_name: serpl
+repo_id: 818001992
+description: A simple terminal UI for search and replace, ala VS Code
+version_overrides:
+  - version_constraint: semver("> 0.1.0")
+  - version_constraint: semver("<= 0.1.0")
+    no_asset: true
+  - version_constraint: "true"
