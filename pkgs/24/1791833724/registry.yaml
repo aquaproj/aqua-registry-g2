@@ -1,0 +1,28 @@
+name: trzsz/trzsz-go
+type: github_release
+repo_owner: trzsz
+repo_name: trzsz-go
+repo_id: 458438404
+description: trzsz-go is the go version of trzsz, makes all terminals that support local shell to support trzsz ( trz / tsz )
+files:
+  - name: trzsz
+    src: '{{.AssetWithoutExt}}/trzsz'
+  - name: trz
+    src: '{{.AssetWithoutExt}}/trz'
+  - name: tsz
+    src: '{{.AssetWithoutExt}}/tsz'
+version_overrides:
+  - version_constraint: semver("> 0.1.7")
+  - version_constraint: semver("<= 0.1.7")
+    files:
+      - name: trzsz
+        src: bin/trzsz
+      - name: trz
+        src: bin/trz
+      - name: tsz
+        src: bin/tsz
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: "true"
