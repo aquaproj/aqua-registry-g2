@@ -1,0 +1,16 @@
+name: sethvargo/ratchet
+type: github_release
+repo_owner: sethvargo
+repo_name: ratchet
+repo_id: 475208896
+description: A tool for securing CI/CD workflows with version pinning
+github_artifact_attestations:
+  signer_workflow: sethvargo/ratchet/.github/workflows/release.yml
+version_overrides:
+  - version_constraint: semver(">= 0.10.0")
+    github_artifact_attestations:
+      signer_workflow: sethvargo/ratchet/.github/workflows/release.yml
+  - version_constraint: semver("< 0.10.0")
+  - version_constraint: "true"
+    github_artifact_attestations:
+      signer_workflow: sethvargo/ratchet/.github/workflows/release.yml
