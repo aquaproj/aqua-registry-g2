@@ -1,0 +1,21 @@
+name: igor-petruk/scriptisto
+type: github_release
+repo_owner: igor-petruk
+repo_name: scriptisto
+repo_id: 216895784
+description: A language-agnostic "shebang interpreter" that enables you to write scripts in compiled languages
+version_overrides:
+  - version_constraint: Version == "v2.0.0"
+    supported_envs:
+      - linux/amd64
+  - version_constraint: semver("> 1.0.0")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: semver("<= 1.0.0")
+    supported_envs:
+      - linux/amd64
+  - version_constraint: "true"
+    supported_envs:
+      - linux/amd64
+      - darwin
