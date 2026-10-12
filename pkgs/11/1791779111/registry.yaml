@@ -1,0 +1,16 @@
+name: alexellis/arkade
+type: github_release
+repo_owner: alexellis
+repo_name: arkade
+repo_id: 243213207
+description: Open Source Marketplace For Developer Tools
+files:
+  - name: ark
+  - name: arkade
+version_overrides:
+  - version_constraint: Version in ["0.6.6", "0.6.26", "0.6.32", "0.6.34", "0.7.2"]
+    no_asset: true
+  - version_constraint: Version == "0.1.0"
+    files:
+      - name: bazaar
+  - version_constraint: "true"
