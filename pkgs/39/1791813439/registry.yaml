@@ -1,0 +1,15 @@
+name: sqldef/sqldef/mssqldef
+aliases:
+  - name: k0kubun/sqldef/mssqldef
+type: github_release
+repo_owner: sqldef
+repo_name: sqldef
+repo_id: 146057993
+description: Idempotent schema management for Microsoft SQL Server
+files:
+  - name: mssqldef
+supported_envs:
+  - darwin
+  - linux
+  - windows/amd64
+all_assets_filter: Asset matches "^mssqldef_.+_.+[.].+([.].+)?$" or Asset endsWith ".intoto.jsonl"
