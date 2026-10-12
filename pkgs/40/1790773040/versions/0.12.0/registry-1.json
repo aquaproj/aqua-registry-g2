@@ -1,0 +1,150 @@
+{
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "http",
+      "repo_owner": "ziglang",
+      "repo_name": "zig",
+      "repo_id": 40276274,
+      "asset": "zig-macos-x86_64-0.12.0.tar.xz",
+      "url": "https://ziglang.org/download/0.12.0/zig-macos-x86_64-0.12.0.tar.xz",
+      "format": "tar.xz",
+      "checksum": "4d411bf413e7667821324da248e8589278180dbc197f4f282b7dbb599a689311",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "zig",
+          "src": "zig-macos-x86_64-0.12.0/zig"
+        }
+      ],
+      "minisign": {
+        "type": "http",
+        "url": "https://ziglang.org/download/0.12.0/zig-macos-x86_64-0.12.0.tar.xz.minisig",
+        "public_key": "RWSGOq2NVecA2UPNdBUZykf1CCb147pkmdtYxgb3Ti+JO/wCYvhbAb/U"
+      }
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "http",
+      "repo_owner": "ziglang",
+      "repo_name": "zig",
+      "repo_id": 40276274,
+      "asset": "zig-macos-aarch64-0.12.0.tar.xz",
+      "url": "https://ziglang.org/download/0.12.0/zig-macos-aarch64-0.12.0.tar.xz",
+      "format": "tar.xz",
+      "checksum": "294e224c14fd0822cfb15a35cf39aa14bd9967867999bf8bdfe3db7ddec2a27f",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "zig",
+          "src": "zig-macos-aarch64-0.12.0/zig"
+        }
+      ],
+      "minisign": {
+        "type": "http",
+        "url": "https://ziglang.org/download/0.12.0/zig-macos-aarch64-0.12.0.tar.xz.minisig",
+        "public_key": "RWSGOq2NVecA2UPNdBUZykf1CCb147pkmdtYxgb3Ti+JO/wCYvhbAb/U"
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "static",
+      "type": "http",
+      "repo_owner": "ziglang",
+      "repo_name": "zig",
+      "repo_id": 40276274,
+      "asset": "zig-linux-x86_64-0.12.0.tar.xz",
+      "url": "https://ziglang.org/download/0.12.0/zig-linux-x86_64-0.12.0.tar.xz",
+      "format": "tar.xz",
+      "checksum": "c7ae866b8a76a568e2d5cfd31fe89cdb629bdd161fdd5018b29a4a0a17045cad",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "zig",
+          "src": "zig-linux-x86_64-0.12.0/zig"
+        }
+      ],
+      "minisign": {
+        "type": "http",
+        "url": "https://ziglang.org/download/0.12.0/zig-linux-x86_64-0.12.0.tar.xz.minisig",
+        "public_key": "RWSGOq2NVecA2UPNdBUZykf1CCb147pkmdtYxgb3Ti+JO/wCYvhbAb/U"
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "linked_libc": "static",
+      "type": "http",
+      "repo_owner": "ziglang",
+      "repo_name": "zig",
+      "repo_id": 40276274,
+      "asset": "zig-linux-aarch64-0.12.0.tar.xz",
+      "url": "https://ziglang.org/download/0.12.0/zig-linux-aarch64-0.12.0.tar.xz",
+      "format": "tar.xz",
+      "checksum": "754f1029484079b7e0ca3b913a0a2f2a6afd5a28990cb224fe8845e72f09de63",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "zig",
+          "src": "zig-linux-aarch64-0.12.0/zig"
+        }
+      ],
+      "minisign": {
+        "type": "http",
+        "url": "https://ziglang.org/download/0.12.0/zig-linux-aarch64-0.12.0.tar.xz.minisig",
+        "public_key": "RWSGOq2NVecA2UPNdBUZykf1CCb147pkmdtYxgb3Ti+JO/wCYvhbAb/U"
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "http",
+      "repo_owner": "ziglang",
+      "repo_name": "zig",
+      "repo_id": 40276274,
+      "asset": "zig-windows-x86_64-0.12.0.zip",
+      "url": "https://ziglang.org/download/0.12.0/zig-windows-x86_64-0.12.0.zip",
+      "format": "zip",
+      "checksum": "2199eb4c2000ddb1fba85ba78f1fcf9c1fb8b3e57658f6a627a8e513131893f5",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "zig",
+          "src": "zig-windows-x86_64-0.12.0/zig.exe"
+        }
+      ],
+      "minisign": {
+        "type": "http",
+        "url": "https://ziglang.org/download/0.12.0/zig-windows-x86_64-0.12.0.zip.minisig",
+        "public_key": "RWSGOq2NVecA2UPNdBUZykf1CCb147pkmdtYxgb3Ti+JO/wCYvhbAb/U"
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "type": "http",
+      "repo_owner": "ziglang",
+      "repo_name": "zig",
+      "repo_id": 40276274,
+      "asset": "zig-windows-aarch64-0.12.0.zip",
+      "url": "https://ziglang.org/download/0.12.0/zig-windows-aarch64-0.12.0.zip",
+      "format": "zip",
+      "checksum": "04c6b92689241ca7a8a59b5f12d2ca2820c09d5043c3c4808b7e93e41c7bf97b",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "zig",
+          "src": "zig-windows-aarch64-0.12.0/zig.exe"
+        }
+      ],
+      "minisign": {
+        "type": "http",
+        "url": "https://ziglang.org/download/0.12.0/zig-windows-aarch64-0.12.0.zip.minisig",
+        "public_key": "RWSGOq2NVecA2UPNdBUZykf1CCb147pkmdtYxgb3Ti+JO/wCYvhbAb/U"
+      }
+    }
+  ]
+}
