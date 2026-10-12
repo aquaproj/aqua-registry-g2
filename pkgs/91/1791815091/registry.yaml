@@ -1,0 +1,45 @@
+name: regclient/regclient/regbot
+type: github_release
+repo_owner: regclient
+repo_name: regclient
+repo_id: 294181202
+description: A scripting tool on top of the regclient (Docker and OCI Registry Client) API
+files:
+  - name: regbot
+supported_envs:
+  - darwin
+  - linux
+  - amd64
+cosign:
+  opts:
+    - --certificate-identity
+    - https://github.com/regclient/regclient/.github/workflows/go.yml@refs/tags/{{.Version}}
+    - --certificate-oidc-issuer
+    - https://token.actions.githubusercontent.com
+  bundle:
+    type: github_release
+    asset: '{{.Asset}}.sigstore.json'
+version_overrides:
+  - version_constraint: semver(">= 0.11.6")
+    cosign:
+      opts:
+        - --certificate-oidc-issuer
+        - https://token.actions.githubusercontent.com
+        - --certificate-identity
+        - https://github.com/regclient/regclient/.github/workflows/go.yml@refs/tags/{{.Version}}
+      bundle:
+        type: github_release
+        asset: regbot-{{.OS}}-{{.Arch}}.sigstore.json
+  - version_constraint: semver(">= 0.3.9")
+  - version_constraint: semver("< 0.3.9")
+  - version_constraint: "true"
+    cosign:
+      opts:
+        - --certificate-oidc-issuer
+        - https://token.actions.githubusercontent.com
+        - --certificate-identity
+        - https://github.com/regclient/regclient/.github/workflows/go.yml@refs/tags/{{.Version}}
+      bundle:
+        type: github_release
+        asset: regbot-{{.OS}}-{{.Arch}}.sigstore.json
+all_assets_filter: Asset matches "^regbot-.+-.+([.].+)?$" or Asset matches "^regbot-.+-.+[.]sigstore[.]json([.].+)?$" or Asset endsWith ".intoto.jsonl"
