@@ -1,0 +1,74 @@
+name: blacknon/hwatch
+type: github_release
+repo_owner: blacknon
+repo_name: hwatch
+repo_id: 120421295
+description: 'hwatch: alternative watch command with history, diff view, JSONL logging, and change hooks. since 2018'
+version_overrides:
+  - version_constraint: Version in ["0.1.6", "0.2.1"]
+    no_asset: true
+  - version_constraint: Version in ["0.2.0", "0.3.0"]
+    files:
+      - name: hwatch
+        src: hwatch/hwatch
+    supported_envs:
+      - darwin
+  - version_constraint: semver("= 0.1.0")
+    files:
+      - name: hwatch
+        src: hwatch_{{.Version}}_{{.OS}}_{{.Arch}}/hwatch
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: semver("<= 0.1.2")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: semver("<= 0.1.4")
+    files:
+      - name: hwatch
+        src: hwatch/hwatch
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: semver("<= 0.3.13")
+    files:
+      - name: hwatch
+        src: bin/hwatch
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: semver("<= 0.3.18")
+    files:
+      - name: hwatch
+        src: bin/hwatch
+    overrides:
+      - goos: windows
+        format: zip
+        files:
+          - name: hwatch
+            src: target/{{.Arch}}-{{.OS}}/release/hwatch
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("<= 0.4.1")
+    files:
+      - name: hwatch
+        src: bin/hwatch
+    overrides:
+      - goos: windows
+        format: zip
+        files:
+          - name: hwatch
+            src: target/{{.Arch}}-{{.OS}}/release/hwatch
+  - version_constraint: "true"
+    files:
+      - name: hwatch
+        src: bin/hwatch
+    overrides:
+      - goos: windows
+        format: zip
+        files:
+          - name: hwatch
+            src: target/{{.Arch}}-{{.OS}}/release/hwatch
