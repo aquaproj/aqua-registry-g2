@@ -1,0 +1,107 @@
+name: pkolaczk/fclones
+type: github_release
+repo_owner: pkolaczk
+repo_name: fclones
+repo_id: 269959476
+description: Efficient Duplicate File Finder
+version_filter: not (Version matches "^gui")
+version_overrides:
+  - version_constraint: Version in ["v0.12.3", "v0.18.1", "v0.29.2", "v0.31.1"]
+    no_asset: true
+  - version_constraint: Version == "0.2.0"
+    supported_envs:
+      - linux/arm64
+      - windows/amd64
+  - version_constraint: Version in ["v0.19.0", "v0.23.0"]
+    supported_envs:
+      - windows/amd64
+  - version_constraint: Version == "v0.20.0"
+    overrides:
+      - goos: linux
+        files:
+          - name: fclones
+            src: usr/bin/fclones
+    supported_envs:
+      - linux/amd64
+  - version_constraint: Version == "v0.20.1"
+    overrides:
+      - goos: linux
+        format: tgz
+        files:
+          - name: fclones
+            src: usr/bin/fclones
+    supported_envs:
+      - darwin
+      - linux/amd64
+      - windows/amd64
+  - version_constraint: Version == "v0.21.0"
+    overrides:
+      - goos: linux
+        format: tgz
+        files:
+          - name: fclones
+            src: usr/bin/fclones
+    supported_envs:
+      - darwin
+      - linux/amd64
+      - windows/amd64
+  - version_constraint: Version == "v0.22.0"
+    overrides:
+      - goos: linux
+        format: tgz
+        files:
+          - name: fclones
+            src: usr/bin/fclones
+    supported_envs:
+      - darwin
+      - linux/amd64
+      - windows/amd64
+  - version_constraint: Version in ["v0.24.0", "v0.26.0"]
+    replacements:
+      linux: linux-musl
+    supported_envs:
+      - linux/amd64
+      - windows/amd64
+  - version_constraint: Version == "v0.25.0"
+    replacements:
+      linux: linux-musl
+    supported_envs:
+      - linux/amd64
+      - windows/amd64
+  - version_constraint: semver("<= 0.1.2")
+    no_asset: true
+  - version_constraint: semver("<= 0.6.0")
+    supported_envs:
+      - linux/arm64
+      - windows/amd64
+  - version_constraint: semver("<= 0.9.1")
+    supported_envs:
+      - windows/amd64
+  - version_constraint: semver("<= 0.10.2")
+    supported_envs:
+      - windows/amd64
+  - version_constraint: semver("<= 0.12.0")
+    no_asset: true
+  - version_constraint: semver("<= 0.28.0")
+    overrides:
+      - goos: linux
+        format: tgz
+        files:
+          - name: fclones
+            src: usr/bin/fclones
+    supported_envs:
+      - linux/amd64
+      - windows/amd64
+  - version_constraint: "true"
+    replacements:
+      linux: linux-musl
+    overrides:
+      - goos: linux
+        format: tar.gz
+        files:
+          - name: fclones
+            src: target/{{.Arch}}-unknown-{{.OS}}/release/fclones
+    supported_envs:
+      - linux/amd64
+      - windows/amd64
+all_assets_filter: not ((Asset matches ".deb$") or (Asset matches ".rpm$"))
