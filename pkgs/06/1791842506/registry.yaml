@@ -1,0 +1,43 @@
+name: apache/camel-k
+type: github_release
+repo_owner: apache
+repo_name: camel-k
+repo_id: 146865191
+description: Apache Camel K is a lightweight integration platform, born on Kubernetes, with serverless superpowers
+files:
+  - name: kamel
+supported_envs:
+  - darwin
+  - linux
+  - amd64
+version_overrides:
+  - version_constraint: semver(">= 2.0.0-nightly")
+  - version_constraint: semver(">= 1.9.0")
+    replacements:
+      arm64: arm64bit
+    supported_envs:
+      - darwin
+      - amd64
+  - version_constraint: semver(">= 1.9.0-nightly")
+    supported_envs:
+      - darwin
+      - amd64
+  - version_constraint: semver(">= 1.6.1")
+    replacements:
+      arm64: arm64bit
+    supported_envs:
+      - darwin
+      - amd64
+  - version_constraint: semver(">= 1.0.0-M1")
+    supported_envs:
+      - darwin
+      - amd64
+  - version_constraint: semver(">= 0.3.4")
+    supported_envs:
+      - darwin
+      - amd64
+  - version_constraint: semver("< 0.3.4")
+    supported_envs:
+      - darwin
+      - amd64
+  - version_constraint: "true"
