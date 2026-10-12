@@ -13,3 +13,4 @@ version_overrides:
   - version_constraint: semver("< 0.8.3")
     no_asset: true
   - version_constraint: "true"
+all_assets_filter: 'Asset matches "^xremap-.+-.+-kde[.].+([.].+)?$" or Asset endsWith ".intoto.jsonl"'

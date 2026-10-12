@@ -6,3 +6,4 @@ repo_id: 74175805
 description: The istioctl tool is a configuration command line utility that allows service operators to debug and diagnose their Istio service mesh deployments
 files:
   - name: istioctl
+all_assets_filter: 'Asset matches "^istioctl-.+-.+-.+[.]tar[.]gz([.].+)?$" or Asset matches "^istioctl-.+-osx[.]tar[.]gz([.].+)?$" or Asset matches "^istioctl-.+-win[.]zip([.].+)?$" or Asset endsWith ".intoto.jsonl"'

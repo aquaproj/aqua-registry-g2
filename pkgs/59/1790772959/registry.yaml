@@ -59,3 +59,4 @@ version_overrides:
     no_asset: true
   - version_constraint: "true"
     version_prefix: apps_v
+all_assets_filter: 'Asset matches "^oxlint-.+-.+([.].+)?$" or Asset matches "^oxlint-.+-.+[.].+([.].+)?$" or Asset matches "^oxlint-.+-.+-gnu[.].+([.].+)?$" or Asset endsWith ".intoto.jsonl"'

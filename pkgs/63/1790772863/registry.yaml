@@ -20,3 +20,4 @@ version_overrides:
     slsa_provenance:
       type: github_release
       asset: multiple.intoto.jsonl
+all_assets_filter: 'Asset matches "^protoc-gen-grpc-gateway-.+-.+-.+([.].+)?$" or Asset matches "^multiple[.]intoto[.]jsonl([.].+)?$" or Asset endsWith ".intoto.jsonl"'

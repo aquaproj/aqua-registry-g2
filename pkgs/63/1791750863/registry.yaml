@@ -9,3 +9,4 @@ version_overrides:
   - version_constraint: semver("<= 1.0.0")
     no_asset: true
   - version_constraint: "true"
+all_assets_filter: 'Asset matches "^porter-.+-.+([.].+)?$" or Asset endsWith ".intoto.jsonl"'

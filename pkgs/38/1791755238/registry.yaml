@@ -10,3 +10,4 @@ version_overrides:
   - version_constraint: semver("<= 0.9.1")
     no_asset: true
   - version_constraint: "true"
+all_assets_filter: 'Asset matches "^pipectl_.+_.+_.+([.].+)?$" or Asset endsWith ".intoto.jsonl"'
