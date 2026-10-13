@@ -1,0 +1,13 @@
+name: budimanjojo/talhelper
+type: github_release
+repo_owner: budimanjojo
+repo_name: talhelper
+repo_id: 496581255
+description: A tool to help creating Talos kubernetes cluster
+version_overrides:
+  - version_constraint: semver("> 1.6.4")
+  - version_constraint: semver("<= 1.6.4")
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: "true"
