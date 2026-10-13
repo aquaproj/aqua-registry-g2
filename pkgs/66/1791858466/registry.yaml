@@ -1,0 +1,18 @@
+name: gojuno/minimock
+type: github_release
+repo_owner: gojuno
+repo_name: minimock
+repo_id: 64859646
+description: Powerful mock generation tool for Go programming language
+version_overrides:
+  - version_constraint: semver("> 3.0.8")
+  - version_constraint: semver("> 1.9.2")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("<= 1.9.2")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: "true"
