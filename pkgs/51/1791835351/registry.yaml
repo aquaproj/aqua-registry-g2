@@ -1,0 +1,15 @@
+name: cloudflare/pint
+type: github_release
+repo_owner: cloudflare
+repo_name: pint
+repo_id: 360735059
+description: Prometheus rule linter/validator
+files:
+  - name: pint
+    src: pint-{{.GOOS}}-{{.GOARCH}}
+supported_envs:
+  - darwin
+  - linux
+  - amd64
+version_overrides:
+  - version_constraint: "true"
