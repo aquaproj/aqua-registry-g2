@@ -1,0 +1,45 @@
+name: gefyrahq/gefyra
+type: github_release
+repo_owner: gefyrahq
+repo_name: gefyra
+repo_id: 429510684
+description: 'Blazingly-fast :rocket:, rock-solid, local application development :arrow_right: with Kubernetes'
+version_overrides:
+  - version_constraint: Version == "0.6.8"
+    no_asset: true
+  - version_constraint: semver("> 2.0.3")
+    overrides:
+      - goos: windows
+        files:
+          - name: gefyra
+            src: dist-exe/gefyra.exe
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("> 0.8.0")
+    overrides:
+      - goos: windows
+        files:
+          - name: gefyra
+            src: dist/gefyra
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("> 0.5.0")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: semver("<= 0.5.0")
+    no_asset: true
+  - version_constraint: "true"
+    overrides:
+      - goos: windows
+        files:
+          - name: gefyra
+            src: dist-exe/gefyra.exe
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
