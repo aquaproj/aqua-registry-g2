@@ -1,0 +1,26 @@
+name: dineshba/tf-summarize
+type: github_release
+repo_owner: dineshba
+repo_name: tf-summarize
+repo_id: 447641855
+description: A command-line utility to print the summary of the terraform plan
+version_overrides:
+  - version_constraint: semver(">= 0.2.5")
+  - version_constraint: semver(">= 0.2.0")
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver(">= 0.0.2")
+    files:
+      - name: tf-plan-summarize
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: Version == "v0.0.1"
+    files:
+      - name: terraform-plan-summarize
+        src: terraform-plan-summary
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: "true"
