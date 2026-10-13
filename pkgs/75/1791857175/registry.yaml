@@ -1,0 +1,28 @@
+name: abhinav/git-spice
+type: github_release
+repo_owner: abhinav
+repo_name: git-spice
+repo_id: 660623402
+description: Manage stacked Git branches
+version_overrides:
+  - version_constraint: semver("> 0.23.0")
+    files:
+      - name: git-spice
+  - version_constraint: semver("> 0.5.2")
+    files:
+      - name: gs
+  - version_constraint: semver("> 0.1.0-beta4")
+    files:
+      - name: gs
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver("<= 0.1.0-beta4")
+    files:
+      - name: gs
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: "true"
+    files:
+      - name: git-spice
