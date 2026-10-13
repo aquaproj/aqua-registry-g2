@@ -1,0 +1,20 @@
+name: zaquestion/lab
+type: github_release
+repo_owner: zaquestion
+repo_name: lab
+repo_id: 101533401
+description: Lab wraps Git or Hub, making it simple to clone, fork, and interact with repositories on GitLab
+version_overrides:
+  - version_constraint: Version == "v0.5.0"
+    no_asset: true
+  - version_constraint: semver("> 0.17.2")
+  - version_constraint: semver("> 0.11.1")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("<= 0.11.1")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: "true"

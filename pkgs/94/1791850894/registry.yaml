@@ -1,0 +1,18 @@
+name: redhat-developer/odo
+type: http
+repo_owner: redhat-developer
+repo_name: odo
+repo_id: 118630356
+description: A fast, and iterative CLI tool for container-based application development
+url: https://developers.redhat.com/content-gateway/rest/mirror/pub/openshift-v4/clients/odo/{{.Version}}/odo-{{.OS}}-{{.Arch}}
+format: raw
+overrides:
+  - goos: windows
+    checksum:
+      type: http
+      url: https://developers.redhat.com/content-gateway/rest/mirror/pub/openshift-v4/clients/odo/{{.Version}}/odo-{{.OS}}-{{.Arch}}.exe.sha256
+      algorithm: sha256
+supported_envs:
+  - darwin
+  - linux
+  - windows/amd64

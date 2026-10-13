@@ -1,0 +1,31 @@
+name: updatecli/updatecli
+type: github_release
+repo_owner: updatecli
+repo_name: updatecli
+repo_id: 236195365
+description: A Declarative Dependency Management tool
+github_artifact_attestations:
+  signer_workflow: updatecli/updatecli/.github/workflows/release.yaml
+version_overrides:
+  - version_constraint: Version in ["v0.0.18", "v0.0.32"]
+    no_asset: true
+  - version_constraint: Version == "v0.0.23"
+    supported_envs:
+      - windows
+  - version_constraint: semver("<= 0.0.5")
+    no_asset: true
+  - version_constraint: semver("<= 0.0.10")
+    supported_envs:
+      - linux/amd64
+  - version_constraint: semver("<= 0.3.0")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("<= 0.7.1")
+  - version_constraint: semver("<= 0.40.1")
+  - version_constraint: semver("<= 0.110.3")
+  - version_constraint: semver("<= 0.114.0")
+  - version_constraint: "true"
+    github_artifact_attestations:
+      signer_workflow: updatecli/updatecli/.github/workflows/release.yaml

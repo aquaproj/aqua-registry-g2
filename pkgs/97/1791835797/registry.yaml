@@ -1,0 +1,25 @@
+name: printfn/fend
+type: github_release
+repo_owner: printfn
+repo_name: fend
+repo_id: 284117291
+description: Arbitrary-precision unit-aware calculator
+version_overrides:
+  - version_constraint: semver("> 1.5.1")
+    supported_envs:
+      - linux
+      - darwin/arm64
+      - windows/amd64
+  - version_constraint: semver("> 0.1.28")
+  - version_constraint: semver("> 0.1.0")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("<= 0.1.0")
+    no_asset: true
+  - version_constraint: "true"
+    supported_envs:
+      - linux
+      - darwin/arm64
+      - windows/amd64

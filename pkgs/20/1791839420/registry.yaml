@@ -1,0 +1,16 @@
+name: ck-zhang/reddix
+type: github_release
+repo_owner: ck-zhang
+repo_name: reddix
+repo_id: 1069037829
+description: Reddix – Reddit, refined for the terminal
+version_overrides:
+  - version_constraint: "true"
+    files:
+      - name: reddix
+        src: '{{.AssetWithoutExt}}/reddix'
+    overrides:
+      - goos: windows
+        format: zip
+        files:
+          - name: reddix

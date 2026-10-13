@@ -1,0 +1,18 @@
+name: sunny0826/kubecm
+type: github_release
+repo_owner: sunny0826
+repo_name: kubecm
+repo_id: 198331752
+description: Manage your kubeconfig more easily
+version_overrides:
+  - version_constraint: semver("> 0.13.1")
+  - version_constraint: semver("> 0.3.1")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("<= 0.3.1")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: "true"

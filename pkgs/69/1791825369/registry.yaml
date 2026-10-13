@@ -1,0 +1,56 @@
+name: walles/moor
+type: github_release
+repo_owner: walles
+repo_name: moor
+repo_id: 13996764
+description: Moor is a pager. It's designed to just do the right thing without any configuration
+version_overrides:
+  - version_constraint: Version == "v1.23.3"
+    files:
+      - name: moar
+    supported_envs:
+      - windows
+  - version_constraint: semver("> 1.33.0")
+    files:
+      - name: moor
+        link: moor
+    supported_envs:
+      - darwin
+      - windows
+      - linux/amd64
+  - version_constraint: semver("> 1.23.7")
+    files:
+      - name: moar
+        link: moar
+    supported_envs:
+      - darwin
+      - windows
+      - linux/amd64
+  - version_constraint: semver("> 1.11.4")
+    files:
+      - name: moar
+        link: moar
+    supported_envs:
+      - darwin
+      - windows
+  - version_constraint: semver("> 1.8.1")
+    files:
+      - name: moar
+    supported_envs:
+      - darwin
+      - windows
+  - version_constraint: semver("> 0.9.7")
+    files:
+      - name: moar
+    supported_envs:
+      - darwin
+  - version_constraint: semver("<= 0.9.7")
+    no_asset: true
+  - version_constraint: "true"
+    files:
+      - name: moor
+        link: moor
+    supported_envs:
+      - darwin
+      - windows
+      - linux/amd64

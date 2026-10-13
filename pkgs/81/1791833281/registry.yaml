@@ -1,0 +1,21 @@
+name: numtide/treefmt
+type: github_release
+repo_owner: numtide
+repo_name: treefmt
+repo_id: 322563105
+description: one CLI to format your repo
+version_overrides:
+  - version_constraint: semver("> 0.6.1")
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver("> 0.4.0")
+  - version_constraint: semver("> 0.2.6")
+    supported_envs:
+      - linux
+      - windows
+  - version_constraint: semver("<= 0.2.6")
+  - version_constraint: "true"
+    supported_envs:
+      - linux
+      - darwin

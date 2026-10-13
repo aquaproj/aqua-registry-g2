@@ -1,0 +1,23 @@
+name: incu6us/goimports-reviser
+type: github_release
+repo_owner: incu6us
+repo_name: goimports-reviser
+repo_id: 254116626
+description: Right imports sorting & code formatting tool (goimports alternative)
+version_overrides:
+  - version_constraint: Version == "v0.0.4"
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: semver("> 3.9.0")
+  - version_constraint: semver("> 2.5.1")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("<= 2.5.1")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: "true"

@@ -1,0 +1,21 @@
+name: a8m/envsubst
+type: github_release
+repo_owner: a8m
+repo_name: envsubst
+repo_id: 57315228
+description: Environment variables substitution for Go
+version_overrides:
+  - version_constraint: Version == "v1.0.0"
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: Version == "v1.1.0"
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: Version == "v1.4.1"
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: "true"

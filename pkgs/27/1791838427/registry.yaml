@@ -1,0 +1,24 @@
+name: ikawaha/kagome
+type: github_release
+repo_owner: ikawaha
+repo_name: kagome
+repo_id: 21228174
+description: Self-contained Japanese Morphological Analyzer written in pure Go
+version_overrides:
+  - version_constraint: Version in ["v2.9.6", "v2.9.9"]
+    no_asset: true
+  - version_constraint: semver("<= 0.1.0")
+    files:
+      - name: kagome
+        src: kagome_{{.OS}}_{{.Arch}}/kagome
+    overrides:
+      - goos: windows
+        files:
+          - name: kagome
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("<= 2.2.0")
+    no_asset: true
+  - version_constraint: "true"

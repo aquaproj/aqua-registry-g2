@@ -1,0 +1,11 @@
+name: mattn/longcat
+type: github_release
+repo_owner: mattn
+repo_name: longcat
+repo_id: 207428397
+description: Looooooooooooooooooooooooooooooooooooooooooooooong cat
+version_overrides:
+  - version_constraint: "true"
+    files:
+      - name: longcat
+        src: '{{.AssetWithoutExt}}/longcat'

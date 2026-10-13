@@ -1,0 +1,25 @@
+name: Zxilly/go-size-analyzer
+type: github_release
+repo_owner: Zxilly
+repo_name: go-size-analyzer
+repo_id: 609147387
+description: A tool for analyzing the size of compiled Go binaries, offering cross-platform support, detailed breakdowns, and multiple output formats
+files:
+  - name: gsa
+github_artifact_attestations:
+  signer_workflow: Zxilly/go-size-analyzer/.github/workflows/release.yml
+slsa_provenance:
+  enabled: false
+version_overrides:
+  - version_constraint: semver(">= 1.3.4")
+    github_artifact_attestations:
+      signer_workflow: Zxilly/go-size-analyzer/.github/workflows/release.yml
+  - version_constraint: semver(">= 1.2.3")
+    github_artifact_attestations:
+      signer_workflow: Zxilly/go-size-analyzer/.github/workflows/build-gsa.yml
+  - version_constraint: semver("> 0.1.0")
+  - version_constraint: semver("<= 0.1.0")
+    no_asset: true
+  - version_constraint: "true"
+    github_artifact_attestations:
+      signer_workflow: Zxilly/go-size-analyzer/.github/workflows/release.yml

@@ -1,0 +1,19 @@
+name: kluctl/kluctl
+type: github_release
+repo_owner: kluctl
+repo_name: kluctl
+repo_id: 395634637
+description: The missing glue to put together large Kubernetes deployments, composed of multiple smaller parts (Helm/Kustomize/...)  in a manageable and unified way
+version_overrides:
+  - version_constraint: semver("> 2.7.1")
+  - version_constraint: semver("> 2.6.2")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("<= 2.6.2")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: "true"

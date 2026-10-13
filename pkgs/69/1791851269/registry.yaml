@@ -1,0 +1,12 @@
+name: hashicorp/levant
+type: http
+repo_owner: hashicorp
+repo_name: levant
+repo_id: 102973506
+description: An open source templating and deployment tool for HashiCorp Nomad jobs
+url: https://releases.hashicorp.com/levant/{{trimV .Version}}/levant_{{trimV .Version}}_{{.OS}}_{{.Arch}}.zip
+rosetta2: true
+supported_envs:
+  - darwin
+  - linux
+  - amd64

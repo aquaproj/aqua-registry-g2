@@ -1,0 +1,20 @@
+name: ipinfo/cli
+type: github_release
+repo_owner: ipinfo
+repo_name: cli
+repo_id: 306538237
+description: Official Command Line Interface for the IPinfo API (IP geolocation and other types of IP data)
+version_filter: Version startsWith "ipinfo-"
+overrides:
+  - goos: windows
+    format: zip
+    files:
+      - name: ipinfo
+        src: ipinfo_{{trimPrefix "ipinfo-" .Version}}_{{.OS}}_{{.Arch}}.exe
+files:
+  - name: ipinfo
+    src: ipinfo_{{trimPrefix "ipinfo-" .Version}}_{{.OS}}_{{.Arch}}
+supported_envs:
+  - darwin
+  - linux
+  - amd64

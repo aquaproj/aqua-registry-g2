@@ -1,0 +1,36 @@
+name: bytecodealliance/wasm-tools
+type: github_release
+repo_owner: bytecodealliance
+repo_name: wasm-tools
+repo_id: 265302687
+description: CLI and Rust libraries for low-level manipulation of WebAssembly modules
+github_artifact_attestations:
+  signer_workflow: bytecodealliance/wasm-tools/.github/workflows/publish.yml
+version_overrides:
+  - version_constraint: Version in ["v1.254.2", "v1.258.1", "v1.258.2", "v1.258.3"]
+    files:
+      - name: wasm-tools
+        src: '{{.AssetWithoutExt}}/wasm-tools'
+    github_artifact_attestations:
+      signer_workflow: bytecodealliance/wasm-tools/.github/workflows/main.yml
+  - version_constraint: semver("> 1.239.0")
+    files:
+      - name: wasm-tools
+        src: '{{.AssetWithoutExt}}/wasm-tools'
+    github_artifact_attestations:
+      signer_workflow: bytecodealliance/wasm-tools/.github/workflows/publish.yml
+  - version_constraint: semver("> 1.0.60")
+    files:
+      - name: wasm-tools
+        src: '{{.AssetWithoutExt}}/wasm-tools'
+  - version_constraint: semver("<= 1.0.60")
+    version_prefix: wasm-tools-
+    files:
+      - name: wasm-tools
+        src: '{{.AssetWithoutExt}}/wasm-tools'
+  - version_constraint: "true"
+    files:
+      - name: wasm-tools
+        src: '{{.AssetWithoutExt}}/wasm-tools'
+    github_artifact_attestations:
+      signer_workflow: bytecodealliance/wasm-tools/.github/workflows/publish.yml

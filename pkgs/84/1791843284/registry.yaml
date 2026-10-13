@@ -1,0 +1,14 @@
+name: ivaaaan/smug
+type: github_release
+repo_owner: ivaaaan
+repo_name: smug
+repo_id: 323073412
+description: Session manager and task runner for tmux. Start your development environment within one command
+version_overrides:
+  - version_constraint: semver("> 0.2.2")
+  - version_constraint: semver("<= 0.2.2")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: "true"

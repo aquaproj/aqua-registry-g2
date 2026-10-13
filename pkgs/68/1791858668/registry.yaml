@@ -1,0 +1,19 @@
+name: dag-andersen/argocd-diff-preview
+type: github_release
+repo_owner: dag-andersen
+repo_name: argocd-diff-preview
+repo_id: 785347235
+description: Tool for rendering manifest changes on pull requests
+version_overrides:
+  - version_constraint: semver("> 0.0.35")
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver("<= 0.0.35")
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: "true"
+    supported_envs:
+      - linux
+      - darwin

@@ -1,0 +1,19 @@
+name: arl/gitmux
+type: github_release
+repo_owner: arl
+repo_name: gitmux
+repo_id: 217990741
+description: Git in your tmux status bar
+version_overrides:
+  - version_constraint: semver("> 0.7.4")
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver("<= 0.7.4")
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: "true"
+    supported_envs:
+      - linux
+      - darwin
