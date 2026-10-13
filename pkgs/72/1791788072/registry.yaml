@@ -1,0 +1,19 @@
+name: jbangdev/jbang
+type: github_release
+repo_owner: jbangdev
+repo_name: jbang
+repo_id: 230011262
+description: Unleash the power of Java - JBang Lets Students, Educators and Professional Developers create, edit and run self-contained source-only Java programs with unprecedented ease
+link: https://jbang.dev/
+files:
+  - name: jbang
+    src: jbang-{{trimV .Version}}/bin/jbang
+overrides:
+  - goos: windows
+    files:
+      - name: jbang
+        src: jbang-{{trimV .Version}}/bin/jbang.cmd
+version_overrides:
+  - version_constraint: semver("< 0.48.0")
+    error_message: Use version >= 0.48.0. Older versions are not supported.
+  - version_constraint: "true"
