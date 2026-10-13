@@ -1,0 +1,24 @@
+name: helmfile/vals
+aliases:
+  - name: variantdev/vals
+type: github_release
+repo_owner: helmfile
+repo_name: vals
+repo_id: 201556139
+description: Helm-like configuration values loader with support for various sources
+version_overrides:
+  - version_constraint: Version in ["v0.16.0", "v0.17.0"]
+    no_asset: true
+  - version_constraint: Version == "v0.16.1"
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver("<= 0.11.0")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: semver("<= 0.15.0")
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: "true"
