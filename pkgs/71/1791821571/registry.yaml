@@ -29,3 +29,4 @@ version_overrides:
       - linux/amd64
       - darwin
   - version_constraint: "true"
+all_assets_filter: 'not (Asset startsWith "kubectl-cypher-")'
