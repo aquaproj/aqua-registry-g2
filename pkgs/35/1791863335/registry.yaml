@@ -1,0 +1,20 @@
+name: wfxr/csview
+type: github_release
+repo_owner: wfxr
+repo_name: csview
+repo_id: 295618462
+description: Pretty and fast csv viewer for cli with cjk/emoji support
+files:
+  - name: csview
+    src: csview-{{.Version}}-{{.Arch}}-{{.OS}}/csview
+version_overrides:
+  - version_constraint: semver(">= 1.3.4")
+    supported_envs:
+      - darwin/arm64
+      - linux
+      - windows/amd64
+  - version_constraint: "true"
+    supported_envs:
+      - darwin
+      - linux
+      - amd64
