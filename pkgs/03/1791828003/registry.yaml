@@ -14,3 +14,4 @@ version_overrides:
   - version_constraint: semver("<= 0.19.0")
     no_asset: true
   - version_constraint: "true"
+all_assets_filter: 'not (Asset startsWith "ctx-onnxruntime-" or Asset endsWith ".third-party-notices.txt")'
