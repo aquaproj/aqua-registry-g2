@@ -1,0 +1,23 @@
+name: rogerwelin/cassowary
+type: github_release
+repo_owner: rogerwelin
+repo_name: cassowary
+repo_id: 204351794
+description: Modern cross-platform HTTP load-testing tool written in Go
+version_overrides:
+  - version_constraint: Version == "v0.1.0"
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: semver("> 0.13.0")
+  - version_constraint: semver("> 0.12.0")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("<= 0.12.0")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: "true"
