@@ -1,0 +1,28 @@
+name: gurgeous/tennis
+type: github_release
+repo_owner: gurgeous
+repo_name: tennis
+repo_id: 1166329580
+description: stylish CSV tables in your terminal
+version_overrides:
+  - version_constraint: semver(">= 0.7.0")
+    files:
+      - name: tennis
+        src: tennis_{{trimV .Version}}_{{.OS}}_{{.Arch}}/tennis
+    supported_envs:
+      - linux/amd64
+      - darwin/arm64
+  - version_constraint: semver("< 0.7.0")
+    files:
+      - name: tennis
+        src: tennis_{{trimV .Version}}_{{.OS}}_{{.Arch}}/tennis
+    supported_envs:
+      - linux
+      - darwin/arm64
+  - version_constraint: "true"
+    files:
+      - name: tennis
+        src: tennis_{{trimV .Version}}_{{.OS}}_{{.Arch}}/tennis
+    supported_envs:
+      - linux/amd64
+      - darwin/arm64
