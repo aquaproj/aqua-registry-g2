@@ -1,0 +1,23 @@
+name: arxanas/git-branchless
+type: github_release
+repo_owner: arxanas
+repo_name: git-branchless
+repo_id: 320370787
+description: High-velocity, monorepo-scale workflow for Git
+version_overrides:
+  - version_constraint: semver("<= 0.3.10") || Version in ["v0.4.0", "v0.6.0"]
+    no_asset: true
+  - version_constraint: Version == "v0.10.0"
+    supported_envs:
+      - linux/amd64
+      - windows
+  - version_constraint: semver("< 0.11.0")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: "true"
+    supported_envs:
+      - darwin/arm64
+      - linux
+      - windows
