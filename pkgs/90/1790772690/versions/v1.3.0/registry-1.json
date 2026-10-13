@@ -1,0 +1,181 @@
+{
+  "published_at": "2025-12-27T22:33:35Z",
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "FiloSottile",
+      "repo_name": "age",
+      "repo_id": 187403699,
+      "asset": "age-v1.3.0-darwin-amd64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "d4901f105731bdedb19cb70b5608f7c8db09349dd0b57017cef8c48a31819462",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "age",
+          "src": "age/age"
+        },
+        {
+          "name": "age-keygen",
+          "src": "age/age-keygen"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "FiloSottile/age/.github/workflows/darwin-amd64-backfill.yml",
+        "source_ref": "refs/heads/main",
+        "source_digest": "c918a2c1136eb04bd8a28f1d50403473437b4098",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "FiloSottile",
+      "repo_name": "age",
+      "repo_id": 187403699,
+      "asset": "age-v1.3.0-darwin-arm64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "4cd58304a79fbcd554d5ba99ec1cba872cf7ef84b9ac34ebbc5e77bd1fa9f5f6",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "age",
+          "src": "age/age"
+        },
+        {
+          "name": "age-keygen",
+          "src": "age/age-keygen"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "FiloSottile/age/.github/workflows/build.yml",
+        "source_ref": "refs/tags/v1.3.0",
+        "source_digest": "6a8065f2da1cc3e00a1b4cb39bef5fbdf4c48960",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "FiloSottile",
+      "repo_name": "age",
+      "repo_id": 187403699,
+      "asset": "age-v1.3.0-linux-amd64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "2635f17e469b8c829055151dcbf77effe1fbefe182cb7b308aee5d0e5d923aae",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "age",
+          "src": "age/age"
+        },
+        {
+          "name": "age-keygen",
+          "src": "age/age-keygen"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "FiloSottile/age/.github/workflows/build.yml",
+        "source_ref": "refs/tags/v1.3.0",
+        "source_digest": "6a8065f2da1cc3e00a1b4cb39bef5fbdf4c48960",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "FiloSottile",
+      "repo_name": "age",
+      "repo_id": 187403699,
+      "asset": "age-v1.3.0-linux-arm64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "5c78a4de6aa89e86045e4c05fec5773f3c419a5c209cd7cb381fec0f5e8fa936",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "age",
+          "src": "age/age"
+        },
+        {
+          "name": "age-keygen",
+          "src": "age/age-keygen"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "FiloSottile/age/.github/workflows/build.yml",
+        "source_ref": "refs/tags/v1.3.0",
+        "source_digest": "6a8065f2da1cc3e00a1b4cb39bef5fbdf4c48960",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "FiloSottile",
+      "repo_name": "age",
+      "repo_id": 187403699,
+      "asset": "age-v1.3.0-windows-amd64.zip",
+      "format": "zip",
+      "checksum": "53bec974398358dd1505122b99abdd21c3f3d9a3174dacb71826bbb04f29b54d",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "age",
+          "src": "age/age.exe"
+        },
+        {
+          "name": "age-keygen",
+          "src": "age/age-keygen.exe"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "FiloSottile/age/.github/workflows/build.yml",
+        "source_ref": "refs/tags/v1.3.0",
+        "source_digest": "6a8065f2da1cc3e00a1b4cb39bef5fbdf4c48960",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "FiloSottile",
+      "repo_name": "age",
+      "repo_id": 187403699,
+      "asset": "age-v1.3.0-windows-amd64.zip",
+      "format": "zip",
+      "checksum": "53bec974398358dd1505122b99abdd21c3f3d9a3174dacb71826bbb04f29b54d",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "age",
+          "src": "age/age.exe"
+        },
+        {
+          "name": "age-keygen",
+          "src": "age/age-keygen.exe"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "FiloSottile/age/.github/workflows/build.yml",
+        "source_ref": "refs/tags/v1.3.0",
+        "source_digest": "6a8065f2da1cc3e00a1b4cb39bef5fbdf4c48960",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    }
+  ]
+}
