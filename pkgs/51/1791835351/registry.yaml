@@ -6,7 +6,7 @@ repo_id: 360735059
 description: Prometheus rule linter/validator
 files:
   - name: pint
-    src: pint-{{.GOOS}}-{{.GOARCH}}
+    src: pint-{{.GOOS}}-{{.Arch}}
 supported_envs:
   - darwin
   - linux

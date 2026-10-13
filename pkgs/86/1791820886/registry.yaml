@@ -6,6 +6,7 @@ repo_owner: chaqchase
 repo_name: lla
 repo_id: 672935720
 description: A modern alternative to ls
+all_assets_filter: not (Asset startsWith "plugins-")
 version_overrides:
   - version_constraint: semver("> 0.2.7")
     supported_envs:
