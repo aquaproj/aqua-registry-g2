@@ -2,6 +2,61 @@
   "published_at": "2026-09-21T13:00:01Z",
   "assets": [
     {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "chaqchase",
+      "repo_name": "lla",
+      "repo_id": 672935720,
+      "asset": "lla-macos-amd64",
+      "format": "raw",
+      "checksum": "b1d92dd8575dc11f8543346db45dc83c107166a85c75e58a8c29f840477927df",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "lla",
+          "src": "lla-macos-amd64"
+        }
+      ]
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "chaqchase",
+      "repo_name": "lla",
+      "repo_id": 672935720,
+      "asset": "lla-macos-arm64",
+      "format": "raw",
+      "checksum": "61016ccd7e1e9a695793dcc766b0340abc31e9f1ab9123b8a7988cab2ada3078",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "lla",
+          "src": "lla-macos-arm64"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "chaqchase",
+      "repo_name": "lla",
+      "repo_id": 672935720,
+      "asset": "lla-linux-amd64",
+      "format": "raw",
+      "checksum": "52933e3f7829558c2a0c8a4aa51e2ed6a0ab1cc3a5f8c1f25b90b41c5c1dfc2a",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "lla",
+          "src": "lla-linux-amd64"
+        }
+      ]
+    },
+    {
       "os": "linux",
       "arch": "amd64",
       "variants": {
@@ -20,6 +75,25 @@
         {
           "name": "lla",
           "src": "lla-linux-amd64-musl"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "chaqchase",
+      "repo_name": "lla",
+      "repo_id": 672935720,
+      "asset": "lla-linux-arm64",
+      "format": "raw",
+      "checksum": "1390b538b9001ff7a9846677336fab5c3982280b32c66140f187383c77c0ba13",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "lla",
+          "src": "lla-linux-arm64"
         }
       ]
     },
