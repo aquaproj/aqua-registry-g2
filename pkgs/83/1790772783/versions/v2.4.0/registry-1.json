@@ -1,0 +1,81 @@
+{
+  "published_at": "2026-09-16T20:08:21Z",
+  "assets": [
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "containerd",
+      "repo_name": "containerd",
+      "repo_id": 46089560,
+      "asset": "containerd-static-2.4.0-linux-amd64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "92d7954589b385e9fd0db8448c049610e4453a9b581326f3ee9011dca7dc3bdd",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "containerd",
+          "src": "bin/containerd"
+        },
+        {
+          "name": "containerd-shim-runc-v2",
+          "src": "bin/containerd-shim-runc-v2"
+        },
+        {
+          "name": "containerd-stress",
+          "src": "bin/containerd-stress"
+        },
+        {
+          "name": "ctr",
+          "src": "bin/ctr"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "containerd/containerd/.github/workflows/release.yml",
+        "source_ref": "refs/tags/v2.4.0",
+        "source_digest": "a7fe631d96c08fb14cf8eff0afdc280e99c30a94",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "containerd",
+      "repo_name": "containerd",
+      "repo_id": 46089560,
+      "asset": "containerd-static-2.4.0-linux-arm64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "c4b17d09cf3e6a661c17ec89a4128f2d79ea4c705658d548318ad0b10beb8283",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "containerd",
+          "src": "bin/containerd"
+        },
+        {
+          "name": "containerd-shim-runc-v2",
+          "src": "bin/containerd-shim-runc-v2"
+        },
+        {
+          "name": "containerd-stress",
+          "src": "bin/containerd-stress"
+        },
+        {
+          "name": "ctr",
+          "src": "bin/ctr"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "containerd/containerd/.github/workflows/release.yml",
+        "source_ref": "refs/tags/v2.4.0",
+        "source_digest": "a7fe631d96c08fb14cf8eff0afdc280e99c30a94",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    }
+  ]
+}
