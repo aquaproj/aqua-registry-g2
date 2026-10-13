@@ -1,0 +1,19 @@
+name: controlplaneio-fluxcd/flux-operator/flux-operator-mcp
+type: github_release
+repo_owner: controlplaneio-fluxcd
+repo_name: flux-operator
+repo_id: 804570938
+description: GitOps on Autopilot Mode
+github_artifact_attestations:
+  signer_workflow: controlplaneio-fluxcd/flux-operator/.github/workflows/release.yaml
+version_overrides:
+  - version_constraint: semver("> 0.46.0")
+    github_artifact_attestations:
+      signer_workflow: controlplaneio-fluxcd/flux-operator/.github/workflows/release.yaml
+  - version_constraint: semver("> 0.19.0")
+  - version_constraint: semver("<= 0.19.0")
+    no_asset: true
+  - version_constraint: "true"
+    github_artifact_attestations:
+      signer_workflow: controlplaneio-fluxcd/flux-operator/.github/workflows/release.yaml
+all_assets_filter: (Asset contains "mcp") or (Asset contains "checksums")
