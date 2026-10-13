@@ -1,0 +1,12 @@
+name: Kampfkarren/selene/light
+type: github_release
+repo_owner: Kampfkarren
+repo_name: selene
+repo_id: 212029643
+description: A blazing-fast modern Lua linter written in Rust
+files:
+  - name: selene
+supported_envs:
+  - darwin
+  - amd64
+all_assets_filter: Asset matches "^selene-light-.+-.+[.]zip([.].+)?$" or Asset endsWith ".intoto.jsonl"
