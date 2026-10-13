@@ -1,0 +1,13 @@
+name: salesforce/reactive-grpc/protoc-gen-reactor-grpc
+type: http
+repo_owner: salesforce
+repo_name: reactive-grpc
+repo_id: 109887296
+description: Reactor-gRPC is a set of gRPC bindings for reactive programming with Reactor
+url: https://repo1.maven.org/maven2/com/salesforce/servicelibs/reactor-grpc/{{trimV .Version}}/reactor-grpc-{{trimV .Version}}-{{.OS}}-{{.Arch}}.exe
+format: raw
+windows_arm_emulation: true
+replacements:
+  amd64: x86_64
+  arm64: aarch_64
+  darwin: osx
