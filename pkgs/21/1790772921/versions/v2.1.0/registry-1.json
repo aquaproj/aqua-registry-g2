@@ -1,0 +1,123 @@
+{
+  "published_at": "2026-03-17T06:35:27Z",
+  "assets": [
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "lima-vm",
+      "repo_name": "lima",
+      "repo_id": 367284699,
+      "asset": "lima-2.1.0-Linux-x86_64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "9e52c605790649aceac1f894eb2bb7cdb45897257faafb54ff30ce6a576bebfa",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "lima",
+          "src": "bin/lima"
+        },
+        {
+          "name": "limactl",
+          "src": "bin/limactl"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "lima-vm/lima/.github/workflows/release.yml",
+        "source_ref": "refs/tags/v2.1.0",
+        "source_digest": "f4ff82f0d3a1a1f046972bfa39c51e736f1867da",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "lima-vm",
+      "repo_name": "lima",
+      "repo_id": 367284699,
+      "asset": "lima-2.1.0-Linux-aarch64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "8b806c81f38ad7ea8104f196b414e243726cad1dfa6aa52843608d55df8c5290",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "lima",
+          "src": "bin/lima"
+        },
+        {
+          "name": "limactl",
+          "src": "bin/limactl"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "lima-vm/lima/.github/workflows/release.yml",
+        "source_ref": "refs/tags/v2.1.0",
+        "source_digest": "f4ff82f0d3a1a1f046972bfa39c51e736f1867da",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "lima-vm",
+      "repo_name": "lima",
+      "repo_id": 367284699,
+      "asset": "lima-2.1.0-Darwin-x86_64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "529d6dad275bded4bd1fb17c6df4d22f11917712aab1693f5bc43286b5e78824",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "lima",
+          "src": "bin/lima"
+        },
+        {
+          "name": "limactl",
+          "src": "bin/limactl"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "lima-vm/lima/.github/workflows/release.yml",
+        "source_ref": "refs/tags/v2.1.0",
+        "source_digest": "f4ff82f0d3a1a1f046972bfa39c51e736f1867da",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "lima-vm",
+      "repo_name": "lima",
+      "repo_id": 367284699,
+      "asset": "lima-2.1.0-Darwin-arm64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "1da852bce2f98b8310fb53e5047e08ff798880ddf9ae4b3161d4de4e73777b34",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "lima",
+          "src": "bin/lima"
+        },
+        {
+          "name": "limactl",
+          "src": "bin/limactl"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "lima-vm/lima/.github/workflows/release.yml",
+        "source_ref": "refs/tags/v2.1.0",
+        "source_digest": "f4ff82f0d3a1a1f046972bfa39c51e736f1867da",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    }
+  ]
+}
