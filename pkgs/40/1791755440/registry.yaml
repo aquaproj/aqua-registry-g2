@@ -4,6 +4,7 @@ repo_owner: pipe-cd
 repo_name: pipecd
 repo_id: 271714774
 description: A component that runs inside target environment to execute deployment and report its state
+version_filter: Version startsWith "v"
 version_overrides:
   - version_constraint: Version == "v0.1.6"
   - version_constraint: Version == "v0.7.6"

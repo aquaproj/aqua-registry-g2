@@ -4,6 +4,7 @@ repo_owner: pipe-cd
 repo_name: pipecd
 repo_id: 271714774
 description: The command line tool for PipeCD
+version_filter: Version startsWith "v"
 version_overrides:
   - version_constraint: semver("> 0.33.0")
   - version_constraint: semver("> 0.9.1")
