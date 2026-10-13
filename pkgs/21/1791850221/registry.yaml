@@ -1,0 +1,34 @@
+name: konradsz/igrep
+type: github_release
+repo_owner: konradsz
+repo_name: igrep
+repo_id: 240747715
+description: Interactive Grep
+version_overrides:
+  - version_constraint: Version == "v0.3.0"
+    files:
+      - name: ig
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: semver("> 0.2.0")
+    files:
+      - name: ig
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("<= 0.2.0")
+    files:
+      - name: ig
+        src: target/{{.Arch}}-{{.OS}}/release/ig
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: "true"
+    files:
+      - name: ig
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
