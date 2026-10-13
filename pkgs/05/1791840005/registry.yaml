@@ -1,0 +1,12 @@
+name: abice/go-enum
+type: github_release
+repo_owner: abice
+repo_name: go-enum
+repo_id: 99968554
+description: An enum generator for go
+version_overrides:
+  - version_constraint: Version in ["v0.5.9-beta-1", "v0.5.9"]
+    no_asset: true
+  - version_constraint: semver("<= 0.3.4")
+    no_asset: true
+  - version_constraint: "true"
