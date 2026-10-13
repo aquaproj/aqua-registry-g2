@@ -1,0 +1,44 @@
+name: fwdcloudsec/granted
+aliases:
+  - name: common-fate/granted
+type: github_release
+repo_owner: fwdcloudsec
+repo_name: granted
+repo_id: 459240458
+description: The easiest way to access your cloud
+files:
+  - name: granted
+  - name: assume
+  - name: assumego
+version_overrides:
+  - version_constraint: Version == "v0.39.0"
+    supported_envs:
+      - linux
+      - windows
+  - version_constraint: semver(">= 0.35.0")
+    overrides:
+      - goos: darwin
+        files:
+          - name: granted
+          - name: assume
+          - name: assumego
+            src: granted
+            link: assumego
+  - version_constraint: semver("< 0.35.0")
+    overrides:
+      - goos: darwin
+        files:
+          - name: granted
+          - name: assume
+          - name: assumego
+            src: granted
+            link: assumego
+  - version_constraint: "true"
+    overrides:
+      - goos: darwin
+        files:
+          - name: granted
+          - name: assume
+          - name: assumego
+            src: granted
+            link: assumego
