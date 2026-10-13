@@ -1,0 +1,34 @@
+name: str4d/age-plugin-yubikey
+type: github_release
+repo_owner: str4d
+repo_name: age-plugin-yubikey
+repo_id: 291547252
+description: YubiKey plugin for age
+files:
+  - name: age-plugin-yubikey
+    src: age-plugin-yubikey/age-plugin-yubikey
+version_overrides:
+  - version_constraint: Version == "v0.5.0"
+    supported_envs:
+      - linux/amd64
+      - darwin/arm64
+      - windows/amd64
+  - version_constraint: Version == "v0.5.1"
+    supported_envs:
+      - darwin
+      - windows/amd64
+  - version_constraint: semver("> 0.3.0")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("<= 0.3.0")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: "true"
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
