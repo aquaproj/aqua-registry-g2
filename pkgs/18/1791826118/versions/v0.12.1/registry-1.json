@@ -8,14 +8,14 @@
       "repo_owner": "nvarner",
       "repo_name": "typst-lsp",
       "repo_id": 617361544,
-      "asset": "typst-lsp-darwin-x64.vsix",
+      "asset": "typst-lsp-x86_64-apple-darwin",
       "format": "raw",
-      "checksum": "d525d80a3fb56c992c0ea8c3146ad33aebe1817fb1f10b50fb0c8ca398a02334",
+      "checksum": "57e9a7f7f7e58481fe2d24b332281e23833820c691709bb878be0ae70567e2b9",
       "checksum_algorithm": "sha256",
       "files": [
         {
           "name": "typst-lsp",
-          "src": "typst-lsp-darwin-x64.vsix"
+          "src": "typst-lsp-x86_64-apple-darwin"
         }
       ]
     },
@@ -40,27 +40,6 @@
     {
       "os": "linux",
       "arch": "amd64",
-      "type": "github_release",
-      "repo_owner": "nvarner",
-      "repo_name": "typst-lsp",
-      "repo_id": 617361544,
-      "asset": "typst-lsp-linux-x64.vsix",
-      "format": "raw",
-      "checksum": "4421017bcb8bb1981a447c3c2c2d89337c116658460fd481458d4f1ec6ddcf00",
-      "checksum_algorithm": "sha256",
-      "files": [
-        {
-          "name": "typst-lsp",
-          "src": "typst-lsp-linux-x64.vsix"
-        }
-      ]
-    },
-    {
-      "os": "linux",
-      "arch": "amd64",
-      "variants": {
-        "libc": "musl"
-      },
       "linked_libc": "static",
       "type": "github_release",
       "repo_owner": "nvarner",
@@ -80,18 +59,19 @@
     {
       "os": "linux",
       "arch": "arm64",
+      "linked_libc": "glibc",
       "type": "github_release",
       "repo_owner": "nvarner",
       "repo_name": "typst-lsp",
       "repo_id": 617361544,
-      "asset": "typst-lsp-linux-arm64.vsix",
+      "asset": "typst-lsp-aarch64-unknown-linux-gnu",
       "format": "raw",
-      "checksum": "c6d60d1fd9264becb764caa0eb45da2ea710358056acd4f03ff2ecdc7c0acee0",
+      "checksum": "50267d887439822c821da4ce99618fe0bf6d9b92f30ce5cb270dab8799d188b5",
       "checksum_algorithm": "sha256",
       "files": [
         {
           "name": "typst-lsp",
-          "src": "typst-lsp-linux-arm64.vsix"
+          "src": "typst-lsp-aarch64-unknown-linux-gnu"
         }
       ]
     },
@@ -102,14 +82,32 @@
       "repo_owner": "nvarner",
       "repo_name": "typst-lsp",
       "repo_id": 617361544,
-      "asset": "typst-lsp-win32-x64.vsix",
+      "asset": "typst-lsp-x86_64-pc-windows-msvc.exe",
       "format": "raw",
-      "checksum": "8b5aed87bddf29a414b3b79aa570bc2d075388a6c52e76475c362c98926b430c",
+      "checksum": "5508e06cd388981bad579e2828a7b838dc5122d1828852ed1d02dbda1e1739bd",
       "checksum_algorithm": "sha256",
       "files": [
         {
           "name": "typst-lsp",
-          "src": "typst-lsp-win32-x64.vsix"
+          "src": "typst-lsp-x86_64-pc-windows-msvc.exe"
+        }
+      ]
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "nvarner",
+      "repo_name": "typst-lsp",
+      "repo_id": 617361544,
+      "asset": "typst-lsp-aarch64-pc-windows-msvc.exe",
+      "format": "raw",
+      "checksum": "9386228cf3c4bf28520588260214582d6024d3f3527f0077cfa7a2752e461a70",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "typst-lsp",
+          "src": "typst-lsp-aarch64-pc-windows-msvc.exe"
         }
       ]
     }
