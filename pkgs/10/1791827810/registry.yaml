@@ -1,0 +1,19 @@
+name: argoproj-labs/argocd-autopilot
+type: github_release
+repo_owner: argoproj-labs
+repo_name: argocd-autopilot
+repo_id: 344950560
+description: Argo-CD Autopilot
+version_overrides:
+  - version_constraint: semver("> 0.1.6")
+    files:
+      - name: argocd-autopilot
+        src: argocd-autopilot-{{.OS}}-{{.Arch}}
+  - version_constraint: semver("<= 0.1.6")
+    files:
+      - name: argocd-autopilot
+        src: argocd-autopilot-{{.OS}}-{{.Arch}}
+  - version_constraint: "true"
+    files:
+      - name: argocd-autopilot
+        src: argocd-autopilot-{{.OS}}-{{.Arch}}

@@ -1,0 +1,16 @@
+name: segmentio/golines
+type: github_release
+repo_owner: segmentio
+repo_name: golines
+repo_id: 211984068
+description: A golang formatter that fixes long lines
+version_overrides:
+  - version_constraint: semver("> 0.11.0")
+    files:
+      - name: golines
+        src: '{{.AssetWithoutExt}}/golines'
+  - version_constraint: semver("<= 0.11.0")
+  - version_constraint: "true"
+    files:
+      - name: golines
+        src: '{{.AssetWithoutExt}}/golines'

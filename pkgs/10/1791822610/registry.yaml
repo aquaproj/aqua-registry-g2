@@ -1,0 +1,12 @@
+name: naggie/dstask/dstask-import
+type: github_release
+repo_owner: naggie
+repo_name: dstask
+repo_id: 160967201
+description: Git powered terminal-based todo manager -- markdown note page per task. Single binary
+files:
+  - name: dstask-import
+supported_envs:
+  - darwin
+  - linux/amd64
+all_assets_filter: Asset matches "^dstask-import-.+-.+([.].+)?$" or Asset endsWith ".intoto.jsonl"

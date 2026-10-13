@@ -1,0 +1,13 @@
+name: sibprogrammer/xq
+type: github_release
+repo_owner: sibprogrammer
+repo_name: xq
+repo_id: 425244819
+description: Command-line XML and HTML beautifier and content extractor
+version_overrides:
+  - version_constraint: semver("> 1.1.4")
+  - version_constraint: semver("<= 1.1.4")
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: "true"

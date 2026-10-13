@@ -1,0 +1,70 @@
+name: tombi-toml/tombi
+type: github_release
+repo_owner: tombi-toml
+repo_name: tombi
+repo_id: 869641608
+description: TOML Formatter / Linter / Language Server
+github_artifact_attestations:
+  signer_workflow: tombi-toml/tombi/.github/workflows/release_cli_vscode.yml
+version_overrides:
+  - version_constraint: Version == "v0.3.27" || semver("<= 0.2.23")
+    no_asset: true
+  - version_constraint: semver(">= 1.2.0")
+    files:
+      - name: tombi
+        src: '{{.AssetWithoutExt}}/tombi'
+    github_artifact_attestations:
+      signer_workflow: tombi-toml/tombi/.github/workflows/release_cli_vscode.yml
+    overrides:
+      - goos: windows
+        format: zip
+        files:
+          - name: tombi
+  - version_constraint: semver("> 0.9.22")
+    files:
+      - name: tombi
+        src: '{{.AssetWithoutExt}}/tombi'
+    overrides:
+      - goos: windows
+        format: zip
+        files:
+          - name: tombi
+  - version_constraint: semver("> 0.3.38")
+    files:
+      - name: tombi
+        src: '{{.AssetWithoutExt}}'
+    overrides:
+      - goos: windows
+        format: zip
+        files:
+          - name: tombi
+  - version_constraint: semver("> 0.3.37")
+    files:
+      - name: tombi
+        src: '{{.AssetWithoutExt}}'
+    overrides:
+      - goos: windows
+        format: zip
+        files:
+          - name: tombi
+    supported_envs:
+      - darwin
+      - linux/amd64
+      - windows
+  - version_constraint: semver("<= 0.3.37")
+    files:
+      - name: tombi
+        src: '{{.AssetWithoutExt}}'
+    supported_envs:
+      - darwin
+  - version_constraint: "true"
+    files:
+      - name: tombi
+        src: '{{.AssetWithoutExt}}/tombi'
+    github_artifact_attestations:
+      signer_workflow: tombi-toml/tombi/.github/workflows/release_cli_vscode.yml
+    overrides:
+      - goos: windows
+        format: zip
+        files:
+          - name: tombi

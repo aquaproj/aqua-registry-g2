@@ -1,0 +1,21 @@
+name: coder/boo
+type: github_release
+repo_owner: coder
+repo_name: boo
+repo_id: 1264560911
+description: A GNU screen style terminal multiplexer built on libghostty
+version_overrides:
+  - version_constraint: semver("> 0.0.4")
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver("<= 0.0.4")
+    files:
+      - name: ghostscreen
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: "true"
+    supported_envs:
+      - linux
+      - darwin

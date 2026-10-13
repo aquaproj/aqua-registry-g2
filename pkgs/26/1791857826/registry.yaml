@@ -1,0 +1,21 @@
+name: controlplaneio-fluxcd/flux-operator
+type: github_release
+repo_owner: controlplaneio-fluxcd
+repo_name: flux-operator
+repo_id: 804570938
+description: |
+  Flux Operator CLI allows you to manage the Flux Operator resources in your Kubernetes clusters.
+  It provides a convenient way to interact with the operator and perform various operations.
+link: https://fluxoperator.dev/docs/guides/cli/
+github_artifact_attestations:
+  signer_workflow: controlplaneio-fluxcd/flux-operator/.github/workflows/release.yaml
+version_overrides:
+  - version_constraint: semver("> 0.46.0")
+    github_artifact_attestations:
+      signer_workflow: controlplaneio-fluxcd/flux-operator/.github/workflows/release.yaml
+  - version_constraint: semver("> 0.13.0")
+  - version_constraint: semver("<= 0.13.0")
+    no_asset: true
+  - version_constraint: "true"
+    github_artifact_attestations:
+      signer_workflow: controlplaneio-fluxcd/flux-operator/.github/workflows/release.yaml

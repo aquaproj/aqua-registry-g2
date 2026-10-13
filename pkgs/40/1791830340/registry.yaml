@@ -1,0 +1,18 @@
+name: oligot/go-mod-upgrade
+type: github_release
+repo_owner: oligot
+repo_name: go-mod-upgrade
+repo_id: 236992332
+description: Update outdated Go dependencies interactively
+version_overrides:
+  - version_constraint: semver("> 0.3.0")
+  - version_constraint: semver("> 0.1.0")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("<= 0.1.0")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: "true"

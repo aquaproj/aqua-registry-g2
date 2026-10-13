@@ -1,0 +1,24 @@
+name: jdx/usage
+type: github_release
+repo_owner: jdx
+repo_name: usage
+repo_id: 677629099
+description: A specification for CLIs
+packslip:
+  identity_prefix: https://github.com/jdx/usage/
+  issuer: https://token.actions.githubusercontent.com
+version_overrides:
+  - version_constraint: Version == "v0.1.16"
+    no_asset: true
+  - version_constraint: semver("> 2.15.1")
+  - version_constraint: semver("> 0.7.2")
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver("> 0.7.0")
+    no_asset: true
+  - version_constraint: semver("<= 0.7.0")
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: "true"

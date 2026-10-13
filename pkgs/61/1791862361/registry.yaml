@@ -1,0 +1,27 @@
+name: stepchowfun/docuum
+type: github_release
+repo_owner: stepchowfun
+repo_name: docuum
+repo_id: 231741297
+description: Docuum performs least recently used (LRU) eviction of Docker images
+version_overrides:
+  - version_constraint: Version == "v0.22.1"
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("> 0.22.0")
+  - version_constraint: semver("> 0.17.0")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("> 0.16.0")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: semver("<= 0.16.0")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: "true"

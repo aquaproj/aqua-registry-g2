@@ -1,0 +1,25 @@
+name: danielfoehrKn/kubeswitch
+type: github_release
+repo_owner: danielfoehrKn
+repo_name: kubeswitch
+repo_id: 230920758
+description: The kubectx  for operators
+files:
+  - name: switcher
+version_overrides:
+  - version_constraint: semver("> 0.8.1")
+  - version_constraint: semver("> 0.2.0")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: semver("> 0.0.3")
+    files:
+      - name: switcher
+        src: '{{.AssetWithoutExt}}'
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: semver("<= 0.0.3")
+    supported_envs:
+      - linux/amd64
+  - version_constraint: "true"

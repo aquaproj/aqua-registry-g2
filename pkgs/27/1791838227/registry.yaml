@@ -1,0 +1,17 @@
+name: itchio/butler
+type: http
+repo_owner: itchio
+repo_name: butler
+repo_id: 44808646
+description: Command-line itch.io helper
+version_overrides:
+  - version_constraint: "true"
+    url: https://broth.itch.zone/butler/{{.OS}}-{{.Arch}}/{{trimV .Version}}/archive/default
+    format: zip
+    rosetta2: true
+    windows_arm_emulation: true
+    append_ext: false
+    supported_envs:
+      - amd64
+      - darwin
+      - windows

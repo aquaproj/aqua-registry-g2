@@ -1,0 +1,66 @@
+name: dhall-lang/dhall-haskell
+type: github_release
+repo_owner: dhall-lang
+repo_name: dhall-haskell
+repo_id: 67623822
+description: Maintainable configuration files
+files:
+  - name: dhall
+version_overrides:
+  - version_constraint: Version == "1.42.1"
+    no_asset: true
+  - version_constraint: Version == "1.40.0"
+    error_message: tar.bz2.zip is not supported
+  - version_constraint: semver("> 1.39.0")
+    files:
+      - name: dhall
+        src: bin/dhall
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("> 1.24.0")
+    files:
+      - name: dhall
+        src: bin/dhall
+    overrides:
+      - goos: windows
+        format: zip
+        files:
+          - name: dhall
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("> 1.17.0")
+    files:
+      - name: dhall
+        src: bin/dhall
+    overrides:
+      - goos: windows
+        format: zip
+        files:
+          - name: dhall
+    supported_envs:
+      - linux/amd64
+      - windows
+  - version_constraint: semver("> 1.16.0")
+    files:
+      - name: dhall
+        src: bin/dhall
+    supported_envs:
+      - linux/amd64
+  - version_constraint: semver("> 1.9.0-rc1")
+    no_asset: true
+  - version_constraint: semver("<= 1.9.0-rc1")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: "true"
+    files:
+      - name: dhall
+        src: bin/dhall
+    supported_envs:
+      - darwin
+      - windows
+      - amd64

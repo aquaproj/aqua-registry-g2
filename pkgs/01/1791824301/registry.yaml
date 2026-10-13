@@ -1,0 +1,46 @@
+name: cocogitto/cocogitto
+type: github_release
+repo_owner: cocogitto
+repo_name: cocogitto
+repo_id: 293570349
+description: The Conventional Commits toolbox
+version_overrides:
+  - version_constraint: Version == "6.0.0"
+    files:
+      - name: cog
+        src: '{{.Arch}}-{{.OS}}/cog/cog'
+    overrides:
+      - goos: windows
+        files:
+          - name: cog
+            src: '{{.Arch}}-{{.OS}}/cog.exe/cog.exe'
+  - version_constraint: semver("> 5.6.0")
+    files:
+      - name: cog
+        src: '{{.Arch}}-{{.OS}}/cog'
+    overrides:
+      - goos: windows
+        files:
+          - name: cog
+            src: '{{.Arch}}-{{.OS}}/cog.exe'
+  - version_constraint: semver("> 5.3.1")
+    files:
+      - name: cog
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: semver("<= 5.3.1")
+    files:
+      - name: cog
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: "true"
+    files:
+      - name: cog
+        src: '{{.Arch}}-{{.OS}}/cog'
+    overrides:
+      - goos: windows
+        files:
+          - name: cog
+            src: '{{.Arch}}-{{.OS}}/cog.exe'

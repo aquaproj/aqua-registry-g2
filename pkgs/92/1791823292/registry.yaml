@@ -1,0 +1,25 @@
+name: suzuki-shunsuke/pinact
+type: github_release
+repo_owner: suzuki-shunsuke
+repo_name: pinact
+repo_id: 627340432
+description: pinact is a CLI to edit GitHub Workflow and Composite action files and pin versions of Actions and Reusable Workflows. pinact can also update their versions and verify version annotations
+github_artifact_attestations:
+  signer_workflow: suzuki-shunsuke/go-release-workflow/.github/workflows/release.yaml
+version_overrides:
+  - version_constraint: semver("> 5.0.0")
+    github_artifact_attestations:
+      signer_workflow: suzuki-shunsuke/go-release-workflow/.github/workflows/release.yaml
+  - version_constraint: semver("> 1.0.0-1")
+    slsa_provenance:
+      type: github_release
+      asset: multiple.intoto.jsonl
+    github_artifact_attestations:
+      signer_workflow: suzuki-shunsuke/go-release-workflow/.github/workflows/release.yaml
+  - version_constraint: semver("<= 1.0.0-1")
+    slsa_provenance:
+      type: github_release
+      asset: multiple.intoto.jsonl
+  - version_constraint: "true"
+    github_artifact_attestations:
+      signer_workflow: suzuki-shunsuke/go-release-workflow/.github/workflows/release.yaml

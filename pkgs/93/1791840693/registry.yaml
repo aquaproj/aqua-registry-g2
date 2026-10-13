@@ -1,0 +1,18 @@
+name: replicatedhq/kots
+type: github_release
+repo_owner: replicatedhq
+repo_name: kots
+repo_id: 198856247
+description: KOTS provides the framework, tools and integrations that enable the delivery and management of 3rd-party Kubernetes applications, a.k.a. Kubernetes Off-The-Shelf (KOTS) Software
+files:
+  - name: kubectl-kots
+    src: kots
+supported_envs:
+  - darwin
+  - linux
+version_overrides:
+  - version_constraint: semver(">= 1.59.2")
+  - version_constraint: "true"
+    supported_envs:
+      - darwin
+      - linux/amd64

@@ -1,0 +1,14 @@
+name: corneliusweig/ketall
+type: github_release
+repo_owner: corneliusweig
+repo_name: ketall
+repo_id: 170769233
+description: Like `kubectl get all`, but get really all resources
+files:
+  - name: ketall
+    src: ketall-{{.Arch}}-{{.OS}}
+  - name: kubectl-get_all
+    src: ketall-{{.Arch}}-{{.OS}}
+supported_envs:
+  - darwin
+  - amd64

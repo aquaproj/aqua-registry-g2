@@ -1,0 +1,22 @@
+name: goccy/bigquery-emulator
+type: github_release
+repo_owner: goccy
+repo_name: bigquery-emulator
+repo_id: 505411372
+description: BigQuery emulator server implemented in Go
+github_artifact_attestations:
+  signer_workflow: goccy/bigquery-emulator/.github/workflows/release.yml
+version_overrides:
+  - version_constraint: Version == "v0.1.2"
+    supported_envs:
+      - darwin
+  - version_constraint: semver(">= 0.7.0")
+    github_artifact_attestations:
+      signer_workflow: goccy/bigquery-emulator/.github/workflows/release.yml
+  - version_constraint: semver("< 0.7.0")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: "true"
+    github_artifact_attestations:
+      signer_workflow: goccy/bigquery-emulator/.github/workflows/release.yml

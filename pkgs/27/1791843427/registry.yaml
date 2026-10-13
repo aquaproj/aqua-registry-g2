@@ -1,0 +1,21 @@
+name: sirwart/ripsecrets
+type: github_release
+repo_owner: sirwart
+repo_name: ripsecrets
+repo_id: 482145892
+description: A command-line tool to prevent committing secret keys into your source code
+version_overrides:
+  - version_constraint: Version == "v0.1.2"
+    files:
+      - name: ripsecrets
+        src: secrets-{{trimV .Version}}-{{.Arch}}-{{.OS}}/secrets
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: "true"
+    files:
+      - name: ripsecrets
+        src: ripsecrets-{{trimV .Version}}-{{.Arch}}-{{.OS}}/ripsecrets
+    supported_envs:
+      - linux/amd64
+      - darwin

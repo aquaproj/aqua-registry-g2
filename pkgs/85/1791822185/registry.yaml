@@ -1,0 +1,13 @@
+name: sigstore/rekor
+type: github_release
+repo_owner: sigstore
+repo_name: rekor
+repo_id: 272963353
+description: Software Supply Chain Transparency Log
+files:
+  - name: rekor-cli
+version_overrides:
+  - version_constraint: semver(">= 0.3.0")
+  - version_constraint: semver("< 0.3.0")
+    no_asset: true
+  - version_constraint: "true"

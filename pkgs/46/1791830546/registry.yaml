@@ -1,0 +1,19 @@
+name: werf/nelm
+type: http
+repo_owner: werf
+repo_name: nelm
+repo_id: 737065751
+description: Nelm is a Helm 3 alternative. It is a Kubernetes deployment tool that manages Helm Charts and deploys them to Kubernetes
+version_overrides:
+  - version_constraint: semver("> 1.1.1")
+    url: https://tuf.nelm.sh/targets/releases/{{trimV .Version}}/{{.OS}}-{{.Arch}}/bin/nelm
+    format: raw
+    windows_arm_emulation: true
+  - version_constraint: semver("<= 1.1.1")
+    url: https://storage.googleapis.com/nelm-tuf/targets/releases/{{trimV .Version}}/{{.OS}}-{{.Arch}}/bin/nelm
+    format: raw
+    windows_arm_emulation: true
+  - version_constraint: "true"
+    url: https://tuf.nelm.sh/targets/releases/{{trimV .Version}}/{{.OS}}-{{.Arch}}/bin/nelm
+    format: raw
+    windows_arm_emulation: true

@@ -1,0 +1,24 @@
+name: bloznelis/typioca
+type: github_release
+repo_owner: bloznelis
+repo_name: typioca
+repo_id: 473981351
+description: Cozy typing speed tester in terminal
+version_overrides:
+  - version_constraint: semver("> 1.4.1")
+    supported_envs:
+      - linux/amd64
+      - darwin
+      - windows
+  - version_constraint: semver("> 1.0.1")
+    no_asset: true
+  - version_constraint: semver("<= 1.0.1")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: "true"
+    supported_envs:
+      - linux/amd64
+      - darwin
+      - windows

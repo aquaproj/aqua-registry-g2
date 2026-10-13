@@ -2,42 +2,6 @@
   "published_at": "2026-10-07T17:35:48Z",
   "assets": [
     {
-      "os": "darwin",
-      "arch": "amd64",
-      "type": "github_release",
-      "repo_owner": "grafana",
-      "repo_name": "mimir",
-      "repo_id": 385634291,
-      "asset": "mimir-darwin-amd64",
-      "format": "raw",
-      "checksum": "af971d3b33b46fe77f0c15b0b26f9ce42add560a4fc0ae8dcf58a76483579655",
-      "checksum_algorithm": "sha256",
-      "files": [
-        {
-          "name": "metaconvert",
-          "src": "mimir-darwin-amd64"
-        }
-      ]
-    },
-    {
-      "os": "darwin",
-      "arch": "arm64",
-      "type": "github_release",
-      "repo_owner": "grafana",
-      "repo_name": "mimir",
-      "repo_id": 385634291,
-      "asset": "mimir-darwin-arm64",
-      "format": "raw",
-      "checksum": "577d623e6e5947818dc475bfd31bdd651ebeb49576c0f838f8126826d53fc1f4",
-      "checksum_algorithm": "sha256",
-      "files": [
-        {
-          "name": "metaconvert",
-          "src": "mimir-darwin-arm64"
-        }
-      ]
-    },
-    {
       "os": "linux",
       "arch": "amd64",
       "linked_libc": "static",
@@ -45,14 +9,14 @@
       "repo_owner": "grafana",
       "repo_name": "mimir",
       "repo_id": 385634291,
-      "asset": "mimir-linux-amd64",
+      "asset": "metaconvert-linux-amd64",
       "format": "raw",
-      "checksum": "e44e9bde48e1a1356801ee938effe5010feec41e92bc135207a038a982e7ab33",
+      "checksum": "59e1d17c21f6d1d23c4c303fd314319ec7a964718868d785f40f4b14c1c139ef",
       "checksum_algorithm": "sha256",
       "files": [
         {
           "name": "metaconvert",
-          "src": "mimir-linux-amd64"
+          "src": "metaconvert-linux-amd64"
         }
       ]
     },
@@ -64,50 +28,50 @@
       "repo_owner": "grafana",
       "repo_name": "mimir",
       "repo_id": 385634291,
-      "asset": "mimir-linux-arm64",
+      "asset": "metaconvert-linux-arm64",
       "format": "raw",
-      "checksum": "b874f9175e15a7df25a9e7be2786be55c56b800ac5598aba08170fa142cbfdf5",
+      "checksum": "cfda9e9634fa4c541192b2570bca4387d4fd95b4b310af109c26634e295b3428",
       "checksum_algorithm": "sha256",
       "files": [
         {
           "name": "metaconvert",
-          "src": "mimir-linux-arm64"
+          "src": "metaconvert-linux-arm64"
         }
       ]
     },
     {
-      "os": "windows",
+      "os": "darwin",
       "arch": "amd64",
       "type": "github_release",
       "repo_owner": "grafana",
       "repo_name": "mimir",
       "repo_id": 385634291,
-      "asset": "mimirtool-windows-amd64.exe",
+      "asset": "metaconvert-darwin-amd64",
       "format": "raw",
-      "checksum": "60a86579a84f04dafd39240119fec0fec1bd889c09fd6b2e4d5e2304e95a2aca",
+      "checksum": "173ca949678b81a8e99cefb64fc5d6e95ced0f4ee5ff55388c978c5fa8324be4",
       "checksum_algorithm": "sha256",
       "files": [
         {
           "name": "metaconvert",
-          "src": "mimirtool-windows-amd64.exe"
+          "src": "metaconvert-darwin-amd64"
         }
       ]
     },
     {
-      "os": "windows",
+      "os": "darwin",
       "arch": "arm64",
       "type": "github_release",
       "repo_owner": "grafana",
       "repo_name": "mimir",
       "repo_id": 385634291,
-      "asset": "mimirtool-windows-arm64.exe",
+      "asset": "metaconvert-darwin-arm64",
       "format": "raw",
-      "checksum": "6840e4f2b1d4c88c15c070dfb89eba1ad08cfde70b5819ed46152f3542765e24",
+      "checksum": "1ddff62a0e04f3efd4a013b5b15480fb76ebb564173c5f838c95875b0af78694",
       "checksum_algorithm": "sha256",
       "files": [
         {
           "name": "metaconvert",
-          "src": "mimirtool-windows-arm64.exe"
+          "src": "metaconvert-darwin-arm64"
         }
       ]
     }
