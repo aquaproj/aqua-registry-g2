@@ -1,0 +1,14 @@
+name: tkuchiki/alp
+type: github_release
+repo_owner: tkuchiki
+repo_name: alp
+repo_id: 43059568
+description: Access Log Profiler
+version_overrides:
+  - version_constraint: semver("> 1.0.8")
+  - version_constraint: semver("<= 1.0.8")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: "true"
