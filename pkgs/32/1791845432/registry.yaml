@@ -1,0 +1,65 @@
+name: ubugeeei-prod/vize
+aliases:
+  - name: ubugeeei/vize
+type: github_release
+repo_owner: ubugeeei-prod
+repo_name: vize
+repo_id: 1123610216
+description: Unofficial High-Performance Vue.js Toolchain in Rust
+cosign:
+  opts:
+    - --certificate-identity
+    - https://github.com/ubugeeei-prod/vize/.github/workflows/release.yml@refs/tags/{{.Version}}
+    - --certificate-oidc-issuer
+    - https://token.actions.githubusercontent.com
+    - --certificate-github-workflow-repository
+    - ubugeeei-prod/vize
+    - --certificate-github-workflow-ref
+    - refs/tags/{{.Version}}
+  bundle:
+    type: github_release
+    asset: '{{.Asset}}.cosign.bundle'
+version_overrides:
+  - version_constraint: semver(">= 0.426.0")
+    cosign:
+      opts:
+        - --certificate-identity
+        - https://github.com/ubugeeei-prod/vize/.github/workflows/release.yml@refs/heads/release/{{.Version}}
+        - --certificate-oidc-issuer
+        - https://token.actions.githubusercontent.com
+        - --certificate-github-workflow-repository
+        - ubugeeei-prod/vize
+        - --certificate-github-workflow-ref
+        - refs/heads/release/{{.Version}}
+      bundle:
+        type: github_release
+        asset: '{{.Asset}}.cosign.bundle'
+  - version_constraint: semver("> 0.106.0")
+    cosign:
+      opts:
+        - --certificate-identity
+        - https://github.com/ubugeeei-prod/vize/.github/workflows/release.yml@refs/tags/{{.Version}}
+        - --certificate-oidc-issuer
+        - https://token.actions.githubusercontent.com
+        - --certificate-github-workflow-repository
+        - ubugeeei-prod/vize
+        - --certificate-github-workflow-ref
+        - refs/tags/{{.Version}}
+      bundle:
+        type: github_release
+        asset: '{{.Asset}}.cosign.bundle'
+  - version_constraint: semver("<= 0.106.0")
+  - version_constraint: "true"
+    cosign:
+      opts:
+        - --certificate-identity
+        - https://github.com/ubugeeei-prod/vize/.github/workflows/release.yml@refs/tags/{{.Version}}
+        - --certificate-oidc-issuer
+        - https://token.actions.githubusercontent.com
+        - --certificate-github-workflow-repository
+        - ubugeeei-prod/vize
+        - --certificate-github-workflow-ref
+        - refs/tags/{{.Version}}
+      bundle:
+        type: github_release
+        asset: '{{.Asset}}.cosign.bundle'
