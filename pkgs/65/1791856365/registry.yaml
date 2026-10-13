@@ -1,0 +1,22 @@
+name: helm/chart-releaser
+type: github_release
+repo_owner: helm
+repo_name: chart-releaser
+repo_id: 144605653
+description: Hosting Helm Charts via GitHub Pages and Releases
+files:
+  - name: cr
+version_overrides:
+  - version_constraint: semver("> 1.2.1")
+  - version_constraint: semver("> 0.1.4")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("<= 0.1.4")
+    files:
+      - name: chart-releaser
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: "true"
