@@ -1,0 +1,14 @@
+name: tilt-dev/ctlptl
+type: github_release
+repo_owner: tilt-dev
+repo_name: ctlptl
+repo_id: 304708734
+description: Making local Kubernetes clusters fun and easy to set up
+version_overrides:
+  - version_constraint: semver("> 0.5.0")
+  - version_constraint: semver("<= 0.5.0")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: "true"
