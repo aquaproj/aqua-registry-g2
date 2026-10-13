@@ -1,0 +1,12 @@
+name: yokecd/yoke
+type: github_release
+repo_owner: yokecd
+repo_name: yoke
+repo_id: 757558716
+description: yoke is a Helm-inspired infrastructure-as-code (IaC) package deployer
+version_filter: not (Version matches "installer")
+version_overrides:
+  - version_constraint: "true"
+    files:
+      - name: yoke
+        src: '{{.AssetWithoutExt}}'
