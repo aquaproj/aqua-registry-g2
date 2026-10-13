@@ -1,0 +1,95 @@
+{
+  "published_at": "2026-05-07T16:58:34Z",
+  "assets": [
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "fish-shell",
+      "repo_name": "fish-shell",
+      "repo_id": 4279682,
+      "asset": "fish-4.7.1-linux-x86_64.tar.xz",
+      "format": "tar.xz",
+      "checksum": "345388add316b94a847b08cef01f1b46e85b98215328271ee22a21555a3204df",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "fish",
+          "src": "fish"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "fish-shell",
+      "repo_name": "fish-shell",
+      "repo_id": 4279682,
+      "asset": "fish-4.7.1-linux-aarch64.tar.xz",
+      "format": "tar.xz",
+      "checksum": "72957265b8629fbb3cdb215260c302f6154403dbaf35d38103aac6af689fb7f6",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "fish",
+          "src": "fish"
+        }
+      ]
+    },
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "fish-shell",
+      "repo_name": "fish-shell",
+      "repo_id": 4279682,
+      "asset": "fish-4.7.1.pkg",
+      "format": "pkg",
+      "checksum": "19b8b8237f6a59f6e728b00f43c18cfa5b0ee367ba7626049e35319ee4080559",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "fish",
+          "src": "fish.pkg/Payload/usr/local/bin/fish"
+        },
+        {
+          "name": "fish_indent",
+          "src": "fish.pkg/Payload/usr/local/bin/fish_indent"
+        },
+        {
+          "name": "fish_key_reader",
+          "src": "fish.pkg/Payload/usr/local/bin/fish_key_reader"
+        }
+      ]
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "fish-shell",
+      "repo_name": "fish-shell",
+      "repo_id": 4279682,
+      "asset": "fish-4.7.1.pkg",
+      "format": "pkg",
+      "checksum": "19b8b8237f6a59f6e728b00f43c18cfa5b0ee367ba7626049e35319ee4080559",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "fish",
+          "src": "fish.pkg/Payload/usr/local/bin/fish"
+        },
+        {
+          "name": "fish_indent",
+          "src": "fish.pkg/Payload/usr/local/bin/fish_indent"
+        },
+        {
+          "name": "fish_key_reader",
+          "src": "fish.pkg/Payload/usr/local/bin/fish_key_reader"
+        }
+      ]
+    }
+  ]
+}
