@@ -4,6 +4,9 @@ repo_owner: ip7z
 repo_name: 7zip
 repo_id: 466446150
 description: 7-Zip is a file archiver with a high compression ratio
+all_assets_filter: not (Asset endsWith ".exe") and not (Asset endsWith ".msi")
+replacements:
+  windows: extra
 files:
   - name: 7zzs
   - name: 7zz
@@ -71,7 +74,14 @@ version_overrides:
         files:
           - name: 7zz
       - goos: windows
+        goarch: amd64
         format: 7z
         files:
           - name: 7za
-            src: '{{.Arch}}/7za.exe'
+            src: x64/7za.exe
+      - goos: windows
+        goarch: arm64
+        format: 7z
+        files:
+          - name: 7za
+            src: arm64/7za.exe
