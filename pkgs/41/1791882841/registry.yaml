@@ -1,0 +1,18 @@
+name: grpc/grpc-go/protoc-gen-go-grpc
+type: github_release
+repo_owner: grpc
+repo_name: grpc-go
+repo_id: 27729907
+description: The Go language implementation of gRPC. HTTP/2 based RPC
+version_prefix: cmd/protoc-gen-go-grpc/
+version_overrides:
+  - version_constraint: Version == "cmd/protoc-gen-go-grpc/v1.0.0"
+    no_asset: true
+  - version_constraint: semver("> 1.2.0")
+  - version_constraint: semver("<= 1.2.0")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: "true"
+all_assets_filter: Asset matches "^protoc-gen-go-grpc[.].+[.].+[.].+[.].+([.].+)?$" or Asset endsWith ".intoto.jsonl"
