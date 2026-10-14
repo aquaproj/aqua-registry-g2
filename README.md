@@ -57,9 +57,9 @@ pkgs/
 - `versions/<escaped version>/registry-1.json`: the static registry file, which is what
   aqua reads. One per version, written once. We call it `registry.json` for short.
 - `versions.json`: the versions above as one list, with the date each release was published
-  and the digest of the file the registry serves for it. It is written in the same pull
-  request as the versions it lists, and `versions/` stays the thing that decides what the
-  registry holds.
+  and the digest of the file the registry serves for it. It is brought up to date after the
+  versions it lists merge, by [update-versions.yaml](.github/workflows/update-versions.yaml),
+  and `versions/` stays the thing that decides what the registry holds.
 
 #### Schema version
 

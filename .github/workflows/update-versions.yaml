@@ -1,0 +1,86 @@
+---
+name: update-versions
+# Keep each package's versions.json in step with its versions directory.
+#
+# ar2 opens a pull request per version, and none of them writes the package's versions.json:
+# the list records the sha of the versions directory it was made from, so two pull requests
+# open for one package would conflict on it. A merge adding a version leaves the list behind,
+# and this brings it up to date for the packages the merge touched, in one pull request from
+# ar2_versions that merges itself.
+#
+# The pull request only changes lists, so it raises no run of its own: the push it merges
+# touches no versions directory.
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - pkgs/*/*/versions/**
+  workflow_dispatch:
+    inputs:
+      packages:
+        description: ids of the packages whose lists to make again, separated by spaces
+        required: true
+permissions: {}
+# One at a time. Two runs commit to the same branch, and the second adds to what the first
+# put there. Queued rather than cancelled in flight: each run is for the packages its push
+# touched, and a cancelled one would leave those behind.
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+jobs:
+  update-versions:
+    runs-on: ubuntu-24.04
+    # The environment of the catalogue's update, which holds the pull request key alone. This
+    # is the same kind of pull request: made from what the default branch holds, and merged
+    # by its checks.
+    environment: index
+    timeout-minutes: 15
+    permissions:
+      # Reading what the push changed.
+      contents: read
+    steps:
+      # For aqua/aqua.yaml, which pins the ar2 version and its checksum.
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: aquaproj/aqua-installer@82d0e83878a8657c4a6f2ff1755d3bfbfc67f329 # v4.1.0
+        with:
+          aqua_version: v2.64.0
+          packages: ar2
+      # The token that commits the lists and opens their pull request. A pull request opened
+      # or updated with GITHUB_TOKEN gets its checks in an approval-required state.
+      - uses: actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1 # v3.2.0
+        id: pr_token
+        with:
+          client-id: ${{ vars.AR2_PR_CLIENT_ID }}
+          private-key: ${{ secrets.AR2_PR_PRIVATE_KEY }}
+      - run: |
+          # The packages a push touched are the ids of the directories under which a
+          # version changed, read from what the push compares to rather than from a
+          # checkout, which holds one commit.
+          if [ -n "$PACKAGES" ]; then
+            read -r -a ids <<< "$PACKAGES"
+          else
+            mapfile -t ids < <(
+              gh api "repos/$GITHUB_REPOSITORY/compare/$BEFORE...$AFTER" --paginate \
+                --jq '.files[].filename' |
+                sed -nE 's|^pkgs/[0-9]{2}/([0-9]+)/versions/.*|\1|p' |
+                sort -u
+            )
+          fi
+          if [ "${#ids[@]}" -eq 0 ]; then
+            echo "The push touched no package's versions."
+            exit 0
+          fi
+          ar2 update-versions \
+            --g2-owner "${GITHUB_REPOSITORY%/*}" \
+            --g2-repo "${GITHUB_REPOSITORY#*/}" \
+            "${ids[@]}"
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          GH_TOKEN: ${{ github.token }}
+          AR2_PR_TOKEN: ${{ steps.pr_token.outputs.token }}
+          PACKAGES: ${{ inputs.packages }}
+          BEFORE: ${{ github.event.before }}
+          AFTER: ${{ github.sha }}

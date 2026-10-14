@@ -46,8 +46,9 @@ called from there:
 
 - [plan-packages.sh](.github/scripts/plan-packages.sh) works out which packages the pull
   request touches, and refuses what no pull request may do. A package's pull request from
-  `ar2_<id>` touches that package's directory and nothing else, and one from any other
-  `ar2_` branch touches no package. A `registry-*.json` already published is changed or
+  `ar2_<id>`, `ar2_<id>_<version>` or `ar2_<id>__needs-definition` touches that package's
+  directory and nothing else, the one from `ar2_versions` touches nothing but `versions.json`
+  files, and one from any other `ar2_` branch touches no package. A `registry-*.json` already published is changed or
   removed only by a pull request that isn't set to merge itself: a person merging it is
   what says the change was read and is meant. ar2 labels such a pull request
   `replaces-published` and doesn't turn auto-merge on, and the checks run again when
@@ -100,16 +101,23 @@ definition written on that pull request's own branch.
 
 ## How To Fix versions.json
 
-A pull request changing a package's versions writes its list in the same commit, so normally
-there is nothing to do. The list is derived from `versions/`, so there is nothing to fix by
-hand either: what ar2 writes is what the directory holds.
+ar2 opens a pull request per version, and none of them writes the package's list: the list
+records the sha of the `versions` tree it was made from, so two pull requests open for one
+package would conflict on it. A merge adding a version leaves the list behind, and
+[update-versions.yaml](.github/workflows/update-versions.yaml) brings it up to date for the
+packages the merge touched, with `ar2 update-versions`, in one pull request from
+`ar2_versions` that merges itself. So normally there is nothing to do.
 
-The one pull request that leaves the list alone is the one of versions waiting for a
-definition. The package's other pull requests write the list in the meantime, so writing it
-there too would conflict with whichever of them merged first. Once it merges the list is
-behind, and the package's next pull request writes it again: the list records the sha of the
-`versions` tree it was made from, and a list whose `source` isn't that tree any more is made
-again from every version rather than added to.
+The list is derived from `versions/`, so there is nothing to fix by hand either. A list that
+fell behind anyway -- a run of the workflow that failed -- is made again by naming the
+package's id:
+
+```sh
+gh workflow run update-versions.yaml -f packages="<id> <id>"
+```
+
+The pull requests about a package as a whole -- `ar2 regenerate`, `ar2 tidy`, a removal --
+are still one per package, from `ar2_<id>`, and write the list themselves.
 
 ## How To Fix index.json
 

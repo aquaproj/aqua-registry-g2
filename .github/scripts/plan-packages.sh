@@ -7,7 +7,8 @@
 #
 # - a path under pkgs/ is in the directory its id says;
 # - a pull request ar2 opened for a package touches that package's directory and nothing
-#   else, and one ar2 opened for anything else touches no package;
+#   else, the one bringing the lists of versions up to date touches nothing but those lists,
+#   and one ar2 opened for anything else touches no package;
 # - a registry-*.json already published is changed or removed only by a pull request that
 #   isn't set to merge itself, because a version the registry serves is meant to stay what
 #   it was, and a person merging the pull request is what says the change was read and is
@@ -24,15 +25,22 @@ fail() {
 	failed=1
 }
 
-# The package an ar2 head branch is for: ar2_<id> or ar2_<id>_<version>. Any other ar2_
-# branch -- the catalogue's, a removal's first half -- is for no package.
+# The package an ar2 head branch is for: ar2_<id>, ar2_<id>_<version>, or
+# ar2_<id>__needs-definition. Any other ar2_ branch -- the catalogue's, a removal's first
+# half -- is for no package, except ar2_versions, which brings the lists of versions of any
+# package up to date (ar2 update-versions) and may touch those lists and nothing else.
 head_id=""
 ar2_head=false
+lists_only=false
 if [[ $HEAD_REF == ar2_* ]]; then
 	ar2_head=true
 	if [[ $HEAD_REF =~ ^ar2_([0-9]+)(_.*)?$ ]]; then
 		head_id=${BASH_REMATCH[1]}
 	fi
+fi
+if [ "$HEAD_REF" = ar2_versions ]; then
+	ar2_head=false
+	lists_only=true
 fi
 
 # Whether the pull request is set to merge itself. One that replaces what is published may
@@ -66,6 +74,10 @@ gh api "repos/$GITHUB_REPOSITORY/pulls/$NUMBER/files" --paginate \
 : > files.txt
 while IFS=$'\t' read -r status file previous; do
 	for path in "$file" ${previous:+"$previous"}; do
+		if $lists_only && [[ ! $path =~ ^pkgs/[0-9]{2}/[0-9]+/versions\.json$ ]]; then
+			fail "$path isn't a list of versions, which is all this pull request may touch"
+			continue
+		fi
 		if [[ $path != pkgs/* ]]; then
 			if [ -n "$head_id" ]; then
 				fail "$path is outside the directory of the package this pull request is for"

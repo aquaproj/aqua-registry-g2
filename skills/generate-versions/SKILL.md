@@ -13,7 +13,7 @@ gh workflow run ar2.yaml -f limit=<how many package versions> -f chain=forever
 ```
 
 A run generates the versions the registry is missing, most starred package first and newest
-version first, and opens one pull request per package. Most of them merge themselves; what to
+version first, and opens one pull request per version. Most of them merge themselves; what to
 do about one that doesn't is [reviewing it](../review-pull-request/SKILL.md). The job
 summary says what was generated, what wasn't, and how far the registry has got.
 
