@@ -6,7 +6,7 @@ description: Read a pull request ar2 opened in aqua-registry-g2 and decide wheth
 # Review a pull request from ar2
 
 Most of them merge themselves. A run generates `versions/<escaped version>/registry-1.json`
-for each version a package is missing, opens one pull request per package, and turns on
+for each version a package is missing, opens one pull request per version, and turns on
 auto-merge; CI downloads every asset the files describe, on a machine of the
 environment each entry is for, and opens it. A pull request that merges without anyone
 reading it is the normal case, and the trust in it comes from that check rather than
@@ -40,17 +40,30 @@ Check upstream: a project that moved from cosign to attestations, or retired a k
 so in its release notes or its workflow. A project that says nothing about it is the
 case this exists for.
 
-## `files[].src` didn't match the archive
+## The version covers platforms the one before it didn't
 
-The path the definition gives isn't in the archive. ar2 looked for a file of the right name
-anywhere inside and used that, which is a guess.
+> These versions cover platforms the version before them didn't
 
-What is usually true is that upstream changed the layout, and the definition needs updating.
-What is sometimes true is that the wrong asset was chosen — see below — and the file is
-missing because the archive is a different program's.
+The asset names are read from the release, so an asset placed on a platform it wasn't on
+before is either a build the release started publishing, or another program of the release
+whose name doesn't tell it apart. The first merges as it is. The second is what
+`all_assets_filter` is for: see below.
 
-A file that isn't anywhere in the archive doesn't arrive as this. Such a version can't merge,
-so it is a pull request of its own instead, which is the next section.
+## `files[].src` and environments left out
+
+When the path the definition gives isn't in the archive, ar2 looks for the file of that name
+that is an executable -- read from the file's own header, ELF, Mach-O or PE, or a script
+naming its interpreter -- and records where it is. Exactly one such file is the command
+wherever it is, so that merges itself and doesn't arrive here.
+
+None, or several, is an environment the definition can't be read against. It is left out of
+the version, and the package's issue labelled `missing-environment` says which and why; so
+does an environment whose assets nothing in their names tells apart. The version's other
+environments merge without it. What to fix is the definition -- `files`, or a filter -- and
+then [generate the version again](../regenerate-versions/SKILL.md).
+
+A version where no environment could be read against the definition is a pull request of
+its own instead, which is the next section.
 
 ## The pull request is versions waiting for a definition
 
@@ -60,9 +73,9 @@ Labelled `needs-definition`, and the one kind of pull request here that can't me
 stands: the entry names a file the archive doesn't hold anywhere inside it, so what it says
 isn't true, and the checks say so.
 
-It holds the versions of one era of the release and no others. The versions the same run
-generated that were right are in the package's own pull request, which merged without waiting
-for these.
+It holds the versions of one era of the release and no others, on the branch
+`ar2_<id>__needs-definition`. The versions the same run generated that were right have pull
+requests of their own, which merged without waiting for these.
 
 What they need is the definition to describe that era — a `version_overrides` entry with its
 own `files` — and the definition goes on this branch rather than straight onto `main`, so that

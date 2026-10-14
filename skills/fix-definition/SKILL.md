@@ -20,7 +20,8 @@ Leave that line alone unless the package is being [renamed](../rename-package/SK
 directory naming another package is one nothing can find.
 
 A pull request from a branch of your own may touch any package; the check that keeps a pull
-request to its own package's directory is for the ones ar2 opens from `ar2_<id>`.
+request to its own package's directory is for the ones ar2 opens from `ar2_<id>`,
+`ar2_<id>_<version>` and `ar2_<id>__needs-definition`.
 
 A definition also goes on the head branch of a pull request whose versions are
 [waiting for one](../review-pull-request/SKILL.md#the-pull-request-is-versions-waiting-for-a-definition).
