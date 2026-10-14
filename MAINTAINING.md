@@ -180,14 +180,16 @@ asked for, and its body says which.
 ## The issues ar2 opens
 
 A run opens one issue per package for the environments a version was published without,
-labelled `missing-environment`, and one for the versions a check of the release's integrity
-stopped, labelled `integrity`, and comments on it again rather than opening another. Each
+labelled `missing-environment`, one for the versions a check of the release's integrity
+stopped, labelled `integrity`, and one for the versions that failed three runs in a row for a
+reason that should pass on another try -- a server error, a rate limit -- labelled
+`transient-failure`, and comments on it again rather than opening another. Each
 says what it is about in a record the rendered issue doesn't show.
 
 [close-issues.yaml](.github/workflows/close-issues.yaml) runs `ar2 close-issues` when a merge
 touches a versions directory, and daily. It closes an issue once every environment it names is
 in the version's `registry.json` again -- `ar2 regenerate` puts it back -- or the version is no
-longer served, and every version it names as stopped is served. An issue from before the
+longer served, and every version it names as stopped or failing is served. An issue from before the
 records stays open until a person closes it.
 
 ## The state
