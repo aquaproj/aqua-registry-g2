@@ -1,0 +1,50 @@
+---
+name: close-issues
+# Close the issues ar2 opened once what they are about is resolved.
+#
+# A run opens an issue per package for the environments a version was published without
+# (missing-environment) and for the versions a check of integrity stopped (integrity), and
+# writes into it what it is about. 'ar2 close-issues' asks the registry about each, and
+# closes an issue whose every version and environment is resolved.
+#
+# What resolves one is a version merging: an environment put back by 'ar2 regenerate', or a
+# stopped version published. So a push to main touching a versions directory asks for it,
+# and the schedule catches what that misses.
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - pkgs/*/*/versions/**
+  schedule:
+    - cron: "27 3 * * *"
+  workflow_dispatch: {}
+permissions: {}
+# One at a time, so that two runs don't comment on the same issue twice.
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+jobs:
+  close-issues:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    permissions:
+      # Reading the identities and what the registry serves.
+      contents: read
+      # Commenting on the issues and closing them.
+      issues: write
+    steps:
+      # For aqua/aqua.yaml, which pins the ar2 version and its checksum.
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: aquaproj/aqua-installer@82d0e83878a8657c4a6f2ff1755d3bfbfc67f329 # v4.1.0
+        with:
+          aqua_version: v2.64.0
+          packages: ar2
+      - run: |
+          ar2 close-issues \
+            --g2-owner "${GITHUB_REPOSITORY%/*}" \
+            --g2-repo "${GITHUB_REPOSITORY#*/}"
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
