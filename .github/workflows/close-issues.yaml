@@ -3,8 +3,9 @@ name: close-issues
 # Close the issues ar2 opened once what they are about is resolved.
 #
 # A run opens an issue per package for the environments a version was published without
-# (missing-environment) and for the versions a check of integrity stopped (integrity), and
-# writes into it what it is about. 'ar2 close-issues' asks the registry about each, and
+# (missing-environment), for the versions a check of integrity stopped (integrity), and for the
+# versions that keep failing for a reason that should pass (transient-failure), and writes into
+# it what it is about. 'ar2 close-issues' asks the registry about each, and
 # closes an issue whose every version and environment is resolved.
 #
 # What resolves one is a version merging: an environment put back by 'ar2 regenerate', or a
