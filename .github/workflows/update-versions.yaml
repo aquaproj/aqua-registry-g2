@@ -37,8 +37,10 @@ jobs:
     environment: index
     timeout-minutes: 15
     permissions:
-      # Reading what the push changed.
-      contents: read
+      # Reading what the push changed, and turning auto-merge on for the pull request,
+      # which is done with this token rather than the pull request app's and needs both.
+      contents: write
+      pull-requests: write
     steps:
       # For aqua/aqua.yaml, which pins the ar2 version and its checksum.
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
