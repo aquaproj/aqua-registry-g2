@@ -5,8 +5,12 @@ name: update-versions
 # ar2 opens a pull request per version, and none of them writes the package's versions.json:
 # the list records the sha of the versions directory it was made from, so two pull requests
 # open for one package would conflict on it. A merge adding a version leaves the list behind,
-# and this brings it up to date for the packages the merge touched, in one pull request from
-# ar2_versions that merges itself.
+# and this brings the lists up to date, in one pull request from ar2_versions that merges
+# itself.
+#
+# Which lists are behind is asked of main as it is, for every package, by ar2: a list whose
+# source isn't the sha of its versions directory. Nothing is remembered between runs, so a run
+# that was cancelled, or a push that raised none, is caught by whichever run comes next.
 #
 # The pull request only changes lists, so it raises no run of its own: the push it merges
 # touches no versions directory.
@@ -17,22 +21,20 @@ on:
     paths:
       - pkgs/*/*/versions/**
   # What catches a push that raised no run at all. GitHub doesn't always: cheat/cheat 4.1.1
-  # merged seconds after 4.2.0 and no workflow ran for it. A scheduled run reads what changed
-  # since the last run that succeeded, the way a push's does. The odd minutes are to stay off
-  # the top of the hour, when everyone else's schedule is.
+  # merged seconds after 4.2.0 and no workflow ran for it. The odd minutes are to stay off the
+  # top of the hour, when everyone else's schedule is.
   schedule:
     - cron: "19,49 * * * *"
   workflow_dispatch:
     inputs:
       packages:
-        description: ids of the packages whose lists to make again, separated by spaces
-        required: true
+        description: ids of the packages whose lists to make again, separated by spaces; empty checks every package
+        required: false
+        default: ""
 permissions: {}
 # One at a time. Two runs commit to the same branch, and the second adds to what the first
-# put there. GitHub keeps one pending run per group and cancels the one before it, so a merge
-# arriving while a run is going can lose its own run: each run is therefore for what changed
-# since the last run that succeeded, not for what its own push changed, and the one that runs
-# covers the ones cancelled.
+# put there. GitHub keeps one pending run per group and cancels the one before it, which loses
+# nothing: every run checks every package.
 concurrency:
   group: ${{ github.workflow }}
   cancel-in-progress: false
@@ -45,21 +47,16 @@ jobs:
     environment: index
     timeout-minutes: 15
     permissions:
-      # Reading what changed, and turning auto-merge on for the pull request, which is done
-      # with this token rather than the pull request app's and needs both.
+      # Turning auto-merge on for the pull request, which is done with this token rather than
+      # the pull request app's and needs both.
       contents: write
       pull-requests: write
-      # Finding the last run that succeeded, which is where what changed is read from.
-      actions: read
     steps:
-      # For aqua/aqua.yaml, which pins the ar2 version and its checksum, and for the history
-      # what changed is read from. The history without its files, and only aqua/ checked
-      # out: pkgs/ is most of the repository and nothing here reads it.
+      # For aqua/aqua.yaml, which pins the ar2 version and its checksum. Nothing else is read
+      # from the checkout, so only that is checked out.
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
-          fetch-depth: 0
-          filter: blob:none
           sparse-checkout: aqua
       - uses: aquaproj/aqua-installer@82d0e83878a8657c4a6f2ff1755d3bfbfc67f329 # v4.1.0
         with:
@@ -73,40 +70,15 @@ jobs:
           client-id: ${{ vars.AR2_PR_CLIENT_ID }}
           private-key: ${{ secrets.AR2_PR_PRIVATE_KEY }}
       - run: |
-          # The packages are the ids of the directories under which a version changed
-          # since the last push or schedule this workflow ran for successfully -- not since
-          # this push's parent, since the run of a push in between may have been cancelled
-          # or never raised. A dispatch names its packages and says nothing about the rest,
-          # so it isn't a starting point.
-          if [ -n "$PACKAGES" ]; then
-            read -r -a ids <<< "$PACKAGES"
-          else
-            base=$(gh run list --workflow update-versions.yaml --branch main \
-              --status success --limit 20 --json headSha,event \
-              --jq '[.[] | select(.event == "push" or .event == "schedule")][0].headSha // ""')
-            if [ -z "$base" ] || ! git cat-file -e "$base^{commit}" 2>/dev/null; then
-              # The push's parent, or nothing to read for a schedule, which has none.
-              base=${BEFORE:-$AFTER}
-            fi
-            echo "What changed is read from $base to $AFTER."
-            mapfile -t ids < <(
-              git diff --name-only "$base" "$AFTER" -- pkgs/ |
-                sed -nE 's|^pkgs/[0-9]{2}/([0-9]+)/versions/.*|\1|p' |
-                sort -u
-            )
-          fi
-          if [ "${#ids[@]}" -eq 0 ]; then
-            echo "The push touched no package's versions."
-            exit 0
-          fi
+          # Every package's list is checked when no packages are named: ar2 finds the ones
+          # behind from what main holds, so nothing has to be worked out here or remembered
+          # between runs.
+          read -r -a ids <<< "$PACKAGES"
           ar2 update-versions \
             --g2-owner "${GITHUB_REPOSITORY%/*}" \
             --g2-repo "${GITHUB_REPOSITORY#*/}" \
             "${ids[@]}"
         env:
           GITHUB_TOKEN: ${{ github.token }}
-          GH_TOKEN: ${{ github.token }}
           AR2_PR_TOKEN: ${{ steps.pr_token.outputs.token }}
           PACKAGES: ${{ inputs.packages }}
-          BEFORE: ${{ github.event.before }}
-          AFTER: ${{ github.sha }}
