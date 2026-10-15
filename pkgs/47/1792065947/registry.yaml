@@ -1,0 +1,21 @@
+name: projectcalico/calico/calicoctl
+type: github_release
+repo_owner: projectcalico
+repo_name: calico
+repo_id: 63882194
+description: CLI tool for Calico cloud native networking and network security
+link: https://projectcalico.docs.tigera.io/
+files:
+  - name: calicoctl
+supported_envs:
+  - darwin
+  - linux
+  - amd64
+version_overrides:
+  - version_constraint: semver(">= 3.23.0")
+  - version_constraint: "true"
+    supported_envs:
+      - darwin
+      - linux
+      - amd64
+all_assets_filter: Asset matches "^calicoctl-.+-.+([.].+)?$" or Asset endsWith ".intoto.jsonl"
