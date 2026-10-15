@@ -1,0 +1,44 @@
+{
+  "assets": [
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "glibc",
+      "type": "http",
+      "repo_owner": "awslabs",
+      "repo_name": "mountpoint-s3",
+      "repo_id": 527735423,
+      "asset": "mount-s3-1.24.0-x86_64.tar.gz",
+      "url": "https://s3.amazonaws.com/mountpoint-s3-release/1.24.0/x86_64/mount-s3-1.24.0-x86_64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "a99bea20510eaabaf9d7cbfe95ab221a11005cacaa77cfc311a2912bbbdbfd72",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "mount-s3",
+          "src": "bin/mount-s3"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "linked_libc": "glibc",
+      "type": "http",
+      "repo_owner": "awslabs",
+      "repo_name": "mountpoint-s3",
+      "repo_id": 527735423,
+      "asset": "mount-s3-1.24.0-arm64.tar.gz",
+      "url": "https://s3.amazonaws.com/mountpoint-s3-release/1.24.0/arm64/mount-s3-1.24.0-arm64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "9f97026c9feabd0e4d128206f1846ee317e6c4f21846914dfe4268d110c892c4",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "mount-s3",
+          "src": "bin/mount-s3"
+        }
+      ]
+    }
+  ]
+}
