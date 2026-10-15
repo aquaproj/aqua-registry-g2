@@ -15,3 +15,53 @@ ignored_packages:
   - name: golang/tools/gorename
     reason: |
       The command was deleted upstream: https://github.com/golang/go/issues/69360
+  - name: aquasecurity/chain-bench
+    reason: |
+      The aquasecurity organization has an IP allow list enabled, so the GitHub API refuses
+      the token a run uses: "your IP address is not permitted to access this
+      resource". aqua-registry (v1) keeps serving it.
+  - name: aquasecurity/kube-bench
+    reason: |
+      The aquasecurity organization has an IP allow list enabled, so the GitHub API refuses
+      the token a run uses: "your IP address is not permitted to access this
+      resource". aqua-registry (v1) keeps serving it.
+  - name: aquasecurity/kubectl-who-can
+    reason: |
+      The aquasecurity organization has an IP allow list enabled, so the GitHub API refuses
+      the token a run uses: "your IP address is not permitted to access this
+      resource". aqua-registry (v1) keeps serving it.
+  - name: aquasecurity/starboard
+    reason: |
+      The aquasecurity organization has an IP allow list enabled, so the GitHub API refuses
+      the token a run uses: "your IP address is not permitted to access this
+      resource". aqua-registry (v1) keeps serving it.
+  - name: aquasecurity/tfsec
+    reason: |
+      The aquasecurity organization has an IP allow list enabled, so the GitHub API refuses
+      the token a run uses: "your IP address is not permitted to access this
+      resource". aqua-registry (v1) keeps serving it.
+  - name: aquasecurity/trivy
+    reason: |
+      The aquasecurity organization has an IP allow list enabled, so the GitHub API refuses
+      the token a run uses: "your IP address is not permitted to access this
+      resource". aqua-registry (v1) keeps serving it.
+  - name: Shopify/ejson
+    reason: |
+      The Shopify organization has an IP allow list enabled, so the GitHub API refuses
+      the token a run uses: "your IP address is not permitted to access this
+      resource". aqua-registry (v1) keeps serving it.
+  - name: Shopify/kubeaudit
+    reason: |
+      The Shopify organization has an IP allow list enabled, so the GitHub API refuses
+      the token a run uses: "your IP address is not permitted to access this
+      resource". aqua-registry (v1) keeps serving it.
+  - name: Shopify/shadowenv
+    reason: |
+      The Shopify organization has an IP allow list enabled, so the GitHub API refuses
+      the token a run uses: "your IP address is not permitted to access this
+      resource". aqua-registry (v1) keeps serving it.
+  - name: Shopify/toxiproxy
+    reason: |
+      The Shopify organization has an IP allow list enabled, so the GitHub API refuses
+      the token a run uses: "your IP address is not permitted to access this
+      resource". aqua-registry (v1) keeps serving it.
