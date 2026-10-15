@@ -1,0 +1,27 @@
+name: dependency-check/DependencyCheck
+type: github_release
+repo_owner: dependency-check
+repo_name: DependencyCheck
+repo_id: 5663857
+description: OWASP dependency-check is a software composition analysis utility that detects publicly disclosed vulnerabilities in application dependencies
+files:
+  - name: dependency-check
+version_overrides:
+  - version_constraint: "true"
+    files:
+      - name: dependency-check
+        src: dependency-check/bin/dependency-check.sh
+    overrides:
+      - goos: windows
+        files:
+          - name: dependency-check
+            src: dependency-check/bin/dependency-check.bat
+asset_rules:
+  - envs:
+      - linux/amd64
+      - linux/arm64
+      - darwin/amd64
+      - darwin/arm64
+      - windows/amd64
+      - windows/arm64
+    filter: Asset matches "^dependency-check-.+-release[.]zip([.].+)?$"
