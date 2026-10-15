@@ -1,0 +1,29 @@
+name: gruntwork-io/terragrunt
+type: github_release
+repo_owner: gruntwork-io
+repo_name: terragrunt
+repo_id: 59522149
+description: Terragrunt is a flexible orchestration tool that allows Infrastructure as Code written in OpenTofu/Terraform to scale
+version_filter: |
+  let words = ["^alpha", "^beta"];
+  not any(words, {Asset matches #})
+version_overrides:
+  - version_constraint: semver("> 0.93.5")
+    files:
+      - name: terragrunt
+        src: '{{.AssetWithoutExt}}'
+  - version_constraint: semver("> 0.28.11")
+  - version_constraint: semver("> 0.18.0")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("<= 0.18.0")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: "true"
+    files:
+      - name: terragrunt
+        src: '{{.AssetWithoutExt}}'
