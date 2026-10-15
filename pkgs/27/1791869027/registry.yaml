@@ -25,12 +25,6 @@ version_overrides:
         hard: true
     github_artifact_attestations:
       signer_workflow: pnpm/pnpm/.github/workflows/release.yml
-    overrides:
-      - goos: linux
-        asset: pnpm-{{.OS}}-{{.Arch}}-musl.{{.Format}}
-        variants:
-          - key: libc
-            value: musl
     supported_envs:
       - linux
       - windows
@@ -51,12 +45,6 @@ version_overrides:
         hard: true
     github_artifact_attestations:
       signer_workflow: pnpm/pnpm/.github/workflows/release.yml
-    overrides:
-      - goos: linux
-        asset: pnpm-{{.OS}}-{{.Arch}}-musl.{{.Format}}
-        variants:
-          - key: libc
-            value: musl
     supported_envs:
       - linux
       - windows
@@ -69,12 +57,6 @@ version_overrides:
         link: pn
     github_artifact_attestations:
       signer_workflow: pnpm/pnpm/.github/workflows/release.yml
-    overrides:
-      - goos: linux
-        asset: pnpm-{{.OS}}-{{.Arch}}-musl.{{.Format}}
-        variants:
-          - key: libc
-            value: musl
     supported_envs:
       - linux
       - windows
@@ -85,12 +67,6 @@ version_overrides:
       - name: pn
         src: pnpm
         link: pn
-    overrides:
-      - goos: linux
-        asset: pnpm-{{.OS}}-{{.Arch}}-musl.{{.Format}}
-        variants:
-          - key: libc
-            value: musl
   - version_constraint: semver("> 7.0.0-alpha.0")
     files:
       - name: pnpm
@@ -124,12 +100,6 @@ version_overrides:
         hard: true
     github_artifact_attestations:
       signer_workflow: pnpm/pnpm/.github/workflows/release.yml
-    overrides:
-      - goos: linux
-        asset: pnpm-{{.OS}}-{{.Arch}}-musl.{{.Format}}
-        variants:
-          - key: libc
-            value: musl
     supported_envs:
       - linux
       - windows
