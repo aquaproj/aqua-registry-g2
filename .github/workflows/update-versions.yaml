@@ -23,8 +23,10 @@ on:
         required: true
 permissions: {}
 # One at a time. Two runs commit to the same branch, and the second adds to what the first
-# put there. Queued rather than cancelled in flight: each run is for the packages its push
-# touched, and a cancelled one would leave those behind.
+# put there. GitHub keeps one pending run per group and cancels the one before it, so a merge
+# arriving while a run is going can lose its own run: each run is therefore for what changed
+# since the last run that succeeded, not for what its own push changed, and the one that runs
+# covers the ones cancelled.
 concurrency:
   group: ${{ github.workflow }}
   cancel-in-progress: false
@@ -37,15 +39,22 @@ jobs:
     environment: index
     timeout-minutes: 15
     permissions:
-      # Reading what the push changed, and turning auto-merge on for the pull request,
-      # which is done with this token rather than the pull request app's and needs both.
+      # Reading what changed, and turning auto-merge on for the pull request, which is done
+      # with this token rather than the pull request app's and needs both.
       contents: write
       pull-requests: write
+      # Finding the last run that succeeded, which is where what changed is read from.
+      actions: read
     steps:
-      # For aqua/aqua.yaml, which pins the ar2 version and its checksum.
+      # For aqua/aqua.yaml, which pins the ar2 version and its checksum, and for the history
+      # what changed is read from. The history without its files, and only aqua/ checked
+      # out: pkgs/ is most of the repository and nothing here reads it.
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
+          fetch-depth: 0
+          filter: blob:none
+          sparse-checkout: aqua
       - uses: aquaproj/aqua-installer@82d0e83878a8657c4a6f2ff1755d3bfbfc67f329 # v4.1.0
         with:
           aqua_version: v2.64.0
@@ -58,15 +67,21 @@ jobs:
           client-id: ${{ vars.AR2_PR_CLIENT_ID }}
           private-key: ${{ secrets.AR2_PR_PRIVATE_KEY }}
       - run: |
-          # The packages a push touched are the ids of the directories under which a
-          # version changed, read from what the push compares to rather than from a
-          # checkout, which holds one commit.
+          # The packages are the ids of the directories under which a version changed
+          # since the last push this workflow ran for successfully -- not since this push's
+          # parent, since the run of a push in between may have been cancelled. A dispatch
+          # names its packages and says nothing about the rest, so it isn't a starting point.
           if [ -n "$PACKAGES" ]; then
             read -r -a ids <<< "$PACKAGES"
           else
+            base=$(gh run list --workflow update-versions.yaml --branch main --event push \
+              --status success --limit 1 --json headSha --jq '.[0].headSha // ""')
+            if [ -z "$base" ] || ! git cat-file -e "$base^{commit}" 2>/dev/null; then
+              base=$BEFORE
+            fi
+            echo "What changed is read from $base to $AFTER."
             mapfile -t ids < <(
-              gh api "repos/$GITHUB_REPOSITORY/compare/$BEFORE...$AFTER" --paginate \
-                --jq '.files[].filename' |
+              git diff --name-only "$base" "$AFTER" -- pkgs/ |
                 sed -nE 's|^pkgs/[0-9]{2}/([0-9]+)/versions/.*|\1|p' |
                 sort -u
             )
