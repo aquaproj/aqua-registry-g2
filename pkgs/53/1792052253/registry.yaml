@@ -1,0 +1,20 @@
+name: trinodb/trino/trino-cli
+type: github_release
+repo_owner: trinodb
+repo_name: trino
+repo_id: 166515022
+description: Trino, the distributed SQL query engine for big data - Command Line Interface
+link: https://trino.io/docs/current/client/cli.html
+files:
+  - name: trino
+supported_envs:
+  - darwin
+  - linux
+all_assets_filter: not ((Asset matches "\\.zip$") or (Asset matches "\\.tar\\.gz$"))
+asset_rules:
+  - envs:
+      - linux/amd64
+      - linux/arm64
+      - darwin/amd64
+      - darwin/arm64
+    filter: Asset matches "^trino-cli-.+([.].+)?$"
