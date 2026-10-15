@@ -29,7 +29,9 @@ version_overrides:
       - linux/amd64
       - darwin
   - version_constraint: "true"
-all_assets_filter: Asset matches "^cosign"
+# cosign-linux-pivkey-pkcs11key-<arch> is the build with PIV and PKCS#11 support, published
+# beside the plain one for each Linux architecture.
+all_assets_filter: Asset matches "^cosign" and not (Asset contains "pivkey")
 asset_rules:
   - envs:
       - linux/amd64
