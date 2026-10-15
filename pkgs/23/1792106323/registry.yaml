@@ -1,0 +1,12 @@
+name: bats-core/bats-core
+type: github_archive
+repo_owner: bats-core
+repo_name: bats-core
+repo_id: 104130720
+description: Bash Automated Testing System
+files:
+  - name: bats
+    src: bats-core-{{trimV .Version}}/bin/bats
+supported_envs:
+  - darwin
+  - linux
