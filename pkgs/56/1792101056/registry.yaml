@@ -1,0 +1,19 @@
+name: awslabs/mountpoint-s3
+type: http
+repo_owner: awslabs
+repo_name: mountpoint-s3
+repo_id: 527735423
+description: A simple, high-throughput file client for mounting an Amazon S3 bucket as a local file system
+url: https://s3.amazonaws.com/mountpoint-s3-release/{{.SemVer}}/{{.Arch}}/mount-s3-{{.SemVer}}-{{.Arch}}.{{.Format}}
+format: tar.gz
+version_filter: |
+  Version matches "^mountpoint-s3-\\d+\\.\\d+\\.\\d+"
+version_prefix: mountpoint-s3-
+version_source: github_tag
+files:
+  - name: mount-s3
+    src: bin/mount-s3
+replacements:
+  amd64: x86_64
+supported_envs:
+  - linux
