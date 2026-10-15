@@ -1,0 +1,16 @@
+name: checkstyle/checkstyle
+type: github_release
+repo_owner: checkstyle
+repo_name: checkstyle
+repo_id: 12499251
+description: A development tool for checking Java source code against a coding standard
+version_prefix: checkstyle-
+asset_rules:
+  - envs:
+      - linux/amd64
+      - linux/arm64
+      - darwin/amd64
+      - darwin/arm64
+      - windows/amd64
+      - windows/arm64
+    filter: Asset matches "^checkstyle-.+-all[.]jar([.].+)?$"
