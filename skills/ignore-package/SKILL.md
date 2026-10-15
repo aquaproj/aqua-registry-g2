@@ -14,6 +14,19 @@ carries its reason, because the next person to wonder why a package isn't here r
 file and nothing else. They are dropped before anything asks GitHub about them, so a
 package whose repository is gone stops costing a request every run.
 
+When the reason holds for every package of an organization -- an IP allow list that refuses
+the API to the runners -- write one entry with `name_regexp` instead of one per package:
+
+```yaml
+  - name_regexp: aquasecurity/.*
+    reason: |
+      The aquasecurity organization has an IP allow list enabled, ...
+```
+
+The expression has to match the whole name. A run adds the packages aqua-registry gains, so
+an entry per package would need another every time the organization gains one. `name` stays
+an exact name: read as a regular expression, every dot in it would match any character.
+
 This is not a package being removed, and the two aren't degrees of the same thing: an ignored
 package was never published, and [removing one](../remove-package/SKILL.md) takes away what the
 registry already serves.
