@@ -1,0 +1,20 @@
+name: pypa/pipx
+type: github_release
+repo_owner: pypa
+repo_name: pipx
+repo_id: 151871286
+description: Install and Run Python Applications in Isolated Environments
+version_overrides:
+  - version_constraint: semver("<= 1.1.0") or Version == "1.3.0"
+    no_asset: true
+  - version_constraint: "true"
+    supported_envs:
+      - darwin
+      - linux
+asset_rules:
+  - envs:
+      - linux/amd64
+      - linux/arm64
+      - darwin/amd64
+      - darwin/arm64
+    filter: Asset matches "^pipx[.]pyz([.].+)?$"
