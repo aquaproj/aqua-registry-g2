@@ -1,0 +1,22 @@
+name: firecracker-microvm/firecracker
+type: github_release
+repo_owner: firecracker-microvm
+repo_name: firecracker
+repo_id: 107505869
+description: Secure and fast microVMs for serverless computing
+files:
+  - name: firecracker
+    src: release-{{.Version}}-{{.Arch}}/firecracker-{{.Version}}-{{.Arch}}
+  - name: jailer
+    src: release-{{.Version}}-{{.Arch}}/jailer-{{.Version}}-{{.Arch}}
+  - name: rebase-snap
+    src: release-{{.Version}}-{{.Arch}}/rebase-snap-{{.Version}}-{{.Arch}}
+  - name: seccompiler-bin
+    src: release-{{.Version}}-{{.Arch}}/seccompiler-bin-{{.Version}}-{{.Arch}}
+supported_envs:
+  - linux
+asset_rules:
+  - envs:
+      - linux/amd64
+      - linux/arm64
+    filter: Asset matches "^firecracker-.+-.+[.]tgz([.].+)?$"
