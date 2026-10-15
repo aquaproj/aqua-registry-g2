@@ -1,0 +1,13 @@
+name: liamg/traitor
+type: github_release
+repo_owner: liamg
+repo_name: traitor
+repo_id: 332424498
+description: Automatic Linux privesc via exploitation of low-hanging fruit e.g. gtfobins, pwnkit, dirty pipe, +w docker.sock
+supported_envs:
+  - linux
+asset_rules:
+  - envs:
+      - linux/amd64
+      - linux/arm64
+    filter: Asset matches "^traitor-.+([.].+)?$"
