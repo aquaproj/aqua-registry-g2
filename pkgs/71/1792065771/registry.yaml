@@ -1,0 +1,16 @@
+name: yonaskolb/XcodeGen
+type: github_release
+repo_owner: yonaskolb
+repo_name: XcodeGen
+repo_id: 97716052
+description: A Swift command line tool for generating your Xcode project
+files:
+  - name: xcodegen
+    src: xcodegen/bin/xcodegen
+supported_envs:
+  - darwin
+asset_rules:
+  - envs:
+      - darwin/amd64
+      - darwin/arm64
+    filter: Asset matches "^xcodegen[.]zip([.].+)?$"
