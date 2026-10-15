@@ -1,0 +1,20 @@
+name: OpenAPITools/openapi-generator
+type: github_release
+repo_owner: OpenAPITools
+repo_name: openapi-generator
+repo_id: 133134007
+description: OpenAPI Generator allows generation of API client libraries (SDK generation), server stubs, documentation and configuration automatically given an OpenAPI Spec (v2, v3)
+version_overrides:
+  - version_constraint: semver(">= 7.21.0")
+  - version_constraint: semver("< 7.21.0")
+    no_asset: true
+  - version_constraint: "true"
+asset_rules:
+  - envs:
+      - linux/amd64
+      - linux/arm64
+      - darwin/amd64
+      - darwin/arm64
+      - windows/amd64
+      - windows/arm64
+    filter: Asset matches "^openapi-generator-cli-.+[.]jar([.].+)?$"
