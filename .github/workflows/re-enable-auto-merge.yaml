@@ -1,0 +1,59 @@
+---
+name: re-enable auto-merge
+# Turn auto-merge back on for a pull request ar2 opened, after GitHub turned it off.
+#
+# GitHub turns auto-merge off by itself now and then: #2897, the catalogue's pull request,
+# had it turned off half a minute after the branch was pushed, as "Pull Request is not
+# mergeable", and then sat there merged by nobody. ar2 never turns it off, so a pull
+# request of ar2's that GitHub turned it off for is one to turn it back on for.
+#
+# Only GitHub's own turning off is undone. Somebody turning it off on purpose is somebody
+# who wants the pull request to wait.
+on:
+  # pull_request_target rather than pull_request: it runs in the context of main, which is
+  # the only branch the environment holding the app's key is open to. Nothing from the
+  # pull request is checked out or run.
+  pull_request_target:
+    types:
+      - auto_merge_disabled
+permissions: {}
+concurrency:
+  group: ${{ github.workflow }}--${{ github.event.pull_request.number }}
+  cancel-in-progress: false
+jobs:
+  re-enable:
+    if: >-
+      startsWith(github.event.pull_request.head.ref, 'ar2_')
+      && github.event.pull_request.head.repo.full_name == github.repository
+      && github.event.sender.login == 'github-actions[bot]'
+    runs-on: ubuntu-24.04
+    environment: index
+    timeout-minutes: 10
+    permissions:
+      # Checking out main for the script.
+      contents: read
+      # Dispatching the index workflow, for the catalogue's pull request.
+      actions: write
+    steps:
+      # main's, as pull_request_target checks out by default, for the script.
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+          sparse-checkout: .github/scripts
+      # The app's token, for both what this does. A branch updated with GITHUB_TOKEN
+      # starts no workflow, so the required checks would never run on it, and a pull
+      # request merged by auto-merge someone enabled with GITHUB_TOKEN is a push that
+      # starts no workflow either.
+      - uses: actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1 # v3.2.0
+        id: pr_token
+        with:
+          client-id: ${{ vars.AR2_PR_CLIENT_ID }}
+          private-key: ${{ secrets.AR2_PR_PRIVATE_KEY }}
+      - run: bash .github/scripts/re-enable-auto-merge.sh
+        env:
+          GH_REPO: ${{ github.repository }}
+          GH_TOKEN: ${{ steps.pr_token.outputs.token }}
+          ACTIONS_TOKEN: ${{ github.token }}
+          PR: ${{ github.event.pull_request.number }}
+          HEAD_REF: ${{ github.event.pull_request.head.ref }}
+          REASON: ${{ github.event.reason }}
