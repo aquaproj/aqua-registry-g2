@@ -21,9 +21,3 @@ version_overrides:
       darwin: apple-darwin
       linux: unknown-linux-gnu
       windows: pc-windows-msvc
-    overrides:
-      - goos: windows
-        checksum:
-          type: http
-          url: https://static.rust-lang.org/rustup/archive/{{.Version}}/{{.Arch}}-{{.OS}}/rustup-init.exe.sha256
-          algorithm: sha256
