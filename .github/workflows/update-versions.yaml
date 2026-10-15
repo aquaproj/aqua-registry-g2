@@ -16,6 +16,12 @@ on:
       - main
     paths:
       - pkgs/*/*/versions/**
+  # What catches a push that raised no run at all. GitHub doesn't always: cheat/cheat 4.1.1
+  # merged seconds after 4.2.0 and no workflow ran for it. A scheduled run reads what changed
+  # since the last run that succeeded, the way a push's does. The odd minutes are to stay off
+  # the top of the hour, when everyone else's schedule is.
+  schedule:
+    - cron: "19,49 * * * *"
   workflow_dispatch:
     inputs:
       packages:
@@ -68,16 +74,19 @@ jobs:
           private-key: ${{ secrets.AR2_PR_PRIVATE_KEY }}
       - run: |
           # The packages are the ids of the directories under which a version changed
-          # since the last push this workflow ran for successfully -- not since this push's
-          # parent, since the run of a push in between may have been cancelled. A dispatch
-          # names its packages and says nothing about the rest, so it isn't a starting point.
+          # since the last push or schedule this workflow ran for successfully -- not since
+          # this push's parent, since the run of a push in between may have been cancelled
+          # or never raised. A dispatch names its packages and says nothing about the rest,
+          # so it isn't a starting point.
           if [ -n "$PACKAGES" ]; then
             read -r -a ids <<< "$PACKAGES"
           else
-            base=$(gh run list --workflow update-versions.yaml --branch main --event push \
-              --status success --limit 1 --json headSha --jq '.[0].headSha // ""')
+            base=$(gh run list --workflow update-versions.yaml --branch main \
+              --status success --limit 20 --json headSha,event \
+              --jq '[.[] | select(.event == "push" or .event == "schedule")][0].headSha // ""')
             if [ -z "$base" ] || ! git cat-file -e "$base^{commit}" 2>/dev/null; then
-              base=$BEFORE
+              # The push's parent, or nothing to read for a schedule, which has none.
+              base=${BEFORE:-$AFTER}
             fi
             echo "What changed is read from $base to $AFTER."
             mapfile -t ids < <(
