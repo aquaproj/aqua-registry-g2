@@ -1,0 +1,17 @@
+name: k3s-io/k3s
+type: github_release
+repo_owner: k3s-io
+repo_name: k3s
+repo_id: 135516270
+description: Lightweight Kubernetes
+version_filter: not (Version matches "-rc")
+version_overrides:
+  - version_constraint: "true"
+    supported_envs:
+      - linux
+all_assets_filter: not (Asset matches "^k3s-airgap-images-")
+asset_rules:
+  - envs:
+      - linux/amd64
+      - linux/arm64
+    filter: Asset matches "^k3s([.].+)?$"
