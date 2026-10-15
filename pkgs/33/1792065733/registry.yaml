@@ -1,0 +1,15 @@
+name: krallin/tini
+type: github_release
+repo_owner: krallin
+repo_name: tini
+repo_id: 31432573
+description: A tiny but valid `init` for containers
+version_overrides:
+  - version_constraint: "true"
+    supported_envs:
+      - linux
+asset_rules:
+  - envs:
+      - linux/amd64
+      - linux/arm64
+    filter: Asset matches "^tini-static-.+([.].+)?$"
