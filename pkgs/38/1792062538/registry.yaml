@@ -1,0 +1,20 @@
+name: yarnpkg/yarn
+type: github_release
+repo_owner: yarnpkg
+repo_name: yarn
+repo_id: 49970642
+description: The 1.x line is frozen - features and bugfixes now happen on https://github.com/yarnpkg/berry
+version_overrides:
+  - version_constraint: "true"
+    files:
+      - name: yarn
+        src: '{{.AssetWithoutExt}}/bin/yarn'
+asset_rules:
+  - envs:
+      - linux/amd64
+      - linux/arm64
+      - darwin/amd64
+      - darwin/arm64
+      - windows/amd64
+      - windows/arm64
+    filter: Asset matches "^yarn-.+[.]tar[.]gz([.].+)?$"
