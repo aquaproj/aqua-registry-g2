@@ -1,0 +1,15 @@
+name: opencontainers/runc
+type: github_release
+repo_owner: opencontainers
+repo_name: runc
+repo_id: 36960321
+description: CLI tool for spawning and running containers according to the OCI specification
+version_overrides:
+  - version_constraint: "true"
+    supported_envs:
+      - linux
+asset_rules:
+  - envs:
+      - linux/amd64
+      - linux/arm64
+    filter: Asset matches "^runc[.].+([.].+)?$"
