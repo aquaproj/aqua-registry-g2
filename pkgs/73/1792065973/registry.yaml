@@ -1,0 +1,11 @@
+name: tailscale/tailcat
+type: github_release
+repo_owner: tailscale
+repo_name: tailcat
+repo_id: 880414192
+description: like netcat, but over Tailscale's data plane, without Tailscale's control plane
+version_overrides:
+  - version_constraint: "true"
+    supported_envs:
+      - linux
+      - windows
