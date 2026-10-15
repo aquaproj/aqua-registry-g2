@@ -1,0 +1,36 @@
+name: sigstore/cosign
+type: github_release
+repo_owner: sigstore
+repo_name: cosign
+repo_id: 335952417
+description: Code signing and transparency for containers and binaries
+version_filter: not (Version matches "-dev$")
+cosign:
+  opts:
+    - --certificate-identity
+    - keyless@projectsigstore.iam.gserviceaccount.com
+    - --certificate-oidc-issuer
+    - https://accounts.google.com
+  bundle:
+    type: github_release
+    asset: '{{.Asset}}.sigstore.json'
+version_overrides:
+  - version_constraint: Version == "v0.1.0"
+    supported_envs:
+      - linux/amd64
+  - version_constraint: semver("> 1.2.1")
+  - version_constraint: semver("> 0.3.1")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("<= 0.3.1")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: "true"
+all_assets_filter: Asset matches "^cosign"
+asset_rules:
+  - envs:
+      - linux/amd64
+    filter: Asset matches "^cosign([.].+)?$"
