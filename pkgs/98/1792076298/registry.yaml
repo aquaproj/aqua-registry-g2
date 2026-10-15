@@ -1,0 +1,16 @@
+name: cloud-hypervisor/cloud-hypervisor/ch-remote
+type: github_release
+repo_owner: cloud-hypervisor
+repo_name: cloud-hypervisor
+repo_id: 184341774
+description: Remotely control a cloud-hypervisor VMM
+files:
+  - name: ch-remote
+supported_envs:
+  - linux
+all_assets_filter: Asset matches "^ch-remote-static([.].+)?$" or Asset matches "^ch-remote-static-aarch64([.].+)?$" or Asset endsWith ".intoto.jsonl"
+asset_rules:
+  - envs:
+      - linux/amd64
+      - linux/arm64
+    filter: Asset matches "^ch-remote-static([.].+)?$"
