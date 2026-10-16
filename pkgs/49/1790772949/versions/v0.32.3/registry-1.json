@@ -1,0 +1,42 @@
+{
+  "published_at": "2026-07-23T00:44:28Z",
+  "assets": [
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "ollama",
+      "repo_name": "ollama",
+      "repo_id": 658928958,
+      "asset": "ollama-linux-arm64.tar.zst",
+      "format": "tar.zst",
+      "checksum": "61af0def977ffc9e76cc961f9505d621805653c63f444796de2f77b4eaaa7047",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "ollama",
+          "src": "bin/ollama"
+        }
+      ]
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "ollama",
+      "repo_name": "ollama",
+      "repo_id": 658928958,
+      "asset": "ollama-windows-arm64.zip",
+      "format": "zip",
+      "checksum": "8431fc4ccf7e86a273dbcc52e81585fc92133e4d6f9c1abdd3663e2568f2fe90",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "ollama",
+          "src": "ollama.exe"
+        }
+      ]
+    }
+  ]
+}
