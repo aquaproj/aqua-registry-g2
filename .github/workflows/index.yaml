@@ -70,7 +70,7 @@ jobs:
       # The token that commits the catalogue and opens its pull request. A pull
       # request opened or updated with GITHUB_TOKEN gets its checks in an
       # approval-required state, and this one is added to on every run.
-      - uses: actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1 # v3.2.0
+      - uses: actions/create-github-app-token@64ab729a6294000f5aa4a4bc0b73d1f32bc45510 # v3.3.0
         id: pr_token
         with:
           client-id: ${{ vars.AR2_PR_CLIENT_ID }}
