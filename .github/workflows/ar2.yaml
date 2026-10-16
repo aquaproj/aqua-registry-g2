@@ -76,12 +76,11 @@ jobs:
         with:
           aqua_version: v2.64.0
           packages: ar2
-        # The app's token rather than GITHUB_TOKEN for verifying ar2's attestation, which
-        # asks GitHub's API. GITHUB_TOKEN's thousand requests an hour are the whole
-        # repository's, and a chain of runs used them up: five runs in a row failed here.
-        env:
-          GITHUB_TOKEN: ${{ steps.pr_token.outputs.token }}
-          GH_TOKEN: ${{ steps.pr_token.outputs.token }}
+          # The app's token rather than GITHUB_TOKEN for verifying ar2's attestation,
+          # which asks GitHub's API. GITHUB_TOKEN's thousand requests an hour are the
+          # whole repository's, and a chain of runs used them up: five runs in a row
+          # failed here. The action sets GITHUB_TOKEN from this for each of its steps.
+          github_token: ${{ steps.pr_token.outputs.token }}
       - name: record when the run started
         id: started
         run: echo "at=$(date +%s)" >> "$GITHUB_OUTPUT"
