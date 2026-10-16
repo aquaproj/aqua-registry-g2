@@ -21,3 +21,6 @@ version_overrides:
       files:
         - name: notion
     - version_constraint: "true"
+# Up to 1.0.8 the Linux build was published for OpenSSL 1.0, 1.1 and RHEL. The one for 1.0
+# is the one aqua-registry installs.
+all_assets_filter: not (Asset contains "openssl-1.1" or Asset contains "openssl-rhel")
