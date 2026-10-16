@@ -43,6 +43,17 @@ jobs:
         run: echo "$PACKAGES" | xargs git sparse-checkout add
         env:
           PACKAGES: ${{ steps.plan.outputs.packages }}
+      # ar2's own install, kept between runs: with it restored aqua neither downloads ar2 nor
+      # verifies its attestation, which asks GitHub's API. Every pull request runs these jobs,
+      # and verifying ar2 for each used up GITHUB_TOKEN's thousand requests an hour. Only ar2's
+      # directory, so that a package a job tests is never restored rather than installed.
+      - if: steps.plan.outputs.packages != ''
+        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: |
+            ~/.local/share/aquaproj-aqua/pkgs/github_release/github.com/aquaproj/ar2
+            ~/AppData/Local/aquaproj-aqua/pkgs/github_release/github.com/aquaproj/ar2
+          key: ar2-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles('aqua/aqua.yaml', 'aqua/aqua-checksums.json') }}
       - if: steps.plan.outputs.packages != ''
         uses: aquaproj/aqua-installer@82d0e83878a8657c4a6f2ff1755d3bfbfc67f329 # v4.1.0
         with:
@@ -126,6 +137,16 @@ jobs:
       - run: echo "$PACKAGES" | xargs git sparse-checkout add
         env:
           PACKAGES: ${{ needs.plan.outputs.packages }}
+      # ar2's own install, kept between runs: with it restored aqua neither downloads ar2 nor
+      # verifies its attestation, which asks GitHub's API. Every pull request runs these jobs,
+      # and verifying ar2 for each used up GITHUB_TOKEN's thousand requests an hour. Only ar2's
+      # directory, so that a package a job tests is never restored rather than installed.
+      - uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: |
+            ~/.local/share/aquaproj-aqua/pkgs/github_release/github.com/aquaproj/ar2
+            ~/AppData/Local/aquaproj-aqua/pkgs/github_release/github.com/aquaproj/ar2
+          key: ar2-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles('aqua/aqua.yaml', 'aqua/aqua-checksums.json') }}
       - uses: aquaproj/aqua-installer@82d0e83878a8657c4a6f2ff1755d3bfbfc67f329 # v4.1.0
         with:
           aqua_version: v2.64.0
@@ -172,6 +193,16 @@ jobs:
           persist-credentials: false
           sparse-checkout: |
             aqua
+      # ar2's own install, kept between runs: with it restored aqua neither downloads ar2 nor
+      # verifies its attestation, which asks GitHub's API. Every pull request runs these jobs,
+      # and verifying ar2 for each used up GITHUB_TOKEN's thousand requests an hour. Only ar2's
+      # directory, so that a package a job tests is never restored rather than installed.
+      - uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: |
+            ~/.local/share/aquaproj-aqua/pkgs/github_release/github.com/aquaproj/ar2
+            ~/AppData/Local/aquaproj-aqua/pkgs/github_release/github.com/aquaproj/ar2
+          key: ar2-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles('aqua/aqua.yaml', 'aqua/aqua-checksums.json') }}
       - uses: aquaproj/aqua-installer@82d0e83878a8657c4a6f2ff1755d3bfbfc67f329 # v4.1.0
         with:
           aqua_version: v2.64.0
