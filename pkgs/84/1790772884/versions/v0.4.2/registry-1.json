@@ -1,0 +1,221 @@
+{
+  "published_at": "2026-05-26T09:03:42Z",
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "j178",
+      "repo_name": "prek",
+      "repo_id": 868811259,
+      "asset": "prek-x86_64-apple-darwin.tar.gz",
+      "format": "tar.gz",
+      "checksum": "e9784e6d120bd6811afdbb9805b500342e184b72603d7cda06cd222cfd7a6ad6",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "prek",
+          "src": "prek-x86_64-apple-darwin/prek"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "j178/prek/.github/workflows/release.yml",
+        "source_ref": "refs/heads/master",
+        "source_digest": "de77cc91be8e5a021f6308d6d85c14f73492fe60",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "j178",
+      "repo_name": "prek",
+      "repo_id": 868811259,
+      "asset": "prek-aarch64-apple-darwin.tar.gz",
+      "format": "tar.gz",
+      "checksum": "9ea984611f3830e86d3f49b289dc34e9f2750009b9a04ee1d21e893b32df5a04",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "prek",
+          "src": "prek-aarch64-apple-darwin/prek"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "j178/prek/.github/workflows/release.yml",
+        "source_ref": "refs/heads/master",
+        "source_digest": "de77cc91be8e5a021f6308d6d85c14f73492fe60",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "variants": {
+        "libc": "glibc"
+      },
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "j178",
+      "repo_name": "prek",
+      "repo_id": 868811259,
+      "asset": "prek-x86_64-unknown-linux-gnu.tar.gz",
+      "format": "tar.gz",
+      "checksum": "5d9c66accf6905027ff4ea81bb8888843b7540a7741aa2363556214764c29086",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "prek",
+          "src": "prek-x86_64-unknown-linux-gnu/prek"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "j178/prek/.github/workflows/release.yml",
+        "source_ref": "refs/heads/master",
+        "source_digest": "de77cc91be8e5a021f6308d6d85c14f73492fe60",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "variants": {
+        "libc": "musl"
+      },
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "j178",
+      "repo_name": "prek",
+      "repo_id": 868811259,
+      "asset": "prek-x86_64-unknown-linux-musl.tar.gz",
+      "format": "tar.gz",
+      "checksum": "8966aac61df423e4188b05dce904982cdb07de57efb0c2bb83057a97ada64549",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "prek",
+          "src": "prek-x86_64-unknown-linux-musl/prek"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "j178/prek/.github/workflows/release.yml",
+        "source_ref": "refs/heads/master",
+        "source_digest": "de77cc91be8e5a021f6308d6d85c14f73492fe60",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "variants": {
+        "libc": "glibc"
+      },
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "j178",
+      "repo_name": "prek",
+      "repo_id": 868811259,
+      "asset": "prek-aarch64-unknown-linux-gnu.tar.gz",
+      "format": "tar.gz",
+      "checksum": "d9960883121b5c08b1f666e1e180f77f32f8e89c2c136990e918e0605330e7f2",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "prek",
+          "src": "prek-aarch64-unknown-linux-gnu/prek"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "j178/prek/.github/workflows/release.yml",
+        "source_ref": "refs/heads/master",
+        "source_digest": "de77cc91be8e5a021f6308d6d85c14f73492fe60",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "variants": {
+        "libc": "musl"
+      },
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "j178",
+      "repo_name": "prek",
+      "repo_id": 868811259,
+      "asset": "prek-aarch64-unknown-linux-musl.tar.gz",
+      "format": "tar.gz",
+      "checksum": "ceb234ca2e65ae3f726a04071778f851aa4fbee1a03f80e3783730a0905937fa",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "prek",
+          "src": "prek-aarch64-unknown-linux-musl/prek"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "j178/prek/.github/workflows/release.yml",
+        "source_ref": "refs/heads/master",
+        "source_digest": "de77cc91be8e5a021f6308d6d85c14f73492fe60",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "j178",
+      "repo_name": "prek",
+      "repo_id": 868811259,
+      "asset": "prek-x86_64-pc-windows-msvc.zip",
+      "format": "zip",
+      "checksum": "6b571c5100ebbaf868dc3c209f39ceb4ec16d6f1f297ee9fbdde013fc8b777f7",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "prek",
+          "src": "prek.exe"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "j178/prek/.github/workflows/release.yml",
+        "source_ref": "refs/heads/master",
+        "source_digest": "de77cc91be8e5a021f6308d6d85c14f73492fe60",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "j178",
+      "repo_name": "prek",
+      "repo_id": 868811259,
+      "asset": "prek-aarch64-pc-windows-msvc.zip",
+      "format": "zip",
+      "checksum": "b360a06835aa7109030af0b8847f858125a8dece665b79f31bedf3ee03505172",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "prek",
+          "src": "prek.exe"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "j178/prek/.github/workflows/release.yml",
+        "source_ref": "refs/heads/master",
+        "source_digest": "de77cc91be8e5a021f6308d6d85c14f73492fe60",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    }
+  ]
+}
