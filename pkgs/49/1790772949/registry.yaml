@@ -34,6 +34,8 @@ version_overrides:
           files:
             - name: ollama
               src: bin/ollama
+# rocm, jetpack and mlx are builds for particular accelerators beside the plain one, and
+# Ollama-darwin.zip and Ollama.dmg are the macOS app beside the CLI, ollama-darwin.tgz.
 all_assets_filter: |
-    let words = ["rocm", "jetpack"];
-    not any(words, {Asset matches #})
+    let words = ["rocm", "jetpack", "mlx"];
+    not any(words, {Asset matches #}) and not (Asset startsWith "Ollama")
