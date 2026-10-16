@@ -62,10 +62,6 @@ jobs:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
-      - uses: aquaproj/aqua-installer@82d0e83878a8657c4a6f2ff1755d3bfbfc67f329 # v4.1.0
-        with:
-          aqua_version: v2.64.0
-          packages: ar2
       # The token that commits to the head branch and opens the pull request. A pull
       # request opened or updated with GITHUB_TOKEN gets its checks in an
       # approval-required state, so nothing would run until someone pressed a button
@@ -76,6 +72,15 @@ jobs:
         with:
           client-id: ${{ vars.AR2_PR_CLIENT_ID }}
           private-key: ${{ secrets.AR2_PR_PRIVATE_KEY }}
+      - uses: aquaproj/aqua-installer@82d0e83878a8657c4a6f2ff1755d3bfbfc67f329 # v4.1.0
+        with:
+          aqua_version: v2.64.0
+          packages: ar2
+          # The app's token rather than GITHUB_TOKEN for verifying ar2's attestation,
+          # which asks GitHub's API. GITHUB_TOKEN's thousand requests an hour are the
+          # whole repository's, and a chain of runs used them up: five runs in a row
+          # failed here. The action sets GITHUB_TOKEN from this for each of its steps.
+          github_token: ${{ steps.pr_token.outputs.token }}
       - name: record when the run started
         id: started
         run: echo "at=$(date +%s)" >> "$GITHUB_OUTPUT"
@@ -95,7 +100,13 @@ jobs:
             --g2-repo "${GITHUB_REPOSITORY#*/}" \
             "${args[@]}"
         env:
+          # The state, in the container registry, which only GITHUB_TOKEN reaches.
           GITHUB_TOKEN: ${{ github.token }}
+          # GitHub's API, with a budget of its own rather than the repository's
+          # Actions token's.
+          AR2_API_TOKEN: ${{ steps.pr_token.outputs.token }}
+          # gh, which checks attestations, reads GH_TOKEN before GITHUB_TOKEN.
+          GH_TOKEN: ${{ steps.pr_token.outputs.token }}
           AR2_PR_TOKEN: ${{ steps.pr_token.outputs.token }}
           PACKAGES: ${{ inputs.packages }}
           LIMIT: ${{ inputs.limit }}
