@@ -1,0 +1,146 @@
+{
+  "published_at": "2026-07-10T13:24:33Z",
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "max-sixty",
+      "repo_name": "worktrunk",
+      "repo_id": 1078528927,
+      "asset": "worktrunk-x86_64-apple-darwin.tar.xz",
+      "format": "tar.xz",
+      "checksum": "f1400f14169052a87c622c1258ee00b8085279c88cba0f6f5bfa895fb71d3662",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "wt",
+          "src": "worktrunk-x86_64-apple-darwin/wt"
+        },
+        {
+          "name": "git-wt",
+          "src": "worktrunk-x86_64-apple-darwin/git-wt"
+        }
+      ]
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "max-sixty",
+      "repo_name": "worktrunk",
+      "repo_id": 1078528927,
+      "asset": "worktrunk-aarch64-apple-darwin.tar.xz",
+      "format": "tar.xz",
+      "checksum": "f94431e961c77d988a07e740f80e1b34e4cd8b70853af13fe30562b68bc5f97f",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "wt",
+          "src": "worktrunk-aarch64-apple-darwin/wt"
+        },
+        {
+          "name": "git-wt",
+          "src": "worktrunk-aarch64-apple-darwin/git-wt"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "variants": {
+        "libc": "musl"
+      },
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "max-sixty",
+      "repo_name": "worktrunk",
+      "repo_id": 1078528927,
+      "asset": "worktrunk-x86_64-unknown-linux-musl.tar.xz",
+      "format": "tar.xz",
+      "checksum": "f580b7d12ca9bd750c17e5af05f509f9dfa3523661b982572684c6f541cf661f",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "wt",
+          "src": "worktrunk-x86_64-unknown-linux-musl/wt"
+        },
+        {
+          "name": "git-wt",
+          "src": "worktrunk-x86_64-unknown-linux-musl/git-wt"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "variants": {
+        "libc": "musl"
+      },
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "max-sixty",
+      "repo_name": "worktrunk",
+      "repo_id": 1078528927,
+      "asset": "worktrunk-aarch64-unknown-linux-musl.tar.xz",
+      "format": "tar.xz",
+      "checksum": "5bf0590928a3db4751d1508007ba9f164cd49e75930565f5868136e351368adc",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "wt",
+          "src": "worktrunk-aarch64-unknown-linux-musl/wt"
+        },
+        {
+          "name": "git-wt",
+          "src": "worktrunk-aarch64-unknown-linux-musl/git-wt"
+        }
+      ]
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "max-sixty",
+      "repo_name": "worktrunk",
+      "repo_id": 1078528927,
+      "asset": "worktrunk-x86_64-pc-windows-msvc.zip",
+      "format": "zip",
+      "checksum": "4a3af596f0c2c6c7e3142efd979ed7921441f163ae17c2f8f41e0d96051652f4",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "wt",
+          "src": "wt.exe"
+        },
+        {
+          "name": "git-wt",
+          "src": "git-wt.exe"
+        }
+      ]
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "windows_arm_emulation": true,
+      "type": "github_release",
+      "repo_owner": "max-sixty",
+      "repo_name": "worktrunk",
+      "repo_id": 1078528927,
+      "asset": "worktrunk-x86_64-pc-windows-msvc.zip",
+      "format": "zip",
+      "checksum": "4a3af596f0c2c6c7e3142efd979ed7921441f163ae17c2f8f41e0d96051652f4",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "wt",
+          "src": "wt.exe"
+        },
+        {
+          "name": "git-wt",
+          "src": "git-wt.exe"
+        }
+      ]
+    }
+  ]
+}
