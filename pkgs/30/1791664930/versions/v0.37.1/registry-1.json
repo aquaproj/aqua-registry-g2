@@ -1,0 +1,147 @@
+{
+  "published_at": "2026-09-11T15:35:46Z",
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "docker",
+      "repo_name": "buildx",
+      "repo_id": 177210627,
+      "asset": "buildx-v0.37.1.darwin-amd64",
+      "format": "raw",
+      "checksum": "7003a7bae20e7741283db1e23dafdcb957776a8be85de3f459630b1dd4c19db0",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "docker-cli-plugin-docker-buildx",
+          "src": "buildx-v0.37.1.darwin-amd64"
+        }
+      ],
+      "cosign": {
+        "enabled": false
+      }
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "docker",
+      "repo_name": "buildx",
+      "repo_id": 177210627,
+      "asset": "buildx-v0.37.1.darwin-arm64",
+      "format": "raw",
+      "checksum": "c3cbbc820d578b0aa8158dd62ef1af25a0c8a75ef53331dbe4e219471e1dbe8c",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "docker-cli-plugin-docker-buildx",
+          "src": "buildx-v0.37.1.darwin-arm64"
+        }
+      ],
+      "cosign": {
+        "enabled": false
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "docker",
+      "repo_name": "buildx",
+      "repo_id": 177210627,
+      "asset": "buildx-v0.37.1.linux-amd64",
+      "format": "raw",
+      "checksum": "9447199cdb435f25880548343c128a4b6650e8891ee598905d8d29d39a8e359b",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "docker-cli-plugin-docker-buildx",
+          "src": "buildx-v0.37.1.linux-amd64"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "buildx-v0.37.1.linux-amd64.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/docker/github-builder/.github/workflows/bake.yml@58cb9f5b71b1836d6f690c1e95effdeb9b98cb8a",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "certificate_github_workflow_repository": "docker/buildx",
+        "certificate_github_workflow_ref": "refs/tags/v0.37.1"
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "docker",
+      "repo_name": "buildx",
+      "repo_id": 177210627,
+      "asset": "buildx-v0.37.1.linux-arm64",
+      "format": "raw",
+      "checksum": "e5cc9fe3bbff5cbc91230981f7860e06076110730a2db997082652199042a1f2",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "docker-cli-plugin-docker-buildx",
+          "src": "buildx-v0.37.1.linux-arm64"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "buildx-v0.37.1.linux-arm64.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/docker/github-builder/.github/workflows/bake.yml@58cb9f5b71b1836d6f690c1e95effdeb9b98cb8a",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "certificate_github_workflow_repository": "docker/buildx",
+        "certificate_github_workflow_ref": "refs/tags/v0.37.1"
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "docker",
+      "repo_name": "buildx",
+      "repo_id": 177210627,
+      "asset": "buildx-v0.37.1.windows-amd64.exe",
+      "format": "raw",
+      "checksum": "3904abb2802f9bd83a2bf483b35bba81c57a4e0baff981e6886564c461f908b3",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "docker-cli-plugin-docker-buildx",
+          "src": "buildx-v0.37.1.windows-amd64.exe"
+        }
+      ],
+      "cosign": {
+        "enabled": false
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "docker",
+      "repo_name": "buildx",
+      "repo_id": 177210627,
+      "asset": "buildx-v0.37.1.windows-arm64.exe",
+      "format": "raw",
+      "checksum": "bdf356a5f2c8f3efd8a357b1f044860216e15e654a9a7105ca4e5dd5b5697ee4",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "docker-cli-plugin-docker-buildx",
+          "src": "buildx-v0.37.1.windows-arm64.exe"
+        }
+      ],
+      "cosign": {
+        "enabled": false
+      }
+    }
+  ]
+}
