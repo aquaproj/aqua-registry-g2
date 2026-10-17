@@ -1,0 +1,46 @@
+{
+  "published_at": "2018-02-18T16:33:31Z",
+  "assets": [
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "variants": {
+        "libc": "musl"
+      },
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "krallin",
+      "repo_name": "tini",
+      "repo_id": 31432573,
+      "asset": "tini-static-muslc-amd64",
+      "format": "raw",
+      "checksum": "1b61290218a05c2d17ff1e9bd953d1038e28420cd2838be66bc511bd0ada7d5d",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "tini",
+          "src": "tini-static-muslc-amd64"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "krallin",
+      "repo_name": "tini",
+      "repo_id": 31432573,
+      "asset": "tini-static-arm64",
+      "format": "raw",
+      "checksum": "5bb00dbd95c4b89be5190c51a0435e03ac428edcb6d76f2c7b1e275e551cae41",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "tini",
+          "src": "tini-static-arm64"
+        }
+      ]
+    }
+  ]
+}
