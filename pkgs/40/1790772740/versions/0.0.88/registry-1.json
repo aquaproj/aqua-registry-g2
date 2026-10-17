@@ -1,0 +1,213 @@
+{
+  "published_at": "2026-10-15T09:42:06Z",
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "astral-sh",
+      "repo_name": "ty",
+      "repo_id": 976731654,
+      "asset": "ty-x86_64-apple-darwin.tar.gz",
+      "format": "tar.gz",
+      "checksum": "150acd6291793e95e031e5b466ba642c18006eb77df1de4e4f3407ce8454f3c3",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "ty",
+          "src": "ty-x86_64-apple-darwin/ty"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "astral-sh/ty/.github/workflows/release.yml",
+        "source_ref": "refs/heads/main",
+        "source_digest": "64e7f186053730a96014bda2353448ac376bb126",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "astral-sh",
+      "repo_name": "ty",
+      "repo_id": 976731654,
+      "asset": "ty-aarch64-apple-darwin.tar.gz",
+      "format": "tar.gz",
+      "checksum": "6d1c7dc1385f7e42c355e6bc32d5e8bf68f54efef3f64dfb593105be1fcb1e06",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "ty",
+          "src": "ty-aarch64-apple-darwin/ty"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "astral-sh/ty/.github/workflows/release.yml",
+        "source_ref": "refs/heads/main",
+        "source_digest": "64e7f186053730a96014bda2353448ac376bb126",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "variants": {
+        "libc": "glibc"
+      },
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "astral-sh",
+      "repo_name": "ty",
+      "repo_id": 976731654,
+      "asset": "ty-x86_64-unknown-linux-gnu.tar.gz",
+      "format": "tar.gz",
+      "checksum": "acbfa2b23e93d75eb47a2b764c2ad80621d9b6385f1aa5213cef05d734c3ad65",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "ty",
+          "src": "ty-x86_64-unknown-linux-gnu/ty"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "astral-sh/ty/.github/workflows/release.yml",
+        "source_ref": "refs/heads/main",
+        "source_digest": "64e7f186053730a96014bda2353448ac376bb126",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "variants": {
+        "libc": "musl"
+      },
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "astral-sh",
+      "repo_name": "ty",
+      "repo_id": 976731654,
+      "asset": "ty-x86_64-unknown-linux-musl.tar.gz",
+      "format": "tar.gz",
+      "checksum": "f1199aa42febec3e58c0dcfa23974fa030f1ec0a79255ba04f7e250eac5abe29",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "ty",
+          "src": "ty-x86_64-unknown-linux-musl/ty"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "astral-sh/ty/.github/workflows/release.yml",
+        "source_ref": "refs/heads/main",
+        "source_digest": "64e7f186053730a96014bda2353448ac376bb126",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "variants": {
+        "libc": "glibc"
+      },
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "astral-sh",
+      "repo_name": "ty",
+      "repo_id": 976731654,
+      "asset": "ty-aarch64-unknown-linux-gnu.tar.gz",
+      "format": "tar.gz",
+      "checksum": "22de1540df66b99796686a435ff4370785388649d8d5a389e30e05a2c023531d",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "ty",
+          "src": "ty-aarch64-unknown-linux-gnu/ty"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "astral-sh/ty/.github/workflows/release.yml",
+        "source_ref": "refs/heads/main",
+        "source_digest": "64e7f186053730a96014bda2353448ac376bb126",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "variants": {
+        "libc": "musl"
+      },
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "astral-sh",
+      "repo_name": "ty",
+      "repo_id": 976731654,
+      "asset": "ty-aarch64-unknown-linux-musl.tar.gz",
+      "format": "tar.gz",
+      "checksum": "87e91fc3ddd4968d04d5f036613c582fc8cd3444b0c03a19f7b69ccd42ab5642",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "ty",
+          "src": "ty-aarch64-unknown-linux-musl/ty"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "astral-sh/ty/.github/workflows/release.yml",
+        "source_ref": "refs/heads/main",
+        "source_digest": "64e7f186053730a96014bda2353448ac376bb126",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "astral-sh",
+      "repo_name": "ty",
+      "repo_id": 976731654,
+      "asset": "ty-x86_64-pc-windows-msvc.zip",
+      "format": "zip",
+      "checksum": "541c5d03f1b610cdb898300ac9ff2b12db4092e52da3e33782ae8947fa3c8865",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "ty",
+          "src": "ty.exe"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "astral-sh/ty/.github/workflows/release.yml",
+        "source_ref": "refs/heads/main",
+        "source_digest": "64e7f186053730a96014bda2353448ac376bb126",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "astral-sh",
+      "repo_name": "ty",
+      "repo_id": 976731654,
+      "asset": "ty-aarch64-pc-windows-msvc.zip",
+      "format": "zip",
+      "checksum": "c72f8cd4db26afbaca316a5da7d748698911d378f01d8417aebb2214917d4fa4",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "ty",
+          "src": "ty.exe"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "astral-sh/ty/.github/workflows/release.yml",
+        "source_ref": "refs/heads/main",
+        "source_digest": "64e7f186053730a96014bda2353448ac376bb126",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    }
+  ]
+}
