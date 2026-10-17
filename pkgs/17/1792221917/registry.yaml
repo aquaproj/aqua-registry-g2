@@ -1,0 +1,19 @@
+name: danielfoehrKn/kubeswitch/switch-sh
+type: github_release
+repo_owner: danielfoehrKn
+repo_name: kubeswitch
+repo_id: 230920758
+description: The kubectx for operators
+files:
+  - name: kubeswitch.sh
+supported_envs:
+  - linux
+  - darwin
+all_assets_filter: Asset matches "^switch[.]sh([.].+)?$" or Asset endsWith ".intoto.jsonl"
+asset_rules:
+  - envs:
+      - linux/amd64
+      - linux/arm64
+      - darwin/amd64
+      - darwin/arm64
+    filter: Asset matches "^switch[.]sh([.].+)?$"
