@@ -1,0 +1,55 @@
+{
+  "published_at": "2026-10-16T15:25:36Z",
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "lxc",
+      "repo_name": "incus",
+      "repo_id": 669486760,
+      "asset": "incus.macos.pkg",
+      "format": "pkg",
+      "checksum": "9e1c67eb7d13ccb0609d1b0233d5d37479d803a24577ae749f8ab60229e0cf96",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "incus",
+          "src": "incus"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "lxc/incus/.github/workflows/release.yml",
+        "source_ref": "refs/tags/v7.0.2",
+        "source_digest": "01f81e5e607bbb5818410318e4b3496ad1820824",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "lxc",
+      "repo_name": "incus",
+      "repo_id": 669486760,
+      "asset": "incus.macos.pkg",
+      "format": "pkg",
+      "checksum": "9e1c67eb7d13ccb0609d1b0233d5d37479d803a24577ae749f8ab60229e0cf96",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "incus",
+          "src": "incus"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "lxc/incus/.github/workflows/release.yml",
+        "source_ref": "refs/tags/v7.0.2",
+        "source_digest": "01f81e5e607bbb5818410318e4b3496ad1820824",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    }
+  ]
+}
