@@ -1,0 +1,18 @@
+name: eficode/wait-for
+type: github_release
+repo_owner: eficode
+repo_name: wait-for
+repo_id: 90058566
+description: ./wait-for is a script to wait for another service to become available
+version_overrides:
+  - version_constraint: "true"
+    supported_envs:
+      - linux
+      - darwin
+asset_rules:
+  - envs:
+      - linux/amd64
+      - linux/arm64
+      - darwin/amd64
+      - darwin/arm64
+    filter: Asset matches "^wait-for([.].+)?$"
