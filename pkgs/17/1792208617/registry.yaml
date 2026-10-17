@@ -1,0 +1,30 @@
+name: Canop/dysk
+type: github_release
+repo_owner: Canop
+repo_name: dysk
+repo_id: 302749270
+description: A linux utility to get information on filesystems, like df but better
+version_overrides:
+  - version_constraint: semver("> 2.10.0")
+    files:
+      - name: dysk
+        src: build/{{.Arch}}-{{.OS}}/dysk
+    supported_envs:
+      - linux
+  - version_constraint: semver("<= 2.10.0")
+    files:
+      - name: dysk
+        src: build/{{.Arch}}-{{.OS}}/dysk
+    supported_envs:
+      - linux
+  - version_constraint: "true"
+    files:
+      - name: dysk
+        src: build/{{.Arch}}-{{.OS}}/dysk
+    supported_envs:
+      - linux
+asset_rules:
+  - envs:
+      - linux/amd64
+      - linux/arm64
+    filter: Asset matches "^dysk_.+[.].+([.].+)?$"
