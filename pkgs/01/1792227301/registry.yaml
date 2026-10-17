@@ -1,0 +1,21 @@
+name: estesp/manifest-tool
+type: github_release
+repo_owner: estesp
+repo_name: manifest-tool
+repo_id: 54153294
+description: Command line tool to create and query container image manifest list/indexes
+files:
+  - name: manifest-tool
+    src: manifest-tool-{{.OS}}-{{.Arch}}
+supported_envs:
+  - darwin
+  - linux
+  - windows/amd64
+asset_rules:
+  - envs:
+      - linux/amd64
+      - linux/arm64
+      - darwin/amd64
+      - darwin/arm64
+      - windows/amd64
+    filter: Asset matches "^binaries-manifest-tool-.+[.].+([.].+)?$"
