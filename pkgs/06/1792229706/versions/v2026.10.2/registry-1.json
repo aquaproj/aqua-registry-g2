@@ -1,0 +1,103 @@
+{
+  "published_at": "2026-10-10T13:23:50Z",
+  "assets": [
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "variants": {
+        "libc": "glibc"
+      },
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "takumin",
+      "repo_name": "passt-bin",
+      "repo_id": 1413210378,
+      "asset": "passt-x86_64-linux-gnu.tar.gz",
+      "format": "tar.gz",
+      "checksum": "6b1fb65fc9958672187f525204196c16e1b74dfba02fbebb6bab40e633489042",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "passt",
+          "src": "bin/passt"
+        },
+        {
+          "name": "pasta",
+          "src": "bin/pasta"
+        },
+        {
+          "name": "passt-repair",
+          "src": "bin/passt-repair"
+        },
+        {
+          "name": "pesto",
+          "src": "bin/pesto"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "passt-x86_64-linux-gnu.tar.gz.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/takumin/passt-bin/.github/workflows/wc-sign.yml@refs/heads/main",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      },
+      "github_artifact_attestations": {
+        "signer_workflow": "takumin/passt-bin/.github/workflows/wc-sign.yml",
+        "source_ref": "refs/heads/main",
+        "source_digest": "36c2b7f36f5364b6adfc5171f857e4840365becd",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "variants": {
+        "libc": "glibc"
+      },
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "takumin",
+      "repo_name": "passt-bin",
+      "repo_id": 1413210378,
+      "asset": "passt-aarch64-linux-gnu.tar.gz",
+      "format": "tar.gz",
+      "checksum": "bbf023c2f2a19e68589fd590dcc4de678751747e0879f2cce4d54b14baec75d1",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "passt",
+          "src": "bin/passt"
+        },
+        {
+          "name": "pasta",
+          "src": "bin/pasta"
+        },
+        {
+          "name": "passt-repair",
+          "src": "bin/passt-repair"
+        },
+        {
+          "name": "pesto",
+          "src": "bin/pesto"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "passt-aarch64-linux-gnu.tar.gz.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/takumin/passt-bin/.github/workflows/wc-sign.yml@refs/heads/main",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      },
+      "github_artifact_attestations": {
+        "signer_workflow": "takumin/passt-bin/.github/workflows/wc-sign.yml",
+        "source_ref": "refs/heads/main",
+        "source_digest": "36c2b7f36f5364b6adfc5171f857e4840365becd",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    }
+  ]
+}
