@@ -1,0 +1,53 @@
+name: rootless-containers/rootlesskit
+type: github_release
+repo_owner: rootless-containers
+repo_name: rootlesskit
+repo_id: 135564955
+description: Linux-native "fake root" for implementing rootless containers
+files:
+  - name: rootlessctl
+  - name: rootlesskit
+  - name: rootlesskit-docker-proxy
+github_artifact_attestations:
+  signer_workflow: rootless-containers/rootlesskit/.github/workflows/release.yaml
+version_overrides:
+  - version_constraint: Version == "v2.3.0"
+    no_asset: true
+  - version_constraint: semver("> 2.2.0")
+    files:
+      - name: rootlessctl
+      - name: rootlesskit
+      - name: rootlesskit-docker-proxy
+    github_artifact_attestations:
+      signer_workflow: rootless-containers/rootlesskit/.github/workflows/release.yaml
+    supported_envs:
+      - linux
+  - version_constraint: semver("> 0.9.5")
+    files:
+      - name: rootlessctl
+      - name: rootlesskit
+      - name: rootlesskit-docker-proxy
+    supported_envs:
+      - linux
+  - version_constraint: semver("> 0.8.0")
+    files:
+      - name: rootlessctl
+      - name: rootlesskit
+    supported_envs:
+      - linux/amd64
+  - version_constraint: semver("<= 0.8.0")
+    no_asset: true
+  - version_constraint: "true"
+    files:
+      - name: rootlessctl
+      - name: rootlesskit
+      - name: rootlesskit-docker-proxy
+    github_artifact_attestations:
+      signer_workflow: rootless-containers/rootlesskit/.github/workflows/release.yaml
+    supported_envs:
+      - linux
+asset_rules:
+  - envs:
+      - linux/amd64
+      - linux/arm64
+    filter: Asset matches "^rootlesskit-.+[.].+([.].+)?$"
