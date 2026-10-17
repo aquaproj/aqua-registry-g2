@@ -1,0 +1,151 @@
+{
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "http",
+      "repo_owner": "zigtools",
+      "repo_name": "zls",
+      "repo_id": 258636766,
+      "asset": "zls-macos-x86_64-0.13.0.tar.xz",
+      "url": "https://builds.zigtools.org/zls-macos-x86_64-0.13.0.tar.xz",
+      "format": "tar.xz",
+      "checksum": "4b63854d6b76810abd2563706e7d768efc7111e44dd8b371d49198e627697a13",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "zls",
+          "src": "zls"
+        }
+      ],
+      "minisign": {
+        "type": "http",
+        "url": "https://builds.zigtools.org/zls-macos-x86_64-0.13.0.tar.xz.minisig",
+        "public_key": "RWR+9B91GBZ0zOjh6Lr17+zKf5BoSuFvrx2xSeDE57uIYvnKBGmMjOex"
+      }
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "http",
+      "repo_owner": "zigtools",
+      "repo_name": "zls",
+      "repo_id": 258636766,
+      "asset": "zls-macos-aarch64-0.13.0.tar.xz",
+      "url": "https://builds.zigtools.org/zls-macos-aarch64-0.13.0.tar.xz",
+      "format": "tar.xz",
+      "checksum": "9848514524f5e5d33997ac280b7d92388407209d4b8d4be3866dc3cf30ca6ca8",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "zls",
+          "src": "zls"
+        }
+      ],
+      "minisign": {
+        "type": "http",
+        "url": "https://builds.zigtools.org/zls-macos-aarch64-0.13.0.tar.xz.minisig",
+        "public_key": "RWR+9B91GBZ0zOjh6Lr17+zKf5BoSuFvrx2xSeDE57uIYvnKBGmMjOex"
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "static",
+      "type": "http",
+      "repo_owner": "zigtools",
+      "repo_name": "zls",
+      "repo_id": 258636766,
+      "asset": "zls-linux-x86_64-0.13.0.tar.xz",
+      "url": "https://builds.zigtools.org/zls-linux-x86_64-0.13.0.tar.xz",
+      "format": "tar.xz",
+      "checksum": "ec4c1b45caf88e2bcb9ebb16c670603cc596e4f621b96184dfbe837b39cd8410",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "zls",
+          "src": "zls"
+        }
+      ],
+      "minisign": {
+        "type": "http",
+        "url": "https://builds.zigtools.org/zls-linux-x86_64-0.13.0.tar.xz.minisig",
+        "public_key": "RWR+9B91GBZ0zOjh6Lr17+zKf5BoSuFvrx2xSeDE57uIYvnKBGmMjOex"
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "linked_libc": "static",
+      "type": "http",
+      "repo_owner": "zigtools",
+      "repo_name": "zls",
+      "repo_id": 258636766,
+      "asset": "zls-linux-aarch64-0.13.0.tar.xz",
+      "url": "https://builds.zigtools.org/zls-linux-aarch64-0.13.0.tar.xz",
+      "format": "tar.xz",
+      "checksum": "8e258711168c2e3e7e81d6074663cfe291309b779928aaa4c66aed1affeba1aa",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "zls",
+          "src": "zls"
+        }
+      ],
+      "minisign": {
+        "type": "http",
+        "url": "https://builds.zigtools.org/zls-linux-aarch64-0.13.0.tar.xz.minisig",
+        "public_key": "RWR+9B91GBZ0zOjh6Lr17+zKf5BoSuFvrx2xSeDE57uIYvnKBGmMjOex"
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "http",
+      "repo_owner": "zigtools",
+      "repo_name": "zls",
+      "repo_id": 258636766,
+      "asset": "zls-windows-x86_64-0.13.0.zip",
+      "url": "https://builds.zigtools.org/zls-windows-x86_64-0.13.0.zip",
+      "format": "zip",
+      "checksum": "d87ed0834df3c30feae976843f0c6640acd31af1f31c0917907f7bfebae5bd14",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "zls",
+          "src": "zls.exe"
+        }
+      ],
+      "minisign": {
+        "type": "http",
+        "url": "https://builds.zigtools.org/zls-windows-x86_64-0.13.0.zip.minisig",
+        "public_key": "RWR+9B91GBZ0zOjh6Lr17+zKf5BoSuFvrx2xSeDE57uIYvnKBGmMjOex"
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "windows_arm_emulation": true,
+      "type": "http",
+      "repo_owner": "zigtools",
+      "repo_name": "zls",
+      "repo_id": 258636766,
+      "asset": "zls-windows-x86_64-0.13.0.zip",
+      "url": "https://builds.zigtools.org/zls-windows-x86_64-0.13.0.zip",
+      "format": "zip",
+      "checksum": "d87ed0834df3c30feae976843f0c6640acd31af1f31c0917907f7bfebae5bd14",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "zls",
+          "src": "zls.exe"
+        }
+      ],
+      "minisign": {
+        "type": "http",
+        "url": "https://builds.zigtools.org/zls-windows-x86_64-0.13.0.zip.minisig",
+        "public_key": "RWR+9B91GBZ0zOjh6Lr17+zKf5BoSuFvrx2xSeDE57uIYvnKBGmMjOex"
+      }
+    }
+  ]
+}
