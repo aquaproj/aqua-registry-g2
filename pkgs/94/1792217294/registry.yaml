@@ -1,0 +1,17 @@
+name: liquidmetal-dev/flintlock/flintlock-metrics
+type: github_release
+repo_owner: liquidmetal-dev
+repo_name: flintlock
+repo_id: 381020138
+description: Lock, Stock, and Two Smoking MicroVMs. Create and manage the lifecycle of MicroVMs backed by containerd
+version_filter: not (Version matches "-alpha")
+version_overrides:
+  - version_constraint: "true"
+    supported_envs:
+      - linux
+all_assets_filter: not (Asset matches "^flintlockd")
+asset_rules:
+  - envs:
+      - linux/amd64
+      - linux/arm64
+    filter: Asset matches "^flintlock-metrics_.+([.].+)?$"
