@@ -1,0 +1,37 @@
+name: eth-p/bat-extras
+type: github_release
+repo_owner: eth-p
+repo_name: bat-extras
+repo_id: 192805440
+description: Bash scripts that integrate bat with various command line tools
+version_filter: Version matches "^v\\d{4}\\.\\d{2}\\.\\d{2}$"
+files:
+  - name: batdiff
+    src: bin/batdiff
+  - name: batgrep
+    src: bin/batgrep
+  - name: batman
+    src: bin/batman
+  - name: batpipe
+    src: bin/batpipe
+  - name: batwatch
+    src: bin/batwatch
+  - name: prettybat
+    src: bin/prettybat
+  - name: bat-modules
+    src: bin/bat-modules
+supported_envs:
+  - linux
+  - darwin
+version_overrides:
+  - version_constraint: semver("> 2020.10.05")
+  - version_constraint: semver("<= 2020.10.05")
+    no_asset: true
+  - version_constraint: "true"
+asset_rules:
+  - envs:
+      - linux/amd64
+      - linux/arm64
+      - darwin/amd64
+      - darwin/arm64
+    filter: Asset matches "^bat-extras-.+[.]zip([.].+)?$" or Asset matches "^bat-extras-.+.+[.].+[.]zip([.].+)?$"
