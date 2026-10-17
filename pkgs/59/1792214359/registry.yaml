@@ -1,0 +1,18 @@
+name: joehillen/sysz
+type: github_release
+repo_owner: joehillen
+repo_name: sysz
+repo_id: 343520006
+description: An fzf  terminal UI for systemctl
+version_overrides:
+  - version_constraint: "true"
+    supported_envs:
+      - linux
+      - darwin
+asset_rules:
+  - envs:
+      - linux/amd64
+      - linux/arm64
+      - darwin/amd64
+      - darwin/arm64
+    filter: Asset matches "^sysz([.].+)?$"
