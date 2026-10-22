@@ -74,7 +74,7 @@ jobs:
           private-key: ${{ secrets.AR2_PR_PRIVATE_KEY }}
       - uses: aquaproj/aqua-installer@82d0e83878a8657c4a6f2ff1755d3bfbfc67f329 # v4.1.0
         with:
-          aqua_version: v2.65.1
+          aqua_version: v2.65.2
           packages: ar2
           # The app's token rather than GITHUB_TOKEN for verifying ar2's attestation,
           # which asks GitHub's API. GITHUB_TOKEN's thousand requests an hour are the
