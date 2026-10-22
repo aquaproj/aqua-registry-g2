@@ -65,7 +65,7 @@ jobs:
           persist-credentials: false
       - uses: aquaproj/aqua-installer@611554c6f0137ba41c8dd15aca8bee82504ea461 # v4.1.1
         with:
-          aqua_version: v2.65.1
+          aqua_version: v2.65.2
           packages: ar2
       # The token that commits the catalogue and opens its pull request. A pull
       # request opened or updated with GITHUB_TOKEN gets its checks in an

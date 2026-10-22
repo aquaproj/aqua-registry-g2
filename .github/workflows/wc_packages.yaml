@@ -57,7 +57,7 @@ jobs:
       - if: steps.plan.outputs.packages != ''
         uses: aquaproj/aqua-installer@611554c6f0137ba41c8dd15aca8bee82504ea461 # v4.1.1
         with:
-          aqua_version: v2.65.1
+          aqua_version: v2.65.2
           packages: ar2
           # -a includes the global configuration. Without it the packages pinned there
           # are not linked and the command isn't found.
@@ -149,7 +149,7 @@ jobs:
           key: ar2-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles('aqua/aqua.yaml', 'aqua/aqua-checksums.json') }}
       - uses: aquaproj/aqua-installer@611554c6f0137ba41c8dd15aca8bee82504ea461 # v4.1.1
         with:
-          aqua_version: v2.65.1
+          aqua_version: v2.65.2
           packages: ar2
           aqua_opts: -l -a
       # The entries of this environment, on a machine of this environment, a package at a
@@ -205,7 +205,7 @@ jobs:
           key: ar2-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles('aqua/aqua.yaml', 'aqua/aqua-checksums.json') }}
       - uses: aquaproj/aqua-installer@611554c6f0137ba41c8dd15aca8bee82504ea461 # v4.1.1
         with:
-          aqua_version: v2.65.1
+          aqua_version: v2.65.2
           packages: ar2
           aqua_opts: -l -a
       # Every definition and registry.json in the pull request has to be exactly what
