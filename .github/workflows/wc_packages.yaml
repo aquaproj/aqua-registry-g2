@@ -55,7 +55,7 @@ jobs:
             ~/AppData/Local/aquaproj-aqua/pkgs/github_release/github.com/aquaproj/ar2
           key: ar2-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles('aqua/aqua.yaml', 'aqua/aqua-checksums.json') }}
       - if: steps.plan.outputs.packages != ''
-        uses: aquaproj/aqua-installer@82d0e83878a8657c4a6f2ff1755d3bfbfc67f329 # v4.1.0
+        uses: aquaproj/aqua-installer@611554c6f0137ba41c8dd15aca8bee82504ea461 # v4.1.1
         with:
           aqua_version: v2.65.1
           packages: ar2
@@ -147,7 +147,7 @@ jobs:
             ~/.local/share/aquaproj-aqua/pkgs/github_release/github.com/aquaproj/ar2
             ~/AppData/Local/aquaproj-aqua/pkgs/github_release/github.com/aquaproj/ar2
           key: ar2-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles('aqua/aqua.yaml', 'aqua/aqua-checksums.json') }}
-      - uses: aquaproj/aqua-installer@82d0e83878a8657c4a6f2ff1755d3bfbfc67f329 # v4.1.0
+      - uses: aquaproj/aqua-installer@611554c6f0137ba41c8dd15aca8bee82504ea461 # v4.1.1
         with:
           aqua_version: v2.65.1
           packages: ar2
@@ -203,7 +203,7 @@ jobs:
             ~/.local/share/aquaproj-aqua/pkgs/github_release/github.com/aquaproj/ar2
             ~/AppData/Local/aquaproj-aqua/pkgs/github_release/github.com/aquaproj/ar2
           key: ar2-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles('aqua/aqua.yaml', 'aqua/aqua-checksums.json') }}
-      - uses: aquaproj/aqua-installer@82d0e83878a8657c4a6f2ff1755d3bfbfc67f329 # v4.1.0
+      - uses: aquaproj/aqua-installer@611554c6f0137ba41c8dd15aca8bee82504ea461 # v4.1.1
         with:
           aqua_version: v2.65.1
           packages: ar2
