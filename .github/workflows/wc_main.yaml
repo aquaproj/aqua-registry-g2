@@ -36,7 +36,7 @@ jobs:
           key: ar2-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles('aqua/aqua.yaml', 'aqua/aqua-checksums.json') }}
       - uses: aquaproj/aqua-installer@82d0e83878a8657c4a6f2ff1755d3bfbfc67f329 # v4.1.0
         with:
-          aqua_version: v2.65.1
+          aqua_version: v2.65.2
           packages: ar2
           # -a includes the global configuration, which is where ar2 is pinned.
           aqua_opts: -l -a
@@ -60,7 +60,7 @@ jobs:
             aqua
       - uses: aquaproj/aqua-installer@82d0e83878a8657c4a6f2ff1755d3bfbfc67f329 # v4.1.0
         with:
-          aqua_version: v2.65.1
+          aqua_version: v2.65.2
       # Installing for real, not linking: it is the checksums that are being checked.
       # A pull request raising ar2's version without bringing aqua-checksums.json
       # along leaves the workflows unable to install anything, and this is what says
@@ -91,7 +91,7 @@ jobs:
             skills
       - uses: aquaproj/aqua-installer@82d0e83878a8657c4a6f2ff1755d3bfbfc67f329 # v4.1.0
         with:
-          aqua_version: v2.65.1
+          aqua_version: v2.65.2
           aqua_opts: -l -a
       - run: bash .github/scripts/validate-skills.sh
         env:
