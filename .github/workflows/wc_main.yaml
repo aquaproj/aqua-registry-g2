@@ -10,7 +10,7 @@ jobs:
       pull-requests: read
 
   index:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     timeout-minutes: 15
     permissions:
       contents: read
@@ -48,7 +48,7 @@ jobs:
           AQUA_GITHUB_TOKEN: ${{ github.token }}
 
   aqua:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     timeout-minutes: 15
     permissions:
       contents: read
@@ -73,7 +73,7 @@ jobs:
   # somebody asks for it. 'claude plugin validate' won't catch it: it validates a plugin,
   # and a tree of skill directories holds no manifest for it to find.
   skills:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     timeout-minutes: 10
     permissions:
       contents: read

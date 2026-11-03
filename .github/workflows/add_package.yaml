@@ -39,7 +39,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   add:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     # The same environment as a run: this opens a pull request, so it needs the same
     # key.
     environment: ar2

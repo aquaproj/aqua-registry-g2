@@ -11,7 +11,7 @@ jobs:
   # here: an entry for an environment nobody thought of would otherwise go unchecked,
   # which is the one thing a merge gate must not do.
   plan:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     timeout-minutes: 10
     outputs:
       count: ${{ steps.plan.outputs.count }}
@@ -90,8 +90,8 @@ jobs:
             os=${env%%/*}
             arch=${env##*/}
             case "$env" in
-              linux/amd64) runner=ubuntu-24.04 ;;
-              linux/arm64) runner=ubuntu-24.04-arm ;;
+              linux/amd64) runner=ubuntu-26.04 ;;
+              linux/arm64) runner=ubuntu-26.04-arm ;;
               darwin/amd64) runner=macos-15-intel ;;
               darwin/arm64) runner=macos-15 ;;
               windows/amd64) runner=windows-2025 ;;
@@ -181,7 +181,7 @@ jobs:
   # The pull request rewriting every published file. See ar2 rewrite --verify.
   rewrite:
     if: github.head_ref == 'ar2_rewrite'
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     timeout-minutes: 30
     env:
       AQUA_GLOBAL_CONFIG: ${{ github.workspace }}/aqua/aqua.yaml

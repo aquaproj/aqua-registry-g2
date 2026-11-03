@@ -31,7 +31,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   rename:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     # The same environment as a run, which holds the pull request key.
     environment: ar2
     timeout-minutes: 15
