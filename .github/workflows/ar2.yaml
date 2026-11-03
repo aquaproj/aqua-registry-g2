@@ -33,7 +33,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   run:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     # Both app keys live here rather than at the repository level, so a workflow on
     # any other ref can't read them. The environment only lets main deploy to it.
     # One environment because a job may name only one, and this job mints both

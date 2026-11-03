@@ -18,7 +18,7 @@ on:
 permissions: {}
 jobs:
   rewrite:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     # The environment holding the pull request app's key, which only main may deploy to.
     environment: ar2
     timeout-minutes: 30

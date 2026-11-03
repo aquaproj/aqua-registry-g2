@@ -40,7 +40,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   update-versions:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     # The environment of the catalogue's update, which holds the pull request key alone. This
     # is the same kind of pull request: made from what the default branch holds, and merged
     # by its checks.
