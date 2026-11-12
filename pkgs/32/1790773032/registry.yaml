@@ -12,15 +12,14 @@ files:
       src: '{{.AssetWithoutExt}}/wasm-pack'
 version_overrides:
     - version_constraint: semver("> 0.13.1")
-    # The Windows asset of v0.10.2 is a damaged tar archive: it breaks off inside
-    # wasm-pack.exe, so nothing can be installed from it.
-    - version_constraint: Version == "v0.10.2"
-      supported_envs:
-        - darwin
-        - linux
     - version_constraint: semver("> 0.10.1")
     - version_constraint: semver("> 0.4.2")
     - version_constraint: semver("> 0.2.0")
     - version_constraint: semver("<= 0.2.0")
       no_asset: true
     - version_constraint: "true"
+# The Windows asset of v0.10.2 is a damaged tar archive: it breaks off inside
+# wasm-pack.exe, so nothing can be installed from it.
+asset_filters:
+    - version_constraint: Version == "v0.10.2"
+      all_assets_filter: not (Asset contains "windows")
