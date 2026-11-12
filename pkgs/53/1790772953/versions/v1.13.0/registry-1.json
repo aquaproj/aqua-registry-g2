@@ -1,0 +1,211 @@
+{
+  "published_at": "2026-09-30T13:57:49Z",
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "opentofu",
+      "repo_name": "opentofu",
+      "repo_id": 679421146,
+      "asset": "tofu_1.13.0_darwin_amd64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "a50f8666d6c82aab5696d9453222f5d9ebea1f19e4d47bab5b0581c24935e978",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "tofu",
+          "src": "tofu"
+        }
+      ],
+      "cosign": {
+        "signature": {
+          "type": "github_release",
+          "repo_owner": "opentofu",
+          "repo_name": "opentofu",
+          "asset": "tofu_1.13.0_darwin_amd64.tar.gz.sig"
+        },
+        "certificate": {
+          "type": "github_release",
+          "repo_owner": "opentofu",
+          "repo_name": "opentofu",
+          "asset": "tofu_1.13.0_darwin_amd64.tar.gz.pem"
+        },
+        "certificate_identity_regexp": "^https://github\\.com/opentofu/opentofu/\\.github/workflows/release\\.yml@refs/heads/(main|v\\d+\\..+)$",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "opentofu",
+      "repo_name": "opentofu",
+      "repo_id": 679421146,
+      "asset": "tofu_1.13.0_darwin_arm64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "b30ee6ee0b40545673b2934f0f0cdbd785d02b58d8930aab0e1679eda76cd7e4",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "tofu",
+          "src": "tofu"
+        }
+      ],
+      "cosign": {
+        "signature": {
+          "type": "github_release",
+          "repo_owner": "opentofu",
+          "repo_name": "opentofu",
+          "asset": "tofu_1.13.0_darwin_arm64.tar.gz.sig"
+        },
+        "certificate": {
+          "type": "github_release",
+          "repo_owner": "opentofu",
+          "repo_name": "opentofu",
+          "asset": "tofu_1.13.0_darwin_arm64.tar.gz.pem"
+        },
+        "certificate_identity_regexp": "^https://github\\.com/opentofu/opentofu/\\.github/workflows/release\\.yml@refs/heads/(main|v\\d+\\..+)$",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "opentofu",
+      "repo_name": "opentofu",
+      "repo_id": 679421146,
+      "asset": "tofu_1.13.0_linux_amd64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "1f0cb37fc85dea4e7633a72aca2332b801f72650a32be911b8b9b32907f214fb",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "tofu",
+          "src": "tofu"
+        }
+      ],
+      "cosign": {
+        "signature": {
+          "type": "github_release",
+          "repo_owner": "opentofu",
+          "repo_name": "opentofu",
+          "asset": "tofu_1.13.0_linux_amd64.tar.gz.sig"
+        },
+        "certificate": {
+          "type": "github_release",
+          "repo_owner": "opentofu",
+          "repo_name": "opentofu",
+          "asset": "tofu_1.13.0_linux_amd64.tar.gz.pem"
+        },
+        "certificate_identity_regexp": "^https://github\\.com/opentofu/opentofu/\\.github/workflows/release\\.yml@refs/heads/(main|v\\d+\\..+)$",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "opentofu",
+      "repo_name": "opentofu",
+      "repo_id": 679421146,
+      "asset": "tofu_1.13.0_linux_arm64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "ea1c9a95e38d5d890b2eccbeec4d65481ad56bf6775dfbb15c4d9e34ff793dc6",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "tofu",
+          "src": "tofu"
+        }
+      ],
+      "cosign": {
+        "signature": {
+          "type": "github_release",
+          "repo_owner": "opentofu",
+          "repo_name": "opentofu",
+          "asset": "tofu_1.13.0_linux_arm64.tar.gz.sig"
+        },
+        "certificate": {
+          "type": "github_release",
+          "repo_owner": "opentofu",
+          "repo_name": "opentofu",
+          "asset": "tofu_1.13.0_linux_arm64.tar.gz.pem"
+        },
+        "certificate_identity_regexp": "^https://github\\.com/opentofu/opentofu/\\.github/workflows/release\\.yml@refs/heads/(main|v\\d+\\..+)$",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "opentofu",
+      "repo_name": "opentofu",
+      "repo_id": 679421146,
+      "asset": "tofu_1.13.0_windows_amd64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "6ee91581b304580fa408ec68ff108f7b11a73277979d2a6039944ed84c111d88",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "tofu",
+          "src": "tofu.exe"
+        }
+      ],
+      "cosign": {
+        "signature": {
+          "type": "github_release",
+          "repo_owner": "opentofu",
+          "repo_name": "opentofu",
+          "asset": "tofu_1.13.0_windows_amd64.tar.gz.sig"
+        },
+        "certificate": {
+          "type": "github_release",
+          "repo_owner": "opentofu",
+          "repo_name": "opentofu",
+          "asset": "tofu_1.13.0_windows_amd64.tar.gz.pem"
+        },
+        "certificate_identity_regexp": "^https://github\\.com/opentofu/opentofu/\\.github/workflows/release\\.yml@refs/heads/(main|v\\d+\\..+)$",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "opentofu",
+      "repo_name": "opentofu",
+      "repo_id": 679421146,
+      "asset": "tofu_1.13.0_windows_arm64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "1cc4fc9981e18bd2dcd1409a69d0b93a727eaa2a365ccaf6e5ce4e08d84b3b29",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "tofu",
+          "src": "tofu.exe"
+        }
+      ],
+      "cosign": {
+        "signature": {
+          "type": "github_release",
+          "repo_owner": "opentofu",
+          "repo_name": "opentofu",
+          "asset": "tofu_1.13.0_windows_arm64.tar.gz.sig"
+        },
+        "certificate": {
+          "type": "github_release",
+          "repo_owner": "opentofu",
+          "repo_name": "opentofu",
+          "asset": "tofu_1.13.0_windows_arm64.tar.gz.pem"
+        },
+        "certificate_identity_regexp": "^https://github\\.com/opentofu/opentofu/\\.github/workflows/release\\.yml@refs/heads/(main|v\\d+\\..+)$",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    }
+  ]
+}
