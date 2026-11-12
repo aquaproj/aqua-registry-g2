@@ -1,0 +1,394 @@
+{
+  "published_at": "2026-10-05T18:46:58Z",
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "foundry-rs",
+      "repo_name": "foundry",
+      "repo_id": 404320053,
+      "asset": "foundry_v1.8.5_darwin_amd64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "b919f69bb4231ad68beaaba9dc8f7d36d9d552cef1a76a8bf69c2bdfd974339a",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "anvil",
+          "src": "anvil"
+        },
+        {
+          "name": "cast",
+          "src": "cast"
+        },
+        {
+          "name": "chisel",
+          "src": "chisel"
+        },
+        {
+          "name": "forge",
+          "src": "forge"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "foundry_v1.8.5_darwin_amd64.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/foundry-rs/foundry/.github/workflows/release.yml@refs/tags/v1.8.5",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "certificate_github_workflow_repository": "foundry-rs/foundry",
+        "certificate_github_workflow_ref": "refs/tags/v1.8.5"
+      },
+      "github_artifact_attestations": {
+        "predicate_type": "https://spdx.dev/Document/v2.3",
+        "signer_workflow": "foundry-rs/foundry/.github/workflows/release.yml",
+        "source_ref": "refs/tags/v1.8.5",
+        "source_digest": "51a52c59cffd940f76eddd0b4bb1791aa4b5ac7f",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "foundry-rs",
+      "repo_name": "foundry",
+      "repo_id": 404320053,
+      "asset": "foundry_v1.8.5_darwin_arm64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "56049728e25e44a61c7f2e49438023b0890cb45850ffcb7c882f90cd998baf83",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "anvil",
+          "src": "anvil"
+        },
+        {
+          "name": "cast",
+          "src": "cast"
+        },
+        {
+          "name": "chisel",
+          "src": "chisel"
+        },
+        {
+          "name": "forge",
+          "src": "forge"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "foundry_v1.8.5_darwin_arm64.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/foundry-rs/foundry/.github/workflows/release.yml@refs/tags/v1.8.5",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "certificate_github_workflow_repository": "foundry-rs/foundry",
+        "certificate_github_workflow_ref": "refs/tags/v1.8.5"
+      },
+      "github_artifact_attestations": {
+        "predicate_type": "https://spdx.dev/Document/v2.3",
+        "signer_workflow": "foundry-rs/foundry/.github/workflows/release.yml",
+        "source_ref": "refs/tags/v1.8.5",
+        "source_digest": "51a52c59cffd940f76eddd0b4bb1791aa4b5ac7f",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "foundry-rs",
+      "repo_name": "foundry",
+      "repo_id": 404320053,
+      "asset": "foundry_v1.8.5_linux_amd64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "6c66ffcc55fa4249197721baa3098bc208014ea1d8aa04b2ed50ac6bccffb226",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "anvil",
+          "src": "anvil"
+        },
+        {
+          "name": "cast",
+          "src": "cast"
+        },
+        {
+          "name": "chisel",
+          "src": "chisel"
+        },
+        {
+          "name": "forge",
+          "src": "forge"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "foundry_v1.8.5_linux_amd64.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/foundry-rs/foundry/.github/workflows/release.yml@refs/tags/v1.8.5",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "certificate_github_workflow_repository": "foundry-rs/foundry",
+        "certificate_github_workflow_ref": "refs/tags/v1.8.5"
+      },
+      "github_artifact_attestations": {
+        "predicate_type": "https://spdx.dev/Document/v2.3",
+        "signer_workflow": "foundry-rs/foundry/.github/workflows/release.yml",
+        "source_ref": "refs/tags/v1.8.5",
+        "source_digest": "51a52c59cffd940f76eddd0b4bb1791aa4b5ac7f",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "variants": {
+        "libc": "musl"
+      },
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "foundry-rs",
+      "repo_name": "foundry",
+      "repo_id": 404320053,
+      "asset": "foundry_v1.8.5_alpine_amd64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "edc0c55cfb1d38411721bda7bd9f3c8b53eed7be98272be8b823359170286167",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "anvil",
+          "src": "anvil"
+        },
+        {
+          "name": "cast",
+          "src": "cast"
+        },
+        {
+          "name": "chisel",
+          "src": "chisel"
+        },
+        {
+          "name": "forge",
+          "src": "forge"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "foundry_v1.8.5_alpine_amd64.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/foundry-rs/foundry/.github/workflows/release.yml@refs/tags/v1.8.5",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "certificate_github_workflow_repository": "foundry-rs/foundry",
+        "certificate_github_workflow_ref": "refs/tags/v1.8.5"
+      },
+      "github_artifact_attestations": {
+        "predicate_type": "https://spdx.dev/Document/v2.3",
+        "signer_workflow": "foundry-rs/foundry/.github/workflows/release.yml",
+        "source_ref": "refs/tags/v1.8.5",
+        "source_digest": "51a52c59cffd940f76eddd0b4bb1791aa4b5ac7f",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "foundry-rs",
+      "repo_name": "foundry",
+      "repo_id": 404320053,
+      "asset": "foundry_v1.8.5_linux_arm64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "5bdce3dade8b6f0a65d4fccf6908426aee4905a988b08dce79d0a72fe7498310",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "anvil",
+          "src": "anvil"
+        },
+        {
+          "name": "cast",
+          "src": "cast"
+        },
+        {
+          "name": "chisel",
+          "src": "chisel"
+        },
+        {
+          "name": "forge",
+          "src": "forge"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "foundry_v1.8.5_linux_arm64.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/foundry-rs/foundry/.github/workflows/release.yml@refs/tags/v1.8.5",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "certificate_github_workflow_repository": "foundry-rs/foundry",
+        "certificate_github_workflow_ref": "refs/tags/v1.8.5"
+      },
+      "github_artifact_attestations": {
+        "predicate_type": "https://spdx.dev/Document/v2.3",
+        "signer_workflow": "foundry-rs/foundry/.github/workflows/release.yml",
+        "source_ref": "refs/tags/v1.8.5",
+        "source_digest": "51a52c59cffd940f76eddd0b4bb1791aa4b5ac7f",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "variants": {
+        "libc": "musl"
+      },
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "foundry-rs",
+      "repo_name": "foundry",
+      "repo_id": 404320053,
+      "asset": "foundry_v1.8.5_alpine_arm64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "60050ad50ba890217fb0de7d6f76ebb4b5c69ca0f0fafbef2da1422598dbfab1",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "anvil",
+          "src": "anvil"
+        },
+        {
+          "name": "cast",
+          "src": "cast"
+        },
+        {
+          "name": "chisel",
+          "src": "chisel"
+        },
+        {
+          "name": "forge",
+          "src": "forge"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "foundry_v1.8.5_alpine_arm64.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/foundry-rs/foundry/.github/workflows/release.yml@refs/tags/v1.8.5",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "certificate_github_workflow_repository": "foundry-rs/foundry",
+        "certificate_github_workflow_ref": "refs/tags/v1.8.5"
+      },
+      "github_artifact_attestations": {
+        "predicate_type": "https://spdx.dev/Document/v2.3",
+        "signer_workflow": "foundry-rs/foundry/.github/workflows/release.yml",
+        "source_ref": "refs/tags/v1.8.5",
+        "source_digest": "51a52c59cffd940f76eddd0b4bb1791aa4b5ac7f",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "foundry-rs",
+      "repo_name": "foundry",
+      "repo_id": 404320053,
+      "asset": "foundry_v1.8.5_win32_amd64.zip",
+      "format": "zip",
+      "checksum": "21f86b563d87404a68481f513bf3e419780ee536307b89c658215ae6f8f5aa45",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "anvil",
+          "src": "anvil.exe"
+        },
+        {
+          "name": "cast",
+          "src": "cast.exe"
+        },
+        {
+          "name": "chisel",
+          "src": "chisel.exe"
+        },
+        {
+          "name": "forge",
+          "src": "forge.exe"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "foundry_v1.8.5_win32_amd64.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/foundry-rs/foundry/.github/workflows/release.yml@refs/tags/v1.8.5",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "certificate_github_workflow_repository": "foundry-rs/foundry",
+        "certificate_github_workflow_ref": "refs/tags/v1.8.5"
+      },
+      "github_artifact_attestations": {
+        "predicate_type": "https://spdx.dev/Document/v2.3",
+        "signer_workflow": "foundry-rs/foundry/.github/workflows/release.yml",
+        "source_ref": "refs/tags/v1.8.5",
+        "source_digest": "51a52c59cffd940f76eddd0b4bb1791aa4b5ac7f",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "windows_arm_emulation": true,
+      "type": "github_release",
+      "repo_owner": "foundry-rs",
+      "repo_name": "foundry",
+      "repo_id": 404320053,
+      "asset": "foundry_v1.8.5_win32_amd64.zip",
+      "format": "zip",
+      "checksum": "21f86b563d87404a68481f513bf3e419780ee536307b89c658215ae6f8f5aa45",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "anvil",
+          "src": "anvil.exe"
+        },
+        {
+          "name": "cast",
+          "src": "cast.exe"
+        },
+        {
+          "name": "chisel",
+          "src": "chisel.exe"
+        },
+        {
+          "name": "forge",
+          "src": "forge.exe"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "foundry_v1.8.5_win32_amd64.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/foundry-rs/foundry/.github/workflows/release.yml@refs/tags/v1.8.5",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "certificate_github_workflow_repository": "foundry-rs/foundry",
+        "certificate_github_workflow_ref": "refs/tags/v1.8.5"
+      },
+      "github_artifact_attestations": {
+        "predicate_type": "https://spdx.dev/Document/v2.3",
+        "signer_workflow": "foundry-rs/foundry/.github/workflows/release.yml",
+        "source_ref": "refs/tags/v1.8.5",
+        "source_digest": "51a52c59cffd940f76eddd0b4bb1791aa4b5ac7f",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    }
+  ]
+}
