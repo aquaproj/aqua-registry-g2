@@ -84,6 +84,13 @@ jobs:
       - name: record when the run started
         id: started
         run: echo "at=$(date +%s)" >> "$GITHUB_OUTPUT"
+      # The app's budget, which 'ar2 run' reads and writes through, core and GraphQL alike.
+      # The difference between this and the line after the run is what one run costs.
+      - uses: $/.github/actions/measure-rate-limit
+        continue-on-error: true
+        with:
+          label: start
+          token: ${{ steps.pr_token.outputs.token }}
       - id: generate
         run: |
           # The packages are one field and each is its own argument, so they are split
@@ -111,6 +118,11 @@ jobs:
           PACKAGES: ${{ inputs.packages }}
           LIMIT: ${{ inputs.limit }}
           LOG_LEVEL: ${{ inputs.log_level }}
+      - uses: $/.github/actions/measure-rate-limit
+        if: always()
+        continue-on-error: true
+        with:
+          token: ${{ steps.pr_token.outputs.token }}
 
       # The cadence is this, rather than a schedule. A workflow asking for every ten
       # minutes is triggered every few hours: aqua-registry's own updater, set to

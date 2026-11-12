@@ -82,3 +82,7 @@ jobs:
           GITHUB_TOKEN: ${{ github.token }}
           AR2_PR_TOKEN: ${{ steps.pr_token.outputs.token }}
           PACKAGES: ${{ inputs.packages }}
+      # How much of GITHUB_TOKEN's budget the repository has used. See the action.
+      - uses: $/.github/actions/measure-rate-limit
+        if: always()
+        continue-on-error: true

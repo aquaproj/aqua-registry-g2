@@ -109,6 +109,10 @@ jobs:
         env:
           FILES: ${{ steps.plan.outputs.files }}
           AQUA_GITHUB_TOKEN: ${{ github.token }}
+      # How much of GITHUB_TOKEN's budget the repository has used. See the action.
+      - uses: $/.github/actions/measure-rate-limit
+        if: always()
+        continue-on-error: true
 
   test:
     needs: plan
@@ -177,6 +181,10 @@ jobs:
           # assets without a token runs into the anonymous rate limit.
           GITHUB_TOKEN: ${{ github.token }}
           AQUA_GITHUB_TOKEN: ${{ github.token }}
+      # How much of GITHUB_TOKEN's budget the repository has used. See the action.
+      - uses: $/.github/actions/measure-rate-limit
+        if: always()
+        continue-on-error: true
 
   # The pull request rewriting every published file. See ar2 rewrite --verify.
   rewrite:
@@ -222,3 +230,7 @@ jobs:
           HEAD_SHA: ${{ github.event.pull_request.head.sha }}
           GITHUB_TOKEN: ${{ github.token }}
           AQUA_GITHUB_TOKEN: ${{ github.token }}
+      # How much of GITHUB_TOKEN's budget the repository has used. See the action.
+      - uses: $/.github/actions/measure-rate-limit
+        if: always()
+        continue-on-error: true
