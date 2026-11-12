@@ -1,0 +1,286 @@
+{
+  "published_at": "2026-09-23T00:01:51Z",
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "wasmCloud",
+      "repo_name": "wasmCloud",
+      "repo_id": 304403692,
+      "asset": "wash-x86_64-apple-darwin",
+      "format": "raw",
+      "checksum": "c2d95031a23cca0eb7100ad88324133ca1e5fa23c6f4f9f8c3519abc571d861f",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "wash",
+          "src": "wash-x86_64-apple-darwin"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "wash.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/wasmCloud/wasmCloud/.github/workflows/release-tag.yml@refs/heads/main",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      },
+      "github_artifact_attestations": {
+        "signer_workflow": "wasmCloud/wasmCloud/.github/workflows/release-tag.yml",
+        "source_ref": "refs/heads/main",
+        "source_digest": "f9b37fc3ab52db32378f88b116a24a763b4484db",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "wasmCloud",
+      "repo_name": "wasmCloud",
+      "repo_id": 304403692,
+      "asset": "wash-aarch64-apple-darwin",
+      "format": "raw",
+      "checksum": "51711273cb68fdce57a45667b527ad41731f7bdf52794952826d881ae352be15",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "wash",
+          "src": "wash-aarch64-apple-darwin"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "wash.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/wasmCloud/wasmCloud/.github/workflows/release-tag.yml@refs/heads/main",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      },
+      "github_artifact_attestations": {
+        "signer_workflow": "wasmCloud/wasmCloud/.github/workflows/release-tag.yml",
+        "source_ref": "refs/heads/main",
+        "source_digest": "f9b37fc3ab52db32378f88b116a24a763b4484db",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "variants": {
+        "libc": "glibc"
+      },
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "wasmCloud",
+      "repo_name": "wasmCloud",
+      "repo_id": 304403692,
+      "asset": "wash-x86_64-unknown-linux-gnu",
+      "format": "raw",
+      "checksum": "64f8e61d352fa8102569bea7333e4d86e09bdfe718e800cef7a7ca2fedc5880a",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "wash",
+          "src": "wash-x86_64-unknown-linux-gnu"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "wash.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/wasmCloud/wasmCloud/.github/workflows/release-tag.yml@refs/heads/main",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      },
+      "github_artifact_attestations": {
+        "signer_workflow": "wasmCloud/wasmCloud/.github/workflows/release-tag.yml",
+        "source_ref": "refs/heads/main",
+        "source_digest": "f9b37fc3ab52db32378f88b116a24a763b4484db",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "variants": {
+        "libc": "musl"
+      },
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "wasmCloud",
+      "repo_name": "wasmCloud",
+      "repo_id": 304403692,
+      "asset": "wash-x86_64-unknown-linux-musl",
+      "format": "raw",
+      "checksum": "4eddd5ba59d4852624e472a04ec19759578314aa157105e225dd724adbad9961",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "wash",
+          "src": "wash-x86_64-unknown-linux-musl"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "wash.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/wasmCloud/wasmCloud/.github/workflows/release-tag.yml@refs/heads/main",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      },
+      "github_artifact_attestations": {
+        "signer_workflow": "wasmCloud/wasmCloud/.github/workflows/release-tag.yml",
+        "source_ref": "refs/heads/main",
+        "source_digest": "f9b37fc3ab52db32378f88b116a24a763b4484db",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "variants": {
+        "libc": "glibc"
+      },
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "wasmCloud",
+      "repo_name": "wasmCloud",
+      "repo_id": 304403692,
+      "asset": "wash-aarch64-unknown-linux-gnu",
+      "format": "raw",
+      "checksum": "5ae111af3ea6f6975373bc95ef83a18a10b2d349d18286fac2dbad167a7846ab",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "wash",
+          "src": "wash-aarch64-unknown-linux-gnu"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "wash.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/wasmCloud/wasmCloud/.github/workflows/release-tag.yml@refs/heads/main",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      },
+      "github_artifact_attestations": {
+        "signer_workflow": "wasmCloud/wasmCloud/.github/workflows/release-tag.yml",
+        "source_ref": "refs/heads/main",
+        "source_digest": "f9b37fc3ab52db32378f88b116a24a763b4484db",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "variants": {
+        "libc": "musl"
+      },
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "wasmCloud",
+      "repo_name": "wasmCloud",
+      "repo_id": 304403692,
+      "asset": "wash-aarch64-unknown-linux-musl",
+      "format": "raw",
+      "checksum": "2872763ee9da1dbdf9eba2100d2adaf996fde56a7ba9f8c1ab59d68390b3c1b1",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "wash",
+          "src": "wash-aarch64-unknown-linux-musl"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "wash.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/wasmCloud/wasmCloud/.github/workflows/release-tag.yml@refs/heads/main",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      },
+      "github_artifact_attestations": {
+        "signer_workflow": "wasmCloud/wasmCloud/.github/workflows/release-tag.yml",
+        "source_ref": "refs/heads/main",
+        "source_digest": "f9b37fc3ab52db32378f88b116a24a763b4484db",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "wasmCloud",
+      "repo_name": "wasmCloud",
+      "repo_id": 304403692,
+      "asset": "wash-x86_64-pc-windows-msvc.zip",
+      "format": "zip",
+      "checksum": "d283a310072103170e36983ba84668f277cd7c350b0fbd0072892e046985a774",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "wash",
+          "src": "wash.exe"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "wash.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/wasmCloud/wasmCloud/.github/workflows/release-tag.yml@refs/heads/main",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      },
+      "github_artifact_attestations": {
+        "signer_workflow": "wasmCloud/wasmCloud/.github/workflows/release-tag.yml",
+        "source_ref": "refs/heads/main",
+        "source_digest": "f9b37fc3ab52db32378f88b116a24a763b4484db",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "windows_arm_emulation": true,
+      "type": "github_release",
+      "repo_owner": "wasmCloud",
+      "repo_name": "wasmCloud",
+      "repo_id": 304403692,
+      "asset": "wash-x86_64-pc-windows-msvc.zip",
+      "format": "zip",
+      "checksum": "d283a310072103170e36983ba84668f277cd7c350b0fbd0072892e046985a774",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "wash",
+          "src": "wash.exe"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "wash.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/wasmCloud/wasmCloud/.github/workflows/release-tag.yml@refs/heads/main",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      },
+      "github_artifact_attestations": {
+        "signer_workflow": "wasmCloud/wasmCloud/.github/workflows/release-tag.yml",
+        "source_ref": "refs/heads/main",
+        "source_digest": "f9b37fc3ab52db32378f88b116a24a763b4484db",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    }
+  ]
+}
