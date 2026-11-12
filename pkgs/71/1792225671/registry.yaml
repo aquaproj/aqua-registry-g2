@@ -1,0 +1,33 @@
+name: rootless-containers/slirp4netns
+type: github_release
+repo_owner: rootless-containers
+repo_name: slirp4netns
+repo_id: 140418870
+description: User-mode networking for unprivileged network namespaces
+github_artifact_attestations:
+  signer_workflow: rootless-containers/slirp4netns/.github/workflows/release.yaml
+version_overrides:
+  - version_constraint: semver("> 1.3.2")
+    replacements:
+      arm: armv7l
+    github_artifact_attestations:
+      signer_workflow: rootless-containers/slirp4netns/.github/workflows/release.yaml
+    supported_envs:
+      - linux
+  - version_constraint: semver("<= 1.3.2")
+    replacements:
+      arm: armv7l
+    supported_envs:
+      - linux
+  - version_constraint: "true"
+    replacements:
+      arm: armv7l
+    github_artifact_attestations:
+      signer_workflow: rootless-containers/slirp4netns/.github/workflows/release.yaml
+    supported_envs:
+      - linux
+asset_rules:
+  - envs:
+      - linux/amd64
+      - linux/arm64
+    filter: Asset matches "^slirp4netns-.+([.].+)?$"
