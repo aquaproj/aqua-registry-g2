@@ -11,7 +11,7 @@ jobs:
   # here: an entry for an environment nobody thought of would otherwise go unchecked,
   # which is the one thing a merge gate must not do.
   plan:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     timeout-minutes: 10
     outputs:
       count: ${{ steps.plan.outputs.count }}
@@ -43,10 +43,21 @@ jobs:
         run: echo "$PACKAGES" | xargs git sparse-checkout add
         env:
           PACKAGES: ${{ steps.plan.outputs.packages }}
+      # ar2's own install, kept between runs: with it restored aqua neither downloads ar2 nor
+      # verifies its attestation, which asks GitHub's API. Every pull request runs these jobs,
+      # and verifying ar2 for each used up GITHUB_TOKEN's thousand requests an hour. Only ar2's
+      # directory, so that a package a job tests is never restored rather than installed.
       - if: steps.plan.outputs.packages != ''
-        uses: aquaproj/aqua-installer@82d0e83878a8657c4a6f2ff1755d3bfbfc67f329 # v4.1.0
+        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
         with:
-          aqua_version: v2.64.0
+          path: |
+            ~/.local/share/aquaproj-aqua/pkgs/github_release/github.com/aquaproj/ar2
+            ~/AppData/Local/aquaproj-aqua/pkgs/github_release/github.com/aquaproj/ar2
+          key: ar2-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles('aqua/aqua.yaml', 'aqua/aqua-checksums.json') }}
+      - if: steps.plan.outputs.packages != ''
+        uses: aquaproj/aqua-installer@611554c6f0137ba41c8dd15aca8bee82504ea461 # v4.1.1
+        with:
+          aqua_version: v2.67.0-lock.0
           packages: ar2
           # -a includes the global configuration. Without it the packages pinned there
           # are not linked and the command isn't found.
@@ -71,6 +82,13 @@ jobs:
       # One job per environment the files describe, on a machine of that environment.
       # An environment with no runner to answer for it fails here rather than being
       # passed over quietly.
+      #
+      # Except darwin, whose two environments share one macOS machine. ar2 test runs no
+      # binary it checks -- it downloads, hashes, opens and verifies signatures -- so an
+      # amd64 entry tells an arm64 Mac nothing it wouldn't tell an Intel one, and macOS is
+      # the runner every pull request queues for: a darwin job ran for half a minute and
+      # waited five to twenty for a machine. Environments sharing a runner are one job,
+      # which checks each of them in turn.
       - id: matrix
         if: steps.plan.outputs.count != '0'
         run: |
@@ -79,9 +97,9 @@ jobs:
             os=${env%%/*}
             arch=${env##*/}
             case "$env" in
-              linux/amd64) runner=ubuntu-24.04 ;;
-              linux/arm64) runner=ubuntu-24.04-arm ;;
-              darwin/amd64) runner=macos-15-intel ;;
+              linux/amd64) runner=ubuntu-26.04 ;;
+              linux/arm64) runner=ubuntu-26.04-arm ;;
+              darwin/amd64) runner=macos-15 ;;
               darwin/arm64) runner=macos-15 ;;
               windows/amd64) runner=windows-2025 ;;
               windows/arm64) runner=windows-11-arm ;;
@@ -93,11 +111,16 @@ jobs:
             jq -n -c --arg env "$env" --arg os "$os" --arg arch "$arch" --arg runner "$runner" \
               '{env: $env, os: $os, arch: $arch, runner: $runner}' >> matrix.jsonl
           done < <(echo "$FILES" | xargs ar2 test --environments)
-          echo "matrix=$(jq -s -c . matrix.jsonl)" >> "$GITHUB_OUTPUT"
-          jq -s -c . matrix.jsonl
+          matrix=$(jq -s -c 'group_by(.runner) | map({env: (map(.env) | join(" ")), os: .[0].os, arch: (map(.arch) | join(" ")), runner: .[0].runner})' matrix.jsonl)
+          echo "matrix=$matrix" >> "$GITHUB_OUTPUT"
+          echo "$matrix"
         env:
           FILES: ${{ steps.plan.outputs.files }}
           AQUA_GITHUB_TOKEN: ${{ github.token }}
+      # How much of GITHUB_TOKEN's budget the repository has used. See the action.
+      - uses: $/.github/actions/measure-rate-limit
+        if: always()
+        continue-on-error: true
 
   test:
     needs: plan
@@ -126,14 +149,25 @@ jobs:
       - run: echo "$PACKAGES" | xargs git sparse-checkout add
         env:
           PACKAGES: ${{ needs.plan.outputs.packages }}
-      - uses: aquaproj/aqua-installer@82d0e83878a8657c4a6f2ff1755d3bfbfc67f329 # v4.1.0
+      # ar2's own install, kept between runs: with it restored aqua neither downloads ar2 nor
+      # verifies its attestation, which asks GitHub's API. Every pull request runs these jobs,
+      # and verifying ar2 for each used up GITHUB_TOKEN's thousand requests an hour. Only ar2's
+      # directory, so that a package a job tests is never restored rather than installed.
+      - uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
         with:
-          aqua_version: v2.64.0
+          path: |
+            ~/.local/share/aquaproj-aqua/pkgs/github_release/github.com/aquaproj/ar2
+            ~/AppData/Local/aquaproj-aqua/pkgs/github_release/github.com/aquaproj/ar2
+          key: ar2-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles('aqua/aqua.yaml', 'aqua/aqua-checksums.json') }}
+      - uses: aquaproj/aqua-installer@611554c6f0137ba41c8dd15aca8bee82504ea461 # v4.1.1
+        with:
+          aqua_version: v2.67.0-lock.0
           packages: ar2
           aqua_opts: -l -a
       # The entries of this environment, on a machine of this environment, a package at a
       # time: the package's name is read from its definition, and it is what an
-      # attestation is verified against.
+      # attestation is verified against. A job for more than one architecture -- darwin's --
+      # checks each in turn.
       - run: |
           for dir in $PACKAGES; do
             files=()
@@ -145,22 +179,28 @@ jobs:
             if [ "${#files[@]}" -eq 0 ]; then
               continue
             fi
-            ar2 test --definition "$dir/registry.yaml" --os "$OS" --arch "$ARCH" "${files[@]}"
+            for arch in $ARCHS; do
+              ar2 test --definition "$dir/registry.yaml" --os "$OS" --arch "$arch" "${files[@]}"
+            done
           done
         env:
           OS: ${{ matrix.os }}
-          ARCH: ${{ matrix.arch }}
+          ARCHS: ${{ matrix.arch }}
           PACKAGES: ${{ needs.plan.outputs.packages }}
           FILES: ${{ needs.plan.outputs.files }}
           # Verifying an attestation asks GitHub about the artifact, and downloading
           # assets without a token runs into the anonymous rate limit.
           GITHUB_TOKEN: ${{ github.token }}
           AQUA_GITHUB_TOKEN: ${{ github.token }}
+      # How much of GITHUB_TOKEN's budget the repository has used. See the action.
+      - uses: $/.github/actions/measure-rate-limit
+        if: always()
+        continue-on-error: true
 
   # The pull request rewriting every published file. See ar2 rewrite --verify.
   rewrite:
     if: github.head_ref == 'ar2_rewrite'
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     timeout-minutes: 30
     env:
       AQUA_GLOBAL_CONFIG: ${{ github.workspace }}/aqua/aqua.yaml
@@ -172,9 +212,19 @@ jobs:
           persist-credentials: false
           sparse-checkout: |
             aqua
-      - uses: aquaproj/aqua-installer@82d0e83878a8657c4a6f2ff1755d3bfbfc67f329 # v4.1.0
+      # ar2's own install, kept between runs: with it restored aqua neither downloads ar2 nor
+      # verifies its attestation, which asks GitHub's API. Every pull request runs these jobs,
+      # and verifying ar2 for each used up GITHUB_TOKEN's thousand requests an hour. Only ar2's
+      # directory, so that a package a job tests is never restored rather than installed.
+      - uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
         with:
-          aqua_version: v2.64.0
+          path: |
+            ~/.local/share/aquaproj-aqua/pkgs/github_release/github.com/aquaproj/ar2
+            ~/AppData/Local/aquaproj-aqua/pkgs/github_release/github.com/aquaproj/ar2
+          key: ar2-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles('aqua/aqua.yaml', 'aqua/aqua-checksums.json') }}
+      - uses: aquaproj/aqua-installer@611554c6f0137ba41c8dd15aca8bee82504ea461 # v4.1.1
+        with:
+          aqua_version: v2.67.0-lock.0
           packages: ar2
           aqua_opts: -l -a
       # Every definition and registry.json in the pull request has to be exactly what
@@ -191,3 +241,7 @@ jobs:
           HEAD_SHA: ${{ github.event.pull_request.head.sha }}
           GITHUB_TOKEN: ${{ github.token }}
           AQUA_GITHUB_TOKEN: ${{ github.token }}
+      # How much of GITHUB_TOKEN's budget the repository has used. See the action.
+      - uses: $/.github/actions/measure-rate-limit
+        if: always()
+        continue-on-error: true
