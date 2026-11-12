@@ -22,3 +22,6 @@ version_overrides:
     - version_constraint: semver("<= 0.3.34")
     - version_constraint: semver("<= 1.0.91")
     - version_constraint: "true"
+# The releases publish a build for CPUs without AVX2 (-baseline) and the desktop app beside
+# the CLI, which nothing in the names tells apart from it on amd64.
+all_assets_filter: not (Asset contains "baseline" or Asset contains "desktop")
