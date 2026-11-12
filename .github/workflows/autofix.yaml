@@ -13,13 +13,6 @@ jobs:
     timeout-minutes: 15
     permissions: {}
     steps:
-      # The budget is the repository's and every job draws on it. These lines, read at a
-      # job's start and end while nothing else runs, are what say how much a pull request costs.
-      - name: api budget at the start
-        continue-on-error: true
-        run: gh api rate_limit --jq '"api-budget start core=\(.resources.core.used)/\(.resources.core.limit) graphql=\(.resources.graphql.used)/\(.resources.graphql.limit) reset=\(.resources.core.reset)"'
-        env:
-          GH_TOKEN: ${{ github.token }}
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           ref: ${{ github.event.pull_request.head.sha }}
@@ -34,10 +27,8 @@ jobs:
       - run: aqua upc -prune
         env:
           AQUA_GITHUB_TOKEN: ${{ github.token }}
-      - name: api budget at the end
+      # How much of GITHUB_TOKEN's budget the repository has used. See the action.
+      - uses: $/.github/actions/measure-rate-limit
         if: always()
         continue-on-error: true
-        run: gh api rate_limit --jq '"api-budget end core=\(.resources.core.used)/\(.resources.core.limit) graphql=\(.resources.graphql.used)/\(.resources.graphql.limit) reset=\(.resources.core.reset)"'
-        env:
-          GH_TOKEN: ${{ github.token }}
       - uses: autofix-ci/action@c5b2d67aa2274e7b5a18224e8171550871fc7e4a # v1.3.4
