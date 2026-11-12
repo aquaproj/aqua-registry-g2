@@ -56,7 +56,9 @@ called from there:
   every package had a branch of its own, a pull request couldn't reach another package; on
   `main` that is this check.
 - Each package's definition is validated, and every `registry-*.json` added or changed is
-  checked with `ar2 test` on a machine of each environment it describes.
+  checked with `ar2 test` on a machine of each environment it describes -- of its OS and
+  architecture, except darwin, whose two architectures share an arm64 Mac, since nothing
+  checked is run.
 
 Everything checks out only what it reads. `pkgs/` is most of the repository and none of
 what the other checks look at.
