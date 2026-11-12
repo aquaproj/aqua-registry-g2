@@ -1,0 +1,22 @@
+name: peripheryapp/periphery
+type: github_release
+repo_owner: peripheryapp
+repo_name: periphery
+repo_id: 169972846
+description: A tool to identify unused code in Swift projects
+version_overrides:
+  - version_constraint: semver("> 2.13.0")
+    supported_envs:
+      - darwin
+  - version_constraint: semver("<= 2.13.0")
+    supported_envs:
+      - darwin
+  - version_constraint: "true"
+    supported_envs:
+      - darwin
+all_assets_filter: not (Asset contains "artifactbundle" or Asset contains "bazel")
+asset_rules:
+  - envs:
+      - darwin/amd64
+      - darwin/arm64
+    filter: Asset matches "^periphery-v.+[.]zip([.].+)?$" or Asset matches "^periphery-.+[.]zip([.].+)?$"

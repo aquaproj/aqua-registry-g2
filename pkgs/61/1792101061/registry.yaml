@@ -1,0 +1,14 @@
+name: kahing/goofys
+type: github_release
+repo_owner: kahing
+repo_name: goofys
+repo_id: 42475296
+description: a high-performance, POSIX-ish Amazon S3 file system written in Go
+version_overrides:
+  - version_constraint: "true"
+    supported_envs:
+      - linux/amd64
+asset_rules:
+  - envs:
+      - linux/amd64
+    filter: Asset matches "^goofys([.].+)?$"

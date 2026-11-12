@@ -1,0 +1,96 @@
+name: wasmerio/wasmer
+type: github_release
+repo_owner: wasmerio
+repo_name: wasmer
+repo_id: 152572186
+description: The leading WebAssembly Runtime supporting WASI and Emscripten
+overrides:
+  - goos: linux
+    goarch: arm64
+    files:
+      - name: wasmer
+        src: bin/wasmer
+files:
+  - name: wasmer
+    src: bin/wasmer
+  - name: wasmer-headless
+    src: bin/wasmer-headless
+supported_envs:
+  - darwin
+  - linux
+  - amd64
+version_overrides:
+  - version_constraint: semver(">= 7.2.0-alpha.2")
+    supported_envs:
+      - darwin/arm64
+      - linux
+      - windows/amd64
+  - version_constraint: semver(">= 3.0.0-beta")
+  - version_constraint: semver(">= 3.0.0-alpha")
+  - version_constraint: semver(">= 2.2.1")
+    files:
+      - name: wapm
+        src: bin/wapm
+      - name: wasmer-headless
+        src: bin/wasmer-headless
+      - name: wax
+        src: bin/wax
+    overrides:
+      - goos: linux
+        goarch: arm64
+        files:
+          - name: wasmer
+            src: bin/wasmer
+      - goos: windows
+        files:
+          - name: wapm
+            src: bin/wapm
+          - name: wasmer-headless
+            src: bin/wasmer-headless
+          - name: wasmer
+            src: bin/wasmer
+  - version_constraint: semver(">= 2.0.0-rc1")
+    supported_envs:
+      - darwin
+      - amd64
+  - version_constraint: semver(">= 1.0.0-beta1")
+    files:
+      - name: wasmer
+        src: bin/wasmer
+  - version_constraint: semver(">= 1.0.0-alpha3")
+  - version_constraint: semver(">= 0.14.0")
+    files:
+      - name: wapm
+        src: bin/wapm
+      - name: wasmer
+        src: bin/wasmer
+    supported_envs:
+      - darwin
+      - linux/amd64
+  - version_constraint: semver(">= 0.10.2")
+    files:
+      - name: wapm
+        src: bin/wapm
+      - name: wasmer
+        src: bin/wasmer
+  - version_constraint: semver(">= 0.10.0")
+    files:
+      - name: wapm
+        src: bin/wapm
+      - name: wasmer
+        src: bin/wasmer
+    supported_envs:
+      - darwin
+      - amd64
+  - version_constraint: semver(">= 0.3.0")
+    files:
+      - name: wasmer
+        src: bin/wasmer
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: semver("< 0.3.0")
+    supported_envs:
+      - darwin
+      - linux/amd64
+  - version_constraint: "true"
