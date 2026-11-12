@@ -28,3 +28,7 @@ version_overrides:
           files:
             - name: hugo
               src: Payload/hugo
+# The releases publish the extended and withdeploy editions beside the standard one, and
+# each Linux build under two names, linux-amd64 and Linux-64bit. The standard edition named
+# for its architecture is the one installed.
+all_assets_filter: not (Asset contains "extended" or Asset contains "withdeploy" or Asset contains "64bit")
