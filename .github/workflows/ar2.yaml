@@ -84,6 +84,13 @@ jobs:
       - name: record when the run started
         id: started
         run: echo "at=$(date +%s)" >> "$GITHUB_OUTPUT"
+      # The app's budget, which 'ar2 run' reads and writes through, core and GraphQL alike.
+      # The difference between this and the line after the run is what one run costs.
+      - name: api budget at the start
+        continue-on-error: true
+        run: gh api rate_limit --jq '"api-budget start core=\(.resources.core.used)/\(.resources.core.limit) graphql=\(.resources.graphql.used)/\(.resources.graphql.limit) reset=\(.resources.core.reset)"'
+        env:
+          GH_TOKEN: ${{ steps.pr_token.outputs.token }}
       - id: generate
         run: |
           # The packages are one field and each is its own argument, so they are split
@@ -111,6 +118,12 @@ jobs:
           PACKAGES: ${{ inputs.packages }}
           LIMIT: ${{ inputs.limit }}
           LOG_LEVEL: ${{ inputs.log_level }}
+      - name: api budget at the end
+        if: always()
+        continue-on-error: true
+        run: gh api rate_limit --jq '"api-budget end core=\(.resources.core.used)/\(.resources.core.limit) graphql=\(.resources.graphql.used)/\(.resources.graphql.limit) reset=\(.resources.core.reset)"'
+        env:
+          GH_TOKEN: ${{ steps.pr_token.outputs.token }}
 
       # The cadence is this, rather than a schedule. A workflow asking for every ten
       # minutes is triggered every few hours: aqua-registry's own updater, set to

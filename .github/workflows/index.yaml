@@ -59,6 +59,13 @@ jobs:
       # Opening the pull request.
       pull-requests: write
     steps:
+      # The budget is the repository's and every job draws on it. These lines, read at a
+      # job's start and end while nothing else runs, are what say how much a pull request costs.
+      - name: api budget at the start
+        continue-on-error: true
+        run: gh api rate_limit --jq '"api-budget start core=\(.resources.core.used)/\(.resources.core.limit) graphql=\(.resources.graphql.used)/\(.resources.graphql.limit) reset=\(.resources.core.reset)"'
+        env:
+          GH_TOKEN: ${{ github.token }}
       # For aqua/aqua.yaml, which pins the ar2 version and its checksum.
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
@@ -91,3 +98,9 @@ jobs:
           GITHUB_TOKEN: ${{ github.token }}
           AR2_PR_TOKEN: ${{ steps.pr_token.outputs.token }}
           PACKAGES: ${{ inputs.packages }}
+      - name: api budget at the end
+        if: always()
+        continue-on-error: true
+        run: gh api rate_limit --jq '"api-budget end core=\(.resources.core.used)/\(.resources.core.limit) graphql=\(.resources.graphql.used)/\(.resources.graphql.limit) reset=\(.resources.core.reset)"'
+        env:
+          GH_TOKEN: ${{ github.token }}

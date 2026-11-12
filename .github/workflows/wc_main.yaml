@@ -17,6 +17,13 @@ jobs:
     env:
       AQUA_GLOBAL_CONFIG: ${{ github.workspace }}/aqua/aqua.yaml
     steps:
+      # The budget is the repository's and every job draws on it. These lines, read at a
+      # job's start and end while nothing else runs, are what say how much a pull request costs.
+      - name: api budget at the start
+        continue-on-error: true
+        run: gh api rate_limit --jq '"api-budget start core=\(.resources.core.used)/\(.resources.core.limit) graphql=\(.resources.graphql.used)/\(.resources.graphql.limit) reset=\(.resources.core.reset)"'
+        env:
+          GH_TOKEN: ${{ github.token }}
       # The files at the root -- index.json and names.json -- and the pin. Not the
       # packages, which are most of the repository and none of what is read here.
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -46,6 +53,12 @@ jobs:
       - run: ar2 validate-index
         env:
           AQUA_GITHUB_TOKEN: ${{ github.token }}
+      - name: api budget at the end
+        if: always()
+        continue-on-error: true
+        run: gh api rate_limit --jq '"api-budget end core=\(.resources.core.used)/\(.resources.core.limit) graphql=\(.resources.graphql.used)/\(.resources.graphql.limit) reset=\(.resources.core.reset)"'
+        env:
+          GH_TOKEN: ${{ github.token }}
 
   aqua:
     runs-on: ubuntu-26.04
@@ -53,6 +66,13 @@ jobs:
     permissions:
       contents: read
     steps:
+      # The budget is the repository's and every job draws on it. These lines, read at a
+      # job's start and end while nothing else runs, are what say how much a pull request costs.
+      - name: api budget at the start
+        continue-on-error: true
+        run: gh api rate_limit --jq '"api-budget start core=\(.resources.core.used)/\(.resources.core.limit) graphql=\(.resources.graphql.used)/\(.resources.graphql.limit) reset=\(.resources.core.reset)"'
+        env:
+          GH_TOKEN: ${{ github.token }}
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
@@ -68,6 +88,12 @@ jobs:
       - run: aqua install -a
         env:
           AQUA_GITHUB_TOKEN: ${{ github.token }}
+      - name: api budget at the end
+        if: always()
+        continue-on-error: true
+        run: gh api rate_limit --jq '"api-budget end core=\(.resources.core.used)/\(.resources.core.limit) graphql=\(.resources.graphql.used)/\(.resources.graphql.limit) reset=\(.resources.core.reset)"'
+        env:
+          GH_TOKEN: ${{ github.token }}
 
   # A skill whose front matter doesn't parse doesn't load, and nothing says so until
   # somebody asks for it. 'claude plugin validate' won't catch it: it validates a plugin,
@@ -80,6 +106,13 @@ jobs:
     env:
       AQUA_GLOBAL_CONFIG: ${{ github.workspace }}/aqua/aqua.yaml
     steps:
+      # The budget is the repository's and every job draws on it. These lines, read at a
+      # job's start and end while nothing else runs, are what say how much a pull request costs.
+      - name: api budget at the start
+        continue-on-error: true
+        run: gh api rate_limit --jq '"api-budget start core=\(.resources.core.used)/\(.resources.core.limit) graphql=\(.resources.graphql.used)/\(.resources.graphql.limit) reset=\(.resources.core.reset)"'
+        env:
+          GH_TOKEN: ${{ github.token }}
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
@@ -96,4 +129,10 @@ jobs:
       - run: bash .github/scripts/validate-skills.sh
         env:
           AQUA_GITHUB_TOKEN: ${{ github.token }}
+      - name: api budget at the end
+        if: always()
+        continue-on-error: true
+        run: gh api rate_limit --jq '"api-budget end core=\(.resources.core.used)/\(.resources.core.limit) graphql=\(.resources.graphql.used)/\(.resources.graphql.limit) reset=\(.resources.core.reset)"'
+        env:
+          GH_TOKEN: ${{ github.token }}
 

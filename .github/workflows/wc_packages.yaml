@@ -25,6 +25,13 @@ jobs:
       # Reading which files the pull request touches, and whether it is set to merge itself.
       pull-requests: read
     steps:
+      # The budget is the repository's and every job draws on it. These lines, read at a
+      # job's start and end while nothing else runs, are what say how much a pull request costs.
+      - name: api budget at the start
+        continue-on-error: true
+        run: gh api rate_limit --jq '"api-budget start core=\(.resources.core.used)/\(.resources.core.limit) graphql=\(.resources.graphql.used)/\(.resources.graphql.limit) reset=\(.resources.core.reset)"'
+        env:
+          GH_TOKEN: ${{ github.token }}
       # The registry holds every package, so only what is read is checked out: the
       # tooling here, and the packages the pull request touches once they are known.
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -109,6 +116,12 @@ jobs:
         env:
           FILES: ${{ steps.plan.outputs.files }}
           AQUA_GITHUB_TOKEN: ${{ github.token }}
+      - name: api budget at the end
+        if: always()
+        continue-on-error: true
+        run: gh api rate_limit --jq '"api-budget end core=\(.resources.core.used)/\(.resources.core.limit) graphql=\(.resources.graphql.used)/\(.resources.graphql.limit) reset=\(.resources.core.reset)"'
+        env:
+          GH_TOKEN: ${{ github.token }}
 
   test:
     needs: plan
@@ -129,6 +142,13 @@ jobs:
     permissions:
       contents: read
     steps:
+      # The budget is the repository's and every job draws on it. These lines, read at a
+      # job's start and end while nothing else runs, are what say how much a pull request costs.
+      - name: api budget at the start
+        continue-on-error: true
+        run: gh api rate_limit --jq '"api-budget start core=\(.resources.core.used)/\(.resources.core.limit) graphql=\(.resources.graphql.used)/\(.resources.graphql.limit) reset=\(.resources.core.reset)"'
+        env:
+          GH_TOKEN: ${{ github.token }}
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
@@ -177,6 +197,12 @@ jobs:
           # assets without a token runs into the anonymous rate limit.
           GITHUB_TOKEN: ${{ github.token }}
           AQUA_GITHUB_TOKEN: ${{ github.token }}
+      - name: api budget at the end
+        if: always()
+        continue-on-error: true
+        run: gh api rate_limit --jq '"api-budget end core=\(.resources.core.used)/\(.resources.core.limit) graphql=\(.resources.graphql.used)/\(.resources.graphql.limit) reset=\(.resources.core.reset)"'
+        env:
+          GH_TOKEN: ${{ github.token }}
 
   # The pull request rewriting every published file. See ar2 rewrite --verify.
   rewrite:
@@ -188,6 +214,13 @@ jobs:
     permissions:
       contents: read
     steps:
+      # The budget is the repository's and every job draws on it. These lines, read at a
+      # job's start and end while nothing else runs, are what say how much a pull request costs.
+      - name: api budget at the start
+        continue-on-error: true
+        run: gh api rate_limit --jq '"api-budget start core=\(.resources.core.used)/\(.resources.core.limit) graphql=\(.resources.graphql.used)/\(.resources.graphql.limit) reset=\(.resources.core.reset)"'
+        env:
+          GH_TOKEN: ${{ github.token }}
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
@@ -222,3 +255,9 @@ jobs:
           HEAD_SHA: ${{ github.event.pull_request.head.sha }}
           GITHUB_TOKEN: ${{ github.token }}
           AQUA_GITHUB_TOKEN: ${{ github.token }}
+      - name: api budget at the end
+        if: always()
+        continue-on-error: true
+        run: gh api rate_limit --jq '"api-budget end core=\(.resources.core.used)/\(.resources.core.limit) graphql=\(.resources.graphql.used)/\(.resources.graphql.limit) reset=\(.resources.core.reset)"'
+        env:
+          GH_TOKEN: ${{ github.token }}
