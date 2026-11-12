@@ -33,7 +33,7 @@ concurrency:
   cancel-in-progress: false
 jobs:
   run:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     # Both app keys live here rather than at the repository level, so a workflow on
     # any other ref can't read them. The environment only lets main deploy to it.
     # One environment because a job may name only one, and this job mints both
@@ -72,9 +72,9 @@ jobs:
         with:
           client-id: ${{ vars.AR2_PR_CLIENT_ID }}
           private-key: ${{ secrets.AR2_PR_PRIVATE_KEY }}
-      - uses: aquaproj/aqua-installer@82d0e83878a8657c4a6f2ff1755d3bfbfc67f329 # v4.1.0
+      - uses: aquaproj/aqua-installer@611554c6f0137ba41c8dd15aca8bee82504ea461 # v4.1.1
         with:
-          aqua_version: v2.64.0
+          aqua_version: v2.67.0-lock.0
           packages: ar2
           # The app's token rather than GITHUB_TOKEN for verifying ar2's attestation,
           # which asks GitHub's API. GITHUB_TOKEN's thousand requests an hour are the
@@ -111,6 +111,14 @@ jobs:
           PACKAGES: ${{ inputs.packages }}
           LIMIT: ${{ inputs.limit }}
           LOG_LEVEL: ${{ inputs.log_level }}
+      # How much of the app's budget is used, core and GraphQL alike, after 'ar2 run' read
+      # and wrote through it. Only after: a line read before the run answered for a window of
+      # its own (core=0). See the action.
+      - uses: $/.github/actions/measure-rate-limit
+        if: always()
+        continue-on-error: true
+        with:
+          token: ${{ steps.pr_token.outputs.token }}
 
       # The cadence is this, rather than a schedule. A workflow asking for every ten
       # minutes is triggered every few hours: aqua-registry's own updater, set to
