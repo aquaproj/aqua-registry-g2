@@ -84,13 +84,6 @@ jobs:
       - name: record when the run started
         id: started
         run: echo "at=$(date +%s)" >> "$GITHUB_OUTPUT"
-      # The app's budget, which 'ar2 run' reads and writes through, core and GraphQL alike.
-      # The difference between this and the line after the run is what one run costs.
-      - uses: $/.github/actions/measure-rate-limit
-        continue-on-error: true
-        with:
-          label: start
-          token: ${{ steps.pr_token.outputs.token }}
       - id: generate
         run: |
           # The packages are one field and each is its own argument, so they are split
@@ -118,6 +111,9 @@ jobs:
           PACKAGES: ${{ inputs.packages }}
           LIMIT: ${{ inputs.limit }}
           LOG_LEVEL: ${{ inputs.log_level }}
+      # How much of the app's budget is used, core and GraphQL alike, after 'ar2 run' read
+      # and wrote through it. Only after: a line read before the run answered for a window of
+      # its own (core=0). See the action.
       - uses: $/.github/actions/measure-rate-limit
         if: always()
         continue-on-error: true
