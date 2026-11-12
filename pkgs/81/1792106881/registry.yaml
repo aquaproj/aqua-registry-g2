@@ -1,0 +1,30 @@
+name: smol-machines/smolvm
+type: github_release
+repo_owner: smol-machines
+repo_name: smolvm
+repo_id: 1119210021
+description: Tool to build & run portable, lightweight, self-contained virtual machines
+files:
+  - name: smolvm
+    src: '{{.AssetWithoutExt}}/smolvm'
+version_overrides:
+  - version_constraint: Version in ["v0.1.17", "v0.1.19"]
+    supported_envs:
+      - darwin/arm64
+  - version_constraint: Version == "v0.1.18"
+    supported_envs:
+      - darwin/arm64
+  - version_constraint: semver("> 0.1.16")
+    supported_envs:
+      - linux/amd64
+      - darwin/arm64
+  - version_constraint: semver("> 0.1.5")
+    supported_envs:
+      - darwin/arm64
+  - version_constraint: semver("<= 0.1.5")
+    supported_envs:
+      - darwin/arm64
+  - version_constraint: "true"
+    supported_envs:
+      - linux/amd64
+      - darwin/arm64

@@ -1,0 +1,26 @@
+name: openziti/zrok
+type: github_release
+repo_owner: openziti
+repo_name: zrok
+repo_id: 515311500
+description: Geo-scale, next-generation peer-to-peer sharing platform built on top of OpenZiti
+github_artifact_attestations:
+  signer_workflow: openziti/zrok/.github/workflows/release.yml
+version_overrides:
+  - version_constraint: semver("<= 0.2.10")
+    supported_envs:
+      - linux/amd64
+  - version_constraint: semver("<= 0.3.0")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("<= 0.4.48") or (Version startsWith "v1.0.0-rc")
+  - version_constraint: semver("< 2.0.0") and not (Version startsWith "v2.0.0-rc")
+    github_artifact_attestations:
+      signer_workflow: openziti/zrok/.github/workflows/release.yml
+  - version_constraint: "true"
+    files:
+      - name: zrok2
+    github_artifact_attestations:
+      signer_workflow: openziti/zrok/.github/workflows/release.yml
