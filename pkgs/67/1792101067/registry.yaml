@@ -1,0 +1,14 @@
+name: tfutils/tfenv
+type: github_archive
+repo_owner: tfutils
+repo_name: tfenv
+repo_id: 64857500
+description: Terraform version manager
+files:
+  - name: tfenv
+    src: tfenv-{{trimV .Version}}/bin/tfenv
+  - name: terraform
+    src: tfenv-{{trimV .Version}}/bin/terraform
+supported_envs:
+  - darwin
+  - linux
