@@ -11,7 +11,7 @@ jobs:
   # here: an entry for an environment nobody thought of would otherwise go unchecked,
   # which is the one thing a merge gate must not do.
   plan:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     timeout-minutes: 10
     outputs:
       count: ${{ steps.plan.outputs.count }}
@@ -55,9 +55,9 @@ jobs:
             ~/AppData/Local/aquaproj-aqua/pkgs/github_release/github.com/aquaproj/ar2
           key: ar2-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles('aqua/aqua.yaml', 'aqua/aqua-checksums.json') }}
       - if: steps.plan.outputs.packages != ''
-        uses: aquaproj/aqua-installer@82d0e83878a8657c4a6f2ff1755d3bfbfc67f329 # v4.1.0
+        uses: aquaproj/aqua-installer@611554c6f0137ba41c8dd15aca8bee82504ea461 # v4.1.1
         with:
-          aqua_version: v2.64.0
+          aqua_version: v2.67.0-lock.0
           packages: ar2
           # -a includes the global configuration. Without it the packages pinned there
           # are not linked and the command isn't found.
@@ -90,8 +90,8 @@ jobs:
             os=${env%%/*}
             arch=${env##*/}
             case "$env" in
-              linux/amd64) runner=ubuntu-24.04 ;;
-              linux/arm64) runner=ubuntu-24.04-arm ;;
+              linux/amd64) runner=ubuntu-26.04 ;;
+              linux/arm64) runner=ubuntu-26.04-arm ;;
               darwin/amd64) runner=macos-15-intel ;;
               darwin/arm64) runner=macos-15 ;;
               windows/amd64) runner=windows-2025 ;;
@@ -109,6 +109,10 @@ jobs:
         env:
           FILES: ${{ steps.plan.outputs.files }}
           AQUA_GITHUB_TOKEN: ${{ github.token }}
+      # How much of GITHUB_TOKEN's budget the repository has used. See the action.
+      - uses: $/.github/actions/measure-rate-limit
+        if: always()
+        continue-on-error: true
 
   test:
     needs: plan
@@ -147,9 +151,9 @@ jobs:
             ~/.local/share/aquaproj-aqua/pkgs/github_release/github.com/aquaproj/ar2
             ~/AppData/Local/aquaproj-aqua/pkgs/github_release/github.com/aquaproj/ar2
           key: ar2-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles('aqua/aqua.yaml', 'aqua/aqua-checksums.json') }}
-      - uses: aquaproj/aqua-installer@82d0e83878a8657c4a6f2ff1755d3bfbfc67f329 # v4.1.0
+      - uses: aquaproj/aqua-installer@611554c6f0137ba41c8dd15aca8bee82504ea461 # v4.1.1
         with:
-          aqua_version: v2.64.0
+          aqua_version: v2.67.0-lock.0
           packages: ar2
           aqua_opts: -l -a
       # The entries of this environment, on a machine of this environment, a package at a
@@ -177,11 +181,15 @@ jobs:
           # assets without a token runs into the anonymous rate limit.
           GITHUB_TOKEN: ${{ github.token }}
           AQUA_GITHUB_TOKEN: ${{ github.token }}
+      # How much of GITHUB_TOKEN's budget the repository has used. See the action.
+      - uses: $/.github/actions/measure-rate-limit
+        if: always()
+        continue-on-error: true
 
   # The pull request rewriting every published file. See ar2 rewrite --verify.
   rewrite:
     if: github.head_ref == 'ar2_rewrite'
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     timeout-minutes: 30
     env:
       AQUA_GLOBAL_CONFIG: ${{ github.workspace }}/aqua/aqua.yaml
@@ -203,9 +211,9 @@ jobs:
             ~/.local/share/aquaproj-aqua/pkgs/github_release/github.com/aquaproj/ar2
             ~/AppData/Local/aquaproj-aqua/pkgs/github_release/github.com/aquaproj/ar2
           key: ar2-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles('aqua/aqua.yaml', 'aqua/aqua-checksums.json') }}
-      - uses: aquaproj/aqua-installer@82d0e83878a8657c4a6f2ff1755d3bfbfc67f329 # v4.1.0
+      - uses: aquaproj/aqua-installer@611554c6f0137ba41c8dd15aca8bee82504ea461 # v4.1.1
         with:
-          aqua_version: v2.64.0
+          aqua_version: v2.67.0-lock.0
           packages: ar2
           aqua_opts: -l -a
       # Every definition and registry.json in the pull request has to be exactly what
@@ -222,3 +230,7 @@ jobs:
           HEAD_SHA: ${{ github.event.pull_request.head.sha }}
           GITHUB_TOKEN: ${{ github.token }}
           AQUA_GITHUB_TOKEN: ${{ github.token }}
+      # How much of GITHUB_TOKEN's budget the repository has used. See the action.
+      - uses: $/.github/actions/measure-rate-limit
+        if: always()
+        continue-on-error: true
