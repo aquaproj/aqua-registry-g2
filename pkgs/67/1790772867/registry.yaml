@@ -6,3 +6,5 @@ repo_id: 3308920
 description: q - Run SQL directly on CSV or TSV files
 version_overrides:
     - version_constraint: "true"
+# The Windows installer tied with the executable.
+all_assets_filter: not (Asset contains "installer")
