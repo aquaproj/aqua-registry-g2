@@ -9,3 +9,6 @@ version_overrides:
     - version_constraint: semver("> 0.15.2")
     - version_constraint: semver("<= 0.15.2")
     - version_constraint: "true"
+# The release publishes syncer, which was offered for Linux, and a standalone and a FIPS
+# build beside the vcluster CLI.
+all_assets_filter: Asset startsWith "vcluster-" and not (Asset contains "standalone")
