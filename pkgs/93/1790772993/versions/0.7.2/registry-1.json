@@ -15,7 +15,7 @@
       "files": [
         {
           "name": "jid",
-          "src": "jid"
+          "src": "jid_darwin_amd64"
         }
       ]
     },
@@ -34,13 +34,14 @@
       "files": [
         {
           "name": "jid",
-          "src": "jid"
+          "src": "jid_darwin_amd64"
         }
       ]
     },
     {
       "os": "linux",
       "arch": "amd64",
+      "linked_libc": "static",
       "type": "github_release",
       "repo_owner": "simeji",
       "repo_name": "jid",
@@ -52,25 +53,7 @@
       "files": [
         {
           "name": "jid",
-          "src": "jid"
-        }
-      ]
-    },
-    {
-      "os": "linux",
-      "arch": "arm64",
-      "type": "github_release",
-      "repo_owner": "simeji",
-      "repo_name": "jid",
-      "repo_id": 60534669,
-      "asset": "jid_linux_arm.zip",
-      "format": "zip",
-      "checksum": "c6751d375cb32a5ce3e37c50e8a14763747cc495cce7853f560b46046a6f4ada",
-      "checksum_algorithm": "sha256",
-      "files": [
-        {
-          "name": "jid",
-          "src": "jid"
+          "src": "jid_linux_amd64"
         }
       ]
     },
@@ -88,7 +71,7 @@
       "files": [
         {
           "name": "jid",
-          "src": "jid.exe"
+          "src": "jid_windows_amd64.exe"
         }
       ]
     },
@@ -107,7 +90,7 @@
       "files": [
         {
           "name": "jid",
-          "src": "jid.exe"
+          "src": "jid_windows_amd64.exe"
         }
       ]
     }
