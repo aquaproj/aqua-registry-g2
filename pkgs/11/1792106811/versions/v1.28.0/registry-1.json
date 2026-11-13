@@ -1,0 +1,164 @@
+{
+  "published_at": "2026-07-21T22:17:31Z",
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "zizmorcore",
+      "repo_name": "zizmor",
+      "repo_id": 844670429,
+      "asset": "zizmor-x86_64-apple-darwin.tar.gz",
+      "format": "tar.gz",
+      "checksum": "40a58d8560d65c71357b3977d0da425773bf8f10bf1ffd38099d963d3afdf3aa",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "zizmor",
+          "src": "zizmor"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "zizmorcore/zizmor/.github/workflows/release-binaries.yml",
+        "source_ref": "refs/tags/v1.28.0",
+        "source_digest": "4381cc6339bb76a1004a99da929fe8f8f1143d94",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "zizmorcore",
+      "repo_name": "zizmor",
+      "repo_id": 844670429,
+      "asset": "zizmor-aarch64-apple-darwin.tar.gz",
+      "format": "tar.gz",
+      "checksum": "54949bbd6b4c8527046bb8990bac9e0dab3eec787640f4e6199ae121dd1040be",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "zizmor",
+          "src": "zizmor"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "zizmorcore/zizmor/.github/workflows/release-binaries.yml",
+        "source_ref": "refs/tags/v1.28.0",
+        "source_digest": "4381cc6339bb76a1004a99da929fe8f8f1143d94",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "variants": {
+        "libc": "glibc"
+      },
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "zizmorcore",
+      "repo_name": "zizmor",
+      "repo_id": 844670429,
+      "asset": "zizmor-x86_64-unknown-linux-gnu.tar.gz",
+      "format": "tar.gz",
+      "checksum": "e87b67160194884e375a46a12c57ccc904f762b53845f254fab7f17d98809c09",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "zizmor",
+          "src": "zizmor"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "zizmorcore/zizmor/.github/workflows/release-binaries.yml",
+        "source_ref": "refs/tags/v1.28.0",
+        "source_digest": "4381cc6339bb76a1004a99da929fe8f8f1143d94",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "variants": {
+        "libc": "glibc"
+      },
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "zizmorcore",
+      "repo_name": "zizmor",
+      "repo_id": 844670429,
+      "asset": "zizmor-aarch64-unknown-linux-gnu.tar.gz",
+      "format": "tar.gz",
+      "checksum": "324e43770cfacf4216f8aefb287263b5b5c733c85b03bf7583b5cc4a0460239e",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "zizmor",
+          "src": "zizmor"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "zizmorcore/zizmor/.github/workflows/release-binaries.yml",
+        "source_ref": "refs/tags/v1.28.0",
+        "source_digest": "4381cc6339bb76a1004a99da929fe8f8f1143d94",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "zizmorcore",
+      "repo_name": "zizmor",
+      "repo_id": 844670429,
+      "asset": "zizmor-x86_64-pc-windows-msvc.zip",
+      "format": "zip",
+      "checksum": "06e5b2345323201ed4c55897651862fee3b43f79ddced799f1236f0f0d1c1c0f",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "zizmor",
+          "src": "zizmor.exe"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "zizmorcore/zizmor/.github/workflows/release-binaries.yml",
+        "source_ref": "refs/tags/v1.28.0",
+        "source_digest": "4381cc6339bb76a1004a99da929fe8f8f1143d94",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "windows_arm_emulation": true,
+      "type": "github_release",
+      "repo_owner": "zizmorcore",
+      "repo_name": "zizmor",
+      "repo_id": 844670429,
+      "asset": "zizmor-x86_64-pc-windows-msvc.zip",
+      "format": "zip",
+      "checksum": "06e5b2345323201ed4c55897651862fee3b43f79ddced799f1236f0f0d1c1c0f",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "zizmor",
+          "src": "zizmor.exe"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "zizmorcore/zizmor/.github/workflows/release-binaries.yml",
+        "source_ref": "refs/tags/v1.28.0",
+        "source_digest": "4381cc6339bb76a1004a99da929fe8f8f1143d94",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    }
+  ]
+}
