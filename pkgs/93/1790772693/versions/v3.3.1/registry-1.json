@@ -38,42 +38,6 @@
       ]
     },
     {
-      "os": "windows",
-      "arch": "amd64",
-      "type": "github_release",
-      "repo_owner": "Genymobile",
-      "repo_name": "scrcpy",
-      "repo_id": 111583593,
-      "asset": "scrcpy-win32-v3.3.1.zip",
-      "format": "zip",
-      "checksum": "ccdf1b4f5d19dfe760446a107e55b0a010a00e097d46533a161499c9333a20a6",
-      "checksum_algorithm": "sha256",
-      "files": [
-        {
-          "name": "scrcpy",
-          "src": "scrcpy-win32-v3.3.1/scrcpy.exe"
-        }
-      ]
-    },
-    {
-      "os": "windows",
-      "arch": "arm64",
-      "type": "github_release",
-      "repo_owner": "Genymobile",
-      "repo_name": "scrcpy",
-      "repo_id": 111583593,
-      "asset": "scrcpy-win32-v3.3.1.zip",
-      "format": "zip",
-      "checksum": "ccdf1b4f5d19dfe760446a107e55b0a010a00e097d46533a161499c9333a20a6",
-      "checksum_algorithm": "sha256",
-      "files": [
-        {
-          "name": "scrcpy",
-          "src": "scrcpy-win32-v3.3.1/scrcpy.exe"
-        }
-      ]
-    },
-    {
       "os": "linux",
       "arch": "amd64",
       "linked_libc": "glibc",
@@ -89,6 +53,42 @@
         {
           "name": "scrcpy",
           "src": "scrcpy-linux-x86_64-v3.3.1/scrcpy"
+        }
+      ]
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "Genymobile",
+      "repo_name": "scrcpy",
+      "repo_id": 111583593,
+      "asset": "scrcpy-win64-v3.3.1.zip",
+      "format": "zip",
+      "checksum": "4fcad494772a3ae5de9a133149f8856d2fc429b41795f7cf7c754e0c1bb6fbc0",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "scrcpy",
+          "src": "scrcpy-win64-v3.3.1/scrcpy.exe"
+        }
+      ]
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "Genymobile",
+      "repo_name": "scrcpy",
+      "repo_id": 111583593,
+      "asset": "scrcpy-win64-v3.3.1.zip",
+      "format": "zip",
+      "checksum": "4fcad494772a3ae5de9a133149f8856d2fc429b41795f7cf7c754e0c1bb6fbc0",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "scrcpy",
+          "src": "scrcpy-win64-v3.3.1/scrcpy.exe"
         }
       ]
     }
