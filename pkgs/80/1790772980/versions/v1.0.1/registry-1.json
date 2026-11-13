@@ -1,0 +1,122 @@
+{
+  "published_at": "2026-10-14T13:31:42Z",
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "rtk-ai",
+      "repo_name": "rtk",
+      "repo_id": 1139971460,
+      "asset": "rtk-x86_64-apple-darwin.tar.gz",
+      "format": "tar.gz",
+      "checksum": "4b716b2f45d677de41c99f77d9a71199ad060b98ec2f78ef712885312b3a6578",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "rtk",
+          "src": "rtk"
+        }
+      ]
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "rtk-ai",
+      "repo_name": "rtk",
+      "repo_id": 1139971460,
+      "asset": "rtk-aarch64-apple-darwin.tar.gz",
+      "format": "tar.gz",
+      "checksum": "4aae2f60cfc49c9e81b8c8c57020aa0cb824da608c78b4f0cf5c0988e19e824e",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "rtk",
+          "src": "rtk"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "variants": {
+        "libc": "musl"
+      },
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "rtk-ai",
+      "repo_name": "rtk",
+      "repo_id": 1139971460,
+      "asset": "rtk-x86_64-unknown-linux-musl.tar.gz",
+      "format": "tar.gz",
+      "checksum": "5b919c3bccb799b67a61866d0e617410a4fcdf173e2614440e59de2fa2003436",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "rtk",
+          "src": "rtk"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "variants": {
+        "libc": "glibc"
+      },
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "rtk-ai",
+      "repo_name": "rtk",
+      "repo_id": 1139971460,
+      "asset": "rtk-aarch64-unknown-linux-gnu.tar.gz",
+      "format": "tar.gz",
+      "checksum": "cd627c4091ad90b5e5aca83ca5af66ee4b8aa8537a736533fa90544f461f1c2b",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "rtk",
+          "src": "rtk"
+        }
+      ]
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "rtk-ai",
+      "repo_name": "rtk",
+      "repo_id": 1139971460,
+      "asset": "rtk-x86_64-pc-windows-msvc.zip",
+      "format": "zip",
+      "checksum": "64b4807c50b61dddf2ac1e86751dbda9117ab94ed02bf266e6584da571c39896",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "rtk",
+          "src": "rtk.exe"
+        }
+      ]
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "windows_arm_emulation": true,
+      "type": "github_release",
+      "repo_owner": "rtk-ai",
+      "repo_name": "rtk",
+      "repo_id": 1139971460,
+      "asset": "rtk-x86_64-pc-windows-msvc.zip",
+      "format": "zip",
+      "checksum": "64b4807c50b61dddf2ac1e86751dbda9117ab94ed02bf266e6584da571c39896",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "rtk",
+          "src": "rtk.exe"
+        }
+      ]
+    }
+  ]
+}
