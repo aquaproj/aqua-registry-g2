@@ -13,3 +13,6 @@ version_overrides:
     files:
       - name: krew
         src: krew-{{.OS}}_{{.Arch}}
+# v0.3.0 to v0.4.1 are written by hand for macOS and Linux. Those releases put every
+# platform's build in one krew.tar.gz, whose name doesn't say a platform, so ar2 generates
+# only the Windows krew.exe for them. Generating them again would drop the rest.
