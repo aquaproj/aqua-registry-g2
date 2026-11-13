@@ -59,10 +59,14 @@ version_overrides:
         - name: wat2wasm
           src: wabt-{{.Version}}/bin/wat2wasm
     - version_constraint: semver(">= 1.0.39")
+    # 1.0.35 and 1.0.36 build macOS on macos-12 (x86_64) and macos-14 (arm64), and the names
+    # say nothing else about the architecture.
     - version_constraint: semver(">= 1.0.35")
       replacements:
-        darwin: macos-14
+        darwin: macos
         linux: ubuntu-20.04
+        amd64: "12"
+        arm64: "14"
     - version_constraint: Version == "1.0.34"
     - version_constraint: Version == "1.0.33"
       files:

@@ -4,6 +4,12 @@ repo_owner: alexellis
 repo_name: k3sup
 repo_id: 202523140
 description: bootstrap K3s over SSH in < 60s
+# The Linux builds are named k3sup and k3sup-arm64, with no OS.
+asset_rules:
+    - envs:
+        - linux/amd64
+        - linux/arm64
+      filter: Asset matches "^k3sup(-arm64)?$"
 version_overrides:
     - version_constraint: Version in ["0.3.2", "0.4.4", "0.5.9", "0.12.9"]
       no_asset: true

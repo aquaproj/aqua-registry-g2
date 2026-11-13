@@ -4,6 +4,8 @@ repo_owner: visioncortex
 repo_name: vtracer
 repo_id: 306524806
 description: Raster to Vector Graphics Converter
+# 0.6.0 ships a 32-bit Windows build, vtracer-win-32.exe, beside vtracer-win-64.exe.
+all_assets_filter: not (Asset contains "win-32")
 version_overrides:
     - version_constraint: Version == "0.1.0"
     - version_constraint: Version == "0.1.1"
@@ -11,7 +13,11 @@ version_overrides:
     - version_constraint: Version == "0.2.1"
       no_asset: true
     - version_constraint: Version == "0.3.0"
+    # The macOS builds are vtracer-mac-intel and vtracer-mac-m1.
     - version_constraint: Version == "0.4.0"
+      replacements:
+        amd64: intel
+        arm64: m1
     - version_constraint: Version == "0.5.0"
     - version_constraint: Version == "0.6.0"
     - version_constraint: Version == "0.6.1"
