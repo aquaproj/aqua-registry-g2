@@ -13,3 +13,6 @@ supported_envs:
   - darwin
   - linux
   - amd64
+# Each release publishes a 32-bit Windows build, win32, beside the 64-bit one, win64, and
+# without this the 32-bit one was picked for windows/amd64.
+all_assets_filter: not (Asset contains "win32")
