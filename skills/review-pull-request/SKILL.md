@@ -24,7 +24,8 @@ CI has already established, for every entry in the pull request:
 - the archive opens, and `files[].src` names something inside it
 - every signature the entry claims has been verified with the tool the entry names
 - an entry for `linux/amd64` was checked on a Linux amd64 machine, and so on for the
-  six environments
+  six environments, except that both darwin entries are checked on an arm64 Mac: nothing
+  checked is run, and macOS machines are the scarce ones
 
 None of that needs reading again. The generated files are indented, so a diff says which
 field moved, but what CI established about them isn't learned again by reading them.
