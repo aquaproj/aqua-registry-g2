@@ -1,0 +1,108 @@
+{
+  "published_at": "2025-09-30T15:38:39Z",
+  "assets": [
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "containerd",
+      "repo_name": "nerdctl",
+      "repo_id": 318476701,
+      "asset": "nerdctl-2.1.6-linux-amd64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "22857b373edea479a4534ba62cae1c77f2af38f0aac4c91c1c68cf09e29d6f9e",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "nerdctl",
+          "src": "nerdctl"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "containerd/nerdctl/.github/workflows/release.yml",
+        "source_ref": "refs/tags/v2.1.6",
+        "source_digest": "59253e9931873e79b92fe3400f14e69d6be34025",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "containerd",
+      "repo_name": "nerdctl",
+      "repo_id": 318476701,
+      "asset": "nerdctl-2.1.6-linux-arm64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "5c30be3ec118eb222bf635f8049c2f96b4c46d9343ec445058e9bc2ee9531c28",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "nerdctl",
+          "src": "nerdctl"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "containerd/nerdctl/.github/workflows/release.yml",
+        "source_ref": "refs/tags/v2.1.6",
+        "source_digest": "59253e9931873e79b92fe3400f14e69d6be34025",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "containerd",
+      "repo_name": "nerdctl",
+      "repo_id": 318476701,
+      "asset": "nerdctl-2.1.6-windows-amd64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "939091dcdb9cc799657f3c6408cbd145a8750d6b1a42b04ed86877ba16233c88",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "nerdctl",
+          "src": "nerdctl.exe"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "containerd/nerdctl/.github/workflows/release.yml",
+        "source_ref": "refs/tags/v2.1.6",
+        "source_digest": "59253e9931873e79b92fe3400f14e69d6be34025",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "windows_arm_emulation": true,
+      "type": "github_release",
+      "repo_owner": "containerd",
+      "repo_name": "nerdctl",
+      "repo_id": 318476701,
+      "asset": "nerdctl-2.1.6-windows-amd64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "939091dcdb9cc799657f3c6408cbd145a8750d6b1a42b04ed86877ba16233c88",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "nerdctl",
+          "src": "nerdctl.exe"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "containerd/nerdctl/.github/workflows/release.yml",
+        "source_ref": "refs/tags/v2.1.6",
+        "source_digest": "59253e9931873e79b92fe3400f14e69d6be34025",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    }
+  ]
+}
