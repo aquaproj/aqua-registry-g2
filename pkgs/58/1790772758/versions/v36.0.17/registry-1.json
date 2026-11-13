@@ -1,0 +1,157 @@
+{
+  "published_at": "2026-10-02T16:53:59Z",
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "bytecodealliance",
+      "repo_name": "wasmtime",
+      "repo_id": 101767772,
+      "asset": "wasmtime-v36.0.17-x86_64-macos.tar.xz",
+      "format": "tar.xz",
+      "checksum": "4b04f843ce2405065fa62a7670f58338d932b446649aa10208211be5540a62ca",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "wasmtime",
+          "src": "wasmtime-v36.0.17-x86_64-macos/wasmtime"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "bytecodealliance/wasmtime/.github/workflows/publish-artifacts.yml",
+        "source_ref": "refs/tags/v36.0.17",
+        "source_digest": "5cbcb3944d300349cdb1d9da268dc142d8227ff4",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "bytecodealliance",
+      "repo_name": "wasmtime",
+      "repo_id": 101767772,
+      "asset": "wasmtime-v36.0.17-aarch64-macos.tar.xz",
+      "format": "tar.xz",
+      "checksum": "995f3020014a1f60c19790d464b8879239b5907b1746f8481735ddbf55397337",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "wasmtime",
+          "src": "wasmtime-v36.0.17-aarch64-macos/wasmtime"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "bytecodealliance/wasmtime/.github/workflows/publish-artifacts.yml",
+        "source_ref": "refs/tags/v36.0.17",
+        "source_digest": "5cbcb3944d300349cdb1d9da268dc142d8227ff4",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "bytecodealliance",
+      "repo_name": "wasmtime",
+      "repo_id": 101767772,
+      "asset": "wasmtime-v36.0.17-x86_64-linux.tar.xz",
+      "format": "tar.xz",
+      "checksum": "18a8c2880d15d81f3d0979f39237aea2fb5f862023eb26db6b96c9a69de30fb8",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "wasmtime",
+          "src": "wasmtime-v36.0.17-x86_64-linux/wasmtime"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "bytecodealliance/wasmtime/.github/workflows/publish-artifacts.yml",
+        "source_ref": "refs/tags/v36.0.17",
+        "source_digest": "5cbcb3944d300349cdb1d9da268dc142d8227ff4",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "bytecodealliance",
+      "repo_name": "wasmtime",
+      "repo_id": 101767772,
+      "asset": "wasmtime-v36.0.17-aarch64-linux.tar.xz",
+      "format": "tar.xz",
+      "checksum": "a6b0cee5c77c7a22b856cb68fb9d06d86b7c8c800d071b1142247302befa8dfa",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "wasmtime",
+          "src": "wasmtime-v36.0.17-aarch64-linux/wasmtime"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "bytecodealliance/wasmtime/.github/workflows/publish-artifacts.yml",
+        "source_ref": "refs/tags/v36.0.17",
+        "source_digest": "5cbcb3944d300349cdb1d9da268dc142d8227ff4",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "bytecodealliance",
+      "repo_name": "wasmtime",
+      "repo_id": 101767772,
+      "asset": "wasmtime-v36.0.17-x86_64-windows.zip",
+      "format": "zip",
+      "checksum": "c3fd601e1187544503a3f4be31791b90dace9bb4f7a3ecf236858093854c14e8",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "wasmtime",
+          "src": "wasmtime-v36.0.17-x86_64-windows/wasmtime.exe"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "bytecodealliance/wasmtime/.github/workflows/publish-artifacts.yml",
+        "source_ref": "refs/tags/v36.0.17",
+        "source_digest": "5cbcb3944d300349cdb1d9da268dc142d8227ff4",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "bytecodealliance",
+      "repo_name": "wasmtime",
+      "repo_id": 101767772,
+      "asset": "wasmtime-v36.0.17-aarch64-windows.zip",
+      "format": "zip",
+      "checksum": "99ccc6aa2de77097053fac41de8db18553dd1a96557f52c7cc737cf55d961b0c",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "wasmtime",
+          "src": "wasmtime-v36.0.17-aarch64-windows/wasmtime.exe"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "bytecodealliance/wasmtime/.github/workflows/publish-artifacts.yml",
+        "source_ref": "refs/tags/v36.0.17",
+        "source_digest": "5cbcb3944d300349cdb1d9da268dc142d8227ff4",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    }
+  ]
+}
