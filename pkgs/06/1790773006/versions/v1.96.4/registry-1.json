@@ -1,0 +1,52 @@
+{
+  "assets": [
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "static",
+      "type": "http",
+      "repo_owner": "tailscale",
+      "repo_name": "tailscale",
+      "repo_id": 237523442,
+      "asset": "tailscale_1.96.4_amd64.tgz",
+      "url": "https://pkgs.tailscale.com/stable/tailscale_1.96.4_amd64.tgz",
+      "format": "tgz",
+      "checksum": "a1cba18826b1f91cb25ef7f5b8259b5258339b42db7867af9269e21829ea78cc",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "tailscale",
+          "src": "tailscale_1.96.4_amd64/tailscale"
+        },
+        {
+          "name": "tailscaled",
+          "src": "tailscale_1.96.4_amd64/tailscaled"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "linked_libc": "static",
+      "type": "http",
+      "repo_owner": "tailscale",
+      "repo_name": "tailscale",
+      "repo_id": 237523442,
+      "asset": "tailscale_1.96.4_arm64.tgz",
+      "url": "https://pkgs.tailscale.com/stable/tailscale_1.96.4_arm64.tgz",
+      "format": "tgz",
+      "checksum": "a27249bc70d7b37a68f8be7f5c4507ea5f354e592dce43cb5d4f3e742b313c3c",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "tailscale",
+          "src": "tailscale_1.96.4_arm64/tailscale"
+        },
+        {
+          "name": "tailscaled",
+          "src": "tailscale_1.96.4_arm64/tailscaled"
+        }
+      ]
+    }
+  ]
+}
