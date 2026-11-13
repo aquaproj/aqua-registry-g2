@@ -1,0 +1,113 @@
+{
+  "published_at": "2025-12-02T07:43:18Z",
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "borgbackup",
+      "repo_name": "borg",
+      "repo_id": 35517126,
+      "asset": "borg-macos-13-x86_64-gh",
+      "format": "raw",
+      "checksum": "a097acd37ab21a83925d765d232bc7e91b60166986651dda0bb0a334df7d54c5",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "borg",
+          "src": "borg-macos-13-x86_64-gh"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "borgbackup/borg/.github/workflows/ci.yml",
+        "source_ref": "refs/tags/1.4.3",
+        "source_digest": "509c5695e09167e03014ac1df0b58d4fdc3e58a8",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "borgbackup",
+      "repo_name": "borg",
+      "repo_id": 35517126,
+      "asset": "borg-macos-14-arm64-gh",
+      "format": "raw",
+      "checksum": "fb14b23c2c476a9dc468026dcf2648ceefc65689faf9bc735771b691d94e8b43",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "borg",
+          "src": "borg-macos-14-arm64-gh"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "borgbackup/borg/.github/workflows/ci.yml",
+        "source_ref": "refs/tags/1.4.3",
+        "source_digest": "509c5695e09167e03014ac1df0b58d4fdc3e58a8",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "variants": {
+        "libc": "glibc"
+      },
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "borgbackup",
+      "repo_name": "borg",
+      "repo_id": 35517126,
+      "asset": "borg-linux-glibc235-x86_64-gh",
+      "format": "raw",
+      "checksum": "52d24e9d49bffc29e9690d39c8786aa5a3efb0ef0aabe89dc4a3cbb2b407460a",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "borg",
+          "src": "borg-linux-glibc235-x86_64-gh"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "borgbackup/borg/.github/workflows/ci.yml",
+        "source_ref": "refs/tags/1.4.3",
+        "source_digest": "509c5695e09167e03014ac1df0b58d4fdc3e58a8",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "variants": {
+        "libc": "glibc"
+      },
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "borgbackup",
+      "repo_name": "borg",
+      "repo_id": 35517126,
+      "asset": "borg-linux-glibc235-arm64-gh",
+      "format": "raw",
+      "checksum": "0f8bb8e721fc7c6dc356fa9279c9d009f77c92963e2c8f6fbd6f7922924cc4eb",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "borg",
+          "src": "borg-linux-glibc235-arm64-gh"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "borgbackup/borg/.github/workflows/ci.yml",
+        "source_ref": "refs/tags/1.4.3",
+        "source_digest": "509c5695e09167e03014ac1df0b58d4fdc3e58a8",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    }
+  ]
+}
