@@ -15,3 +15,6 @@ version_overrides:
   - version_constraint: "true"
     github_artifact_attestations:
       signer_workflow: lxc/incus/.github/workflows/release.yml
+# The release publishes incus-agent, incus-benchmark, incus-migrate and others beside incus,
+# and a macOS pkg was offered for darwin/amd64 though bin.macos.incus.x86_64 is published.
+all_assets_filter: Asset matches "^bin[.][a-z]+[.]incus[.]"
