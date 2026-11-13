@@ -4,3 +4,5 @@ repo_owner: spinframework
 repo_name: spin
 repo_id: 423679664
 description: Developer tool for building and running serverless WebAssembly applications
+# A -static- build tied with the ordinary one, which newer versions use.
+all_assets_filter: not (Asset contains "-static-")
