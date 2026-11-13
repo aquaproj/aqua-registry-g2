@@ -1,0 +1,198 @@
+{
+  "published_at": "2026-09-15T04:23:39Z",
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "moonrepo",
+      "repo_name": "moon",
+      "repo_id": 420489845,
+      "asset": "moon_cli-x86_64-apple-darwin.tar.xz",
+      "format": "tar.xz",
+      "checksum": "2eea47ad84724bfad1cc6d748fed857d03b026dbd258617154676342fa34de0f",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "moon",
+          "src": "moon_cli-x86_64-apple-darwin/moon"
+        },
+        {
+          "name": "moonx",
+          "src": "moon_cli-x86_64-apple-darwin/moonx"
+        }
+      ]
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "moonrepo",
+      "repo_name": "moon",
+      "repo_id": 420489845,
+      "asset": "moon_cli-aarch64-apple-darwin.tar.xz",
+      "format": "tar.xz",
+      "checksum": "c90963711b70609da398c1be8ee36b4cf2f6167c5ec53f486d8bd9baa56ea578",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "moon",
+          "src": "moon_cli-aarch64-apple-darwin/moon"
+        },
+        {
+          "name": "moonx",
+          "src": "moon_cli-aarch64-apple-darwin/moonx"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "variants": {
+        "libc": "glibc"
+      },
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "moonrepo",
+      "repo_name": "moon",
+      "repo_id": 420489845,
+      "asset": "moon_cli-x86_64-unknown-linux-gnu.tar.xz",
+      "format": "tar.xz",
+      "checksum": "f397057a22c88ff9e4b28a4a2fbf01d99f4d9a4f35e5a42634255a9f509ccbd6",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "moon",
+          "src": "moon_cli-x86_64-unknown-linux-gnu/moon"
+        },
+        {
+          "name": "moonx",
+          "src": "moon_cli-x86_64-unknown-linux-gnu/moonx"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "variants": {
+        "libc": "musl"
+      },
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "moonrepo",
+      "repo_name": "moon",
+      "repo_id": 420489845,
+      "asset": "moon_cli-x86_64-unknown-linux-musl.tar.xz",
+      "format": "tar.xz",
+      "checksum": "dc81938ae014afb3d8e91b24729639b4601c2493f0ce4c9e7030e905d59df363",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "moon",
+          "src": "moon_cli-x86_64-unknown-linux-musl/moon"
+        },
+        {
+          "name": "moonx",
+          "src": "moon_cli-x86_64-unknown-linux-musl/moonx"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "variants": {
+        "libc": "glibc"
+      },
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "moonrepo",
+      "repo_name": "moon",
+      "repo_id": 420489845,
+      "asset": "moon_cli-aarch64-unknown-linux-gnu.tar.xz",
+      "format": "tar.xz",
+      "checksum": "39d55e88774677181d1af3566c4ccd2994cd2d9d8199fcf30dc2d6defc05ac78",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "moon",
+          "src": "moon_cli-aarch64-unknown-linux-gnu/moon"
+        },
+        {
+          "name": "moonx",
+          "src": "moon_cli-aarch64-unknown-linux-gnu/moonx"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "variants": {
+        "libc": "musl"
+      },
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "moonrepo",
+      "repo_name": "moon",
+      "repo_id": 420489845,
+      "asset": "moon_cli-aarch64-unknown-linux-musl.tar.xz",
+      "format": "tar.xz",
+      "checksum": "65459d041d7395ec672f70c0c6989e5cb700b4efdd84cb577d453b4782ff0708",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "moon",
+          "src": "moon_cli-aarch64-unknown-linux-musl/moon"
+        },
+        {
+          "name": "moonx",
+          "src": "moon_cli-aarch64-unknown-linux-musl/moonx"
+        }
+      ]
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "moonrepo",
+      "repo_name": "moon",
+      "repo_id": 420489845,
+      "asset": "moon_cli-x86_64-pc-windows-msvc.zip",
+      "format": "zip",
+      "checksum": "36d4d88284f3444d3e5759f69b7f181eb807a3bcd20ce0bf475099132b41eb74",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "moon",
+          "src": "moon.exe"
+        },
+        {
+          "name": "moonx",
+          "src": "moonx.exe"
+        }
+      ]
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "windows_arm_emulation": true,
+      "type": "github_release",
+      "repo_owner": "moonrepo",
+      "repo_name": "moon",
+      "repo_id": 420489845,
+      "asset": "moon_cli-x86_64-pc-windows-msvc.zip",
+      "format": "zip",
+      "checksum": "36d4d88284f3444d3e5759f69b7f181eb807a3bcd20ce0bf475099132b41eb74",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "moon",
+          "src": "moon.exe"
+        },
+        {
+          "name": "moonx",
+          "src": "moonx.exe"
+        }
+      ]
+    }
+  ]
+}
