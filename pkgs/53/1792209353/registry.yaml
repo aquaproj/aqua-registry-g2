@@ -1,0 +1,27 @@
+name: Checkmarx/kics
+type: github_release
+repo_owner: Checkmarx
+repo_name: kics
+repo_id: 278200746
+description: Find security vulnerabilities, compliance issues, and infrastructure misconfigurations early in the development cycle of your infrastructure-as-code with KICS by Checkmarx
+version_overrides:
+  - version_constraint: semver("> 1.5.1")
+    files:
+      - name: kics
+        src: ./cmd/console
+        dir: kics-{{trimV .Version}}
+  - version_constraint: semver("> 1.2.3")
+  - version_constraint: semver("> 1.1.2")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("<= 1.1.2")
+    supported_envs:
+      - linux/amd64
+      - windows/amd64
+  - version_constraint: "true"
+    files:
+      - name: kics
+        src: ./cmd/console
+        dir: kics-{{trimV .Version}}
