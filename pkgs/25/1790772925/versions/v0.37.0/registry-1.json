@@ -45,14 +45,14 @@
       "repo_owner": "loft-sh",
       "repo_name": "vcluster",
       "repo_id": 355946670,
-      "asset": "syncer-linux-amd64",
+      "asset": "vcluster-linux-amd64",
       "format": "raw",
-      "checksum": "633091b324d48ea9cf384f20645feb3e3db4f414645ded80a074d0ff84325720",
+      "checksum": "bd7fbcd066fe810e41433c6335ff58eeed065650278e40ba21ead2271352a030",
       "checksum_algorithm": "sha256",
       "files": [
         {
           "name": "vcluster",
-          "src": "syncer-linux-amd64"
+          "src": "vcluster-linux-amd64"
         }
       ]
     },
@@ -64,14 +64,14 @@
       "repo_owner": "loft-sh",
       "repo_name": "vcluster",
       "repo_id": 355946670,
-      "asset": "syncer-linux-arm64",
+      "asset": "vcluster-linux-arm64",
       "format": "raw",
-      "checksum": "ffec550ca061b08afcfdb7ae1af87474016f2c4583a2365ee8f45b6555e88625",
+      "checksum": "f244ddc53c873c07f120bfbc80cbd4d0f3e5a9a7a93e4e12a9f00b63429adf40",
       "checksum_algorithm": "sha256",
       "files": [
         {
           "name": "vcluster",
-          "src": "syncer-linux-arm64"
+          "src": "vcluster-linux-arm64"
         }
       ]
     },
@@ -96,6 +96,7 @@
     {
       "os": "windows",
       "arch": "arm64",
+      "windows_arm_emulation": true,
       "type": "github_release",
       "repo_owner": "loft-sh",
       "repo_name": "vcluster",
