@@ -1,0 +1,122 @@
+{
+  "published_at": "2024-04-01T06:50:06Z",
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "bensadeh",
+      "repo_name": "tailspin",
+      "repo_id": 509970897,
+      "asset": "tailspin-x86_64-apple-darwin.tar.gz",
+      "format": "tar.gz",
+      "checksum": "4d9514973e483bc1bfe38baec269b0116228bc501019b329d42001c0dce9fbe1",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "tspin",
+          "src": "tspin"
+        }
+      ]
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "bensadeh",
+      "repo_name": "tailspin",
+      "repo_id": 509970897,
+      "asset": "tailspin-aarch64-apple-darwin.tar.gz",
+      "format": "tar.gz",
+      "checksum": "1568ea2b5fd37899294972f4770cd751adf5b1f8ab6039ca49dec2c2ed6cd7a3",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "tspin",
+          "src": "tspin"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "variants": {
+        "libc": "musl"
+      },
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "bensadeh",
+      "repo_name": "tailspin",
+      "repo_id": 509970897,
+      "asset": "tailspin-x86_64-unknown-linux-musl.tar.gz",
+      "format": "tar.gz",
+      "checksum": "266fe30b1147cab8645b24ef19077d0ab548ce2e76d08f38f5606ce08c29f0b2",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "tspin",
+          "src": "tspin"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "variants": {
+        "libc": "musl"
+      },
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "bensadeh",
+      "repo_name": "tailspin",
+      "repo_id": 509970897,
+      "asset": "tailspin-aarch64-unknown-linux-musl.tar.gz",
+      "format": "tar.gz",
+      "checksum": "73f5b85ece31e943eece1a0b782ba390c242673fa550b93a3057ef930ea503f6",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "tspin",
+          "src": "tspin"
+        }
+      ]
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "bensadeh",
+      "repo_name": "tailspin",
+      "repo_id": 509970897,
+      "asset": "tailspin-x86_64-pc-windows-msvc.zip",
+      "format": "zip",
+      "checksum": "dd6e3b6288eadd0997cd8240496ec665d5d2560bc8a93ab0aa81f273600d000a",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "tspin",
+          "src": "tspin.exe"
+        }
+      ]
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "windows_arm_emulation": true,
+      "type": "github_release",
+      "repo_owner": "bensadeh",
+      "repo_name": "tailspin",
+      "repo_id": 509970897,
+      "asset": "tailspin-x86_64-pc-windows-msvc.zip",
+      "format": "zip",
+      "checksum": "dd6e3b6288eadd0997cd8240496ec665d5d2560bc8a93ab0aa81f273600d000a",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "tspin",
+          "src": "tspin.exe"
+        }
+      ]
+    }
+  ]
+}
