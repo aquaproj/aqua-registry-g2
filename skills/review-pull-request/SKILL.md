@@ -149,8 +149,8 @@ Auto-merge is never on for these, whatever the files look like, because what CI
 establishes is the same as always — the assets download, the checksums match, the
 archives open, the signatures verify — and none of that says replacing the old file was
 right. Only the versions whose file actually changed are in it. It is labelled
-`replaces-published`, and the checks fail it while auto-merge is on, so it lands only when a
-person merges it, which is the conclusion of that reading.
+`replaces-published`, and it lands only when a person merges it or turns auto-merge on for
+it, which is the conclusion of that reading.
 
 What to check is the definition rather than the release: read the change that prompted
 it in the package's directory, and confirm the new files are what that change should

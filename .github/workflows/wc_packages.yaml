@@ -22,7 +22,7 @@ jobs:
       AQUA_GLOBAL_CONFIG: ${{ github.workspace }}/aqua/aqua.yaml
     permissions:
       contents: read
-      # Reading which files the pull request touches, and whether it is set to merge itself.
+      # Reading which files the pull request touches.
       pull-requests: read
     steps:
       # The registry holds every package, so only what is read is checked out: the
