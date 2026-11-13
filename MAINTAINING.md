@@ -48,11 +48,12 @@ called from there:
   request touches, and refuses what no pull request may do. A package's pull request from
   `ar2_<id>`, `ar2_<id>_<version>` or `ar2_<id>__needs-definition` touches that package's
   directory and nothing else, the one from `ar2_versions` touches nothing but `versions.json`
-  files, and one from any other `ar2_` branch touches no package. A `registry-*.json` already published is changed or
-  removed only by a pull request that isn't set to merge itself: a person merging it is
-  what says the change was read and is meant. ar2 labels such a pull request
-  `replaces-published` and doesn't turn auto-merge on, and the checks run again when
-  auto-merge is turned on or off. When
+  files, and one from any other `ar2_` branch touches no package. A pull request that
+  changes or removes a `registry-*.json` already published is labelled
+  `replaces-published`, and ar2 doesn't turn auto-merge on for it, so it waits for a person:
+  merging it, or turning auto-merge on for it, is what says the change was read and is
+  meant. The checks don't read whether auto-merge is on, so it can be turned on before they
+  finish. When
   every package had a branch of its own, a pull request couldn't reach another package; on
   `main` that is this check.
 - Each package's definition is validated, and every `registry-*.json` added or changed is

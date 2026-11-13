@@ -5,11 +5,11 @@
 name: test
 on:
   pull_request:
-    # auto_merge_enabled and auto_merge_disabled too: a pull request that changes a published
-    # file may not merge itself, so turning auto-merge on has to be checked again. Not
-    # labeled or unlabeled: no label is read, and a run for one would leave a skipped
-    # status-check-main, which GitHub reads as a pass.
-    types: [opened, synchronize, reopened, auto_merge_enabled, auto_merge_disabled]
+    # Not labeled or unlabeled: no label is read, and a run for one would leave a skipped
+    # status-check-main, which GitHub reads as a pass. Not auto_merge_enabled or
+    # auto_merge_disabled either: whether auto-merge is on isn't read, and a run for one
+    # started beside the one for opened cancels it, which fails status-check-main.
+    types: [opened, synchronize, reopened]
 permissions: {}
 concurrency:
   group: ${{ github.workflow }}--${{ github.ref }}
@@ -19,7 +19,7 @@ jobs:
     uses: ./.github/workflows/wc_main.yaml
     permissions:
       contents: read
-      # Reading which files the pull request touches, and whether it is set to merge itself.
+      # Reading which files the pull request touches.
       pull-requests: read
   # The one check the ruleset requires.
   status-check-main:
