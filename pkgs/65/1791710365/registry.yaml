@@ -4,3 +4,5 @@ repo_owner: neilotoole
 repo_name: sq
 repo_id: 51800292
 description: sq data wrangler
+# The Arch Linux package, .pkg.tar.zst, tied with the tar.gz.
+all_assets_filter: not (Asset endsWith ".pkg.tar.zst")
