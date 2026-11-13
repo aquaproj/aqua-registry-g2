@@ -1,0 +1,12 @@
+name: chmln/handlr
+type: github_release
+repo_owner: chmln
+repo_name: handlr
+repo_id: 253335769
+description: A better xdg-utils
+supported_envs:
+  - linux/amd64
+asset_rules:
+  - envs:
+      - linux/amd64
+    filter: Asset matches "^handlr([.].+)?$"
