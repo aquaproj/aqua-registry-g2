@@ -9,3 +9,6 @@ version_overrides:
     - version_constraint: "true"
       replacements:
         linux: linux64
+# Old releases name a 32-bit ARM build linuxarm32, which was offered for linux/arm64, and a
+# 32-bit x86 one linux32.
+all_assets_filter: not (Asset contains "arm32" or Asset contains "linux32")
