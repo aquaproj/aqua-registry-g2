@@ -9,16 +9,17 @@ name: close-issues
 # closes an issue whose every version and environment is resolved.
 #
 # What resolves one is a version merging: an environment put back by 'ar2 regenerate', or a
-# stopped version published. So a push to main touching a versions directory asks for it,
-# and the schedule catches what that misses.
+# stopped version published.
+#
+# On a schedule rather than on every push touching a versions directory. A run reads every
+# open issue's comments and a registry.json per version they record, one REST call each, on
+# GITHUB_TOKEN's budget, which is the whole repository's. While the chain of ar2 runs merges
+# a version every few seconds, a run on each push meant a run all the time: three of them
+# took most of 800 calls in two minutes. An issue closing within the hour is soon enough.
+# The odd minute keeps off the top of the hour and off index and update-versions.
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - pkgs/*/*/versions/**
   schedule:
-    - cron: "27 3 * * *"
+    - cron: "37 * * * *"
   workflow_dispatch: {}
 permissions: {}
 # One at a time, so that two runs don't comment on the same issue twice.
@@ -49,3 +50,7 @@ jobs:
             --g2-repo "${GITHUB_REPOSITORY#*/}"
         env:
           GITHUB_TOKEN: ${{ github.token }}
+      # How much of GITHUB_TOKEN's budget the repository has used. See the action.
+      - uses: $/.github/actions/measure-rate-limit
+        if: always()
+        continue-on-error: true
