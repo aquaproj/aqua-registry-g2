@@ -1,0 +1,200 @@
+{
+  "published_at": "2025-12-18T13:04:01Z",
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "bitnami",
+      "repo_name": "sealed-secrets",
+      "repo_id": 92702519,
+      "asset": "kubeseal-0.34.0-darwin-amd64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "e449e44ce024dea3cec6e617693c82fc2be090aafa04dcacfe83b30fad0d6ed1",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "kubeseal",
+          "src": "kubeseal"
+        }
+      ],
+      "cosign": {
+        "signature": {
+          "type": "github_release",
+          "repo_owner": "bitnami",
+          "repo_name": "sealed-secrets",
+          "asset": "kubeseal-0.34.0-darwin-amd64.tar.gz.sig"
+        },
+        "key": {
+          "type": "github_release",
+          "repo_owner": "bitnami",
+          "repo_name": "sealed-secrets",
+          "asset": "cosign.pub"
+        }
+      }
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "bitnami",
+      "repo_name": "sealed-secrets",
+      "repo_id": 92702519,
+      "asset": "kubeseal-0.34.0-darwin-arm64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "c13a71c03cce62a233b9dfb641f45c5d04964a1d1a923c82f51a078e039e04ca",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "kubeseal",
+          "src": "kubeseal"
+        }
+      ],
+      "cosign": {
+        "signature": {
+          "type": "github_release",
+          "repo_owner": "bitnami",
+          "repo_name": "sealed-secrets",
+          "asset": "kubeseal-0.34.0-darwin-arm64.tar.gz.sig"
+        },
+        "key": {
+          "type": "github_release",
+          "repo_owner": "bitnami",
+          "repo_name": "sealed-secrets",
+          "asset": "cosign.pub"
+        }
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "bitnami",
+      "repo_name": "sealed-secrets",
+      "repo_id": 92702519,
+      "asset": "kubeseal-0.34.0-linux-amd64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "02500fbcbb3c751226f1623378827157292d78fb86f31edf222eed2abeb9d4f3",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "kubeseal",
+          "src": "kubeseal"
+        }
+      ],
+      "cosign": {
+        "signature": {
+          "type": "github_release",
+          "repo_owner": "bitnami",
+          "repo_name": "sealed-secrets",
+          "asset": "kubeseal-0.34.0-linux-amd64.tar.gz.sig"
+        },
+        "key": {
+          "type": "github_release",
+          "repo_owner": "bitnami",
+          "repo_name": "sealed-secrets",
+          "asset": "cosign.pub"
+        }
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "bitnami",
+      "repo_name": "sealed-secrets",
+      "repo_id": 92702519,
+      "asset": "kubeseal-0.34.0-linux-arm64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "a3aa9c7bdc49e58b4d38e11dd974d2dc07439218b2ca3084771167c9354eb394",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "kubeseal",
+          "src": "kubeseal"
+        }
+      ],
+      "cosign": {
+        "signature": {
+          "type": "github_release",
+          "repo_owner": "bitnami",
+          "repo_name": "sealed-secrets",
+          "asset": "kubeseal-0.34.0-linux-arm64.tar.gz.sig"
+        },
+        "key": {
+          "type": "github_release",
+          "repo_owner": "bitnami",
+          "repo_name": "sealed-secrets",
+          "asset": "cosign.pub"
+        }
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "bitnami",
+      "repo_name": "sealed-secrets",
+      "repo_id": 92702519,
+      "asset": "kubeseal-0.34.0-windows-amd64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "9d1fb06c76586515487f31f6d25556ee5aa33cbe9a8579499a478de773d316b4",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "kubeseal",
+          "src": "kubeseal.exe"
+        }
+      ],
+      "cosign": {
+        "signature": {
+          "type": "github_release",
+          "repo_owner": "bitnami",
+          "repo_name": "sealed-secrets",
+          "asset": "kubeseal-0.34.0-windows-amd64.tar.gz.sig"
+        },
+        "key": {
+          "type": "github_release",
+          "repo_owner": "bitnami",
+          "repo_name": "sealed-secrets",
+          "asset": "cosign.pub"
+        }
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "windows_arm_emulation": true,
+      "type": "github_release",
+      "repo_owner": "bitnami",
+      "repo_name": "sealed-secrets",
+      "repo_id": 92702519,
+      "asset": "kubeseal-0.34.0-windows-amd64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "9d1fb06c76586515487f31f6d25556ee5aa33cbe9a8579499a478de773d316b4",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "kubeseal",
+          "src": "kubeseal.exe"
+        }
+      ],
+      "cosign": {
+        "signature": {
+          "type": "github_release",
+          "repo_owner": "bitnami",
+          "repo_name": "sealed-secrets",
+          "asset": "kubeseal-0.34.0-windows-amd64.tar.gz.sig"
+        },
+        "key": {
+          "type": "github_release",
+          "repo_owner": "bitnami",
+          "repo_name": "sealed-secrets",
+          "asset": "cosign.pub"
+        }
+      }
+    }
+  ]
+}
