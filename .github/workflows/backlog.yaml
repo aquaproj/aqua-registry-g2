@@ -1,0 +1,70 @@
+---
+name: backlog
+# Work through the backlog of version pull requests whose checks failed in October, a batch
+# at a time: each is brought up to date with main, so that its checks run as they are now and
+# it merges itself. See .github/scripts/backlog.sh for which are taken and how fast.
+#
+# A run dispatches the next, like the chain of ar2 runs, rather than running on a schedule,
+# which GitHub has answered hours late here. Cancel the run that is going to stop it. It stops
+# by itself when nothing is left.
+on:
+  workflow_dispatch:
+    inputs:
+      batch:
+        description: how many pull requests to update in a run
+        required: false
+        default: "30"
+      before:
+        description: take only pull requests nothing has been done to since this date
+        required: false
+        default: "2026-11-12"
+      chain:
+        description: how many more runs follow this one, or "forever"
+        required: false
+        default: forever
+      dry_run:
+        description: say which pull requests would be updated, update none and dispatch nothing
+        type: boolean
+        required: false
+        default: false
+permissions: {}
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+jobs:
+  backlog:
+    runs-on: ubuntu-26.04
+    # The environment holding the pull request app's key, which only main deploys to.
+    environment: index
+    # A run waits out the floor between runs before it dispatches the next.
+    timeout-minutes: 30
+    permissions:
+      # Checking out main for the script.
+      contents: read
+      # Counting the runs queued, and dispatching the next run of this workflow.
+      actions: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+          sparse-checkout: .github/scripts
+      # The app's token updates the branches. A branch updated with GITHUB_TOKEN starts no
+      # workflow, so the checks would never run on it.
+      - uses: actions/create-github-app-token@64ab729a6294000f5aa4a4bc0b73d1f32bc45510 # v3.3.0
+        id: pr_token
+        with:
+          client-id: ${{ vars.AR2_PR_CLIENT_ID }}
+          private-key: ${{ secrets.AR2_PR_PRIVATE_KEY }}
+          # Updating a branch merges main into it.
+          permission-contents: write
+          permission-pull-requests: write
+      - run: bash .github/scripts/backlog.sh
+        env:
+          GH_REPO: ${{ github.repository }}
+          GH_TOKEN: ${{ steps.pr_token.outputs.token }}
+          ACTIONS_TOKEN: ${{ github.token }}
+          APP: ${{ steps.pr_token.outputs.app-slug }}
+          BATCH: ${{ inputs.batch }}
+          BEFORE: ${{ inputs.before }}
+          CHAIN: ${{ inputs.chain }}
+          DRY_RUN: ${{ inputs.dry_run }}
