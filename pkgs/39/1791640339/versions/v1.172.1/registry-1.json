@@ -1,0 +1,79 @@
+{
+  "published_at": "2026-11-11T02:55:26Z",
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "aws",
+      "repo_name": "aws-sam-cli",
+      "repo_id": 92205085,
+      "asset": "aws-sam-cli-macos-x86_64.pkg",
+      "format": "pkg",
+      "checksum": "6af39e2634dba8ff0a2094b9e4f950f91fdf51ded9a3c97c976a059d0c73bc34",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "sam",
+          "src": "aws-sam-cli.pkg/Payload/aws-sam-cli/sam"
+        }
+      ]
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "aws",
+      "repo_name": "aws-sam-cli",
+      "repo_id": 92205085,
+      "asset": "aws-sam-cli-macos-arm64.pkg",
+      "format": "pkg",
+      "checksum": "3123ce41dec75b922c631cafab99b2e6234844228104efb8a01fba5ebf4a2abe",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "sam",
+          "src": "aws-sam-cli.pkg/Payload/aws-sam-cli/sam"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "aws",
+      "repo_name": "aws-sam-cli",
+      "repo_id": 92205085,
+      "asset": "aws-sam-cli-linux-x86_64.zip",
+      "format": "zip",
+      "checksum": "aa6a5a785c576f5d8e1b783fe1633cb6eea1cbab382fa5aca1b9e17a9250cc07",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "sam",
+          "src": "dist/sam"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "aws",
+      "repo_name": "aws-sam-cli",
+      "repo_id": 92205085,
+      "asset": "aws-sam-cli-linux-arm64.zip",
+      "format": "zip",
+      "checksum": "fcfc7cd414a75cc17a00c81110b2955ab52b6fae1dd8b7415d637ca95ca931df",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "sam",
+          "src": "dist/sam"
+        }
+      ]
+    }
+  ]
+}
