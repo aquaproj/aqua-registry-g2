@@ -39,3 +39,10 @@ version_overrides:
           files:
             - name: scrcpy
               src: '{{.AssetWithoutExt}}/scrcpy'
+# Every release that publishes the 32-bit Windows build publishes the 64-bit one beside it,
+# and the parser reads both as windows/amd64.
+all_assets_filter: not (Asset contains "win32")
+# v3.0 is written by hand, for Windows alone. Its Linux and macOS assets are tar archives
+# named .tar.gz, and aqua tells an archive's format from its name and contents rather
+# than from the format an entry declares, so it can't unpack them whatever the entry
+# says. Generating v3.0 again would put them back.
