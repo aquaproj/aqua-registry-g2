@@ -1,0 +1,100 @@
+{
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "go_install",
+      "repo_owner": "alpkeskin",
+      "repo_name": "mosint",
+      "repo_id": 299054922,
+      "asset": "mosint",
+      "path": "github.com/alpkeskin/mosint/v{{(semver .Version).Major}}/cmd/mosint",
+      "files": [
+        {
+          "name": "mosint",
+          "src": "mosint"
+        }
+      ]
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "go_install",
+      "repo_owner": "alpkeskin",
+      "repo_name": "mosint",
+      "repo_id": 299054922,
+      "asset": "mosint",
+      "path": "github.com/alpkeskin/mosint/v{{(semver .Version).Major}}/cmd/mosint",
+      "files": [
+        {
+          "name": "mosint",
+          "src": "mosint"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "type": "go_install",
+      "repo_owner": "alpkeskin",
+      "repo_name": "mosint",
+      "repo_id": 299054922,
+      "asset": "mosint",
+      "path": "github.com/alpkeskin/mosint/v{{(semver .Version).Major}}/cmd/mosint",
+      "files": [
+        {
+          "name": "mosint",
+          "src": "mosint"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "type": "go_install",
+      "repo_owner": "alpkeskin",
+      "repo_name": "mosint",
+      "repo_id": 299054922,
+      "asset": "mosint",
+      "path": "github.com/alpkeskin/mosint/v{{(semver .Version).Major}}/cmd/mosint",
+      "files": [
+        {
+          "name": "mosint",
+          "src": "mosint"
+        }
+      ]
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "go_install",
+      "repo_owner": "alpkeskin",
+      "repo_name": "mosint",
+      "repo_id": 299054922,
+      "asset": "mosint.exe",
+      "path": "github.com/alpkeskin/mosint/v{{(semver .Version).Major}}/cmd/mosint",
+      "files": [
+        {
+          "name": "mosint",
+          "src": "mosint.exe"
+        }
+      ]
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "type": "go_install",
+      "repo_owner": "alpkeskin",
+      "repo_name": "mosint",
+      "repo_id": 299054922,
+      "asset": "mosint.exe",
+      "path": "github.com/alpkeskin/mosint/v{{(semver .Version).Major}}/cmd/mosint",
+      "files": [
+        {
+          "name": "mosint",
+          "src": "mosint.exe"
+        }
+      ]
+    }
+  ]
+}
