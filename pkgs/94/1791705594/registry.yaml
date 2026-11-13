@@ -11,3 +11,5 @@ version_overrides:
     files:
       - name: tssh
         src: '{{.AssetWithoutExt}}/tssh'
+# A build for Windows 7, win7, tied with the windows one.
+all_assets_filter: not (Asset contains "win7")
