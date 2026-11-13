@@ -18,4 +18,6 @@ version_overrides:
       - linux
       - darwin
   - version_constraint: "true"
-all_assets_filter: not (Asset matches "mimir-")
+# The release publishes several programs, mimir, mark-blocks, metaconvert and query-tee
+# among them, each with a -sha-256 file.
+all_assets_filter: Asset startsWith "mimirtool-" and not (Asset endsWith "-sha-256")
