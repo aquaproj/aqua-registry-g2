@@ -1,0 +1,20 @@
+name: Canop/rhit
+type: github_release
+repo_owner: Canop
+repo_name: rhit
+repo_id: 331421067
+description: A nginx log explorer
+version_overrides:
+  - version_constraint: "true"
+    files:
+      - name: rhit
+        src: build/{{.Arch}}-{{.OS}}/rhit
+asset_rules:
+  - envs:
+      - linux/amd64
+      - linux/arm64
+      - darwin/amd64
+      - darwin/arm64
+      - windows/amd64
+      - windows/arm64
+    filter: Asset matches "^rhit_.+[.].+([.].+)?$"
