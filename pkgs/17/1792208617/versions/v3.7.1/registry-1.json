@@ -4,6 +4,7 @@
     {
       "os": "linux",
       "arch": "amd64",
+      "linked_libc": "static",
       "type": "github_release",
       "repo_owner": "Canop",
       "repo_name": "dysk",
@@ -15,13 +16,14 @@
       "files": [
         {
           "name": "dysk",
-          "src": "build/amd64-linux/dysk"
+          "src": "x86_64-unknown-linux-musl/dysk"
         }
       ]
     },
     {
       "os": "linux",
       "arch": "arm64",
+      "linked_libc": "static",
       "type": "github_release",
       "repo_owner": "Canop",
       "repo_name": "dysk",
@@ -33,7 +35,7 @@
       "files": [
         {
           "name": "dysk",
-          "src": "build/arm64-linux/dysk"
+          "src": "aarch64-unknown-linux-musl/dysk"
         }
       ]
     }
