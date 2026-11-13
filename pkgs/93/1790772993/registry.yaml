@@ -4,3 +4,13 @@ repo_owner: simeji
 repo_name: jid
 repo_id: 60534669
 description: json incremental digger
+version_overrides:
+  # Before 0.7.3 each zip holds the executable under the asset's own name, jid_linux_amd64
+  # and so on, and the only Linux ARM build is 32-bit (jid_linux_arm), which can't be
+  # linux/arm64's.
+  - version_constraint: semver("< 0.7.3")
+    all_assets_filter: not (Asset contains "_arm.")
+    files:
+      - name: jid
+        src: '{{.AssetWithoutExt}}'
+  - version_constraint: "true"
