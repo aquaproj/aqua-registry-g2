@@ -1,0 +1,28 @@
+---
+name: measure rate limit
+description: Print how much of a token's hourly API budget is used, core and GraphQL, as one line
+# What the checks of a pull request cost, and what a run of ar2 costs, is read from these
+# lines. GITHUB_TOKEN's budget is the whole repository's, so a job's cost is the difference
+# between lines read while nothing else runs, not the line itself.
+#
+# Asking /rate_limit doesn't count against the budget. A token that hasn't made a request
+# yet answers with a window of its own (core=0), so the line is read at the end of a job,
+# after the job's requests, rather than at the start.
+inputs:
+  label:
+    description: what the line is for, printed at its start
+    required: false
+    default: end
+  token:
+    description: the token whose budget to read
+    required: false
+    default: ${{ github.token }}
+runs:
+  using: composite
+  steps:
+    - shell: bash
+      run: |
+        gh api rate_limit --jq '"api-budget \(env.LABEL) core=\(.resources.core.used)/\(.resources.core.limit) graphql=\(.resources.graphql.used)/\(.resources.graphql.limit) reset=\(.resources.core.reset)"'
+      env:
+        GH_TOKEN: ${{ inputs.token }}
+        LABEL: ${{ inputs.label }}
