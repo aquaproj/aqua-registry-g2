@@ -1,0 +1,49 @@
+{
+  "published_at": "2022-07-23T12:57:37Z",
+  "assets": [
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "variants": {
+        "libc": "glibc"
+      },
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "yujqiao",
+      "repo_name": "catproc",
+      "repo_id": 517052475,
+      "asset": "catp-x86_64-unknown-linux-gnu.zip",
+      "format": "zip",
+      "checksum": "969f6a1546cadd9fddf14d67fd554b1ca59eda151d422071a30d2effbca82d96",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "catp",
+          "src": "catp"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "variants": {
+        "libc": "musl"
+      },
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "yujqiao",
+      "repo_name": "catproc",
+      "repo_id": 517052475,
+      "asset": "catp-x86_64-unknown-linux-musl.zip",
+      "format": "zip",
+      "checksum": "def3e31d98440b0ddc9a0fcd58aa95a56ee8595df02438bf13dc2ab33d6e37dd",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "catp",
+          "src": "catp"
+        }
+      ]
+    }
+  ]
+}
