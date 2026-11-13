@@ -192,3 +192,6 @@ version_overrides:
         - goos: windows
           files:
             - name: fastfetch
+# Each Linux build is also published polyfilled for older glibc, which tied with the
+# ordinary one.
+all_assets_filter: not (Asset contains "polyfilled")
