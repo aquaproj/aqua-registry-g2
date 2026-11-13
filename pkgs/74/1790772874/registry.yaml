@@ -6,3 +6,5 @@ repo_id: 244377430
 description: Ohayou(おはよう), HTTP load generator, inspired by rakyll/hey with tui animation
 version_overrides:
     - version_constraint: "true"
+# A -pgo build tied with the ordinary one, which newer versions use.
+all_assets_filter: not (Asset contains "-pgo")
