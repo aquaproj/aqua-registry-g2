@@ -22,4 +22,14 @@ supported_envs:
     - linux
     - darwin
 version_overrides:
+    # From 1.104 the macOS package's payload is the app bundle itself, so the executable
+    # sits under Tailscale.app rather than at Contents directly.
+    - version_constraint: semver(">= 1.104.0")
+      overrides:
+        - goos: darwin
+          format: pkg
+          url: https://pkgs.tailscale.com/stable/Tailscale-{{trimV .Version}}-macos.{{.Format}}
+          files:
+            - name: tailscale
+              src: Distribution.pkg/Payload/Tailscale.app/Contents/MacOS/Tailscale
     - version_constraint: "true"
