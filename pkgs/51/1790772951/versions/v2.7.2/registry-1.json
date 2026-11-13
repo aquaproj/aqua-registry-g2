@@ -1,0 +1,117 @@
+{
+  "published_at": "2026-10-26T20:24:37Z",
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "openbao",
+      "repo_name": "openbao",
+      "repo_id": 716719284,
+      "asset": "openbao_2.7.2_darwin_amd64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "ea62ce00b81a2170a5daa8589f8420434e72d4d4ebcd2a4cbfa9add507a2602d",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "bao",
+          "src": "bao"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "openbao_2.7.2_darwin_amd64.tar.gz.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/openbao/openbao/.github/workflows/release.yml@refs/heads/release/2.7.x",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "certificate_github_workflow_repository": "openbao/openbao",
+        "certificate_github_workflow_ref": "refs/heads/release/2.7.x"
+      }
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "openbao",
+      "repo_name": "openbao",
+      "repo_id": 716719284,
+      "asset": "openbao_2.7.2_darwin_arm64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "2b4fc131910f4b075b2e1c9a9de67c461489491a8f03fbdc73387294d67d9547",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "bao",
+          "src": "bao"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "openbao_2.7.2_darwin_arm64.tar.gz.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/openbao/openbao/.github/workflows/release.yml@refs/heads/release/2.7.x",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "certificate_github_workflow_repository": "openbao/openbao",
+        "certificate_github_workflow_ref": "refs/heads/release/2.7.x"
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "openbao",
+      "repo_name": "openbao",
+      "repo_id": 716719284,
+      "asset": "openbao_2.7.2_windows_amd64.zip",
+      "format": "zip",
+      "checksum": "b058d30eac461e78e56305d3aa7371c061405a060f364aa20999dc3a309264f4",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "bao",
+          "src": "bao.exe"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "openbao_2.7.2_windows_amd64.zip.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/openbao/openbao/.github/workflows/release.yml@refs/heads/release/2.7.x",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "certificate_github_workflow_repository": "openbao/openbao",
+        "certificate_github_workflow_ref": "refs/heads/release/2.7.x"
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "openbao",
+      "repo_name": "openbao",
+      "repo_id": 716719284,
+      "asset": "openbao_2.7.2_windows_arm64.zip",
+      "format": "zip",
+      "checksum": "e1acf36792e35c7242742fb59f4bdb15f66282732d6ab753092363ff9b3a6ec1",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "bao",
+          "src": "bao.exe"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "openbao_2.7.2_windows_arm64.zip.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/openbao/openbao/.github/workflows/release.yml@refs/heads/release/2.7.x",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "certificate_github_workflow_repository": "openbao/openbao",
+        "certificate_github_workflow_ref": "refs/heads/release/2.7.x"
+      }
+    }
+  ]
+}
