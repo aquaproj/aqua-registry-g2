@@ -8,3 +8,11 @@ files:
   - name: container-use
   - name: cu
     src: container-use
+version_overrides:
+  # Before 0.2.0 the executable is named cu, and container-use is the name it took later.
+  - version_constraint: semver("< 0.2.0")
+    files:
+      - name: cu
+      - name: container-use
+        src: cu
+  - version_constraint: "true"
