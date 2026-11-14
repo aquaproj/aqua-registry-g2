@@ -1,0 +1,42 @@
+---
+name: sync progress
+# Say on the progress issue, once a day, how far the registry has got in taking over
+# aqua-registry's packages: how many of them have a version published here, and how many
+# have had their whole history walked.
+#
+# It reads ar2's state from the container registry and main's tree, neither of which is a
+# GitHub API request; the comment is the only one.
+on:
+  # Once a day, at an odd minute so as not to queue behind everyone else's top of the hour.
+  schedule:
+    - cron: "17 0 * * *"
+  workflow_dispatch:
+permissions: {}
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+jobs:
+  report:
+    runs-on: ubuntu-26.04
+    timeout-minutes: 10
+    permissions:
+      # Listing main's tree.
+      contents: read
+      # Reading ar2's state from the container registry.
+      packages: read
+      # Commenting on the progress issue.
+      issues: write
+    steps:
+      # The tree is all that is read, so no blob is downloaded and nothing is checked out
+      # but the script.
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+          filter: blob:none
+          sparse-checkout: .github/scripts
+      - run: bash .github/scripts/sync-progress.sh
+        env:
+          GH_REPO: ${{ github.repository }}
+          GH_TOKEN: ${{ github.token }}
+          # https://github.com/aquaproj/aqua-registry-g2/issues/9779
+          ISSUE: "9779"
