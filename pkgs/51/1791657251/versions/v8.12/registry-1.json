@@ -47,6 +47,30 @@
       ]
     },
     {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "glibc",
+      "type": "http",
+      "repo_owner": "racket",
+      "repo_name": "racket",
+      "repo_id": 615969,
+      "asset": "racket-minimal-8.12-x86_64-linux-cs.tgz",
+      "url": "https://download.racket-lang.org/releases/8.12/installers/racket-minimal-8.12-x86_64-linux-cs.tgz",
+      "format": "tgz",
+      "checksum": "f772ab01a2b4e36ba5e63d7d457aca60e4dd610b585c35ff9f641d76a8515c74",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "racket",
+          "src": "racket/bin/racket"
+        },
+        {
+          "name": "raco",
+          "src": "racket/bin/raco"
+        }
+      ]
+    },
+    {
       "os": "windows",
       "arch": "amd64",
       "type": "http",
