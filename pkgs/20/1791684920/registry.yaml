@@ -4,6 +4,9 @@ repo_owner: minio
 repo_name: mc
 repo_id: 29329884
 description: Unix like utilities for object store
+# Some releases ship a FIPS build of linux/amd64, mc.linux-amd64.fips.RELEASE..., beside the
+# regular one, and the two tie.
+all_assets_filter: not (Asset contains ".fips.")
 minisign:
   type: github_release
   asset: '{{.Asset}}.minisig'
