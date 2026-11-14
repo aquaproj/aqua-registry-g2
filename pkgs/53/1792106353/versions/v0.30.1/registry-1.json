@@ -1,0 +1,163 @@
+{
+  "published_at": "2026-03-19T01:24:54Z",
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "smallstep",
+      "repo_name": "cli",
+      "repo_id": 141352703,
+      "asset": "step_darwin_0.30.1_amd64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "21ddaeeb107252417bb345b0a7ad0e072f3a6fb538f4b84b2e0a4b82388064e4",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "step",
+          "src": "step_0.30.1/bin/step"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "step_darwin_0.30.1_amd64.tar.gz.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/smallstep/workflows/.github/workflows/goreleaser.yml@refs/heads/main",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "smallstep",
+      "repo_name": "cli",
+      "repo_id": 141352703,
+      "asset": "step_darwin_0.30.1_arm64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "b03bcab951b3247f2e73f5d28aa683cac6469cff044dd7c10646635aafafc3b3",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "step",
+          "src": "step_0.30.1/bin/step"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "step_darwin_0.30.1_arm64.tar.gz.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/smallstep/workflows/.github/workflows/goreleaser.yml@refs/heads/main",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "smallstep",
+      "repo_name": "cli",
+      "repo_id": 141352703,
+      "asset": "step_linux_0.30.1_amd64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "041bace51dfaa711dccec794fa6e7db85b4bed172f50fca8724aac6040a5004a",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "step",
+          "src": "step_0.30.1/bin/step"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "step_linux_0.30.1_amd64.tar.gz.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/smallstep/workflows/.github/workflows/goreleaser.yml@refs/heads/main",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "smallstep",
+      "repo_name": "cli",
+      "repo_id": 141352703,
+      "asset": "step_linux_0.30.1_arm64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "331af12a36f3086e0feb5365a549f5294a183f01409e803137582946207228c9",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "step",
+          "src": "step_0.30.1/bin/step"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "step_linux_0.30.1_arm64.tar.gz.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/smallstep/workflows/.github/workflows/goreleaser.yml@refs/heads/main",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "smallstep",
+      "repo_name": "cli",
+      "repo_id": 141352703,
+      "asset": "step_windows_0.30.1_amd64.zip",
+      "format": "zip",
+      "checksum": "df2315a8df0fa5a9f6d87cec081fe89deecc62ed3a6113d9243c24246b53caea",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "step",
+          "src": "step_0.30.1/bin/step.exe"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "step_windows_0.30.1_amd64.zip.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/smallstep/workflows/.github/workflows/goreleaser.yml@refs/heads/main",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "smallstep",
+      "repo_name": "cli",
+      "repo_id": 141352703,
+      "asset": "step_windows_0.30.1_arm64.zip",
+      "format": "zip",
+      "checksum": "d773f6bc51e2d82bd38808d9e9fb2e5a76111d66bc87d3da62d31c29017a40a9",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "step",
+          "src": "step_0.30.1/bin/step.exe"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "step_windows_0.30.1_arm64.zip.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/smallstep/workflows/.github/workflows/goreleaser.yml@refs/heads/main",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    }
+  ]
+}
