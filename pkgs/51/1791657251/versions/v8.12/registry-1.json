@@ -1,0 +1,73 @@
+{
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "http",
+      "repo_owner": "racket",
+      "repo_name": "racket",
+      "repo_id": 615969,
+      "asset": "racket-minimal-8.12-x86_64-macosx-cs.tgz",
+      "url": "https://download.racket-lang.org/releases/8.12/installers/racket-minimal-8.12-x86_64-macosx-cs.tgz",
+      "format": "tgz",
+      "checksum": "942f5e0aa12368418dee7ae0631b9e0b1b607355fe5862575ed4bb9d17ed3137",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "racket",
+          "src": "racket/bin/racket"
+        },
+        {
+          "name": "raco",
+          "src": "racket/bin/raco"
+        }
+      ]
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "http",
+      "repo_owner": "racket",
+      "repo_name": "racket",
+      "repo_id": 615969,
+      "asset": "racket-minimal-8.12-aarch64-macosx-cs.tgz",
+      "url": "https://download.racket-lang.org/releases/8.12/installers/racket-minimal-8.12-aarch64-macosx-cs.tgz",
+      "format": "tgz",
+      "checksum": "90d53a034af3b07d5ff946982bae74be7b2b9d752a67c852df5899b97a85186e",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "racket",
+          "src": "racket/bin/racket"
+        },
+        {
+          "name": "raco",
+          "src": "racket/bin/raco"
+        }
+      ]
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "http",
+      "repo_owner": "racket",
+      "repo_name": "racket",
+      "repo_id": 615969,
+      "asset": "racket-minimal-8.12-x86_64-win32-cs.tgz",
+      "url": "https://download.racket-lang.org/releases/8.12/installers/racket-minimal-8.12-x86_64-win32-cs.tgz",
+      "format": "tgz",
+      "checksum": "54e6b3714376566627f6c1e41f5a360573e79c86606ab3fe301b7c3308763746",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "racket",
+          "src": "racket/Racket.exe"
+        },
+        {
+          "name": "raco",
+          "src": "racket/raco.exe"
+        }
+      ]
+    }
+  ]
+}
