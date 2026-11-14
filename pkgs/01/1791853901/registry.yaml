@@ -4,6 +4,12 @@ repo_owner: openfaas
 repo_name: faas-cli
 repo_id: 87833671
 description: Official CLI for OpenFaaS
+# The Linux builds are named faas-cli and faas-cli-arm64, with no OS. faas-cli-armhf is 32-bit.
+asset_rules:
+  - envs:
+      - linux/amd64
+      - linux/arm64
+    filter: Asset matches "^faas-cli(-arm64)?$"
 supported_envs:
   - darwin
   - linux
