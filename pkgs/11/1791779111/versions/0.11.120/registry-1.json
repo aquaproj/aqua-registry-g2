@@ -88,6 +88,52 @@
           "src": "arkade.exe"
         }
       ]
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "alexellis",
+      "repo_name": "arkade",
+      "repo_id": 243213207,
+      "asset": "arkade",
+      "format": "raw",
+      "checksum": "63afa0388593ef9244972c4a7476f1554b0ac98f1674d3cc508f2db228849776",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "ark",
+          "src": "arkade"
+        },
+        {
+          "name": "arkade",
+          "src": "arkade"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "alexellis",
+      "repo_name": "arkade",
+      "repo_id": 243213207,
+      "asset": "arkade-arm64",
+      "format": "raw",
+      "checksum": "d5af762ae9a5f403d227168545ef4b6f22b3c2ba4a0710ce862f82183f4783ca",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "ark",
+          "src": "arkade-arm64"
+        },
+        {
+          "name": "arkade",
+          "src": "arkade-arm64"
+        }
+      ]
     }
   ]
 }
