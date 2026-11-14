@@ -58,6 +58,64 @@
       }
     },
     {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "openbao",
+      "repo_name": "openbao",
+      "repo_id": 716719284,
+      "asset": "openbao_2.7.2_linux_amd64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "582b1f3c2fdc5afd443b2d57a225ef654de75adea609fdb66731fd582a9cbc96",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "bao",
+          "src": "bao"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "openbao_2.7.2_linux_amd64.tar.gz.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/openbao/openbao/.github/workflows/release.yml@refs/heads/release/2.7.x",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "certificate_github_workflow_repository": "openbao/openbao",
+        "certificate_github_workflow_ref": "refs/heads/release/2.7.x"
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "openbao",
+      "repo_name": "openbao",
+      "repo_id": 716719284,
+      "asset": "openbao_2.7.2_linux_arm64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "5b97bf816fa820e5e521abec1db19c6161fcca2f666cf4a84e335089c0e83edd",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "bao",
+          "src": "bao"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "openbao_2.7.2_linux_arm64.tar.gz.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/openbao/openbao/.github/workflows/release.yml@refs/heads/release/2.7.x",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "certificate_github_workflow_repository": "openbao/openbao",
+        "certificate_github_workflow_ref": "refs/heads/release/2.7.x"
+      }
+    },
+    {
       "os": "windows",
       "arch": "amd64",
       "type": "github_release",
