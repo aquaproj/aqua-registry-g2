@@ -5,6 +5,11 @@ repo_name: lychee
 repo_id: 285115432
 description: Fast, async, stream-based link checker written in Rust. Finds broken URLs and mail addresses inside Markdown, HTML, reStructuredText, websites and more
 version_filter: not (Version startsWith "lychee-lib-")
+# v0.15.1's macOS build is named lychee-v0.15.1-macos-x86_64.dmg but holds an arm64-only
+# executable, and the name is all that places it, so it would be offered to darwin/amd64.
+asset_filters:
+  - version_constraint: Version == "v0.15.1"
+    all_assets_filter: not (Asset endsWith ".dmg")
 version_overrides:
   - version_constraint: semver("<= 0.3.1") || Version == "v0.6.0-alpha"
     no_asset: true
