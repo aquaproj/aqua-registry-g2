@@ -49,6 +49,30 @@
     },
     {
       "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "minio",
+      "repo_name": "mc",
+      "repo_id": 29329884,
+      "asset": "mc.linux-amd64.RELEASE.2024-11-17T19-35-25Z",
+      "format": "raw",
+      "checksum": "544d2d11c32cb4ed11b27338935a9cc434e15b692ff3d1529a624d341fe2ffc5",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "mc",
+          "src": "mc.linux-amd64.RELEASE.2024-11-17T19-35-25Z"
+        }
+      ],
+      "minisign": {
+        "type": "github_release",
+        "asset": "mc.linux-amd64.RELEASE.2024-11-17T19-35-25Z.minisig",
+        "public_key": "RWTx5Zr1tiHQLwG9keckT0c45M3AGeHD6IvimQHpyRywVWGbP1aVSGav"
+      }
+    },
+    {
+      "os": "linux",
       "arch": "arm64",
       "linked_libc": "static",
       "type": "github_release",
