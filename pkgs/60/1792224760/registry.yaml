@@ -4,17 +4,25 @@ repo_owner: Canop
 repo_name: rhit
 repo_id: 331421067
 description: A nginx log explorer
-version_overrides:
-  - version_constraint: "true"
-    files:
-      - name: rhit
-        src: build/{{.Arch}}-{{.OS}}/rhit
+# One zip holds a build for every target, in a directory named after its target triple. The
+# musl builds are the ones that run on any Linux; there is no macOS build.
+replacements:
+  amd64: x86_64
+  arm64: aarch64
 asset_rules:
   - envs:
       - linux/amd64
       - linux/arm64
-      - darwin/amd64
-      - darwin/arm64
       - windows/amd64
       - windows/arm64
     filter: Asset matches "^rhit_.+[.].+([.].+)?$"
+version_overrides:
+  - version_constraint: "true"
+    files:
+      - name: rhit
+        src: build/{{.Arch}}-unknown-linux-musl/rhit
+    overrides:
+      - goos: windows
+        files:
+          - name: rhit
+            src: build/x86_64-pc-windows-gnu/rhit
