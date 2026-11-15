@@ -1,0 +1,22 @@
+name: segmentio/topicctl
+type: go_install
+repo_owner: segmentio
+repo_name: topicctl
+repo_id: 281490582
+description: Tool for declarative management of Kafka topics
+version_overrides:
+  - version_constraint: semver(">= 2.0.0")
+    type: go_build
+    files:
+      - name: topicctl
+        src: ./cmd/topicctl
+        dir: topicctl-{{trimV .Version}}
+  - version_constraint: semver("< 2.0.0")
+    type: go_install
+    path: github.com/segmentio/topicctl/cmd/topicctl
+  - version_constraint: "true"
+    type: go_build
+    files:
+      - name: topicctl
+        src: ./cmd/topicctl
+        dir: topicctl-{{trimV .Version}}
