@@ -1,0 +1,30 @@
+name: Skarlso/crd-to-sample-yaml
+type: github_release
+repo_owner: Skarlso
+repo_name: crd-to-sample-yaml
+repo_id: 553804896
+description: Generate a sample YAML file from a CRD and view it rendered on a nice
+  website
+files:
+  - name: cty
+version_overrides:
+  - version_constraint: semver("> 1.1.4")
+    files:
+      - name: cty
+  - version_constraint: semver("> 0.0.8")
+    files:
+      - name: cty
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("<= 0.0.8")
+    files:
+      - name: crd-to-yaml
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: "true"
+    files:
+      - name: cty
