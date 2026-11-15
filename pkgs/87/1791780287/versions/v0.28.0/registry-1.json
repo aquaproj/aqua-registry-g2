@@ -1,0 +1,222 @@
+{
+  "published_at": "2025-01-08T18:10:33Z",
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "axodotdev",
+      "repo_name": "cargo-dist",
+      "repo_id": 551088529,
+      "asset": "cargo-dist-x86_64-apple-darwin.tar.xz",
+      "format": "tar.xz",
+      "checksum": "de231817ab627c605f4e8aeca409db164b0b749f57b0df5e37a88ff805109698",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "dist",
+          "src": "cargo-dist-x86_64-apple-darwin/dist"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "axodotdev/cargo-dist/.github/workflows/release.yml",
+        "source_ref": "refs/tags/v0.28.0",
+        "source_digest": "b96f4b7d6f3e9e5c36e25b08a63306df83d8893f",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "axodotdev",
+      "repo_name": "cargo-dist",
+      "repo_id": 551088529,
+      "asset": "cargo-dist-aarch64-apple-darwin.tar.xz",
+      "format": "tar.xz",
+      "checksum": "436e9d1e503b106e938ac8e5e8218d5ad12b161430c8a1f874934271a1f869e9",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "dist",
+          "src": "cargo-dist-aarch64-apple-darwin/dist"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "axodotdev/cargo-dist/.github/workflows/release.yml",
+        "source_ref": "refs/tags/v0.28.0",
+        "source_digest": "b96f4b7d6f3e9e5c36e25b08a63306df83d8893f",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "variants": {
+        "libc": "glibc"
+      },
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "axodotdev",
+      "repo_name": "cargo-dist",
+      "repo_id": 551088529,
+      "asset": "cargo-dist-x86_64-unknown-linux-gnu.tar.xz",
+      "format": "tar.xz",
+      "checksum": "c5da0fc4e782315e860bf5d1fb5f9a35e0e78c2d61f27662dfb096cf43de12d8",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "dist",
+          "src": "cargo-dist-x86_64-unknown-linux-gnu/dist"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "axodotdev/cargo-dist/.github/workflows/release.yml",
+        "source_ref": "refs/tags/v0.28.0",
+        "source_digest": "b96f4b7d6f3e9e5c36e25b08a63306df83d8893f",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "variants": {
+        "libc": "musl"
+      },
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "axodotdev",
+      "repo_name": "cargo-dist",
+      "repo_id": 551088529,
+      "asset": "cargo-dist-x86_64-unknown-linux-musl.tar.xz",
+      "format": "tar.xz",
+      "checksum": "0aea6d50e86c0b9d4f91022577df84a96c4ff405cfc317472890662c2af1df35",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "dist",
+          "src": "cargo-dist-x86_64-unknown-linux-musl/dist"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "axodotdev/cargo-dist/.github/workflows/release.yml",
+        "source_ref": "refs/tags/v0.28.0",
+        "source_digest": "b96f4b7d6f3e9e5c36e25b08a63306df83d8893f",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "variants": {
+        "libc": "glibc"
+      },
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "axodotdev",
+      "repo_name": "cargo-dist",
+      "repo_id": 551088529,
+      "asset": "cargo-dist-aarch64-unknown-linux-gnu.tar.xz",
+      "format": "tar.xz",
+      "checksum": "96ac038f1c01a1d3aeed56668c6fb60f9303770d40b3cdfe1c1a5224a2823060",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "dist",
+          "src": "cargo-dist-aarch64-unknown-linux-gnu/dist"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "axodotdev/cargo-dist/.github/workflows/release.yml",
+        "source_ref": "refs/tags/v0.28.0",
+        "source_digest": "b96f4b7d6f3e9e5c36e25b08a63306df83d8893f",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "variants": {
+        "libc": "musl"
+      },
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "axodotdev",
+      "repo_name": "cargo-dist",
+      "repo_id": 551088529,
+      "asset": "cargo-dist-aarch64-unknown-linux-musl.tar.xz",
+      "format": "tar.xz",
+      "checksum": "31a445ab8a584dc9384c92372045de471d2d214b797f0cf300db3c003c627b02",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "dist",
+          "src": "cargo-dist-aarch64-unknown-linux-musl/dist"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "axodotdev/cargo-dist/.github/workflows/release.yml",
+        "source_ref": "refs/tags/v0.28.0",
+        "source_digest": "b96f4b7d6f3e9e5c36e25b08a63306df83d8893f",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "axodotdev",
+      "repo_name": "cargo-dist",
+      "repo_id": 551088529,
+      "asset": "cargo-dist-x86_64-pc-windows-msvc.zip",
+      "format": "zip",
+      "checksum": "8d92e7a9542692bbaae85bdb52eee6234627067eb0700841dcb36d89896fd9ca",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "dist",
+          "src": "dist.exe"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "axodotdev/cargo-dist/.github/workflows/release.yml",
+        "source_ref": "refs/tags/v0.28.0",
+        "source_digest": "b96f4b7d6f3e9e5c36e25b08a63306df83d8893f",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "windows_arm_emulation": true,
+      "type": "github_release",
+      "repo_owner": "axodotdev",
+      "repo_name": "cargo-dist",
+      "repo_id": 551088529,
+      "asset": "cargo-dist-x86_64-pc-windows-msvc.zip",
+      "format": "zip",
+      "checksum": "8d92e7a9542692bbaae85bdb52eee6234627067eb0700841dcb36d89896fd9ca",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "dist",
+          "src": "dist.exe"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "axodotdev/cargo-dist/.github/workflows/release.yml",
+        "source_ref": "refs/tags/v0.28.0",
+        "source_digest": "b96f4b7d6f3e9e5c36e25b08a63306df83d8893f",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    }
+  ]
+}
