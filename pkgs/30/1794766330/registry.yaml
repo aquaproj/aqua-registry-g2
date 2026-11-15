@@ -1,0 +1,38 @@
+name: Kotlin/kotlin-interactive-shell
+type: github_release
+repo_owner: Kotlin
+repo_name: kotlin-interactive-shell
+repo_id: 88049426
+description: Kotlin Language Interactive Shell
+files:
+  - name: ki
+version_overrides:
+  - version_constraint: semver("> 0.2.3")
+    files:
+      - name: ki
+        src: ki/bin/ki.sh
+    overrides:
+      - goos: windows
+        files:
+          - name: ki
+            src: ki/bin/ki.bat
+  - version_constraint: semver("<= 0.2.3")
+    no_asset: true
+  - version_constraint: "true"
+    files:
+      - name: ki
+        src: ki/bin/ki.sh
+    overrides:
+      - goos: windows
+        files:
+          - name: ki
+            src: ki/bin/ki.bat
+asset_rules:
+  - envs:
+      - linux/amd64
+      - linux/arm64
+      - darwin/amd64
+      - darwin/arm64
+      - windows/amd64
+      - windows/arm64
+    filter: Asset matches "^ki-archive[.].+([.].+)?$"
