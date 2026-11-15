@@ -1,0 +1,12 @@
+name: elkowar/pipr
+type: github_release
+repo_owner: elkowar
+repo_name: pipr
+repo_id: 273879977
+description: A tool to interactively write shell pipelines
+supported_envs:
+  - linux/amd64
+asset_rules:
+  - envs:
+      - linux/amd64
+    filter: Asset matches "^pipr([.].+)?$"
