@@ -1,0 +1,12 @@
+name: kettle11/devserver
+type: github_release
+repo_owner: kettle11
+repo_name: devserver
+repo_id: 230782176
+description: A simple HTTPS server for local development. Implemented in Rust
+version_overrides:
+  - version_constraint: "true"
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
