@@ -1,0 +1,25 @@
+name: rajatjindal/kubectl-whoami
+type: github_release
+repo_owner: rajatjindal
+repo_name: kubectl-whoami
+repo_id: 214579353
+description: This plugin gets the subject name using the effective kubeconfig
+version_overrides:
+  - version_constraint: Version == "v0.0.19"
+    no_asset: true
+  - version_constraint: semver("> 0.0.45")
+  - version_constraint: semver("> 0.0.41")
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver("> 0.0.16")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: semver("> 0.0.6")
+    no_asset: true
+  - version_constraint: semver("<= 0.0.6")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: "true"
