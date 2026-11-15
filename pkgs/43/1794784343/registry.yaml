@@ -1,0 +1,45 @@
+name: Getdeck/getdeck
+type: github_release
+repo_owner: Getdeck
+repo_name: getdeck
+repo_id: 474130624
+description: A CLI that creates reproducible Kubernetes environments for development
+  and testing
+version_overrides:
+  - version_constraint: semver("> 0.7.1")
+    files:
+      - name: deck
+    overrides:
+      - goos: windows
+        files:
+          - name: deck
+            src: dist/deck
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("> 0.6.0")
+    files:
+      - name: deck
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: semver("> 0.2.1")
+    files:
+      - name: deck
+    supported_envs:
+      - linux/amd64
+  - version_constraint: semver("<= 0.2.1")
+    no_asset: true
+  - version_constraint: "true"
+    files:
+      - name: deck
+    overrides:
+      - goos: windows
+        files:
+          - name: deck
+            src: dist/deck
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
