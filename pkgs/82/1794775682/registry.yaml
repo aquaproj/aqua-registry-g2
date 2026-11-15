@@ -1,0 +1,29 @@
+name: pulumi/esc
+type: github_release
+repo_owner: pulumi
+repo_name: esc
+repo_id: 682206028
+description: Pulumi ESC is a centralized, secure service for environments, secrets,
+  and configuration management, optimized for multi-cloud infrastructures and applications
+version_overrides:
+  - version_constraint: semver("> 0.5.0")
+    files:
+      - name: esc
+        src: esc/esc
+    overrides:
+      - goos: windows
+        format: zip
+        files:
+          - name: esc
+            src: esc/bin/esc.exe
+  - version_constraint: semver("<= 0.5.0")
+  - version_constraint: "true"
+    files:
+      - name: esc
+        src: esc/esc
+    overrides:
+      - goos: windows
+        format: zip
+        files:
+          - name: esc
+            src: esc/bin/esc.exe
