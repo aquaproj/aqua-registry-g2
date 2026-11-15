@@ -1,0 +1,25 @@
+name: influxdata/influx-cli
+type: http
+repo_owner: influxdata
+repo_name: influx-cli
+repo_id: 356362815
+description: CLI for managing resources in InfluxDB v2
+url: https://dl.influxdata.com/influxdb/releases/influxdb2-client-{{trimV .Version}}-{{.OS}}-{{.Arch}}.{{.Format}}
+format: tar.gz
+rosetta2: true
+overrides:
+  - goos: windows
+    format: zip
+files:
+  - name: influx
+supported_envs:
+  - darwin
+  - linux
+  - amd64
+version_overrides:
+  - version_constraint: semver(">= 2.7.1")
+  - version_constraint: semver("< 2.7.1")
+    files:
+      - name: influx
+        src: influxdb2-client-{{trimV .Version}}-{{.OS}}-{{.Arch}}/influx
+  - version_constraint: "true"
