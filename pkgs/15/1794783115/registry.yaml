@@ -1,0 +1,17 @@
+name: cea-hpc/sshproxy
+type: github_release
+repo_owner: cea-hpc
+repo_name: sshproxy
+repo_id: 48028584
+description: Proxy SSH connections on a gateway
+files:
+  - name: sshproxy
+    src: sshproxy_{{trimV .Version}}_{{.OS}}_{{.Arch}}/sshproxy
+  - name: sshproxy-dumpd
+    src: sshproxy_{{trimV .Version}}_{{.OS}}_{{.Arch}}/sshproxy-dumpd
+  - name: sshproxy-replay
+    src: sshproxy_{{trimV .Version}}_{{.OS}}_{{.Arch}}/sshproxy-replay
+  - name: sshproxyctl
+    src: sshproxy_{{trimV .Version}}_{{.OS}}_{{.Arch}}/sshproxyctl
+supported_envs:
+  - linux/amd64
