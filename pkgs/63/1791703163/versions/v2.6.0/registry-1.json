@@ -36,6 +36,94 @@
           "src": "marmot"
         }
       ]
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "variants": {
+        "libc": "glibc"
+      },
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "maxpert",
+      "repo_name": "marmot",
+      "repo_id": 529504107,
+      "asset": "marmot-v2.6.0-linux-amd64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "aa7bafb928a156b87d17defb563129de1c2e374d7867094fcb5473e64cfa8ebf",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "marmot",
+          "src": "marmot"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "variants": {
+        "libc": "musl"
+      },
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "maxpert",
+      "repo_name": "marmot",
+      "repo_id": 529504107,
+      "asset": "marmot-v2.6.0-linux-amd64-static.tar.gz",
+      "format": "tar.gz",
+      "checksum": "5e95d5b884e7cdc499f30b9cb89427e21378cd1736f7a482934918c9429e4a19",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "marmot",
+          "src": "marmot"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "variants": {
+        "libc": "glibc"
+      },
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "maxpert",
+      "repo_name": "marmot",
+      "repo_id": 529504107,
+      "asset": "marmot-v2.6.0-linux-arm64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "a0a3b330d6b6d32edc847fa12877f90f97af2c6a2b80f5f26140a9266703495d",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "marmot",
+          "src": "marmot"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "variants": {
+        "libc": "musl"
+      },
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "maxpert",
+      "repo_name": "marmot",
+      "repo_id": 529504107,
+      "asset": "marmot-v2.6.0-linux-arm64-static.tar.gz",
+      "format": "tar.gz",
+      "checksum": "598e19d3dd40539946273c7cc2f9d3a00b885f22972b9ce379882bb2e029ea19",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "marmot",
+          "src": "marmot"
+        }
+      ]
     }
   ]
 }
