@@ -1,0 +1,16 @@
+name: skanehira/gjo
+type: github_release
+repo_owner: skanehira
+repo_name: gjo
+repo_id: 172159057
+description: Small utility to create JSON objects
+version_overrides:
+  - version_constraint: Version == "1.0.0"
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: "true"
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
