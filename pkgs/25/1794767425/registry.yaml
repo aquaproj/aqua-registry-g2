@@ -1,0 +1,27 @@
+name: Azure/azure-dev
+type: github_release
+repo_owner: Azure
+repo_name: azure-dev
+repo_id: 510889311
+description: 'A developer CLI for working with Azure resources to build and deploy
+  AI applications. Commands map to key workflow stages: code, build, deploy, and monitor'
+version_prefix: azure-dev-cli_
+files:
+  - name: azd
+    src: '{{.AssetWithoutExt}}'
+version_overrides:
+  - version_constraint: Version == "azure-dev-cli_0.9.0-beta.1"
+    files:
+      - name: azd
+        src: azd-{{.OS}}-{{.Arch}}
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("> 0.8.0-beta.2")
+  - version_constraint: semver("<= 0.8.0-beta.2")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: "true"
