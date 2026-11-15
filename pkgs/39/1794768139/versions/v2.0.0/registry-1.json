@@ -1,0 +1,64 @@
+{
+  "published_at": "2022-09-30T21:12:48Z",
+  "assets": [
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "variants": {
+        "libc": "glibc"
+      },
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "oberblastmeister",
+      "repo_name": "trashy",
+      "repo_id": 292720676,
+      "asset": "trash-x86_64-unknown-linux-gnu.tar.gz",
+      "format": "tar.gz",
+      "checksum": "a122c8994c6884629c0157fe9d375c9a156a14b236ccbb1aee28b08c3fa59a13",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "trash",
+          "src": "trash"
+        }
+      ]
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "oberblastmeister",
+      "repo_name": "trashy",
+      "repo_id": 292720676,
+      "asset": "trash-x86_64-pc-windows-msvc.exe",
+      "format": "raw",
+      "checksum": "b4fe6577613c624c874e8d1e4ff941694989242b569c99a723d12a4f5cfd11f6",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "trash",
+          "src": "trash-x86_64-pc-windows-msvc.exe"
+        }
+      ]
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "windows_arm_emulation": true,
+      "type": "github_release",
+      "repo_owner": "oberblastmeister",
+      "repo_name": "trashy",
+      "repo_id": 292720676,
+      "asset": "trash-x86_64-pc-windows-msvc.exe",
+      "format": "raw",
+      "checksum": "b4fe6577613c624c874e8d1e4ff941694989242b569c99a723d12a4f5cfd11f6",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "trash",
+          "src": "trash-x86_64-pc-windows-msvc.exe"
+        }
+      ]
+    }
+  ]
+}
