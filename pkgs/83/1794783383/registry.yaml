@@ -1,0 +1,14 @@
+name: ryane/kfilt
+type: github_release
+repo_owner: ryane
+repo_name: kfilt
+repo_id: 193619311
+description: kfilt can filter Kubernetes resources
+version_overrides:
+  - version_constraint: semver("> 0.0.5")
+  - version_constraint: semver("<= 0.0.5")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: "true"
