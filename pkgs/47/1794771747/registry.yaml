@@ -1,0 +1,34 @@
+name: sarub0b0/kubetui
+type: github_release
+repo_owner: sarub0b0
+repo_name: kubetui
+repo_id: 339574757
+description: An intuitive Terminal User Interface (TUI) tool for real-time monitoring
+  and exploration of Kubernetes resources
+version_overrides:
+  - version_constraint: Version == "v0.7.0"
+    no_asset: true
+  - version_constraint: Version == "v0.11.0"
+    no_asset: true
+  - version_constraint: semver("> 0.11.5")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("> 0.11.3")
+    no_asset: true
+  - version_constraint: semver("> 0.6.1")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("<= 0.6.1")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: "true"
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
