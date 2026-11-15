@@ -1,0 +1,19 @@
+name: airbytehq/abctl
+type: github_release
+repo_owner: airbytehq
+repo_name: abctl
+repo_id: 772768484
+description: Airbyte's CLI for managing local Airbyte installations
+version_overrides:
+  - version_constraint: semver("> 0.13.1")
+    files:
+      - name: abctl
+        src: '{{.AssetWithoutExt}}/abctl'
+  - version_constraint: semver("<= 0.13.1")
+    files:
+      - name: abctl
+        src: '{{.AssetWithoutExt}}/abctl'
+  - version_constraint: "true"
+    files:
+      - name: abctl
+        src: '{{.AssetWithoutExt}}/abctl'
