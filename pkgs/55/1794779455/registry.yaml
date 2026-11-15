@@ -1,0 +1,21 @@
+name: clowdhaus/eksup
+type: github_release
+repo_owner: clowdhaus
+repo_name: eksup
+repo_id: 563538420
+description: EKS cluster upgrade guidance
+version_overrides:
+  - version_constraint: Version == "v0.1.0-alpha"
+    no_asset: true
+  - version_constraint: semver("> 0.10.0")
+    files:
+      - name: eksup
+        src: '{{.AssetWithoutExt}}/eksup'
+  - version_constraint: semver("<= 0.10.0")
+    files:
+      - name: eksup
+        src: '{{.AssetWithoutExt}}/eksup'
+  - version_constraint: "true"
+    files:
+      - name: eksup
+        src: '{{.AssetWithoutExt}}/eksup'
