@@ -1,0 +1,12 @@
+name: rancher/cli
+type: github_release
+repo_owner: rancher
+repo_name: cli
+repo_id: 59953453
+description: Rancher CLI
+files:
+  - name: rancher
+    src: rancher-{{.Version}}/rancher
+supported_envs:
+  - darwin
+  - amd64
