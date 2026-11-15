@@ -1,0 +1,21 @@
+name: auth0/auth0-cli
+type: github_release
+repo_owner: auth0
+repo_name: auth0-cli
+repo_id: 292045509
+description: Build, manage and test your Auth0 integrations from the command line
+files:
+  - name: auth0
+version_overrides:
+  - version_constraint: semver("> 0.5.1")
+  - version_constraint: semver("> 0.3.3")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("<= 0.3.3")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: "true"
