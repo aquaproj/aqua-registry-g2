@@ -6,6 +6,11 @@ repo_id: 167734369
 description: mailsend-go is a multi-platform  command line tool to send mail via SMTP
   protocol
 version_overrides:
+  # From v1.0.13 the archive holds the binary in a directory named after the asset.
+  - version_constraint: semver(">= 1.0.13")
+    files:
+      - name: mailsend-go
+        src: '{{.AssetWithoutExt}}/mailsend-go-{{.Version}}-{{.OS}}-{{.Arch}}'
   - version_constraint: semver("> 1.0.11")
     files:
       - name: mailsend-go
