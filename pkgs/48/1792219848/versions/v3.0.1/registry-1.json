@@ -1,0 +1,73 @@
+{
+  "published_at": "2026-05-27T10:32:46Z",
+  "assets": [
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "rootless-containers",
+      "repo_name": "rootlesskit",
+      "repo_id": 135564955,
+      "asset": "rootlesskit-x86_64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "0850aa446151dfbdca15ed228ff0151751792cb5a99260b9a6738e1b490cc37b",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "rootlessctl",
+          "src": "rootlessctl"
+        },
+        {
+          "name": "rootlesskit",
+          "src": "rootlesskit"
+        },
+        {
+          "name": "rootlesskit-docker-proxy",
+          "src": "rootlesskit-docker-proxy"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "rootless-containers/rootlesskit/.github/workflows/release.yaml",
+        "source_ref": "refs/tags/v3.0.1",
+        "source_digest": "260440d268ce4b506df7859be6baf845749c0be3",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "rootless-containers",
+      "repo_name": "rootlesskit",
+      "repo_id": 135564955,
+      "asset": "rootlesskit-aarch64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "fdd9d2aa12bb8914081dfe1cd129c5a6a06cf1f80c732713f905a92c07b9b45c",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "rootlessctl",
+          "src": "rootlessctl"
+        },
+        {
+          "name": "rootlesskit",
+          "src": "rootlesskit"
+        },
+        {
+          "name": "rootlesskit-docker-proxy",
+          "src": "rootlesskit-docker-proxy"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "rootless-containers/rootlesskit/.github/workflows/release.yaml",
+        "source_ref": "refs/tags/v3.0.1",
+        "source_digest": "260440d268ce4b506df7859be6baf845749c0be3",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    }
+  ]
+}
