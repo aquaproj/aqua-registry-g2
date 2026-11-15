@@ -5,4 +5,10 @@ repo_name: charm
 repo_id: 236106066
 description: The Charm Tool and Library
 version_overrides:
+  # checksums.txt of v0.10.2 to v0.12.1 is signed with certificates from the Sigstore of 2022,
+  # which today's trusted root doesn't vouch for.
+  - version_constraint: semver(">= 0.10.2") and semver("<= 0.12.1")
+    checksum:
+      cosign:
+        enabled: false
   - version_constraint: "true"

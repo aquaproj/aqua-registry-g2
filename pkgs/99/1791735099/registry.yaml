@@ -14,6 +14,12 @@ version_overrides:
     files:
       - name: skate
         src: '{{.AssetWithoutExt}}/skate'
+  # checksums.txt of v0.1.4 to v0.2.0 is signed with a certificate from the Sigstore of
+  # 2022, which today's trusted root doesn't vouch for: leaf certificate verification failed.
+  - version_constraint: semver(">= 0.1.4") and semver("< 0.2.1")
+    checksum:
+      cosign:
+        enabled: false
   - version_constraint: semver("> 0.1.3")
   - version_constraint: semver("<= 0.1.3")
   - version_constraint: "true"
