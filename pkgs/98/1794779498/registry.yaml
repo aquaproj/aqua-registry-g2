@@ -1,0 +1,13 @@
+name: ipld/go-car
+type: github_release
+repo_owner: ipld
+repo_name: go-car
+repo_id: 143773660
+description: A content addressable archive utility
+overrides:
+  - goos: darwin
+    files:
+      - name: car
+        src: go-car
+files:
+  - name: car
