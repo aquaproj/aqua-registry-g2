@@ -8,14 +8,13 @@ description: OpenBao exists to provide a software solution to manage, store, and
 all_assets_filter: not (Asset endsWith ".pkg.tar.zst")
 cosign:
   opts:
-    - --certificate-identity
-    - https://github.com/openbao/openbao/.github/workflows/release.yml@refs/heads/release/2.7.x
+    # Each minor version is released from its own branch, release/<major>.<minor>.x.
+    - --certificate-identity-regexp
+    - ^https://github[.]com/openbao/openbao/[.]github/workflows/release[.]yml@refs/heads/release/[0-9]+[.][0-9]+[.]x$
     - --certificate-oidc-issuer
     - https://token.actions.githubusercontent.com
     - --certificate-github-workflow-repository
     - openbao/openbao
-    - --certificate-github-workflow-ref
-    - refs/heads/release/2.7.x
   bundle:
     type: github_release
     asset: '{{.Asset}}.sigstore.json'
