@@ -1,0 +1,24 @@
+name: jdx/packslip
+type: github_release
+repo_owner: jdx
+repo_name: packslip
+repo_id: 1356006409
+description: A signed release manifest for vendor binaries
+files:
+  - name: packslip
+    src: '{{.AssetWithoutExt}}/packslip'
+packslip:
+  identity_prefix: https://github.com/jdx/packslip/
+  issuer: https://token.actions.githubusercontent.com
+version_overrides:
+  - version_constraint: semver("> 0.2.0")
+    supported_envs:
+      - linux
+      - darwin/arm64
+      - windows
+  - version_constraint: semver("<= 0.2.0")
+  - version_constraint: "true"
+    supported_envs:
+      - linux
+      - darwin/arm64
+      - windows
