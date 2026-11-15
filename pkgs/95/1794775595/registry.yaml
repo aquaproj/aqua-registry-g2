@@ -1,0 +1,23 @@
+name: github/copilot-language-server-release
+type: github_release
+repo_owner: github
+repo_name: copilot-language-server-release
+repo_id: 922793574
+description: The Copilot Language Server enables any editor or IDE to integrate with
+  GitHub Copilot via the language server protocol
+files:
+  - name: copilot-language-server
+version_overrides:
+  - version_constraint: semver("> 1.276.0")
+    files:
+      - name: copilot-language-server
+  - version_constraint: semver("<= 1.276.0")
+    files:
+      - name: copilot-language-server
+    supported_envs:
+      - linux/amd64
+      - darwin
+      - windows
+  - version_constraint: "true"
+    files:
+      - name: copilot-language-server
