@@ -1,0 +1,12 @@
+name: Lallassu/gorss
+type: github_release
+repo_owner: Lallassu
+repo_name: gorss
+repo_id: 209380442
+description: Go Terminal Feed Reader
+files:
+  - name: gorss
+    src: dist/gorss_{{.OS}}
+supported_envs:
+  - darwin
+  - linux/amd64
