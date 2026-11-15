@@ -1,0 +1,16 @@
+name: Bearer/gon
+type: github_release
+repo_owner: Bearer
+repo_name: gon
+repo_id: 704524712
+description: Sign, notarize, and package macOS CLI tools and applications written
+  in any language. Available as both a CLI and a Go library
+version_overrides:
+  - version_constraint: semver("> 0.0.13")
+    supported_envs:
+      - darwin
+  - version_constraint: semver("<= 0.0.13")
+    no_asset: true
+  - version_constraint: "true"
+    supported_envs:
+      - darwin
