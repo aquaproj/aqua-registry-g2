@@ -1,0 +1,18 @@
+name: gotify/cli
+type: github_release
+repo_owner: gotify
+repo_name: cli
+repo_id: 158287235
+description: A command line interface for pushing messages to gotify/server
+files:
+  - name: gotify
+version_overrides:
+  - version_constraint: semver("> 2.3.1")
+  - version_constraint: semver("> 2.2.4")
+    no_asset: true
+  - version_constraint: semver("> 2.1.0")
+  - version_constraint: semver("<= 2.1.0")
+    supported_envs:
+      - linux
+      - windows/amd64
+  - version_constraint: "true"
