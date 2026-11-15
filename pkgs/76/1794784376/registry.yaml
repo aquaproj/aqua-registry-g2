@@ -1,0 +1,25 @@
+name: DeNA/unity-meta-check/unity-meta-autofix
+type: github_release
+repo_owner: DeNA
+repo_name: unity-meta-check
+repo_id: 339063961
+description: Autofix for meta files problems. It need a result of unity-meta-check
+  via stdin.
+version_overrides:
+  - version_constraint: semver("> 3.3.0")
+    supported_envs:
+      - darwin
+      - linux
+      - windows
+  - version_constraint: semver("<= 3.3.0")
+    supported_envs:
+      - darwin
+      - linux/amd64
+      - windows
+  - version_constraint: "true"
+    supported_envs:
+      - darwin
+      - linux
+      - windows
+all_assets_filter: Asset matches "^unity-meta-autofix-.+-.+([.].+)?$" or Asset endsWith
+  ".intoto.jsonl"
