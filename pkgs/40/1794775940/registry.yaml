@@ -1,0 +1,14 @@
+name: kubernetes-sigs/kubectl-validate
+type: github_release
+repo_owner: kubernetes-sigs
+repo_name: kubectl-validate
+repo_id: 633429451
+version_overrides:
+  - version_constraint: Version == "v0.0.1"
+    supported_envs:
+      - darwin
+  - version_constraint: "true"
+    supported_envs:
+      - linux
+      - darwin
+      - windows
