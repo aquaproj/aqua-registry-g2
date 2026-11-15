@@ -1,0 +1,16 @@
+name: mrjosh/helm-ls
+type: github_release
+repo_owner: mrjosh
+repo_name: helm-ls
+repo_id: 479356765
+description: Language server for Helm
+files:
+  - name: helm_ls
+version_overrides:
+  - version_constraint: semver("> 0.0.5")
+  - version_constraint: semver("<= 0.0.5")
+    supported_envs:
+      - darwin
+      - windows
+      - linux/amd64
+  - version_constraint: "true"
