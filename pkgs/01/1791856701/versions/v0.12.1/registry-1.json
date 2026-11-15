@@ -1,0 +1,109 @@
+{
+  "published_at": "2025-12-15T19:31:51Z",
+  "assets": [
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "variants": {
+        "libc": "glibc"
+      },
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "awslabs",
+      "repo_name": "soci-snapshotter",
+      "repo_id": 523372474,
+      "asset": "soci-snapshotter-0.12.1-linux-amd64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "32518cdcd13ed099a5f201f32e10c917aa2958a4c196af5990b7bef37ac38b5d",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "soci",
+          "src": "soci"
+        },
+        {
+          "name": "soci-snapshotter-grpc",
+          "src": "soci-snapshotter-grpc"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "variants": {
+        "libc": "musl"
+      },
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "awslabs",
+      "repo_name": "soci-snapshotter",
+      "repo_id": 523372474,
+      "asset": "soci-snapshotter-0.12.1-linux-amd64-static.tar.gz",
+      "format": "tar.gz",
+      "checksum": "3891e4e6040f56aae20a8f04c2dd98dfe30a4ed18b1a575a6a39a941562f44f4",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "soci",
+          "src": "soci"
+        },
+        {
+          "name": "soci-snapshotter-grpc",
+          "src": "soci-snapshotter-grpc"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "variants": {
+        "libc": "glibc"
+      },
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "awslabs",
+      "repo_name": "soci-snapshotter",
+      "repo_id": 523372474,
+      "asset": "soci-snapshotter-0.12.1-linux-arm64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "ad30043d3bddaf98007c1dee2eec45cbd6663d9d6e1946eb132b1dc2aef7544d",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "soci",
+          "src": "soci"
+        },
+        {
+          "name": "soci-snapshotter-grpc",
+          "src": "soci-snapshotter-grpc"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "variants": {
+        "libc": "musl"
+      },
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "awslabs",
+      "repo_name": "soci-snapshotter",
+      "repo_id": 523372474,
+      "asset": "soci-snapshotter-0.12.1-linux-arm64-static.tar.gz",
+      "format": "tar.gz",
+      "checksum": "62902506f1f1d7f6d77912db4c6fbe9f536ae3f8fa97eafb1e8ad947356d93f1",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "soci",
+          "src": "soci"
+        },
+        {
+          "name": "soci-snapshotter-grpc",
+          "src": "soci-snapshotter-grpc"
+        }
+      ]
+    }
+  ]
+}
