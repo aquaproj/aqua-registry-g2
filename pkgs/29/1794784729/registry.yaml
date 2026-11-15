@@ -1,0 +1,23 @@
+name: twistedpair/google-cloud-sdk
+type: http
+repo_owner: twistedpair
+repo_name: google-cloud-sdk
+repo_id: 116506777
+description: CLI for interacting with Google Cloud products and services
+url: https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-cli-{{.Version}}-{{.OS}}-{{.Arch}}.tar.gz
+version_source: github_tag
+files:
+  - name: gcloud
+    src: google-cloud-sdk/bin/gcloud
+  - name: gsutil
+    src: google-cloud-sdk/bin/gsutil
+  - name: docker-credential-gcloud
+    src: google-cloud-sdk/bin/docker-credential-gcloud
+  - name: bq
+    src: google-cloud-sdk/bin/bq
+replacements:
+  amd64: x86_64
+  arm64: arm
+supported_envs:
+  - darwin
+  - linux
