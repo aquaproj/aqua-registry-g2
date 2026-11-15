@@ -1,0 +1,25 @@
+name: kvz/json2hcl
+type: github_release
+repo_owner: kvz
+repo_name: json2hcl
+repo_id: 67414319
+description: Convert JSON to HCL, and vice versa. We don't use json2hcl anymore ourselves,
+  so we can't invest time into it. However, we're still welcoming PRs
+version_overrides:
+  - version_constraint: semver(">= 0.1.1")
+  - version_constraint: semver("= 0.0.7")
+  - version_constraint: semver("= 0.0.6")
+    supported_envs:
+      - darwin
+      - amd64
+  - version_constraint: "true"
+    files:
+      - name: json2hcl
+        src: json2hcl_{{.OS}}_{{.Arch}}/json2hcl
+    overrides:
+      - goos: windows
+        files:
+          - name: json2hcl
+    supported_envs:
+      - darwin
+      - amd64
