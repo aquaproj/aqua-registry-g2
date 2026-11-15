@@ -1,0 +1,78 @@
+name: openvex/vexctl
+type: github_release
+repo_owner: openvex
+repo_name: vexctl
+repo_id: 587100966
+description: A  tool to create, transform and attest VEX metadata
+cosign:
+  opts:
+    - --certificate-identity
+    - https://github.com/openvex/vexctl/.github/workflows/release.yaml@refs/tags/{{.Version}}
+    - --certificate-oidc-issuer
+    - https://token.actions.githubusercontent.com
+    - --certificate-github-workflow-repository
+    - openvex/vexctl
+    - --certificate-github-workflow-ref
+    - refs/tags/{{.Version}}
+  bundle:
+    type: github_release
+    asset: '{{.Asset}}.sigstore.json'
+version_overrides:
+  - version_constraint: semver("> 0.4.1")
+    cosign:
+      opts:
+        - --certificate-identity-regexp
+        - https://github\.com/openvex/vexctl/\.github/workflows/release\.yaml@.*
+        - --certificate-oidc-issuer
+        - https://token.actions.githubusercontent.com
+        - --certificate-github-workflow-repository
+        - openvex/vexctl
+        - --certificate-github-workflow-ref
+        - refs/tags/{{.Version}}
+      bundle:
+        type: github_release
+        asset: '{{.Asset}}.sigstore.json'
+  - version_constraint: semver("> 0.2.5")
+    cosign:
+      opts:
+        - --certificate-identity-regexp
+        - https://github\.com/openvex/vexctl/\.github/workflows/release\.yaml@.*
+        - --certificate-oidc-issuer
+        - https://token.actions.githubusercontent.com
+        - --signature
+        - https://github.com/openvex/vexctl/releases/download/{{.Version}}/{{.Asset}}.sig
+        - --certificate
+        - https://github.com/openvex/vexctl/releases/download/{{.Version}}/{{.Asset}}.pem
+        - --certificate-github-workflow-repository
+        - openvex/vexctl
+        - --certificate-github-workflow-ref
+        - refs/tags/{{.Version}}
+  - version_constraint: semver("<= 0.2.5")
+    cosign:
+      opts:
+        - --certificate-identity-regexp
+        - https://github\.com/openvex/vexctl/\.github/workflows/release\.yaml@.*
+        - --certificate-oidc-issuer
+        - https://token.actions.githubusercontent.com
+        - --signature
+        - https://github.com/openvex/vexctl/releases/download/{{.Version}}/{{.Asset}}.sig
+        - --certificate
+        - https://github.com/openvex/vexctl/releases/download/{{.Version}}/{{.Asset}}.pem
+        - --certificate-github-workflow-repository
+        - openvex/vexctl
+        - --certificate-github-workflow-ref
+        - refs/tags/{{.Version}}
+  - version_constraint: "true"
+    cosign:
+      opts:
+        - --certificate-identity-regexp
+        - https://github\.com/openvex/vexctl/\.github/workflows/release\.yaml@.*
+        - --certificate-oidc-issuer
+        - https://token.actions.githubusercontent.com
+        - --certificate-github-workflow-repository
+        - openvex/vexctl
+        - --certificate-github-workflow-ref
+        - refs/tags/{{.Version}}
+      bundle:
+        type: github_release
+        asset: '{{.Asset}}.sigstore.json'
