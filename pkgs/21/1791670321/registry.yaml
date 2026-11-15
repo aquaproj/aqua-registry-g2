@@ -4,3 +4,5 @@ repo_owner: containers
 repo_name: crun
 repo_id: 103446460
 description: A fast and lightweight fully featured OCI runtime and C library for running containers
+# A build without systemd support tied with the ordinary one.
+all_assets_filter: not (Asset contains "disable-systemd")

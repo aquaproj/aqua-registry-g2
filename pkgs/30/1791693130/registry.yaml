@@ -58,3 +58,5 @@ files:
     src: '{{.AssetWithoutExt}}/bin/{{.FileName}}'
   - name: truffleruby-polyglot-get
     src: '{{.AssetWithoutExt}}/bin/{{.FileName}}'
+# The community and jvm editions tied with the Oracle GraalVM native one.
+all_assets_filter: not (Asset contains "community" or Asset contains "jvm")

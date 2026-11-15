@@ -22,3 +22,6 @@ version_overrides:
         - name: tea
           src: tea.xyz/{{.Version}}/bin/tea
     - version_constraint: "true"
+# From v2.3.2 each build is also published as pkgx-<version>.<os>.<arch>.tar.gz, beside the
+# pkgx-<version>+<os>+<arch> names every version has.
+all_assets_filter: not (Asset matches "^pkgx-[0-9.]+[.](darwin|linux)[.]")
