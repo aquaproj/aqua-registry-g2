@@ -1,0 +1,23 @@
+name: kreuzwerker/envplate
+type: github_release
+repo_owner: kreuzwerker
+repo_name: envplate
+repo_id: 26611683
+description: Docker-friendly trivial templating for configuration files using environment
+  keys
+files:
+  - name: ep
+    src: envplate
+version_overrides:
+  - version_constraint: semver("> 1.0.0-RC1")
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver("<= 1.0.0-RC1")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: "true"
+    supported_envs:
+      - linux
+      - darwin
