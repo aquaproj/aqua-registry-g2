@@ -1,0 +1,19 @@
+name: Mic92/nixfmt-rs
+type: github_release
+repo_owner: Mic92
+repo_name: nixfmt-rs
+repo_id: 1083793823
+description: Rust reimplementation of nixfmt with byte-identical output
+files:
+  - name: nixfmt
+github_artifact_attestations:
+  signer_workflow: Mic92/nixfmt-rs/.github/workflows/release-assets.yml
+version_overrides:
+  - version_constraint: Version == "0.1.1"
+    no_asset: true
+  - version_constraint: "true"
+    github_artifact_attestations:
+      signer_workflow: Mic92/nixfmt-rs/.github/workflows/release-assets.yml
+    supported_envs:
+      - linux
+      - darwin/arm64
