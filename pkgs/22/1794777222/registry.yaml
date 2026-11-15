@@ -1,0 +1,25 @@
+name: bitnami/charts-syncer
+aliases:
+  - name: bitnami-labs/charts-syncer
+type: github_release
+repo_owner: bitnami
+repo_name: charts-syncer
+repo_id: 261817946
+description: Tool for synchronizing Helm Chart repositories
+version_overrides:
+  - version_constraint: semver("> 0.19.0")
+  - version_constraint: semver("> 0.6.2")
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver("> 0.2.1")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: semver("<= 0.2.1")
+    files:
+      - name: c3tsyncer
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: "true"
