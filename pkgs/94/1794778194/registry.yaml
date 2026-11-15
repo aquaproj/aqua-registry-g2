@@ -1,0 +1,45 @@
+name: kubernetes-sigs/zeitgeist
+type: github_release
+repo_owner: kubernetes-sigs
+repo_name: zeitgeist
+repo_id: 203176976
+description: 'Zeitgeist: the language-agnostic dependency checker'
+cosign:
+  opts:
+    - --certificate-identity
+    - https://github.com/kubernetes-sigs/zeitgeist/.github/workflows/release.yml@refs/tags/{{.Version}}
+    - --certificate-oidc-issuer
+    - https://token.actions.githubusercontent.com
+  bundle:
+    type: github_release
+    asset: '{{.Asset}}.sigstore.json'
+version_overrides:
+  - version_constraint: Version == "v0.0.2"
+    supported_envs:
+      - darwin
+      - amd64
+  - version_constraint: Version == "v0.3.4"
+    supported_envs:
+      - windows/amd64
+  - version_constraint: Version == "v0.4.0"
+    no_asset: true
+  - version_constraint: semver("> 0.3.2")
+    supported_envs:
+      - darwin
+      - linux
+      - amd64
+  - version_constraint: semver("> 0.0.17")
+    no_asset: true
+  - version_constraint: semver("<= 0.0.17")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: "true"
+    supported_envs:
+      - darwin
+      - linux
+      - amd64
+asset_rules:
+  - envs:
+      - windows/amd64
+    filter: Asset matches "^zeitgeist([.].+)?$"
