@@ -1,0 +1,24 @@
+name: kastenhq/kubestr
+type: github_release
+repo_owner: kastenhq
+repo_name: kubestr
+repo_id: 291834502
+version_overrides:
+  - version_constraint: Version in ["v0.4.14", "v0.4.32", "v0.4.42"]
+    no_asset: true
+  - version_constraint: Version == "v0.4.23"
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("> 0.4.22")
+  - version_constraint: semver("> 0.4.18")
+    no_asset: true
+  - version_constraint: semver("> 0.3.0")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("<= 0.3.0")
+    no_asset: true
+  - version_constraint: "true"
