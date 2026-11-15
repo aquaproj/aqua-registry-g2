@@ -1,0 +1,27 @@
+name: kayac/go-katsubushi
+type: github_release
+repo_owner: kayac
+repo_name: go-katsubushi
+repo_id: 38043189
+description: ID generator server
+files:
+  - name: katsubushi
+version_overrides:
+  - version_constraint: semver(">= 2.0.0")
+  - version_constraint: semver(">= 1.6.1")
+    files:
+      - name: katsubushi
+        src: go-katsubushi_v{{.Version}}_{{.OS}}_{{.Arch}}/katsubushi
+    supported_envs:
+      - darwin
+      - linux/amd64
+  - version_constraint: semver(">= 0.1.0")
+    supported_envs:
+      - darwin
+      - linux/amd64
+  - version_constraint: "true"
+    files:
+      - name: katsubushi
+        src: katsubushi-{{.Version}}-{{.OS}}-{{.Arch}}
+    supported_envs:
+      - linux/amd64
