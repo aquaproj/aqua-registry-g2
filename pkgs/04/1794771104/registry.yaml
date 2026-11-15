@@ -1,0 +1,57 @@
+name: SonarSource/sonar-scanner-cli
+type: http
+repo_owner: SonarSource
+repo_name: sonar-scanner-cli
+repo_id: 45852702
+description: Scanner CLI for SonarQube (Server, Cloud)
+files:
+  - name: sonar-scanner
+version_overrides:
+  - version_constraint: semver(">= 6.1.0")
+    url: https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-{{.SemVer}}-{{.OS}}-{{.Arch}}.{{.Format}}
+    format: zip
+    windows_arm_emulation: true
+    files:
+      - name: sonar-scanner
+        src: sonar-scanner-{{.SemVer}}-{{.OS}}-{{.Arch}}/bin/sonar-scanner
+    replacements:
+      amd64: x64
+      arm64: aarch64
+      darwin: macosx
+    overrides:
+      - goos: windows
+        files:
+          - name: sonar-scanner.bat
+            src: sonar-scanner-{{.SemVer}}-{{.OS}}-{{.Arch}}/bin/sonar-scanner.bat
+  - version_constraint: semver("> 4.1.0")
+    url: https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-{{.SemVer}}-{{.OS}}.{{.Format}}
+    format: zip
+    windows_arm_emulation: true
+    files:
+      - name: sonar-scanner
+        src: sonar-scanner-{{.SemVer}}-{{.OS}}-{{.Arch}}/bin/sonar-scanner
+    replacements:
+      darwin: macosx
+    overrides:
+      - goos: windows
+        files:
+          - name: sonar-scanner.bat
+            src: sonar-scanner-{{.SemVer}}-{{.OS}}-{{.Arch}}/bin/sonar-scanner.bat
+  - version_constraint: semver("<= 4.1.0")
+    no_asset: true
+  - version_constraint: "true"
+    url: https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-{{.SemVer}}-{{.OS}}-{{.Arch}}.{{.Format}}
+    format: zip
+    windows_arm_emulation: true
+    files:
+      - name: sonar-scanner
+        src: sonar-scanner-{{.SemVer}}-{{.OS}}-{{.Arch}}/bin/sonar-scanner
+    replacements:
+      amd64: x64
+      arm64: aarch64
+      darwin: macosx
+    overrides:
+      - goos: windows
+        files:
+          - name: sonar-scanner.bat
+            src: sonar-scanner-{{.SemVer}}-{{.OS}}-{{.Arch}}/bin/sonar-scanner.bat
