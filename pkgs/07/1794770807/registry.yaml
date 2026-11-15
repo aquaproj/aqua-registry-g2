@@ -1,0 +1,23 @@
+name: cubicdaiya/nginx-build
+type: github_release
+repo_owner: cubicdaiya
+repo_name: nginx-build
+repo_id: 20060139
+description: Seamless nginx builder
+version_overrides:
+  - version_constraint: semver("> 0.12.1")
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver("> 0.11.13")
+    no_asset: true
+  - version_constraint: semver("> 0.1.0")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: semver("<= 0.1.0")
+    no_asset: true
+  - version_constraint: "true"
+    supported_envs:
+      - linux
+      - darwin
