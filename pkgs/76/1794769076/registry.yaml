@@ -1,0 +1,19 @@
+name: samuel-lucas6/Kryptor
+type: github_release
+repo_owner: samuel-lucas6
+repo_name: Kryptor
+repo_id: 284652162
+description: A simple, modern, and secure encryption and signing tool that aims to
+  be a better version of age and Minisign
+files:
+  - name: kryptor
+version_overrides:
+  - version_constraint: semver("> 3.1.1")
+  - version_constraint: semver("> 2.2.1")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("<= 2.2.1")
+    no_asset: true
+  - version_constraint: "true"
