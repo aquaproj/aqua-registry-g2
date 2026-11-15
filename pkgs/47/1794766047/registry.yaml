@@ -1,0 +1,35 @@
+name: kkinnear/zprint
+type: github_release
+repo_owner: kkinnear
+repo_name: zprint
+repo_id: 68876645
+description: Beautifully format Clojure and Clojurescript source code and s-expressions
+version_overrides:
+  - version_constraint: semver("> 1.2.7")
+    replacements:
+      darwin: m
+      linux: l
+    supported_envs:
+      - darwin
+      - linux/amd64
+  - version_constraint: semver("> 0.4.10")
+    replacements:
+      darwin: m
+      linux: l
+    supported_envs:
+      - darwin/amd64
+      - linux/amd64
+  - version_constraint: semver("> 0.4.7")
+    replacements:
+      linux: l
+    supported_envs:
+      - linux/amd64
+  - version_constraint: semver("<= 0.4.7")
+    no_asset: true
+  - version_constraint: "true"
+    replacements:
+      darwin: m
+      linux: l
+    supported_envs:
+      - darwin
+      - linux/amd64
