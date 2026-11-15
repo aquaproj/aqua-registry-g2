@@ -1,0 +1,14 @@
+name: termkit/gama
+type: github_release
+repo_owner: termkit
+repo_name: gama
+repo_id: 725731033
+description: Manage your GitHub Actions from Terminal with great UI
+version_overrides:
+  - version_constraint: semver("> 1.0.7")
+  - version_constraint: semver("<= 1.0.7")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: "true"
