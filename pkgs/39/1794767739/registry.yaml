@@ -1,0 +1,14 @@
+name: pglet/pglet
+type: github_release
+repo_owner: pglet
+repo_name: pglet
+repo_id: 267171716
+description: Pglet - build internal web apps quickly in the language you already know
+version_overrides:
+  - version_constraint: semver("> 0.1.15")
+  - version_constraint: semver("<= 0.1.15")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: "true"
