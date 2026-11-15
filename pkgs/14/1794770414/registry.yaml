@@ -1,0 +1,21 @@
+name: geofffranks/spruce
+type: github_release
+repo_owner: geofffranks
+repo_name: spruce
+repo_id: 38989614
+description: Standalone, daemon-less, unprivileged Dockerfile and OCI compatible container
+  image builder
+supported_envs:
+  - darwin
+  - linux
+  - amd64
+version_overrides:
+  - version_constraint: semver(">= 1.30.1")
+  - version_constraint: semver("= 1.30.0")
+    supported_envs:
+      - darwin
+      - amd64
+  - version_constraint: "true"
+    supported_envs:
+      - darwin
+      - amd64
