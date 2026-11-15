@@ -1,0 +1,23 @@
+name: editorconfig-checker/editorconfig-checker
+type: github_release
+repo_owner: editorconfig-checker
+repo_name: editorconfig-checker
+repo_id: 104879779
+description: A tool to verify that your files are in harmony with your .editorconfig
+files:
+  - name: ec
+version_overrides:
+  - version_constraint: semver(">= 4.0.0")
+    files:
+      - name: editorconfig-checker
+  - version_constraint: semver("> 1.1.0")
+    files:
+      - name: ec
+        src: bin/ec-{{.OS}}-{{.Arch}}
+  - version_constraint: semver("<= 1.1.0")
+    files:
+      - name: ec
+        src: bin/ec-{{.OS}}-{{.Arch}}
+  - version_constraint: "true"
+    files:
+      - name: editorconfig-checker
