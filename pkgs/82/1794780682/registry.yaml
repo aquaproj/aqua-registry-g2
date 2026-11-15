@@ -1,0 +1,12 @@
+name: Songmu/horenso
+type: github_release
+repo_owner: Songmu
+repo_name: horenso
+repo_id: 47952870
+description: Command wrapper for reporting the result. It is useful for cron jobs
+files:
+  - name: horenso
+    src: horenso_{{.Version}}_{{.OS}}_amd64/horenso
+supported_envs:
+  - darwin
+  - amd64
