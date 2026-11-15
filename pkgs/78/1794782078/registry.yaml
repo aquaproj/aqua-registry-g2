@@ -1,0 +1,14 @@
+name: psastras/sarif-rs/miri-sarif
+type: github_release
+repo_owner: psastras
+repo_name: sarif-rs
+repo_id: 347270006
+description: Convert miri output into SARIF
+version_filter: not (Version matches "-latest$")
+version_prefix: miri-sarif-
+version_overrides:
+  - version_constraint: "true"
+    supported_envs:
+      - linux/amd64
+      - darwin/arm64
+all_assets_filter: Asset matches "^miri-sarif-.+-.+([.].+)?$" or Asset endsWith ".intoto.jsonl"
