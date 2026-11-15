@@ -1,0 +1,15 @@
+name: gruntwork-io/boilerplate
+type: github_release
+repo_owner: gruntwork-io
+repo_name: boilerplate
+repo_id: 60842152
+description: A tool for generating files and folders ("boilerplate") from a set of
+  templates
+version_overrides:
+  - version_constraint: semver("> 0.4.2")
+  - version_constraint: semver("<= 0.4.2")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: "true"
