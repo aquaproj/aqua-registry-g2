@@ -1,0 +1,43 @@
+name: Songmu/ecschedule
+type: github_release
+repo_owner: Songmu
+repo_name: ecschedule
+repo_id: 207194081
+description: ecschedule is a tool to manage ECS Scheduled Tasks
+version_overrides:
+  - version_constraint: Version == "v0.5.1"
+    files:
+      - name: ecschedule
+        src: '{{.AssetWithoutExt}}/ecschedule'
+    supported_envs:
+      - linux
+      - darwin/arm64
+  - version_constraint: semver("> 0.11.4")
+    files:
+      - name: ecschedule
+        src: '{{.AssetWithoutExt}}/ecschedule'
+  - version_constraint: semver("> 0.3.1")
+    files:
+      - name: ecschedule
+        src: '{{.AssetWithoutExt}}/ecschedule'
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver("> 0.1.2")
+    files:
+      - name: ecschedule
+        src: '{{.AssetWithoutExt}}/ecschedule'
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: semver("<= 0.1.2")
+    files:
+      - name: ecsched
+        src: '{{.AssetWithoutExt}}/ecsched'
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: "true"
+    files:
+      - name: ecschedule
+        src: '{{.AssetWithoutExt}}/ecschedule'
