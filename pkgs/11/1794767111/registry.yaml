@@ -1,0 +1,12 @@
+name: BeryJu/korb
+type: github_release
+repo_owner: BeryJu
+repo_name: korb
+repo_id: 310938395
+description: Move Kubernetes PVCs between Storage Classes and Namespaces
+version_overrides:
+  - version_constraint: Version == "v1.0.0"
+    files:
+      - name: korb
+        src: korb_v1.0.0
+  - version_constraint: "true"
