@@ -1,0 +1,23 @@
+name: mpalmer/action-validator
+type: github_release
+repo_owner: mpalmer
+repo_name: action-validator
+repo_id: 421353899
+description: Tool to validate GitHub Action and Workflow YAML files
+version_overrides:
+  - version_constraint: semver("> 0.5.1")
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver("> 0.1.4")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: semver("<= 0.1.4")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: "true"
+    supported_envs:
+      - linux
+      - darwin
