@@ -1,0 +1,14 @@
+name: bmf-san/ggc
+type: github_release
+repo_owner: bmf-san
+repo_name: ggc
+repo_id: 1001909812
+description: A modern Git CLI tool with both traditional command-line and interactive
+  incremental-search UI
+version_overrides:
+  - version_constraint: Version in ["v8.5.1", "v8.5.3", "v8.6.0", "v8.6.1", "v8.6.2"]
+    no_asset: true
+  - version_constraint: semver("> 3.2.1")
+  - version_constraint: semver("<= 3.2.1")
+    no_asset: true
+  - version_constraint: "true"
