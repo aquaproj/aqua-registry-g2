@@ -1,0 +1,28 @@
+name: fujiwara/stretcher
+type: github_release
+repo_owner: fujiwara
+repo_name: stretcher
+repo_id: 26624970
+description: Deployment tool with consul/serf event notification
+version_overrides:
+  - version_constraint: semver("> 1.0.0")
+    files:
+      - name: stretcher
+        src: '{{.AssetWithoutExt}}'
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver("<= 1.0.0")
+    files:
+      - name: stretcher
+        src: '{{.AssetWithoutExt}}'
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: "true"
+    files:
+      - name: stretcher
+        src: '{{.AssetWithoutExt}}'
+    supported_envs:
+      - linux
+      - darwin
