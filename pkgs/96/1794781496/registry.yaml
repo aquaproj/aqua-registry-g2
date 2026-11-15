@@ -1,0 +1,19 @@
+name: dahlia/seonbi
+type: github_release
+repo_owner: dahlia
+repo_name: seonbi
+repo_id: 208883640
+description: SmartyPants for Korean language
+version_overrides:
+  - version_constraint: semver("> 0.4.0")
+  - version_constraint: semver("> 0.2.3")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("<= 0.2.3")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: "true"
