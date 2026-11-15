@@ -1,0 +1,15 @@
+name: hellux/jotdown
+type: github_release
+repo_owner: hellux
+repo_name: jotdown
+repo_id: 597860531
+description: A Djot parser library
+version_overrides:
+  - version_constraint: "true"
+    files:
+      - name: jotdown
+        src: jotdown-{{.Version}}-{{.Arch}}-{{.OS}}/jotdown
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
