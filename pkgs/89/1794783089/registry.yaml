@@ -1,0 +1,19 @@
+name: uw-labs/strongbox
+type: github_release
+repo_owner: uw-labs
+repo_name: strongbox
+repo_id: 89364740
+description: Encryption for Git users
+version_overrides:
+  - version_constraint: Version == "v0.2.0-rc1"
+    no_asset: true
+  - version_constraint: semver("> 2.0.0-RC3")
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver("> 0.1.0-rc2")
+  - version_constraint: semver("<= 0.1.0-rc2")
+  - version_constraint: "true"
+    supported_envs:
+      - linux
+      - darwin
