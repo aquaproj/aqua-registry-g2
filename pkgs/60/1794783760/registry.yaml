@@ -1,0 +1,14 @@
+name: peteretelej/tree
+type: github_release
+repo_owner: peteretelej
+repo_name: tree
+repo_id: 637099077
+description: tree is an open-source cross-platform tree cli implemented in Rust
+version_overrides:
+  - version_constraint: semver("> 0.1.4")
+  - version_constraint: semver("<= 0.1.4")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: "true"
