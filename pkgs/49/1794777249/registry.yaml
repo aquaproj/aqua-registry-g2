@@ -1,0 +1,21 @@
+name: hmarr/codeowners
+type: github_release
+repo_owner: hmarr
+repo_name: codeowners
+repo_id: 282309982
+description: Command line tool and Go library for CODEOWNERS files
+version_overrides:
+  - version_constraint: Version == "v0.1.0"
+    no_asset: true
+  - version_constraint: semver("> 0.3.0")
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver("<= 0.3.0")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: "true"
+    supported_envs:
+      - linux
+      - darwin
