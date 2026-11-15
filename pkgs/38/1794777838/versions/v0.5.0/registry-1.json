@@ -1,0 +1,30 @@
+{
+  "published_at": "2026-04-14T07:01:59Z",
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "graelo",
+      "repo_name": "pumas",
+      "repo_id": 625239713,
+      "asset": "pumas-aarch64-apple-darwin.zip",
+      "format": "zip",
+      "checksum": "445c9405bee094188b75b2cd3f35ea33c246f3bbc12da3fa5ae7c4f6dc3c58e9",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "pumas",
+          "src": "target/release/pumas"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "graelo/pumas/.github/workflows/release.yml",
+        "source_ref": "refs/tags/v0.5.0",
+        "source_digest": "5b491ebdb1d191ffbf760add7e22c3e227ec04e6",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    }
+  ]
+}
