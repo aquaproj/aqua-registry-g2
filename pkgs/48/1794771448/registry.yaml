@@ -1,0 +1,13 @@
+name: MiSawa/xq
+type: github_release
+repo_owner: MiSawa
+repo_name: xq
+repo_id: 410231992
+description: Pure rust implementation of jq
+files:
+  - name: xq
+    src: xq-{{.Version}}-{{.Arch}}-{{.OS}}/xq
+supported_envs:
+  - darwin
+  - linux
+  - amd64
