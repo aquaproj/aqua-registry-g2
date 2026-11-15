@@ -14,8 +14,8 @@
       "checksum_algorithm": "sha256",
       "files": [
         {
-          "name": "validator",
-          "src": "validator"
+          "name": "cfv",
+          "src": "cfv"
         }
       ],
       "slsa_provenance": {
@@ -36,8 +36,8 @@
       "checksum_algorithm": "sha256",
       "files": [
         {
-          "name": "validator",
-          "src": "validator"
+          "name": "cfv",
+          "src": "cfv"
         }
       ],
       "slsa_provenance": {
@@ -48,6 +48,7 @@
     {
       "os": "linux",
       "arch": "amd64",
+      "linked_libc": "static",
       "type": "github_release",
       "repo_owner": "Boeing",
       "repo_name": "config-file-validator",
@@ -58,8 +59,8 @@
       "checksum_algorithm": "sha256",
       "files": [
         {
-          "name": "validator",
-          "src": "validator"
+          "name": "cfv",
+          "src": "cfv"
         }
       ],
       "slsa_provenance": {
@@ -70,6 +71,7 @@
     {
       "os": "linux",
       "arch": "arm64",
+      "linked_libc": "static",
       "type": "github_release",
       "repo_owner": "Boeing",
       "repo_name": "config-file-validator",
@@ -80,8 +82,8 @@
       "checksum_algorithm": "sha256",
       "files": [
         {
-          "name": "validator",
-          "src": "validator"
+          "name": "cfv",
+          "src": "cfv"
         }
       ],
       "slsa_provenance": {
@@ -102,8 +104,8 @@
       "checksum_algorithm": "sha256",
       "files": [
         {
-          "name": "validator",
-          "src": "validator.exe"
+          "name": "cfv",
+          "src": "cfv.exe"
         }
       ],
       "slsa_provenance": {
@@ -125,8 +127,8 @@
       "checksum_algorithm": "sha256",
       "files": [
         {
-          "name": "validator",
-          "src": "validator.exe"
+          "name": "cfv",
+          "src": "cfv.exe"
         }
       ],
       "slsa_provenance": {
