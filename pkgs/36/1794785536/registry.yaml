@@ -1,0 +1,27 @@
+name: kubewarden/kwctl
+type: github_release
+repo_owner: kubewarden
+repo_name: kwctl
+repo_id: 360471642
+description: Go-to CLI tool for Kubewarden users
+files:
+  - name: kwctl
+    src: kwctl-{{.OS}}-{{.Arch}}
+version_overrides:
+  - version_constraint: semver("> 0.2.5-rc2")
+  - version_constraint: semver("> 0.2.4")
+  - version_constraint: semver("> 0.1.1")
+    files:
+      - name: kwctl
+    supported_envs:
+      - linux/amd64
+  - version_constraint: semver("<= 0.1.1")
+    files:
+      - name: kwctl
+    supported_envs:
+      - linux/amd64
+  - version_constraint: "true"
+asset_rules:
+  - envs:
+      - linux/amd64
+    filter: Asset matches "^kwctl[.].+([.].+)?$"
