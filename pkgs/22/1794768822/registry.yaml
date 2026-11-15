@@ -1,0 +1,14 @@
+name: kubernetes-sigs/cloud-provider-kind
+type: github_release
+repo_owner: kubernetes-sigs
+repo_name: cloud-provider-kind
+repo_id: 609171582
+description: Cloud provider for KIND clusters
+version_overrides:
+  - version_constraint: Version == "v0.0.2"
+    no_asset: true
+  - version_constraint: Version == "v0.0.1"
+    supported_envs:
+      - linux/amd64
+      - darwin/arm64
+  - version_constraint: "true"
