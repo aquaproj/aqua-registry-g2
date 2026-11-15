@@ -1,0 +1,55 @@
+{
+  "published_at": "2026-10-03T08:39:01Z",
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "StanMarek",
+      "repo_name": "ghost-complete",
+      "repo_id": 1170162111,
+      "asset": "ghost-complete-x86_64-apple-darwin.tar.xz",
+      "format": "tar.xz",
+      "checksum": "970406816e485af339fb5265c78e57d2d83d85033e4aa0fa84d868d5fa180943",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "ghost-complete",
+          "src": "ghost-complete-x86_64-apple-darwin/ghost-complete"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "StanMarek/ghost-complete/.github/workflows/release.yml",
+        "source_ref": "refs/tags/v0.19.1",
+        "source_digest": "738f3db95b03045c0bf1045568b9b7ec972a8378",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "StanMarek",
+      "repo_name": "ghost-complete",
+      "repo_id": 1170162111,
+      "asset": "ghost-complete-aarch64-apple-darwin.tar.xz",
+      "format": "tar.xz",
+      "checksum": "d0856471f2c34f91b892edfa5ebcdfeda44cb03c9fc92efc49bb90edc197b773",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "ghost-complete",
+          "src": "ghost-complete-aarch64-apple-darwin/ghost-complete"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "StanMarek/ghost-complete/.github/workflows/release.yml",
+        "source_ref": "refs/tags/v0.19.1",
+        "source_digest": "738f3db95b03045c0bf1045568b9b7ec972a8378",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    }
+  ]
+}
