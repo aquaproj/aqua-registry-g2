@@ -1,0 +1,15 @@
+name: dimo414/bkt
+type: github_release
+repo_owner: dimo414
+repo_name: bkt
+repo_id: 335253430
+description: a subprocess caching utility, available as a command line binary and
+  a Rust library
+version_overrides:
+  - version_constraint: semver("> 0.5.4")
+  - version_constraint: semver("<= 0.5.4")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: "true"
