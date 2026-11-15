@@ -15,21 +15,37 @@ registry=ghcr.io
 repository=$GH_REPO
 
 token=$(curl -sSf -u "x:$GH_TOKEN" "https://$registry/token?scope=repository:$repository:pull" | jq -r .token)
-digest=$(curl -sSf -H "Authorization: Bearer $token" \
+manifest=$(curl -sSf -H "Authorization: Bearer $token" \
 	-H "Accept: application/vnd.oci.image.manifest.v1+json" \
-	"https://$registry/v2/$repository/manifests/latest" |
-	jq -r '.layers[] | select(.mediaType == "application/vnd.ar2.state.v1+json") | .digest')
+	"https://$registry/v2/$repository/manifests/latest")
+digest=$(jq -r '.layers[] | select(.mediaType == "application/vnd.ar2.state.v1+json") | .digest' <<<"$manifest")
+# When the state was last pushed. The state's own updated_at changes only when ar2 adds the
+# packages aqua-registry gained, so it said a state pushed by every run was a day old.
+saved=$(jq -r '.annotations["org.opencontainers.image.created"] // "unknown"' <<<"$manifest")
 curl -sSfL -H "Authorization: Bearer $token" "https://$registry/v2/$repository/blobs/$digest" -o state.json
 
-read -r total walked complete updated < <(jq -r '[
+read -r total walked complete < <(jq -r '[
 	(.packages | length),
 	([.packages[] | select(.last_deep_check != null)] | length),
-	([.packages[] | select(.last_deep_check != null and .caught_up == true)] | length),
-	.updated_at
+	([.packages[] | select(.last_deep_check != null and .caught_up == true)] | length)
 ] | @tsv' state.json)
 
 published=$(git ls-tree -r --name-only HEAD pkgs | grep -c '/versions\.json$')
 versions=$(git ls-tree -r --name-only HEAD pkgs | grep -c '/registry-[0-9]*\.json$')
+
+# The last report's counts, so that this one can say how far the registry got since: the
+# share of packages moves slowly while a lap is spent on history, and the versions are where
+# the progress shows.
+last=$(gh api --paginate "repos/$GH_REPO/issues/$ISSUE/comments?per_page=100" --jq '.[].body' |
+	grep -E '^[0-9]+ versions published' | tail -n 1 || true)
+last_versions=$(sed -E 's/^([0-9]+) versions published.*/\1/' <<<"$last")
+
+since() {
+	if [ -z "$2" ]; then
+		return
+	fi
+	printf ' (%+d since the last report)' "$(($1 - $2))"
+}
 
 percent() {
 	awk -v n="$1" -v d="$2" 'BEGIN { if (d == 0) print "0.0"; else printf "%.1f", 100 * n / d }'
@@ -44,7 +60,7 @@ body=$(cat <<BODY
 | Packages whose history was walked | $walked / $total | $(percent "$walked" "$total")% |
 | Walked and holding every version swept | $complete / $total | $(percent "$complete" "$total")% |
 
-$versions versions published. State written at $updated, main at $(git rev-parse --short HEAD).
+$versions versions published$(since "$versions" "$last_versions"). State saved at $saved, main at $(git rev-parse --short HEAD).
 BODY
 )
 
