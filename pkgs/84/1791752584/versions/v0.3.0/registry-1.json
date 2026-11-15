@@ -15,7 +15,7 @@
       "files": [
         {
           "name": "rakkess",
-          "src": "rakkess-amd64-darwin"
+          "src": "rakkess-darwin-amd64"
         }
       ]
     },
@@ -34,13 +34,14 @@
       "files": [
         {
           "name": "rakkess",
-          "src": "rakkess-amd64-darwin"
+          "src": "rakkess-darwin-amd64"
         }
       ]
     },
     {
       "os": "linux",
       "arch": "amd64",
+      "linked_libc": "static",
       "type": "github_release",
       "repo_owner": "corneliusweig",
       "repo_name": "rakkess",
@@ -52,44 +53,7 @@
       "files": [
         {
           "name": "rakkess",
-          "src": "rakkess-amd64-linux"
-        }
-      ]
-    },
-    {
-      "os": "windows",
-      "arch": "amd64",
-      "type": "github_release",
-      "repo_owner": "corneliusweig",
-      "repo_name": "rakkess",
-      "repo_id": 172054938,
-      "asset": "rakkess-windows-amd64.zip",
-      "format": "zip",
-      "checksum": "7de7f85b0dd84b50ffd6a3e5ff537be46d2423bc72dd0dde835893ab9b816a8f",
-      "checksum_algorithm": "sha256",
-      "files": [
-        {
-          "name": "rakkess",
-          "src": "rakkess-amd64-windows.exe"
-        }
-      ]
-    },
-    {
-      "os": "windows",
-      "arch": "arm64",
-      "windows_arm_emulation": true,
-      "type": "github_release",
-      "repo_owner": "corneliusweig",
-      "repo_name": "rakkess",
-      "repo_id": 172054938,
-      "asset": "rakkess-windows-amd64.zip",
-      "format": "zip",
-      "checksum": "7de7f85b0dd84b50ffd6a3e5ff537be46d2423bc72dd0dde835893ab9b816a8f",
-      "checksum_algorithm": "sha256",
-      "files": [
-        {
-          "name": "rakkess",
-          "src": "rakkess-amd64-windows.exe"
+          "src": "rakkess-linux-amd64"
         }
       ]
     }
