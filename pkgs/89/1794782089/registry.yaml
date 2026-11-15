@@ -1,0 +1,32 @@
+name: psastras/sarif-rs/shellcheck-sarif
+type: github_release
+repo_owner: psastras
+repo_name: sarif-rs
+repo_id: 347270006
+description: Convert shellcheck warnings into SARIF
+version_filter: not (Version matches "-latest$")
+version_prefix: shellcheck-sarif-
+version_overrides:
+  - version_constraint: Version == "shellcheck-sarif-v0.2.23"
+    files:
+      - name: shellcheck-sarif
+        src: target/release/{{.FileName}}-{{.Arch}}-{{.OS}}
+    supported_envs:
+      - linux/amd64
+  - version_constraint: Version in ["shellcheck-sarif-v0.2.24", "shellcheck-sarif-v0.6.2"]
+    supported_envs:
+      - linux/amd64
+  - version_constraint: semver("> 0.4.2")
+    supported_envs:
+      - linux/amd64
+      - darwin/arm64
+  - version_constraint: semver("<= 0.4.2")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: "true"
+    supported_envs:
+      - linux/amd64
+      - darwin/arm64
+all_assets_filter: Asset matches "^shellcheck-sarif-.+-.+[.].+([.].+)?$" or Asset
+  matches "^shellcheck-sarif-.+-.+([.].+)?$" or Asset endsWith ".intoto.jsonl"
