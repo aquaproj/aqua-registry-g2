@@ -15,7 +15,7 @@
       "files": [
         {
           "name": "kdigger",
-          "src": "kdigger"
+          "src": "kdigger-darwin-amd64"
         }
       ]
     },
@@ -33,13 +33,14 @@
       "files": [
         {
           "name": "kdigger",
-          "src": "kdigger"
+          "src": "kdigger-darwin-arm64"
         }
       ]
     },
     {
       "os": "linux",
       "arch": "amd64",
+      "linked_libc": "static",
       "type": "github_release",
       "repo_owner": "quarkslab",
       "repo_name": "kdigger",
@@ -51,13 +52,14 @@
       "files": [
         {
           "name": "kdigger",
-          "src": "kdigger"
+          "src": "kdigger-linux-amd64"
         }
       ]
     },
     {
       "os": "linux",
       "arch": "arm64",
+      "linked_libc": "static",
       "type": "github_release",
       "repo_owner": "quarkslab",
       "repo_name": "kdigger",
@@ -69,7 +71,7 @@
       "files": [
         {
           "name": "kdigger",
-          "src": "kdigger"
+          "src": "kdigger-linux-arm64"
         }
       ]
     }
