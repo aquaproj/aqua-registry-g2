@@ -1,0 +1,14 @@
+name: rhysd/dotfiles
+type: github_release
+repo_owner: rhysd
+repo_name: dotfiles
+repo_id: 70590221
+description: dotfiles symbolic links management CLI
+version_overrides:
+  - version_constraint: semver("> 0.2.2")
+  - version_constraint: semver("<= 0.2.2")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: "true"
