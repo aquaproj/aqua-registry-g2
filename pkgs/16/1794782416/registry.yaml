@@ -1,0 +1,16 @@
+name: tkuchiki/slp
+type: github_release
+repo_owner: tkuchiki
+repo_name: slp
+repo_id: 514491727
+description: SlowLog Profiler for MySQL and PostgreSQL
+version_overrides:
+  - version_constraint: semver("> 0.1.2")
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver("<= 0.1.2")
+  - version_constraint: "true"
+    supported_envs:
+      - linux
+      - darwin
