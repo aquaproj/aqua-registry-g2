@@ -1,0 +1,18 @@
+name: ko1nksm/getoptions/gengetoptions
+type: github_release
+repo_owner: ko1nksm
+repo_name: getoptions
+repo_id: 286552947
+description: An elegant option/argument parser for shell scripts (full support for
+  bash and all POSIX shells)
+supported_envs:
+  - linux
+  - darwin
+all_assets_filter: Asset matches "^gengetoptions([.].+)?$" or Asset endsWith ".intoto.jsonl"
+asset_rules:
+  - envs:
+      - linux/amd64
+      - linux/arm64
+      - darwin/amd64
+      - darwin/arm64
+    filter: Asset matches "^gengetoptions([.].+)?$"
