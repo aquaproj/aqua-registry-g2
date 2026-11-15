@@ -1,0 +1,12 @@
+name: anchore/quill
+type: github_release
+repo_owner: anchore
+repo_name: quill
+repo_id: 444165245
+description: Simple mac binary signing from any platform
+version_overrides:
+  - version_constraint: Version == "v0.1.0"
+    supported_envs:
+      - darwin
+      - windows/amd64
+  - version_constraint: "true"
