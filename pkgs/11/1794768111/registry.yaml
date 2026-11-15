@@ -1,0 +1,16 @@
+name: in-toto/witness
+type: github_release
+repo_owner: in-toto
+repo_name: witness
+repo_id: 434639382
+description: Witness is a pluggable framework for software supply chain risk management.  It
+  automates, normalizes, and verifies software artifact provenance
+cosign:
+  opts:
+    - --certificate-identity
+    - https://github.com/in-toto/witness/.github/workflows/release.yml@refs/tags/{{.Version}}
+    - --certificate-oidc-issuer
+    - https://token.actions.githubusercontent.com
+  bundle:
+    type: github_release
+    asset: '{{.Asset}}.sigstore.json'
