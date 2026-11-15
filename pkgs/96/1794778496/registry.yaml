@@ -1,0 +1,16 @@
+name: babarot/afx
+aliases:
+  - name: b4b4r07/afx
+type: github_release
+repo_owner: babarot
+repo_name: afx
+repo_id: 447061338
+description: Package manager to provide declaretive way to manage CLI commands and
+  shell plugins as code
+version_overrides:
+  - version_constraint: semver("> 0.1.25")
+  - version_constraint: semver("<= 0.1.25")
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: "true"
