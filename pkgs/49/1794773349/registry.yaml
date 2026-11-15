@@ -1,0 +1,20 @@
+name: zix99/rare
+type: github_release
+repo_owner: zix99
+repo_name: rare
+repo_id: 210987929
+description: Create console histograms, bar graphs, tables, heatmaps and more in realtime
+  using regex and expressions
+version_overrides:
+  - version_constraint: semver("> 0.1.31")
+  - version_constraint: semver("> 0.1.20")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("<= 0.1.20")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: "true"
