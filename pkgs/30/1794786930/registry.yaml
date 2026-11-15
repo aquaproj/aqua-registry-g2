@@ -1,0 +1,26 @@
+name: owenlamont/ryl
+type: github_release
+repo_owner: owenlamont
+repo_name: ryl
+repo_id: 1040735874
+description: Re-implementation of yamllint in Rust
+github_artifact_attestations:
+  signer_workflow: owenlamont/ryl/.github/workflows/release.yml
+version_overrides:
+  - version_constraint: semver("> 0.3.1")
+    github_artifact_attestations:
+      signer_workflow: owenlamont/ryl/.github/workflows/release.yml
+    supported_envs:
+      - linux
+      - darwin/arm64
+      - windows
+  - version_constraint: semver("> 0.2.0")
+  - version_constraint: semver("<= 0.2.0")
+    no_asset: true
+  - version_constraint: "true"
+    github_artifact_attestations:
+      signer_workflow: owenlamont/ryl/.github/workflows/release.yml
+    supported_envs:
+      - linux
+      - darwin/arm64
+      - windows
