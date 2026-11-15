@@ -1,0 +1,33 @@
+name: tassiovirginio/try-rs
+type: github_release
+repo_owner: tassiovirginio
+repo_name: try-rs
+repo_id: 1117923796
+description: A blazing fast, Rust-based workspace manager for your temporary experiments
+version_overrides:
+  - version_constraint: Version in ["v0.1.0", "v0.1.15"]
+    no_asset: true
+  - version_constraint: Version == "v0.1.22"
+    supported_envs:
+      - windows/amd64
+  - version_constraint: semver("> 0.1.29")
+    supported_envs:
+      - linux/amd64
+      - windows/amd64
+  - version_constraint: semver("> 0.1.27")
+    supported_envs:
+      - windows/amd64
+  - version_constraint: semver("> 0.1.21")
+    supported_envs:
+      - linux/amd64
+      - windows/amd64
+  - version_constraint: semver("> 0.1.6")
+    supported_envs:
+      - linux/amd64
+  - version_constraint: semver("<= 0.1.6")
+    supported_envs:
+      - linux/amd64
+  - version_constraint: "true"
+    supported_envs:
+      - linux/amd64
+      - windows/amd64
