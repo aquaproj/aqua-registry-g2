@@ -1,0 +1,20 @@
+name: CyberAgent/reminder-lint
+type: github_release
+repo_owner: CyberAgent
+repo_name: reminder-lint
+repo_id: 800415558
+description: Code remind tool for any languages and any config files
+version_overrides:
+  - version_constraint: "true"
+    files:
+      - name: reminder-lint
+        src: '{{.AssetWithoutExt}}/reminder-lint'
+    overrides:
+      - goos: windows
+        format: zip
+        files:
+          - name: reminder-lint
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
