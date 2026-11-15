@@ -1,0 +1,18 @@
+name: grafana/xk6
+type: github_release
+repo_owner: grafana
+repo_name: xk6
+repo_id: 305977666
+description: Build k6 with extensions
+supported_envs:
+  - darwin
+  - linux
+  - amd64
+version_overrides:
+  - version_constraint: semver("< 0.9.0")
+  - version_constraint: semver(">= 0.9.0")
+    error_message: |
+      From version xk6 v0.9.0 there are no more binaries published.
+
+      https://github.com/grafana/xk6/issues/60
+  - version_constraint: "true"
