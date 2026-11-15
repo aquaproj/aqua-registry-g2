@@ -1,0 +1,26 @@
+name: grampelberg/kty
+type: github_release
+repo_owner: grampelberg
+repo_name: kty
+repo_id: 830090958
+description: The terminal for Kubernetes
+version_overrides:
+  - version_constraint: Version == "v0.1.0"
+    supported_envs:
+      - linux/amd64
+      - darwin/arm64
+  - version_constraint: Version == "v0.2.1"
+    supported_envs:
+      - linux
+  - version_constraint: semver("> 0.2.0")
+    supported_envs:
+      - linux
+      - darwin/arm64
+  - version_constraint: semver("<= 0.2.0")
+    supported_envs:
+      - linux
+      - darwin/arm64
+  - version_constraint: "true"
+    supported_envs:
+      - linux
+      - darwin/arm64
