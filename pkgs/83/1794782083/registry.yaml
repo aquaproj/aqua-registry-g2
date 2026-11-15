@@ -1,0 +1,25 @@
+name: psastras/sarif-rs/sarif-fmt
+type: github_release
+repo_owner: psastras
+repo_name: sarif-rs
+repo_id: 347270006
+description: Pretty print SARIF results
+version_filter: not (Version matches "-latest$")
+version_prefix: sarif-fmt-
+version_overrides:
+  - version_constraint: Version == "sarif-fmt-v0.6.2"
+    supported_envs:
+      - linux/amd64
+  - version_constraint: semver("> 0.4.2")
+    supported_envs:
+      - linux/amd64
+      - darwin/arm64
+  - version_constraint: semver("<= 0.4.2")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: "true"
+    supported_envs:
+      - linux/amd64
+      - darwin/arm64
+all_assets_filter: Asset matches "^sarif-fmt-.+-.+([.].+)?$" or Asset endsWith ".intoto.jsonl"
