@@ -1,0 +1,15 @@
+name: mame/wsl2-ssh-agent
+type: github_release
+repo_owner: mame
+repo_name: wsl2-ssh-agent
+repo_id: 599134905
+description: A bridge from WSL2 ssh client to Windows ssh-agent.exe service
+version_overrides:
+  - version_constraint: "true"
+    supported_envs:
+      - linux
+asset_rules:
+  - envs:
+      - linux/amd64
+      - linux/arm64
+    filter: Asset matches "^wsl2-ssh-agent-arm64([.].+)?$"
