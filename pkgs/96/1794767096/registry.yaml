@@ -1,0 +1,12 @@
+name: turbot/tailpipe
+type: github_release
+repo_owner: turbot
+repo_name: tailpipe
+repo_id: 788230663
+description: select * from logs! Tailpipe is an open source SIEM for instant log insights,
+  powered by DuckDB. Analyze millions of events in seconds, right from your terminal
+version_overrides:
+  - version_constraint: "true"
+    supported_envs:
+      - linux
+      - darwin
