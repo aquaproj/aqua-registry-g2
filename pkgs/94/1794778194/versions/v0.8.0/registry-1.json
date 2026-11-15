@@ -1,0 +1,156 @@
+{
+  "published_at": "2026-08-07T09:08:51Z",
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "kubernetes-sigs",
+      "repo_name": "zeitgeist",
+      "repo_id": 203176976,
+      "asset": "zeitgeist-amd64-darwin",
+      "format": "raw",
+      "checksum": "b0d8ebad065e47d7cce174395f39ab3e702ac97ea1f2a3814304aec60de9c888",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "zeitgeist",
+          "src": "zeitgeist-amd64-darwin"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "zeitgeist-amd64-darwin.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/kubernetes-sigs/zeitgeist/.github/workflows/release.yml@refs/tags/v0.8.0",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "kubernetes-sigs",
+      "repo_name": "zeitgeist",
+      "repo_id": 203176976,
+      "asset": "zeitgeist-arm64-darwin",
+      "format": "raw",
+      "checksum": "340a1cf35d8354c4bb1a6eb251c9ee2bbab13978e9c39b148badf955bae7e087",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "zeitgeist",
+          "src": "zeitgeist-arm64-darwin"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "zeitgeist-arm64-darwin.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/kubernetes-sigs/zeitgeist/.github/workflows/release.yml@refs/tags/v0.8.0",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "kubernetes-sigs",
+      "repo_name": "zeitgeist",
+      "repo_id": 203176976,
+      "asset": "zeitgeist-amd64-linux",
+      "format": "raw",
+      "checksum": "b004b91e0ad881732f2ba0e63def2e3c35950323e221b50c50cbad75b3f5c2b1",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "zeitgeist",
+          "src": "zeitgeist-amd64-linux"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "zeitgeist-amd64-linux.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/kubernetes-sigs/zeitgeist/.github/workflows/release.yml@refs/tags/v0.8.0",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "kubernetes-sigs",
+      "repo_name": "zeitgeist",
+      "repo_id": 203176976,
+      "asset": "zeitgeist-arm64-linux",
+      "format": "raw",
+      "checksum": "52e3b1af8ce2fc304b21cfa380a37bc1c4c6a48015063fdbeab6516123804e55",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "zeitgeist",
+          "src": "zeitgeist-arm64-linux"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "zeitgeist-arm64-linux.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/kubernetes-sigs/zeitgeist/.github/workflows/release.yml@refs/tags/v0.8.0",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "windows_arm_emulation": true,
+      "type": "github_release",
+      "repo_owner": "kubernetes-sigs",
+      "repo_name": "zeitgeist",
+      "repo_id": 203176976,
+      "asset": "zeitgeist-amd64-windows.exe",
+      "format": "raw",
+      "checksum": "831ef9be29b8a79529019128ce3806c8ae835c2f7deaaa042c70d48a28c6cc36",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "zeitgeist",
+          "src": "zeitgeist-amd64-windows.exe"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "zeitgeist-amd64-windows.exe.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/kubernetes-sigs/zeitgeist/.github/workflows/release.yml@refs/tags/v0.8.0",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "kubernetes-sigs",
+      "repo_name": "zeitgeist",
+      "repo_id": 203176976,
+      "asset": "zeitgeist.intoto.json",
+      "format": "raw",
+      "checksum": "53dac8b18522a4d2de547cb9ead9a360ada47ac431a40f00773a0305f3354bf1",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "zeitgeist",
+          "src": "zeitgeist.intoto.json"
+        }
+      ]
+    }
+  ]
+}
