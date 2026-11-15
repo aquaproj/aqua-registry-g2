@@ -1,0 +1,34 @@
+name: jacek-kurlit/pik
+type: github_release
+repo_owner: jacek-kurlit
+repo_name: pik
+repo_id: 755550519
+description: Process Interactive Kill
+version_overrides:
+  - version_constraint: Version == "0.14.0"
+    files:
+      - name: pik
+        src: '{{.AssetWithoutExt}}/pik'
+    supported_envs:
+      - linux/amd64
+  - version_constraint: semver("> 0.13.0")
+    files:
+      - name: pik
+        src: '{{.AssetWithoutExt}}/pik'
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver("<= 0.13.0")
+    files:
+      - name: pik
+        src: '{{.AssetWithoutExt}}/pik'
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: "true"
+    files:
+      - name: pik
+        src: '{{.AssetWithoutExt}}/pik'
+    supported_envs:
+      - linux
+      - darwin
