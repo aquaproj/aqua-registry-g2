@@ -1,0 +1,19 @@
+name: k1LoW/ndiag
+type: github_release
+repo_owner: k1LoW
+repo_name: ndiag
+repo_id: 287956695
+description: ndiag is a high-level architecture diagramming/documentation tool
+version_overrides:
+  - version_constraint: semver("> 0.14.2")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: semver("<= 0.14.2")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: "true"
+    supported_envs:
+      - linux/amd64
+      - darwin
