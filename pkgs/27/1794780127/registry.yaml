@@ -1,0 +1,26 @@
+name: jubako/arx
+type: github_release
+repo_owner: jubako
+repo_name: arx
+repo_id: 609217717
+description: Store files and directory in an archive. Like tar, but faster and with
+  direct random access
+version_overrides:
+  - version_constraint: semver("> 0.2.0")
+    files:
+      - name: arx
+        src: arx-{{.Version}}-{{.OS}}/arx
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("<= 0.2.0")
+    no_asset: true
+  - version_constraint: "true"
+    files:
+      - name: arx
+        src: arx-{{.Version}}-{{.OS}}/arx
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
