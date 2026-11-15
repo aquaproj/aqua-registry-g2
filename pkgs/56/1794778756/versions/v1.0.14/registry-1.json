@@ -15,7 +15,7 @@
       "files": [
         {
           "name": "mailsend-go",
-          "src": "mailsend-go-v1.0.14-darwin-amd64"
+          "src": "mailsend-go-v1.0.14-darwin-amd64.d/mailsend-go-v1.0.14-darwin-amd64"
         }
       ]
     },
@@ -33,13 +33,14 @@
       "files": [
         {
           "name": "mailsend-go",
-          "src": "mailsend-go-v1.0.14-darwin-arm64"
+          "src": "mailsend-go-v1.0.14-darwin-arm64.d/mailsend-go-v1.0.14-darwin-arm64"
         }
       ]
     },
     {
       "os": "linux",
       "arch": "amd64",
+      "linked_libc": "static",
       "type": "github_release",
       "repo_owner": "muquit",
       "repo_name": "mailsend-go",
@@ -51,13 +52,14 @@
       "files": [
         {
           "name": "mailsend-go",
-          "src": "mailsend-go-v1.0.14-linux-amd64"
+          "src": "mailsend-go-v1.0.14-linux-amd64.d/mailsend-go-v1.0.14-linux-amd64"
         }
       ]
     },
     {
       "os": "linux",
       "arch": "arm64",
+      "linked_libc": "static",
       "type": "github_release",
       "repo_owner": "muquit",
       "repo_name": "mailsend-go",
@@ -69,7 +71,7 @@
       "files": [
         {
           "name": "mailsend-go",
-          "src": "mailsend-go-v1.0.14-linux-arm64"
+          "src": "mailsend-go-v1.0.14-linux-arm64.d/mailsend-go-v1.0.14-linux-arm64"
         }
       ]
     },
@@ -87,7 +89,7 @@
       "files": [
         {
           "name": "mailsend-go",
-          "src": "mailsend-go-v1.0.14-windows-amd64.exe"
+          "src": "mailsend-go-v1.0.14-windows-amd64.d/mailsend-go-v1.0.14-windows-amd64.exe"
         }
       ]
     },
@@ -106,7 +108,7 @@
       "files": [
         {
           "name": "mailsend-go",
-          "src": "mailsend-go-v1.0.14-windows-amd64.exe"
+          "src": "mailsend-go-v1.0.14-windows-amd64.d/mailsend-go-v1.0.14-windows-amd64.exe"
         }
       ]
     }
