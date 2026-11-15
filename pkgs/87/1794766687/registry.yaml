@@ -1,0 +1,19 @@
+name: houseabsolute/ubi
+type: github_release
+repo_owner: houseabsolute
+repo_name: ubi
+repo_id: 327105217
+description: The Universal Binary Installer
+version_overrides:
+  - version_constraint: semver("> 0.0.9")
+  - version_constraint: semver("> 0.0.7")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("<= 0.0.7")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: "true"
