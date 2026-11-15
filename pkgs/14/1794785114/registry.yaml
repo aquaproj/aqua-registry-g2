@@ -1,0 +1,22 @@
+name: openshift-online/ocm-cli
+type: github_release
+repo_owner: openshift-online
+repo_name: ocm-cli
+repo_id: 204693594
+description: CLI for the Red Hat OpenShift Cluster Manager
+files:
+  - name: ocm
+version_overrides:
+  - version_constraint: Version == "v0.1.57"
+    no_asset: true
+  - version_constraint: semver("> 0.1.58")
+  - version_constraint: semver("> 0.1.30")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("<= 0.1.30")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: "true"
