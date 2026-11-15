@@ -1,0 +1,23 @@
+name: bengadbois/pewpew
+type: github_release
+repo_owner: bengadbois
+repo_name: pewpew
+repo_id: 70748642
+description: Flexible HTTP command line stress tester for websites and web services
+version_overrides:
+  - version_constraint: Version == "v0.3"
+    no_asset: true
+  - version_constraint: semver(">= 1.1.0")
+    files:
+      - name: pewpew
+  - version_constraint: semver("< 1.1.0")
+    files:
+      - name: pewpew
+        src: pewpew/pewpew
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: "true"
+    files:
+      - name: pewpew
