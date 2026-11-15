@@ -18,8 +18,14 @@ files:
   - name: stargz-store
   - name: stargz-store-helper
 version_overrides:
-  - version_constraint: semver("> 0.3.0")
-  - version_constraint: semver("<= 0.3.0")
+  - version_constraint: semver(">= 0.16.0")
+  # stargz-store-helper is in the archive from v0.16.0, and stargz-store from v0.6.0.
+  - version_constraint: semver(">= 0.6.0")
+    files:
+      - name: containerd-stargz-grpc
+      - name: ctr-remote
+      - name: stargz-store
+  - version_constraint: semver("< 0.6.0")
     files:
       - name: containerd-stargz-grpc
       - name: ctr-remote
