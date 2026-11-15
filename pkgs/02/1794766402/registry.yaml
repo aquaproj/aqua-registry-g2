@@ -1,0 +1,17 @@
+name: slsa-framework/slsa-github-generator/slsa-builder-go
+type: go_build
+repo_owner: slsa-framework
+repo_name: slsa-github-generator
+repo_id: 475074978
+description: builds and generates SLSA3+ provenance for Go projects
+link: https://github.com/slsa-framework/slsa-github-generator/tree/main/internal/builders/go
+overrides:
+  - goos: linux
+    goarch: amd64
+    type: github_release
+    format: raw
+    asset: slsa-builder-go-{{.OS}}-{{.Arch}}
+files:
+  - name: slsa-builder-go
+    src: ./internal/builders/go
+    dir: slsa-github-generator-{{trimV .Version}}
