@@ -1,0 +1,28 @@
+name: fujiwara/awslim
+aliases:
+  - name: fujiwara/aws-sdk-client-go
+type: github_release
+repo_owner: fujiwara
+repo_name: awslim
+repo_id: 797603178
+description: A simplified alternative to the AWS CLI for limited use cases
+version_overrides:
+  - version_constraint: semver("> 0.0.14")
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver("> 0.0.7")
+    files:
+      - name: aws-sdk-client-go
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver("<= 0.0.7")
+    files:
+      - name: aws-sdk-client-go
+    supported_envs:
+      - linux
+  - version_constraint: "true"
+    supported_envs:
+      - linux
+      - darwin
