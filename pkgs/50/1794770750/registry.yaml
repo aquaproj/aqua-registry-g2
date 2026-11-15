@@ -1,0 +1,35 @@
+name: containers/gvisor-tap-vsock/gvproxy
+type: github_release
+repo_owner: containers
+repo_name: gvisor-tap-vsock
+repo_id: 282845245
+description: A new network stack based on gVisor
+version_overrides:
+  - version_constraint: Version == "v0.6.2"
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: Version == "v0.7.0"
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("> 0.6.1")
+  - version_constraint: semver("> 0.3.0")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("<= 0.3.0")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: "true"
+all_assets_filter: not (Asset contains "sshproxy")
+asset_rules:
+  - envs:
+      - windows/amd64
+      - windows/arm64
+    filter: Asset matches "^gvproxy-.+([.].+)?$"
