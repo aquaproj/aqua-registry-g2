@@ -1,0 +1,54 @@
+name: IBM-Cloud/ibm-cloud-cli-release
+type: http
+repo_owner: IBM-Cloud
+repo_name: ibm-cloud-cli-release
+repo_id: 71359238
+description: Command line interface for IBM Cloud
+files:
+  - name: ibmcloud
+    src: IBM_Cloud_CLI/ibmcloud
+version_overrides:
+  - version_constraint: semver(">= 2.38.0")
+    url: https://download.clis.cloud.ibm.com/ibm-cloud-cli-dn/{{trimV .Version}}/binaries/IBM_Cloud_CLI_{{trimV
+      .Version}}_{{.OS}}_{{.Arch}}.{{.Format}}
+    format: tgz
+    windows_arm_emulation: true
+    replacements:
+      darwin: macos
+    overrides:
+      - goos: darwin
+        goarch: amd64
+        url: https://download.clis.cloud.ibm.com/ibm-cloud-cli-dn/{{trimV .Version}}/binaries/IBM_Cloud_CLI_{{trimV
+          .Version}}_{{.OS}}.{{.Format}}
+      - goos: windows
+        format: zip
+  - version_constraint: semver(">= 2.5.0")
+    url: https://download.clis.cloud.ibm.com/ibm-cloud-cli/{{trimV .Version}}/binaries/IBM_Cloud_CLI_{{trimV
+      .Version}}_{{.OS}}_{{.Arch}}.{{.Format}}
+    format: tgz
+    windows_arm_emulation: true
+    replacements:
+      darwin: macos
+    overrides:
+      - goos: darwin
+        goarch: amd64
+        url: https://download.clis.cloud.ibm.com/ibm-cloud-cli/{{trimV .Version}}/binaries/IBM_Cloud_CLI_{{trimV
+          .Version}}_macos.tgz
+      - goos: windows
+        format: zip
+  - version_constraint: semver("< 2.5.0")
+    error_message: Please use v2.5.0 or later
+  - version_constraint: "true"
+    url: https://download.clis.cloud.ibm.com/ibm-cloud-cli-dn/{{trimV .Version}}/binaries/IBM_Cloud_CLI_{{trimV
+      .Version}}_{{.OS}}_{{.Arch}}.{{.Format}}
+    format: tgz
+    windows_arm_emulation: true
+    replacements:
+      darwin: macos
+    overrides:
+      - goos: darwin
+        goarch: amd64
+        url: https://download.clis.cloud.ibm.com/ibm-cloud-cli-dn/{{trimV .Version}}/binaries/IBM_Cloud_CLI_{{trimV
+          .Version}}_{{.OS}}.{{.Format}}
+      - goos: windows
+        format: zip
