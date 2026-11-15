@@ -1,0 +1,14 @@
+name: sysdiglabs/kube-psp-advisor
+type: github_release
+repo_owner: sysdiglabs
+repo_name: kube-psp-advisor
+repo_id: 168977353
+description: Help building an adaptive and fine-grained pod security policy
+files:
+  - name: kubectl-advise_psp
+    src: kubectl-advise-psp
+  - name: kube-psp-advisor
+    src: kubectl-advise-psp
+supported_envs:
+  - darwin
+  - linux/amd64
