@@ -1,0 +1,15 @@
+name: SUPERCILEX/fuc/rmz
+type: github_release
+repo_owner: SUPERCILEX
+repo_name: fuc
+repo_id: 430960694
+description: Modern, performance focused unix commands
+version_overrides:
+  - version_constraint: semver("> 1.1.0")
+  - version_constraint: semver("<= 1.1.0")
+    supported_envs:
+      - linux/amd64
+      - darwin
+      - windows
+  - version_constraint: "true"
+all_assets_filter: not (Asset matches "cpz")
