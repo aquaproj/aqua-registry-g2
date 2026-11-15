@@ -1,0 +1,42 @@
+name: IBM-Cloud/redli
+type: github_release
+repo_owner: IBM-Cloud
+repo_name: redli
+repo_id: 145136154
+description: Redli - A humane alternative to the Redis-cli and TLS
+version_overrides:
+  - version_constraint: Version == "v0.11.0"
+    no_asset: true
+  - version_constraint: semver("> 0.10.0")
+    files:
+      - name: redli
+        src: redli_{{.OS}}_{{.Arch}}
+    overrides:
+      - goos: windows
+        goarch: amd64
+        files:
+          - name: redli
+      - goos: windows
+        goarch: arm64
+        files:
+          - name: redli
+            src: redli_{{.Arch}}.exe
+  - version_constraint: semver("<= 0.10.0")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: "true"
+    files:
+      - name: redli
+        src: redli_{{.OS}}_{{.Arch}}
+    overrides:
+      - goos: windows
+        goarch: amd64
+        files:
+          - name: redli
+      - goos: windows
+        goarch: arm64
+        files:
+          - name: redli
+            src: redli_{{.Arch}}.exe
