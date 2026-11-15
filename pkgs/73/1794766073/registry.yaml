@@ -1,0 +1,74 @@
+name: kyverno/chainsaw
+type: github_release
+repo_owner: kyverno
+repo_name: chainsaw
+repo_id: 702901147
+description: Declarative K8s e2e testing
+cosign:
+  opts:
+    - --certificate-identity
+    - https://github.com/kyverno/chainsaw/.github/workflows/release.yaml@refs/tags/{{.Version}}
+    - --certificate-oidc-issuer
+    - https://token.actions.githubusercontent.com
+    - --certificate-github-workflow-repository
+    - kyverno/chainsaw
+    - --certificate-github-workflow-ref
+    - refs/tags/{{.Version}}
+  bundle:
+    type: github_release
+    asset: '{{.Asset}}.sigstore.json'
+version_overrides:
+  - version_constraint: Version == "v0.1.0-alpha.1"
+  - version_constraint: Version == "v0.1.3-alpha.1"
+  - version_constraint: semver("> 0.2.13")
+    cosign:
+      opts:
+        - --certificate-identity
+        - https://github.com/kyverno/chainsaw/.github/workflows/release.yaml@refs/tags/{{.Version}}
+        - --certificate-oidc-issuer
+        - https://token.actions.githubusercontent.com
+        - --certificate-github-workflow-repository
+        - kyverno/chainsaw
+        - --certificate-github-workflow-ref
+        - refs/tags/{{.Version}}
+      bundle:
+        type: github_release
+        asset: '{{.Asset}}.sigstore.json'
+    slsa_provenance:
+      type: github_release
+      asset: multiple.intoto.jsonl
+  - version_constraint: semver("<= 0.2.13")
+    cosign:
+      opts:
+        - --certificate-oidc-issuer
+        - https://token.actions.githubusercontent.com
+        - --certificate-identity
+        - https://github.com/kyverno/chainsaw/.github/workflows/release.yaml@refs/tags/{{.Version}}
+        - --certificate
+        - https://github.com/kyverno/chainsaw/releases/download/{{.Version}}/{{.Asset}}.pem
+        - --signature
+        - https://github.com/kyverno/chainsaw/releases/download/{{.Version}}/{{.Asset}}.sig
+        - --certificate-github-workflow-repository
+        - kyverno/chainsaw
+        - --certificate-github-workflow-ref
+        - refs/tags/{{.Version}}
+    slsa_provenance:
+      type: github_release
+      asset: multiple.intoto.jsonl
+  - version_constraint: "true"
+    cosign:
+      opts:
+        - --certificate-identity
+        - https://github.com/kyverno/chainsaw/.github/workflows/release.yaml@refs/tags/{{.Version}}
+        - --certificate-oidc-issuer
+        - https://token.actions.githubusercontent.com
+        - --certificate-github-workflow-repository
+        - kyverno/chainsaw
+        - --certificate-github-workflow-ref
+        - refs/tags/{{.Version}}
+      bundle:
+        type: github_release
+        asset: '{{.Asset}}.sigstore.json'
+    slsa_provenance:
+      type: github_release
+      asset: multiple.intoto.jsonl
