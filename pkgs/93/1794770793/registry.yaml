@@ -1,0 +1,12 @@
+name: trufflesecurity/driftwood
+type: github_release
+repo_owner: trufflesecurity
+repo_name: driftwood
+repo_id: 425105062
+description: Private key usage verification
+version_overrides:
+  - version_constraint: Version == "v1.0.0"
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: "true"
