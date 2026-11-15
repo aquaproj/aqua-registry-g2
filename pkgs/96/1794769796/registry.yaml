@@ -1,0 +1,39 @@
+name: russellbanks/Komac
+type: github_release
+repo_owner: russellbanks
+repo_name: Komac
+repo_id: 560207581
+description: The Community Manifest Creator for WinGet
+version_filter: semver(">= 2.0.0")
+files:
+  - name: komac
+version_overrides:
+  - version_constraint: Version == "v2.0.0"
+    files:
+      - name: komac
+        src: KomacPortable-{{.OS}}-nightly-{{.Arch}}
+  - version_constraint: Version == "v2.0.3"
+    files:
+      - name: komac
+        src: KomacPortable-{{.OS}}-{{trimV .Version}}-{{.Arch}}
+  - version_constraint: Version == "v2.2.1"
+    files:
+      - name: komac
+        src: KomacPortable-{{.OS}}-{{.Arch}}
+    supported_envs:
+      - linux/amd64
+      - darwin
+      - windows
+  - version_constraint: semver("> 2.2.0")
+  - version_constraint: semver("> 2.0.2")
+    files:
+      - name: komac
+        src: KomacPortable-{{.OS}}-{{.Arch}}
+  - version_constraint: semver(">= 2.0.0")
+    files:
+      - name: komac
+        src: KomacPortable-{{.OS}}-{{.Version}}-{{.Arch}}
+  - version_constraint: semver("< 2.0.0")
+    error_message: The version is too old. Please upgrade to v2.0.0 or later.
+  - version_constraint: "true"
+all_assets_filter: not (Asset matches "setup") and not (Asset matches "Setup")
