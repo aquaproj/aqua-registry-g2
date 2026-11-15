@@ -1,0 +1,14 @@
+name: sachaos/toggl
+type: github_release
+repo_owner: sachaos
+repo_name: toggl
+repo_id: 76122546
+description: Toggl CLI Client
+version_overrides:
+  - version_constraint: Version == "v0.6.0"
+    no_asset: true
+  - version_constraint: "true"
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
