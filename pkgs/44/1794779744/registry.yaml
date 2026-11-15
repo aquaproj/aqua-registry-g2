@@ -1,0 +1,14 @@
+name: yukiarrr/ecsk
+type: github_release
+repo_owner: yukiarrr
+repo_name: ecsk
+repo_id: 360434868
+description: CLI tool that you can interactively call Amazon ECS APIs (run-task, execute-command,
+  stop-task), copy files between ECS and local, and view logs
+version_overrides:
+  - version_constraint: semver("> 0.5.6")
+  - version_constraint: semver("<= 0.5.6")
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: "true"
