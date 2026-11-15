@@ -1,0 +1,12 @@
+name: Songmu/ghch
+type: github_release
+repo_owner: Songmu
+repo_name: ghch
+repo_id: 56893114
+description: Generate changelog from git history, tags and merged pull requests
+files:
+  - name: ghch
+    src: ghch_{{.Version}}_{{.OS}}_amd64/ghch
+supported_envs:
+  - darwin
+  - amd64
