@@ -1,0 +1,26 @@
+name: k1LoW/runn
+type: github_release
+repo_owner: k1LoW
+repo_name: runn
+repo_id: 466909944
+description: runn is a package/tool for running operations following a scenario
+version_overrides:
+  - version_constraint: Version in ["v0.17.0", "v0.58.0", "v0.112.0"]
+    no_asset: true
+  - version_constraint: Version == "v0.0.1"
+    files:
+      - name: runbk
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: semver("> 0.75.3")
+  - version_constraint: semver("> 0.59.4")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("<= 0.59.4")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: "true"
