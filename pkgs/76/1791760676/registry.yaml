@@ -12,6 +12,15 @@ supported_envs:
   - linux
   - amd64
 version_overrides:
+  # v0.1.0 and v0.2.0 were released while the project was named dup: the archive holds
+  # dup-<version>-<target>/dup.
+  - version_constraint: semver("< 0.3.0")
+    files:
+      - name: diskus
+        src: dup-{{.Version}}-{{.Arch}}-{{.OS}}/dup
+    supported_envs:
+      - darwin
+      - linux/amd64
   # Before v0.7.0 the releases build for x86_64 macOS and Linux only.
   - version_constraint: semver("< 0.7.0")
     supported_envs:
