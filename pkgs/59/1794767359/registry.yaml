@@ -1,0 +1,16 @@
+name: inlets/inlets-pro
+type: github_release
+repo_owner: inlets
+repo_name: inlets-pro
+repo_id: 214656224
+description: Secure HTTP and TCP tunnels that just work
+supported_envs:
+  - darwin
+  - linux
+  - amd64
+asset_rules:
+  - envs:
+      - linux/amd64
+      - linux/arm64
+      - windows/amd64
+    filter: Asset matches "^inlets-pro([.].+)?$"
