@@ -37,3 +37,8 @@ version_overrides:
 # The Windows build the files describe is qpdf-<version>-mingw64.zip. The .exe assets are
 # installers, and the 32-bit and msvc builds tied with it.
 all_assets_filter: Asset contains "-bin-linux-" or Asset endsWith "-mingw64.zip"
+# qpdf-<version>-mingw64.zip says no OS, so nothing placed it: it is the Windows build.
+asset_rules:
+  - envs:
+      - windows/amd64
+    filter: Asset endsWith "-mingw64.zip"
