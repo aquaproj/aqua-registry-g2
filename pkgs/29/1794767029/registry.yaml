@@ -1,0 +1,19 @@
+name: k0sproject/k0sctl
+type: github_release
+repo_owner: k0sproject
+repo_name: k0sctl
+repo_id: 327003095
+description: A bootstrapping and management tool for k0s clusters
+version_overrides:
+  - version_constraint: semver("> 0.10.1")
+  - version_constraint: semver("> 0.6.0")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("<= 0.6.0")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: "true"
