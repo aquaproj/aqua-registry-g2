@@ -1,0 +1,38 @@
+name: namespacelabs/foundation/nsc
+type: github_release
+repo_owner: namespacelabs
+repo_name: foundation
+repo_id: 475423377
+description: Open-source Kubernetes application platform that powers Namespace's developer-optimized
+  compute platform
+files:
+  - name: nsc
+  - name: docker-credential-nsc
+  - name: bazel-credential-nsc
+version_overrides:
+  - version_constraint: semver("> 0.0.391")
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver("> 0.0.195")
+    files:
+      - name: nsc
+      - name: docker-credential-nsc
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver("> 0.0.158")
+    files:
+      - name: nsc
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver("<= 0.0.158")
+    no_asset: true
+  - version_constraint: "true"
+    supported_envs:
+      - linux
+      - darwin
+all_assets_filter: |
+  let words = ["nsboot", "fn_", "ns_"];
+  not any(words, {Asset matches #})
