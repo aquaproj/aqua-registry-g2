@@ -1,0 +1,13 @@
+name: heartbeatsjp/check-tls-cert
+type: github_release
+repo_owner: heartbeatsjp
+repo_name: check-tls-cert
+repo_id: 341832755
+description: Check-tls-cert is a TLS certificate checker
+files:
+  - name: check-tls-cert
+    src: check-tls-cert-{{trimV .Version}}/check-tls-cert
+supported_envs:
+  - linux
+  - darwin
+  - amd64
