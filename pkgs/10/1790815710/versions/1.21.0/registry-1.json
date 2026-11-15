@@ -24,6 +24,30 @@
       ]
     },
     {
+      "os": "darwin",
+      "arch": "arm64",
+      "rosetta2": true,
+      "type": "http",
+      "repo_owner": "rust-lang",
+      "repo_name": "rustup",
+      "repo_id": 43192623,
+      "asset": "rustup-init",
+      "url": "https://static.rust-lang.org/rustup/archive/1.21.0/x86_64-apple-darwin/rustup-init",
+      "format": "raw",
+      "checksum": "0a88f26a05ada22aa26be7abcb8185573183fdc58c3e91e47d8709c060cfdff5",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "rustup",
+          "src": "rustup-init"
+        },
+        {
+          "name": "rustup-init",
+          "src": "rustup-init"
+        }
+      ]
+    },
+    {
       "os": "linux",
       "arch": "amd64",
       "linked_libc": "glibc",
@@ -74,6 +98,30 @@
     {
       "os": "windows",
       "arch": "amd64",
+      "type": "http",
+      "repo_owner": "rust-lang",
+      "repo_name": "rustup",
+      "repo_id": 43192623,
+      "asset": "rustup-init.exe",
+      "url": "https://static.rust-lang.org/rustup/archive/1.21.0/x86_64-pc-windows-msvc/rustup-init.exe",
+      "format": "raw",
+      "checksum": "3ae40265d4ecc5b2177c4cd518632b1b5afba146057b5510c40409aaed153f84",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "rustup",
+          "src": "rustup-init.exe"
+        },
+        {
+          "name": "rustup-init",
+          "src": "rustup-init.exe"
+        }
+      ]
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "windows_arm_emulation": true,
       "type": "http",
       "repo_owner": "rust-lang",
       "repo_name": "rustup",
