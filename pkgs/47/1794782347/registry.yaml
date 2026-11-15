@@ -1,0 +1,20 @@
+name: sudorandom/fauxrpc
+type: github_release
+repo_owner: sudorandom
+repo_name: fauxrpc
+repo_id: 843054872
+description: Easily start a fake gRPC/gRPC-Web/Connect/REST server from protobufs
+version_overrides:
+  - version_constraint: semver("> 0.19.4")
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver("> 0.16.1")
+    supported_envs:
+      - linux
+  - version_constraint: semver("> 0.0.16")
+  - version_constraint: semver("<= 0.0.16")
+  - version_constraint: "true"
+    supported_envs:
+      - linux
+      - darwin
