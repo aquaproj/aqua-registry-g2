@@ -1,0 +1,166 @@
+{
+  "published_at": "2026-02-21T11:47:09Z",
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "erikjuhani",
+      "repo_name": "basalt",
+      "repo_id": 693752164,
+      "asset": "basalt-0.12.2-x86_64-apple-darwin.tar.gz",
+      "format": "tar.gz",
+      "checksum": "52c374f0995dab50352485e24ca16b60cb3fc7d3cddd0c339481098f81a4c87c",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "basalt",
+          "src": "target/x86_64-apple-darwin/release/basalt"
+        }
+      ]
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "erikjuhani",
+      "repo_name": "basalt",
+      "repo_id": 693752164,
+      "asset": "basalt-0.12.2-aarch64-apple-darwin.tar.gz",
+      "format": "tar.gz",
+      "checksum": "0285410dc06862be3c9444fbf7651fba1da1bf58dabdf5956e10251e992d2ff7",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "basalt",
+          "src": "target/aarch64-apple-darwin/release/basalt"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "variants": {
+        "libc": "glibc"
+      },
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "erikjuhani",
+      "repo_name": "basalt",
+      "repo_id": 693752164,
+      "asset": "basalt-0.12.2-x86_64-unknown-linux-gnu.tar.gz",
+      "format": "tar.gz",
+      "checksum": "070e24f0be7dd70f10aba665420aea1f21a0dee6b6ebaef507cfa94a26566d34",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "basalt",
+          "src": "target/x86_64-unknown-linux-gnu/release/basalt"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "variants": {
+        "libc": "musl"
+      },
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "erikjuhani",
+      "repo_name": "basalt",
+      "repo_id": 693752164,
+      "asset": "basalt-0.12.2-x86_64-unknown-linux-musl.tar.gz",
+      "format": "tar.gz",
+      "checksum": "2aa0ba40b36d3eee30be7ab22c2253812d44e404c484393cbd6300c29c3eab81",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "basalt",
+          "src": "target/x86_64-unknown-linux-musl/release/basalt"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "variants": {
+        "libc": "glibc"
+      },
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "erikjuhani",
+      "repo_name": "basalt",
+      "repo_id": 693752164,
+      "asset": "basalt-0.12.2-aarch64-unknown-linux-gnu.tar.gz",
+      "format": "tar.gz",
+      "checksum": "78fb7e77bec319ca3cd4d2db548402857c6a1adde6632f28d6fe24eb5bf14050",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "basalt",
+          "src": "target/aarch64-unknown-linux-gnu/release/basalt"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "variants": {
+        "libc": "musl"
+      },
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "erikjuhani",
+      "repo_name": "basalt",
+      "repo_id": 693752164,
+      "asset": "basalt-0.12.2-aarch64-unknown-linux-musl.tar.gz",
+      "format": "tar.gz",
+      "checksum": "1b01971b20b8fcf0098f0646927161cb7dcad50f6b0c43744acf49729082484b",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "basalt",
+          "src": "target/aarch64-unknown-linux-musl/release/basalt"
+        }
+      ]
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "erikjuhani",
+      "repo_name": "basalt",
+      "repo_id": 693752164,
+      "asset": "basalt-0.12.2-x86_64-pc-windows-msvc.zip",
+      "format": "zip",
+      "checksum": "b9d34a7edc0e4493e93fe65c29dac3288964724ce5c807759285a8e24416f797",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "basalt",
+          "src": "target/x86_64-pc-windows-msvc/release/basalt.exe"
+        }
+      ]
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "windows_arm_emulation": true,
+      "type": "github_release",
+      "repo_owner": "erikjuhani",
+      "repo_name": "basalt",
+      "repo_id": 693752164,
+      "asset": "basalt-0.12.2-x86_64-pc-windows-msvc.zip",
+      "format": "zip",
+      "checksum": "b9d34a7edc0e4493e93fe65c29dac3288964724ce5c807759285a8e24416f797",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "basalt",
+          "src": "target/x86_64-pc-windows-msvc/release/basalt.exe"
+        }
+      ]
+    }
+  ]
+}
