@@ -1,0 +1,23 @@
+name: masutaka/github-nippou
+type: github_release
+repo_owner: masutaka
+repo_name: github-nippou
+repo_id: 27662721
+description: Print today's your GitHub activity for issues and pull requests
+github_artifact_attestations:
+  signer_workflow: masutaka/github-nippou/.github/workflows/release.yml
+version_overrides:
+  - version_constraint: Version == "v4.3.0"
+  - version_constraint: semver("> 4.2.9")
+    github_artifact_attestations:
+      signer_workflow: masutaka/github-nippou/.github/workflows/release.yml
+  - version_constraint: semver("> 3.2.0")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("<= 3.2.0")
+    no_asset: true
+  - version_constraint: "true"
+    github_artifact_attestations:
+      signer_workflow: masutaka/github-nippou/.github/workflows/release.yml
