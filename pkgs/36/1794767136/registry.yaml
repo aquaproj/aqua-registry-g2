@@ -1,0 +1,13 @@
+name: fe3dback/go-arch-lint
+type: github_release
+repo_owner: fe3dback
+repo_name: go-arch-lint
+repo_id: 289326169
+description: GoLang architecture linter (checker) tool. Will check all project import
+  path and compare with arch rules defined in yml file. Useful for hexagonal / onion
+  / ddd / mvc and other architectural patterns. Tool can by used in your CI
+version_overrides:
+  - version_constraint: semver("> 1.7.5")
+  - version_constraint: semver("> 1.7.3")
+    no_asset: true
+  - version_constraint: "true"
