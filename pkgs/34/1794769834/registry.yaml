@@ -1,0 +1,20 @@
+name: inlets/mixctl
+type: github_release
+repo_owner: inlets
+repo_name: mixctl
+repo_id: 534329385
+description: A tiny TCP load balancer
+version_overrides:
+  - version_constraint: Version == "0.0.3-rc1"
+    no_asset: true
+  - version_constraint: "true"
+    supported_envs:
+      - darwin
+      - linux
+      - amd64
+asset_rules:
+  - envs:
+      - linux/amd64
+      - linux/arm64
+      - windows/amd64
+    filter: Asset matches "^mixctl-arm64([.].+)?$" or Asset matches "^mixctl([.].+)?$"
