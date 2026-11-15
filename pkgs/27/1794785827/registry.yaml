@@ -1,0 +1,21 @@
+name: cameron-martin/bazel-lsp
+type: github_release
+repo_owner: cameron-martin
+repo_name: bazel-lsp
+repo_id: 738240313
+description: A language server implementation for Bazel
+version_overrides:
+  - version_constraint: semver("> 0.6.3")
+  - version_constraint: semver("> 0.6.1")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("> 0.2.0")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: semver("<= 0.2.0")
+    supported_envs:
+      - linux/amd64
+  - version_constraint: "true"
