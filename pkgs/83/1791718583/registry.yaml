@@ -6,3 +6,10 @@ repo_id: 321792527
 description: A Lua code formatter
 files:
   - name: stylua
+# From v0.15.0 the Windows build is published as stylua-windows-x86_64.zip beside
+# stylua-win64.zip, the name the versions before it had alone.
+asset_filters:
+  - version_constraint: semver(">= 0.15.0")
+    all_assets_filter: not (Asset contains "win64")
+  - version_constraint: "true"
+    all_assets_filter: "true"
