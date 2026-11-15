@@ -1,0 +1,19 @@
+name: osteele/gojekyll
+type: github_release
+repo_owner: osteele
+repo_name: gojekyll
+repo_id: 94036828
+description: A fast Go implementation of the Jekyll blogging engine
+replacements:
+  amd64: x86_64v1
+version_overrides:
+  - version_constraint: semver(">= 0.2.7")
+  - version_constraint: semver(">= 0.2.3")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: semver("< 0.2.3")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: "true"
