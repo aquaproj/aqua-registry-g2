@@ -1,0 +1,25 @@
+name: wakatime/wakatime-cli
+type: github_release
+repo_owner: wakatime
+repo_name: wakatime-cli
+repo_id: 244958571
+description: Command line interface used by all WakaTime text editor plugins
+version_overrides:
+  - version_constraint: Version == "v1.6.0-alpha.5"
+    no_asset: true
+  - version_constraint: semver("> 1.28.1-alpha.3")
+    files:
+      - name: wakatime-cli
+        src: '{{.AssetWithoutExt}}'
+  - version_constraint: semver("> 0.4.0-alpha.1")
+    files:
+      - name: wakatime-cli
+        src: '{{.AssetWithoutExt}}'
+  - version_constraint: semver("<= 0.4.0-alpha.1")
+    files:
+      - name: wakatime-cli
+        src: '{{.AssetWithoutExt}}'
+  - version_constraint: "true"
+    files:
+      - name: wakatime-cli
+        src: '{{.AssetWithoutExt}}'
