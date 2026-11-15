@@ -30,8 +30,8 @@ replacements:
   windows: win32
 version_overrides:
   # Before 8.18 the Linux build is named linux-cs rather than linux-buster-cs, and there is
-  # no aarch64 Linux build nor an arm64 Windows one.
-  - version_constraint: semver("< 8.18")
+  # no aarch64 Linux build. The arm64 Windows build starts at 8.14.
+  - version_constraint: semver("< 8.14")
     replacements:
       amd64: x86_64
       arm64: aarch64
@@ -42,4 +42,15 @@ version_overrides:
       - darwin
       - linux/amd64
       - windows/amd64
+  - version_constraint: semver("< 8.18")
+    replacements:
+      amd64: x86_64
+      arm64: aarch64
+      darwin: macosx
+      linux: linux
+      windows: win32
+    supported_envs:
+      - darwin
+      - linux/amd64
+      - windows
   - version_constraint: "true"
