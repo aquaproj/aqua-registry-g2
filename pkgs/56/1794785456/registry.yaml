@@ -1,0 +1,15 @@
+name: smartxworks/knest
+type: github_release
+repo_owner: smartxworks
+repo_name: knest
+repo_id: 500762322
+description: Kubernetes-in-Kubernetes Made Simple
+version_overrides:
+  - version_constraint: Version == "v0.1.0"
+    supported_envs:
+      - linux/amd64
+  - version_constraint: "true"
+asset_rules:
+  - envs:
+      - linux/amd64
+    filter: Asset matches "^knest([.].+)?$"
