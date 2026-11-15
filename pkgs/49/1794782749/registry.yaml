@@ -1,0 +1,26 @@
+name: floci-io/floci-cli
+type: github_release
+repo_owner: floci-io
+repo_name: floci-cli
+repo_id: 1237106908
+description: Official command-line interface for Floci
+files:
+  - name: floci
+version_overrides:
+  - version_constraint: Version == "0.1.0"
+    no_asset: true
+  - version_constraint: semver("> 0.1.4")
+    supported_envs:
+      - linux
+      - darwin
+      - windows/amd64
+  - version_constraint: semver("<= 0.1.4")
+    supported_envs:
+      - linux
+      - darwin/arm64
+      - windows/amd64
+  - version_constraint: "true"
+    supported_envs:
+      - linux
+      - darwin
+      - windows/amd64
