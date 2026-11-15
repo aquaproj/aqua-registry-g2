@@ -1,0 +1,27 @@
+name: openclarity/vmclarity
+type: github_release
+repo_owner: openclarity
+repo_name: vmclarity
+repo_id: 561844160
+description: VMClarity is an open source tool for agentless detection and management
+  of Virtual Machine Software Bill Of Materials (SBOM) and security threats such as
+  vulnerabilities, exploits, malware, rootkits, misconfigurations and leaked secrets
+version_overrides:
+  - version_constraint: semver("> 0.5.0")
+    files:
+      - name: vmclarity-cli
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver("<= 0.5.0")
+    files:
+      - name: vmclarity-cli
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: "true"
+    files:
+      - name: vmclarity-cli
+    supported_envs:
+      - linux
+      - darwin
