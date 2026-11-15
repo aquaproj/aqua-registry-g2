@@ -1,0 +1,37 @@
+name: bep/s3deploy
+type: github_release
+repo_owner: bep
+repo_name: s3deploy
+repo_id: 52308449
+description: A simple tool to deploy static websites to Amazon S3 and CloudFront with
+  Gzip and custom headers support (e.g. "Cache-Control")
+overrides:
+  - goos: darwin
+    format: pkg
+    files:
+      - name: s3deploy
+        src: Payload/s3deploy
+supported_envs:
+  - darwin
+  - amd64
+version_overrides:
+  - version_constraint: semver(">= 2.11.0")
+  - version_constraint: semver(">= 2.10.1")
+    overrides:
+      - goos: darwin
+        format: pkg
+        files:
+          - name: s3deploy
+            src: Payload/s3deploy
+  - version_constraint: semver(">= 2.5.0")
+  - version_constraint: semver(">= 1.0.2")
+    supported_envs:
+      - darwin
+      - linux
+      - amd64
+  - version_constraint: semver("< 1.0.2")
+    supported_envs:
+      - darwin
+      - linux
+      - amd64
+  - version_constraint: "true"
