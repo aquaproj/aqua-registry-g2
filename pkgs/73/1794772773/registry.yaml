@@ -1,0 +1,12 @@
+name: unfrl/dug
+type: github_release
+repo_owner: unfrl
+repo_name: dug
+repo_id: 318566178
+description: A global DNS propagation checker that gives pretty output. Written in
+  dotnet core
+asset_rules:
+  - envs:
+      - windows/amd64
+      - windows/arm64
+    filter: Asset matches "^dug([.].+)?$"
