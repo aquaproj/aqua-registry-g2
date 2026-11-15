@@ -1,0 +1,19 @@
+name: goccy/tobari
+type: github_release
+repo_owner: goccy
+repo_name: tobari
+repo_id: 1088730833
+description: Tobari is a scoped coverage measurement tool for Go
+github_artifact_attestations:
+  signer_workflow: goccy/tobari/.github/workflows/release.yml
+version_overrides:
+  - version_constraint: Version == "v0.12.0"
+    no_asset: true
+  - version_constraint: semver("> 0.8.0")
+    github_artifact_attestations:
+      signer_workflow: goccy/tobari/.github/workflows/release.yml
+  - version_constraint: semver("<= 0.8.0")
+    no_asset: true
+  - version_constraint: "true"
+    github_artifact_attestations:
+      signer_workflow: goccy/tobari/.github/workflows/release.yml
