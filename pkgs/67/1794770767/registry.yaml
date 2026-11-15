@@ -1,0 +1,13 @@
+name: sdslabs/gasper
+type: github_release
+repo_owner: sdslabs
+repo_name: gasper
+repo_id: 146135891
+description: Your Cloud in a Binary
+files:
+  - name: gasper
+    src: gasper_{{.Version}}_{{.OS}}_{{.Arch}}/gasper
+supported_envs:
+  - darwin
+  - linux
+  - amd64
