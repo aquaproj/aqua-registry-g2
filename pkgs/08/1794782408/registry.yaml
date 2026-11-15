@@ -1,0 +1,22 @@
+name: suzuki-shunsuke/github-comment
+type: github_release
+repo_owner: suzuki-shunsuke
+repo_name: github-comment
+repo_id: 245836403
+description: CLI to create and hide GitHub comments
+packslip:
+  identity_prefix: https://github.com/suzuki-shunsuke/go-release-workflow/
+  issuer: https://token.actions.githubusercontent.com
+version_overrides:
+  - version_constraint: semver("> 6.4.1")
+  - version_constraint: semver("> 5.0.0")
+    slsa_provenance:
+      type: github_release
+      asset: multiple.intoto.jsonl
+  - version_constraint: semver("> 4.3.0-0")
+  - version_constraint: semver("<= 4.3.0-0")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: "true"
