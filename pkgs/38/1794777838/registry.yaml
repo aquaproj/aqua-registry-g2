@@ -1,0 +1,31 @@
+name: graelo/pumas
+type: github_release
+repo_owner: graelo
+repo_name: pumas
+repo_id: 625239713
+description: Power Usage Monitor for Apple Silicon
+github_artifact_attestations:
+  signer_workflow: graelo/pumas/.github/workflows/release.yml
+version_overrides:
+  - version_constraint: semver("> 0.4.0")
+    files:
+      - name: pumas
+        src: target/release/pumas
+    github_artifact_attestations:
+      signer_workflow: graelo/pumas/.github/workflows/release.yml
+    supported_envs:
+      - darwin/arm64
+  - version_constraint: semver("<= 0.4.0")
+    files:
+      - name: pumas
+        src: target/release/pumas
+    supported_envs:
+      - darwin/arm64
+  - version_constraint: "true"
+    files:
+      - name: pumas
+        src: target/release/pumas
+    github_artifact_attestations:
+      signer_workflow: graelo/pumas/.github/workflows/release.yml
+    supported_envs:
+      - darwin/arm64
