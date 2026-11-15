@@ -1,0 +1,12 @@
+name: TaKO8Ki/frum
+type: github_release
+repo_owner: TaKO8Ki
+repo_name: frum
+repo_id: 345714504
+description: A little bit fast and modern Ruby version manager written in Rust
+files:
+  - name: frum
+    src: frum-{{.Version}}-{{.Arch}}-{{.OS}}/frum
+supported_envs:
+  - linux/amd64
+  - darwin
