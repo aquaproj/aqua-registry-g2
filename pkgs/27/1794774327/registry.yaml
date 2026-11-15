@@ -1,0 +1,29 @@
+name: homeport/havener
+type: github_release
+repo_owner: homeport
+repo_name: havener
+repo_id: 156707008
+description: /ˈheɪvənə/ - Think of it as a swiss army knife for Kubernetes tasks
+version_overrides:
+  - version_constraint: semver("> 2.0.2")
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver("> 0.7.0-alpha")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: semver("> 0.5.0-alpha")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("<= 0.5.0-alpha")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: "true"
+    supported_envs:
+      - linux
+      - darwin
