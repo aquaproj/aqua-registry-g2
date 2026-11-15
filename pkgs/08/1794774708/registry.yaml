@@ -1,0 +1,11 @@
+name: rancher/kim
+type: github_release
+repo_owner: rancher
+repo_name: kim
+repo_id: 333185595
+description: In ur kubernetes, buildin ur imagez
+version_overrides:
+  - version_constraint: semver("> 0.1.0-alpha.6")
+  - version_constraint: semver("> 0.1.0-alpha.3")
+    no_asset: true
+  - version_constraint: "true"
