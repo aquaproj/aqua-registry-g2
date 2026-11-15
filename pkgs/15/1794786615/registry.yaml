@@ -1,0 +1,17 @@
+name: cloudsmith-io/cloudsmith-cli
+type: github_release
+repo_owner: cloudsmith-io
+repo_name: cloudsmith-cli
+repo_id: 74998694
+description: Cloudsmith Command Line Interface (CLI)
+version_overrides:
+  - version_constraint: semver("> 1.19.0")
+    files:
+      - name: cloudsmith
+        src: cloudsmith/cloudsmith
+  - version_constraint: semver("<= 1.19.0")
+    no_asset: true
+  - version_constraint: "true"
+    files:
+      - name: cloudsmith
+        src: cloudsmith/cloudsmith
