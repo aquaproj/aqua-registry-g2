@@ -1,0 +1,27 @@
+name: kattouf/ProgressLine
+type: github_release
+repo_owner: kattouf
+repo_name: ProgressLine
+repo_id: 823081795
+description: Track commands progress in a compact one-line format
+files:
+  - name: progressline
+version_overrides:
+  - version_constraint: semver("> 0.2.2")
+    replacements:
+      darwin: apple-macosx
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver("<= 0.2.2")
+    replacements:
+      darwin: apple-macosx
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: "true"
+    replacements:
+      darwin: apple-macosx
+    supported_envs:
+      - linux
+      - darwin
