@@ -1,0 +1,20 @@
+name: webdevops/go-crond
+type: github_release
+repo_owner: webdevops
+repo_name: go-crond
+repo_id: 89296372
+description: ':alarm_clock: Cron daemon written in golang (for eg. usage in docker
+  images)'
+version_overrides:
+  - version_constraint: semver("> 0.2.0")
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver("<= 0.2.0")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: "true"
+    supported_envs:
+      - linux
+      - darwin
