@@ -21,6 +21,13 @@ version_overrides:
       - amd64
   - version_constraint: Version == "v2.2.0"
   - version_constraint: Version == "v2.2.1"
+  # From v3.0.0 the command is cfv, and the assets are named after it.
+  - version_constraint: semver(">= 3.0.0")
+    files:
+      - name: cfv
+    slsa_provenance:
+      type: github_release
+      asset: multiple.intoto.jsonl
   - version_constraint: semver("> 2.1.0")
     slsa_provenance:
       type: github_release
