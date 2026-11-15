@@ -1,0 +1,13 @@
+name: jonwiggins/xmloxide
+type: github_release
+repo_owner: jonwiggins
+repo_name: xmloxide
+repo_id: 1163839325
+description: A pure Rust reimplementation of libxml2
+files:
+  - name: xmllint
+version_overrides:
+  - version_constraint: semver("> 0.4.1")
+  - version_constraint: semver("<= 0.4.1")
+    no_asset: true
+  - version_constraint: "true"
