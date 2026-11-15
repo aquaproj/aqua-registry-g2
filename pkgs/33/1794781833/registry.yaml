@@ -1,0 +1,20 @@
+name: pivotal-cf/om
+type: github_release
+repo_owner: pivotal-cf
+repo_name: om
+repo_id: 68121501
+description: General command line utility for working with VMware Tanzu Operations
+  Manager
+version_overrides:
+  - version_constraint: semver("> 7.7.0")
+  - version_constraint: semver("> 0.33.0")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("<= 0.33.0")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: "true"
