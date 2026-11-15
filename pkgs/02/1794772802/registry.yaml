@@ -1,0 +1,12 @@
+name: rmitchellscott/reManager
+type: github_release
+repo_owner: rmitchellscott
+repo_name: reManager
+repo_id: 1134595696
+description: Linux, MacOS, and Windows desktop app for managing mods on reMarkable
+  tablets
+overrides:
+  - goos: darwin
+    files:
+      - name: reManager
+        src: reManager.app/Contents/MacOS/reManager
