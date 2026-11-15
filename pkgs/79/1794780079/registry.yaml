@@ -1,0 +1,21 @@
+name: goharbor/harbor-cli
+type: github_release
+repo_owner: goharbor
+repo_name: harbor-cli
+repo_id: 631482128
+description: '[Sandbox] Official Harbor CLI'
+files:
+  - name: harbor
+version_overrides:
+  - version_constraint: Version in ["v0.0.3", "v0.0.5", "v0.0.13"]
+    no_asset: true
+  - version_constraint: semver("> 0.0.7")
+    files:
+      - name: harbor
+        src: harbor-cli
+  - version_constraint: semver("<= 0.0.7")
+  - version_constraint: "true"
+    files:
+      - name: harbor
+        src: harbor-cli
+all_assets_filter: not (Asset matches "pkg")
