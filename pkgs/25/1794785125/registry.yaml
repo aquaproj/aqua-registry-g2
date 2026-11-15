@@ -1,0 +1,27 @@
+name: exoscale/cli
+type: github_release
+repo_owner: exoscale
+repo_name: cli
+repo_id: 149257870
+description: 'Command-line tool for everything at Exoscale: compute, storage, dns'
+files:
+  - name: exo
+version_overrides:
+  - version_constraint: Version == "v1.20.0-pre1"
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("> 1.11.0")
+  - version_constraint: semver("> 0.51.2")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("<= 0.51.2")
+    overrides:
+      - goos: darwin
+        files:
+          - name: exo
+            src: exoscale-cli
+  - version_constraint: "true"
