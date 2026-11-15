@@ -1,0 +1,19 @@
+name: zmwangx/ets
+type: github_release
+repo_owner: zmwangx
+repo_name: ets
+repo_id: 272719350
+description: Command output timestamper
+version_overrides:
+  - version_constraint: semver("> 0.1")
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver("<= 0.1")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: "true"
+    supported_envs:
+      - linux
+      - darwin
