@@ -1,0 +1,20 @@
+name: gruntwork-io/kubergrunt
+type: github_release
+repo_owner: gruntwork-io
+repo_name: kubergrunt
+repo_id: 165462385
+description: Kubergrunt is a standalone go binary with a collection of commands to
+  fill in the gaps between Terraform, Helm, and Kubectl. https://www.gruntwork.io
+version_overrides:
+  - version_constraint: semver("> 0.6.12")
+  - version_constraint: semver("> 0.5.12")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("<= 0.5.12")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: "true"
