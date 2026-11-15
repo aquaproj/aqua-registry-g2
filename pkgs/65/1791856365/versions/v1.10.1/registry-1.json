@@ -1,0 +1,163 @@
+{
+  "published_at": "2026-10-31T14:02:57Z",
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "helm",
+      "repo_name": "chart-releaser",
+      "repo_id": 144605653,
+      "asset": "chart-releaser_1.10.1_darwin_amd64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "76bce266cec371934e46fe0c6a95042b7bc5908b164723b202dc37ef22fbec7d",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "cr",
+          "src": "cr"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "chart-releaser_1.10.1_darwin_amd64.tar.gz.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/helm/chart-releaser/.github/workflows/release.yaml@refs/tags/v1.10.1",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "helm",
+      "repo_name": "chart-releaser",
+      "repo_id": 144605653,
+      "asset": "chart-releaser_1.10.1_darwin_arm64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "dc3d572f22284ea5909c7173ca153e384a4a3ee64c9fed80386d86feefbd9a66",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "cr",
+          "src": "cr"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "chart-releaser_1.10.1_darwin_arm64.tar.gz.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/helm/chart-releaser/.github/workflows/release.yaml@refs/tags/v1.10.1",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "helm",
+      "repo_name": "chart-releaser",
+      "repo_id": 144605653,
+      "asset": "chart-releaser_1.10.1_linux_amd64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "ce46baf9975d10193b7070b2b7406750c3f664181e36df3f3bbb4a00be40dc1b",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "cr",
+          "src": "cr"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "chart-releaser_1.10.1_linux_amd64.tar.gz.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/helm/chart-releaser/.github/workflows/release.yaml@refs/tags/v1.10.1",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "helm",
+      "repo_name": "chart-releaser",
+      "repo_id": 144605653,
+      "asset": "chart-releaser_1.10.1_linux_arm64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "a52a067a56a6e2dc295b250a32692a0fbb5b96b69516a89f38c8dc30dd130921",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "cr",
+          "src": "cr"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "chart-releaser_1.10.1_linux_arm64.tar.gz.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/helm/chart-releaser/.github/workflows/release.yaml@refs/tags/v1.10.1",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "helm",
+      "repo_name": "chart-releaser",
+      "repo_id": 144605653,
+      "asset": "chart-releaser_1.10.1_windows_amd64.zip",
+      "format": "zip",
+      "checksum": "5ee5269ad2fe9dcb60c3defa0fd3acfbec648999a53d0037f8f4d8f88c189feb",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "cr",
+          "src": "cr.exe"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "chart-releaser_1.10.1_windows_amd64.zip.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/helm/chart-releaser/.github/workflows/release.yaml@refs/tags/v1.10.1",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "helm",
+      "repo_name": "chart-releaser",
+      "repo_id": 144605653,
+      "asset": "chart-releaser_1.10.1_windows_arm64.zip",
+      "format": "zip",
+      "checksum": "261bd3b8a42e6cdf69bc38750ccef37e61d76e97c231a4cfd2d3820dbb556e93",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "cr",
+          "src": "cr.exe"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "chart-releaser_1.10.1_windows_arm64.zip.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/helm/chart-releaser/.github/workflows/release.yaml@refs/tags/v1.10.1",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    }
+  ]
+}
