@@ -1,0 +1,17 @@
+name: dahlia/hongdown
+type: github_release
+repo_owner: dahlia
+repo_name: hongdown
+repo_id: 1129214146
+description: A Markdown formatter that enforces Hong Minhee's Markdown style conventions
+version_overrides:
+  - version_constraint: semver("> 0.4.2")
+    files:
+      - name: hongdown
+  - version_constraint: semver("<= 0.4.2")
+    files:
+      - name: hongdown
+        src: hongdown-{{.Arch}}-{{.OS}}/hongdown
+  - version_constraint: "true"
+    files:
+      - name: hongdown
