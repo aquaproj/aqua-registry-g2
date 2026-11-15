@@ -36,6 +36,50 @@
           "src": "websocat_mac"
         }
       ]
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "variants": {
+        "libc": "glibc"
+      },
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "vi",
+      "repo_name": "websocat",
+      "repo_id": 74579985,
+      "asset": "websocat_amd64-linux",
+      "format": "raw",
+      "checksum": "cec0d7d05252dcadb09a5afb8851cf9f3a8997bba44334eee5f7db70ca72aa0b",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "websocat",
+          "src": "websocat_amd64-linux"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "variants": {
+        "libc": "musl"
+      },
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "vi",
+      "repo_name": "websocat",
+      "repo_id": 74579985,
+      "asset": "websocat_amd64-linux-static",
+      "format": "raw",
+      "checksum": "611de56052584db54ccf364f3e8d3c077d1389e4913d5805265e877539584ec7",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "websocat",
+          "src": "websocat_amd64-linux-static"
+        }
+      ]
     }
   ]
 }
