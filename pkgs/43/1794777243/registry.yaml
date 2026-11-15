@@ -1,0 +1,19 @@
+name: skanehira/rtty
+type: github_release
+repo_owner: skanehira
+repo_name: rtty
+repo_id: 365771144
+description: Terminal on browser via websocket
+version_overrides:
+  - version_constraint: semver("> 0.3.0")
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver("<= 0.3.0")
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: "true"
+    supported_envs:
+      - linux
+      - darwin
