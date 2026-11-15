@@ -1,0 +1,16 @@
+name: bitwarden/sdk-sm
+type: github_release
+repo_owner: bitwarden
+repo_name: sdk-sm
+repo_id: 616551499
+description: Bitwarden Secrets Manager
+version_prefix: bws-v
+files:
+  - name: bws
+version_overrides:
+  - version_constraint: Version in ["bws-v0.2.1", "bws-v0.3.0"]
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: "true"
