@@ -1,0 +1,18 @@
+name: openfga/cli
+type: github_release
+repo_owner: openfga
+repo_name: cli
+repo_id: 649913371
+description: A cross-platform CLI to interact with an OpenFGA server
+files:
+  - name: fga
+version_overrides:
+  - version_constraint: semver("> 0.4.0")
+    slsa_provenance:
+      type: github_release
+      asset: fga.intoto.jsonl
+  - version_constraint: semver("<= 0.4.0")
+  - version_constraint: "true"
+    slsa_provenance:
+      type: github_release
+      asset: fga.intoto.jsonl
