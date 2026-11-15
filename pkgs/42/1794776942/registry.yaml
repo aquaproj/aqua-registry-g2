@@ -1,0 +1,18 @@
+name: dhth/bmm
+type: github_release
+repo_owner: dhth
+repo_name: bmm
+repo_id: 931826132
+description: get to your bookmarks in a flash
+github_artifact_attestations:
+  signer_workflow: dhth/bmm/.github/workflows/release.yml
+version_overrides:
+  - version_constraint: "true"
+    files:
+      - name: bmm
+        src: '{{.AssetWithoutExt}}/bmm'
+    github_artifact_attestations:
+      signer_workflow: dhth/bmm/.github/workflows/release.yml
+    supported_envs:
+      - linux/amd64
+      - darwin
