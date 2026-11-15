@@ -1,0 +1,41 @@
+name: Boeing/config-file-validator
+type: github_release
+repo_owner: Boeing
+repo_name: config-file-validator
+repo_id: 574744365
+description: Cross-platform CLI tool to validate configuration files across 17 formats.
+  Syntax and schema validation with JSON Schema, XSD, and SchemaStore integration.
+  Written in Go
+files:
+  - name: validator
+version_overrides:
+  - version_constraint: Version == "v1.3.0"
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: Version == "v1.4.0"
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: Version == "v2.2.0"
+  - version_constraint: Version == "v2.2.1"
+  - version_constraint: semver("> 2.1.0")
+    slsa_provenance:
+      type: github_release
+      asset: multiple.intoto.jsonl
+  - version_constraint: semver("> 1.2.0")
+  - version_constraint: semver("<= 1.2.0")
+    supported_envs:
+      - linux/amd64
+      - windows/amd64
+  - version_constraint: "true"
+    slsa_provenance:
+      type: github_release
+      asset: multiple.intoto.jsonl
+asset_rules:
+  - envs:
+      - windows/amd64
+      - windows/arm64
+    filter: Asset matches "^validator([.].+)?$" or Asset matches "^validator-.+([.].+)?$"
