@@ -1,0 +1,14 @@
+name: remoteoss/dexter
+type: github_release
+repo_owner: remoteoss
+repo_name: dexter
+repo_id: 1204237656
+description: A fast, full-featured Elixir LSP optimized for large codebases
+version_overrides:
+  - version_constraint: "true"
+    files:
+      - name: dexter
+        src: '{{.AssetWithoutExt}}/dexter'
+    supported_envs:
+      - linux
+      - darwin/arm64
