@@ -1,0 +1,12 @@
+name: busser/murmur
+type: github_release
+repo_owner: busser
+repo_name: murmur
+repo_id: 517709998
+description: Pass secrets as environment variables to a process
+version_overrides:
+  - version_constraint: semver("> 0.4.2")
+  - version_constraint: semver("<= 0.4.2")
+    files:
+      - name: whisper
+  - version_constraint: "true"
