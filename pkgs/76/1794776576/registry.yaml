@@ -1,0 +1,21 @@
+name: juan-leon/lowcharts
+type: github_release
+repo_owner: juan-leon
+repo_name: lowcharts
+repo_id: 359171406
+description: Tool to draw low-resolution graphs in terminal
+version_overrides:
+  - version_constraint: Version == "v0.1.0"
+    no_asset: true
+  - version_constraint: semver("> 0.5.6")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: semver("<= 0.5.6")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: "true"
+    supported_envs:
+      - linux/amd64
+      - darwin
