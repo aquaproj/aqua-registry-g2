@@ -1,0 +1,18 @@
+name: bellicose100xp/jiq
+type: github_release
+repo_owner: bellicose100xp
+repo_name: jiq
+repo_id: 1097778866
+description: Interactive JSON query tool with real-time output and AI assistance
+version_overrides:
+  - version_constraint: Version == "v2.0.0"
+    no_asset: true
+  - version_constraint: "true"
+    files:
+      - name: jiq
+        src: '{{.AssetWithoutExt}}/jiq'
+    overrides:
+      - goos: windows
+        format: zip
+        files:
+          - name: jiq
