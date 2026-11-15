@@ -1,0 +1,21 @@
+name: awslabs/dynein
+type: github_release
+repo_owner: awslabs
+repo_name: dynein
+repo_id: 312885986
+description: DynamoDB CLI written in Rust
+files:
+  - name: dy
+version_overrides:
+  - version_constraint: semver("> 0.1.2")
+    replacements:
+      linux/amd64: linux
+      linux/arm64: linux-arm
+  - version_constraint: semver("<= 0.1.2")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: "true"
+    replacements:
+      linux/amd64: linux
+      linux/arm64: linux-arm
