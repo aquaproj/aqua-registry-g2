@@ -1,0 +1,33 @@
+name: particledecay/kconf
+type: github_release
+repo_owner: particledecay
+repo_name: kconf
+repo_id: 233767423
+description: Manage multiple kubeconfigs easily
+version_overrides:
+  - version_constraint: Version == "v1.3.4"
+    files:
+      - name: kconf
+        src: program
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: Version == "v1.4.0"
+    files:
+      - name: kconf
+        src: program
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: semver("> 1.12.0")
+  - version_constraint: semver("> 1.9.0")
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver("> 1.0.0")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: semver("<= 1.0.0")
+    no_asset: true
+  - version_constraint: "true"
