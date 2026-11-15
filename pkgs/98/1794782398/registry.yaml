@@ -1,0 +1,14 @@
+name: spinnaker/spin
+type: http
+repo_owner: spinnaker
+repo_name: spin
+repo_id: 125394871
+description: Spinnaker CLI
+url: https://storage.googleapis.com/spinnaker-artifacts/spin/{{trimV .Version}}/{{.OS}}/{{.Arch}}/spin
+format: raw
+rosetta2: true
+files:
+  - name: spin
+supported_envs:
+  - darwin
+  - amd64
