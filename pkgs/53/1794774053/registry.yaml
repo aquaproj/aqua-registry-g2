@@ -1,0 +1,35 @@
+name: oknozor/toml-bombadil
+type: github_release
+repo_owner: oknozor
+repo_name: toml-bombadil
+repo_id: 282640628
+description: A dotfile manager with templating
+files:
+  - name: bombadil
+version_overrides:
+  - version_constraint: Version == "3.1.0"
+    no_asset: true
+  - version_constraint: semver("> 4.1.0")
+    files:
+      - name: bombadil
+        src: '{{.Arch}}-{{.OS}}/bombadil'
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: semver("> 2.2.1")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: semver("> 2.1.0")
+    no_asset: true
+  - version_constraint: semver("<= 2.1.0")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: "true"
+    files:
+      - name: bombadil
+        src: '{{.Arch}}-{{.OS}}/bombadil'
+    supported_envs:
+      - linux/amd64
+      - darwin

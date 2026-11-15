@@ -1,0 +1,63 @@
+{
+  "published_at": "2025-04-23T08:07:41Z",
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "oknozor",
+      "repo_name": "toml-bombadil",
+      "repo_id": 282640628,
+      "asset": "bombadil-4.2.0-x86_64-apple-darwin.tar.gz",
+      "format": "tar.gz",
+      "checksum": "638d8b7257f0f0319541a17140e4ba631da5fb0c62b33cd2fb3012b04ee969f6",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "bombadil",
+          "src": "x86_64-apple-darwin/bombadil"
+        }
+      ]
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "oknozor",
+      "repo_name": "toml-bombadil",
+      "repo_id": 282640628,
+      "asset": "bombadil-4.2.0-aarch64-apple-darwin.tar.gz",
+      "format": "tar.gz",
+      "checksum": "71838e0fc6589508381c7dae41f25175039fe37748409083a7069551a084141e",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "bombadil",
+          "src": "aarch64-apple-darwin/bombadil"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "variants": {
+        "libc": "musl"
+      },
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "oknozor",
+      "repo_name": "toml-bombadil",
+      "repo_id": 282640628,
+      "asset": "bombadil-4.2.0-x86_64-unknown-linux-musl.tar.gz",
+      "format": "tar.gz",
+      "checksum": "0101471f62e52b0568da918e04c8fdf0c687c5e86e112bce6baefbb4dff5a9a4",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "bombadil",
+          "src": "x86_64-unknown-linux-musl/bombadil"
+        }
+      ]
+    }
+  ]
+}
