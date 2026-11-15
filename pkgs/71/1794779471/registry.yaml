@@ -1,0 +1,15 @@
+name: kurehajime/pong-command
+type: github_release
+repo_owner: kurehajime
+repo_name: pong-command
+repo_id: 34324950
+description: pong is not ping. pong is CLI game
+files:
+  - name: pong
+version_overrides:
+  - version_constraint: semver(">= 2.0.8")
+  - version_constraint: semver(">= 2.0.5")
+  - version_constraint: "true"
+    supported_envs:
+      - darwin
+      - amd64
