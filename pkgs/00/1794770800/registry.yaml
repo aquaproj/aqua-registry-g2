@@ -1,0 +1,25 @@
+name: madelynnblue/sqlfmt
+aliases:
+  - name: mjibson/sqlfmt
+  - name: maddyblue/sqlfmt
+type: github_release
+repo_owner: madelynnblue
+repo_name: sqlfmt
+repo_id: 136870950
+description: SQL formatter with width-aware output
+version_overrides:
+  - version_constraint: semver("> 0.4.0")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("<= 0.4.0")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: "true"
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
