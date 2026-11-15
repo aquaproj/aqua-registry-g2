@@ -1,0 +1,19 @@
+name: wtetsu/gaze
+type: github_release
+repo_owner: wtetsu
+repo_name: gaze
+repo_id: 230095307
+description: Executes commands for you
+overrides:
+  - goos: darwin
+    files:
+      - name: gaze
+        src: gaze_{{.OS}}_{{.Arch}}_{{.Version}}/gaze
+files:
+  - name: gaze
+    src: gaze_{{.OS}}_{{.Version}}/gaze
+replacements:
+  amd64: amd
+supported_envs:
+  - darwin
+  - amd64
