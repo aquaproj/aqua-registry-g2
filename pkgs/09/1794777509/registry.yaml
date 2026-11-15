@@ -1,0 +1,18 @@
+name: toshimaru/nyan
+type: github_release
+repo_owner: toshimaru
+repo_name: nyan
+repo_id: 195893425
+description: Colored `cat` command
+version_overrides:
+  - version_constraint: semver("> 0.9.0")
+  - version_constraint: semver("> 0.1.0")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("<= 0.1.0")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: "true"
