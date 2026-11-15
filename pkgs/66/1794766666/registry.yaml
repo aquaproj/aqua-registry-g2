@@ -1,0 +1,38 @@
+name: greymd/teip
+type: github_release
+repo_owner: greymd
+repo_name: teip
+repo_id: 268647751
+description: Masking tape to help commands "do one thing well"
+version_overrides:
+  - version_constraint: Version == "v2.3.1"
+    files:
+      - name: teip
+        src: bin/teip
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("> 2.1.0")
+    files:
+      - name: teip
+        src: bin/teip
+  - version_constraint: semver("> 1.2.0")
+    files:
+      - name: teip
+        src: bin/teip
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("<= 1.2.0")
+    files:
+      - name: teip
+        src: bin/teip
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: "true"
+    files:
+      - name: teip
+        src: bin/teip
