@@ -1,0 +1,27 @@
+name: michidk/vscli
+type: github_release
+repo_owner: michidk
+repo_name: vscli
+repo_id: 609615063
+description: A CLI tool to launch vscode projects, which supports devcontainers
+files:
+  - name: vscli
+    src: vscli-{{.Arch}}-{{.OS}}/vscli
+supported_envs:
+  - darwin
+  - amd64
+version_overrides:
+  - version_constraint: semver(">= 0.1.7")
+  - version_constraint: Version == "v0.1.6"
+    supported_envs:
+      - linux/amd64
+      - windows/amd64
+  - version_constraint: Version == "v0.1.5"
+    supported_envs:
+      - linux/amd64
+      - windows/amd64
+  - version_constraint: semver("< 0.1.5")
+    supported_envs:
+      - linux/amd64
+      - windows/amd64
+  - version_constraint: "true"
