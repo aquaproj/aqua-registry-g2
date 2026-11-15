@@ -1,0 +1,14 @@
+name: connectrpc/protoc-gen-connect-openapi
+aliases:
+  - name: sudorandom/protoc-gen-connect-openapi
+type: github_release
+repo_owner: connectrpc
+repo_name: protoc-gen-connect-openapi
+repo_id: 730677307
+description: Plugin for generating OpenAPIv3 from protobufs matching the Connect RPC
+  interface
+version_overrides:
+  - version_constraint: semver("> 0.8.3")
+  - version_constraint: semver("<= 0.8.3")
+    no_asset: true
+  - version_constraint: "true"
