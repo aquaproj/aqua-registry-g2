@@ -1,0 +1,15 @@
+name: containers/fuse-overlayfs
+type: github_release
+repo_owner: containers
+repo_name: fuse-overlayfs
+repo_id: 140769295
+description: FUSE implementation for overlayfs
+version_overrides:
+  - version_constraint: "true"
+    supported_envs:
+      - linux
+asset_rules:
+  - envs:
+      - linux/amd64
+      - linux/arm64
+    filter: Asset matches "^fuse-overlayfs-.+([.].+)?$"
