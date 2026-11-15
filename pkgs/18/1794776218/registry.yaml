@@ -1,0 +1,31 @@
+name: purton-tech/cloak
+type: github_release
+repo_owner: purton-tech
+repo_name: cloak
+repo_id: 423087164
+description: Secrets automation for developers
+version_overrides:
+  - version_constraint: Version == "v1.17.12"
+    no_asset: true
+  - version_constraint: semver("> 1.17.14")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: semver("> 1.17.7")
+    supported_envs:
+      - darwin
+  - version_constraint: semver("> 1.5.0")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: semver("<= 1.5.0")
+    supported_envs:
+      - linux/amd64
+  - version_constraint: "true"
+    supported_envs:
+      - linux/amd64
+      - darwin
+asset_rules:
+  - envs:
+      - linux/amd64
+    filter: Asset matches "^cli([.].+)?$"
