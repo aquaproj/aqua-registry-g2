@@ -15,7 +15,7 @@
       "files": [
         {
           "name": "diskus",
-          "src": "diskus-v0.2.0-x86_64-apple-darwin/diskus"
+          "src": "dup-v0.2.0-x86_64-apple-darwin/dup"
         }
       ]
     },
@@ -34,7 +34,7 @@
       "files": [
         {
           "name": "diskus",
-          "src": "diskus-v0.2.0-x86_64-apple-darwin/diskus"
+          "src": "dup-v0.2.0-x86_64-apple-darwin/dup"
         }
       ]
     },
@@ -44,6 +44,7 @@
       "variants": {
         "libc": "glibc"
       },
+      "linked_libc": "glibc",
       "type": "github_release",
       "repo_owner": "sharkdp",
       "repo_name": "diskus",
@@ -55,7 +56,7 @@
       "files": [
         {
           "name": "diskus",
-          "src": "diskus-v0.2.0-x86_64-unknown-linux-gnu/diskus"
+          "src": "dup-v0.2.0-x86_64-unknown-linux-gnu/dup"
         }
       ]
     },
@@ -65,6 +66,7 @@
       "variants": {
         "libc": "musl"
       },
+      "linked_libc": "static",
       "type": "github_release",
       "repo_owner": "sharkdp",
       "repo_name": "diskus",
@@ -76,7 +78,7 @@
       "files": [
         {
           "name": "diskus",
-          "src": "diskus-v0.2.0-x86_64-unknown-linux-musl/diskus"
+          "src": "dup-v0.2.0-x86_64-unknown-linux-musl/dup"
         }
       ]
     }
