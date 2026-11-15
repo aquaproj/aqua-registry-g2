@@ -1,0 +1,13 @@
+name: klauspost/asmfmt
+type: github_release
+repo_owner: klauspost
+repo_name: asmfmt
+repo_id: 46998787
+description: Go Assembler Formatter
+version_overrides:
+  - version_constraint: Version == "v1.3.1"
+    no_asset: true
+  - version_constraint: semver("> 1.2.3")
+  - version_constraint: semver("<= 1.2.3")
+    no_asset: true
+  - version_constraint: "true"
