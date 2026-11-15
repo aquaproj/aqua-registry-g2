@@ -1,0 +1,31 @@
+name: remko/age-plugin-se
+type: github_release
+repo_owner: remko
+repo_name: age-plugin-se
+repo_id: 586972173
+description: Age plugin for Apple's Secure Enclave
+version_overrides:
+  - version_constraint: Version == "v0.2.0"
+    no_asset: true
+  - version_constraint: Version == "v0.0.2"
+    supported_envs:
+      - darwin
+  - version_constraint: semver("> 0.0.5")
+    overrides:
+      - goos: linux
+        format: tgz
+        files:
+          - name: age-plugin-se
+            src: '{{.AssetWithoutExt}}/usr/bin/age-plugin-se'
+  - version_constraint: semver("<= 0.0.5")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: "true"
+    overrides:
+      - goos: linux
+        format: tgz
+        files:
+          - name: age-plugin-se
+            src: '{{.AssetWithoutExt}}/usr/bin/age-plugin-se'
