@@ -1,0 +1,17 @@
+name: innobead/huber
+type: github_release
+repo_owner: innobead
+repo_name: huber
+repo_id: 267105534
+description: 'Huber: A package installer for GitHub repository releases'
+version_overrides:
+  - version_constraint: semver("> 0.2.3")
+  - version_constraint: semver("> 0.1.0")
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver("<= 0.1.0")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: "true"
