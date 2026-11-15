@@ -1,0 +1,16 @@
+name: koyeb/koyeb-cli
+type: github_release
+repo_owner: koyeb
+repo_name: koyeb-cli
+repo_id: 243768456
+description: Koyeb cli
+files:
+  - name: koyeb
+version_overrides:
+  - version_constraint: semver("> 1.2.0")
+  - version_constraint: semver("<= 1.2.0")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: "true"
