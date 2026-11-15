@@ -1,0 +1,16 @@
+name: Kong/deck
+type: github_release
+repo_owner: Kong
+repo_name: deck
+repo_id: 157048481
+description: 'decK: Configuration management and drift detection for Kong'
+version_overrides:
+  - version_constraint: Version == "v1.20.0"
+    no_asset: true
+  - version_constraint: semver("> 1.8.1")
+  - version_constraint: semver("<= 1.8.1")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: "true"
