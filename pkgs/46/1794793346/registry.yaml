@@ -1,0 +1,19 @@
+name: k1LoW/tbls-ask
+type: github_release
+repo_owner: k1LoW
+repo_name: tbls-ask
+repo_id: 655911730
+description: tbls-ask is an external subcommand of tbls for asking LLM of the datasource
+version_overrides:
+  - version_constraint: Version == "v0.1.1"
+    no_asset: true
+  - version_constraint: semver("> 0.0.1")
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver("<= 0.0.1")
+    no_asset: true
+  - version_constraint: "true"
+    supported_envs:
+      - linux
+      - darwin
