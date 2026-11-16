@@ -1,0 +1,11 @@
+name: ysugimoto/gcsdeploy
+type: github_release
+repo_owner: ysugimoto
+repo_name: gcsdeploy
+repo_id: 931485916
+description: Deploy files to GCS like rsync
+version_overrides:
+  - version_constraint: "true"
+    supported_envs:
+      - linux
+      - darwin
