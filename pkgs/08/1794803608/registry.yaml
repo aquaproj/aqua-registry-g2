@@ -1,0 +1,29 @@
+name: getsentry/toolkit/cli
+type: github_release
+repo_owner: getsentry
+repo_name: toolkit
+repo_id: 957245447
+description: Sentry command-line tool for error monitoring and debugging
+version_filter: Version startsWith "cli@"
+version_prefix: cli@
+files:
+  - name: sentry
+version_overrides:
+  - version_constraint: semver("> 0.45.0")
+    files:
+      - name: sentry
+        src: '{{.AssetWithoutExt}}'
+  - version_constraint: semver("> 0.10.3")
+    version_prefix: ""
+    files:
+      - name: sentry
+        src: '{{.AssetWithoutExt}}'
+  - version_constraint: semver("<= 0.10.3")
+    version_prefix: ""
+  - version_constraint: "true"
+    files:
+      - name: sentry
+        src: '{{.AssetWithoutExt}}'
+all_assets_filter: Asset matches "^sentry-.+-.+([.].+)?$" or Asset matches "^sentry-.+-.+[.].+([.].+)?$"
+  or Asset matches "^sentry-.+-.+[.]exe[.].+([.].+)?$" or Asset matches "^sentry-.+-.+-musl[.].+([.].+)?$"
+  or Asset endsWith ".intoto.jsonl"
