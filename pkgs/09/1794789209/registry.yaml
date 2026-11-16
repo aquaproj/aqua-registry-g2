@@ -1,0 +1,11 @@
+name: terratags/terratags
+type: github_release
+repo_owner: terratags
+repo_name: terratags
+repo_id: 960688490
+description: Required tags validation on terraform resources
+version_overrides:
+  - version_constraint: semver("> 0.0.2")
+  - version_constraint: semver("<= 0.0.2")
+    no_asset: true
+  - version_constraint: "true"
