@@ -1,0 +1,22 @@
+name: IohannRabeson/tmignore-rs
+type: github_release
+repo_owner: IohannRabeson
+repo_name: tmignore-rs
+repo_id: 1158285481
+description: Makes Time Machine respect .gitignore files
+version_overrides:
+  - version_constraint: Version == "0.3.1"
+    no_asset: true
+  - version_constraint: semver("> 0.1.5")
+    supported_envs:
+      - darwin
+  - version_constraint: semver("<= 0.1.5")
+    no_asset: true
+  - version_constraint: "true"
+    supported_envs:
+      - darwin
+asset_rules:
+  - envs:
+      - darwin/amd64
+      - darwin/arm64
+    filter: Asset matches "^tmignore-rs_.+_.+[.]zip([.].+)?$"
