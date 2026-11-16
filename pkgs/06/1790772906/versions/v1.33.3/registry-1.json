@@ -1,0 +1,68 @@
+{
+  "assets": [
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "static",
+      "type": "http",
+      "repo_owner": "kubernetes",
+      "repo_name": "kubernetes",
+      "repo_id": 20580498,
+      "asset": "apiextensions-apiserver",
+      "url": "https://dl.k8s.io/v1.33.3/bin/linux/amd64/apiextensions-apiserver",
+      "format": "raw",
+      "checksum": "aa72327de3dbf3f62e77928bfed72f79954073d3798acf367f896a50b465e6cc",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "apiextensions-apiserver",
+          "src": "apiextensions-apiserver"
+        }
+      ],
+      "cosign": {
+        "signature": {
+          "type": "http",
+          "url": "https://dl.k8s.io/v1.33.3/bin/linux/amd64/apiextensions-apiserver.sig"
+        },
+        "certificate": {
+          "type": "http",
+          "url": "https://dl.k8s.io/v1.33.3/bin/linux/amd64/apiextensions-apiserver.cert"
+        },
+        "certificate_identity": "krel-staging@k8s-releng-prod.iam.gserviceaccount.com",
+        "certificate_oidc_issuer": "https://accounts.google.com"
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "linked_libc": "static",
+      "type": "http",
+      "repo_owner": "kubernetes",
+      "repo_name": "kubernetes",
+      "repo_id": 20580498,
+      "asset": "apiextensions-apiserver",
+      "url": "https://dl.k8s.io/v1.33.3/bin/linux/arm64/apiextensions-apiserver",
+      "format": "raw",
+      "checksum": "30959d3b2e63b76e2849c7b5ade718b0b8ce439e8dd53cffaf9dc5343d49c2ca",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "apiextensions-apiserver",
+          "src": "apiextensions-apiserver"
+        }
+      ],
+      "cosign": {
+        "signature": {
+          "type": "http",
+          "url": "https://dl.k8s.io/v1.33.3/bin/linux/arm64/apiextensions-apiserver.sig"
+        },
+        "certificate": {
+          "type": "http",
+          "url": "https://dl.k8s.io/v1.33.3/bin/linux/arm64/apiextensions-apiserver.cert"
+        },
+        "certificate_identity": "krel-staging@k8s-releng-prod.iam.gserviceaccount.com",
+        "certificate_oidc_issuer": "https://accounts.google.com"
+      }
+    }
+  ]
+}
