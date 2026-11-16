@@ -1,0 +1,21 @@
+name: so-dang-cool/sigi
+aliases:
+  - name: sigi-cli/sigi
+type: github_release
+repo_owner: so-dang-cool
+repo_name: sigi
+repo_id: 342117544
+description: Sigi - a tool for organizing
+version_overrides:
+  - version_constraint: semver("> 3.6.1")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("<= 3.6.1")
+    no_asset: true
+  - version_constraint: "true"
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
