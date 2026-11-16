@@ -1,0 +1,11 @@
+name: noborus/mdviewer
+type: github_release
+repo_owner: noborus
+repo_name: mdviewer
+repo_id: 303879336
+description: Rendered display of markdown on terminal
+version_overrides:
+  - version_constraint: semver("> 0.1.0")
+  - version_constraint: semver("<= 0.1.0")
+    no_asset: true
+  - version_constraint: "true"
