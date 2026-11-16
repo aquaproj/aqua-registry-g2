@@ -1,0 +1,101 @@
+{
+  "published_at": "2018-09-07T18:16:00Z",
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "BurntSushi",
+      "repo_name": "ripgrep",
+      "repo_id": 53631945,
+      "asset": "ripgrep-0.10.0-x86_64-apple-darwin.tar.gz",
+      "format": "tar.gz",
+      "checksum": "32754b4173ac87a7bfffd436d601a49362676eb1841ab33440f2f49c002c8967",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "rg",
+          "src": "ripgrep-0.10.0-x86_64-apple-darwin/rg"
+        }
+      ]
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "rosetta2": true,
+      "type": "github_release",
+      "repo_owner": "BurntSushi",
+      "repo_name": "ripgrep",
+      "repo_id": 53631945,
+      "asset": "ripgrep-0.10.0-x86_64-apple-darwin.tar.gz",
+      "format": "tar.gz",
+      "checksum": "32754b4173ac87a7bfffd436d601a49362676eb1841ab33440f2f49c002c8967",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "rg",
+          "src": "ripgrep-0.10.0-x86_64-apple-darwin/rg"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "variants": {
+        "libc": "musl"
+      },
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "BurntSushi",
+      "repo_name": "ripgrep",
+      "repo_id": 53631945,
+      "asset": "ripgrep-0.10.0-x86_64-unknown-linux-musl.tar.gz",
+      "format": "tar.gz",
+      "checksum": "c76080aa807a339b44139885d77d15ad60ab8cdd2c2fdaf345d0985625bc0f97",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "rg",
+          "src": "ripgrep-0.10.0-x86_64-unknown-linux-musl/rg"
+        }
+      ]
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "BurntSushi",
+      "repo_name": "ripgrep",
+      "repo_id": 53631945,
+      "asset": "ripgrep-0.10.0-x86_64-pc-windows-msvc.zip",
+      "format": "zip",
+      "checksum": "6d3e9972627e88c3bf4aa6d0d5383326bd8f787510df6b0b7374a50570eb5570",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "rg",
+          "src": "rg.exe"
+        }
+      ]
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "windows_arm_emulation": true,
+      "type": "github_release",
+      "repo_owner": "BurntSushi",
+      "repo_name": "ripgrep",
+      "repo_id": 53631945,
+      "asset": "ripgrep-0.10.0-x86_64-pc-windows-msvc.zip",
+      "format": "zip",
+      "checksum": "6d3e9972627e88c3bf4aa6d0d5383326bd8f787510df6b0b7374a50570eb5570",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "rg",
+          "src": "rg.exe"
+        }
+      ]
+    }
+  ]
+}
