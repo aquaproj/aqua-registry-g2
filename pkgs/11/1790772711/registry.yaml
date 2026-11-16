@@ -23,6 +23,8 @@ version_overrides:
       replacements:
         amd64: "64"
         arm64: arm64-v8a
+# Xray-linux-loong64.zip holds "64", the definition's spelling of amd64, and ties with
+# Xray-linux-64.zip for linux/amd64 unless it is left out.
 all_assets_filter: |
-    let words = ["-32\\.", "^Xray-win7-"];
+    let words = ["-32\\.", "^Xray-win7-", "-loong64\\."];
     not any(words, {Asset matches #})
