@@ -1,0 +1,18 @@
+name: suzuki-shunsuke/asciinema-trim
+type: github_release
+repo_owner: suzuki-shunsuke
+repo_name: asciinema-trim
+repo_id: 439536695
+description: Trim and change the playback speed of asciinema's session
+version_overrides:
+  - version_constraint: semver("> 0.1.5")
+  - version_constraint: semver(">= 0.1.4")
+    slsa_provenance:
+      type: github_release
+      asset: multiple.intoto.jsonl
+  - version_constraint: semver("> 0.1.1")
+  - version_constraint: semver("<= 0.1.1")
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: "true"
