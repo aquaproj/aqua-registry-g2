@@ -1,0 +1,17 @@
+name: suzuki-shunsuke/renovate-issue-action
+type: github_release
+repo_owner: suzuki-shunsuke
+repo_name: renovate-issue-action
+repo_id: 483840981
+description: Create, update, and close GitHub Issues with GitHub Actions according
+  to Renovate Pull Requests
+supported_envs:
+  - darwin
+  - linux
+version_overrides:
+  - version_constraint: semver("> 0.3.2")
+  - version_constraint: semver("> 0.3.1")
+    slsa_provenance:
+      type: github_release
+      asset: multiple.intoto.jsonl
+  - version_constraint: "true"
