@@ -1,0 +1,12 @@
+name: k1LoW/roots
+type: github_release
+repo_owner: k1LoW
+repo_name: roots
+repo_id: 927994732
+description: '`roots` is a tool for exploring multiple root directories, such as those
+  in a monorepo project'
+version_overrides:
+  - version_constraint: semver("> 0.1.0")
+  - version_constraint: semver("<= 0.1.0")
+    no_asset: true
+  - version_constraint: "true"
