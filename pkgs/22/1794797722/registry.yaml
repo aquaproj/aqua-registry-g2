@@ -1,0 +1,9 @@
+name: Songmu/gitsemvers
+type: github_release
+repo_owner: Songmu
+repo_name: gitsemvers
+repo_id: 57963018
+description: Retrieve semvers from git tags
+files:
+  - name: git-semvers
+    src: gitsemvers_{{.Version}}_{{.OS}}_{{.Arch}}/git-semvers
