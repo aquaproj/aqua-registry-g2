@@ -1,0 +1,22 @@
+name: kastenhq/external-tools/k10tools
+type: github_release
+repo_owner: kastenhq
+repo_name: external-tools
+repo_id: 306759861
+description: Used to distribute external tools
+files:
+  - name: k10tools
+supported_envs:
+  - linux
+  - darwin
+version_overrides:
+  - version_constraint: semver(">= 4.0.3")
+  - version_constraint: semver(">= 3.0.7")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: semver("< 3.0.7")
+    no_asset: true
+  - version_constraint: "true"
+all_assets_filter: Asset matches "^k10tools_.+_.+_.+[.].+([.].+)?$" or Asset matches
+  "^k10tools_.+_.+_.+([.].+)?$" or Asset endsWith ".intoto.jsonl"
