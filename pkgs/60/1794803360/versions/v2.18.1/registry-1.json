@@ -1,0 +1,205 @@
+{
+  "published_at": "2026-11-09T18:38:49Z",
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "mongodb",
+      "repo_name": "kingfisher",
+      "repo_id": 980173830,
+      "asset": "kingfisher-darwin-x64.tgz",
+      "format": "tgz",
+      "checksum": "45e3056073438ccf6d10be9ad87aadeb00a72692a23009fdefe86e2dd2d3cd74",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "kingfisher",
+          "src": "kingfisher"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "multiple.intoto.jsonl"
+        },
+        "certificate_identity": "https://github.com/mongodb/kingfisher/.github/workflows/release.yml@refs/tags/v2.18.1",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      },
+      "github_artifact_attestations": {
+        "signer_workflow": "mongodb/kingfisher/.github/workflows/release.yml",
+        "source_ref": "refs/tags/v2.18.1",
+        "source_digest": "01e7b817376fbf2272be8f162bd32309bf97ee1f",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "mongodb",
+      "repo_name": "kingfisher",
+      "repo_id": 980173830,
+      "asset": "kingfisher-darwin-arm64.tgz",
+      "format": "tgz",
+      "checksum": "42251cf04af60c37053986c2d89096691043ac07e07f1b62384f29fba143c7a3",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "kingfisher",
+          "src": "kingfisher"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "multiple.intoto.jsonl"
+        },
+        "certificate_identity": "https://github.com/mongodb/kingfisher/.github/workflows/release.yml@refs/tags/v2.18.1",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      },
+      "github_artifact_attestations": {
+        "signer_workflow": "mongodb/kingfisher/.github/workflows/release.yml",
+        "source_ref": "refs/tags/v2.18.1",
+        "source_digest": "01e7b817376fbf2272be8f162bd32309bf97ee1f",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "mongodb",
+      "repo_name": "kingfisher",
+      "repo_id": 980173830,
+      "asset": "kingfisher-linux-x64.tgz",
+      "format": "tgz",
+      "checksum": "8f29b5ba1818f13bccd0b079c798659cfd2eccf21998003c8aaf75f8a3794529",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "kingfisher",
+          "src": "kingfisher"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "multiple.intoto.jsonl"
+        },
+        "certificate_identity": "https://github.com/mongodb/kingfisher/.github/workflows/release.yml@refs/tags/v2.18.1",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      },
+      "github_artifact_attestations": {
+        "signer_workflow": "mongodb/kingfisher/.github/workflows/release.yml",
+        "source_ref": "refs/tags/v2.18.1",
+        "source_digest": "01e7b817376fbf2272be8f162bd32309bf97ee1f",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "mongodb",
+      "repo_name": "kingfisher",
+      "repo_id": 980173830,
+      "asset": "kingfisher-linux-arm64.tgz",
+      "format": "tgz",
+      "checksum": "37a6341c9899693d6cf2ef18d54bf65395a8ad9b6c6152aea90f8626b4be9d8e",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "kingfisher",
+          "src": "kingfisher"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "multiple.intoto.jsonl"
+        },
+        "certificate_identity": "https://github.com/mongodb/kingfisher/.github/workflows/release.yml@refs/tags/v2.18.1",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      },
+      "github_artifact_attestations": {
+        "signer_workflow": "mongodb/kingfisher/.github/workflows/release.yml",
+        "source_ref": "refs/tags/v2.18.1",
+        "source_digest": "01e7b817376fbf2272be8f162bd32309bf97ee1f",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "mongodb",
+      "repo_name": "kingfisher",
+      "repo_id": 980173830,
+      "asset": "kingfisher-windows-x64.zip",
+      "format": "zip",
+      "checksum": "2fefde1cf03070323a539f01b2be5e2ae3e8399328dc6de5f8eae629f1eb9557",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "kingfisher",
+          "src": "kingfisher.exe"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "multiple.intoto.jsonl"
+        },
+        "certificate_identity": "https://github.com/mongodb/kingfisher/.github/workflows/release.yml@refs/tags/v2.18.1",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      },
+      "github_artifact_attestations": {
+        "signer_workflow": "mongodb/kingfisher/.github/workflows/release.yml",
+        "source_ref": "refs/tags/v2.18.1",
+        "source_digest": "01e7b817376fbf2272be8f162bd32309bf97ee1f",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "mongodb",
+      "repo_name": "kingfisher",
+      "repo_id": 980173830,
+      "asset": "kingfisher-windows-arm64.zip",
+      "format": "zip",
+      "checksum": "75f02fe8010cb6df3317f301e485668c7538f2b77462d49ff152eeee89dbebf5",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "kingfisher",
+          "src": "kingfisher.exe"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "multiple.intoto.jsonl"
+        },
+        "certificate_identity": "https://github.com/mongodb/kingfisher/.github/workflows/release.yml@refs/tags/v2.18.1",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      },
+      "github_artifact_attestations": {
+        "signer_workflow": "mongodb/kingfisher/.github/workflows/release.yml",
+        "source_ref": "refs/tags/v2.18.1",
+        "source_digest": "01e7b817376fbf2272be8f162bd32309bf97ee1f",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    }
+  ]
+}
