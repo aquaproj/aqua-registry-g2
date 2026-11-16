@@ -1,0 +1,18 @@
+name: grafana/oats
+type: github_release
+repo_owner: grafana
+repo_name: oats
+repo_id: 674042654
+description: OpenTelemetry Acceptance Tests (OATs), or OATs for short, is a test framework
+  for OpenTelemetry
+github_artifact_attestations:
+  signer_workflow: grafana/oats/.github/workflows/release.yml
+version_overrides:
+  - version_constraint: semver("> 0.6.1")
+    github_artifact_attestations:
+      signer_workflow: grafana/oats/.github/workflows/release.yml
+  - version_constraint: semver("<= 0.6.1")
+    no_asset: true
+  - version_constraint: "true"
+    github_artifact_attestations:
+      signer_workflow: grafana/oats/.github/workflows/release.yml
