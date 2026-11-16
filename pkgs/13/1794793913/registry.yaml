@@ -1,0 +1,18 @@
+name: tomohiro/gyazo-cli
+type: github_release
+repo_owner: tomohiro
+repo_name: gyazo-cli
+repo_id: 22912521
+description: Gyazo command-line uploader
+files:
+  - name: gyazo-cli
+    src: gyazo-cli_{{.Version}}_{{.OS}}_{{.Arch}}/gyazo-cli
+supported_envs:
+  - darwin
+  - amd64
+version_overrides:
+  - version_constraint: semver(">= 1.0.0")
+  - version_constraint: semver("< 1.0.0")
+    files:
+      - name: gyazo
+  - version_constraint: "true"
