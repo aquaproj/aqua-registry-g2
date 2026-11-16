@@ -1,0 +1,21 @@
+name: iBotPeaches/Apktool
+type: github_release
+repo_owner: iBotPeaches
+repo_name: Apktool
+repo_id: 3766706
+description: A tool for reverse engineering Android apk files
+files:
+  - name: apktool
+version_overrides:
+  - version_constraint: Version == "v2.0.3"
+    no_asset: true
+  - version_constraint: "true"
+asset_rules:
+  - envs:
+      - linux/amd64
+      - linux/arm64
+      - darwin/amd64
+      - darwin/arm64
+      - windows/amd64
+      - windows/arm64
+    filter: Asset matches "^apktool_.+[.]jar([.].+)?$"
