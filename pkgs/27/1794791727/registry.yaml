@@ -1,0 +1,24 @@
+name: pivotal-cf/pivnet-cli
+type: github_release
+repo_owner: pivotal-cf
+repo_name: pivnet-cli
+repo_id: 71143994
+description: CLI to interact with Tanzu Network API V2 interface
+files:
+  - name: pivnet
+version_overrides:
+  - version_constraint: semver("> 3.0.1")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("<= 3.0.1")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: "true"
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
