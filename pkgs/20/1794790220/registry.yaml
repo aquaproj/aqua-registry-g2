@@ -1,0 +1,14 @@
+name: hirosassa/tfcmt-gitlab
+type: github_release
+repo_owner: hirosassa
+repo_name: tfcmt-gitlab
+repo_id: 482361415
+description: tfcmt-gitlab is a CLI command to parse and notify Terraform execution
+  results. This command supports GitLab as a CI and notification platform
+version_overrides:
+  - version_constraint: semver("> 0.1.4")
+  - version_constraint: semver("<= 0.1.4")
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: "true"
