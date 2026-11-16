@@ -1,0 +1,32 @@
+name: gradle/gradle-distributions
+aliases:
+  - name: gradle/gradle
+type: github_release
+repo_owner: gradle
+repo_name: gradle-distributions
+repo_id: 696192900
+description: Adaptable, fast automation for all
+files:
+  - name: gradle
+version_overrides:
+  - version_constraint: semver("> 9.0.0-M7")
+    files:
+      - name: gradle
+        src: '{{.AssetWithoutExt | trimSuffix "-bin"}}/bin/gradle'
+  - version_constraint: semver("<= 9.0.0-M7")
+    files:
+      - name: gradle
+        src: '{{.AssetWithoutExt | trimSuffix "-bin"}}/bin/gradle'
+  - version_constraint: "true"
+    files:
+      - name: gradle
+        src: '{{.AssetWithoutExt | trimSuffix "-bin"}}/bin/gradle'
+asset_rules:
+  - envs:
+      - linux/amd64
+      - linux/arm64
+      - darwin/amd64
+      - darwin/arm64
+      - windows/amd64
+      - windows/arm64
+    filter: Asset matches "^gradle-.+-bin[.]zip([.].+)?$"
