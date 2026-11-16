@@ -1,0 +1,26 @@
+name: hrmsk66/terraformify
+type: github_release
+repo_owner: hrmsk66
+repo_name: terraformify
+repo_id: 496654791
+description: An experimental CLI that generates Terraform files for managing existing
+  Fastly services
+version_overrides:
+  - version_constraint: semver("> 0.2.2")
+    files:
+      - name: terraformify
+        src: terraformify_{{.OS}}_{{.Arch}}/terraformify
+    supported_envs:
+      - darwin
+      - linux
+      - amd64
+  - version_constraint: semver("<= 0.2.2")
+    no_asset: true
+  - version_constraint: "true"
+    files:
+      - name: terraformify
+        src: terraformify_{{.OS}}_{{.Arch}}/terraformify
+    supported_envs:
+      - darwin
+      - linux
+      - amd64
