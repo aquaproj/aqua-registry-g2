@@ -1,0 +1,12 @@
+name: uzimaru0000/oglens
+type: github_release
+repo_owner: uzimaru0000
+repo_name: oglens
+repo_id: 541535654
+description: Tools for viewing OGP
+files:
+  - name: og
+    src: og-{{.Arch}}-{{.OS}}/og
+supported_envs:
+  - darwin
+  - amd64
