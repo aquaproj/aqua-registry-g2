@@ -1,0 +1,11 @@
+name: planetscale/ghcommit
+type: github_release
+repo_owner: planetscale
+repo_name: ghcommit
+repo_id: 624018107
+description: Use GitHub's GraphQL API to commit files to a GitHub repository
+version_overrides:
+  - version_constraint: "true"
+    supported_envs:
+      - linux
+      - darwin
