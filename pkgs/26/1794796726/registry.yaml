@@ -1,0 +1,33 @@
+name: julian7/redact
+type: github_release
+repo_owner: julian7
+repo_name: redact
+repo_id: 194438192
+description: Data encryptor for git
+files:
+  - name: redact
+  - name: redact-ext-aws
+  - name: redact-ext-azure
+version_overrides:
+  - version_constraint: Version == "v0.3.0"
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("> 0.4.1")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("> 0.2.0")
+    no_asset: true
+  - version_constraint: semver("<= 0.2.0")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: "true"
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
