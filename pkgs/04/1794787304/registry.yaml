@@ -1,0 +1,13 @@
+name: reproio/terraform-j2md
+type: github_release
+repo_owner: reproio
+repo_name: terraform-j2md
+repo_id: 473051216
+description: create readable terraform plan as markdown text from json plan output
+version_overrides:
+  - version_constraint: semver("> 0.0.3")
+  - version_constraint: semver("<= 0.0.3")
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: "true"
