@@ -1,0 +1,30 @@
+name: suzuki-shunsuke/mkghtag
+type: github_release
+repo_owner: suzuki-shunsuke
+repo_name: mkghtag
+repo_id: 701940692
+description: CLI to create GitHub Tags via API
+packslip:
+  identity_prefix: https://github.com/suzuki-shunsuke/go-release-workflow/
+  issuer: https://token.actions.githubusercontent.com
+github_artifact_attestations:
+  signer_workflow: suzuki-shunsuke/go-release-workflow/.github/workflows/release.yaml
+version_overrides:
+  - version_constraint: semver("> 0.1.13")
+    github_artifact_attestations:
+      signer_workflow: suzuki-shunsuke/go-release-workflow/.github/workflows/release.yaml
+  - version_constraint: semver("> 0.1.0")
+    slsa_provenance:
+      type: github_release
+      asset: multiple.intoto.jsonl
+  - version_constraint: semver("<= 0.1.0")
+    slsa_provenance:
+      type: github_release
+      asset: multiple.intoto.jsonl
+    overrides:
+      - goos: windows
+        slsa_provenance:
+          enabled: false
+  - version_constraint: "true"
+    github_artifact_attestations:
+      signer_workflow: suzuki-shunsuke/go-release-workflow/.github/workflows/release.yaml
