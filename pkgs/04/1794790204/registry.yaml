@@ -1,0 +1,27 @@
+name: devops-works/dw-query-digest
+type: github_release
+repo_owner: devops-works
+repo_name: dw-query-digest
+repo_id: 164306437
+description: MySQL slow log analyzer. Alternative to pt-query-digest
+version_overrides:
+  - version_constraint: Version == "v0.1"
+    no_asset: true
+  - version_constraint: Version == "v0.8"
+    supported_envs:
+      - darwin
+      - windows/amd64
+  - version_constraint: semver("> 0.7.0")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("<= 0.7.0")
+    supported_envs:
+      - darwin
+      - windows/amd64
+  - version_constraint: "true"
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
