@@ -1,0 +1,17 @@
+name: golangci/misspell
+type: github_release
+repo_owner: golangci
+repo_name: misspell
+repo_id: 139050216
+description: Correct commonly misspelled English words in source files
+version_overrides:
+  - version_constraint: semver("> 0.5.1")
+    files:
+      - name: misspell
+        src: '{{.AssetWithoutExt}}/misspell'
+  - version_constraint: semver("> 0.4.1")
+  - version_constraint: semver("<= 0.4.1")
+  - version_constraint: "true"
+    files:
+      - name: misspell
+        src: '{{.AssetWithoutExt}}/misspell'
