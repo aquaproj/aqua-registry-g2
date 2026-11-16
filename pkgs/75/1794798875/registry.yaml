@@ -1,0 +1,13 @@
+name: suzuki-shunsuke/deny-self-approve
+type: github_release
+repo_owner: suzuki-shunsuke
+repo_name: deny-self-approve
+repo_id: 915478444
+description: CLI to deny self-approved GitHub Pull Requests
+version_overrides:
+  - version_constraint: semver("> 0.4.0-0")
+  - version_constraint: semver("<= 0.4.0-0")
+    slsa_provenance:
+      type: github_release
+      asset: multiple.intoto.jsonl
+  - version_constraint: "true"
