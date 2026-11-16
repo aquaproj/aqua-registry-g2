@@ -1,0 +1,12 @@
+name: sheepla/gofind
+type: github_release
+repo_owner: sheepla
+repo_name: gofind
+repo_id: 507353895
+description: A command line pkg.go.dev searcher and `go get` helper
+version_overrides:
+  - version_constraint: Version == "v0.0.1"
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: "true"
