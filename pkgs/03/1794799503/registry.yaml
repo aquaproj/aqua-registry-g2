@@ -1,0 +1,11 @@
+name: kachick/selfup
+type: github_release
+repo_owner: kachick
+repo_name: selfup
+repo_id: 696286905
+description: Versions should know how to update themselves
+version_overrides:
+  - version_constraint: "true"
+    supported_envs:
+      - linux
+      - darwin
