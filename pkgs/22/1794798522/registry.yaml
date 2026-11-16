@@ -1,0 +1,11 @@
+name: ymmt2005/pbschema-lens
+type: github_release
+repo_owner: ymmt2005
+repo_name: pbschema-lens
+repo_id: 1376295575
+description: HTML site generator for protobuf schema
+version_overrides:
+  - version_constraint: semver("> 0.5.0")
+  - version_constraint: semver("<= 0.5.0")
+    no_asset: true
+  - version_constraint: "true"
