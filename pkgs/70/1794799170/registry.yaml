@@ -1,0 +1,13 @@
+name: suzuki-shunsuke/yaml2json
+type: github_release
+repo_owner: suzuki-shunsuke
+repo_name: yaml2json
+repo_id: 488544086
+description: Convert YAML to JSON
+version_overrides:
+  - version_constraint: semver("> 0.1.0")
+  - version_constraint: semver("<= 0.1.0")
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: "true"
