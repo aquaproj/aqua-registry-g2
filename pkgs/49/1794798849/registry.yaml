@@ -1,0 +1,28 @@
+name: s0undt3ch/ToolR
+type: github_release
+repo_owner: s0undt3ch
+repo_name: ToolR
+repo_id: 726585744
+description: In-project CLI tooling support
+packslip:
+  identity_prefix: https://github.com/s0undt3ch/ToolR/
+  issuer: https://token.actions.githubusercontent.com
+github_artifact_attestations:
+  enabled: true
+  signer_workflow: s0undt3ch/ToolR/.github/workflows/_build-binary-archive.yml
+version_overrides:
+  - version_constraint: semver(">= 0.20.0")
+    files:
+      - name: toolr
+        src: toolr-{{trimV .Version}}-{{.Arch}}-{{.OS}}/toolr
+    github_artifact_attestations:
+      enabled: true
+  - version_constraint: semver("< 0.20.0")
+    error_message: Standalone binaries are available from v0.20.0; please use v0.20.0
+      or later
+  - version_constraint: "true"
+    files:
+      - name: toolr
+        src: toolr-{{trimV .Version}}-{{.Arch}}-{{.OS}}/toolr
+    github_artifact_attestations:
+      enabled: true
