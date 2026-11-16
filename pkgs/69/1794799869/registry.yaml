@@ -1,0 +1,10 @@
+name: ebi-yade/ecresolve
+type: github_release
+repo_owner: ebi-yade
+repo_name: ecresolve
+repo_id: 877772561
+description: Resolves AWS ECR images with prioritized tag-based lookup
+version_overrides:
+  - version_constraint: Version == "v0.0.1"
+    no_asset: true
+  - version_constraint: "true"
