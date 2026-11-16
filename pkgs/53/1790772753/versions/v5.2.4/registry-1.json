@@ -1,0 +1,81 @@
+{
+  "assets": [
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "glibc",
+      "type": "http",
+      "repo_owner": "blender",
+      "repo_name": "blender",
+      "repo_id": 213916896,
+      "asset": "blender-5.2.4-linux-x64.tar.xz",
+      "url": "https://download.blender.org/release/Blender5.2/blender-5.2.4-linux-x64.tar.xz",
+      "format": "tar.xz",
+      "checksum": "2fd14c50987426897ba60237ee996edf2b4151f4b1a72a460ca20be58c1d2d86",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "blender",
+          "src": "blender-5.2.4-linux-x64/blender"
+        }
+      ]
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "http",
+      "repo_owner": "blender",
+      "repo_name": "blender",
+      "repo_id": 213916896,
+      "asset": "blender-5.2.4-windows-x64.zip",
+      "url": "https://download.blender.org/release/Blender5.2/blender-5.2.4-windows-x64.zip",
+      "format": "zip",
+      "checksum": "bbd78f8931dc940444da4ff2983374930f9f5c092ae0e330588e9760bb9d967c",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "blender",
+          "src": "blender-5.2.4-windows-x64/blender.exe"
+        }
+      ]
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "type": "http",
+      "repo_owner": "blender",
+      "repo_name": "blender",
+      "repo_id": 213916896,
+      "asset": "blender-5.2.4-windows-arm64.zip",
+      "url": "https://download.blender.org/release/Blender5.2/blender-5.2.4-windows-arm64.zip",
+      "format": "zip",
+      "checksum": "7e5227cbea71e06dd19b1b564640768d4517b097a3115d800c92eccaae39a992",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "blender",
+          "src": "blender-5.2.4-windows-arm64/blender.exe"
+        }
+      ]
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "http",
+      "repo_owner": "blender",
+      "repo_name": "blender",
+      "repo_id": 213916896,
+      "asset": "blender-5.2.4-macos-arm64.dmg",
+      "url": "https://download.blender.org/release/Blender5.2/blender-5.2.4-macos-arm64.dmg",
+      "format": "dmg",
+      "checksum": "e73d564f97061b2496ccc5a0bd738937d2d3d0acae23621a00bbc7534dfd135f",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "blender",
+          "src": "Blender.app/Contents/MacOS/Blender"
+        }
+      ]
+    }
+  ]
+}
