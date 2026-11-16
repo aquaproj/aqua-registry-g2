@@ -1,0 +1,19 @@
+name: chmouel/snazy
+type: github_release
+repo_owner: chmouel
+repo_name: snazy
+repo_id: 484389826
+description: a snazzy json log viewer (with one z)
+version_overrides:
+  - version_constraint: semver("> 0.52.16")
+  - version_constraint: semver("> 0.52.0")
+    error_message: There is no GitHub Releases
+  - version_constraint: semver("> 0.51.2")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: semver("<= 0.51.2")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: "true"
