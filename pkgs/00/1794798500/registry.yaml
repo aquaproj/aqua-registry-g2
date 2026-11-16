@@ -1,0 +1,16 @@
+name: suzuki-shunsuke/tfaction-go
+type: github_release
+repo_owner: suzuki-shunsuke
+repo_name: tfaction-go
+repo_id: 627833347
+description: CLI for tfaction
+files:
+  - name: tfaction
+version_overrides:
+  - version_constraint: Version == "v0.1.4"
+  - version_constraint: semver("> 0.2.3")
+  - version_constraint: semver("<= 0.2.3")
+    slsa_provenance:
+      type: github_release
+      asset: multiple.intoto.jsonl
+  - version_constraint: "true"
