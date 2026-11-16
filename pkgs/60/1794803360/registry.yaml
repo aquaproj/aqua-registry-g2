@@ -1,0 +1,18 @@
+name: mongodb/kingfisher
+type: github_release
+repo_owner: mongodb
+repo_name: kingfisher
+repo_id: 980173830
+description: Detect secrets. Validate them live. Map blast radius. Revoke fast. Run
+  the CLI or embed in Rust, Python, or Node.js
+github_artifact_attestations:
+  signer_workflow: mongodb/kingfisher/.github/workflows/release.yml
+version_overrides:
+  - version_constraint: semver("> 1.90.0")
+    github_artifact_attestations:
+      signer_workflow: mongodb/kingfisher/.github/workflows/release.yml
+  - version_constraint: semver("> 1.85.0")
+  - version_constraint: semver("<= 1.85.0")
+  - version_constraint: "true"
+    github_artifact_attestations:
+      signer_workflow: mongodb/kingfisher/.github/workflows/release.yml
