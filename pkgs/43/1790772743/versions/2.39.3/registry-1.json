@@ -1,0 +1,96 @@
+{
+  "assets": [
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "glibc",
+      "type": "http",
+      "repo_owner": "aws",
+      "repo_name": "aws-cli",
+      "repo_id": 6780767,
+      "asset": "awscli-exe-linux-x86_64-2.39.3.zip",
+      "url": "https://awscli.amazonaws.com/awscli-exe-linux-x86_64-2.39.3.zip",
+      "checksum": "14cb35809ad7547dd3c69fa9899a3975fbd850b6a6791f3fe264856490cd9a63",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "aws",
+          "src": "aws/dist/aws"
+        },
+        {
+          "name": "aws_completer",
+          "src": "aws/dist/aws_completer"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "linked_libc": "glibc",
+      "type": "http",
+      "repo_owner": "aws",
+      "repo_name": "aws-cli",
+      "repo_id": 6780767,
+      "asset": "awscli-exe-linux-aarch64-2.39.3.zip",
+      "url": "https://awscli.amazonaws.com/awscli-exe-linux-aarch64-2.39.3.zip",
+      "checksum": "f6eb845fbacb11bee87de3f5fbe8043773cbe89d0414607b44b71e216eb9226b",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "aws",
+          "src": "aws/dist/aws"
+        },
+        {
+          "name": "aws_completer",
+          "src": "aws/dist/aws_completer"
+        }
+      ]
+    },
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "http",
+      "repo_owner": "aws",
+      "repo_name": "aws-cli",
+      "repo_id": 6780767,
+      "asset": "AWSCLIV2-2.39.3.pkg",
+      "url": "https://awscli.amazonaws.com/AWSCLIV2-2.39.3.pkg",
+      "format": "pkg",
+      "checksum": "f9014f2edc9d4f40cb1f6662f1ec6d0f2d89d60d9d452f830008d9d92ca49f22",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "aws",
+          "src": "aws-cli.pkg/Payload/aws-cli/aws"
+        },
+        {
+          "name": "aws_completer",
+          "src": "aws-cli.pkg/Payload/aws-cli/aws_completer"
+        }
+      ]
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "http",
+      "repo_owner": "aws",
+      "repo_name": "aws-cli",
+      "repo_id": 6780767,
+      "asset": "AWSCLIV2-2.39.3.pkg",
+      "url": "https://awscli.amazonaws.com/AWSCLIV2-2.39.3.pkg",
+      "format": "pkg",
+      "checksum": "f9014f2edc9d4f40cb1f6662f1ec6d0f2d89d60d9d452f830008d9d92ca49f22",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "aws",
+          "src": "aws-cli.pkg/Payload/aws-cli/aws"
+        },
+        {
+          "name": "aws_completer",
+          "src": "aws-cli.pkg/Payload/aws-cli/aws_completer"
+        }
+      ]
+    }
+  ]
+}
