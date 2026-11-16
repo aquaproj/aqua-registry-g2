@@ -1,0 +1,14 @@
+name: awslabs/eks-perf-tests
+aliases:
+  - name: awslabs/kubernetes-iteration-toolkit
+type: github_release
+repo_owner: awslabs
+repo_name: eks-perf-tests
+repo_id: 370876103
+version_filter: not (Version startsWith "kit-operator-")
+files:
+  - name: kitctl
+version_overrides:
+  - version_constraint: "true"
+    supported_envs:
+      - darwin
