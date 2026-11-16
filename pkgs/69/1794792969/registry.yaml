@@ -1,0 +1,14 @@
+name: bflad/tfproviderdocs
+type: github_release
+repo_owner: bflad
+repo_name: tfproviderdocs
+repo_id: 228433218
+description: Terraform Provider Documentation Tool
+version_overrides:
+  - version_constraint: semver("> 0.9.1")
+  - version_constraint: semver("<= 0.9.1")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: "true"
