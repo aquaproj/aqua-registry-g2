@@ -1,0 +1,11 @@
+name: sderosiaux/launchdeck
+type: github_release
+repo_owner: sderosiaux
+repo_name: launchdeck
+repo_id: 1227994188
+description: Unified macOS service console for launchd and Homebrew
+files:
+  - name: launchdeck
+    src: launchdeck-{{.Arch}}-{{.OS}}/launchdeck
+supported_envs:
+  - darwin
