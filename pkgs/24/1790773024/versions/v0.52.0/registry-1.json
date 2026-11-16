@@ -1,0 +1,148 @@
+{
+  "published_at": "2025-12-16T15:56:44Z",
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "vectordotdev",
+      "repo_name": "vector",
+      "repo_id": 146327667,
+      "asset": "vector-0.52.0-arm64-apple-darwin.tar.gz",
+      "format": "tar.gz",
+      "checksum": "29f59cab87b419c54b1b04f7ecb71f3a8974dd4c8dd1b66bd88d2c783049d57e",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "vector",
+          "src": "vector-arm64-apple-darwin/bin/vector"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "variants": {
+        "libc": "glibc"
+      },
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "vectordotdev",
+      "repo_name": "vector",
+      "repo_id": 146327667,
+      "asset": "vector-0.52.0-x86_64-unknown-linux-gnu.tar.gz",
+      "format": "tar.gz",
+      "checksum": "e6d99f31d688fd061a8df46c24f3dccb5887fca51c2ddf87f070c7d5de310d05",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "vector",
+          "src": "vector-x86_64-unknown-linux-gnu/bin/vector"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "variants": {
+        "libc": "musl"
+      },
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "vectordotdev",
+      "repo_name": "vector",
+      "repo_id": 146327667,
+      "asset": "vector-0.52.0-x86_64-unknown-linux-musl.tar.gz",
+      "format": "tar.gz",
+      "checksum": "40e0e12f54598ae87f96329226e6f8e6b8a89c71cdfc904c3b4687fb33733504",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "vector",
+          "src": "vector-x86_64-unknown-linux-musl/bin/vector"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "variants": {
+        "libc": "glibc"
+      },
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "vectordotdev",
+      "repo_name": "vector",
+      "repo_id": 146327667,
+      "asset": "vector-0.52.0-aarch64-unknown-linux-gnu.tar.gz",
+      "format": "tar.gz",
+      "checksum": "8bb29dc12508a81c27e2108999091b20e0020177bf56f297a9b01d2fa4e00598",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "vector",
+          "src": "vector-aarch64-unknown-linux-gnu/bin/vector"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "variants": {
+        "libc": "musl"
+      },
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "vectordotdev",
+      "repo_name": "vector",
+      "repo_id": 146327667,
+      "asset": "vector-0.52.0-aarch64-unknown-linux-musl.tar.gz",
+      "format": "tar.gz",
+      "checksum": "d272999aa267ab162ab8400e712dba9c930b91b6b5b08895aca31e4ee3c443be",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "vector",
+          "src": "vector-aarch64-unknown-linux-musl/bin/vector"
+        }
+      ]
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "vectordotdev",
+      "repo_name": "vector",
+      "repo_id": 146327667,
+      "asset": "vector-0.52.0-x86_64-pc-windows-msvc.zip",
+      "format": "zip",
+      "checksum": "156fbefe6acbf899e52b7e7446894f4a2206606b07f31080be407e56d183ede2",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "vector",
+          "src": "bin/vector.exe"
+        }
+      ]
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "windows_arm_emulation": true,
+      "type": "github_release",
+      "repo_owner": "vectordotdev",
+      "repo_name": "vector",
+      "repo_id": 146327667,
+      "asset": "vector-0.52.0-x86_64-pc-windows-msvc.zip",
+      "format": "zip",
+      "checksum": "156fbefe6acbf899e52b7e7446894f4a2206606b07f31080be407e56d183ede2",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "vector",
+          "src": "bin/vector.exe"
+        }
+      ]
+    }
+  ]
+}
