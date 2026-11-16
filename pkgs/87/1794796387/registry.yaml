@@ -1,0 +1,10 @@
+name: devops-works/egress-auditor
+type: github_release
+repo_owner: devops-works
+repo_name: egress-auditor
+repo_id: 457103363
+description: 'Audit your egress connections and finally populate this OUTPUT chain '
+version_overrides:
+  - version_constraint: "true"
+    supported_envs:
+      - linux
