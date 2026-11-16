@@ -1,0 +1,17 @@
+name: so-dang-cool/yn
+type: github_release
+repo_owner: so-dang-cool
+repo_name: yn
+repo_id: 615944727
+files:
+  - name: Yn
+  - name: yN
+version_overrides:
+  - version_constraint: "true"
+    overrides:
+      - goos: darwin
+        files:
+          - name: Yn
+    supported_envs:
+      - linux
+      - darwin
