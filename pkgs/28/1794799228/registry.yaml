@@ -1,0 +1,15 @@
+name: fujiwara/tncl
+type: github_release
+repo_owner: fujiwara
+repo_name: tncl
+repo_id: 846571067
+description: tncl is a tiny "nc -l" implementation
+version_overrides:
+  - version_constraint: semver("> 0.0.2")
+    supported_envs:
+      - linux
+  - version_constraint: semver("<= 0.0.2")
+    no_asset: true
+  - version_constraint: "true"
+    supported_envs:
+      - linux
