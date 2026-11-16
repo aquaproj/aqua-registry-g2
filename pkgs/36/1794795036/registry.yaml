@@ -1,0 +1,21 @@
+name: rafaelespinoza/godfish
+type: github_release
+repo_owner: rafaelespinoza
+repo_name: godfish
+repo_id: 235505509
+description: a db migration management CLI for cassandra, mysql, postgres, sqlite,
+  sqlserver
+version_filter: semver(">= 0.18.0")
+version_overrides:
+  - version_constraint: "true"
+    files:
+      - name: godfish
+      - name: godfish-cassandra
+      - name: godfish-mysql
+      - name: godfish-postgres
+      - name: godfish-sqlite3
+      - name: godfish-sqlserver
+    supported_envs:
+      - darwin
+      - linux
+      - windows
