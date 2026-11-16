@@ -1,0 +1,12 @@
+name: hokaccha/spannerdef
+type: github_release
+repo_owner: hokaccha
+repo_name: spannerdef
+repo_id: 1001201189
+description: Idempotent Google Cloud Spanner schema management by SQL, inspired by
+  sqldef
+version_overrides:
+  - version_constraint: "true"
+    supported_envs:
+      - linux
+      - darwin
