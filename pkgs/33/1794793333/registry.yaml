@@ -1,0 +1,19 @@
+name: goph/licensei
+type: github_release
+repo_owner: goph
+repo_name: licensei
+repo_id: 146298860
+description: Library and various tools for working with project licenses
+version_overrides:
+  - version_constraint: semver("> 0.5.0")
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver("<= 0.5.0")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: "true"
+    supported_envs:
+      - linux
+      - darwin
