@@ -1,0 +1,12 @@
+name: tedilabs/tfvault
+type: github_release
+repo_owner: tedilabs
+repo_name: tfvault
+repo_id: 1298904869
+description: A Terraform credentials helper to fetch secrets from several secret backends
+  (OS keyring, environment variables, pass)
+version_overrides:
+  - version_constraint: "true"
+    supported_envs:
+      - linux
+      - darwin
