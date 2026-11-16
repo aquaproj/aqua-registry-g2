@@ -1,0 +1,107 @@
+{
+  "published_at": "2024-07-26T17:33:30Z",
+  "assets": [
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "variants": {
+        "libc": "glibc"
+      },
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "starship",
+      "repo_name": "starship",
+      "repo_id": 178991158,
+      "asset": "starship-x86_64-unknown-linux-gnu.tar.gz",
+      "format": "tar.gz",
+      "checksum": "f3a6a7a6ef9fa427b46d5e63409b25b7d65d74474bb10ddd02a7ae8994ace062",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "starship",
+          "src": "starship"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "variants": {
+        "libc": "musl"
+      },
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "starship",
+      "repo_name": "starship",
+      "repo_id": 178991158,
+      "asset": "starship-x86_64-unknown-linux-musl.tar.gz",
+      "format": "tar.gz",
+      "checksum": "8b674659524fc6147f1b9857ed0135db277378f5dec2a98763502ce1471fa886",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "starship",
+          "src": "starship"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "variants": {
+        "libc": "musl"
+      },
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "starship",
+      "repo_name": "starship",
+      "repo_id": 178991158,
+      "asset": "starship-aarch64-unknown-linux-musl.tar.gz",
+      "format": "tar.gz",
+      "checksum": "d07ed5be8f7de3c1c68dbee7f1a6912122b06d9c2808b3cea9d0045138026b5e",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "starship",
+          "src": "starship"
+        }
+      ]
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "starship",
+      "repo_name": "starship",
+      "repo_id": 178991158,
+      "asset": "starship-x86_64-pc-windows-msvc.zip",
+      "format": "zip",
+      "checksum": "4c263a1b558209d712ac3a2da8063b4b937c011f2b6215deca966e6536b35140",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "starship",
+          "src": "starship.exe"
+        }
+      ]
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "starship",
+      "repo_name": "starship",
+      "repo_id": 178991158,
+      "asset": "starship-aarch64-pc-windows-msvc.zip",
+      "format": "zip",
+      "checksum": "d25549897367bcab0aae11f739a14d8b4d0f4800659a2b2ca14537a894d6c956",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "starship",
+          "src": "starship.exe"
+        }
+      ]
+    }
+  ]
+}
