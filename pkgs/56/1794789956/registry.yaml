@@ -1,0 +1,19 @@
+name: openclarity/kubeclarity
+type: github_release
+repo_owner: openclarity
+repo_name: kubeclarity
+repo_id: 840731904
+description: KubeClarity is a tool for detection and management of Software Bill Of
+  Materials (SBOM) and vulnerabilities of container images and filesystems
+files:
+  - name: kubeclarity-cli
+supported_envs:
+  - linux
+  - darwin
+version_overrides:
+  - version_constraint: semver(">= 2.1.0")
+  - version_constraint: semver("= 2.0.0")
+    files:
+      - name: kubeclarity-cli
+        src: cli
+  - version_constraint: "true"
