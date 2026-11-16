@@ -1,0 +1,16 @@
+name: k1LoW/gh-setup
+type: github_release
+repo_owner: k1LoW
+repo_name: gh-setup
+repo_id: 600697415
+description: Setup asset of Github releases
+version_overrides:
+  - version_constraint: Version == "v0.0.2"
+    no_asset: true
+  - version_constraint: semver("> 1.6.0")
+  - version_constraint: semver("<= 1.6.0")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: "true"
