@@ -1,0 +1,11 @@
+name: cloudspannerecosystem/spool
+type: github_release
+repo_owner: cloudspannerecosystem
+repo_name: spool
+repo_id: 219676843
+description: A CLI tool to manage Cloud Spanner databases for testing
+version_overrides:
+  - version_constraint: semver("> 0.2.1")
+  - version_constraint: semver("<= 0.2.1")
+    no_asset: true
+  - version_constraint: "true"
