@@ -1,0 +1,13 @@
+name: masasuzu/clrnd
+type: github_release
+repo_owner: masasuzu
+repo_name: clrnd
+repo_id: 1271356770
+description: a command-line tool for deploying services to Google Cloud Run
+packslip:
+  identity_prefix: https://github.com/masasuzu/clrnd/
+  issuer: https://token.actions.githubusercontent.com
+version_overrides:
+  - version_constraint: Version == "v0.1.0"
+    no_asset: true
+  - version_constraint: "true"
