@@ -1,0 +1,16 @@
+name: self-actuated/actuated-cli
+type: github_release
+repo_owner: self-actuated
+repo_name: actuated-cli
+repo_id: 611362295
+description: CLI for actuated
+version_overrides:
+  - version_constraint: "true"
+    supported_envs:
+      - darwin
+      - amd64
+asset_rules:
+  - envs:
+      - linux/amd64
+      - windows/amd64
+    filter: Asset matches "^actuated-cli([.].+)?$"
