@@ -1,0 +1,12 @@
+name: winebarrel/cronplan/cronviz
+type: github_release
+repo_owner: winebarrel
+repo_name: cronplan
+repo_id: 552368495
+description: Cron expression parser for Amazon EventBridge
+files:
+  - name: cronviz
+version_overrides:
+  - version_constraint: "true"
+all_assets_filter: Asset matches "^cronviz_.+_.+_.+[.].+([.].+)?$" or Asset endsWith
+  ".intoto.jsonl"
