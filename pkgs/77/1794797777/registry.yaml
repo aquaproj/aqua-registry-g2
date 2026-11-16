@@ -1,0 +1,66 @@
+name: technicalpickles/envsense
+type: github_release
+repo_owner: technicalpickles
+repo_name: envsense
+repo_id: 1042700743
+version_overrides:
+  - version_constraint: Version == "v0.2.0"
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: Version == "v0.2.1"
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: semver("> 0.3.4")
+    cosign:
+      opts:
+        - --certificate-identity-regexp
+        - ^https://github\.com/technicalpickles/envsense/
+        - --certificate-oidc-issuer
+        - https://token.actions.githubusercontent.com
+        - --certificate-github-workflow-repository
+        - technicalpickles/envsense
+      bundle:
+        type: github_release
+        asset: '{{.Asset}}.bundle'
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver("> 0.3.1")
+    cosign:
+      opts:
+        - --certificate-identity-regexp
+        - ^https://github\.com/technicalpickles/envsense/
+        - --certificate-oidc-issuer
+        - https://token.actions.githubusercontent.com
+        - --certificate-github-workflow-repository
+        - technicalpickles/envsense
+      bundle:
+        type: github_release
+        asset: '{{.Asset}}.bundle'
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: semver("> 0.2.2")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: semver("<= 0.2.2")
+    supported_envs:
+      - darwin
+  - version_constraint: "true"
+    cosign:
+      opts:
+        - --certificate-identity-regexp
+        - ^https://github\.com/technicalpickles/envsense/
+        - --certificate-oidc-issuer
+        - https://token.actions.githubusercontent.com
+        - --certificate-github-workflow-repository
+        - technicalpickles/envsense
+      bundle:
+        type: github_release
+        asset: '{{.Asset}}.bundle'
+    supported_envs:
+      - linux
+      - darwin
