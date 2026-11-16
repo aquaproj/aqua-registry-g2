@@ -1,0 +1,20 @@
+name: fujiwara/kinesis-tailf
+type: github_release
+repo_owner: fujiwara
+repo_name: kinesis-tailf
+repo_id: 76326546
+description: tail -f command for Amazon Kinesis Stream
+version_overrides:
+  - version_constraint: semver("> 0.3.1")
+  - version_constraint: semver("> 0.1.1")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: semver("<= 0.1.1")
+    files:
+      - name: kinesis-tailf
+        src: '{{.AssetWithoutExt}}'
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: "true"
