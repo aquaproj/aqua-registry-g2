@@ -1,0 +1,12 @@
+name: unikraft-cloud/cli
+type: github_release
+repo_owner: unikraft-cloud
+repo_name: cli
+repo_id: 992510347
+description: Command-line interface for Unikraft Cloud
+version_filter: not (Version contains "-staging.")
+files:
+  - name: unikraft
+supported_envs:
+  - linux
+  - darwin
