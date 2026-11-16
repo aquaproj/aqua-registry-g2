@@ -1,0 +1,12 @@
+name: soh335/shukujitsu
+type: github_release
+repo_owner: soh335
+repo_name: shukujitsu
+repo_id: 313651703
+version_overrides:
+  - version_constraint: Version == "v0.0.8"
+    no_asset: true
+  - version_constraint: "true"
+    supported_envs:
+      - linux
+      - darwin
