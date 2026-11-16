@@ -1,0 +1,13 @@
+name: clok/sm
+type: github_release
+repo_owner: clok
+repo_name: sm
+repo_id: 377920260
+description: AWS Secrets Manager CLI Tool
+files:
+  - name: sm
+    src: sm_{{trimV .Version}}_{{.OS}}_{{.Arch}}/sm
+supported_envs:
+  - darwin
+  - linux
+  - amd64
