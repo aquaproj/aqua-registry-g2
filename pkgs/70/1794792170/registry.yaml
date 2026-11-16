@@ -1,0 +1,17 @@
+name: drlau/akashi
+type: github_release
+repo_owner: drlau
+repo_name: akashi
+repo_id: 286056369
+description: Validate "terraform plan" changes against a customizable ruleset
+version_overrides:
+  - version_constraint: semver(">= 0.0.12")
+  - version_constraint: semver(">= 0.0.8")
+    supported_envs:
+      - darwin
+      - linux
+      - amd64
+  - version_constraint: "true"
+    supported_envs:
+      - darwin
+      - amd64
