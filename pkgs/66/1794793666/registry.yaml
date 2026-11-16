@@ -1,0 +1,18 @@
+name: rmitchellscott/rm-version-switcher
+type: github_release
+repo_owner: rmitchellscott
+repo_name: rm-version-switcher
+repo_id: 1009978340
+description: A beginner-friendly application for switching between installed reMarkable
+  OS versions with an interactive interface
+version_overrides:
+  - version_constraint: "true"
+    files:
+      - name: rm-version-switcher
+        src: rm-version-switcher-aarch64
+    supported_envs:
+      - linux/arm64
+asset_rules:
+  - envs:
+      - linux/arm64
+    filter: Asset matches "^rm-version-switcher-aarch64[.]tar[.]gz([.].+)?$"
