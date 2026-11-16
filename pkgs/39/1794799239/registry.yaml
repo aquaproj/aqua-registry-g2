@@ -1,0 +1,13 @@
+name: handlename/let-rds-sleep
+type: github_release
+repo_owner: handlename
+repo_name: let-rds-sleep
+repo_id: 513049330
+description: Keep sleeping AWS RDS/Aurora Cluster
+version_overrides:
+  - version_constraint: semver("> 0.1.2")
+  - version_constraint: semver("<= 0.1.2")
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: "true"
