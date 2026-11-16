@@ -1,0 +1,16 @@
+name: suzuki-shunsuke/ghproj
+type: github_release
+repo_owner: suzuki-shunsuke
+repo_name: ghproj
+repo_id: 831641463
+description: Add GitHub Issues and Pull Requests to GitHub Projects
+packslip:
+  identity_prefix: https://github.com/suzuki-shunsuke/go-release-workflow/
+  issuer: https://token.actions.githubusercontent.com
+version_overrides:
+  - version_constraint: semver("> 1.0.0")
+  - version_constraint: semver("<= 1.0.0")
+    slsa_provenance:
+      type: github_release
+      asset: multiple.intoto.jsonl
+  - version_constraint: "true"
