@@ -1,0 +1,20 @@
+name: suzuki-shunsuke/nllint
+type: github_release
+repo_owner: suzuki-shunsuke
+repo_name: nllint
+repo_id: 720909282
+description: Linter to check newlines at the end of files
+packslip:
+  identity_prefix: https://github.com/suzuki-shunsuke/go-release-workflow/
+  issuer: https://token.actions.githubusercontent.com
+version_overrides:
+  - version_constraint: semver("> 1.2.0")
+  - version_constraint: semver("> 0.1.2")
+    slsa_provenance:
+      type: github_release
+      asset: multiple.intoto.jsonl
+  - version_constraint: semver("<= 0.1.2")
+    slsa_provenance:
+      type: github_release
+      asset: multiple.intoto.jsonl
+  - version_constraint: "true"
