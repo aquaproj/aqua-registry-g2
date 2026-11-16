@@ -1,0 +1,20 @@
+name: shini4i/argo-compare
+type: github_release
+repo_owner: shini4i
+repo_name: argo-compare
+repo_id: 537096823
+description: A comparison tool for displaying the differences between ArgoCD Applications
+  in different Git branches
+version_overrides:
+  - version_constraint: semver("> 0.2.0")
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver("<= 0.2.0")
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: "true"
+    supported_envs:
+      - linux
+      - darwin
