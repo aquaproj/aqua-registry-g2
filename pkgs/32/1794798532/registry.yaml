@@ -1,0 +1,14 @@
+name: RyuyaIshibashi/aws-s3-siggy
+type: github_release
+repo_owner: RyuyaIshibashi
+repo_name: aws-s3-siggy
+repo_id: 877691319
+files:
+  - name: siggy
+version_overrides:
+  - version_constraint: Version == "v0.1.0"
+    no_asset: true
+  - version_constraint: Version == "v0.0.7"
+    files:
+      - name: aws-s3-siggy
+  - version_constraint: "true"
