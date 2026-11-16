@@ -1,0 +1,18 @@
+name: Tyrrrz/FFmpegBin
+type: github_release
+repo_owner: Tyrrrz
+repo_name: FFmpegBin
+repo_id: 711288381
+description: Pre-built FFmpeg binaries for every platform
+files:
+  - name: ffmpeg
+  - name: ffplay
+  - name: ffprobe
+version_overrides:
+  - version_constraint: semver("> 7.1.0")
+  - version_constraint: semver("<= 7.1.0")
+    supported_envs:
+      - linux/amd64
+      - darwin
+      - windows
+  - version_constraint: "true"
