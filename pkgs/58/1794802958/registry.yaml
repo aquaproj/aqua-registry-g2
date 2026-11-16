@@ -1,0 +1,29 @@
+name: takumin-archive/zizmor-bin
+aliases:
+  - name: takumin/zizmor-bin
+type: github_release
+repo_owner: takumin-archive
+repo_name: zizmor-bin
+repo_id: 980580137
+description: Static build of `zizmor`
+files:
+  - name: zizmor
+version_overrides:
+  - version_constraint: "true"
+    replacements:
+      windows: pc-windows-gnullvm
+    cosign:
+      opts:
+        - --certificate
+        - https://github.com/takumin/zizmor-bin/releases/download/{{.Version}}/{{.Asset}}.cert
+        - --signature
+        - https://github.com/takumin/zizmor-bin/releases/download/{{.Version}}/{{.Asset}}.sig
+        - --certificate-identity
+        - https://github.com/takumin/zizmor-bin/.github/workflows/wc-sign.yml@refs/heads/main
+        - --certificate-oidc-issuer
+        - https://token.actions.githubusercontent.com
+        - --certificate-github-workflow-repository
+        - takumin/zizmor-bin
+    github_artifact_attestations:
+      signer_workflow: takumin/zizmor-bin/.github/workflows/wc-sign.yml
+all_assets_filter: Asset matches "^zizmor-.+-.+([.].+)?$" or Asset endsWith ".intoto.jsonl"
