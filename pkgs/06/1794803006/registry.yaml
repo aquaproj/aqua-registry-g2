@@ -1,0 +1,32 @@
+name: takumin/passt-bin
+type: github_release
+repo_owner: takumin
+repo_name: passt-bin
+repo_id: 1413210378
+description: Prebuilt binaries of `passt` built with zig cc
+files:
+  - name: passt
+    src: bin/passt
+  - name: pasta
+    src: bin/pasta
+  - name: passt-repair
+    src: bin/passt-repair
+  - name: pesto
+    src: bin/pesto
+cosign:
+  opts:
+    - --certificate-identity
+    - https://github.com/takumin/passt-bin/.github/workflows/wc-sign.yml@refs/heads/main
+    - --certificate-oidc-issuer
+    - https://token.actions.githubusercontent.com
+  bundle:
+    type: github_release
+    asset: '{{.Asset}}.sigstore.json'
+github_artifact_attestations:
+  signer_workflow: takumin/passt-bin/.github/workflows/wc-sign.yml
+version_overrides:
+  - version_constraint: "true"
+    github_artifact_attestations:
+      signer_workflow: takumin/passt-bin/.github/workflows/wc-sign.yml
+    supported_envs:
+      - linux
