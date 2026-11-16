@@ -1,0 +1,39 @@
+name: suzuki-shunsuke/circleci-config-merge
+type: github_release
+repo_owner: suzuki-shunsuke
+repo_name: circleci-config-merge
+repo_id: 309531920
+description: Generate .circleci/config.yml by merging multiple files
+version_overrides:
+  - version_constraint: Version == "v1.1.4"
+  - version_constraint: semver("> 1.1.6")
+  - version_constraint: semver("> 1.1.4-12")
+    slsa_provenance:
+      type: github_release
+      asset: multiple.intoto.jsonl
+  - version_constraint: semver("> 1.1.4-10")
+    slsa_provenance:
+      type: github_release
+      asset: multiple.intoto.jsonl
+    overrides:
+      - goos: windows
+        slsa_provenance:
+          enabled: false
+  - version_constraint: semver("> 1.1.4-4")
+  - version_constraint: semver("> 1.1.3")
+    slsa_provenance:
+      type: github_release
+      asset: multiple.intoto.jsonl
+    overrides:
+      - goos: windows
+        slsa_provenance:
+          enabled: false
+  - version_constraint: semver("> 1.1.1")
+    slsa_provenance:
+      type: github_release
+      asset: multiple.intoto.jsonl
+  - version_constraint: semver("<= 1.1.1")
+    supported_envs:
+      - darwin
+      - amd64
+  - version_constraint: "true"
