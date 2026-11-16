@@ -1,0 +1,30 @@
+name: XAMPPRocky/tokei
+type: github_release
+repo_owner: XAMPPRocky
+repo_name: tokei
+repo_id: 36323226
+description: Count your code, quickly
+version_overrides:
+  - version_constraint: Version == "v10.1.0"
+    supported_envs:
+      - linux
+  - version_constraint: Version == "v10.1.1"
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: Version == "v12.0.4a"
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: Version == "v12.1.0"
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver("> 13.0.0-alpha.0")
+  - version_constraint: semver("> 10.0.1")
+  - version_constraint: semver("> 9.1.0")
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: "true"
