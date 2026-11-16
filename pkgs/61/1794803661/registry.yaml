@@ -1,0 +1,19 @@
+name: github/gh-actions-lock
+type: github_release
+repo_owner: github
+repo_name: gh-actions-lock
+repo_id: 1217640442
+description: A gh CLI extension that generates and verifies the GitHub Actions dependency
+  lockfile, pinning every action your workflows use to an exact commit
+github_artifact_attestations:
+  signer_workflow: github/gh-actions-lock/.github/workflows/release.yml
+version_overrides:
+  - version_constraint: Version == "v0.0.1"
+    no_asset: true
+  - version_constraint: semver("> 0.0.9")
+    github_artifact_attestations:
+      signer_workflow: github/gh-actions-lock/.github/workflows/release.yml
+  - version_constraint: semver("<= 0.0.9")
+  - version_constraint: "true"
+    github_artifact_attestations:
+      signer_workflow: github/gh-actions-lock/.github/workflows/release.yml
