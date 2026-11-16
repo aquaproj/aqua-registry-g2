@@ -1,0 +1,31 @@
+name: android-sms-gateway/cli
+type: github_release
+repo_owner: android-sms-gateway
+repo_name: cli
+repo_id: 878195870
+description: A command-line interface for working with SMS Gateway for Android
+files:
+  - name: smsgate
+  - name: smsgate-ca
+version_overrides:
+  - version_constraint: Version == "v0.0.3"
+    no_asset: true
+  - version_constraint: Version == "v0.0.1"
+    overrides:
+      - goos: windows
+        format: zip
+        files:
+          - name: smsgate
+            src: cli
+      - files:
+          - name: smsgate
+            src: cli
+  - version_constraint: Version == "v0.0.2"
+    overrides:
+      - goos: windows
+        format: zip
+        files:
+          - name: smsgate
+      - files:
+          - name: smsgate
+  - version_constraint: "true"
