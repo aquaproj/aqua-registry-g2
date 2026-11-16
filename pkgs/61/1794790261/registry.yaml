@@ -1,0 +1,19 @@
+name: urfave/gfmrun
+type: github_release
+repo_owner: urfave
+repo_name: gfmrun
+repo_id: 57093425
+description: GitHub-Flavored Markdown Runner
+version_overrides:
+  - version_constraint: semver("> 1.2.0")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("<= 1.2.0")
+    no_asset: true
+  - version_constraint: "true"
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
