@@ -1,0 +1,13 @@
+name: palantir/conjure-typescript
+type: http
+repo_owner: palantir
+repo_name: conjure-typescript
+repo_id: 134000934
+description: Conjure generator for TypeScript clients
+version_overrides:
+  - version_constraint: "true"
+    url: https://repo.maven.apache.org/maven2/com/palantir/conjure/typescript/conjure-typescript/{{.Version}}/conjure-typescript-{{.Version}}.{{.Format}}
+    format: tgz
+    files:
+      - name: conjure-typescript
+        src: conjure-typescript-{{.Version}}/bin/conjure-typescript
