@@ -1,0 +1,13 @@
+name: shinagawa-web/gomarklint
+type: github_release
+repo_owner: shinagawa-web
+repo_name: gomarklint
+repo_id: 1005242551
+description: A fast and configurable Markdown linter written in Go
+version_overrides:
+  - version_constraint: Version == "v2.1.0"
+    no_asset: true
+  - version_constraint: semver("> 0.4.1")
+  - version_constraint: semver("<= 0.4.1")
+    no_asset: true
+  - version_constraint: "true"
