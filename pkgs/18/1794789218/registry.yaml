@@ -1,0 +1,23 @@
+name: gesquive/git-user
+type: github_release
+repo_owner: gesquive
+repo_name: git-user
+repo_id: 63816673
+description: Git plugin that allows you to save multiple user profiles and set them
+  as project defaults
+version_overrides:
+  - version_constraint: semver(">= 2.0.6")
+  - version_constraint: semver(">= 2.0.3")
+    files:
+      - name: git-user
+        src: git-user-{{.Version}}-{{.OS}}-{{.Arch}}/git-user
+    supported_envs:
+      - darwin
+      - linux/amd64
+  - version_constraint: "true"
+    files:
+      - name: git-user
+        src: '{{.OS}}-{{.Arch}}/git-user'
+    supported_envs:
+      - darwin
+      - linux/amd64
