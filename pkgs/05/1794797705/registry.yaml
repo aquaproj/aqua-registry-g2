@@ -1,0 +1,17 @@
+name: wasilibs/go-yamllint
+type: github_release
+repo_owner: wasilibs
+repo_name: go-yamllint
+repo_id: 798561059
+description: A distribution of yamllint that can be used with go run
+github_artifact_attestations:
+  signer_workflow: wasilibs/actions/.github/workflows/release.yaml
+version_overrides:
+  - version_constraint: Version == "v1.35.1"
+    files:
+      - name: yamllint
+  - version_constraint: "true"
+    files:
+      - name: yamllint
+    github_artifact_attestations:
+      signer_workflow: wasilibs/actions/.github/workflows/release.yaml
