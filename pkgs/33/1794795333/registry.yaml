@@ -1,0 +1,15 @@
+name: sheepla/qiitaz
+type: github_release
+repo_owner: sheepla
+repo_name: qiitaz
+repo_id: 456919163
+description: A command line Qiita searcher & viewer with fuzzyfinder UI
+replacements:
+  "386": i386
+version_overrides:
+  - version_constraint: semver("!= 0.0.5")
+  - version_constraint: semver("= 0.0.5")
+    files:
+      - name: qiitaz
+        src: qiitaz_{{.OS}}_{{.Arch}}/qiitaz
+  - version_constraint: "true"
