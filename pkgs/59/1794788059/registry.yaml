@@ -1,0 +1,11 @@
+name: minc-org/minc
+type: github_release
+repo_owner: minc-org
+repo_name: minc
+repo_id: 938608145
+description: MicroShift in Container
+asset_rules:
+  - envs:
+      - windows/amd64
+      - windows/arm64
+    filter: Asset matches "^minc([.].+)?$"
