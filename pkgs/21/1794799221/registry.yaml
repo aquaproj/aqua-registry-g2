@@ -1,0 +1,12 @@
+name: enokawa/taskdiff
+type: github_release
+repo_owner: enokawa
+repo_name: taskdiff
+repo_id: 290769081
+description: Diff tool for ECS Task Definition
+files:
+  - name: taskdiff
+    src: taskdiff_{{.Version}}_{{.OS}}_{{.Arch}}/taskdiff
+supported_envs:
+  - darwin
+  - amd64
