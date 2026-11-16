@@ -1,0 +1,13 @@
+name: GoodwayGroup/gwvault
+type: github_release
+repo_owner: GoodwayGroup
+repo_name: gwvault
+repo_id: 145130907
+description: ansible-vault CLI reimplemented in go
+files:
+  - name: gwvault
+    src: gwvault_{{trimV .Version}}_{{.OS}}_{{.Arch}}/gwvault
+supported_envs:
+  - darwin
+  - linux
+  - amd64
