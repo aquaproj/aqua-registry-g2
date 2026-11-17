@@ -74,6 +74,43 @@
           "src": "gogs/gogs"
         }
       ]
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "gogs",
+      "repo_name": "gogs",
+      "repo_id": 16752620,
+      "asset": "gogs_0.13.0_windows_amd64.zip",
+      "format": "zip",
+      "checksum": "8327197b2aa1414c3108e6d0cb47b6fd6b29610e683a2516ad25d00c22f21d89",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "gogs",
+          "src": "gogs/gogs.exe"
+        }
+      ]
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "windows_arm_emulation": true,
+      "type": "github_release",
+      "repo_owner": "gogs",
+      "repo_name": "gogs",
+      "repo_id": 16752620,
+      "asset": "gogs_0.13.0_windows_amd64.zip",
+      "format": "zip",
+      "checksum": "8327197b2aa1414c3108e6d0cb47b6fd6b29610e683a2516ad25d00c22f21d89",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "gogs",
+          "src": "gogs/gogs.exe"
+        }
+      ]
     }
   ]
 }
