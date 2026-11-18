@@ -1,0 +1,164 @@
+{
+  "published_at": "2026-02-19T20:11:59Z",
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "sigstore",
+      "repo_name": "cosign",
+      "repo_id": 335952417,
+      "asset": "cosign-darwin-amd64",
+      "format": "raw",
+      "checksum": "e032c44d3f7c247bbb2966b41239f88ffba002497a4516358d327ad5693c386f",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "cosign",
+          "src": "cosign-darwin-amd64"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "cosign-darwin-amd64.sigstore.json"
+        },
+        "certificate_identity": "keyless@projectsigstore.iam.gserviceaccount.com",
+        "certificate_oidc_issuer": "https://accounts.google.com"
+      }
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "sigstore",
+      "repo_name": "cosign",
+      "repo_id": 335952417,
+      "asset": "cosign-darwin-arm64",
+      "format": "raw",
+      "checksum": "4888c898e2901521a6bd4cf4f0383c9465588a6a46ecd2465ad34faf13f09eb7",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "cosign",
+          "src": "cosign-darwin-arm64"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "cosign-darwin-arm64.sigstore.json"
+        },
+        "certificate_identity": "keyless@projectsigstore.iam.gserviceaccount.com",
+        "certificate_oidc_issuer": "https://accounts.google.com"
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "sigstore",
+      "repo_name": "cosign",
+      "repo_id": 335952417,
+      "asset": "cosign-linux-amd64",
+      "format": "raw",
+      "checksum": "db15cc99e6e4837daabab023742aaddc3841ce57f193d11b7c3e06c8003642b2",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "cosign",
+          "src": "cosign-linux-amd64"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "cosign-linux-amd64.sigstore.json"
+        },
+        "certificate_identity": "keyless@projectsigstore.iam.gserviceaccount.com",
+        "certificate_oidc_issuer": "https://accounts.google.com"
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "sigstore",
+      "repo_name": "cosign",
+      "repo_id": 335952417,
+      "asset": "cosign-linux-arm64",
+      "format": "raw",
+      "checksum": "d098f3168ae4b3aa70b4ca78947329b953272b487727d1722cb3cb098a1a20ab",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "cosign",
+          "src": "cosign-linux-arm64"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "cosign-linux-arm64.sigstore.json"
+        },
+        "certificate_identity": "keyless@projectsigstore.iam.gserviceaccount.com",
+        "certificate_oidc_issuer": "https://accounts.google.com"
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "sigstore",
+      "repo_name": "cosign",
+      "repo_id": 335952417,
+      "asset": "cosign-windows-amd64.exe",
+      "format": "raw",
+      "checksum": "44e9e44202b67ddfaaf5ea1234f5a265417960c4ae98c5b57c35bc40ba9dd714",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "cosign",
+          "src": "cosign-windows-amd64.exe"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "cosign-windows-amd64.exe.sigstore.json"
+        },
+        "certificate_identity": "keyless@projectsigstore.iam.gserviceaccount.com",
+        "certificate_oidc_issuer": "https://accounts.google.com"
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "windows_arm_emulation": true,
+      "type": "github_release",
+      "repo_owner": "sigstore",
+      "repo_name": "cosign",
+      "repo_id": 335952417,
+      "asset": "cosign-windows-amd64.exe",
+      "format": "raw",
+      "checksum": "44e9e44202b67ddfaaf5ea1234f5a265417960c4ae98c5b57c35bc40ba9dd714",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "cosign",
+          "src": "cosign-windows-amd64.exe"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "cosign-windows-amd64.exe.sigstore.json"
+        },
+        "certificate_identity": "keyless@projectsigstore.iam.gserviceaccount.com",
+        "certificate_oidc_issuer": "https://accounts.google.com"
+      }
+    }
+  ]
+}
