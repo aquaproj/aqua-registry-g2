@@ -1,0 +1,86 @@
+{
+  "published_at": "2021-10-06T20:50:33Z",
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "rcoh",
+      "repo_name": "angle-grinder",
+      "repo_id": 123365228,
+      "asset": "agrind-x86_64-apple-darwin.tar.gz",
+      "format": "tar.gz",
+      "checksum": "744adcbca1a2a9d1fd6d650977ab953a3fdc886af633b2876b57556c3888c170",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "agrind",
+          "src": "agrind"
+        }
+      ]
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "rosetta2": true,
+      "type": "github_release",
+      "repo_owner": "rcoh",
+      "repo_name": "angle-grinder",
+      "repo_id": 123365228,
+      "asset": "agrind-x86_64-apple-darwin.tar.gz",
+      "format": "tar.gz",
+      "checksum": "744adcbca1a2a9d1fd6d650977ab953a3fdc886af633b2876b57556c3888c170",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "agrind",
+          "src": "agrind"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "variants": {
+        "libc": "glibc"
+      },
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "rcoh",
+      "repo_name": "angle-grinder",
+      "repo_id": 123365228,
+      "asset": "agrind-x86_64-unknown-linux-gnu.tar.gz",
+      "format": "tar.gz",
+      "checksum": "6e886c8a4989d7d4d6f709323dc8044b3c2a1f9e43beeac058bfe5afa68c8a0b",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "agrind",
+          "src": "agrind"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "variants": {
+        "libc": "musl"
+      },
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "rcoh",
+      "repo_name": "angle-grinder",
+      "repo_id": 123365228,
+      "asset": "agrind-x86_64-unknown-linux-musl.tar.gz",
+      "format": "tar.gz",
+      "checksum": "f6742299e921cbd559796137eab92ede8a46122afc4066d7007ffadbdfa16b9f",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "agrind",
+          "src": "agrind"
+        }
+      ]
+    }
+  ]
+}
