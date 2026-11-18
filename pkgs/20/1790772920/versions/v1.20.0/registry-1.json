@@ -1,0 +1,175 @@
+{
+  "published_at": "2026-11-12T09:32:42Z",
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "kyverno",
+      "repo_name": "kyverno",
+      "repo_id": 169108858,
+      "asset": "kyverno-cli_v1.20.0_darwin_x86_64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "2e31ed3df7fda3252a74c897eb6b7b581e634e0759796b43ce0d2472d7376275",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "kyverno",
+          "src": "kyverno"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "kyverno-cli_v1.20.0_darwin_x86_64.tar.gz.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/kyverno/kyverno/.github/workflows/release-publish.yaml@refs/tags/v1.20.0",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "certificate_github_workflow_repository": "kyverno/kyverno",
+        "certificate_github_workflow_ref": "refs/tags/v1.20.0"
+      }
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "kyverno",
+      "repo_name": "kyverno",
+      "repo_id": 169108858,
+      "asset": "kyverno-cli_v1.20.0_darwin_arm64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "9f7e537bdf39ff4f1819d978aec791a4dafa1cfd382f75f53baf422702452149",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "kyverno",
+          "src": "kyverno"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "kyverno-cli_v1.20.0_darwin_arm64.tar.gz.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/kyverno/kyverno/.github/workflows/release-publish.yaml@refs/tags/v1.20.0",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "certificate_github_workflow_repository": "kyverno/kyverno",
+        "certificate_github_workflow_ref": "refs/tags/v1.20.0"
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "kyverno",
+      "repo_name": "kyverno",
+      "repo_id": 169108858,
+      "asset": "kyverno-cli_v1.20.0_linux_x86_64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "06b8f3ca7b5626473be8fb4d343ad54ab84e317142766f72420e7d44b80942e2",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "kyverno",
+          "src": "kyverno"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "kyverno-cli_v1.20.0_linux_x86_64.tar.gz.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/kyverno/kyverno/.github/workflows/release-publish.yaml@refs/tags/v1.20.0",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "certificate_github_workflow_repository": "kyverno/kyverno",
+        "certificate_github_workflow_ref": "refs/tags/v1.20.0"
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "kyverno",
+      "repo_name": "kyverno",
+      "repo_id": 169108858,
+      "asset": "kyverno-cli_v1.20.0_linux_arm64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "7d002205369f8ebb8a5570efb6a1bfc4fa02e67ca74d6d8cf2f27783e0e54759",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "kyverno",
+          "src": "kyverno"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "kyverno-cli_v1.20.0_linux_arm64.tar.gz.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/kyverno/kyverno/.github/workflows/release-publish.yaml@refs/tags/v1.20.0",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "certificate_github_workflow_repository": "kyverno/kyverno",
+        "certificate_github_workflow_ref": "refs/tags/v1.20.0"
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "kyverno",
+      "repo_name": "kyverno",
+      "repo_id": 169108858,
+      "asset": "kyverno-cli_v1.20.0_windows_x86_64.zip",
+      "format": "zip",
+      "checksum": "8f90ecd540b87252eb6d43702bdf2543f7fd026043b4b28de4540338cf247725",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "kyverno",
+          "src": "kyverno.exe"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "kyverno-cli_v1.20.0_windows_x86_64.zip.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/kyverno/kyverno/.github/workflows/release-publish.yaml@refs/tags/v1.20.0",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "certificate_github_workflow_repository": "kyverno/kyverno",
+        "certificate_github_workflow_ref": "refs/tags/v1.20.0"
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "kyverno",
+      "repo_name": "kyverno",
+      "repo_id": 169108858,
+      "asset": "kyverno-cli_v1.20.0_windows_arm64.zip",
+      "format": "zip",
+      "checksum": "16ded7c9e013778974451fcb966e5e16c52c4928fb45bc08e564fdd4cb4f68b9",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "kyverno",
+          "src": "kyverno.exe"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "kyverno-cli_v1.20.0_windows_arm64.zip.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/kyverno/kyverno/.github/workflows/release-publish.yaml@refs/tags/v1.20.0",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "certificate_github_workflow_repository": "kyverno/kyverno",
+        "certificate_github_workflow_ref": "refs/tags/v1.20.0"
+      }
+    }
+  ]
+}
