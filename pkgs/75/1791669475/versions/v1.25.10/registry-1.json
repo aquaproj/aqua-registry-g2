@@ -1,0 +1,164 @@
+{
+  "published_at": "2026-02-04T18:49:57Z",
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "txn2",
+      "repo_name": "kubefwd",
+      "repo_id": 143650971,
+      "asset": "kubefwd_Darwin_x86_64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "f42be693d5403f39fa9c9cd1841a7e359ff46a4fe6a82abad8b7c280ceb69b4b",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "kubefwd",
+          "src": "kubefwd"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "kubefwd_Darwin_x86_64.tar.gz.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/txn2/kubefwd/.github/workflows/release.yml@refs/tags/v1.25.10",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "txn2",
+      "repo_name": "kubefwd",
+      "repo_id": 143650971,
+      "asset": "kubefwd_Darwin_arm64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "4e2f5ac0e08a0b5fd7b47f62f73531e59bcbdbc034f8b23b458485781e678ac2",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "kubefwd",
+          "src": "kubefwd"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "kubefwd_Darwin_arm64.tar.gz.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/txn2/kubefwd/.github/workflows/release.yml@refs/tags/v1.25.10",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "txn2",
+      "repo_name": "kubefwd",
+      "repo_id": 143650971,
+      "asset": "kubefwd_Linux_x86_64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "cf2163434b401faf89692071eddd631d58f986f9fd9213404b9dd9be4925896a",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "kubefwd",
+          "src": "kubefwd"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "kubefwd_Linux_x86_64.tar.gz.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/txn2/kubefwd/.github/workflows/release.yml@refs/tags/v1.25.10",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "txn2",
+      "repo_name": "kubefwd",
+      "repo_id": 143650971,
+      "asset": "kubefwd_Linux_arm64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "1170db66909c1cd473cc120f54d9ea6d1bf20c79fc80a3987c0ed12c76003860",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "kubefwd",
+          "src": "kubefwd"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "kubefwd_Linux_arm64.tar.gz.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/txn2/kubefwd/.github/workflows/release.yml@refs/tags/v1.25.10",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "txn2",
+      "repo_name": "kubefwd",
+      "repo_id": 143650971,
+      "asset": "kubefwd_Windows_x86_64.zip",
+      "format": "zip",
+      "checksum": "49e3aa8b17df86756da09d8001b0039a1fc99e9788bd0657844329c99af9cb0f",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "kubefwd",
+          "src": "kubefwd.exe"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "kubefwd_Windows_x86_64.zip.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/txn2/kubefwd/.github/workflows/release.yml@refs/tags/v1.25.10",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "windows_arm_emulation": true,
+      "type": "github_release",
+      "repo_owner": "txn2",
+      "repo_name": "kubefwd",
+      "repo_id": 143650971,
+      "asset": "kubefwd_Windows_x86_64.zip",
+      "format": "zip",
+      "checksum": "49e3aa8b17df86756da09d8001b0039a1fc99e9788bd0657844329c99af9cb0f",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "kubefwd",
+          "src": "kubefwd.exe"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "kubefwd_Windows_x86_64.zip.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/txn2/kubefwd/.github/workflows/release.yml@refs/tags/v1.25.10",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    }
+  ]
+}
