@@ -1,0 +1,11 @@
+name: elastic/crd-ref-docs
+type: github_release
+repo_owner: elastic
+repo_name: crd-ref-docs
+repo_id: 231115418
+description: Generates Kubernetes CRD API reference documentation
+version_overrides:
+  - version_constraint: semver("> 0.0.12")
+  - version_constraint: semver("<= 0.0.12")
+    no_asset: true
+  - version_constraint: "true"
