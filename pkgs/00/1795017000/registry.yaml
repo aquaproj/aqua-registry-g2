@@ -1,0 +1,13 @@
+name: gmr/pgfmt
+type: github_release
+repo_owner: gmr
+repo_name: pgfmt
+repo_id: 1193077701
+description: A PostgreSQL specific SQL statement formatter
+version_overrides:
+  - version_constraint: Version == "0.1.0a1"
+    no_asset: true
+  - version_constraint: "true"
+    supported_envs:
+      - linux
+      - darwin
