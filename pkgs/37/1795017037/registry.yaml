@@ -1,0 +1,34 @@
+name: Mattbusel/Every-Other-Token
+type: github_release
+repo_owner: Mattbusel
+repo_name: Every-Other-Token
+repo_id: 998597311
+description: See how sure an LLM is about each word
+files:
+  - name: every-other-token
+version_overrides:
+  - version_constraint: semver("> 4.1.2")
+    files:
+      - name: every-other-token
+        src: '{{.AssetWithoutExt}}/every-other-token'
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("> 4.0.0")
+    supported_envs:
+      - windows/amd64
+  - version_constraint: semver("<= 4.0.0")
+    no_asset: true
+  - version_constraint: "true"
+    files:
+      - name: every-other-token
+        src: '{{.AssetWithoutExt}}/every-other-token'
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+asset_rules:
+  - envs:
+      - windows/amd64
+    filter: Asset matches "^every-other-token([.].+)?$"
