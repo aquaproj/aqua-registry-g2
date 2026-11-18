@@ -1,0 +1,66 @@
+name: home-operations/flate
+type: github_release
+repo_owner: home-operations
+repo_name: flate
+repo_id: 1246047993
+description: Render and diff Flux GitOps repositories offline, without a cluster
+cosign:
+  opts:
+    - --certificate-identity
+    - https://github.com/home-operations/flate/.github/workflows/goreleaser.yaml@refs/tags/{{.Version}}
+    - --certificate-oidc-issuer
+    - https://token.actions.githubusercontent.com
+    - --certificate-github-workflow-repository
+    - home-operations/flate
+    - --certificate-github-workflow-ref
+    - refs/tags/{{.Version}}
+  bundle:
+    type: github_release
+    asset: '{{.Asset}}.sigstore.json'
+version_overrides:
+  - version_constraint: Version in ["0.1.23", "v0.4.13"]
+    no_asset: true
+  - version_constraint: semver("> 0.4.12")
+    cosign:
+      opts:
+        - --certificate-identity
+        - https://github.com/home-operations/flate/.github/workflows/goreleaser.yaml@refs/tags/{{.Version}}
+        - --certificate-oidc-issuer
+        - https://token.actions.githubusercontent.com
+        - --certificate-github-workflow-repository
+        - home-operations/flate
+        - --certificate-github-workflow-ref
+        - refs/tags/{{.Version}}
+      bundle:
+        type: github_release
+        asset: '{{.Asset}}.sigstore.json'
+  - version_constraint: semver("> 0.1.2")
+    cosign:
+      opts:
+        - --certificate-identity
+        - https://github.com/home-operations/flate/.github/workflows/release.yaml@refs/tags/{{.Version}}
+        - --certificate-oidc-issuer
+        - https://token.actions.githubusercontent.com
+        - --certificate-github-workflow-repository
+        - home-operations/flate
+        - --certificate-github-workflow-ref
+        - refs/tags/{{.Version}}
+      bundle:
+        type: github_release
+        asset: '{{.Asset}}.sigstore.json'
+  - version_constraint: semver("<= 0.1.2")
+    no_asset: true
+  - version_constraint: "true"
+    cosign:
+      opts:
+        - --certificate-identity
+        - https://github.com/home-operations/flate/.github/workflows/goreleaser.yaml@refs/tags/{{.Version}}
+        - --certificate-oidc-issuer
+        - https://token.actions.githubusercontent.com
+        - --certificate-github-workflow-repository
+        - home-operations/flate
+        - --certificate-github-workflow-ref
+        - refs/tags/{{.Version}}
+      bundle:
+        type: github_release
+        asset: '{{.Asset}}.sigstore.json'
