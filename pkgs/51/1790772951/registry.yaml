@@ -4,8 +4,9 @@ repo_owner: openbao
 repo_name: openbao
 repo_id: 716719284
 description: OpenBao exists to provide a software solution to manage, store, and distribute sensitive data including secrets, certificates, and keys
-# The Arch Linux package (.pkg.tar.zst) ties with the tarball for linux/amd64 and linux/arm64.
-all_assets_filter: not (Asset endsWith ".pkg.tar.zst")
+# The Arch Linux package (.pkg.tar.zst) ties with the tarball for linux/amd64 and linux/arm64,
+# and so does the HSM build (openbao-hsm_*), which some releases also ship for Linux.
+all_assets_filter: not (Asset endsWith ".pkg.tar.zst") and not (Asset startsWith "openbao-hsm")
 cosign:
   opts:
     # Each minor version is released from its own branch, release/<major>.<minor>.x.
