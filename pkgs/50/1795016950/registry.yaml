@@ -1,0 +1,23 @@
+name: LambdaBytes/sping
+type: github_release
+repo_owner: LambdaBytes
+repo_name: sping
+repo_id: 1398340780
+description: A modern, cross-platform ping with real-time diagnostics, network context,
+  quality scoring, and multi-target monitoring
+version_overrides:
+  - version_constraint: semver("> 1.5.5")
+    supported_envs:
+      - linux
+      - darwin/arm64
+      - windows/amd64
+  - version_constraint: semver("<= 1.5.5")
+    supported_envs:
+      - linux
+      - darwin/arm64
+      - windows/amd64
+  - version_constraint: "true"
+    supported_envs:
+      - linux
+      - darwin/arm64
+      - windows/amd64
