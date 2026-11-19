@@ -6,6 +6,12 @@ repo_id: 104879779
 description: A tool to verify that your files are in harmony with your .editorconfig
 files:
   - name: ec
+# From v3.1.0 to v3.11.3, each release ships ec-<os>-<arch> beside
+# editorconfig-checker-<os>-<arch>, and nothing in the names tells them apart.
+# The definition for that era names bin/ec-<os>-<arch>, so the ec- assets are the ones.
+asset_filters:
+  - version_constraint: semver(">= 3.1.0") and semver("< 4.0.0")
+    all_assets_filter: Asset startsWith "ec-"
 version_overrides:
   - version_constraint: semver(">= 4.0.0")
     files:
