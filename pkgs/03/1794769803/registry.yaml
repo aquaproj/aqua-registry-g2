@@ -10,3 +10,12 @@ files:
 supported_envs:
   - darwin
   - linux/amd64
+version_overrides:
+  # Before 0.3 the command is gorss/gorss_<os> rather than dist/gorss_<os>.
+  - version_constraint: semver("< 0.3")
+    files:
+      - name: gorss
+        src: gorss/gorss_{{.OS}}
+    replacements:
+      darwin: osx
+  - version_constraint: "true"
