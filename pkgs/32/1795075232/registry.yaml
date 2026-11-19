@@ -1,0 +1,22 @@
+name: tiny-earth-moon/outskirts
+type: github_release
+repo_owner: tiny-earth-moon
+repo_name: outskirts
+repo_id: 1433589934
+description: Find unused code at the outskirts of your Swift project. A community-maintained
+  fork of Periphery 3.x
+version_overrides:
+  - version_constraint: semver(">= 3.20.0")
+    files:
+      - name: outskirts
+        src: outskirts-{{.Version}}-macos-arm64/outskirts
+    supported_envs:
+      - darwin/arm64
+  - version_constraint: semver("< 3.20.0")
+    no_asset: true
+  - version_constraint: "true"
+    files:
+      - name: outskirts
+        src: outskirts-{{.Version}}-macos-arm64/outskirts
+    supported_envs:
+      - darwin/arm64
