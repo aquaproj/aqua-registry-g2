@@ -1,0 +1,24 @@
+name: Mattbusel/corescout
+type: github_release
+repo_owner: Mattbusel
+repo_name: corescout
+repo_id: 1359656188
+description: Learns how your machine and AI coding agents work together and serves
+  it over MCP
+files:
+  - name: corescout
+  - name: corescout-mcp
+  - name: corescout-service
+version_overrides:
+  - version_constraint: "true"
+    files:
+      - name: corescout
+        src: '{{.AssetWithoutExt}}/corescout'
+      - name: corescout-mcp
+        src: '{{.AssetWithoutExt}}/corescout-mcp'
+      - name: corescout-service
+        src: '{{.AssetWithoutExt}}/corescout-service'
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
