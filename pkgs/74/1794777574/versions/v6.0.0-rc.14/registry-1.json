@@ -1,0 +1,68 @@
+{
+  "published_at": "2026-02-12T21:31:53Z",
+  "prerelease": true,
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "yarnpkg",
+      "repo_name": "zpm",
+      "repo_id": 799220316,
+      "asset": "yarn-aarch64-apple-darwin.zip",
+      "format": "zip",
+      "checksum": "30cf36b0a8485f4839c4194170287d6c909da40ce859a4e7c058a2591d3e8691",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "yarn",
+          "src": "yarn"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "variants": {
+        "libc": "musl"
+      },
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "yarnpkg",
+      "repo_name": "zpm",
+      "repo_id": 799220316,
+      "asset": "yarn-x86_64-unknown-linux-musl.zip",
+      "format": "zip",
+      "checksum": "f0b837ea95ea459ecfb9ae6b588afad39043a908b019dbea2a7db66af7a02bfe",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "yarn",
+          "src": "yarn"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "variants": {
+        "libc": "musl"
+      },
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "yarnpkg",
+      "repo_name": "zpm",
+      "repo_id": 799220316,
+      "asset": "yarn-aarch64-unknown-linux-musl.zip",
+      "format": "zip",
+      "checksum": "5183e4b71d669490b7a9cf65345ab9dd62c4367ebf7a302befc963d77981197c",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "yarn",
+          "src": "yarn"
+        }
+      ]
+    }
+  ]
+}
