@@ -15,7 +15,7 @@
       "files": [
         {
           "name": "dt",
-          "src": "dt"
+          "src": "x86_64-macos-none"
         }
       ]
     },
@@ -33,7 +33,7 @@
       "files": [
         {
           "name": "dt",
-          "src": "dt"
+          "src": "aarch64-macos-none"
         }
       ]
     },
@@ -43,6 +43,7 @@
       "variants": {
         "libc": "glibc"
       },
+      "linked_libc": "static",
       "type": "github_release",
       "repo_owner": "so-dang-cool",
       "repo_name": "dt",
@@ -54,7 +55,7 @@
       "files": [
         {
           "name": "dt",
-          "src": "dt"
+          "src": "x86_64-linux-gnu"
         }
       ]
     },
@@ -64,6 +65,7 @@
       "variants": {
         "libc": "musl"
       },
+      "linked_libc": "static",
       "type": "github_release",
       "repo_owner": "so-dang-cool",
       "repo_name": "dt",
@@ -75,7 +77,7 @@
       "files": [
         {
           "name": "dt",
-          "src": "dt"
+          "src": "x86_64-linux-musl"
         }
       ]
     },
@@ -85,6 +87,7 @@
       "variants": {
         "libc": "glibc"
       },
+      "linked_libc": "static",
       "type": "github_release",
       "repo_owner": "so-dang-cool",
       "repo_name": "dt",
@@ -96,7 +99,7 @@
       "files": [
         {
           "name": "dt",
-          "src": "dt"
+          "src": "aarch64-linux-gnu"
         }
       ]
     }
