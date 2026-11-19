@@ -1,0 +1,181 @@
+{
+  "published_at": "2026-09-28T11:49:38Z",
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "suzuki-shunsuke",
+      "repo_name": "ghtkn",
+      "repo_id": 1046372472,
+      "asset": "ghtkn_darwin_amd64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "e88257b6f9079dc75da7bb45d608b550606b38e83e0e4aefa4f8eeb0c7b91cf5",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "ghtkn",
+          "src": "ghtkn"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "suzuki-shunsuke/go-release-workflow/.github/workflows/release.yaml",
+        "source_ref": "refs/tags/v0.4.1",
+        "source_digest": "e7cc6c9004c0644687a274ac60ad4e147fdf99b3",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      },
+      "slsa_provenance": {
+        "type": "github_release",
+        "asset": "multiple.intoto.jsonl"
+      }
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "suzuki-shunsuke",
+      "repo_name": "ghtkn",
+      "repo_id": 1046372472,
+      "asset": "ghtkn_darwin_arm64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "4d440021b013b18163c2163585466557a5d324ee742d07b70eb04eb023ce8d2a",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "ghtkn",
+          "src": "ghtkn"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "suzuki-shunsuke/go-release-workflow/.github/workflows/release.yaml",
+        "source_ref": "refs/tags/v0.4.1",
+        "source_digest": "e7cc6c9004c0644687a274ac60ad4e147fdf99b3",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      },
+      "slsa_provenance": {
+        "type": "github_release",
+        "asset": "multiple.intoto.jsonl"
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "suzuki-shunsuke",
+      "repo_name": "ghtkn",
+      "repo_id": 1046372472,
+      "asset": "ghtkn_linux_amd64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "1bd1328d46ac32d55e1f2271b10ef123a6ff50d10087f46adeb7e1d2e386ca53",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "ghtkn",
+          "src": "ghtkn"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "suzuki-shunsuke/go-release-workflow/.github/workflows/release.yaml",
+        "source_ref": "refs/tags/v0.4.1",
+        "source_digest": "e7cc6c9004c0644687a274ac60ad4e147fdf99b3",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      },
+      "slsa_provenance": {
+        "type": "github_release",
+        "asset": "multiple.intoto.jsonl"
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "suzuki-shunsuke",
+      "repo_name": "ghtkn",
+      "repo_id": 1046372472,
+      "asset": "ghtkn_linux_arm64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "e985b7634c49447bd540f13ab12509b8f57bf98bae6721aaaec562d7bdfb6264",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "ghtkn",
+          "src": "ghtkn"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "suzuki-shunsuke/go-release-workflow/.github/workflows/release.yaml",
+        "source_ref": "refs/tags/v0.4.1",
+        "source_digest": "e7cc6c9004c0644687a274ac60ad4e147fdf99b3",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      },
+      "slsa_provenance": {
+        "type": "github_release",
+        "asset": "multiple.intoto.jsonl"
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "suzuki-shunsuke",
+      "repo_name": "ghtkn",
+      "repo_id": 1046372472,
+      "asset": "ghtkn_windows_amd64.zip",
+      "format": "zip",
+      "checksum": "d1298bc4569790d8b0194b5f25f650f2300d47aaa5a8cd27cce65a6972bfdd9d",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "ghtkn",
+          "src": "ghtkn.exe"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "suzuki-shunsuke/go-release-workflow/.github/workflows/release.yaml",
+        "source_ref": "refs/tags/v0.4.1",
+        "source_digest": "e7cc6c9004c0644687a274ac60ad4e147fdf99b3",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      },
+      "slsa_provenance": {
+        "type": "github_release",
+        "asset": "multiple.intoto.jsonl"
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "suzuki-shunsuke",
+      "repo_name": "ghtkn",
+      "repo_id": 1046372472,
+      "asset": "ghtkn_windows_arm64.zip",
+      "format": "zip",
+      "checksum": "c91cf86c0e3a3ef3a3a853b8b354289460c942dd3e2a3725042f2caf8ea9e497",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "ghtkn",
+          "src": "ghtkn.exe"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "suzuki-shunsuke/go-release-workflow/.github/workflows/release.yaml",
+        "source_ref": "refs/tags/v0.4.1",
+        "source_digest": "e7cc6c9004c0644687a274ac60ad4e147fdf99b3",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      },
+      "slsa_provenance": {
+        "type": "github_release",
+        "asset": "multiple.intoto.jsonl"
+      }
+    }
+  ]
+}
