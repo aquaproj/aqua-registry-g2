@@ -34,14 +34,11 @@ if [ "$going" != 0 ]; then
 	exit 0
 fi
 
-if [ "$EVENT" = workflow_run ]; then
-	unsuccessful=$(gh run list --repo "$GITHUB_REPOSITORY" --workflow ar2.yaml \
-		--status completed --limit "$STREAK" --json conclusion \
-		--jq '[.[] | select(.conclusion != "success")] | length')
-	if [ "$unsuccessful" = "$STREAK" ]; then
-		echo "the last $STREAK runs didn't succeed; the schedule restarts the chain" >&2
-		exit 0
-	fi
+# shellcheck source=.github/scripts/streak.sh
+source "$(dirname "$0")/streak.sh"
+if [ "$EVENT" = workflow_run ] && streak "$STREAK"; then
+	echo "the last $STREAK runs didn't succeed; the schedule restarts the chain" >&2
+	exit 0
 fi
 
 echo "no ar2 run is going; starting a chain" >&2

@@ -24,6 +24,9 @@ gh workflow disable ar2.yaml
 gh workflow enable ar2.yaml
 ```
 
+Enabling it doesn't start a chain at once: the hourly check does, and GitHub runs a schedule
+hours late at times. Dispatch a run with `chain=forever` to start one now.
+
 Cancelling a run doesn't stop it for long. A chain that ended without being stopped is started
 again by [keep-ar2-going.yaml](../../.github/workflows/keep-ar2-going.yaml), and a cancelled
 run is one of those.
@@ -61,7 +64,7 @@ going every few minutes.
 A run that ends the chain without meaning to is the other case. A run cancelled by the job's
 timeout runs no more steps, so it dispatches nothing -- run 43969374319 stalled with its
 runner, and nothing generated for 41 hours. keep-ar2-going.yaml looks from outside: after a
-run that didn't succeed, and every hour, it starts a chain if no ar2 run is queued or running
+run that didn't succeed or one with `chain=0`, and every hour, it starts a chain if no ar2 run is queued or running
 and the workflow is enabled. After five runs in a row that didn't succeed it leaves the restart
 to the hourly check, which is late at times but keeps a lasting breakage to one failing run an
 hour.
