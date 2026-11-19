@@ -16,10 +16,14 @@ set -euo pipefail
 # gives up after five failures, and a restart straight after that would spin on a breakage
 # that doesn't go away; the schedule retries it at its own pace instead.
 readonly STREAK=5
+# How the run this was triggered by ended; empty on the schedule.
+readonly TRIGGER_CONCLUSION=${CONCLUSION:-}
 
-state=$(gh api "repos/$GITHUB_REPOSITORY/actions/workflows/ar2.yaml" --jq .state)
-if [ "$state" != active ]; then
-	echo "the ar2 workflow is $state; leaving it alone" >&2
+# shellcheck source=.github/scripts/chain-common.sh
+source "$(dirname "$0")/chain-common.sh"
+
+if disabled; then
+	echo "the ar2 workflow is disabled; leaving it alone" >&2
 	exit 0
 fi
 
@@ -34,18 +38,23 @@ if [ "$going" != 0 ]; then
 	exit 0
 fi
 
-# shellcheck source=.github/scripts/streak.sh
-source "$(dirname "$0")/streak.sh"
 if [ "$EVENT" = workflow_run ] && streak "$STREAK"; then
 	echo "the last $STREAK runs didn't succeed; the schedule restarts the chain" >&2
+	# chain.sh says so on the monitoring issue when the run that made the streak failed,
+	# since it ran. A run that was cancelled by the job's timeout, or never started, ran no
+	# chain.sh, and nobody would hear of a chain that stalls every time.
+	if [ "$TRIGGER_CONCLUSION" != failure ] && new_streak "$STREAK"; then
+		gh issue comment "$ISSUE" \
+			--repo "$GITHUB_REPOSITORY" \
+			--body "The chain of ar2 runs stopped: five runs in a row failed or were cancelled, the last one $TRIGGER_CONCLUSION. keep-ar2-going.yaml tries again every hour, and this isn't said again until a run succeeds. $RUN_URL"
+	fi
 	exit 0
 fi
 
 # Again, since it may have been disabled while this waited, and dispatching to a disabled
 # workflow fails.
-state=$(gh api "repos/$GITHUB_REPOSITORY/actions/workflows/ar2.yaml" --jq .state)
-if [ "$state" != active ]; then
-	echo "the ar2 workflow is $state; leaving it alone" >&2
+if disabled; then
+	echo "the ar2 workflow is disabled; leaving it alone" >&2
 	exit 0
 fi
 

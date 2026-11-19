@@ -40,6 +40,8 @@ jobs:
       contents: read
       # Reading ar2's runs and dispatching it.
       actions: write
+      # Saying on the monitoring issue that the chain stopped, when chain.sh couldn't.
+      issues: write
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
@@ -49,6 +51,10 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
           EVENT: ${{ github.event_name }}
+          CONCLUSION: ${{ github.event.workflow_run.conclusion }}
+          RUN_URL: ${{ github.event.workflow_run.html_url }}
+          # The issue whoever watches this repository gets the mail from, as in ar2.yaml.
+          ISSUE: "105"
           # The limit the chain has run with. A chain this starts is otherwise what one
           # started by hand would be.
           LIMIT: "10"

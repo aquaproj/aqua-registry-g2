@@ -61,9 +61,12 @@ every ten minutes is triggered every few hours -- and the registry spends no tim
 
 A failure does not end it, because a rate limit or a repository that didn't answer would
 otherwise stop the registry until somebody noticed; a run where `ar2 run` didn't finish in its
-25 minutes is one of those. Five runs in a row that failed or were cancelled do end it, with a
-comment on the monitoring issue, so a breakage that doesn't go away can't keep a failing run
-going every few minutes.
+25 minutes is one of those. Five runs in a row that failed or were cancelled do end it, so a
+breakage that doesn't go away can't keep a failing run going every few minutes. That is said
+once on the monitoring issue, by chain.sh when the fifth run failed, or by keep-ar2-going.yaml
+when it was cancelled and ran no chain.sh; the hourly retries that fail the same way aren't
+said again. A run cancelled before it started a job -- the pending run a dispatch replaced --
+isn't counted.
 
 A run that ends the chain without meaning to is the other case. A run cancelled by the job's
 timeout runs no more steps, so it dispatches nothing -- run 43969374319 stalled with its

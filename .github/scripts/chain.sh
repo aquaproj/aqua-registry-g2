@@ -24,9 +24,9 @@ next() {
 	echo $((CHAIN - 1))
 }
 
-# streak, shared with keep-chain.sh so both count a run that didn't succeed the same way.
-# shellcheck source=.github/scripts/streak.sh
-source "$(dirname "$0")/streak.sh"
+# disabled, streak and new_streak, shared with keep-chain.sh.
+# shellcheck source=.github/scripts/chain-common.sh
+source "$(dirname "$0")/chain-common.sh"
 
 # wait_out_the_floor sleeps until the run is old enough for another to follow it.
 wait_out_the_floor() {
@@ -42,22 +42,22 @@ give_up() {
 	echo "::warning::five runs in a row failed or were cancelled; the chain stops here"
 	gh issue comment "$ISSUE" \
 		--repo "$GITHUB_REPOSITORY" \
-		--body "The chain of ar2 runs stopped: five runs in a row failed or were cancelled. keep-ar2-going.yaml tries again every hour. $RUN_URL"
+		--body "The chain of ar2 runs stopped: five runs in a row failed or were cancelled. keep-ar2-going.yaml tries again every hour, and this isn't said again until a run succeeds. $RUN_URL"
 }
 
 main() {
 	# Disabling the workflow is how the chain is stopped, and the run that was going when it
 	# was disabled shouldn't fail for it.
-	# Assigned on its own line so that a failing API call fails the step rather than reading as
-	# disabled, and only a disabled state counts.
-	local state
-	state=$(gh api "repos/$GITHUB_REPOSITORY/actions/workflows/ar2.yaml" --jq .state)
-	if [[ $state == disabled* ]]; then
-		echo "the ar2 workflow is $state; the chain stops here" >&2
+	if disabled; then
+		echo "the ar2 workflow is disabled; the chain stops here" >&2
 		return
 	fi
 	if [ "$OUTCOME" != success ] && streak "$RECENT"; then
-		give_up
+		# Said once: a retry from keep-ar2-going.yaml that fails again finds the streak one
+		# longer, and that was said already.
+		if ! streak $((RECENT + 1)); then
+			give_up
+		fi
 		return
 	fi
 	wait_out_the_floor
