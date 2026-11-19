@@ -50,7 +50,10 @@ Regenerating it produces a different checksum for the same version, which is wha
 being rewritten looks like and what a lock file exists to catch. Decide whether to publish
 the new file rather than regenerating by reflex.
 
-`ar2 regenerate --dry-run` answers the same question locally, since it writes nothing. The run
+`ar2 regenerate --dry-run` answers the same question locally, since it writes nothing. It reads
+the definition from `main` on GitHub, not from the checkout, so it says what a definition fix
+does only once the fix has merged; before that it answers for the old definition, and "every
+version is what the definition already produces" then means nothing about the fix. The run
 that commits has to be the workflow, because ar2 commits through GitHub's API and what it
 produces from here isn't signed --
 [MAINTAINING.md](../../MAINTAINING.md#everything-that-writes-runs-in-github-actions) says the

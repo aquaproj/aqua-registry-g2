@@ -35,3 +35,17 @@ usually follow:
   the old definition.
 - [bringing the catalogue up to it](../refresh-index/SKILL.md), when the change touched what the
   catalogue holds: the description, the link, the search words, the aliases.
+
+## Leaving an environment out
+
+`supported_envs` doesn't keep an asset out of the registry. The asset names are read from the
+release, and a build whose name places it in an environment is offered whatever
+`supported_envs` says; what the list decides is narrower. It drops a tie -- assets nothing
+tells apart -- in an environment it leaves out, and it names the environments a run reports as
+left out when the release has nothing for them.
+
+So an asset that isn't the package has to be filtered out: `all_assets_filter`, or
+`asset_filters` for one era. `greymd/teip` is the case: its only Windows asset is an Inno
+Setup installer, and taking Windows out of `supported_envs` alone regenerated to nothing. The
+filter is what took it out. Keep `supported_envs` as well, so the environment that is now
+empty isn't reported as left out.
