@@ -1,0 +1,107 @@
+{
+  "published_at": "2026-07-27T18:27:41Z",
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "itamae-kitchen",
+      "repo_name": "mitamae",
+      "repo_id": 65066008,
+      "asset": "mitamae-x86_64-darwin",
+      "format": "raw",
+      "checksum": "fc05732dcf2c27c2ade1bb8e809be0f27ddd0eff48b1ad0c66422dff922600cc",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "mitamae",
+          "src": "mitamae-x86_64-darwin"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "itamae-kitchen/mitamae/.github/workflows/build.yml",
+        "source_ref": "refs/tags/v2.0.1",
+        "source_digest": "c63370f9ec591a152539752f0feb90647f181189",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "itamae-kitchen",
+      "repo_name": "mitamae",
+      "repo_id": 65066008,
+      "asset": "mitamae-aarch64-darwin",
+      "format": "raw",
+      "checksum": "0377580ece0f006eb81c1dce2b6af7e1fd68c562c59ef847a1e87dd3c5f2a3e7",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "mitamae",
+          "src": "mitamae-aarch64-darwin"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "itamae-kitchen/mitamae/.github/workflows/build.yml",
+        "source_ref": "refs/tags/v2.0.1",
+        "source_digest": "c63370f9ec591a152539752f0feb90647f181189",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "itamae-kitchen",
+      "repo_name": "mitamae",
+      "repo_id": 65066008,
+      "asset": "mitamae-x86_64-linux",
+      "format": "raw",
+      "checksum": "846cd00eb2a54d02b4d5ae8d5922648ece7646647b27322cccae641de12c9727",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "mitamae",
+          "src": "mitamae-x86_64-linux"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "itamae-kitchen/mitamae/.github/workflows/build.yml",
+        "source_ref": "refs/heads/master",
+        "source_digest": "c63370f9ec591a152539752f0feb90647f181189",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "itamae-kitchen",
+      "repo_name": "mitamae",
+      "repo_id": 65066008,
+      "asset": "mitamae-aarch64-linux",
+      "format": "raw",
+      "checksum": "9e4bb39751d81038c3d6c0fc84e6fcd63281f9f07f55be6a340d3e3086728016",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "mitamae",
+          "src": "mitamae-aarch64-linux"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "itamae-kitchen/mitamae/.github/workflows/build.yml",
+        "source_ref": "refs/heads/master",
+        "source_digest": "c63370f9ec591a152539752f0feb90647f181189",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    }
+  ]
+}
