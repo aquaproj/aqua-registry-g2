@@ -1,0 +1,27 @@
+name: Mattbusel/llm-cost-dashboard
+type: github_release
+repo_owner: Mattbusel
+repo_name: llm-cost-dashboard
+repo_id: 1177220997
+description: Prices every LLM call from your logs
+files:
+  - name: llm-dash
+version_overrides:
+  - version_constraint: Version == "v1.0.0"
+    no_asset: true
+  - version_constraint: semver("> 1.2.1")
+    files:
+      - name: llm-dash
+        src: '{{.AssetWithoutExt}}/llm-dash'
+  - version_constraint: semver("<= 1.2.1")
+    files:
+      - name: llm-dash
+        src: '{{.AssetWithoutExt}}/llm-dash'
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: "true"
+    files:
+      - name: llm-dash
+        src: '{{.AssetWithoutExt}}/llm-dash'
