@@ -15,7 +15,7 @@
       "files": [
         {
           "name": "gorss",
-          "src": "dist/gorss_osx"
+          "src": "gorss/gorss_osx"
         }
       ]
     },
@@ -33,13 +33,14 @@
       "files": [
         {
           "name": "gorss",
-          "src": "dist/gorss_osx"
+          "src": "gorss/gorss_osx"
         }
       ]
     },
     {
       "os": "linux",
       "arch": "amd64",
+      "linked_libc": "static",
       "type": "github_release",
       "repo_owner": "Lallassu",
       "repo_name": "gorss",
@@ -51,7 +52,7 @@
       "files": [
         {
           "name": "gorss",
-          "src": "dist/gorss_linux"
+          "src": "gorss/gorss_linux"
         }
       ]
     }
