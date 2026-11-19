@@ -1,0 +1,213 @@
+{
+  "published_at": "2026-11-16T16:45:39Z",
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "tombi-toml",
+      "repo_name": "tombi",
+      "repo_id": 869641608,
+      "asset": "tombi-cli-1.11.3-x86_64-apple-darwin.tar.gz",
+      "format": "tar.gz",
+      "checksum": "642900713c3cb04adf45264117649e5f4731395b62cbafee8a9a2824fa479684",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "tombi",
+          "src": "tombi-cli-1.11.3-x86_64-apple-darwin/tombi"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "tombi-toml/tombi/.github/workflows/release_cli_vscode.yml",
+        "source_ref": "refs/tags/v1.11.3",
+        "source_digest": "4904fb97fa7035b93de0ac8afc06c52054ab635e",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "tombi-toml",
+      "repo_name": "tombi",
+      "repo_id": 869641608,
+      "asset": "tombi-cli-1.11.3-aarch64-apple-darwin.tar.gz",
+      "format": "tar.gz",
+      "checksum": "4e7daae9197910fe3717d241e5ca85cafd0f7f0ead988056fdd0b2cf2a447600",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "tombi",
+          "src": "tombi-cli-1.11.3-aarch64-apple-darwin/tombi"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "tombi-toml/tombi/.github/workflows/release_cli_vscode.yml",
+        "source_ref": "refs/tags/v1.11.3",
+        "source_digest": "4904fb97fa7035b93de0ac8afc06c52054ab635e",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "tombi-toml",
+      "repo_name": "tombi",
+      "repo_id": 869641608,
+      "asset": "tombi-vscode-1.11.3-linux-x64.vsix",
+      "format": "raw",
+      "checksum": "33dae90765beafcced9821e67e76cc0a22a5b177ac0b57b98d682830e0886d1e",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "tombi",
+          "src": "tombi-vscode-1.11.3-linux-x64.vsix"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "tombi-toml/tombi/.github/workflows/release_cli_vscode.yml",
+        "source_ref": "refs/tags/v1.11.3",
+        "source_digest": "4904fb97fa7035b93de0ac8afc06c52054ab635e",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "variants": {
+        "libc": "musl"
+      },
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "tombi-toml",
+      "repo_name": "tombi",
+      "repo_id": 869641608,
+      "asset": "tombi-cli-1.11.3-x86_64-unknown-linux-musl.tar.gz",
+      "format": "tar.gz",
+      "checksum": "36672279d05f093455f01fa5a2799a8cc2162a9195cbbb23f0f8d1107d0de497",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "tombi",
+          "src": "tombi-cli-1.11.3-x86_64-unknown-linux-musl/tombi"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "tombi-toml/tombi/.github/workflows/release_cli_vscode.yml",
+        "source_ref": "refs/tags/v1.11.3",
+        "source_digest": "4904fb97fa7035b93de0ac8afc06c52054ab635e",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "tombi-toml",
+      "repo_name": "tombi",
+      "repo_id": 869641608,
+      "asset": "tombi-vscode-1.11.3-linux-arm64.vsix",
+      "format": "raw",
+      "checksum": "5e1278640cd3c96f1a31fde24ed80d66449ab1146afe4192b7a8eb19dc1fbbb4",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "tombi",
+          "src": "tombi-vscode-1.11.3-linux-arm64.vsix"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "tombi-toml/tombi/.github/workflows/release_cli_vscode.yml",
+        "source_ref": "refs/tags/v1.11.3",
+        "source_digest": "4904fb97fa7035b93de0ac8afc06c52054ab635e",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "variants": {
+        "libc": "musl"
+      },
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "tombi-toml",
+      "repo_name": "tombi",
+      "repo_id": 869641608,
+      "asset": "tombi-cli-1.11.3-aarch64-unknown-linux-musl.tar.gz",
+      "format": "tar.gz",
+      "checksum": "083614471a69e15f147ba68c96fe1e3ea02e8efe38d6bcdb4606b5a37ab8758a",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "tombi",
+          "src": "tombi-cli-1.11.3-aarch64-unknown-linux-musl/tombi"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "tombi-toml/tombi/.github/workflows/release_cli_vscode.yml",
+        "source_ref": "refs/tags/v1.11.3",
+        "source_digest": "4904fb97fa7035b93de0ac8afc06c52054ab635e",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "tombi-toml",
+      "repo_name": "tombi",
+      "repo_id": 869641608,
+      "asset": "tombi-cli-1.11.3-x86_64-pc-windows-msvc.zip",
+      "format": "zip",
+      "checksum": "b6b2d9e6419216aaa0b8e74a5c81c48335cb193d6eb87f50a7d77468bce10073",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "tombi",
+          "src": "tombi.exe"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "tombi-toml/tombi/.github/workflows/release_cli_vscode.yml",
+        "source_ref": "refs/tags/v1.11.3",
+        "source_digest": "4904fb97fa7035b93de0ac8afc06c52054ab635e",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "tombi-toml",
+      "repo_name": "tombi",
+      "repo_id": 869641608,
+      "asset": "tombi-cli-1.11.3-aarch64-pc-windows-msvc.zip",
+      "format": "zip",
+      "checksum": "621bf39b23546ecf9b2b4759f4203d6c5040a40ccd2abe17fa731999de1f81f0",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "tombi",
+          "src": "tombi.exe"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "tombi-toml/tombi/.github/workflows/release_cli_vscode.yml",
+        "source_ref": "refs/tags/v1.11.3",
+        "source_digest": "4904fb97fa7035b93de0ac8afc06c52054ab635e",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    }
+  ]
+}
