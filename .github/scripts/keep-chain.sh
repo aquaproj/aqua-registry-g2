@@ -41,6 +41,14 @@ if [ "$EVENT" = workflow_run ] && streak "$STREAK"; then
 	exit 0
 fi
 
+# Again, since it may have been disabled while this waited, and dispatching to a disabled
+# workflow fails.
+state=$(gh api "repos/$GITHUB_REPOSITORY/actions/workflows/ar2.yaml" --jq .state)
+if [ "$state" != active ]; then
+	echo "the ar2 workflow is $state; leaving it alone" >&2
+	exit 0
+fi
+
 echo "no ar2 run is going; starting a chain" >&2
 gh workflow run ar2.yaml --repo "$GITHUB_REPOSITORY" \
 	--field limit="$LIMIT" \

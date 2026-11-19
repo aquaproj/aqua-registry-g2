@@ -13,10 +13,19 @@
 # Fewer runs than that in the history are no streak, so a chain is never given up on for
 # want of history.
 streak() {
-	local want=$1 seen=0 unsuccessful=0 id conclusion jobs
+	# A call that fails answers "no streak": streak runs where errexit doesn't, and a chain
+	# given up on wrongly is worse than one that goes on a run longer.
+	local want=$1 seen=0 unsuccessful=0 id conclusion jobs runs
+	runs=$(gh run list \
+		--repo "$GITHUB_REPOSITORY" \
+		--workflow ar2.yaml \
+		--status completed \
+		--limit $((want * 3)) \
+		--json databaseId,conclusion \
+		--jq '.[] | "\(.databaseId) \(.conclusion)"') || return 1
 	while read -r id conclusion; do
 		if [ "$conclusion" = cancelled ]; then
-			jobs=$(gh api "repos/$GITHUB_REPOSITORY/actions/runs/$id/jobs" --jq .total_count)
+			jobs=$(gh api "repos/$GITHUB_REPOSITORY/actions/runs/$id/jobs" --jq .total_count) || return 1
 			if [ "$jobs" = 0 ]; then
 				continue
 			fi
@@ -28,12 +37,6 @@ streak() {
 		if [ "$seen" = "$want" ]; then
 			break
 		fi
-	done < <(gh run list \
-		--repo "$GITHUB_REPOSITORY" \
-		--workflow ar2.yaml \
-		--status completed \
-		--limit $((want * 3)) \
-		--json databaseId,conclusion \
-		--jq '.[] | "\(.databaseId) \(.conclusion)"')
+	done <<<"$runs"
 	[ "$seen" = "$want" ] && [ "$unsuccessful" = "$want" ]
 }

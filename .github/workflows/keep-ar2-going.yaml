@@ -6,9 +6,10 @@ name: keep ar2 going
 # After a run that didn't succeed, which is where a chain ends without meaning to: a run
 # that was cancelled because it hit the job's timeout dispatches nothing. After a run that
 # succeeded with chain=0 too: dispatched by hand while a chain was going, it replaced the
-# chain's pending run in the concurrency group, and dispatches nothing itself. And on a
-# schedule, for whatever else ends one -- a finite chain running out, or the restart after
-# a streak of failures that is left to it. GitHub runs a schedule late, hours late at
+# chain's pending run in the concurrency group, and dispatches nothing itself; and a single
+# run or a finite chain ending is this too, since a chain is meant to be going whenever the
+# workflow is enabled. And on a schedule, for whatever else ends one, and for the restart
+# after a streak of failures that is left to it. GitHub runs a schedule late, hours late at
 # times, so this is the slow path; the first is the one that usually fires.
 #
 # To stop the chain, disable the ar2 workflow. To start it again, enable it: the schedule's

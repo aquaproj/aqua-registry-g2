@@ -48,8 +48,12 @@ give_up() {
 main() {
 	# Disabling the workflow is how the chain is stopped, and the run that was going when it
 	# was disabled shouldn't fail for it.
-	if [ "$(gh api "repos/$GITHUB_REPOSITORY/actions/workflows/ar2.yaml" --jq .state)" != active ]; then
-		echo "the ar2 workflow is disabled; the chain stops here" >&2
+	# Assigned on its own line so that a failing API call fails the step rather than reading as
+	# disabled, and only a disabled state counts.
+	local state
+	state=$(gh api "repos/$GITHUB_REPOSITORY/actions/workflows/ar2.yaml" --jq .state)
+	if [[ $state == disabled* ]]; then
+		echo "the ar2 workflow is $state; the chain stops here" >&2
 		return
 	fi
 	if [ "$OUTCOME" != success ] && streak "$RECENT"; then
