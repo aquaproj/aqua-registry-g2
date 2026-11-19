@@ -1,0 +1,47 @@
+---
+name: rerun transient failures
+# Re-run a check that failed because a server or the network did, rather than because of
+# the pull request: a 5xx from github.com while aqua-installer downloads aqua, say. Without
+# this, such a pull request waits for a person to press "Re-run failed jobs".
+#
+# Only checks, which write nothing, so running one again can't do anything twice. The
+# workflows that write (ar2, update-versions, index, ...) are not listed: a re-run of one
+# could open a second pull request or push a second time.
+#
+# Two re-runs at most. A failure that survives three attempts is left for a person.
+on:
+  workflow_run:
+    workflows:
+      - test
+      - actionlint
+    types:
+      - completed
+permissions: {}
+concurrency:
+  group: ${{ github.workflow }}--${{ github.event.workflow_run.id }}
+  cancel-in-progress: false
+jobs:
+  rerun:
+    if: >-
+      github.event.workflow_run.conclusion == 'failure'
+      && github.event.workflow_run.run_attempt < 3
+    runs-on: ubuntu-26.04
+    timeout-minutes: 10
+    permissions:
+      # Checking out main for the script.
+      contents: read
+      # Reading the failed jobs' logs, and re-running them.
+      actions: write
+    steps:
+      # main's, as workflow_run checks out by default. Nothing from the pull request is
+      # checked out or run; its logs are only searched.
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+          sparse-checkout: .github/scripts
+      - run: bash .github/scripts/rerun-transient-failures.sh
+        env:
+          GH_REPO: ${{ github.repository }}
+          GH_TOKEN: ${{ github.token }}
+          RUN_ID: ${{ github.event.workflow_run.id }}
+          RUN_ATTEMPT: ${{ github.event.workflow_run.run_attempt }}
