@@ -7,3 +7,10 @@ description: MySQL random data loader
 supported_envs:
   - linux/amd64
   - darwin
+version_overrides:
+  # 0.1.6 to 0.1.8 name the binary in the archive mysql_random_data_loader.
+  - version_constraint: semver(">= 0.1.6, <= 0.1.8")
+    files:
+      - name: mysql_random_data_load
+        src: mysql_random_data_loader
+  - version_constraint: "true"
