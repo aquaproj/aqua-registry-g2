@@ -1,0 +1,12 @@
+name: junior/kcx
+type: github_release
+repo_owner: junior
+repo_name: kcx
+repo_id: 1432748399
+description: One kubeconfig file per cluster, with a context and namespace switcher
+github_artifact_attestations:
+  signer_workflow: junior/kcx/.github/workflows/release.yml
+version_overrides:
+  - version_constraint: "true"
+    github_artifact_attestations:
+      signer_workflow: junior/kcx/.github/workflows/release.yml
