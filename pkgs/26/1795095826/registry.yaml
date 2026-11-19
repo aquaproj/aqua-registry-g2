@@ -1,0 +1,17 @@
+name: nmstate/nmstate
+type: github_release
+repo_owner: nmstate
+repo_name: nmstate
+repo_id: 132556280
+description: Nmstate is a library with an accompanying command line tool that manages
+  host networking settings in a declarative manner
+files:
+  - name: nmstatectl
+version_overrides:
+  - version_constraint: semver("< 2.2.0") || semver(">= 2.2.28, <= 2.2.31") || semver(">=
+      2.2.41, <= 2.2.47") || Version == "v2.2.52"
+    no_asset: true
+  - version_constraint: "true"
+    supported_envs:
+      - linux/amd64
+      - darwin
