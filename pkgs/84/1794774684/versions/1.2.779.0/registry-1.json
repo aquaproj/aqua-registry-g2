@@ -1,0 +1,40 @@
+{
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "http",
+      "repo_owner": "aws",
+      "repo_name": "session-manager-plugin",
+      "repo_id": 369617519,
+      "asset": "sessionmanager-bundle.zip",
+      "url": "https://s3.amazonaws.com/session-manager-downloads/plugin/1.2.779.0/mac/sessionmanager-bundle.zip",
+      "checksum": "45a7808e4382dfd09e271a73bda0d0ffd7781c222ad6335a7777984a3cdb961d",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "session-manager-plugin",
+          "src": "sessionmanager-bundle/bin/session-manager-plugin"
+        }
+      ]
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "http",
+      "repo_owner": "aws",
+      "repo_name": "session-manager-plugin",
+      "repo_id": 369617519,
+      "asset": "sessionmanager-bundle.zip",
+      "url": "https://s3.amazonaws.com/session-manager-downloads/plugin/1.2.779.0/mac_arm64/sessionmanager-bundle.zip",
+      "checksum": "061805107f28c44ef479ef43cb86cb19c7038da9de64645f6f329b8ad22aa37b",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "session-manager-plugin",
+          "src": "sessionmanager-bundle/bin/session-manager-plugin"
+        }
+      ]
+    }
+  ]
+}
