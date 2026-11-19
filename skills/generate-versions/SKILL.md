@@ -31,9 +31,9 @@ While the workflow is enabled, a chain is always going. A single run, or a chain
 number, is generating on top of it or until it comes back: once it ends with nothing else
 going, a `chain=forever` run is started again.
 
-Cancelling a run doesn't stop it for long. A chain that ended without being stopped is started
-again by [keep-ar2-going.yaml](../../.github/workflows/keep-ar2-going.yaml), and a cancelled
-run is one of those.
+Cancelling a run doesn't stop it: the job that dispatches the next run runs after a cancelled
+one too, and a chain that ended without being stopped is started again by
+[keep-ar2-going.yaml](../../.github/workflows/keep-ar2-going.yaml).
 
 ### Generating one package now
 
@@ -63,18 +63,18 @@ A failure does not end it, because a rate limit or a repository that didn't answ
 otherwise stop the registry until somebody noticed; a run where `ar2 run` didn't finish in its
 25 minutes is one of those. Five runs in a row that failed or were cancelled do end it, so a
 breakage that doesn't go away can't keep a failing run going every few minutes. That is said
-once on the monitoring issue, by chain.sh when the fifth run failed, or by keep-ar2-going.yaml
-when it was cancelled and ran no chain.sh; the hourly retries that fail the same way aren't
-said again. A run cancelled before it started a job -- the pending run a dispatch replaced --
+once on the monitoring issue, by chain.sh, which runs after a cancelled run as well; the hourly
+retries that fail the same way aren't said again. A run cancelled before it started a job -- the pending run a dispatch replaced --
 isn't counted.
 
-A run that ends the chain without meaning to is the other case. A run cancelled by the job's
-timeout runs no more steps, so it dispatches nothing -- run 43969374319 stalled with its
-runner, and nothing generated for 41 hours. keep-ar2-going.yaml looks from outside: after a
-run that didn't succeed or one with `chain=0`, and every hour, it starts a chain if no ar2 run is queued or running
-and the workflow is enabled. After five runs in a row that didn't succeed it leaves the restart
-to the hourly check, which is late at times but keeps a lasting breakage to one failing run an
-hour.
+A run that ends the chain without meaning to is the other case. The next run is dispatched
+from a job of its own that runs whatever became of the run job, so a run cancelled by the job's
+timeout -- run 43969374319 stalled with its runner, and nothing generated for 41 hours -- still
+hands over. keep-ar2-going.yaml covers what that can't: every hour it starts a chain if no ar2
+run is queued or running and the workflow is enabled, which catches a dispatch that failed, the
+restart after five runs in a row that didn't succeed, and a single run or a finite chain ending.
+GitHub runs it late at times. It also runs after a hand-dispatched run that ends; it can't after
+the chain's own runs, since workflow_run doesn't fire for a run dispatched with GITHUB_TOKEN.
 
 `limit` bounds the versions attempted, not the versions generated, so a package that fails
 every time can't spend a whole run.
