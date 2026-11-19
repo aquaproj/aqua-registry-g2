@@ -24,7 +24,9 @@ next() {
 	echo $((CHAIN - 1))
 }
 
-# failing says every one of the runs before this one failed as well.
+# failing says every one of the runs before this one failed as well, a cancelled one
+# counting as a failure: a run cancels only when it hits the job's timeout or a person
+# cancels it, and neither is the chain working.
 #
 # Counting the failures rather than what isn't one, so that a repository with fewer runs
 # than that in its history can't reach the count and a chain is never given up on for
@@ -37,7 +39,7 @@ failing() {
 		--status completed \
 		--limit "$RECENT" \
 		--json conclusion \
-		--jq '[.[] | select(.conclusion == "failure")] | length')
+		--jq '[.[] | select(.conclusion == "failure" or .conclusion == "cancelled")] | length')
 	[ "$failures" = "$RECENT" ]
 }
 

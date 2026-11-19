@@ -108,7 +108,6 @@ jobs:
               "${args[@]}" || status=$?
           # 124 is timeout's own, and 137 is the SIGKILL after a SIGTERM went unanswered.
           if [ "$status" = 124 ] || [ "$status" = 137 ]; then
-            echo "timed_out=true" >> "$GITHUB_OUTPUT"
             echo "::error::ar2 run didn't finish in 25 minutes"
           fi
           exit "$status"
@@ -143,13 +142,16 @@ jobs:
       # answer would otherwise stop the registry until somebody noticed, and what
       # noticing looks like is the paragraph below.
       #
-      # Not after a cancellation, which is how a chain is stopped: cancel the run that is
-      # going and no successor is dispatched. Nor after 'ar2 run' ran out of time, so a run
-      # that got stuck ends the chain rather than handing the same state to another run to
-      # get stuck on. That is a failure as far as the step's outcome goes, which is why it
-      # is told apart by an output of its own.
+      # After 'ar2 run' ran out of time as well. That is a failure like any other, and five
+      # in a row end the chain, so a run that gets stuck the same way every time still
+      # can't keep it going.
+      #
+      # Not after a cancellation, since a cancelled job runs no more steps. A run cancelled
+      # by the job's timeout ends the chain here, and keep-ar2-going.yaml is what starts it
+      # again. The way to stop the chain is to disable this workflow: cancelling a run
+      # doesn't stop it for long.
       - name: dispatch the next run
-        if: ${{ !cancelled() && inputs.chain != '0' && steps.generate.outputs.timed_out != 'true' }}
+        if: ${{ !cancelled() && inputs.chain != '0' }}
         env:
           GH_TOKEN: ${{ github.token }}
           OUTCOME: ${{ steps.generate.outcome }}
@@ -161,16 +163,3 @@ jobs:
           # The issue whoever watches this repository gets the mail from.
           ISSUE: "105"
         run: bash .github/scripts/chain.sh
-      # A chain that ran out of time stops without anybody being told, and the last one
-      # that did went unnoticed for three days. The failures that end a chain are said on
-      # the monitoring issue, so this is too.
-      - name: say the chain stopped
-        if: ${{ !cancelled() && inputs.chain != '0' && steps.generate.outputs.timed_out == 'true' }}
-        env:
-          GH_TOKEN: ${{ github.token }}
-          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
-          ISSUE: "105"
-        run: |
-          gh issue comment "$ISSUE" \
-            --repo "$GITHUB_REPOSITORY" \
-            --body "The chain of ar2 runs stopped: ar2 run didn't finish in 25 minutes. $RUN_URL"
