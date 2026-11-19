@@ -1,0 +1,113 @@
+{
+  "published_at": "2025-02-20T16:17:46Z",
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "dhth",
+      "repo_name": "bmm",
+      "repo_id": 931826132,
+      "asset": "bmm-x86_64-apple-darwin.tar.xz",
+      "format": "tar.xz",
+      "checksum": "52589d73825f036adc960f416e0ed8a48a3df0c5d3ae4a9afa2381f2e7eeac35",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "bmm",
+          "src": "bmm-x86_64-apple-darwin/bmm"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "dhth/bmm/.github/workflows/release.yml",
+        "source_ref": "refs/tags/v0.1.0",
+        "source_digest": "fceb7b83d75f6d57b628b1d6d87c9f24a491b111",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "dhth",
+      "repo_name": "bmm",
+      "repo_id": 931826132,
+      "asset": "bmm-aarch64-apple-darwin.tar.xz",
+      "format": "tar.xz",
+      "checksum": "ac3135f8ee8e11fcbfd196018894f8f4f0f47ada7d23ad19bd646d9dd503995d",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "bmm",
+          "src": "bmm-aarch64-apple-darwin/bmm"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "dhth/bmm/.github/workflows/release.yml",
+        "source_ref": "refs/tags/v0.1.0",
+        "source_digest": "fceb7b83d75f6d57b628b1d6d87c9f24a491b111",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "variants": {
+        "libc": "glibc"
+      },
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "dhth",
+      "repo_name": "bmm",
+      "repo_id": 931826132,
+      "asset": "bmm-x86_64-unknown-linux-gnu.tar.xz",
+      "format": "tar.xz",
+      "checksum": "f603035923391893894099cd7d895d6139f1e790a394e0bd197ca7c8bb8871ff",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "bmm",
+          "src": "bmm-x86_64-unknown-linux-gnu/bmm"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "dhth/bmm/.github/workflows/release.yml",
+        "source_ref": "refs/tags/v0.1.0",
+        "source_digest": "fceb7b83d75f6d57b628b1d6d87c9f24a491b111",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "variants": {
+        "libc": "musl"
+      },
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "dhth",
+      "repo_name": "bmm",
+      "repo_id": 931826132,
+      "asset": "bmm-x86_64-unknown-linux-musl.tar.xz",
+      "format": "tar.xz",
+      "checksum": "53a73c3a10ea8cab9dba8618772384ff5be1c520adf01ace7d6931360e478da6",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "bmm",
+          "src": "bmm-x86_64-unknown-linux-musl/bmm"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "dhth/bmm/.github/workflows/release.yml",
+        "source_ref": "refs/tags/v0.1.0",
+        "source_digest": "fceb7b83d75f6d57b628b1d6d87c9f24a491b111",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    }
+  ]
+}
