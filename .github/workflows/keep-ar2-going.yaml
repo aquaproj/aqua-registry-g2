@@ -3,14 +3,16 @@ name: keep ar2 going
 # Start the chain of ar2 runs again when it has stopped and nobody stopped it. See
 # .github/scripts/keep-chain.sh for what counts as stopped.
 #
-# After a run that didn't succeed, which is where a chain ends without meaning to: a run
-# that was cancelled because it hit the job's timeout dispatches nothing. After a run that
-# succeeded with chain=0 too: dispatched by hand while a chain was going, it replaced the
-# chain's pending run in the concurrency group, and dispatches nothing itself; and a single
-# run or a finite chain ending is this too, since a chain is meant to be going whenever the
-# workflow is enabled. And on a schedule, for whatever else ends one, and for the restart
-# after a streak of failures that is left to it. GitHub runs a schedule late, hours late at
-# times, so this is the slow path; the first is the one that usually fires.
+# The chain's own runs don't need this to go on: ar2.yaml dispatches the next run from a
+# job that runs whatever became of the one before, a timeout included. This is for what
+# that can't cover -- a dispatch that failed, a runner that never picked the job up, the
+# restart after a streak of failures, a single run or a finite chain ending, since a chain
+# is meant to be going whenever the workflow is enabled.
+#
+# Mostly on the schedule, which GitHub runs late, hours late at times. workflow_run doesn't
+# fire for a run dispatched with GITHUB_TOKEN, which is every run of the chain; it fires for
+# a run dispatched by a person, so a hand-dispatched run that ends with nothing else going
+# is picked up at once.
 #
 # To stop the chain, disable the ar2 workflow. To start it again, enable it: the schedule's
 # next run starts a chain, which may be hours away, so dispatch ar2 by hand for one now.

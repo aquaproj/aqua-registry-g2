@@ -29,9 +29,14 @@ next() {
 source "$(dirname "$0")/chain-common.sh"
 
 # wait_out_the_floor sleeps until the run is old enough for another to follow it.
+#
+# The run's own start rather than one its first job recorded: a job cancelled by its
+# timeout leaves no outputs. A lookup that fails waits nothing, since the floor only slows
+# down a chain and missing it once can't make one spin.
 wait_out_the_floor() {
-	local elapsed
-	elapsed=$(($(date +%s) - STARTED_AT))
+	local started elapsed
+	started=$(gh api "repos/$GITHUB_REPOSITORY/actions/runs/$RUN_ID" --jq .run_started_at) || return 0
+	elapsed=$(($(date +%s) - $(date -d "$started" +%s)))
 	if [ "$elapsed" -lt "$FLOOR" ]; then
 		sleep $((FLOOR - elapsed))
 	fi
