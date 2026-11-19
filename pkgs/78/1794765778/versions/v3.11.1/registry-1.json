@@ -36,6 +36,80 @@
           "src": "bin/ec-darwin-arm64"
         }
       ]
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "editorconfig-checker",
+      "repo_name": "editorconfig-checker",
+      "repo_id": 104879779,
+      "asset": "ec-linux-amd64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "5a37922963248451e88149251e49f6ae08f69717a3918202a51fe9945e19691e",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "ec",
+          "src": "bin/ec-linux-amd64"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "editorconfig-checker",
+      "repo_name": "editorconfig-checker",
+      "repo_id": 104879779,
+      "asset": "ec-linux-arm64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "073d5263f0c5953f3e847df44a84403ecc284ab77419de56e280ab92bc082e8d",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "ec",
+          "src": "bin/ec-linux-arm64"
+        }
+      ]
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "editorconfig-checker",
+      "repo_name": "editorconfig-checker",
+      "repo_id": 104879779,
+      "asset": "ec-windows-amd64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "cf9c87735165af290fd285e621ed9e91ccb22f4b0d26fee520c9ab780a352369",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "ec",
+          "src": "bin/ec-windows-amd64.exe"
+        }
+      ]
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "editorconfig-checker",
+      "repo_name": "editorconfig-checker",
+      "repo_id": 104879779,
+      "asset": "ec-windows-arm64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "a4cc9af3472f3dde0b6defa63ecb3f0f0c10adb666d3a04896d4ff57fb8633d7",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "ec",
+          "src": "bin/ec-windows-arm64.exe"
+        }
+      ]
     }
   ]
 }
