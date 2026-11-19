@@ -1,0 +1,46 @@
+{
+  "published_at": "2025-04-16T15:55:28Z",
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "rosetta2": true,
+      "type": "github_release",
+      "repo_owner": "oknozor",
+      "repo_name": "toml-bombadil",
+      "repo_id": 282640628,
+      "asset": "bombadil--x86_64-osx.tar.gz",
+      "format": "tar.gz",
+      "checksum": "9d2bf9c0ec438925243ecfe8c8e6be073e658a2812b098e02bdd15e07042f8f8",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "bombadil",
+          "src": "bombadil"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "variants": {
+        "libc": "musl"
+      },
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "oknozor",
+      "repo_name": "toml-bombadil",
+      "repo_id": 282640628,
+      "asset": "bombadil--x86_64-unknown-linux-musl.tar.gz",
+      "format": "tar.gz",
+      "checksum": "ad0bd0608f4155cc4af56984534a03468c1486cf4999bbe304af152184cc92e4",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "bombadil",
+          "src": "bombadil"
+        }
+      ]
+    }
+  ]
+}
