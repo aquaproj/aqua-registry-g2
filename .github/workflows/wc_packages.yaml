@@ -89,6 +89,12 @@ jobs:
       # the runner every pull request queues for: a darwin job ran for half a minute and
       # waited five to twenty for a machine. Environments sharing a runner are one job,
       # which checks each of them in turn.
+      #
+      # An Intel Mac rather than an arm64 one. GitHub is short of macOS arm64 machines:
+      # jobs on macos-15 waited over an hour and were cancelled as "not acquired by Runner
+      # of type hosted even after multiple attempts", with the annotation "Due to capacity
+      # constraints, jobs targeting macOS arm64 runners may experience longer queue times".
+      # Since nothing checked is run, either kind of Mac answers for both environments.
       - id: matrix
         if: steps.plan.outputs.count != '0'
         run: |
@@ -99,8 +105,8 @@ jobs:
             case "$env" in
               linux/amd64) runner=ubuntu-26.04 ;;
               linux/arm64) runner=ubuntu-26.04-arm ;;
-              darwin/amd64) runner=macos-15 ;;
-              darwin/arm64) runner=macos-15 ;;
+              darwin/amd64) runner=macos-26-intel ;;
+              darwin/arm64) runner=macos-26-intel ;;
               windows/amd64) runner=windows-2025 ;;
               windows/arm64) runner=windows-11-arm ;;
               *)
