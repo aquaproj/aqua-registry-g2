@@ -54,6 +54,63 @@
           "src": "faas-cli.exe"
         }
       ]
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "windows_arm_emulation": true,
+      "type": "github_release",
+      "repo_owner": "openfaas",
+      "repo_name": "faas-cli",
+      "repo_id": 87833671,
+      "asset": "faas-cli.exe",
+      "format": "raw",
+      "checksum": "5d64e6141c32db1c5ac146914988aaca920fd107cb5ab321ad27768ed20e20f3",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "faas-cli",
+          "src": "faas-cli.exe"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "openfaas",
+      "repo_name": "faas-cli",
+      "repo_id": 87833671,
+      "asset": "faas-cli",
+      "format": "raw",
+      "checksum": "52fac7f94f19dd6f53948c7069e90ad25db328a53a706fde1e19bcec1aab0773",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "faas-cli",
+          "src": "faas-cli"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "openfaas",
+      "repo_name": "faas-cli",
+      "repo_id": 87833671,
+      "asset": "faas-cli-arm64",
+      "format": "raw",
+      "checksum": "0e586ec2b80ef357fb9049a88834c4d6373f2b38cefe96643f0325136f4f7a6e",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "faas-cli",
+          "src": "faas-cli-arm64"
+        }
+      ]
     }
   ]
 }

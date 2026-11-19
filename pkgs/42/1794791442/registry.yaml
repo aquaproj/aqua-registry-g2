@@ -1,0 +1,18 @@
+name: arcanist-sh/hx
+aliases:
+  - name: raskell-io/hx
+type: github_release
+repo_owner: arcanist-sh
+repo_name: hx
+repo_id: 1135050223
+description: An extremely fast Haskell package and project manager, written in Rust
+version_overrides:
+  - version_constraint: Version == "v0.2.0"
+    no_asset: true
+  - version_constraint: Version == "v0.3.0"
+    files:
+      - name: hx
+        src: '{{.AssetWithoutExt}}/hx'
+    supported_envs:
+      - darwin/arm64
+  - version_constraint: "true"

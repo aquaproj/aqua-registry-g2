@@ -33,11 +33,40 @@ replacements:
     darwin: macos-12
     linux: ubuntu
 version_overrides:
+    # 1.0.42 stopped shipping wasm-decompile.
+    - version_constraint: semver(">= 1.0.42")
+      files:
+        - name: spectest-interp
+          src: wabt-{{.Version}}/bin/spectest-interp
+        - name: wasm-interp
+          src: wabt-{{.Version}}/bin/wasm-interp
+        - name: wasm-objdump
+          src: wabt-{{.Version}}/bin/wasm-objdump
+        - name: wasm-stats
+          src: wabt-{{.Version}}/bin/wasm-stats
+        - name: wasm-strip
+          src: wabt-{{.Version}}/bin/wasm-strip
+        - name: wasm-validate
+          src: wabt-{{.Version}}/bin/wasm-validate
+        - name: wasm2c
+          src: wabt-{{.Version}}/bin/wasm2c
+        - name: wasm2wat
+          src: wabt-{{.Version}}/bin/wasm2wat
+        - name: wast2json
+          src: wabt-{{.Version}}/bin/wast2json
+        - name: wat-desugar
+          src: wabt-{{.Version}}/bin/wat-desugar
+        - name: wat2wasm
+          src: wabt-{{.Version}}/bin/wat2wasm
     - version_constraint: semver(">= 1.0.39")
+    # 1.0.35 and 1.0.36 build macOS on macos-12 (x86_64) and macos-14 (arm64), and the names
+    # say nothing else about the architecture.
     - version_constraint: semver(">= 1.0.35")
       replacements:
-        darwin: macos-14
+        darwin: macos
         linux: ubuntu-20.04
+        amd64: "12"
+        arm64: "14"
     - version_constraint: Version == "1.0.34"
     - version_constraint: Version == "1.0.33"
       files:

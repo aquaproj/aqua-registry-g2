@@ -1,0 +1,35 @@
+name: yaml/yamlscript
+type: github_release
+repo_owner: yaml
+repo_name: yamlscript
+repo_id: 510139682
+description: Programming in YAML
+files:
+  - name: ys
+    src: '{{.AssetWithoutExt}}/ys'
+version_overrides:
+  - version_constraint: Version in ["0.1.29", "0.1.44", "0.1.50"]
+    supported_envs:
+      - linux/amd64
+  - version_constraint: Version in ["0.1.36", "0.1.63", "0.1.64", "0.1.66"] or semver(">=
+      0.1.69, <= 0.1.71")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: Version in ["0.1.40", "0.1.60", "0.1.61"]
+    supported_envs:
+      - linux
+      - darwin/arm64
+  - version_constraint: semver("<= 0.1.33") or semver(">= 0.1.36, <=0.1.39") or Version
+      == "0.1.45"
+    supported_envs:
+      - linux/amd64
+      - darwin/arm64
+  - version_constraint: semver("<= 0.2.8")
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: "true"
+    supported_envs:
+      - linux/amd64
+      - darwin/arm64

@@ -1,0 +1,19 @@
+name: uutils/sed
+type: github_release
+repo_owner: uutils
+repo_name: sed
+repo_id: 925725248
+description: Rewrite of sed in Rust
+version_overrides:
+  - version_constraint: Version == "latest-commit"
+    error_message: The version 'latest-commit' is not supported
+  - version_constraint: Version == "0.1.1"
+    files:
+      - name: sed
+        src: '{{.AssetWithoutExt}}/sed'
+    overrides:
+      - goos: windows
+        format: zip
+        files:
+          - name: sed
+  - version_constraint: "true"

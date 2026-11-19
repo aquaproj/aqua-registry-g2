@@ -1,0 +1,22 @@
+name: Latias94/merman
+type: github_release
+repo_owner: Latias94
+repo_name: merman
+repo_id: 1154399455
+description: Mermaid.js, but headless, in Rust
+version_overrides:
+  - version_constraint: Version == "v0.7.0-alpha.1"
+    no_asset: true
+  - version_constraint: "true"
+    files:
+      - name: merman-cli
+        src: '{{.AssetWithoutExt}}/merman-cli'
+    overrides:
+      - goos: windows
+        format: zip
+        files:
+          - name: merman-cli
+    supported_envs:
+      - darwin
+      - windows
+      - amd64

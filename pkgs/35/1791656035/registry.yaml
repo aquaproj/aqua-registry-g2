@@ -4,3 +4,6 @@ repo_owner: grafana
 repo_name: mimir
 repo_id: 385634291
 description: Grafana Mimir provides horizontally scalable, highly available, multi-tenant, long-term storage for Prometheus
+# The release publishes several programs, each with a -sha-256 file, and mimir isn't built
+# for Windows: mimirtool, which is, was offered there instead.
+all_assets_filter: Asset startsWith "mimir-" and not (Asset endsWith "-sha-256")

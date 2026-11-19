@@ -1,0 +1,14 @@
+name: aws/eks-hybrid
+type: http
+repo_owner: aws
+repo_name: eks-hybrid
+repo_id: 801051598
+description: Use your on-premises and edge infrastructure as nodes in EKS clusters
+  with EKS Hybrid Nodes
+url: https://hybrid-assets.eks.amazonaws.com/releases/{{.Version}}/bin/{{.OS}}/{{.Arch}}/nodeadm
+format: raw
+version_source: github_tag
+files:
+  - name: nodeadm
+supported_envs:
+  - linux

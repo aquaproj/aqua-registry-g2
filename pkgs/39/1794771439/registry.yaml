@@ -1,0 +1,17 @@
+name: google/keep-sorted
+type: github_release
+repo_owner: google
+repo_name: keep-sorted
+repo_id: 605646147
+description: keep-sorted is a language-agnostic formatter that sorts lines between
+  two markers in a larger file
+version_overrides:
+  - version_constraint: semver("> 0.9.0")
+  - version_constraint: semver("> 0.6.0")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("<= 0.6.0")
+    no_asset: true
+  - version_constraint: "true"

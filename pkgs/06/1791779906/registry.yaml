@@ -23,6 +23,19 @@ version_overrides:
       - darwin
       - windows
       - amd64
+  # v0.6.8 publishes no signature for kube-linter-windows.zip.
+  - version_constraint: Version == "v0.6.8"
+    cosign:
+      opts:
+        - --key
+        - https://raw.githubusercontent.com/stackrox/kube-linter/refs/tags/{{.Version}}/kubelinter-cosign.pub
+        - --signature
+        - https://github.com/stackrox/kube-linter/releases/download/{{.Version}}/{{.Asset}}.sig
+    overrides:
+      - goos: windows
+        goarch: amd64
+        cosign:
+          enabled: false
   - version_constraint: semver("<= 0.7.6")
     cosign:
       opts:

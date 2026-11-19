@@ -1,0 +1,18 @@
+name: knqyf263/utern
+type: github_release
+repo_owner: knqyf263
+repo_name: utern
+repo_id: 168786680
+description: Multi group and stream log tailing for AWS CloudWatch Logs
+version_overrides:
+  - version_constraint: semver("> 0.1.3")
+  - version_constraint: semver("> 0.0.2")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("<= 0.0.2")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: "true"

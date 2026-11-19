@@ -1,0 +1,19 @@
+name: DataDog/managed-kubernetes-auditing-toolkit
+aliases:
+  - name: datadog/managed-kubernetes-auditing-toolkit
+type: github_release
+repo_owner: DataDog
+repo_name: managed-kubernetes-auditing-toolkit
+repo_id: 623004804
+description: All-in-one auditing toolkit for identifying common security issues in
+  managed Kubernetes environments. Currently supports Amazon EKS
+version_overrides:
+  - version_constraint: semver("> 0.1.1")
+    files:
+      - name: mkat
+  - version_constraint: semver("<= 0.1.1")
+    files:
+      - name: mkat
+  - version_constraint: "true"
+    files:
+      - name: mkat

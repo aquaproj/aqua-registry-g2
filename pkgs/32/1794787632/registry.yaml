@@ -1,0 +1,20 @@
+name: ianlewis/todos
+type: github_release
+repo_owner: ianlewis
+repo_name: todos
+repo_id: 457286152
+description: Parse TODO and FIXME comments from code
+version_overrides:
+  - version_constraint: Version == "v0.0.1"
+    slsa_provenance:
+      type: github_release
+      asset: todos-{{.OS}}-{{.Arch}}.intoto.jsonl
+  - version_constraint: "true"
+    slsa_provenance:
+      type: github_release
+      asset: todos-{{.OS}}-{{.Arch}}.intoto.jsonl
+    overrides:
+      - goos: windows
+        slsa_provenance:
+          type: github_release
+          asset: todos-{{.OS}}-{{.Arch}}.exe.intoto.jsonl

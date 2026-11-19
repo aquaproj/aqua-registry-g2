@@ -1,0 +1,16 @@
+name: omegion/ssh-manager
+type: github_release
+repo_owner: omegion
+repo_name: ssh-manager
+repo_id: 344174158
+description: SSH Key Manager for 1Password, Bitwarden and AWS S3
+version_overrides:
+  - version_constraint: semver(">= 0.13.0")
+  - version_constraint: semver(">= 0.11.0")
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver("< 0.11.0")
+    supported_envs:
+      - linux/arm64
+  - version_constraint: "true"

@@ -1,0 +1,14 @@
+name: legal90/awscurl
+type: github_release
+repo_owner: legal90
+repo_name: awscurl
+repo_id: 265809811
+description: cURL with AWS request signing
+version_overrides:
+  - version_constraint: semver("> 0.1.1")
+  - version_constraint: semver("<= 0.1.1")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: "true"

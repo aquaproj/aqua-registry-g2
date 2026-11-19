@@ -1,0 +1,19 @@
+name: cplieger/grelot
+type: github_release
+repo_owner: cplieger
+repo_name: grelot
+repo_id: 1444738584
+description: Messaging platform for coding agents, with folder threads and file reservations
+cosign:
+  opts:
+    - --certificate-identity
+    - https://github.com/cplieger/ci/.github/workflows/docker-release.yaml@3b136e27c2b7ccf94227f61cdfeebaa3e6b79ac8
+    - --certificate-oidc-issuer
+    - https://token.actions.githubusercontent.com
+  bundle:
+    type: github_release
+    asset: '{{.Asset}}.sigstore.json'
+version_overrides:
+  - version_constraint: Version == "v1.0.0"
+    no_asset: true
+  - version_constraint: "true"

@@ -1,0 +1,16 @@
+name: tgenv/tgenv
+type: github_archive
+repo_owner: tgenv
+repo_name: tgenv
+repo_id: 578265537
+description: A tool to manage multiples Terragrunt versions
+version_overrides:
+  - version_constraint: "true"
+    files:
+      - name: tgenv
+        src: tgenv-{{trimV .Version}}/bin/tgenv
+      - name: terragrunt
+        src: tgenv-{{trimV .Version}}/bin/terragrunt
+    supported_envs:
+      - linux
+      - darwin

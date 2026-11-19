@@ -1,0 +1,30 @@
+name: chevdor/tera-cli
+type: github_release
+repo_owner: chevdor
+repo_name: tera-cli
+repo_id: 374141690
+description: A command line utility on top of the tera templating engine. Takes json|yaml|toml
+  as input and can merge ENV in. You may see it as envsubst on steroid
+files:
+  - name: tera
+version_overrides:
+  - version_constraint: Version == "v0.4.0"
+    files:
+      - name: tera
+    supported_envs:
+      - darwin
+  - version_constraint: semver("> 0.3.0")
+    files:
+      - name: tera
+  - version_constraint: semver("> 0.2.4")
+    no_asset: true
+  - version_constraint: semver("> 0.1.2")
+    files:
+      - name: tera
+    supported_envs:
+      - darwin
+  - version_constraint: semver("<= 0.1.2")
+    no_asset: true
+  - version_constraint: "true"
+    files:
+      - name: tera

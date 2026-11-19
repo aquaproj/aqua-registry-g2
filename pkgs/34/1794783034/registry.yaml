@@ -1,0 +1,17 @@
+name: kevwan/depu
+type: github_release
+repo_owner: kevwan
+repo_name: depu
+repo_id: 494078498
+description: A tool to check  available updates of packages in go.mod
+version_overrides:
+  - version_constraint: semver("> 1.0.1")
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver("<= 1.0.1")
+    no_asset: true
+  - version_constraint: "true"
+    supported_envs:
+      - linux
+      - darwin

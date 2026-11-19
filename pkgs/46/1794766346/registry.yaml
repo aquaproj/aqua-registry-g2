@@ -1,0 +1,17 @@
+name: keisku/kubectl-explore
+type: github_release
+repo_owner: keisku
+repo_name: kubectl-explore
+repo_id: 443553424
+description: A better kubectl explain with the fuzzy finder
+version_overrides:
+  - version_constraint: semver("> 0.3.1")
+  - version_constraint: semver("> 0.3.0")
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver("<= 0.3.0")
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: "true"

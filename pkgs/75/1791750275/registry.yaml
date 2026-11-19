@@ -14,9 +14,9 @@ files:
 cosign:
   opts:
     - --signature
-    - https://github.com/tofuutils/tenv/releases/download/{{.Version}}/tenv_v4.15.1_Darwin_x86_64.tar.gz.sig
+    - https://github.com/tofuutils/tenv/releases/download/{{.Version}}/tenv_{{.Version}}_Darwin_x86_64.tar.gz.sig
     - --certificate
-    - https://github.com/tofuutils/tenv/releases/download/{{.Version}}/tenv_v4.15.1_Darwin_x86_64.tar.gz.pem
+    - https://github.com/tofuutils/tenv/releases/download/{{.Version}}/tenv_{{.Version}}_Darwin_x86_64.tar.gz.pem
     - --certificate-identity
     - https://github.com/tofuutils/tenv/.github/workflows/release.yml@refs/tags/{{.Version}}
     - --certificate-oidc-issuer

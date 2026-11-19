@@ -1,0 +1,119 @@
+{
+  "published_at": "2026-10-27T08:28:29Z",
+  "assets": [
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "k0sproject",
+      "repo_name": "k0s",
+      "repo_id": 271250363,
+      "asset": "k0s-v1.35.9+k0s.0-amd64",
+      "format": "raw",
+      "checksum": "517b88e10665c35fd546fcb9d9d358be1f480ec3d8f2e7d18ef588831eae64fb",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "k0s",
+          "src": "k0s-v1.35.9+k0s.0-amd64"
+        }
+      ],
+      "cosign": {
+        "signature": {
+          "type": "github_release",
+          "asset": "k0s-v1.35.9+k0s.0-amd64.sig"
+        },
+        "key": {
+          "type": "github_release",
+          "asset": "cosign.pub"
+        }
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "k0sproject",
+      "repo_name": "k0s",
+      "repo_id": 271250363,
+      "asset": "k0s-v1.35.9+k0s.0-arm64",
+      "format": "raw",
+      "checksum": "e644aea496c41febdc55754d8589a326267c22179fdc3418a52cea401a9ec5c4",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "k0s",
+          "src": "k0s-v1.35.9+k0s.0-arm64"
+        }
+      ],
+      "cosign": {
+        "signature": {
+          "type": "github_release",
+          "asset": "k0s-v1.35.9+k0s.0-arm64.sig"
+        },
+        "key": {
+          "type": "github_release",
+          "asset": "cosign.pub"
+        }
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "k0sproject",
+      "repo_name": "k0s",
+      "repo_id": 271250363,
+      "asset": "k0s-v1.35.9+k0s.0-amd64",
+      "format": "raw",
+      "checksum": "517b88e10665c35fd546fcb9d9d358be1f480ec3d8f2e7d18ef588831eae64fb",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "k0s",
+          "src": "k0s-v1.35.9+k0s.0-amd64"
+        }
+      ],
+      "cosign": {
+        "signature": {
+          "type": "github_release",
+          "asset": "k0s-v1.35.9+k0s.0-amd64.sig"
+        },
+        "key": {
+          "type": "github_release",
+          "asset": "cosign.pub"
+        }
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "k0sproject",
+      "repo_name": "k0s",
+      "repo_id": 271250363,
+      "asset": "k0s-v1.35.9+k0s.0-arm64",
+      "format": "raw",
+      "checksum": "e644aea496c41febdc55754d8589a326267c22179fdc3418a52cea401a9ec5c4",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "k0s",
+          "src": "k0s-v1.35.9+k0s.0-arm64"
+        }
+      ],
+      "cosign": {
+        "signature": {
+          "type": "github_release",
+          "asset": "k0s-v1.35.9+k0s.0-arm64.sig"
+        },
+        "key": {
+          "type": "github_release",
+          "asset": "cosign.pub"
+        }
+      }
+    }
+  ]
+}

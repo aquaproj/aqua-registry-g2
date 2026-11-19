@@ -34,3 +34,5 @@ version_overrides:
     files:
       - name: static-web-server
         src: '{{.AssetWithoutExt}}/static-web-server'
+# Each Linux build is also published as a FIPS build, which tied with the ordinary one.
+all_assets_filter: not (Asset contains "fips")

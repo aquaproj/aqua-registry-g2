@@ -1,0 +1,17 @@
+name: suzuki-shunsuke/ghcp
+type: github_release
+repo_owner: suzuki-shunsuke
+repo_name: ghcp
+repo_id: 718403702
+description: Tool to fork a repository, commit files, create a pull request and upload
+  assets using GitHub API
+packslip:
+  identity_prefix: https://github.com/suzuki-shunsuke/go-release-workflow/
+  issuer: https://token.actions.githubusercontent.com
+version_overrides:
+  - version_constraint: semver("> 1.16.0")
+  - version_constraint: semver("<= 1.16.0")
+    slsa_provenance:
+      type: github_release
+      asset: multiple.intoto.jsonl
+  - version_constraint: "true"

@@ -1,0 +1,15 @@
+name: swanysimon/mdlint
+aliases:
+  - name: swanysimon/markdownlint-rs
+type: github_release
+repo_owner: swanysimon
+repo_name: mdlint
+repo_id: 1093027931
+description: Attempting to port markdownlint (and the markdownlint-cli2 interface)
+  to Rust using mostly vibes
+files:
+  - name: mdlint
+version_overrides:
+  - version_constraint: "true"
+    files:
+      - name: mdlint

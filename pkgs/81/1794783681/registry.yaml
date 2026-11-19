@@ -1,0 +1,30 @@
+name: hougesen/mdsf
+type: github_release
+repo_owner: hougesen
+repo_name: mdsf
+repo_id: 759463672
+description: Format markdown code blocks using your favorite tools
+version_overrides:
+  - version_constraint: semver("> 0.2.2")
+    files:
+      - name: mdsf
+        src: '{{.AssetWithoutExt}}/mdsf'
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("> 0.0.2")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("<= 0.0.2")
+    no_asset: true
+  - version_constraint: "true"
+    files:
+      - name: mdsf
+        src: '{{.AssetWithoutExt}}/mdsf'
+    supported_envs:
+      - darwin
+      - windows
+      - amd64

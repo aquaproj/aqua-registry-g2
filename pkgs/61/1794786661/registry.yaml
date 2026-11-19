@@ -1,0 +1,12 @@
+name: Songmu/timeout
+type: github_release
+repo_owner: Songmu
+repo_name: timeout
+repo_id: 31818004
+description: Timeout invocation. Go porting of GNU timeout and able to use as Go package
+files:
+  - name: go-timeout
+    src: timeout_{{.Version}}_{{.OS}}_{{.Arch}}/go-timeout
+supported_envs:
+  - darwin
+  - amd64

@@ -1,0 +1,25 @@
+name: nametake/golangci-lint-langserver
+type: github_release
+repo_owner: nametake
+repo_name: golangci-lint-langserver
+repo_id: 245196395
+description: golangci-lint language server
+version_overrides:
+  - version_constraint: Version == "v0.0.7"
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver("> 0.0.6")
+  - version_constraint: semver("> 0.0.4")
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver("> 0.0.2")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: semver("<= 0.0.2")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: "true"

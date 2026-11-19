@@ -1,0 +1,45 @@
+name: Mattbusel/tokio-prompt-orchestrator
+type: github_release
+repo_owner: Mattbusel
+repo_name: tokio-prompt-orchestrator
+repo_id: 1071620411
+description: LLM API proxy. Same prompt twice costs one call
+files:
+  - name: orchestrator
+version_overrides:
+  - version_constraint: Version == "v1.0.0"
+    no_asset: true
+  - version_constraint: Version == "v0.1.0"
+    supported_envs:
+      - windows/amd64
+  - version_constraint: Version == "v1.1.0"
+    supported_envs:
+      - windows/amd64
+  - version_constraint: semver("> 1.4.1")
+    files:
+      - name: orchestrator
+        src: '{{.AssetWithoutExt}}/orchestrator'
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("<= 1.4.1")
+    files:
+      - name: orchestrator
+        src: '{{.AssetWithoutExt}}/orchestrator'
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: "true"
+    files:
+      - name: orchestrator
+        src: '{{.AssetWithoutExt}}/orchestrator'
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+asset_rules:
+  - envs:
+      - windows/amd64
+    filter: Asset matches "^orchestrator([.].+)?$"

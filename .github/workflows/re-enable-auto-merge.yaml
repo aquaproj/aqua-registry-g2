@@ -7,8 +7,15 @@ name: re-enable auto-merge
 # mergeable", and then sat there merged by nobody. ar2 never turns it off, so a pull
 # request of ar2's that GitHub turned it off for is one to turn it back on for.
 #
-# Only GitHub's own turning off is undone. Somebody turning it off on purpose is somebody
-# who wants the pull request to wait.
+# The event's sender is whoever turned auto-merge on, not who or what turned it off: GitHub
+# turning it off for a pull request the pull request app turned it on for is sent by
+# aquaproj-g2-pr[bot]. So the sender says only that ar2 turned it on, which is what makes
+# the pull request ar2's to turn back on. Auto-merge GITHUB_TOKEN turned on raises an event
+# that starts no workflow at all, which is why ar2 turns it on with the app.
+#
+# A pull request that was closed has it turned off as well, and is left alone. Somebody
+# turning it off on purpose can't be told apart by the sender; the reason GitHub gives is
+# logged, and a pull request it is turned back on for too often is left to a person.
 on:
   # pull_request_target rather than pull_request: it runs in the context of main, which is
   # the only branch the environment holding the app's key is open to. Nothing from the
@@ -25,7 +32,8 @@ jobs:
     if: >-
       startsWith(github.event.pull_request.head.ref, 'ar2_')
       && github.event.pull_request.head.repo.full_name == github.repository
-      && github.event.sender.login == 'github-actions[bot]'
+      && github.event.pull_request.state == 'open'
+      && github.event.sender.login == 'aquaproj-g2-pr[bot]'
     runs-on: ubuntu-26.04
     environment: index
     timeout-minutes: 10

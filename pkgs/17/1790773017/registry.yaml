@@ -4,6 +4,12 @@ repo_owner: tsl0922
 repo_name: ttyd
 repo_id: 68063511
 description: Share your terminal over the web
+# The Linux builds are named after the architecture alone: ttyd.x86_64, ttyd.aarch64 and so on.
+asset_rules:
+    - envs:
+        - linux/amd64
+        - linux/arm64
+      filter: Asset matches "^ttyd[.](x86_64|aarch64)$"
 version_overrides:
     - version_constraint: semver(">= 1.7.3")
     - version_constraint: semver(">= 1.7.0")

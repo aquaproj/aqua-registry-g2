@@ -1,0 +1,30 @@
+name: banzaicloud/banzai-cli
+type: github_release
+repo_owner: banzaicloud
+repo_name: banzai-cli
+repo_id: 158664694
+description: CLI for Banzai Cloud Pipeline platform
+files:
+  - name: banzai
+version_overrides:
+  - version_constraint: Version in ["0.0.2-preview", "0.15.0"]
+    no_asset: true
+  - version_constraint: semver("> 0.21.2")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: semver("> 0.21.0")
+    no_asset: true
+  - version_constraint: semver("> 0.14.1")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: semver("<= 0.14.1")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: "true"
+    supported_envs:
+      - linux/amd64
+      - darwin

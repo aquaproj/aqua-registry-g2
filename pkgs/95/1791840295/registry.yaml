@@ -85,3 +85,5 @@ version_overrides:
       - darwin
       - windows
       - amd64
+# A -nocgo build tied with the ordinary one.
+all_assets_filter: not (Asset contains "nocgo")

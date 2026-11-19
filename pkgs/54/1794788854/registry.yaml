@@ -1,0 +1,19 @@
+name: jolars/fatou
+type: github_release
+repo_owner: jolars
+repo_name: fatou
+repo_id: 1270938005
+description: Julia language server, formatter, and linter built in Rust
+version_filter: Version startsWith "v"
+github_artifact_attestations:
+  signer_workflow: jolars/fatou/.github/workflows/packages.yml
+version_overrides:
+  - version_constraint: semver("> 0.6.0")
+    github_artifact_attestations:
+      signer_workflow: jolars/fatou/.github/workflows/packages.yml
+  - version_constraint: semver("> 0.3.0")
+  - version_constraint: semver("<= 0.3.0")
+    no_asset: true
+  - version_constraint: "true"
+    github_artifact_attestations:
+      signer_workflow: jolars/fatou/.github/workflows/packages.yml

@@ -1,0 +1,13 @@
+name: Songmu/tagpr
+type: github_release
+repo_owner: Songmu
+repo_name: tagpr
+repo_id: 524603982
+description: The tagpr automatically creates and updates a pull request for unreleased
+  items, tag them when they are merged, and create releases
+files:
+  - name: tagpr
+    src: tagpr_{{.Version}}_{{.OS}}_{{.Arch}}/tagpr
+supported_envs:
+  - linux
+  - darwin

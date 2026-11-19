@@ -1,0 +1,13 @@
+name: suzuki-shunsuke/yodoc
+type: github_release
+repo_owner: suzuki-shunsuke
+repo_name: yodoc
+repo_id: 812199453
+description: Test command results and embed them into document
+version_overrides:
+  - version_constraint: semver("> 1.0.0")
+  - version_constraint: semver("<= 1.0.0")
+    slsa_provenance:
+      type: github_release
+      asset: multiple.intoto.jsonl
+  - version_constraint: "true"

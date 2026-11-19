@@ -6,6 +6,8 @@ repo_owner: micro-editor
 repo_name: micro
 repo_id: 53632140
 description: A modern and intuitive terminal-based text editor
+# osx32 is a 32-bit macOS build, which ties with osx for both darwin environments.
+all_assets_filter: not (Asset contains "osx32")
 version_overrides:
     - version_constraint: Version == "v2.0.8"
       files:

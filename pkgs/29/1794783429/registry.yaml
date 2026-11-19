@@ -1,0 +1,18 @@
+name: int128/kauthproxy
+type: github_release
+repo_owner: int128
+repo_name: kauthproxy
+repo_id: 191071313
+description: Local authentication proxy for Kubernetes Dashboard (kubectl auth-proxy)
+files:
+  - name: kauthproxy
+  - name: kubectl-auth_proxy
+    src: kauthproxy
+version_overrides:
+  - version_constraint: semver("> 1.1.1")
+  - version_constraint: semver("<= 1.1.1")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: "true"

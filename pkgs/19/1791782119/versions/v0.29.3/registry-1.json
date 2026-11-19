@@ -1,0 +1,86 @@
+{
+  "published_at": "2023-01-29T13:14:38Z",
+  "assets": [
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "variants": {
+        "libc": "glibc"
+      },
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "pkolaczk",
+      "repo_name": "fclones",
+      "repo_id": 269959476,
+      "asset": "fclones-0.29.3-linux-glibc-x86_64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "f5c86ce8acd147001db9dd6ce31989c9076f2f20faa5d982c6faf3cdc399d475",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "fclones",
+          "src": "usr/bin/fclones"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "variants": {
+        "libc": "musl"
+      },
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "pkolaczk",
+      "repo_name": "fclones",
+      "repo_id": 269959476,
+      "asset": "fclones-0.29.3-linux-musl-x86_64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "afee5e22653830f6c07cf0a0b520c002eec3fdd2b4d3e8d16a6331b44476b853",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "fclones",
+          "src": "target/x86_64-unknown-linux-musl/release/fclones"
+        }
+      ]
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "pkolaczk",
+      "repo_name": "fclones",
+      "repo_id": 269959476,
+      "asset": "fclones-0.29.3-windows-x86_64.zip",
+      "format": "zip",
+      "checksum": "4dd99e562991743122a08c8aa86b8778ac889ca6839aa0fe1f63ecf6eac14e65",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "fclones",
+          "src": "fclones.exe"
+        }
+      ]
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "windows_arm_emulation": true,
+      "type": "github_release",
+      "repo_owner": "pkolaczk",
+      "repo_name": "fclones",
+      "repo_id": 269959476,
+      "asset": "fclones-0.29.3-windows-x86_64.zip",
+      "format": "zip",
+      "checksum": "4dd99e562991743122a08c8aa86b8778ac889ca6839aa0fe1f63ecf6eac14e65",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "fclones",
+          "src": "fclones.exe"
+        }
+      ]
+    }
+  ]
+}

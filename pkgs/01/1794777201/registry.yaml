@@ -1,0 +1,30 @@
+name: owenrumney/squealer
+type: github_release
+repo_owner: owenrumney
+repo_name: squealer
+repo_id: 336026438
+description: Telling tales on you for leaking secrets
+version_overrides:
+  - version_constraint: Version in ["v0.1.20", "v1.2.3", "v1.2.7"]
+    no_asset: true
+  - version_constraint: semver("> 1.0.0")
+  - version_constraint: semver("> 0.3.0")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("> 0.2.28")
+    no_asset: true
+  - version_constraint: semver("> 0.2.22")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("> 0.2.19")
+    no_asset: true
+  - version_constraint: semver("<= 0.2.19")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: "true"

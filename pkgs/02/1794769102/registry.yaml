@@ -1,0 +1,18 @@
+name: TekWizely/run
+type: github_release
+repo_owner: TekWizely
+repo_name: run
+repo_id: 195097834
+description: Task runner that helps you easily manage and invoke small scripts and
+  wrappers
+version_overrides:
+  - version_constraint: semver("> 0.6.5")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: semver("<= 0.6.5")
+    no_asset: true
+  - version_constraint: "true"
+    supported_envs:
+      - linux/amd64
+      - darwin

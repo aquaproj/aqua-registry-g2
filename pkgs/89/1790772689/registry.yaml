@@ -4,3 +4,5 @@ repo_owner: EpicGames
 repo_name: lore
 repo_id: 1246010662
 description: Lore is a next-generation, open source version control system
+# liblore, the library, and builds for a particular CPU (neoverse-512tvb) tied with the command.
+all_assets_filter: Asset startsWith "lore-" and not (Asset contains "neoverse")

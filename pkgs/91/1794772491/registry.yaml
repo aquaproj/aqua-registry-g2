@@ -1,0 +1,41 @@
+name: yitsushi/totp-cli
+type: github_release
+repo_owner: yitsushi
+repo_name: totp-cli
+repo_id: 68098216
+description: Authy/Google Authenticator like TOTP CLI tool written in Go
+version_overrides:
+  - version_constraint: Version == "v1.1.4"
+    supported_envs:
+      - linux/amd64
+  - version_constraint: Version == "v1.1.10"
+    supported_envs:
+      - linux/amd64
+  - version_constraint: semver("> 1.8.5")
+  - version_constraint: semver("> 1.2.1")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("> 1.1.17")
+    no_asset: true
+  - version_constraint: semver("> 1.1.9")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("> 1.1.3")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: semver("> 1.0.5")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("<= 1.0.5")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: "true"

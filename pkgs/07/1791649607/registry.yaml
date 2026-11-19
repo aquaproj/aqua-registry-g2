@@ -7,3 +7,5 @@ description: Fast disk usage analyzer with console interface written in Go
 files:
   - name: gdu
     src: gdu_{{.OS}}_{{.Arch}}
+# A _static build tied with the ordinary one, which newer versions use.
+all_assets_filter: not (Asset contains "_static")

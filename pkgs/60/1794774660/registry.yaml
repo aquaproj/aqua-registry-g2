@@ -1,0 +1,13 @@
+name: tursodatabase/turso-cli
+type: github_release
+repo_owner: tursodatabase
+repo_name: turso-cli
+repo_id: 579061584
+description: Command line interface to the Turso Cloud
+files:
+  - name: turso
+version_overrides:
+  - version_constraint: "true"
+    supported_envs:
+      - linux
+      - darwin

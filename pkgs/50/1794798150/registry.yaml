@@ -1,0 +1,23 @@
+name: aquaproj/aqua-registry-updater
+type: github_release
+repo_owner: aquaproj
+repo_name: aqua-registry-updater
+repo_id: 643506070
+description: Renovate alternative specific to aqua-registry. Overcome Renovate's scalability
+  issue
+packslip:
+  identity_prefix: https://github.com/suzuki-shunsuke/go-release-workflow/
+  issuer: https://token.actions.githubusercontent.com
+version_overrides:
+  - version_constraint: semver("> 0.1.8")
+    supported_envs:
+      - linux/amd64
+  - version_constraint: semver("<= 0.1.8")
+    slsa_provenance:
+      type: github_release
+      asset: aqua-registry-updater_{{.OS}}_{{.Arch}}.tar.gz.intoto.jsonl
+    supported_envs:
+      - linux/amd64
+  - version_constraint: "true"
+    supported_envs:
+      - linux/amd64

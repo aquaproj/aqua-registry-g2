@@ -1,0 +1,88 @@
+name: acheronfail/repgrep
+type: github_release
+repo_owner: acheronfail
+repo_name: repgrep
+repo_id: 273803673
+description: An interactive replacer for ripgrep that makes it easy to find and replace
+  across files on the command line
+version_overrides:
+  - version_constraint: Version == "v0.4.8"
+    files:
+      - name: rgr
+        src: repgrep-{{.Version}}-{{.Arch}}-{{.OS}}/rgr
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: Version == "v0.7.1"
+    no_asset: true
+  - version_constraint: Version == "0.10.2"
+    files:
+      - name: rgr
+        src: repgrep-{{.Version}}-{{.Arch}}-{{.OS}}/rgr
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: Version == "0.10.3"
+    no_asset: true
+  - version_constraint: Version == "0.10.4"
+    files:
+      - name: rgr
+        src: repgrep-{{.Version}}-{{.Arch}}-{{.OS}}/rgr
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: Version == "0.10.5"
+    files:
+      - name: rgr
+        src: repgrep-{{.Version}}-{{.Arch}}-{{.OS}}/rgr
+    supported_envs:
+      - linux/amd64
+  - version_constraint: Version == "0.10.6"
+    files:
+      - name: rgr
+        src: repgrep-{{.Version}}-{{.Arch}}-{{.OS}}/rgr
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: semver("> 0.4.7")
+    files:
+      - name: rgr
+        src: repgrep-{{.Version}}-{{.Arch}}-{{.OS}}/rgr
+    supported_envs:
+      - darwin
+      - amd64
+  - version_constraint: semver("> 0.4.5")
+    no_asset: true
+  - version_constraint: semver("> 0.4.3")
+    files:
+      - name: rgr
+        src: repgrep-{{.Version}}-{{.Arch}}-{{.OS}}/rgr
+    supported_envs:
+      - darwin
+      - amd64
+  - version_constraint: semver("> 0.4.0")
+    files:
+      - name: rgr
+        src: repgrep-{{.Version}}-{{.Arch}}-{{.OS}}/rgr
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: semver("> 0.1.1")
+    files:
+      - name: rgr
+        src: repgrep-{{.Version}}-{{.Arch}}-{{.OS}}/rgr
+    supported_envs:
+      - linux/amd64
+  - version_constraint: semver("<= 0.1.1")
+    files:
+      - name: rgr
+        src: repgrep-{{.Version}}-{{.Arch}}-{{.OS}}/rgr
+    supported_envs:
+      - linux/amd64
+  - version_constraint: "true"
+    files:
+      - name: rgr
+        src: repgrep-{{.Version}}-{{.Arch}}-{{.OS}}/rgr
+    supported_envs:
+      - darwin
+      - amd64

@@ -2,6 +2,24 @@
   "published_at": "2026-09-19T10:38:47Z",
   "assets": [
     {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "nickel-lang",
+      "repo_name": "nickel",
+      "repo_id": 164738063,
+      "asset": "nickel-arm64-macos",
+      "format": "raw",
+      "checksum": "faf755518f56da62f2e61f27676df0fad8f701cf83a22a17de531290b064f09d",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "nickel",
+          "src": "nickel-arm64-macos"
+        }
+      ]
+    },
+    {
       "os": "linux",
       "arch": "amd64",
       "linked_libc": "static",
@@ -9,14 +27,14 @@
       "repo_owner": "nickel-lang",
       "repo_name": "nickel",
       "repo_id": 164738063,
-      "asset": "nls-x86_64-linux",
+      "asset": "nickel-x86_64-linux",
       "format": "raw",
-      "checksum": "862d5977bec0616f5c90a344ac479aa2eede429be33078f8b70857d3f27a686a",
+      "checksum": "9cba4dd65ae9915ec61f73033aafcff307a377665a83fd8f530df086763318cb",
       "checksum_algorithm": "sha256",
       "files": [
         {
           "name": "nickel",
-          "src": "nls-x86_64-linux"
+          "src": "nickel-x86_64-linux"
         }
       ]
     },
@@ -28,32 +46,14 @@
       "repo_owner": "nickel-lang",
       "repo_name": "nickel",
       "repo_id": 164738063,
-      "asset": "nls-arm64-linux",
+      "asset": "nickel-arm64-linux",
       "format": "raw",
-      "checksum": "1243fc50fd8a0ec911dfcbbe8335cdf281d3f0d26bdd897ea3641d496341bd1c",
+      "checksum": "626571e76b66523f454abb373fda4935e2b2685a008ebb8a783b0d20321ffdbd",
       "checksum_algorithm": "sha256",
       "files": [
         {
           "name": "nickel",
-          "src": "nls-arm64-linux"
-        }
-      ]
-    },
-    {
-      "os": "darwin",
-      "arch": "arm64",
-      "type": "github_release",
-      "repo_owner": "nickel-lang",
-      "repo_name": "nickel",
-      "repo_id": 164738063,
-      "asset": "nls-arm64-macos",
-      "format": "raw",
-      "checksum": "3f2bb52704d89191d8c22da1d776f63b4c53c451bec016d56d508ec3d3e0e462",
-      "checksum_algorithm": "sha256",
-      "files": [
-        {
-          "name": "nickel",
-          "src": "nls-arm64-macos"
+          "src": "nickel-arm64-linux"
         }
       ]
     },
@@ -64,14 +64,33 @@
       "repo_owner": "nickel-lang",
       "repo_name": "nickel",
       "repo_id": 164738063,
-      "asset": "nls-x86_64-windows.exe",
+      "asset": "nickel-x86_64-windows.exe",
       "format": "raw",
-      "checksum": "7e06876c087a180968bee1c83c4d2e29bf7c443cf51fa858ae5f31c8c2c13bfd",
+      "checksum": "efd2192fe1ed17e9a8c1063d90810e5fd6ebc3d057d4d9619cb2ff074800d274",
       "checksum_algorithm": "sha256",
       "files": [
         {
           "name": "nickel",
-          "src": "nls-x86_64-windows.exe"
+          "src": "nickel-x86_64-windows.exe"
+        }
+      ]
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "windows_arm_emulation": true,
+      "type": "github_release",
+      "repo_owner": "nickel-lang",
+      "repo_name": "nickel",
+      "repo_id": 164738063,
+      "asset": "nickel-x86_64-windows.exe",
+      "format": "raw",
+      "checksum": "efd2192fe1ed17e9a8c1063d90810e5fd6ebc3d057d4d9619cb2ff074800d274",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "nickel",
+          "src": "nickel-x86_64-windows.exe"
         }
       ]
     }

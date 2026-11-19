@@ -1,0 +1,122 @@
+name: dyne/zenroom
+type: github_release
+repo_owner: dyne
+repo_name: zenroom
+repo_id: 112839586
+description: Embedded no-code VM executing human-like language to manipulate data
+  and process cryptographic operations
+files:
+  - name: zenroom
+  - name: zencode-exec
+version_overrides:
+  - version_constraint: semver("> 5.25.3")
+    files:
+      - name: zenroom
+        src: zenroom-{{.Arch}}-{{.OS}}/zenroom
+      - name: zencode-exec
+        src: zenroom-{{.Arch}}-{{.OS}}/zencode-exec
+    overrides:
+      - goos: windows
+        files:
+          - name: zenroom
+            src: zenroom-{{.OS}}/zenroom
+          - name: zencode-exec
+            src: zenroom-{{.OS}}/zencode-exec
+      - goos: darwin
+        files:
+          - name: zenroom
+            src: zenroom-{{.OS}}/zenroom
+          - name: zencode-exec
+            src: zenroom-{{.OS}}/zencode-exec
+    supported_envs:
+      - darwin/arm64
+      - linux/amd64
+      - windows
+  - version_constraint: semver("> 5.25.0")
+    files:
+      - name: zenroom
+        src: zenroom-{{.Arch}}-{{.OS}}/zenroom
+      - name: zencode-exec
+        src: zenroom-{{.Arch}}-{{.OS}}/zencode-exec
+    overrides:
+      - goos: windows
+        files:
+          - name: zenroom
+            src: zenroom-{{.OS}}/zenroom
+          - name: zencode-exec
+            src: zenroom-{{.OS}}/zencode-exec
+      - goos: darwin
+        files:
+          - name: zenroom
+            src: zenroom-{{.OS}}/zenroom.command
+          - name: zencode-exec
+            src: zenroom-{{.OS}}/zencode-exec.command
+    supported_envs:
+      - darwin/arm64
+      - linux/amd64
+      - windows
+  - version_constraint: semver("> 5.10.4")
+    files:
+      - name: zenroom
+        src: zenroom-{{.OS}}/zenroom
+      - name: zencode-exec
+        src: zenroom-{{.OS}}/zencode-exec
+    overrides:
+      - goos: darwin
+        files:
+          - name: zenroom
+            src: zenroom-{{.OS}}/zenroom.command
+          - name: zencode-exec
+            src: zenroom-{{.OS}}/zencode-exec.command
+    supported_envs:
+      - darwin/arm64
+      - linux/amd64
+      - windows
+  - version_constraint: semver("> 4.27.1")
+    files:
+      - name: zenroom
+    supported_envs:
+      - darwin/arm64
+      - linux/amd64
+      - windows
+  - version_constraint: semver("> 3.10.0")
+    files:
+      - name: zenroom
+    supported_envs:
+      - darwin
+      - linux/amd64
+      - windows
+  - version_constraint: semver("<= 3.10.0")
+    error_message: |
+      Please update to 3.10.1 or newer.
+  - version_constraint: "true"
+    files:
+      - name: zenroom
+        src: zenroom-{{.Arch}}-{{.OS}}/zenroom
+      - name: zencode-exec
+        src: zenroom-{{.Arch}}-{{.OS}}/zencode-exec
+    overrides:
+      - goos: windows
+        files:
+          - name: zenroom
+            src: zenroom-{{.OS}}/zenroom
+          - name: zencode-exec
+            src: zenroom-{{.OS}}/zencode-exec
+      - goos: darwin
+        files:
+          - name: zenroom
+            src: zenroom-{{.OS}}/zenroom
+          - name: zencode-exec
+            src: zenroom-{{.OS}}/zencode-exec
+    supported_envs:
+      - darwin/arm64
+      - linux/amd64
+      - windows
+asset_rules:
+  - envs:
+      - linux/amd64
+      - darwin/amd64
+      - darwin/arm64
+      - windows/amd64
+      - windows/arm64
+    filter: Asset matches "^zenroom[.]command([.].+)?$" or Asset matches "^zenroom([.].+)?$"

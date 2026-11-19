@@ -1,0 +1,10 @@
+name: koki-develop/ghasec
+type: github_release
+repo_owner: koki-develop
+repo_name: ghasec
+repo_id: 1185306033
+description: Catch security risks in your GitHub Actions workflows
+version_overrides:
+  - version_constraint: Version == "v0.0.3"
+    no_asset: true
+  - version_constraint: "true"

@@ -1,0 +1,71 @@
+name: interlynk-io/sbomqs
+type: github_release
+repo_owner: interlynk-io
+repo_name: sbomqs
+repo_id: 595838775
+description: 'sbomqs: The Comprehensive SBOM Quality & Compliance Tool'
+cosign:
+  opts:
+    - --certificate-identity
+    - https://github.com/interlynk-io/sbomqs/.github/workflows/release.yml@refs/tags/{{.Version}}
+    - --certificate-oidc-issuer
+    - https://token.actions.githubusercontent.com
+    - --certificate-github-workflow-repository
+    - interlynk-io/sbomqs
+    - --certificate-github-workflow-ref
+    - refs/tags/{{.Version}}
+  bundle:
+    type: github_release
+    asset: '{{.Asset}}.sigstore.json'
+version_overrides:
+  - version_constraint: semver("> 2.0.3")
+    cosign:
+      opts:
+        - --certificate-identity
+        - https://github.com/interlynk-io/sbomqs/.github/workflows/release.yml@refs/tags/{{.Version}}
+        - --certificate-oidc-issuer
+        - https://token.actions.githubusercontent.com
+        - --certificate-github-workflow-repository
+        - interlynk-io/sbomqs
+        - --certificate-github-workflow-ref
+        - refs/tags/{{.Version}}
+      bundle:
+        type: github_release
+        asset: '{{.Asset}}.sigstore.json'
+  - version_constraint: semver("> 2.0.2")
+    cosign:
+      opts:
+        - --certificate-identity
+        - https://github.com/interlynk-io/sbomqs/.github/workflows/release.yml@refs/tags/{{.Version}}
+        - --certificate-oidc-issuer
+        - https://token.actions.githubusercontent.com
+        - --certificate
+        - https://github.com/interlynk-io/sbomqs/releases/download/{{.Version}}/{{.Asset}}.pem
+        - --signature
+        - https://github.com/interlynk-io/sbomqs/releases/download/{{.Version}}/{{.Asset}}.sig
+        - --certificate-github-workflow-repository
+        - interlynk-io/sbomqs
+        - --certificate-github-workflow-ref
+        - refs/tags/{{.Version}}
+  - version_constraint: semver("> 0.0.9")
+  - version_constraint: semver("> 0.0.3")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("<= 0.0.3")
+    no_asset: true
+  - version_constraint: "true"
+    cosign:
+      opts:
+        - --certificate-identity
+        - https://github.com/interlynk-io/sbomqs/.github/workflows/release.yml@refs/tags/{{.Version}}
+        - --certificate-oidc-issuer
+        - https://token.actions.githubusercontent.com
+        - --certificate-github-workflow-repository
+        - interlynk-io/sbomqs
+        - --certificate-github-workflow-ref
+        - refs/tags/{{.Version}}
+      bundle:
+        type: github_release
+        asset: '{{.Asset}}.sigstore.json'

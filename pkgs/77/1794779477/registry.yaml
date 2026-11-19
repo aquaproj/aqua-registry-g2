@@ -1,0 +1,15 @@
+name: mattn/gof
+type: github_release
+repo_owner: mattn
+repo_name: gof
+repo_id: 15046074
+description: Go Fuzzy
+files:
+  - name: gof
+    src: gof_{{.Version}}_{{.OS}}_{{.Arch}}/gof
+version_overrides:
+  - version_constraint: semver(">= 0.0.12")
+  - version_constraint: "true"
+    supported_envs:
+      - darwin
+      - amd64

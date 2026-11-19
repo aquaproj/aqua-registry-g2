@@ -1,0 +1,14 @@
+name: shihanng/tfvar
+type: github_release
+repo_owner: shihanng
+repo_name: tfvar
+repo_id: 235794044
+description: Terraform's variable definitions template generator
+version_overrides:
+  - version_constraint: semver("> 0.4.1")
+  - version_constraint: semver("<= 0.4.1")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: "true"

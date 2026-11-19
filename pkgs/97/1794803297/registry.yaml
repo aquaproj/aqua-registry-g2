@@ -1,0 +1,19 @@
+name: vercel-labs/agent-desktop
+type: github_release
+repo_owner: vercel-labs
+repo_name: agent-desktop
+repo_id: 1161958643
+description: Computer use CLI for AI agents
+version_overrides:
+  - version_constraint: Version == "agent-desktop-v0.1.2"
+    supported_envs:
+      - darwin
+  - version_constraint: semver("> 0.10.1")
+  - version_constraint: semver("> 0.9.4")
+    supported_envs:
+      - darwin
+      - windows
+  - version_constraint: semver("<= 0.9.4")
+    supported_envs:
+      - darwin
+  - version_constraint: "true"

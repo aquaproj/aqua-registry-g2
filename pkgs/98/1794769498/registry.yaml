@@ -1,0 +1,35 @@
+name: apache/ant
+type: http
+repo_owner: apache
+repo_name: ant
+repo_id: 20248084
+description: Apache Ant is a Java library and command-line tool whose mission is to
+  drive processes described in build files as targets and extension points dependent
+  upon each other
+version_prefix: rel/
+version_source: github_tag
+version_overrides:
+  - version_constraint: semver("> 1.10.0")
+    url: https://archive.apache.org/dist/ant/binaries/apache-ant-{{.SemVer}}-bin.{{.Format}}
+    format: tar.xz
+    files:
+      - name: ant
+        src: apache-ant-{{.SemVer}}/bin/ant
+    overrides:
+      - goos: windows
+        files:
+          - name: ant
+            src: apache-ant-{{.SemVer}}/bin/ant.bat
+  - version_constraint: semver("<= 1.10.0")
+    error_message: Please use 1.10.1 or later
+  - version_constraint: "true"
+    url: https://archive.apache.org/dist/ant/binaries/apache-ant-{{.SemVer}}-bin.{{.Format}}
+    format: tar.xz
+    files:
+      - name: ant
+        src: apache-ant-{{.SemVer}}/bin/ant
+    overrides:
+      - goos: windows
+        files:
+          - name: ant
+            src: apache-ant-{{.SemVer}}/bin/ant.bat

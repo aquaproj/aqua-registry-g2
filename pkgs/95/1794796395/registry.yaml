@@ -1,0 +1,36 @@
+name: fujiwara/maprobe
+type: github_release
+repo_owner: fujiwara
+repo_name: maprobe
+repo_id: 127296332
+description: Mackerel external probe agent
+version_overrides:
+  - version_constraint: semver("> 0.7.7")
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver("> 0.5.1")
+    files:
+      - name: maprobe
+        src: '{{.AssetWithoutExt}}/maprobe'
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver("> 0.2.4")
+    files:
+      - name: maprobe
+        src: '{{.AssetWithoutExt}}/maprobe'
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: semver("<= 0.2.4")
+    files:
+      - name: maprobe
+        src: '{{.AssetWithoutExt}}/maprobe'
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: "true"
+    supported_envs:
+      - linux
+      - darwin

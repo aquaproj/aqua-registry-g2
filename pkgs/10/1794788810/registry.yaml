@@ -1,0 +1,22 @@
+name: SUPERCILEX/ftzz
+type: github_release
+repo_owner: SUPERCILEX
+repo_name: ftzz
+repo_id: 417989696
+description: File Tree Fuzzer creates a pseudo-random directory hierarchy filled with
+  some number of files
+version_overrides:
+  - version_constraint: Version == "1.1.1"
+    no_asset: true
+  - version_constraint: Version == "1.1.4"
+    supported_envs:
+      - linux/amd64
+      - darwin
+      - windows
+  - version_constraint: semver("> 1.1.3")
+  - version_constraint: semver("<= 1.1.3")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: "true"

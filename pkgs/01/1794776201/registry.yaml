@@ -1,0 +1,24 @@
+name: justmiles/go-markdown2confluence
+type: github_release
+repo_owner: justmiles
+repo_name: go-markdown2confluence
+repo_id: 126857465
+description: Push markdown files to Confluence Cloud
+files:
+  - name: markdown2confluence
+version_overrides:
+  - version_constraint: semver(">= 3.3.2")
+  - version_constraint: semver(">= 3.3.0")
+    supported_envs:
+      - darwin
+      - linux
+      - amd64
+  - version_constraint: semver(">= 2.0.0")
+    supported_envs:
+      - darwin
+      - amd64
+  - version_constraint: semver("< 2.0.0")
+    supported_envs:
+      - darwin
+      - amd64
+  - version_constraint: "true"

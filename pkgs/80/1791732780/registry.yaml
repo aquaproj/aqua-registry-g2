@@ -4,5 +4,8 @@ repo_owner: MitMaro
 repo_name: git-interactive-rebase-tool
 repo_id: 77011446
 description: Native cross-platform full feature terminal-based sequence editor for git interactive rebase
+# 2.4 builds macOS on three runners, macos-12, macos-13 and macos-14, and the names tie. The
+# macos-12 build runs on macOS 12 and later.
+all_assets_filter: not (Asset matches "-macos-1[34]_")
 files:
   - name: interactive-rebase-tool

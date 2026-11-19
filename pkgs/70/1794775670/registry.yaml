@@ -1,0 +1,31 @@
+name: carvel-dev/imgpkg
+aliases:
+  - name: vmware-tanzu/carvel-imgpkg
+type: github_release
+repo_owner: carvel-dev
+repo_name: imgpkg
+repo_id: 219018453
+description: Store application configuration files in Docker/OCI registries
+version_overrides:
+  - version_constraint: Version == "v0.27.1"
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: Version == "v0.27.3"
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("> 0.27.0")
+  - version_constraint: semver("> 0.12.0")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("<= 0.12.0")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: "true"

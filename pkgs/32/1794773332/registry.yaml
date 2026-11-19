@@ -1,0 +1,24 @@
+name: sourcegraph/src-cli
+type: github_release
+repo_owner: sourcegraph
+repo_name: src-cli
+repo_id: 130770053
+description: Sourcegraph CLI
+files:
+  - name: src
+version_overrides:
+  - version_constraint: semver(">= 3.31.1")
+  - version_constraint: semver(">= 3.30.4")
+    supported_envs:
+      - darwin
+      - linux
+      - amd64
+  - version_constraint: semver(">= 3.10.9")
+    supported_envs:
+      - darwin
+      - amd64
+  - version_constraint: semver("< 3.10.9")
+    supported_envs:
+      - darwin
+      - amd64
+  - version_constraint: "true"

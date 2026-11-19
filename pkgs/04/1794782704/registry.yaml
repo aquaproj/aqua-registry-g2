@@ -1,0 +1,11 @@
+name: dinoDanic/diny
+type: github_release
+repo_owner: dinoDanic
+repo_name: diny
+repo_id: 1062565899
+description: generate git commit messages
+version_overrides:
+  - version_constraint: semver("> 0.1.2")
+  - version_constraint: semver("<= 0.1.2")
+    no_asset: true
+  - version_constraint: "true"

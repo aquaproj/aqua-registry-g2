@@ -1,0 +1,25 @@
+name: IvanIsCoding/celq
+type: github_release
+repo_owner: IvanIsCoding
+repo_name: celq
+repo_id: 1127058590
+description: celq - A Common Expression Language (CEL) CLI Tool
+version_filter: not (Version matches "-(alpha|beta)")
+github_artifact_attestations:
+  signer_workflow: IvanIsCoding/celq/.github/workflows/release_github.yml
+version_overrides:
+  - version_constraint: semver("> 0.2.0-beta.1")
+    github_artifact_attestations:
+      signer_workflow: IvanIsCoding/celq/.github/workflows/release_github.yml
+  - version_constraint: semver("> 0.2.0-alpha.1")
+  - version_constraint: semver("> 0.1.2-alpha.1")
+  - version_constraint: semver("> 0.1.1-alpha.10")
+    supported_envs:
+      - linux
+      - darwin/arm64
+      - windows/amd64
+  - version_constraint: semver("<= 0.1.1-alpha.10")
+    no_asset: true
+  - version_constraint: "true"
+    github_artifact_attestations:
+      signer_workflow: IvanIsCoding/celq/.github/workflows/release_github.yml

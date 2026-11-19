@@ -12,6 +12,12 @@ version_overrides:
     supported_envs:
       - darwin
       - amd64
+  # The Windows zips of v3.0.11 and v3.0.12 hold ../shell/*, paths outside the directory
+  # they are extracted to, which aqua refuses to extract.
+  - version_constraint: Version in ["v3.0.11", "v3.0.12"]
+    supported_envs:
+      - darwin
+      - linux/amd64
   - version_constraint: semver(">= 3.0.0")
     supported_envs:
       - darwin

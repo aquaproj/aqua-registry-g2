@@ -8,3 +8,5 @@ version_overrides:
   - version_constraint: Version == "v0.17.0"
     no_asset: true
   - version_constraint: "true"
+# amd64v2 and amd64v3 builds, for newer x86-64 CPUs, tied with the amd64 one.
+all_assets_filter: not (Asset matches "amd64v[0-9]")

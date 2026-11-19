@@ -4,3 +4,7 @@ repo_owner: Gaurav-Gosain
 repo_name: tuios
 repo_id: 1051789550
 description: Terminal UI OS (Terminal Multiplexer)
+# The release ships other programs beside tuios: tuios-ghostty, tuios-web, and from 0.11.0
+# sketch, tml and tplot. tuios-ghostty has a Windows arm64 build where tuios has none, and
+# was taken for tuios's.
+all_assets_filter: Asset startsWith "tuios_"

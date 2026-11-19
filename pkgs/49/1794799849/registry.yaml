@@ -1,0 +1,11 @@
+name: cloverrose/mockguard
+type: github_release
+repo_owner: cloverrose
+repo_name: mockguard
+repo_id: 891874751
+description: mockguard checks if mockgen is used in conventional filename and options
+version_overrides:
+  - version_constraint: "true"
+    files:
+      - name: mockguard
+        src: mockguard_{{.OS}}_{{.Arch}}/mockguard

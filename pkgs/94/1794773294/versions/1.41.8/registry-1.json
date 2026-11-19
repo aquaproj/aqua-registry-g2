@@ -1,0 +1,67 @@
+{
+  "published_at": "2025-12-12T05:26:27Z",
+  "assets": [
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "mintoolkit",
+      "repo_name": "mint",
+      "repo_id": 767771806,
+      "asset": "dist_linux.tar.gz",
+      "format": "tar.gz",
+      "checksum": "1b25208157657ea8a9ec94a9aa61f2dfc087710a6d938513bbeda43cce84142c",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "docker-slim",
+          "src": "dist_linux/docker-slim"
+        },
+        {
+          "name": "mint",
+          "src": "dist_linux/mint"
+        },
+        {
+          "name": "mint-sensor",
+          "src": "dist_linux/mint-sensor"
+        },
+        {
+          "name": "slim",
+          "src": "dist_linux/slim"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "mintoolkit",
+      "repo_name": "mint",
+      "repo_id": 767771806,
+      "asset": "dist_linux_arm64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "46d49365435f261aa243c0ba8874f27e741f87f580090290cfe5e69f75b81f3b",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "docker-slim",
+          "src": "dist_linux_arm64/docker-slim"
+        },
+        {
+          "name": "mint",
+          "src": "dist_linux_arm64/mint"
+        },
+        {
+          "name": "mint-sensor",
+          "src": "dist_linux_arm64/mint-sensor"
+        },
+        {
+          "name": "slim",
+          "src": "dist_linux_arm64/slim"
+        }
+      ]
+    }
+  ]
+}

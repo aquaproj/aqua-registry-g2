@@ -1,0 +1,11 @@
+name: azu/dockerfile-pin
+type: github_release
+repo_owner: azu
+repo_name: dockerfile-pin
+repo_id: 1193294331
+description: A CLI tool that adds @sha256:<digest> to FROM lines in Dockerfiles and
+  image fields in docker-compose.yml to prevent supply chain attacks
+version_overrides:
+  - version_constraint: Version == "v0.0.1"
+    no_asset: true
+  - version_constraint: "true"

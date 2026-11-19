@@ -1,0 +1,12 @@
+name: pavius/impi
+type: github_release
+repo_owner: pavius
+repo_name: impi
+repo_id: 105819792
+description: Verify proper golang import directives, beyond the capability of gofmt
+  and goimports
+version_overrides:
+  - version_constraint: "true"
+    supported_envs:
+      - linux/amd64
+      - darwin

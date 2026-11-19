@@ -34,3 +34,5 @@ version_overrides:
       - darwin
       - amd64
   - version_constraint: "true"
+# taplo-full, the build with every feature, tied with taplo.
+all_assets_filter: not (Asset contains "taplo-full")

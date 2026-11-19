@@ -1,0 +1,21 @@
+name: dahlia/gukhanmun
+type: github_release
+repo_owner: dahlia
+repo_name: gukhanmun
+repo_id: 1244186597
+description: Convert mixed-script Korean text into hangul-only text
+version_overrides:
+  - version_constraint: semver("> 0.1.1")
+    files:
+      - name: gukhanmun
+      - name: gukhanmun-mkdict
+  - version_constraint: semver("<= 0.1.1")
+    files:
+      - name: gukhanmun
+        src: gukhanmun-{{.Version}}-{{.Arch}}-{{.OS}}/gukhanmun
+      - name: gukhanmun-mkdict
+        src: gukhanmun-{{.Version}}-{{.Arch}}-{{.OS}}/gukhanmun-mkdict
+  - version_constraint: "true"
+    files:
+      - name: gukhanmun
+      - name: gukhanmun-mkdict

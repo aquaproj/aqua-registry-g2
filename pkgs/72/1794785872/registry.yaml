@@ -1,0 +1,16 @@
+name: sheepla/fzwiki
+type: github_release
+repo_owner: sheepla
+repo_name: fzwiki
+repo_id: 443257996
+description: A command line tool with fzf-like UI to search Wikipedia articles and
+  open it in your browser quickly
+version_overrides:
+  - version_constraint: Version == "v0.0.1"
+    no_asset: true
+  - version_constraint: semver("> 0.0.2")
+  - version_constraint: semver("<= 0.0.2")
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: "true"

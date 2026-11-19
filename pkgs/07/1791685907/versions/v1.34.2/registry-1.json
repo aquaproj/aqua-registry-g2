@@ -1,0 +1,104 @@
+{
+  "published_at": "2025-12-23T16:00:56Z",
+  "assets": [
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "kubernetes",
+      "repo_name": "node-problem-detector",
+      "repo_id": 59044721,
+      "asset": "node-problem-detector-v1.34.2-linux_amd64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "9645ef91821fd01e86afcddd7eebfb28e5ecefed619b7fd054d68aa7865eca7c",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "node-problem-detector",
+          "src": "bin/node-problem-detector"
+        },
+        {
+          "name": "health-checker",
+          "src": "bin/health-checker"
+        },
+        {
+          "name": "log-counter",
+          "src": "bin/log-counter"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "kubernetes",
+      "repo_name": "node-problem-detector",
+      "repo_id": 59044721,
+      "asset": "node-problem-detector-v1.34.2-linux_arm64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "3683c43be0ddf7c5dc34b699470bbe393781974e0c0ebf36780641f73d6331ce",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "node-problem-detector",
+          "src": "bin/node-problem-detector"
+        },
+        {
+          "name": "health-checker",
+          "src": "bin/health-checker"
+        },
+        {
+          "name": "log-counter",
+          "src": "bin/log-counter"
+        }
+      ]
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "kubernetes",
+      "repo_name": "node-problem-detector",
+      "repo_id": 59044721,
+      "asset": "node-problem-detector-v1.34.2-windows_amd64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "5a1c7aa4eee17630fe7d12649b6f790c64f1124ab103055600902ec2e638467b",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "node-problem-detector.exe",
+          "src": "bin/node-problem-detector.exe"
+        },
+        {
+          "name": "health-checker.exe",
+          "src": "bin/health-checker.exe"
+        }
+      ]
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "windows_arm_emulation": true,
+      "type": "github_release",
+      "repo_owner": "kubernetes",
+      "repo_name": "node-problem-detector",
+      "repo_id": 59044721,
+      "asset": "node-problem-detector-v1.34.2-windows_amd64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "5a1c7aa4eee17630fe7d12649b6f790c64f1124ab103055600902ec2e638467b",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "node-problem-detector.exe",
+          "src": "bin/node-problem-detector.exe"
+        },
+        {
+          "name": "health-checker.exe",
+          "src": "bin/health-checker.exe"
+        }
+      ]
+    }
+  ]
+}

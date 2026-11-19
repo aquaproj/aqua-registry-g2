@@ -1,0 +1,11 @@
+name: Crocmagnon/fatcontext
+type: github_release
+repo_owner: Crocmagnon
+repo_name: fatcontext
+repo_id: 778441974
+description: detects nested contexts in loops
+version_overrides:
+  - version_constraint: semver("> 0.1.3")
+  - version_constraint: semver("<= 0.1.3")
+    no_asset: true
+  - version_constraint: "true"

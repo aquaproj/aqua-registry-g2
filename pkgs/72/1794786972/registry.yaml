@@ -1,0 +1,21 @@
+name: pfnet-research/git-ghost
+type: github_release
+repo_owner: pfnet-research
+repo_name: git-ghost
+repo_id: 180478628
+description: Synchronize your working directory efficiently to a remote place without
+  committing the changes
+version_overrides:
+  - version_constraint: semver("> 0.1.4")
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver("<= 0.1.4")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: "true"
+    supported_envs:
+      - linux
+      - darwin

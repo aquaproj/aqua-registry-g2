@@ -1,0 +1,23 @@
+name: k1LoW/awsdo
+type: github_release
+repo_owner: k1LoW
+repo_name: awsdo
+repo_id: 306234604
+description: awsdo is a tool to do anything using AWS temporary credentials
+version_overrides:
+  - version_constraint: semver("> 0.10.0")
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver("> 0.9.1")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: semver("<= 0.9.1")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: "true"
+    supported_envs:
+      - linux
+      - darwin

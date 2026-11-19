@@ -1,0 +1,10 @@
+name: tailor-platform/tailorctl
+type: github_release
+repo_owner: tailor-platform
+repo_name: tailorctl
+repo_id: 621250215
+description: Command line tool for Tailor Platform
+version_overrides:
+  - version_constraint: Version in ["v0.9.4", "v0.12.1", "v1.19.0"]
+    no_asset: true
+  - version_constraint: "true"

@@ -1,0 +1,19 @@
+name: fujiwara/knockrd
+type: github_release
+repo_owner: fujiwara
+repo_name: knockrd
+repo_id: 256525303
+description: HTTP knocker daemon
+version_overrides:
+  - version_constraint: semver("> 0.0.16")
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver("<= 0.0.16")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: "true"
+    supported_envs:
+      - linux
+      - darwin

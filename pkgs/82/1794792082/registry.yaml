@@ -1,0 +1,12 @@
+name: kjanat/actionlint
+type: github_release
+repo_owner: kjanat
+repo_name: actionlint
+repo_id: 1326162482
+description: Find problems in your GitHub Actions workflows
+build:
+  type: go_install
+  path: actionlint.kjanat.dev/cmd/actionlint
+github_artifact_attestations:
+  enabled: true
+  signer_workflow: kjanat/actionlint/.github/workflows/release.yml

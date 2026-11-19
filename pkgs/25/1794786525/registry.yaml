@@ -1,0 +1,17 @@
+name: jolars/badness
+type: github_release
+repo_owner: jolars
+repo_name: badness
+repo_id: 1262325065
+description: LaTeX language server, formatter, and linter
+version_filter: Version startsWith "v"
+github_artifact_attestations:
+  signer_workflow: jolars/badness/.github/workflows/packages.yml
+version_overrides:
+  - version_constraint: semver("> 0.11.0")
+    github_artifact_attestations:
+      signer_workflow: jolars/badness/.github/workflows/packages.yml
+  - version_constraint: semver("<= 0.11.0")
+  - version_constraint: "true"
+    github_artifact_attestations:
+      signer_workflow: jolars/badness/.github/workflows/packages.yml

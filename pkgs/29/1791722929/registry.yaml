@@ -4,6 +4,12 @@ repo_owner: alexhallam
 repo_name: tv
 repo_id: 363146690
 description: (tv) Tidy Viewer is a cross-platform CLI csv pretty printer that uses column styling to maximize viewer enjoyment
+# The Linux build is tidy-viewer-<version>.tgz, with no OS or architecture in the name. It is
+# x86-64 and links glibc.
+asset_rules:
+  - envs:
+      - linux/amd64
+    filter: Asset matches "^tidy-viewer-[0-9.]+[.]tgz$"
 files:
   - name: tidy-viewer
 version_overrides:

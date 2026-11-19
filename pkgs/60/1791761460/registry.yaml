@@ -14,3 +14,12 @@ version_overrides:
   - version_constraint: "true"
     supported_envs:
       - darwin/arm64
+# From v26.2 each release publishes a pkg beside a zip, alerter-<version>.zip, whose name says
+# no OS. ar2 can't open a pkg on Linux, so it couldn't see that the executable is built for
+# arm64 alone and offered it for darwin/amd64 too. The zip holds the same executable, and the
+# rule places it on darwin/arm64, the one environment it is for.
+all_assets_filter: not (Asset endsWith ".pkg")
+asset_rules:
+  - envs:
+      - darwin/arm64
+    filter: Asset matches "^alerter-[0-9.]+[.]zip$"

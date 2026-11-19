@@ -1,0 +1,20 @@
+name: ctron/oidc-cli
+type: github_release
+repo_owner: ctron
+repo_name: oidc-cli
+repo_id: 771541996
+description: A command line tool to work with OIDC tokens
+files:
+  - name: oidc
+github_artifact_attestations:
+  signer_workflow: ctron/oidc-cli/.github/workflows/release.yaml
+version_overrides:
+  - version_constraint: Version == "v0.1.2"
+    no_asset: true
+  - version_constraint: semver("> 0.5.1")
+    github_artifact_attestations:
+      signer_workflow: ctron/oidc-cli/.github/workflows/release.yaml
+  - version_constraint: semver("<= 0.5.1")
+  - version_constraint: "true"
+    github_artifact_attestations:
+      signer_workflow: ctron/oidc-cli/.github/workflows/release.yaml

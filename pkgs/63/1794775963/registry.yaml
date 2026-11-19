@@ -1,0 +1,22 @@
+name: go-simpler/sloglint
+type: github_release
+repo_owner: go-simpler
+repo_name: sloglint
+repo_id: 690790894
+description: Ensure consistent code style when using log/slog
+version_overrides:
+  - version_constraint: semver(">= 0.12.0")
+    supported_envs:
+      - darwin
+      - linux
+      - windows
+  - version_constraint: semver("< 0.12.0")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: "true"
+    supported_envs:
+      - darwin
+      - linux
+      - windows

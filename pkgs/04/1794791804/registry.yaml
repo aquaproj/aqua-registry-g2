@@ -1,0 +1,14 @@
+name: joshdk/retry
+type: github_release
+repo_owner: joshdk
+repo_name: retry
+repo_id: 223070527
+description: Rerun a command until it eventually succeeds, or doesn't
+version_overrides:
+  - version_constraint: semver("> 1.3.1")
+  - version_constraint: semver("<= 1.3.1")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: "true"

@@ -1,0 +1,14 @@
+name: levibostian/decaf
+type: github_release
+repo_owner: levibostian
+repo_name: decaf
+repo_id: 831418983
+description: Calm & reliable automated deployments. No more coffee breaks to deploy
+  your code
+version_overrides:
+  - version_constraint: Version == "0.1.0" or semver(">= 1.0.0-alpha.1, <= 1.0.0-alpha.8")
+    no_asset: true
+  - version_constraint: "true"
+    supported_envs:
+      - linux
+      - darwin

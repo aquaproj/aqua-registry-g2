@@ -1,0 +1,38 @@
+name: skaji/relocatable-perl
+type: github_release
+repo_owner: skaji
+repo_name: relocatable-perl
+repo_id: 21514078
+description: self-contained, portable perl binaries
+files:
+  - name: perl
+    src: '{{.AssetWithoutExt}}/bin/perl'
+  - name: cpanm
+    src: '{{.AssetWithoutExt}}/bin/cpanm'
+  - name: perldoc
+    src: '{{.AssetWithoutExt}}/bin/perldoc'
+  - name: prove
+    src: '{{.AssetWithoutExt}}/bin/prove'
+github_artifact_attestations:
+  signer_workflow: skaji/relocatable-perl/.github/workflows/ci.yml
+version_overrides:
+  - version_constraint: semver("> 5.42.2.0")
+    github_artifact_attestations:
+      signer_workflow: skaji/relocatable-perl/.github/workflows/ci.yml
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver("> 5.34.1.0")
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver("<= 5.34.1.0")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: "true"
+    github_artifact_attestations:
+      signer_workflow: skaji/relocatable-perl/.github/workflows/ci.yml
+    supported_envs:
+      - linux
+      - darwin

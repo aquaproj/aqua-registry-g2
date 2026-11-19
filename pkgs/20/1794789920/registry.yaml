@@ -1,0 +1,17 @@
+name: chime/mani-diffy
+type: github_release
+repo_owner: chime
+repo_name: mani-diffy
+repo_id: 719797067
+description: mani-diffy walks a hierarchy of Argo CD Application templates, renders
+  Kubernetes manifests from the input templates, and posts the rendered files back
+  for the user to review and validate
+version_overrides:
+  - version_constraint: "true"
+    supported_envs:
+      - linux/amd64
+      - darwin/arm64
+asset_rules:
+  - envs:
+      - linux/amd64
+    filter: Asset matches "^mani-diffy([.].+)?$"

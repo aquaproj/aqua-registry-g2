@@ -1,0 +1,23 @@
+name: so-dang-cool/findup
+type: github_release
+repo_owner: so-dang-cool
+repo_name: findup
+repo_id: 384626709
+description: Find parent directories
+version_overrides:
+  - version_constraint: Version == "v1.1.1"
+    files:
+      - name: findup
+        src: '{{.AssetWithoutExt}}/bin/findup'
+    supported_envs:
+      - linux
+  - version_constraint: semver("> 1.1.0")
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver("<= 1.1.0")
+    no_asset: true
+  - version_constraint: "true"
+    supported_envs:
+      - linux
+      - darwin

@@ -1,0 +1,19 @@
+name: liweiyi88/gosnakego
+type: github_release
+repo_owner: liweiyi88
+repo_name: gosnakego
+repo_id: 446297103
+description: A snake game written in Go
+version_overrides:
+  - version_constraint: Version == "v0.3.2"
+    no_asset: true
+  - version_constraint: semver("> v0.3.1")
+  - version_constraint: semver("> v0.2.0")
+    supported_envs:
+      - darwin
+      - windows/amd64
+  - version_constraint: semver("<= v0.2.0")
+    supported_envs:
+      - darwin
+      - amd64
+  - version_constraint: "true"

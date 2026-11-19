@@ -1,0 +1,17 @@
+name: cloud66-oss/copper
+type: github_release
+repo_owner: cloud66-oss
+repo_name: copper
+repo_id: 126004012
+description: A configuration file validator for Kubernetes
+version_overrides:
+  - version_constraint: semver("> 0.0.7")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: semver("<= 0.0.7")
+    no_asset: true
+  - version_constraint: "true"
+    supported_envs:
+      - linux/amd64
+      - darwin

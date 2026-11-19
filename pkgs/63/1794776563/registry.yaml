@@ -1,0 +1,15 @@
+name: NimbleArchitect/kubectl-ice
+type: github_release
+repo_owner: NimbleArchitect
+repo_name: kubectl-ice
+repo_id: 463633861
+description: A kubectl plugin that allows you to easily view advanced configuration
+  of all containers that are running inside pods
+version_overrides:
+  - version_constraint: semver(">= 0.0.2")
+  - version_constraint: semver("< 0.0.2")
+    files:
+      - name: kubectl-ice
+        src: ice
+      - name: ice
+  - version_constraint: "true"

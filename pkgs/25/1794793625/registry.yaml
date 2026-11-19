@@ -1,0 +1,32 @@
+name: cloudfoundry/uaa-cli
+type: github_release
+repo_owner: cloudfoundry
+repo_name: uaa-cli
+repo_id: 101806774
+description: CLI for UAA written in Go
+files:
+  - name: uaa
+version_overrides:
+  - version_constraint: Version == "0.0.1"
+    no_asset: true
+  - version_constraint: semver("> 0.10.0")
+    files:
+      - name: uaa
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("<= 0.10.0")
+    files:
+      - name: uaa
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: "true"
+    files:
+      - name: uaa
+    supported_envs:
+      - darwin
+      - windows
+      - amd64

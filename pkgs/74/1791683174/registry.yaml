@@ -5,4 +5,8 @@ repo_name: silicon
 repo_id: 195663378
 description: Create beautiful image of your source code
 version_overrides:
+  # v0.4.0's assets are named .tar.xz but are gzip-compressed tarballs, so they can't be
+  # opened as what their names say. v0.4.1 and later are named .tar.gz.
+  - version_constraint: Version == "v0.4.0"
+    no_asset: true
   - version_constraint: "true"

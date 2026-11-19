@@ -1,0 +1,14 @@
+name: tofuutils/tofuenv
+type: github_archive
+repo_owner: tofuutils
+repo_name: tofuenv
+repo_id: 736036811
+description: OpenTofu version manager
+files:
+  - name: tofuenv
+    src: tofuenv-{{trimV .Version}}/bin/tofuenv
+  - name: tofu
+    src: tofuenv-{{trimV .Version}}/bin/tofu
+supported_envs:
+  - darwin
+  - linux

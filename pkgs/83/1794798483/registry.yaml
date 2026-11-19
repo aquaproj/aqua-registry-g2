@@ -1,0 +1,29 @@
+name: suzuki-shunsuke/rgo
+type: github_release
+repo_owner: suzuki-shunsuke
+repo_name: rgo
+repo_id: 960845329
+description: rgo is a CLI to release a Homebrew-tap recipe, Scoop App Manifest, and
+  a winget manifest built with GoReleaser
+packslip:
+  identity_prefix: https://github.com/suzuki-shunsuke/go-release-workflow/
+  issuer: https://token.actions.githubusercontent.com
+github_artifact_attestations:
+  signer_workflow: suzuki-shunsuke/go-release-workflow/.github/workflows/release.yaml
+version_overrides:
+  - version_constraint: semver("> 0.1.0")
+    github_artifact_attestations:
+      signer_workflow: suzuki-shunsuke/go-release-workflow/.github/workflows/release.yaml
+  - version_constraint: semver("> 0.0.3")
+    slsa_provenance:
+      type: github_release
+      asset: multiple.intoto.jsonl
+    github_artifact_attestations:
+      signer_workflow: suzuki-shunsuke/go-release-workflow/.github/workflows/release.yaml
+  - version_constraint: semver("<= 0.0.3")
+    supported_envs:
+      - darwin
+      - linux
+  - version_constraint: "true"
+    github_artifact_attestations:
+      signer_workflow: suzuki-shunsuke/go-release-workflow/.github/workflows/release.yaml

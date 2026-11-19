@@ -1,0 +1,45 @@
+{
+  "published_at": "2024-02-22T14:57:20Z",
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "pen-lang",
+      "repo_name": "pen",
+      "repo_id": 375195312,
+      "asset": "pen-0.6.7-aarch64-apple-darwin.tar.xz",
+      "format": "tar.xz",
+      "checksum": "327eedd85dfb141ef089537b129ca2117e30d59e5a80b546ad1474c30b790b90",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "pen",
+          "src": "target/release/pen"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "variants": {
+        "libc": "glibc"
+      },
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "pen-lang",
+      "repo_name": "pen",
+      "repo_id": 375195312,
+      "asset": "pen-0.6.7-x86_64-unknown-linux-gnu.tar.xz",
+      "format": "tar.xz",
+      "checksum": "764da871a82a36853c428195fcc3065c6495a61c88bf7e65adbf732b8bccde80",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "pen",
+          "src": "target/release/pen"
+        }
+      ]
+    }
+  ]
+}

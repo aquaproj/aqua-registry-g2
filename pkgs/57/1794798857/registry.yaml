@@ -1,0 +1,12 @@
+name: suzuki-shunsuke/dd-time
+type: github_release
+repo_owner: suzuki-shunsuke
+repo_name: dd-time
+repo_id: 224643260
+description: CLI tool to post the command execution time as time-series data to DataDog
+version_overrides:
+  - version_constraint: "true"
+    supported_envs:
+      - darwin
+      - windows
+      - amd64

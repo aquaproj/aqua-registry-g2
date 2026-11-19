@@ -39,6 +39,57 @@ version_overrides:
         src: cubefs/build/bin/cfs-fsck
       - name: cfs-server
         src: cubefs/build/bin/cfs-server
+  # 3.1.0 to 3.3.2 ship no cfs-deploy, and the archive put the executables somewhere
+  # different in nearly every release.
+  - version_constraint: semver(">= 3.4.0")
+  - version_constraint: semver(">= 3.3.1")
+    files:
+      - name: cfs-authtool
+        src: cubefs/build/bin/cfs-authtool
+      - name: cfs-bcache
+        src: cubefs/build/bin/cfs-bcache
+      - name: cfs-cli
+        src: cubefs/build/bin/cfs-cli
+      - name: cfs-client
+        src: cubefs/build/bin/cfs-client
+      - name: cfs-fsck
+        src: cubefs/build/bin/cfs-fsck
+      - name: cfs-preload
+        src: cubefs/build/bin/cfs-preload
+      - name: cfs-server
+        src: cubefs/build/bin/cfs-server
+  - version_constraint: Version == "v3.2.0"
+    files:
+      - name: cfs-authtool
+        src: root/lemon/bin/cubefs-3.2.0/cfs-authtool
+      - name: cfs-bcache
+        src: root/lemon/bin/cubefs-3.2.0/cfs-bcache
+      - name: cfs-cli
+        src: root/lemon/bin/cubefs-3.2.0/cfs-cli
+      - name: cfs-client
+        src: root/lemon/bin/cubefs-3.2.0/cfs-client
+      - name: cfs-fsck
+        src: root/lemon/bin/cubefs-3.2.0/cfs-fsck
+      - name: cfs-preload
+        src: root/lemon/bin/cubefs-3.2.0/cfs-preload
+      - name: cfs-server
+        src: root/lemon/bin/cubefs-3.2.0/cfs-server
+  - version_constraint: semver(">= 3.1.0")
+    files:
+      - name: cfs-authtool
+        src: cubefs-{{trimV .Version}}/cfs-authtool
+      - name: cfs-bcache
+        src: cubefs-{{trimV .Version}}/cfs-bcache
+      - name: cfs-cli
+        src: cubefs-{{trimV .Version}}/cfs-cli
+      - name: cfs-client
+        src: cubefs-{{trimV .Version}}/cfs-client
+      - name: cfs-fsck
+        src: cubefs-{{trimV .Version}}/cfs-fsck
+      - name: cfs-preload
+        src: cubefs-{{trimV .Version}}/cfs-preload
+      - name: cfs-server
+        src: cubefs-{{trimV .Version}}/cfs-server
   - version_constraint: semver("> 2.4.3")
   - version_constraint: semver("<= 2.4.3")
     no_asset: true

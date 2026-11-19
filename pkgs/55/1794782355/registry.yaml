@@ -1,0 +1,12 @@
+name: m7medVision/lazycommit
+type: github_release
+repo_owner: m7medVision
+repo_name: lazycommit
+repo_id: 832153200
+description: using AI to generate commit message suggestions
+version_overrides:
+  - version_constraint: Version == "0.1"
+  - version_constraint: semver("> 1.3.24")
+  - version_constraint: semver("<= 1.3.24")
+    no_asset: true
+  - version_constraint: "true"

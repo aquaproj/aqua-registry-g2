@@ -1,0 +1,15 @@
+name: cilium/cilium-cli
+type: github_release
+repo_owner: cilium
+repo_name: cilium-cli
+repo_id: 323610158
+description: CLI to install, manage & troubleshoot Kubernetes clusters running Cilium
+files:
+  - name: cilium
+version_overrides:
+  - version_constraint: semver("> 0.8.6")
+  - version_constraint: semver("<= 0.8.6")
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: "true"

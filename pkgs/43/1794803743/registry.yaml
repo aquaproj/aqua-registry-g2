@@ -1,0 +1,65 @@
+name: ewhauser/shuck
+type: github_release
+repo_owner: ewhauser
+repo_name: shuck
+repo_id: 1201443566
+description: A lightning fast shell linter/formatter/LSP server with zsh support
+version_overrides:
+  - version_constraint: Version == "v0.0.25"
+    no_asset: true
+  - version_constraint: Version == "v0.0.0-test-files"
+    no_asset: true
+  - version_constraint: Version == "v0.0.13"
+    files:
+      - name: shuck
+        src: '{{.AssetWithoutExt}}/shuck'
+    overrides:
+      - goos: windows
+        format: zip
+        files:
+          - name: shuck
+    supported_envs:
+      - linux/amd64
+      - darwin/arm64
+      - windows/amd64
+  - version_constraint: semver("> 0.0.12")
+    files:
+      - name: shuck
+        src: '{{.AssetWithoutExt}}/shuck'
+    overrides:
+      - goos: windows
+        format: zip
+        files:
+          - name: shuck
+    supported_envs:
+      - linux
+      - darwin/arm64
+      - windows/amd64
+  - version_constraint: semver("> 0.0.10")
+    no_asset: true
+  - version_constraint: semver("<= 0.0.10")
+    files:
+      - name: shuck
+        src: '{{.AssetWithoutExt}}/shuck'
+    overrides:
+      - goos: windows
+        format: zip
+        files:
+          - name: shuck
+    supported_envs:
+      - linux/amd64
+      - darwin/arm64
+      - windows/amd64
+  - version_constraint: "true"
+    files:
+      - name: shuck
+        src: '{{.AssetWithoutExt}}/shuck'
+    overrides:
+      - goos: windows
+        format: zip
+        files:
+          - name: shuck
+    supported_envs:
+      - linux
+      - darwin/arm64
+      - windows/amd64

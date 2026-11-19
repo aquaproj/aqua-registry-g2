@@ -1,0 +1,29 @@
+name: ismaelgv/rnr
+type: github_release
+repo_owner: ismaelgv
+repo_name: rnr
+repo_id: 140597469
+description: A command-line tool to batch rename files and directories
+files:
+  - name: rnr
+    src: rnr-{{.Version}}-{{.Arch}}-{{.OS}}/rnr
+version_overrides:
+  - version_constraint: semver("> 0.3.0")
+    supported_envs:
+      - darwin
+      - linux
+      - amd64
+  - version_constraint: semver("<= 0.3.0")
+    overrides:
+      - goos: windows
+        format: zip
+        files:
+          - name: rnr
+    supported_envs:
+      - darwin
+      - amd64
+  - version_constraint: "true"
+    supported_envs:
+      - darwin
+      - linux
+      - amd64

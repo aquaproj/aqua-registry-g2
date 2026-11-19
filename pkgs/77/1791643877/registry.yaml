@@ -7,3 +7,5 @@ description: Data-Centric Pipelines and Data Versioning
 files:
   - name: pachctl
     src: pachctl_{{trimV .Version}}_{{.OS}}_{{.Arch}}/pachctl
+# pachyderm_*.tar.gz, beside pachctl_*.tar.gz, tied with it; the command is pachctl.
+all_assets_filter: Asset startsWith "pachctl_"

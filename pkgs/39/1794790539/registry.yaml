@@ -1,0 +1,28 @@
+name: mitoma/sver
+type: github_release
+repo_owner: mitoma
+repo_name: sver
+repo_id: 497472122
+description: Version generator based on source code
+supported_envs:
+  - darwin
+  - linux
+  - amd64
+version_overrides:
+  - version_constraint: semver(">= 0.1.14")
+  - version_constraint: Version == "v0.1.13"
+  - version_constraint: semver(">= 0.1.7")
+    supported_envs:
+      - darwin
+      - amd64
+  - version_constraint: semver(">= 0.1.2")
+    supported_envs:
+      - linux/amd64
+      - windows/amd64
+  - version_constraint: semver("< 0.1.2")
+    files:
+      - name: sver
+        src: sver_{{.OS}}_{{.Arch}}/sver
+    supported_envs:
+      - linux/amd64
+  - version_constraint: "true"

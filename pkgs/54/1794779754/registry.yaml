@@ -1,0 +1,16 @@
+name: spacelift-io/spacectl
+type: github_release
+repo_owner: spacelift-io
+repo_name: spacectl
+repo_id: 354647574
+description: Spacelift client and CLI
+version_overrides:
+  - version_constraint: Version == "v0.1.0"
+    files:
+      - name: spacelift-cli
+        src: '{{.AssetWithoutExt}}'
+    supported_envs:
+      - linux/amd64
+      - darwin
+      - windows
+  - version_constraint: "true"

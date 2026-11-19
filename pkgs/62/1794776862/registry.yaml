@@ -1,0 +1,14 @@
+name: mszostok/codeowners-validator
+type: github_release
+repo_owner: mszostok
+repo_name: codeowners-validator
+repo_id: 167810789
+description: The GitHub CODEOWNERS file validator
+version_overrides:
+  - version_constraint: semver("> 0.6.0")
+  - version_constraint: semver("<= 0.6.0")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: "true"

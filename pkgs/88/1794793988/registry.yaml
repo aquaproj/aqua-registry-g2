@@ -1,0 +1,19 @@
+name: jdx/jactionlint
+type: github_release
+repo_owner: jdx
+repo_name: jactionlint
+repo_id: 1404951382
+description: Static checker for GitHub Actions workflow files
+files:
+  - name: jactionlint
+packslip:
+  identity_prefix: https://github.com/jdx/jactionlint/
+  issuer: https://token.actions.githubusercontent.com
+github_artifact_attestations:
+  signer_workflow: jdx/jactionlint/.github/workflows/release.yaml
+version_overrides:
+  - version_constraint: Version == "v1.8.0"
+    no_asset: true
+  - version_constraint: "true"
+    github_artifact_attestations:
+      signer_workflow: jdx/jactionlint/.github/workflows/release.yaml

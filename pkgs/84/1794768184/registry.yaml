@@ -1,0 +1,17 @@
+name: google/gke-policy-automation
+type: github_release
+repo_owner: google
+repo_name: gke-policy-automation
+repo_id: 470366002
+description: Tool and policy library for reviewing Google Kubernetes Engine clusters
+  against best practices
+version_overrides:
+  - version_constraint: semver("> 1.3.2")
+    files:
+      - name: gke-policy
+  - version_constraint: semver("<= 1.3.2")
+    files:
+      - name: gke-policy
+  - version_constraint: "true"
+    files:
+      - name: gke-policy

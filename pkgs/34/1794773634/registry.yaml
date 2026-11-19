@@ -1,0 +1,21 @@
+name: ahkohd/oyo
+type: github_release
+repo_owner: ahkohd
+repo_name: oyo
+repo_id: 1120382995
+description: A different viewer
+files:
+  - name: oy
+version_overrides:
+  - version_constraint: semver("> 0.1.19")
+    files:
+      - name: oy
+    supported_envs:
+      - darwin
+  - version_constraint: semver("<= 0.1.19")
+    no_asset: true
+  - version_constraint: "true"
+    files:
+      - name: oy
+    supported_envs:
+      - darwin

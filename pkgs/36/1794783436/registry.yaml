@@ -1,0 +1,19 @@
+name: jirutka/tty-copy
+type: github_release
+repo_owner: jirutka
+repo_name: tty-copy
+repo_id: 463347389
+description: Copy content to system clipboard via TTY and terminal using ANSI OSC52
+  sequence
+version_overrides:
+  - version_constraint: semver("> 0.2.0")
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver("<= 0.2.0")
+    supported_envs:
+      - linux
+  - version_constraint: "true"
+    supported_envs:
+      - linux
+      - darwin

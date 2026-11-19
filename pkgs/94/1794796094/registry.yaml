@@ -1,0 +1,36 @@
+name: lexfrei/ailine
+aliases:
+  - name: lexfrei/claudeline
+type: github_release
+repo_owner: lexfrei
+repo_name: ailine
+repo_id: 1172632407
+description: Claude Code statusline with real usage limits from Anthropic API
+version_overrides:
+  - version_constraint: semver("> 1.10.1")
+    files:
+      - name: ailine
+      - name: claudeline
+        src: ailine
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver("> 1.9.0")
+    files:
+      - name: claudeline
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver("<= 1.9.0")
+    files:
+      - name: claudeline
+    supported_envs:
+      - darwin
+  - version_constraint: "true"
+    files:
+      - name: ailine
+      - name: claudeline
+        src: ailine
+    supported_envs:
+      - linux
+      - darwin

@@ -1,0 +1,14 @@
+name: timdp/lwc
+type: github_release
+repo_owner: timdp
+repo_name: lwc
+repo_id: 130552847
+description: A live-updating version of the UNIX wc command
+version_overrides:
+  - version_constraint: semver("> 0.4.4")
+  - version_constraint: semver("<= 0.4.4")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: "true"

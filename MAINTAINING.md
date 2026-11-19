@@ -48,15 +48,18 @@ called from there:
   request touches, and refuses what no pull request may do. A package's pull request from
   `ar2_<id>`, `ar2_<id>_<version>` or `ar2_<id>__needs-definition` touches that package's
   directory and nothing else, the one from `ar2_versions` touches nothing but `versions.json`
-  files, and one from any other `ar2_` branch touches no package. A `registry-*.json` already published is changed or
-  removed only by a pull request that isn't set to merge itself: a person merging it is
-  what says the change was read and is meant. ar2 labels such a pull request
-  `replaces-published` and doesn't turn auto-merge on, and the checks run again when
-  auto-merge is turned on or off. When
+  files, and one from any other `ar2_` branch touches no package. A pull request that
+  changes or removes a `registry-*.json` already published is labelled
+  `replaces-published`, and ar2 doesn't turn auto-merge on for it, so it waits for a person:
+  merging it, or turning auto-merge on for it, is what says the change was read and is
+  meant. The checks don't read whether auto-merge is on, so it can be turned on before they
+  finish. When
   every package had a branch of its own, a pull request couldn't reach another package; on
   `main` that is this check.
 - Each package's definition is validated, and every `registry-*.json` added or changed is
-  checked with `ar2 test` on a machine of each environment it describes.
+  checked with `ar2 test` on a machine of each environment it describes -- of its OS and
+  architecture, except darwin, whose two architectures share an arm64 Mac, since nothing
+  checked is run.
 
 Everything checks out only what it reads. `pkgs/` is most of the repository and none of
 what the other checks look at.
@@ -186,8 +189,8 @@ reason that should pass on another try -- a server error, a rate limit -- labell
 `transient-failure`, and comments on it again rather than opening another. Each
 says what it is about in a record the rendered issue doesn't show.
 
-[close-issues.yaml](.github/workflows/close-issues.yaml) runs `ar2 close-issues` when a merge
-touches a versions directory, and daily. It closes an issue once every environment it names is
+[close-issues.yaml](.github/workflows/close-issues.yaml) runs `ar2 close-issues` every hour,
+not on each merge, since a run spends a REST call per version its issues name. It closes an issue once every environment it names is
 in the version's `registry.json` again -- `ar2 regenerate` puts it back -- or the version is no
 longer served, and every version it names as stopped or failing is served. An issue from before the
 records stays open until a person closes it.

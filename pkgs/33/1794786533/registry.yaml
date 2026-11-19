@@ -1,0 +1,11 @@
+name: mattn/cho
+type: github_release
+repo_owner: mattn
+repo_name: cho
+repo_id: 57950069
+files:
+  - name: cho
+    src: cho_{{.Version}}_{{.OS}}_{{.Arch}}/cho
+supported_envs:
+  - darwin
+  - amd64

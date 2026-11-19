@@ -1,0 +1,21 @@
+name: container-tools/spectrum
+type: github_release
+repo_owner: container-tools
+repo_name: spectrum
+repo_id: 242240676
+description: A lightweight super-fast container image builder
+version_overrides:
+  - version_constraint: Version in ["v0.3.7", "v0.6.44"]
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver("> 0.6.42")
+  - version_constraint: semver("> 0.3.4")
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver("<= 0.3.4")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: "true"

@@ -1,0 +1,17 @@
+name: 1xyz/pryrite
+type: github_release
+repo_owner: 1xyz
+repo_name: pryrite
+repo_id: 480587222
+description: Pryrite, interactively execute shell code blocks in a markdown file
+version_overrides:
+  - version_constraint: semver("> 0.10.16")
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver("<= 0.10.16")
+    no_asset: true
+  - version_constraint: "true"
+    supported_envs:
+      - linux
+      - darwin

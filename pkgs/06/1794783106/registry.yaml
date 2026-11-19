@@ -1,0 +1,26 @@
+name: antham/gommit
+type: github_release
+repo_owner: antham
+repo_name: gommit
+repo_id: 66933508
+description: Enforce git message commit consistency
+version_overrides:
+  - version_constraint: Version == "v2.4.0"
+  - version_constraint: Version == "v2.5.0"
+    no_asset: true
+  - version_constraint: Version == "v2.6.0"
+  - version_constraint: semver("> 2.3.0")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("<= 2.3.0")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: "true"
+    supported_envs:
+      - darwin
+      - windows
+      - amd64

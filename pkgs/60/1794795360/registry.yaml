@@ -1,0 +1,19 @@
+name: dtan4/ghrls
+type: github_release
+repo_owner: dtan4
+repo_name: ghrls
+repo_id: 79199847
+description: List & Describe GitHub Releases
+supported_envs:
+  - darwin
+  - linux
+  - amd64
+version_overrides:
+  - version_constraint: semver("> 0.1.0")
+  - version_constraint: "true"
+    files:
+      - name: ghrls
+        src: '{{.OS}}-{{.Arch}}/ghrls'
+    supported_envs:
+      - darwin
+      - amd64

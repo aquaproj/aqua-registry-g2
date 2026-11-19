@@ -1,0 +1,17 @@
+name: Epistates/treemd
+type: github_release
+repo_owner: Epistates
+repo_name: treemd
+repo_id: 1092132533
+description: A (TUI/CLI) markdown navigator with tree-based structural navigation
+version_overrides:
+  - version_constraint: semver("> 0.1.4")
+    files:
+      - name: treemd
+        src: '{{.AssetWithoutExt}}'
+  - version_constraint: semver("<= 0.1.4")
+    no_asset: true
+  - version_constraint: "true"
+    files:
+      - name: treemd
+        src: '{{.AssetWithoutExt}}'

@@ -1,0 +1,19 @@
+name: daichirata/hammer
+type: github_release
+repo_owner: daichirata
+repo_name: hammer
+repo_id: 227030764
+description: hammer is a command-line tool to schema management for Google Cloud Spanner
+version_overrides:
+  - version_constraint: semver("> 0.4.0")
+    files:
+      - name: hammer
+        src: hammer-{{trimV .Version}}-{{.OS}}-{{.Arch}}/hammer
+  - version_constraint: semver("<= 0.4.0")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: "true"
+    files:
+      - name: hammer
+        src: hammer-{{trimV .Version}}-{{.OS}}-{{.Arch}}/hammer

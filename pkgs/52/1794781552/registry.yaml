@@ -1,0 +1,12 @@
+name: dutchcoders/cloudman
+type: github_release
+repo_owner: dutchcoders
+repo_name: cloudman
+repo_id: 269740202
+description: Textual user interface to manage ec2 instances
+files:
+  - name: cloudman
+    src: cloudman-{{.Version}}-{{.Arch}}-{{.OS}}/cloudman
+supported_envs:
+  - linux/amd64
+  - darwin

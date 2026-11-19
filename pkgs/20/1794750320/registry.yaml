@@ -1,0 +1,12 @@
+name: lima-vm/sshocker
+type: github_release
+repo_owner: lima-vm
+repo_name: sshocker
+repo_id: 297068457
+description: ssh + reverse sshfs + port forwarder, in Docker-like CLI (predecessor
+  of Lima)
+version_overrides:
+  - version_constraint: "true"
+    supported_envs:
+      - linux
+      - darwin

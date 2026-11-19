@@ -1,0 +1,12 @@
+name: Songmu/gocredits
+type: github_release
+repo_owner: Songmu
+repo_name: gocredits
+repo_id: 180389713
+description: creates CREDITS file from LICENSE files of dependencies
+files:
+  - name: gocredits
+    src: gocredits_{{.Version}}_{{.OS}}_amd64/gocredits
+supported_envs:
+  - darwin
+  - linux

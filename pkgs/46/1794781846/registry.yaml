@@ -1,0 +1,32 @@
+name: psastras/sarif-rs/clang-tidy-sarif
+type: github_release
+repo_owner: psastras
+repo_name: sarif-rs
+repo_id: 347270006
+description: Convert clang-tidy output into SARIF
+version_filter: not (Version matches "-latest$")
+version_prefix: clang-tidy-sarif-
+version_overrides:
+  - version_constraint: Version == "clang-tidy-sarif-v0.2.23"
+    files:
+      - name: clang-tidy-sarif
+        src: target/release/{{.FileName}}-{{.Arch}}-{{.OS}}
+    supported_envs:
+      - linux/amd64
+  - version_constraint: Version in ["clang-tidy-sarif-v0.2.24", "clang-tidy-sarif-v0.6.2"]
+    supported_envs:
+      - linux/amd64
+  - version_constraint: semver("> 0.4.2")
+    supported_envs:
+      - linux/amd64
+      - darwin/arm64
+  - version_constraint: semver("<= 0.4.2")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: "true"
+    supported_envs:
+      - linux/amd64
+      - darwin/arm64
+all_assets_filter: Asset matches "^clang-tidy-sarif-.+-.+[.].+([.].+)?$" or Asset
+  matches "^clang-tidy-sarif-.+-.+([.].+)?$" or Asset endsWith ".intoto.jsonl"

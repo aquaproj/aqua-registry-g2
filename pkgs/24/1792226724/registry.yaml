@@ -1,0 +1,26 @@
+name: NetApp/trident/tridentctl
+type: github_release
+repo_owner: NetApp
+repo_name: trident
+repo_id: 77179634
+description: Storage orchestrator for containers
+version_overrides:
+  - version_constraint: "true"
+    files:
+      - name: tridentctl
+        src: trident-installer/tridentctl
+    overrides:
+      - goos: darwin
+        files:
+          - name: tridentctl
+            src: trident-installer/extras/macos/bin/tridentctl
+    supported_envs:
+      - darwin
+      - linux/amd64
+all_assets_filter: Asset matches "^trident-installer-.+[.]tar[.]gz([.].+)?$" or Asset endsWith ".intoto.jsonl"
+asset_rules:
+  - envs:
+      - linux/amd64
+      - darwin/amd64
+      - darwin/arm64
+    filter: Asset matches "^trident-installer-.+[.]tar[.]gz([.].+)?$"

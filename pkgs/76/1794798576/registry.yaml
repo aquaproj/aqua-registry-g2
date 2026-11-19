@@ -1,0 +1,10 @@
+name: cloverrose/unusedinterface
+type: github_release
+repo_owner: cloverrose
+repo_name: unusedinterface
+repo_id: 705549613
+version_overrides:
+  - version_constraint: "true"
+    files:
+      - name: unusedinterface
+        src: unusedinterface_{{.OS}}_{{.Arch}}/unusedinterface

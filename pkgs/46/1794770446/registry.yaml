@@ -1,0 +1,22 @@
+name: xeol-io/xeol
+type: github_release
+repo_owner: xeol-io
+repo_name: xeol
+repo_id: 581609881
+description: A scanner for end-of-life (EOL) software and dependencies in container
+  images, filesystems, and SBOMs
+version_overrides:
+  - version_constraint: semver("> 0.10.0")
+    slsa_provenance:
+      type: github_release
+      asset: multiple.intoto.jsonl
+  - version_constraint: semver("> 0.9.13")
+  - version_constraint: semver("> 0.9.4")
+    slsa_provenance:
+      type: github_release
+      asset: multiple.intoto.jsonl
+  - version_constraint: semver("<= 0.9.4")
+  - version_constraint: "true"
+    slsa_provenance:
+      type: github_release
+      asset: multiple.intoto.jsonl

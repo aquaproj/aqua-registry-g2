@@ -1,0 +1,14 @@
+name: andrewkroh/gvm
+type: github_release
+repo_owner: andrewkroh
+repo_name: gvm
+repo_id: 82724232
+description: Go Version Manager (written in Go for cross-platform usability)
+version_overrides:
+  - version_constraint: semver("> 0.0.3")
+  - version_constraint: semver("<= 0.0.3")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: "true"

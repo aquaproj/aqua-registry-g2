@@ -1,0 +1,11 @@
+name: cloverrose/pkgdep
+type: github_release
+repo_owner: cloverrose
+repo_name: pkgdep
+repo_id: 787209223
+description: pkgdep checks if package dependency follows rule
+version_overrides:
+  - version_constraint: "true"
+    files:
+      - name: pkgdep
+        src: pkgdep_{{.OS}}_{{.Arch}}/pkgdep

@@ -1,0 +1,13 @@
+name: xwjdsh/manssh
+type: github_release
+repo_owner: xwjdsh
+repo_name: manssh
+repo_id: 106156221
+description: Manage your ssh alias configs easily
+version_overrides:
+  - version_constraint: semver("> 0.5.1")
+  - version_constraint: semver("<= 0.5.1")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: "true"

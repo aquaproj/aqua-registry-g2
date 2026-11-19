@@ -1,0 +1,21 @@
+name: suzuki-shunsuke/ghalint
+type: github_release
+repo_owner: suzuki-shunsuke
+repo_name: ghalint
+repo_id: 591652573
+description: GitHub Actions linter
+packslip:
+  identity_prefix: https://github.com/suzuki-shunsuke/go-release-workflow/
+  issuer: https://token.actions.githubusercontent.com
+version_overrides:
+  - version_constraint: semver("> 1.5.6")
+  - version_constraint: semver("> 1.5.7-1")
+  - version_constraint: semver("> 0.2.12")
+    slsa_provenance:
+      type: github_release
+      asset: multiple.intoto.jsonl
+  - version_constraint: semver("<= 0.2.12")
+    slsa_provenance:
+      type: github_release
+      asset: multiple.intoto.jsonl
+  - version_constraint: "true"

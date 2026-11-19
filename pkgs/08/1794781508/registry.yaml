@@ -1,0 +1,14 @@
+name: newrelic/newrelic-cli
+type: github_release
+repo_owner: newrelic
+repo_name: newrelic-cli
+repo_id: 236453081
+description: The New Relic Command Line Interface
+files:
+  - name: newrelic
+replacements:
+  "386": i386
+supported_envs:
+  - darwin
+  - linux
+  - amd64

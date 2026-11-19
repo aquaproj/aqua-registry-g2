@@ -1,0 +1,16 @@
+name: nushell/nufmt
+type: github_release
+repo_owner: nushell
+repo_name: nufmt
+repo_id: 407906489
+description: An AST-based formatter for Nushell scripts, built on Nushell's own parser
+version_overrides:
+  - version_constraint: "true"
+    files:
+      - name: nufmt
+        src: '{{.AssetWithoutExt}}/nufmt'
+    overrides:
+      - goos: windows
+        format: zip
+        files:
+          - name: nufmt

@@ -1,0 +1,29 @@
+name: robgonnella/releasaurus
+type: github_release
+repo_owner: robgonnella
+repo_name: releasaurus
+repo_id: 1040293426
+description: A comprehensive release automation tool that streamlines the software
+  release process across multiple programming languages and forge platforms
+version_overrides:
+  - version_constraint: Version == "v0.4.5"
+    supported_envs:
+      - linux
+      - darwin/arm64
+  - version_constraint: Version == "v0.4.6"
+    supported_envs:
+      - linux
+      - darwin/arm64
+      - windows/amd64
+  - version_constraint: semver("> 0.4.10")
+    supported_envs:
+      - linux
+      - darwin/arm64
+      - windows/amd64
+  - version_constraint: semver("<= 0.4.10")
+    no_asset: true
+  - version_constraint: "true"
+    supported_envs:
+      - linux
+      - darwin/arm64
+      - windows/amd64

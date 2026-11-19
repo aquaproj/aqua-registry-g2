@@ -1,0 +1,27 @@
+name: itchyny/maze
+type: github_release
+repo_owner: itchyny
+repo_name: maze
+repo_id: 55410071
+description: A maze command written in Go
+files:
+  - name: maze
+    src: maze_{{.Version}}_{{.OS}}_{{.Arch}}/maze
+version_overrides:
+  - version_constraint: semver(">= 0.0.8")
+  - version_constraint: semver(">= 0.0.4")
+    supported_envs:
+      - darwin
+      - amd64
+  - version_constraint: semver("< 0.0.4")
+    files:
+      - name: maze
+        src: maze_{{.OS}}_{{.Arch}}/maze
+    overrides:
+      - goos: windows
+        files:
+          - name: maze
+    supported_envs:
+      - darwin
+      - amd64
+  - version_constraint: "true"

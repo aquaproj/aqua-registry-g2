@@ -1,0 +1,24 @@
+name: liamg/pax
+type: github_release
+repo_owner: liamg
+repo_name: pax
+repo_id: 221998365
+description: ':skull: :unlock: CLI tool for PKCS7 padding oracle attacks'
+version_overrides:
+  - version_constraint: Version == "v0.1.2"
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("> 0.2.1")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("<= 0.2.1")
+    no_asset: true
+  - version_constraint: "true"
+    supported_envs:
+      - darwin
+      - windows
+      - amd64

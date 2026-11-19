@@ -1,0 +1,33 @@
+name: okta/okta-aws-cli
+type: github_release
+repo_owner: okta
+repo_name: okta-aws-cli
+repo_id: 511703407
+description: A CLI for having Okta as the IdP for AWS CLI operations
+version_overrides:
+  - version_constraint: Version == "v1.2.2"
+    files:
+      - name: okta-aws-cli
+        src: okta-aws-cli_{{.Version}}
+  - version_constraint: Version == "v2.0.0"
+    files:
+      - name: okta-aws-cli
+        src: okta-aws-cli_{{.Version}}
+  - version_constraint: semver("> 1.2.1")
+    supported_envs:
+      - linux
+      - darwin
+      - windows/arm64
+  - version_constraint: semver("> 0.0.3")
+    files:
+      - name: okta-aws-cli
+        src: okta-aws-cli_{{.Version}}
+  - version_constraint: semver("<= 0.0.3")
+    files:
+      - name: okta-aws-cli
+        src: okta-aws-cli_{{.Version}}
+  - version_constraint: "true"
+    supported_envs:
+      - linux
+      - darwin
+      - windows/arm64

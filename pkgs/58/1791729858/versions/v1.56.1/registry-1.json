@@ -1,0 +1,164 @@
+{
+  "published_at": "2026-10-26T15:09:53Z",
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "GitGuardian",
+      "repo_name": "ggshield",
+      "repo_id": 257326204,
+      "asset": "ggshield-1.56.1-x86_64-apple-darwin.tar.gz",
+      "format": "tar.gz",
+      "checksum": "b50a99f5c6398d7e0077b6c16120a2679a7686d907635ce1508aea2298bf314b",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "ggshield",
+          "src": "ggshield-1.56.1-x86_64-apple-darwin/ggshield"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "GitGuardian/ggshield/.github/workflows/tag.yml",
+        "source_ref": "refs/tags/v1.56.1",
+        "source_digest": "4cccd600fd3890a7aba07fd0a45e483f3099fe70",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "GitGuardian",
+      "repo_name": "ggshield",
+      "repo_id": 257326204,
+      "asset": "ggshield-1.56.1-arm64-apple-darwin.tar.gz",
+      "format": "tar.gz",
+      "checksum": "a6184367201fb6209a0f894f0cbb52da1f9a4df4b35ab6d720479a6aba63b2b5",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "ggshield",
+          "src": "ggshield-1.56.1-arm64-apple-darwin/ggshield"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "GitGuardian/ggshield/.github/workflows/tag.yml",
+        "source_ref": "refs/tags/v1.56.1",
+        "source_digest": "4cccd600fd3890a7aba07fd0a45e483f3099fe70",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "variants": {
+        "libc": "glibc"
+      },
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "GitGuardian",
+      "repo_name": "ggshield",
+      "repo_id": 257326204,
+      "asset": "ggshield-1.56.1-x86_64-unknown-linux-gnu.tar.gz",
+      "format": "tar.gz",
+      "checksum": "02741cf4653bb355248bdf31be8385ee9b34436de6ab58bb9bed74e7e827e194",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "ggshield",
+          "src": "ggshield-1.56.1-x86_64-unknown-linux-gnu/ggshield"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "GitGuardian/ggshield/.github/workflows/tag.yml",
+        "source_ref": "refs/tags/v1.56.1",
+        "source_digest": "4cccd600fd3890a7aba07fd0a45e483f3099fe70",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "variants": {
+        "libc": "glibc"
+      },
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "GitGuardian",
+      "repo_name": "ggshield",
+      "repo_id": 257326204,
+      "asset": "ggshield-1.56.1-aarch64-unknown-linux-gnu.tar.gz",
+      "format": "tar.gz",
+      "checksum": "a866eea1f0e342458b478eaaf8234372780d32095845729831eed622cf885253",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "ggshield",
+          "src": "ggshield-1.56.1-aarch64-unknown-linux-gnu/ggshield"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "GitGuardian/ggshield/.github/workflows/tag.yml",
+        "source_ref": "refs/tags/v1.56.1",
+        "source_digest": "4cccd600fd3890a7aba07fd0a45e483f3099fe70",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "GitGuardian",
+      "repo_name": "ggshield",
+      "repo_id": 257326204,
+      "asset": "ggshield-1.56.1-x86_64-pc-windows-msvc.zip",
+      "format": "zip",
+      "checksum": "86113f3dc6f60e14d1afad2638b9ea35c5065b9fd8da071c3ab2c54beb47a406",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "ggshield",
+          "src": "ggshield-1.56.1-x86_64-pc-windows-msvc/ggshield.exe"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "GitGuardian/ggshield/.github/workflows/tag.yml",
+        "source_ref": "refs/tags/v1.56.1",
+        "source_digest": "4cccd600fd3890a7aba07fd0a45e483f3099fe70",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "windows_arm_emulation": true,
+      "type": "github_release",
+      "repo_owner": "GitGuardian",
+      "repo_name": "ggshield",
+      "repo_id": 257326204,
+      "asset": "ggshield-1.56.1-x86_64-pc-windows-msvc.zip",
+      "format": "zip",
+      "checksum": "86113f3dc6f60e14d1afad2638b9ea35c5065b9fd8da071c3ab2c54beb47a406",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "ggshield",
+          "src": "ggshield-1.56.1-x86_64-pc-windows-msvc/ggshield.exe"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "GitGuardian/ggshield/.github/workflows/tag.yml",
+        "source_ref": "refs/tags/v1.56.1",
+        "source_digest": "4cccd600fd3890a7aba07fd0a45e483f3099fe70",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    }
+  ]
+}

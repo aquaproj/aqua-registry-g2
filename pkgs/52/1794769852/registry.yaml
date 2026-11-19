@@ -1,0 +1,29 @@
+name: fujiwara/lambroll
+type: github_release
+repo_owner: fujiwara
+repo_name: lambroll
+repo_id: 217447668
+description: lambroll is a minimal deployment tool for AWS Lambda
+version_overrides:
+  - version_constraint: semver("> 0.14.7")
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver("> 0.12.7")
+    files:
+      - name: lambroll
+        src: lambroll_{{.Version}}_{{.OS}}_{{.Arch}}/lambroll
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver("<= 0.12.7")
+    files:
+      - name: lambroll
+        src: lambroll_{{.Version}}_{{.OS}}_{{.Arch}}/lambroll
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: "true"
+    supported_envs:
+      - linux
+      - darwin

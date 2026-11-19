@@ -27,4 +27,8 @@ jobs:
       - run: aqua upc -prune
         env:
           AQUA_GITHUB_TOKEN: ${{ github.token }}
+      # How much of GITHUB_TOKEN's budget the repository has used. See the action.
+      - uses: $/.github/actions/measure-rate-limit
+        if: always()
+        continue-on-error: true
       - uses: autofix-ci/action@c5b2d67aa2274e7b5a18224e8171550871fc7e4a # v1.3.4

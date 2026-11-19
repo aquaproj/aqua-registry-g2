@@ -17,8 +17,8 @@ gh workflow run regenerate.yaml -f name=<package name> -f dry_run=true
 Naming no version does every version the registry holds, which for a package with a long
 history is a large pull request. `dry_run` says which versions would change and commits
 nothing. The pull request it opens replaces published files, so it is labelled
-`replaces-published` and never set to auto-merge, and the checks fail it if auto-merge is
-turned on. It is read and merged by a person; merging it is that reading's conclusion.
+`replaces-published` and never set to auto-merge. It is read by a person, who merges it
+or turns auto-merge on for it; either is that reading's conclusion.
 
 ### What is waiting for a definition
 
@@ -50,7 +50,10 @@ Regenerating it produces a different checksum for the same version, which is wha
 being rewritten looks like and what a lock file exists to catch. Decide whether to publish
 the new file rather than regenerating by reflex.
 
-`ar2 regenerate --dry-run` answers the same question locally, since it writes nothing. The run
+`ar2 regenerate --dry-run` answers the same question locally, since it writes nothing. It reads
+the definition from `main` on GitHub, not from the checkout, so it says what a definition fix
+does only once the fix has merged; before that it answers for the old definition, and "every
+version is what the definition already produces" then means nothing about the fix. The run
 that commits has to be the workflow, because ar2 commits through GitHub's API and what it
 produces from here isn't signed --
 [MAINTAINING.md](../../MAINTAINING.md#everything-that-writes-runs-in-github-actions) says the

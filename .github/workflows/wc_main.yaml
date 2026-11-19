@@ -46,6 +46,10 @@ jobs:
       - run: ar2 validate-index
         env:
           AQUA_GITHUB_TOKEN: ${{ github.token }}
+      # How much of GITHUB_TOKEN's budget the repository has used. See the action.
+      - uses: $/.github/actions/measure-rate-limit
+        if: always()
+        continue-on-error: true
 
   aqua:
     runs-on: ubuntu-26.04
@@ -68,6 +72,10 @@ jobs:
       - run: aqua install -a
         env:
           AQUA_GITHUB_TOKEN: ${{ github.token }}
+      # How much of GITHUB_TOKEN's budget the repository has used. See the action.
+      - uses: $/.github/actions/measure-rate-limit
+        if: always()
+        continue-on-error: true
 
   # A skill whose front matter doesn't parse doesn't load, and nothing says so until
   # somebody asks for it. 'claude plugin validate' won't catch it: it validates a plugin,
@@ -96,4 +104,8 @@ jobs:
       - run: bash .github/scripts/validate-skills.sh
         env:
           AQUA_GITHUB_TOKEN: ${{ github.token }}
+      # How much of GITHUB_TOKEN's budget the repository has used. See the action.
+      - uses: $/.github/actions/measure-rate-limit
+        if: always()
+        continue-on-error: true
 

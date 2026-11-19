@@ -1,0 +1,22 @@
+name: babarot/gomi
+type: github_release
+repo_owner: babarot
+repo_name: gomi
+repo_id: 34890657
+description: Replacement for UNIX rm command
+version_overrides:
+  - version_constraint: Version == "v1.1.3"
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver("> 1.1.1")
+  - version_constraint: semver("> 0.1.7")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: semver("<= 0.1.7")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: "true"

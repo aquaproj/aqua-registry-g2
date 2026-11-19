@@ -1,0 +1,27 @@
+name: matteo-sung/lockvet
+type: github_release
+repo_owner: matteo-sung
+repo_name: lockvet
+repo_id: 1310448486
+description: Explain any lockfile change before you merge it — bumps, breaking jumps,
+  new vulns, release ages & deprecations across 30 lockfile formats + SBOMs. CLI,
+  GitHub Action, browser playground, and MCP server so AI assistants can vet PRs too
+github_artifact_attestations:
+  signer_workflow: matteo-sung/lockvet/.github/workflows/release.yml
+version_overrides:
+  - version_constraint: semver("> 0.4.4")
+    files:
+      - name: lockvet
+        src: lockvet_{{.Version}}_{{.OS}}_{{.Arch}}/lockvet
+    github_artifact_attestations:
+      signer_workflow: matteo-sung/lockvet/.github/workflows/release.yml
+  - version_constraint: semver("<= 0.4.4")
+    files:
+      - name: lockvet
+        src: lockvet_{{.Version}}_{{.OS}}_{{.Arch}}/lockvet
+  - version_constraint: "true"
+    files:
+      - name: lockvet
+        src: lockvet_{{.Version}}_{{.OS}}_{{.Arch}}/lockvet
+    github_artifact_attestations:
+      signer_workflow: matteo-sung/lockvet/.github/workflows/release.yml

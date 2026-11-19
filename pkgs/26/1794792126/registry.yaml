@@ -1,0 +1,15 @@
+name: palantir/conjure-rust
+type: http
+repo_owner: palantir
+repo_name: conjure-rust
+repo_id: 164658242
+description: Conjure support for Rust
+version_overrides:
+  - version_constraint: "true"
+    url: https://repo.maven.apache.org/maven2/com/palantir/conjure/rust/conjure-rust/{{.Version}}/conjure-rust-{{.Version}}.{{.Format}}
+    format: tgz
+    files:
+      - name: conjure-rust
+        src: conjure-rust-{{.Version}}/bin/conjure-rust
+    replacements:
+      arm64: aarch64

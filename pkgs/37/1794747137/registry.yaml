@@ -1,0 +1,21 @@
+name: licensee/licensed
+aliases:
+  - name: github/licensed
+type: github_release
+repo_owner: licensee
+repo_name: licensed
+repo_id: 120039636
+description: A Ruby gem to cache and verify the licenses of dependencies
+supported_envs:
+  - linux/amd64
+  - darwin
+version_overrides:
+  - version_constraint: semver("< 4.0.0")
+  - version_constraint: semver(">= 4.0.0")
+    error_message: |
+      https://github.com/github/licensed/issues/585
+
+      Licensed v4 no longer provides a self-contained executable build of licensed
+  - version_constraint: "true"
+all_assets_filter: Asset matches "^licensed-.+-.+-.+[.]tar[.]gz([.].+)?$" or Asset
+  endsWith ".intoto.jsonl"

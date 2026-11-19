@@ -1,0 +1,11 @@
+name: reteps/dockerfmt
+type: github_release
+repo_owner: reteps
+repo_name: dockerfmt
+repo_id: 960776709
+description: Dockerfile format and parser. a modern dockfmt
+version_overrides:
+  - version_constraint: "true"
+    supported_envs:
+      - linux
+      - darwin/arm64

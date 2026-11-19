@@ -1,0 +1,48 @@
+name: mongodb/mongodb-atlas-cli/mongocli
+aliases:
+  - name: mongodb/mongocli
+type: github_release
+repo_owner: mongodb
+repo_name: mongodb-atlas-cli
+repo_id: 236735050
+description: MongoDB Atlas CLI and MongoDB CLI enable you to manage your MongoDB in
+  the Cloud
+version_filter: Version startsWith "mongocli/" or semver("< 1.23.0")
+overrides:
+  - goos: linux
+    format: tar.gz
+    files:
+      - name: mongocli
+        src: mongocli_{{trimPrefix "mongocli/v" .Version}}_{{.OS}}_{{.Arch}}/bin/mongocli
+files:
+  - name: mongocli
+    src: bin/mongocli
+supported_envs:
+  - darwin
+  - linux
+version_overrides:
+  - version_constraint: semverWithVersion(">= 1.23.0", trimPrefix(Version, "mongocli/"))
+  - version_constraint: semver(">= 1.15.0")
+    overrides:
+      - goos: linux
+        format: tar.gz
+        files:
+          - name: mongocli
+            src: mongocli_{{trimV .Version}}_{{.OS}}_{{.Arch}}/bin/mongocli
+    supported_envs:
+      - darwin
+      - linux
+  - version_constraint: "true"
+    files:
+      - name: mongocli
+    overrides:
+      - goos: linux
+        format: tar.gz
+        files:
+          - name: mongocli
+            src: mongocli_{{trimV .Version}}_{{.OS}}_{{.Arch}}/mongocli
+    supported_envs:
+      - amd64
+      - darwin
+all_assets_filter: Asset matches "^mongocli_.+_.+_.+[.].+([.].+)?$" or Asset endsWith
+  ".intoto.jsonl"

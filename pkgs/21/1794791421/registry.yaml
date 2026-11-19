@@ -1,0 +1,21 @@
+name: handlename/ssmwrap
+type: github_release
+repo_owner: handlename
+repo_name: ssmwrap
+repo_id: 138238036
+description: Exec command with environment variables loaded from AWS SSM
+version_overrides:
+  - version_constraint: semver("> 2.0.1")
+  - version_constraint: semver("> 1.1.1")
+    files:
+      - name: ssmwrap
+        src: '{{.AssetWithoutExt}}/ssmwrap'
+  - version_constraint: semver("<= 1.1.1")
+    files:
+      - name: ssmwrap
+        src: '{{.AssetWithoutExt}}/ssmwrap'
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: "true"

@@ -1,0 +1,14 @@
+name: pluveto/upgit
+type: github_release
+repo_owner: pluveto
+repo_name: upgit
+repo_id: 453007042
+description: Another upload hub that supports clipboard. It works well with Typora,
+  Snipaste, VSCode
+version_overrides:
+  - version_constraint: semver("> 0.1.0")
+  - version_constraint: semver("<= 0.1.0")
+    supported_envs:
+      - linux
+      - windows
+  - version_constraint: "true"

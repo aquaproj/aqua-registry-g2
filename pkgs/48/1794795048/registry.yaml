@@ -1,0 +1,16 @@
+name: suzuki-shunsuke/disable-checkout-persist-credentials
+type: github_release
+repo_owner: suzuki-shunsuke
+repo_name: disable-checkout-persist-credentials
+repo_id: 908039576
+description: CLI to disable actions/checkout's persist-credentials
+packslip:
+  identity_prefix: https://github.com/suzuki-shunsuke/go-release-workflow/
+  issuer: https://token.actions.githubusercontent.com
+version_overrides:
+  - version_constraint: semver("> 1.0.0")
+  - version_constraint: semver("<= 1.0.0")
+    slsa_provenance:
+      type: github_release
+      asset: multiple.intoto.jsonl
+  - version_constraint: "true"

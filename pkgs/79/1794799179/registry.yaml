@@ -1,0 +1,12 @@
+name: Staffbase/gq
+type: github_release
+repo_owner: Staffbase
+repo_name: gq
+repo_id: 1231912229
+description: CLI and MCP server for querying logs and metrics via Grafana datasource
+  proxy
+version_overrides:
+  - version_constraint: "true"
+    supported_envs:
+      - linux
+      - darwin

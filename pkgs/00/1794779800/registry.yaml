@@ -1,0 +1,14 @@
+name: dispatchrun/wzprof
+aliases:
+  - name: stealthrocket/wzprof
+type: github_release
+repo_owner: dispatchrun
+repo_name: wzprof
+repo_id: 632605371
+description: WebAssembly Profiler based on Wazero
+version_overrides:
+  - version_constraint: Version == "v0.1.5"
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: "true"

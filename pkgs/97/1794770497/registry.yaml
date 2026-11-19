@@ -1,0 +1,32 @@
+name: CrociDB/bulletty
+type: github_release
+repo_owner: CrociDB
+repo_name: bulletty
+repo_id: 992862231
+description: bulletty is a pretty feed reader for the terminal that stores the articles
+  as Markdown
+version_overrides:
+  - version_constraint: Version == "v0.1.7"
+    supported_envs:
+      - linux/amd64
+  - version_constraint: Version == "v0.1.8"
+    error_message: This version is unavailable because the asset format is invalid.
+  - version_constraint: semver(">= 0.2.2")
+    files:
+      - name: bulletty
+        src: '{{.AssetWithoutExt}}/bulletty'
+    overrides:
+      - goos: windows
+        format: zip
+        files:
+          - name: bulletty
+  - version_constraint: semver("< 0.2.2")
+  - version_constraint: "true"
+    files:
+      - name: bulletty
+        src: '{{.AssetWithoutExt}}/bulletty'
+    overrides:
+      - goos: windows
+        format: zip
+        files:
+          - name: bulletty

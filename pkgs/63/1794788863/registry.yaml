@@ -1,0 +1,17 @@
+name: rajatjindal/krew-release-bot
+type: github_release
+repo_owner: rajatjindal
+repo_name: krew-release-bot
+repo_id: 224954210
+description: bot to bump version of plugin in krew-index on new releases
+version_overrides:
+  - version_constraint: semver("> 0.0.34-2")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: semver("<= 0.0.34-2")
+    no_asset: true
+  - version_constraint: "true"
+    supported_envs:
+      - linux/amd64
+      - darwin

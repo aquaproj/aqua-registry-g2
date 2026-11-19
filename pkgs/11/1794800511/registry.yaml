@@ -1,0 +1,32 @@
+name: terraprovider/statebridge
+type: github_release
+repo_owner: terraprovider
+repo_name: statebridge
+repo_id: 1160540918
+description: CLI tool for declarative opentofu state migrations
+cosign:
+  opts:
+    - --certificate-identity
+    - https://github.com/terraprovider/statebridge/.github/workflows/release.yml@refs/tags/{{.Version}}
+    - --certificate-oidc-issuer
+    - https://token.actions.githubusercontent.com
+  bundle:
+    type: github_release
+    asset: '{{.Asset}}.sigstore.json'
+github_artifact_attestations:
+  signer_workflow: terraprovider/statebridge/.github/workflows/release.yml
+version_overrides:
+  - version_constraint: semver(">= 0.15.0")
+    slsa_provenance:
+      type: github_release
+      asset: multiple.intoto.jsonl
+    github_artifact_attestations:
+      signer_workflow: terraprovider/statebridge/.github/workflows/release.yml
+  - version_constraint: semver("< 0.15.0")
+    error_message: Please use v0.15.0 or later
+  - version_constraint: "true"
+    slsa_provenance:
+      type: github_release
+      asset: multiple.intoto.jsonl
+    github_artifact_attestations:
+      signer_workflow: terraprovider/statebridge/.github/workflows/release.yml

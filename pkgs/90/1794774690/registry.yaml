@@ -1,0 +1,17 @@
+name: ko1nksm/shdotenv
+type: github_release
+repo_owner: ko1nksm
+repo_name: shdotenv
+repo_id: 353365377
+description: dotenv for shells with support for POSIX-compliant and multiple .env
+  file syntax
+supported_envs:
+  - linux
+  - darwin
+asset_rules:
+  - envs:
+      - linux/amd64
+      - linux/arm64
+      - darwin/amd64
+      - darwin/arm64
+    filter: Asset matches "^shdotenv([.].+)?$"

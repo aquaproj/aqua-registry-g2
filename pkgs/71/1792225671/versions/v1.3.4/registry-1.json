@@ -1,0 +1,57 @@
+{
+  "published_at": "2026-05-26T14:27:22Z",
+  "assets": [
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "rootless-containers",
+      "repo_name": "slirp4netns",
+      "repo_id": 140418870,
+      "asset": "slirp4netns-x86_64",
+      "format": "raw",
+      "checksum": "e8d0440de8d8c87072138883bc27cfa02f8b0e8a504badbf335c41f794788cc2",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "slirp4netns",
+          "src": "slirp4netns-x86_64"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "rootless-containers/slirp4netns/.github/workflows/release.yaml",
+        "source_ref": "refs/tags/v1.3.4",
+        "source_digest": "129916bd8dc2b8eaf621671b3431799c827d689e",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "rootless-containers",
+      "repo_name": "slirp4netns",
+      "repo_id": 140418870,
+      "asset": "slirp4netns-aarch64",
+      "format": "raw",
+      "checksum": "fbd8a9cabc716dc53e7c5a00bc7b3e91dbe0eab6b40e6d606b1b34c2ce80cfc0",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "slirp4netns",
+          "src": "slirp4netns-aarch64"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "rootless-containers/slirp4netns/.github/workflows/release.yaml",
+        "source_ref": "refs/tags/v1.3.4",
+        "source_digest": "129916bd8dc2b8eaf621671b3431799c827d689e",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    }
+  ]
+}

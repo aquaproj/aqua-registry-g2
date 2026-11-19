@@ -7,3 +7,5 @@ description: CLI tool that can execute SQL queries on CSV, LTSV, JSON and TBLN. 
 files:
   - name: trdsql
     src: trdsql_{{.Version}}_{{.OS}}_{{.Arch}}/trdsql
+# linux_old_amd64, a build for older Linux, tied with linux_amd64.
+all_assets_filter: not (Asset contains "_old_")

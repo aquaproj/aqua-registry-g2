@@ -77,3 +77,5 @@ version_overrides:
           files:
             - name: lnav
               src: lnav-{{trimV .Version}}/bin/lnav
+# v0.8.5 published its Linux build twice, as lnav-0.8.5- and lnav-v0.8.5-.
+all_assets_filter: not (Asset startsWith "lnav-v")

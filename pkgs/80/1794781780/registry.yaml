@@ -1,0 +1,25 @@
+name: gabeduke/kubectl-iexec
+type: github_release
+repo_owner: gabeduke
+repo_name: kubectl-iexec
+repo_id: 182160901
+description: Kubectl plugin to interactively exec into a pod
+version_overrides:
+  - version_constraint: Version == "1.5.0-alpha1"
+    no_asset: true
+  - version_constraint: semver("> 1.18.0")
+  - version_constraint: semver("> 1.8.0")
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver("> 1.2.2")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: semver("> 1.2.0")
+    no_asset: true
+  - version_constraint: semver("<= 1.2.0")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: "true"

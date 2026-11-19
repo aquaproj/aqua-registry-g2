@@ -1,0 +1,11 @@
+name: fujiwara/cfft
+type: github_release
+repo_owner: fujiwara
+repo_name: cfft
+repo_id: 734737219
+description: cfft is a testing tool for CloudFront Functions
+version_overrides:
+  - version_constraint: semver("> 0.0.2")
+  - version_constraint: semver("<= 0.0.2")
+    no_asset: true
+  - version_constraint: "true"

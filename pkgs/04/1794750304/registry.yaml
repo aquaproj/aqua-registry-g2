@@ -1,0 +1,52 @@
+name: gittuf/gittuf
+type: github_release
+repo_owner: gittuf
+repo_name: gittuf
+repo_id: 558971199
+description: A security layer for Git repositories
+github_artifact_attestations:
+  signer_workflow: gittuf/gittuf/.github/workflows/release.yml
+version_overrides:
+  - version_constraint: Version == "v0.13.0"
+    no_asset: true
+  - version_constraint: semver("> 0.12.0")
+    github_artifact_attestations:
+      signer_workflow: gittuf/gittuf/.github/workflows/release.yml
+  - version_constraint: semver("<= 0.12.0")
+    cosign:
+      opts:
+        - --certificate-identity-regexp
+        - https://github\.com/gittuf/gittuf/\.github/workflows/release\.ya?ml@.*
+        - --certificate-oidc-issuer
+        - https://token.actions.githubusercontent.com
+        - --signature
+        - https://github.com/gittuf/gittuf/releases/download/{{.Version}}/gittuf_{{trimV
+          .Version}}_{{.OS}}_{{.Arch}}.sig
+        - --certificate
+        - https://github.com/gittuf/gittuf/releases/download/{{.Version}}/gittuf_{{trimV
+          .Version}}_{{.OS}}_{{.Arch}}.pem
+        - --certificate-github-workflow-repository
+        - gittuf/gittuf
+        - --certificate-github-workflow-ref
+        - refs/tags/{{.Version}}
+    overrides:
+      - goos: windows
+        cosign:
+          opts:
+            - --certificate-identity-regexp
+            - https://github\.com/gittuf/gittuf/\.github/workflows/release\.ya?ml@.*
+            - --certificate-oidc-issuer
+            - https://token.actions.githubusercontent.com
+            - --signature
+            - https://github.com/gittuf/gittuf/releases/download/{{.Version}}/gittuf_{{trimV
+              .Version}}_{{.OS}}_{{.Arch}}.exe.sig
+            - --certificate
+            - https://github.com/gittuf/gittuf/releases/download/{{.Version}}/gittuf_{{trimV
+              .Version}}_{{.OS}}_{{.Arch}}.exe.pem
+            - --certificate-github-workflow-repository
+            - gittuf/gittuf
+            - --certificate-github-workflow-ref
+            - refs/tags/{{.Version}}
+  - version_constraint: "true"
+    github_artifact_attestations:
+      signer_workflow: gittuf/gittuf/.github/workflows/release.yml

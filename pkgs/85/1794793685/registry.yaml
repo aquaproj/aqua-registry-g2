@@ -1,0 +1,7 @@
+name: hashicorp/hcp
+type: http
+repo_owner: hashicorp
+repo_name: hcp
+repo_id: 744275593
+description: HCP Command-Line Interface
+url: https://releases.hashicorp.com/hcp/{{trimV .Version}}/hcp_{{trimV .Version}}_{{.OS}}_{{.Arch}}.zip

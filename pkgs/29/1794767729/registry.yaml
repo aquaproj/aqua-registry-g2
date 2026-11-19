@@ -1,0 +1,14 @@
+name: jtyr/gbt
+type: github_release
+repo_owner: jtyr
+repo_name: gbt
+repo_id: 107932874
+description: Highly configurable prompt builder for Bash, ZSH and PowerShell written
+  in Go
+files:
+  - name: gbt
+    src: gbt-{{trimV .Version}}/gbt
+supported_envs:
+  - darwin
+  - linux
+  - amd64

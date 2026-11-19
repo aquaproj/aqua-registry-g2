@@ -1,0 +1,33 @@
+name: aakso/ssh-inscribe/sshi
+type: github_release
+repo_owner: aakso
+repo_name: ssh-inscribe
+repo_id: 86410110
+description: SSH CA Client/Server
+github_artifact_attestations:
+  signer_workflow: aakso/ssh-inscribe/.github/workflows/release.yaml
+version_overrides:
+  - version_constraint: semver("> 0.11.0")
+    github_artifact_attestations:
+      signer_workflow: aakso/ssh-inscribe/.github/workflows/release.yaml
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("> 0.4.1")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("<= 0.4.1")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: "true"
+    github_artifact_attestations:
+      signer_workflow: aakso/ssh-inscribe/.github/workflows/release.yaml
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+all_assets_filter: Asset matches "^sshi-.+-.+([.].+)?$" or Asset endsWith ".intoto.jsonl"

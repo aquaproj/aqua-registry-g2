@@ -1,0 +1,13 @@
+name: k1LoW/concrun
+type: github_release
+repo_owner: k1LoW
+repo_name: concrun
+repo_id: 1060222573
+description: Run commands concurrently
+version_overrides:
+  - version_constraint: Version == "v0.1.0"
+    no_asset: true
+  - version_constraint: "true"
+    supported_envs:
+      - linux
+      - darwin

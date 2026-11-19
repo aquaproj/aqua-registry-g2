@@ -1,0 +1,19 @@
+name: knqyf263/cob
+type: github_release
+repo_owner: knqyf263
+repo_name: cob
+repo_id: 233287637
+description: Continuous Benchmark for Go Project
+version_overrides:
+  - version_constraint: semver("> 0.0.6")
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver("<= 0.0.6")
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: "true"
+    supported_envs:
+      - linux
+      - darwin

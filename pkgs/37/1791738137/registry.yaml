@@ -56,8 +56,9 @@ version_overrides:
       amd64: x86_64
       arm64: aarch64
     overrides:
+      # The x86_64 alpine build of 3.8.1.0 is LZMA-compressed though it is named .tar.xz,
+      # and it can't be opened as xz. The deb10 build is a real .tar.xz.
       - goos: linux
-        goarch: arm64
         url: https://downloads.haskell.org/~cabal/cabal-install-{{.SemVer}}/cabal-install-3.8.1.0-{{.Arch}}-{{.OS}}-deb10.{{.Format}}
       - goos: darwin
         url: https://downloads.haskell.org/~cabal/cabal-install-{{.SemVer}}/cabal-install-3.8.1.0-{{.Arch}}-{{.OS}}.{{.Format}}

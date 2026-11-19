@@ -1,0 +1,24 @@
+name: Songmu/r2sync
+type: github_release
+repo_owner: Songmu
+repo_name: r2sync
+repo_id: 871638170
+description: r2sync is a command-line tool for synchronizing files between a local
+  directory and Cloudflare R2
+version_overrides:
+  - version_constraint: semver("> 0.0.1")
+    files:
+      - name: r2sync
+        src: r2sync_{{.Version}}_{{.OS}}_{{.Arch}}/r2sync
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver("<= 0.0.1")
+    no_asset: true
+  - version_constraint: "true"
+    files:
+      - name: r2sync
+        src: r2sync_{{.Version}}_{{.OS}}_{{.Arch}}/r2sync
+    supported_envs:
+      - linux
+      - darwin

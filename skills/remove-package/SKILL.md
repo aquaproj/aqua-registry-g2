@@ -28,9 +28,9 @@ It opens two pull requests into `main`, one for 1 and 2 and one for 3. Merge the
 first: a package still in the order has its files generated again by the next run, whatever
 the other one did. The second pull request says so and points at the first.
 
-The second takes away published files, so it is labelled `replaces-published` and never
-merges itself: the checks fail it while auto-merge is on. Merging it is the decision being
-made, so it is a person's.
+The second takes away published files, so it is labelled `replaces-published` and ar2
+doesn't turn auto-merge on for it. Merging it is the decision being made, so it is a
+person's.
 
 The definition stays, and what was published stays readable in the history of `main`, which a
 ruleset forbids rewriting.

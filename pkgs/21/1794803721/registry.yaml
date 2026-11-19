@@ -1,0 +1,16 @@
+name: p10node/k10s
+type: github_release
+repo_owner: p10node
+repo_name: k10s
+repo_id: 1346903424
+description: Kubernetes TUI you can click
+github_artifact_attestations:
+  signer_workflow: p10node/k10s/.github/workflows/release.yml
+version_overrides:
+  - version_constraint: semver("> 0.1.7")
+    github_artifact_attestations:
+      signer_workflow: p10node/k10s/.github/workflows/release.yml
+  - version_constraint: semver("<= 0.1.7")
+  - version_constraint: "true"
+    github_artifact_attestations:
+      signer_workflow: p10node/k10s/.github/workflows/release.yml

@@ -7,3 +7,5 @@ description: High-performance extensible build system for reproducible multi-lan
 files:
   - name: please
     src: please/please
+# please_tools and please_shim tied with please.
+all_assets_filter: not (Asset contains "please_tools" or Asset contains "please_shim")

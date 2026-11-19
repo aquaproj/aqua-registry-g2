@@ -1,0 +1,16 @@
+name: mattn/files
+type: github_release
+repo_owner: mattn
+repo_name: files
+repo_id: 22741787
+description: Fast file find
+files:
+  - name: files
+    src: files_{{.Version}}_{{.OS}}_{{.Arch}}/files
+version_overrides:
+  - version_constraint: semver(">= 0.3.4")
+  - version_constraint: semver("< 0.3.4")
+    supported_envs:
+      - darwin
+      - amd64
+  - version_constraint: "true"

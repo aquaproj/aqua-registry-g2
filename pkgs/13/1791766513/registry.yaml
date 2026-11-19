@@ -89,3 +89,7 @@ version_overrides:
             src: '{{.AssetWithoutExt}}/bin/toktx'
     supported_envs:
       - linux
+# The macOS .pkg and the Windows .exe are installers, and the files are described for the
+# Linux tarball alone. v4.0.0's Darwin.pkg names no architecture, so it was offered for
+# darwin and failed there.
+all_assets_filter: Asset endsWith ".tar.bz2"

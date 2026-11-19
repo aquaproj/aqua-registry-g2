@@ -1,0 +1,40 @@
+name: herdrdev/herdr-core
+type: http
+repo_owner: herdrdev
+repo_name: herdr-core
+repo_id: 1422648422
+description: Terminals for coding agents
+url: https://releases.herdr.dev/core/{{trimV .Version}}/herdr-core-{{.OS}}-{{.Arch}}.{{.Format}}
+format: tar.gz
+version_source: github_tag
+overrides:
+  - goos: windows
+    format: zip
+files:
+  - name: herdr-core
+replacements:
+  amd64: x86_64
+  arm64: aarch64
+  darwin: macos
+supported_envs:
+  - linux
+  - darwin
+  - windows/amd64
+version_overrides:
+  - version_constraint: semver("> 0.1.17")
+    overrides:
+      - goos: windows
+        format: zip
+      - goos: darwin
+        files:
+          - name: herdr-core
+            src: Herdr Core.app/Contents/MacOS/herdr-core
+  - version_constraint: semver("<= 0.1.17")
+  - version_constraint: "true"
+    overrides:
+      - goos: windows
+        format: zip
+      - goos: darwin
+        files:
+          - name: herdr-core
+            src: Herdr Core.app/Contents/MacOS/herdr-core

@@ -1,0 +1,13 @@
+name: hirose31/s3surfer
+type: github_release
+repo_owner: hirose31
+repo_name: s3surfer
+repo_id: 392241251
+description: s3surfer is CLI tool for browsing S3 bucket and download objects interactively
+files:
+  - name: s3surfer
+    src: s3surfer_{{.Version}}_{{.OS}}_{{.Arch}}/s3surfer
+supported_envs:
+  - darwin
+  - linux
+  - amd64

@@ -1,0 +1,13 @@
+name: fujiwara/ecsta
+type: github_release
+repo_owner: fujiwara
+repo_name: ecsta
+repo_id: 468844447
+description: ECS Task Assistant tool
+version_overrides:
+  - version_constraint: semver("> 0.3.4")
+  - version_constraint: semver("<= 0.3.4")
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: "true"

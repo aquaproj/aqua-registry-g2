@@ -1,0 +1,14 @@
+name: bflad/tfproviderlint
+type: github_release
+repo_owner: bflad
+repo_name: tfproviderlint
+repo_id: 187742468
+description: Terraform Provider Lint Tool
+version_overrides:
+  - version_constraint: semver("> 0.28.1")
+  - version_constraint: semver("<= 0.28.1")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: "true"

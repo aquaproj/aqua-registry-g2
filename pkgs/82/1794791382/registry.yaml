@@ -1,0 +1,19 @@
+name: cybozu/assam
+type: github_release
+repo_owner: cybozu
+repo_name: assam
+repo_id: 177101806
+description: Get a credential by AssumeRoleWithSAML for AWS CLI and SDK
+version_overrides:
+  - version_constraint: semver("> 1.2.6")
+  - version_constraint: semver("> 1.0.2")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("<= 1.0.2")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: "true"

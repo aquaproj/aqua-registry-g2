@@ -1,0 +1,13 @@
+name: sivchari/ccowl
+type: github_release
+repo_owner: sivchari
+repo_name: ccowl
+repo_id: 1011222640
+description: A cross-platform status bar application that monitors Claude Code usage
+  in real-time
+version_overrides:
+  - version_constraint: Version == "v1.0.0"
+  - version_constraint: "true"
+    files:
+      - name: ccowl
+        src: '{{.AssetWithoutExt}}'

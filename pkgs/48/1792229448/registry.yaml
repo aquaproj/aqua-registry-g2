@@ -1,0 +1,20 @@
+name: libbpf/bpftool
+type: github_release
+repo_owner: libbpf
+repo_name: bpftool
+repo_id: 448429441
+description: Automated upstream mirror for bpftool stand-alone build
+version_overrides:
+  - version_constraint: semver("> 7.1.0")
+    supported_envs:
+      - linux
+  - version_constraint: semver("<= 7.1.0")
+    no_asset: true
+  - version_constraint: "true"
+    supported_envs:
+      - linux
+asset_rules:
+  - envs:
+      - linux/amd64
+      - linux/arm64
+    filter: Asset matches "^bpftool-.+-.+[.].+([.].+)?$"

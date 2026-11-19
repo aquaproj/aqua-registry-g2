@@ -1,0 +1,17 @@
+name: minamijoyo/hcledit
+type: github_release
+repo_owner: minamijoyo
+repo_name: hcledit
+repo_id: 231227654
+description: A command line editor for HCL
+version_overrides:
+  - version_constraint: semver("> 0.2.6")
+  - version_constraint: semver("> 0.2.1")
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver("<= 0.2.1")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: "true"

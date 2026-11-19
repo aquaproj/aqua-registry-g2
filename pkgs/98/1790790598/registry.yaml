@@ -46,3 +46,5 @@ version_overrides:
       slsa_provenance:
         type: github_release
         asset: multiple.intoto.jsonl
+# kubectl-vela, the kubectl plugin, tied with vela.
+all_assets_filter: Asset startsWith "vela-"

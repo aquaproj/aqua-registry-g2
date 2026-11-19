@@ -1,0 +1,26 @@
+name: alexellis/kubetrim
+type: github_release
+repo_owner: alexellis
+repo_name: kubetrim
+repo_id: 844531814
+description: Trim  your KUBECONFIG automatically
+version_overrides:
+  - version_constraint: semver("> 0.0.1-rc3")
+    files:
+      - name: kubetrim
+        src: '{{trimSuffix ".tgz" .Asset}}'
+  - version_constraint: semver("> 0.0.1-rc1")
+  - version_constraint: semver("<= 0.0.1-rc1")
+    no_asset: true
+  - version_constraint: "true"
+    files:
+      - name: kubetrim
+        src: '{{trimSuffix ".tgz" .Asset}}'
+asset_rules:
+  - envs:
+      - linux/amd64
+      - linux/arm64
+      - windows/amd64
+      - windows/arm64
+    filter: Asset matches "^kubetrim-arm64([.].+)?$" or Asset matches "^kubetrim([.].+)?$"
+      or Asset matches "^kubetrim-arm64[.]tgz([.].+)?$"

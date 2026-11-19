@@ -1,0 +1,21 @@
+name: CrunchyData/postgres-operator-client
+type: github_release
+repo_owner: CrunchyData
+repo_name: postgres-operator-client
+repo_id: 416428126
+description: the Command Line Interface (CLI) for the Crunchy Postgres Operator
+files:
+  - name: kubectl-pgo
+version_overrides:
+  - version_constraint: semver("> 0.1.0")
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver("<= 0.1.0")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: "true"
+    supported_envs:
+      - linux
+      - darwin

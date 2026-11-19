@@ -1,0 +1,31 @@
+name: kyma-project/cli
+type: github_release
+repo_owner: kyma-project
+repo_name: cli
+repo_id: 157188288
+description: Simple set of commands to manage a Kyma installation
+files:
+  - name: kyma
+version_overrides:
+  - version_constraint: semver(">= 2.7.0")
+  - version_constraint: semver(">= 1.2.0")
+    supported_envs:
+      - darwin
+      - amd64
+  - version_constraint: semver(">= 1.2.0-rc1")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: semver(">= 0.2.0")
+    supported_envs:
+      - darwin
+      - amd64
+  - version_constraint: Version == "v0.1.0"
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: "true"
+asset_rules:
+  - envs:
+      - windows/amd64
+    filter: Asset matches "^kyma([.].+)?$"

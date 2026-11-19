@@ -1,0 +1,26 @@
+name: chanzuckerberg/fogg
+type: github_release
+repo_owner: chanzuckerberg
+repo_name: fogg
+repo_id: 137801039
+description: Manage Infrastructure as Code with less pain
+version_overrides:
+  - version_constraint: Version in ["v0.67.1", "v0.68.0", "v0.92.2"]
+    no_asset: true
+  - version_constraint: semver("> 0.58.3")
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver("> 0.42.3")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: semver("<= 0.42.3")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: "true"
+    supported_envs:
+      - linux
+      - darwin

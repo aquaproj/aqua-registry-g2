@@ -1,0 +1,17 @@
+name: tmknom/actdocs
+type: github_release
+repo_owner: tmknom
+repo_name: actdocs
+repo_id: 474557214
+description: Generate documentation from Actions and Reusable Workflows
+github_artifact_attestations:
+  signer_workflow: tmknom/release-workflows/.github/workflows/go.yml
+version_overrides:
+  - version_constraint: semver("> 0.5.1")
+    github_artifact_attestations:
+      signer_workflow: tmknom/release-workflows/.github/workflows/go.yml
+  - version_constraint: semver("> 0.4.0")
+  - version_constraint: semver("<= 0.4.0")
+  - version_constraint: "true"
+    github_artifact_attestations:
+      signer_workflow: tmknom/release-workflows/.github/workflows/go.yml

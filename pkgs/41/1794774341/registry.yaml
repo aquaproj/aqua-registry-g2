@@ -1,0 +1,14 @@
+name: plumber-cd/terraform-backend-git
+type: github_release
+repo_owner: plumber-cd
+repo_name: terraform-backend-git
+repo_id: 255012796
+description: Terraform HTTP Backend implementation that uses Git repository as storage
+version_overrides:
+  - version_constraint: semver("> 0.0.16")
+  - version_constraint: semver("<= 0.0.16")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: "true"

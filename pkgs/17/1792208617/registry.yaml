@@ -1,0 +1,28 @@
+name: Canop/dysk
+type: github_release
+repo_owner: Canop
+repo_name: dysk
+repo_id: 302749270
+description: A linux utility to get information on filesystems, like df but better
+# One zip holds a build for every target, in a directory named after its target triple; the
+# musl builds are the ones that run on any Linux.
+replacements:
+  amd64: x86_64
+  arm64: aarch64
+supported_envs:
+  - linux
+asset_rules:
+  - envs:
+      - linux/amd64
+      - linux/arm64
+    filter: Asset matches "^dysk_.+[.].+([.].+)?$"
+version_overrides:
+  # From 3.7.0 the target directories are at the top of the zip rather than under build/.
+  - version_constraint: semver(">= 3.7.0")
+    files:
+      - name: dysk
+        src: '{{.Arch}}-unknown-linux-musl/dysk'
+  - version_constraint: "true"
+    files:
+      - name: dysk
+        src: 'build/{{.Arch}}-unknown-linux-musl/dysk'

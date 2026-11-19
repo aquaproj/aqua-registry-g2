@@ -1,0 +1,163 @@
+{
+  "published_at": "2026-11-02T09:36:38Z",
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "Byron",
+      "repo_name": "dua-cli",
+      "repo_id": 189215168,
+      "asset": "dua-v3.0.0-x86_64-apple-darwin.tar.gz",
+      "format": "tar.gz",
+      "checksum": "299cd781fbe7ab1d2c0147adf932141b2ace73fad865c333d643a0c89bf06b5c",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "dua",
+          "src": "dua-v3.0.0-x86_64-apple-darwin/dua"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "Byron/dua-cli/.github/workflows/release.yml",
+        "source_ref": "refs/tags/v3.0.0",
+        "source_digest": "c74ed619a0e2f9ab9830cd5b863dc139e8f340eb",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "Byron",
+      "repo_name": "dua-cli",
+      "repo_id": 189215168,
+      "asset": "dua-v3.0.0-aarch64-apple-darwin.tar.gz",
+      "format": "tar.gz",
+      "checksum": "d27ba25d6ee2672111c035c8f5aed958a70f11c472cfc00056209d1142df4dea",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "dua",
+          "src": "dua-v3.0.0-aarch64-apple-darwin/dua"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "Byron/dua-cli/.github/workflows/release.yml",
+        "source_ref": "refs/tags/v3.0.0",
+        "source_digest": "c74ed619a0e2f9ab9830cd5b863dc139e8f340eb",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "variants": {
+        "libc": "musl"
+      },
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "Byron",
+      "repo_name": "dua-cli",
+      "repo_id": 189215168,
+      "asset": "dua-v3.0.0-x86_64-unknown-linux-musl.tar.gz",
+      "format": "tar.gz",
+      "checksum": "59438b0934a521dd4cf2896fa42046023df60e1c25812a07cef913dc2b2d103f",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "dua",
+          "src": "dua-v3.0.0-x86_64-unknown-linux-musl/dua"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "Byron/dua-cli/.github/workflows/release.yml",
+        "source_ref": "refs/tags/v3.0.0",
+        "source_digest": "c74ed619a0e2f9ab9830cd5b863dc139e8f340eb",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "variants": {
+        "libc": "musl"
+      },
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "Byron",
+      "repo_name": "dua-cli",
+      "repo_id": 189215168,
+      "asset": "dua-v3.0.0-aarch64-unknown-linux-musl.tar.gz",
+      "format": "tar.gz",
+      "checksum": "642ce5d1ca43ec7504c9452d1d662a02aeb5f451d7fc0093c81c1580f50577f2",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "dua",
+          "src": "dua-v3.0.0-aarch64-unknown-linux-musl/dua"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "Byron/dua-cli/.github/workflows/release.yml",
+        "source_ref": "refs/tags/v3.0.0",
+        "source_digest": "c74ed619a0e2f9ab9830cd5b863dc139e8f340eb",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "Byron",
+      "repo_name": "dua-cli",
+      "repo_id": 189215168,
+      "asset": "dua-v3.0.0-x86_64-pc-windows-msvc.zip",
+      "format": "zip",
+      "checksum": "5426e4a62ae7c0a893cf7dad2ecdb7b1645b636c200ca2f767a302d0f0716a1f",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "dua",
+          "src": "dua-v3.0.0-x86_64-pc-windows-msvc/dua.exe"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "Byron/dua-cli/.github/workflows/release.yml",
+        "source_ref": "refs/tags/v3.0.0",
+        "source_digest": "c74ed619a0e2f9ab9830cd5b863dc139e8f340eb",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "Byron",
+      "repo_name": "dua-cli",
+      "repo_id": 189215168,
+      "asset": "dua-v3.0.0-aarch64-pc-windows-msvc.zip",
+      "format": "zip",
+      "checksum": "8bb6338221caa7809c2a0f97641dea8a7ae75175c74385957c3dbb982c71b873",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "dua",
+          "src": "dua-v3.0.0-aarch64-pc-windows-msvc/dua.exe"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "Byron/dua-cli/.github/workflows/release.yml",
+        "source_ref": "refs/tags/v3.0.0",
+        "source_digest": "c74ed619a0e2f9ab9830cd5b863dc139e8f340eb",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    }
+  ]
+}

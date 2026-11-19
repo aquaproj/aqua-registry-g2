@@ -2,44 +2,6 @@
   "published_at": "2026-08-03T14:55:31Z",
   "assets": [
     {
-      "os": "linux",
-      "arch": "amd64",
-      "linked_libc": "glibc",
-      "type": "github_release",
-      "repo_owner": "Bearer",
-      "repo_name": "bearer",
-      "repo_id": 542197924,
-      "asset": "bearer_2.1.0_linux-amd64.pkg.tar.zst",
-      "format": "tar.zst",
-      "checksum": "a78a0d8dfb69d06ec7668db682ae3c8e8ad9755f68dec34f80b10efa98daaf3c",
-      "checksum_algorithm": "sha256",
-      "files": [
-        {
-          "name": "bearer",
-          "src": "usr/bin/bearer"
-        }
-      ]
-    },
-    {
-      "os": "linux",
-      "arch": "arm64",
-      "linked_libc": "glibc",
-      "type": "github_release",
-      "repo_owner": "Bearer",
-      "repo_name": "bearer",
-      "repo_id": 542197924,
-      "asset": "bearer_2.1.0_linux-arm64.pkg.tar.zst",
-      "format": "tar.zst",
-      "checksum": "a052e6c594ad88595be6c3102db3c4a13960e305385a90b7734017b191b76d05",
-      "checksum_algorithm": "sha256",
-      "files": [
-        {
-          "name": "bearer",
-          "src": "usr/bin/bearer"
-        }
-      ]
-    },
-    {
       "os": "darwin",
       "arch": "amd64",
       "type": "github_release",
@@ -67,6 +29,44 @@
       "asset": "bearer_2.1.0_darwin_arm64.tar.gz",
       "format": "tar.gz",
       "checksum": "8ffcda3cff9ed7c74a1727e5fbd6caf056d076e61ae30bf65428eafde56e8549",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "bearer",
+          "src": "bearer"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "Bearer",
+      "repo_name": "bearer",
+      "repo_id": 542197924,
+      "asset": "bearer_2.1.0_linux_amd64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "0bd1129669dbfa2461ba64f2cf99b9cb1fc8c0ca35fb27fdfdf3d3f4146ec7b9",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "bearer",
+          "src": "bearer"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "Bearer",
+      "repo_name": "bearer",
+      "repo_id": 542197924,
+      "asset": "bearer_2.1.0_linux_arm64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "3bec731fe183881b7999193f5958b80db5e0925a6171083514c160392a2dade4",
       "checksum_algorithm": "sha256",
       "files": [
         {

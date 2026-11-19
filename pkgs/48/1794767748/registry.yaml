@@ -1,0 +1,28 @@
+name: pomdtr/sunbeam
+type: github_release
+repo_owner: pomdtr
+repo_name: sunbeam
+repo_id: 530362948
+description: Command-line launcher
+version_overrides:
+  - version_constraint: semver("> 1.0.0-rc.73")
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver("> 1.0.0-rc.56")
+  - version_constraint: semver("> 1.0.0-rc.49")
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver("> 1.0.0-rc.47")
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver("<= 1.0.0-rc.47")
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: "true"
+    supported_envs:
+      - linux
+      - darwin

@@ -1,0 +1,12 @@
+name: x-motemen/gobump
+type: github_release
+repo_owner: x-motemen
+repo_name: gobump
+repo_id: 38288423
+description: Bumps up Go program version
+files:
+  - name: gobump
+    src: gobump_{{.Version}}_{{.OS}}_{{.Arch}}/gobump
+supported_envs:
+  - darwin
+  - amd64

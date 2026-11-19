@@ -1,0 +1,22 @@
+name: Mikescher/better-docker-ps
+type: github_release
+repo_owner: Mikescher
+repo_name: better-docker-ps
+repo_id: 547482183
+description: Because `docker ps` is annoying and does not fit my monitor/terminal
+  width
+files:
+  - name: dops
+supported_envs:
+  - linux
+  - darwin
+version_overrides:
+  - version_constraint: semver(">= 1.5")
+  - version_constraint: semver("< 1.5")
+    supported_envs:
+      - linux/amd64
+  - version_constraint: "true"
+asset_rules:
+  - envs:
+      - linux/amd64
+    filter: Asset matches "^dops([.].+)?$"

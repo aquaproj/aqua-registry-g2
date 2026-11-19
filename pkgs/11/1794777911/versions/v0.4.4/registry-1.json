@@ -1,0 +1,176 @@
+{
+  "published_at": "2026-06-16T17:11:41Z",
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "openvex",
+      "repo_name": "vexctl",
+      "repo_id": 587100966,
+      "asset": "vexctl-darwin-amd64",
+      "format": "raw",
+      "checksum": "6e9631e7b5020b9e5f42d57fb6670dd5323156d8d68a608aab9a8ebea0544702",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "vexctl",
+          "src": "vexctl-darwin-amd64"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "vexctl-darwin-amd64.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/openvex/vexctl/.github/workflows/release.yaml@refs/tags/v0.4.4",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "certificate_github_workflow_repository": "openvex/vexctl",
+        "certificate_github_workflow_ref": "refs/tags/v0.4.4"
+      }
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "openvex",
+      "repo_name": "vexctl",
+      "repo_id": 587100966,
+      "asset": "vexctl-darwin-arm64",
+      "format": "raw",
+      "checksum": "6d810a5022d7624a7cfe71dbdb973708d4fe4e8210d8f7bd99266f6e282b04f7",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "vexctl",
+          "src": "vexctl-darwin-arm64"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "vexctl-darwin-arm64.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/openvex/vexctl/.github/workflows/release.yaml@refs/tags/v0.4.4",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "certificate_github_workflow_repository": "openvex/vexctl",
+        "certificate_github_workflow_ref": "refs/tags/v0.4.4"
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "openvex",
+      "repo_name": "vexctl",
+      "repo_id": 587100966,
+      "asset": "vexctl-linux-amd64",
+      "format": "raw",
+      "checksum": "d315e2778af88b999ad4bba30a08aa2677ed701638e16c341b6d57b43c1e064d",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "vexctl",
+          "src": "vexctl-linux-amd64"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "vexctl-linux-amd64.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/openvex/vexctl/.github/workflows/release.yaml@refs/tags/v0.4.4",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "certificate_github_workflow_repository": "openvex/vexctl",
+        "certificate_github_workflow_ref": "refs/tags/v0.4.4"
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "openvex",
+      "repo_name": "vexctl",
+      "repo_id": 587100966,
+      "asset": "vexctl-linux-arm64",
+      "format": "raw",
+      "checksum": "2f37f2d6fd00d3d73dc2c657639d2f3b00060608aef517766fdd0e0dc07abe21",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "vexctl",
+          "src": "vexctl-linux-arm64"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "vexctl-linux-arm64.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/openvex/vexctl/.github/workflows/release.yaml@refs/tags/v0.4.4",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "certificate_github_workflow_repository": "openvex/vexctl",
+        "certificate_github_workflow_ref": "refs/tags/v0.4.4"
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "openvex",
+      "repo_name": "vexctl",
+      "repo_id": 587100966,
+      "asset": "vexctl-windows-amd64.exe",
+      "format": "raw",
+      "checksum": "af3fb09d2a3dc4f2ac2db70e7877b2da3b9650aa74cd2347a1a2b7885bf7fcfe",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "vexctl",
+          "src": "vexctl-windows-amd64.exe"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "vexctl-windows-amd64.exe.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/openvex/vexctl/.github/workflows/release.yaml@refs/tags/v0.4.4",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "certificate_github_workflow_repository": "openvex/vexctl",
+        "certificate_github_workflow_ref": "refs/tags/v0.4.4"
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "windows_arm_emulation": true,
+      "type": "github_release",
+      "repo_owner": "openvex",
+      "repo_name": "vexctl",
+      "repo_id": 587100966,
+      "asset": "vexctl-windows-amd64.exe",
+      "format": "raw",
+      "checksum": "af3fb09d2a3dc4f2ac2db70e7877b2da3b9650aa74cd2347a1a2b7885bf7fcfe",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "vexctl",
+          "src": "vexctl-windows-amd64.exe"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "vexctl-windows-amd64.exe.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/openvex/vexctl/.github/workflows/release.yaml@refs/tags/v0.4.4",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "certificate_github_workflow_repository": "openvex/vexctl",
+        "certificate_github_workflow_ref": "refs/tags/v0.4.4"
+      }
+    }
+  ]
+}

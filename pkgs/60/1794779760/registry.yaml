@@ -1,0 +1,33 @@
+name: Jamf-Concepts/Notifier
+aliases:
+  - name: jamf/Notifier
+type: github_release
+repo_owner: Jamf-Concepts
+repo_name: Notifier
+repo_id: 277776274
+description: Swift project which can post macOS alert or banner notifications on 10.15+
+  clients
+version_overrides:
+  - version_constraint: semver("> 2.3.0")
+    files:
+      - name: Notifier
+        src: Payload/Applications/Utilities/Notifier.app/Contents/MacOS/Notifier
+    supported_envs:
+      - darwin
+  - version_constraint: semver("<= 2.3.0")
+    files:
+      - name: Notifier
+        src: Payload/Applications/Utilities/Notifier.app/Contents/MacOS/Notifier
+    supported_envs:
+      - darwin
+  - version_constraint: "true"
+    files:
+      - name: Notifier
+        src: Payload/Applications/Utilities/Notifier.app/Contents/MacOS/Notifier
+    supported_envs:
+      - darwin
+asset_rules:
+  - envs:
+      - darwin/amd64
+      - darwin/arm64
+    filter: Asset matches "^dataJAR-Notifier-.+[.].+([.].+)?$" or Asset matches "^Notifier-.+[.].+([.].+)?$"

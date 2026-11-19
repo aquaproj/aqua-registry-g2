@@ -1,0 +1,22 @@
+name: wasmerio/wapm-cli
+type: github_release
+repo_owner: wasmerio
+repo_name: wapm-cli
+repo_id: 177042614
+description: WebAssembly Package Manager (CLI)
+overrides:
+  - goos: windows
+    files:
+      - name: wapm
+        src: bin/wapm.exe
+      - name: wax
+        src: bin/wax.cmd
+files:
+  - name: wapm
+    src: bin/wapm
+  - name: wax
+    src: bin/wax
+supported_envs:
+  - darwin
+  - linux
+  - amd64

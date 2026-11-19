@@ -4,3 +4,6 @@ repo_owner: eza-community
 repo_name: eza
 repo_id: 671832156
 description: A modern, maintained replacement for ls
+# Each Linux build is also published without libgit, as _no_libgit, which tied with the full
+# build.
+all_assets_filter: not (Asset contains "no_libgit")

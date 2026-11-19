@@ -1,0 +1,22 @@
+name: so-dang-cool/fib
+type: github_release
+repo_owner: so-dang-cool
+repo_name: fib
+repo_id: 403732063
+description: A Fibonacci CLI
+version_overrides:
+  - version_constraint: Version == "v1"
+    supported_envs:
+      - linux/amd64
+  - version_constraint: semver("> 1.1.2.3")
+    supported_envs:
+      - linux/amd64
+  - version_constraint: semver("<= 1.1.2.3")
+    no_asset: true
+  - version_constraint: "true"
+    supported_envs:
+      - linux/amd64
+asset_rules:
+  - envs:
+      - linux/amd64
+    filter: Asset matches "^fib([.].+)?$"

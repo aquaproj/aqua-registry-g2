@@ -1,0 +1,29 @@
+name: KeisukeYamashita/commitlint-rs
+type: github_release
+repo_owner: KeisukeYamashita
+repo_name: commitlint-rs
+repo_id: 651496389
+description: Lint commit messages  with conventional commit messages
+files:
+  - name: commitlint
+version_overrides:
+  - version_constraint: Version in ["v0.2.3", "v0.2.4"]
+  - version_constraint: semver("> 0.2.1")
+    supported_envs:
+      - linux/amd64
+      - darwin
+      - windows
+  - version_constraint: semver("> 0.1.12")
+    no_asset: true
+  - version_constraint: semver("> 0.1.8")
+    supported_envs:
+      - linux/amd64
+      - darwin
+      - windows
+  - version_constraint: semver("<= 0.1.8")
+    no_asset: true
+  - version_constraint: "true"
+    supported_envs:
+      - linux/amd64
+      - darwin
+      - windows

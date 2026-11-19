@@ -1,0 +1,15 @@
+name: mattn/twty
+type: github_release
+repo_owner: mattn
+repo_name: twty
+repo_id: 1675226
+description: command-line twitter client written in golang
+files:
+  - name: twty
+    src: twty_{{.Version}}_{{.OS}}_{{.Arch}}/twty
+version_overrides:
+  - version_constraint: semver(">= 0.0.13")
+  - version_constraint: "true"
+    supported_envs:
+      - darwin
+      - amd64

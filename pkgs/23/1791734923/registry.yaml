@@ -12,8 +12,9 @@ cosign:
     - https://github.com/kubepug/kubepug/releases/download/{{.Version}}/kubepug_darwin_amd64.tar.gz.sig
     - --certificate
     - https://github.com/kubepug/kubepug/releases/download/{{.Version}}/kubepug_darwin_amd64.tar.gz.pem
-    - --certificate-identity
-    - https://github.com/kubepug/kubepug/.github/workflows/release.yaml@refs/tags/{{.Version}}
+    # Up to v1.6.x the releases were signed while the repository was rikatz/kubepug.
+    - --certificate-identity-regexp
+    - ^https://github[.]com/(rikatz|kubepug)/kubepug/[.]github/workflows/release[.]yaml@refs/tags/{{.Version}}$
     - --certificate-oidc-issuer
     - https://token.actions.githubusercontent.com
 version_overrides:

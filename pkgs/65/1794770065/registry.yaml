@@ -1,0 +1,25 @@
+name: tektoncd/cli
+type: github_release
+repo_owner: tektoncd
+repo_name: cli
+repo_id: 181939372
+description: A CLI for interacting with Tekton
+version_overrides:
+  - version_constraint: Version == "v0.4.0"
+    files:
+      - name: tkn
+    overrides:
+      - goos: windows
+        format: zip
+        files:
+          - name: tkn
+            src: tkn_{{trimV .Version}}_{{.OS}}_{{.Arch}}/tkn.exe
+  - version_constraint: semver("> 0.1.0")
+    files:
+      - name: tkn
+  - version_constraint: semver("<= 0.1.0")
+    files:
+      - name: tkn
+  - version_constraint: "true"
+    files:
+      - name: tkn

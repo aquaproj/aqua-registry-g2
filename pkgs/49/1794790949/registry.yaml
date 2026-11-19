@@ -1,0 +1,17 @@
+name: grafana/otel-checker
+type: github_release
+repo_owner: grafana
+repo_name: otel-checker
+repo_id: 840445068
+description: Otel Me If It's Right project
+github_artifact_attestations:
+  signer_workflow: grafana/otel-checker/.github/workflows/release.yml
+version_overrides:
+  - version_constraint: semver("> 0.3.1")
+    github_artifact_attestations:
+      signer_workflow: grafana/otel-checker/.github/workflows/release.yml
+  - version_constraint: semver("<= 0.3.1")
+    no_asset: true
+  - version_constraint: "true"
+    github_artifact_attestations:
+      signer_workflow: grafana/otel-checker/.github/workflows/release.yml

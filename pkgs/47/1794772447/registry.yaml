@@ -1,0 +1,23 @@
+name: Trendyol/kink
+type: github_release
+repo_owner: Trendyol
+repo_name: kink
+repo_id: 402151087
+description: KinK is a helper CLI that facilitates to manage KinD clusters as Kubernetes
+  pods. Designed to ease clusters up for fast testing with batteries included in mind
+version_overrides:
+  - version_constraint: semver(">= 0.2.1")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("< 0.2.1")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: "true"
+    supported_envs:
+      - darwin
+      - windows
+      - amd64

@@ -1,0 +1,14 @@
+name: minamijoyo/tfupdate
+type: github_release
+repo_owner: minamijoyo
+repo_name: tfupdate
+repo_id: 201781630
+description: Update version constraints in your Terraform configurations
+version_overrides:
+  - version_constraint: semver("> 0.6.2")
+  - version_constraint: semver("<= 0.6.2")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: "true"

@@ -1,0 +1,56 @@
+name: UpCloudLtd/upcloud-cli
+type: github_release
+repo_owner: UpCloudLtd
+repo_name: upcloud-cli
+repo_id: 295995198
+description: UpCloud command line client (upctl)
+files:
+  - name: upctl
+github_artifact_attestations:
+  signer_workflow: UpCloudLtd/workflows/.github/workflows/build-provenance.yaml
+version_overrides:
+  - version_constraint: Version == "v3.32.0"
+  - version_constraint: semver("> 3.34.0")
+    cosign:
+      opts:
+        - --certificate-identity
+        - https://github.com/UpCloudLtd/workflows/.github/workflows/build-provenance.yaml@refs/heads/main
+        - --certificate-oidc-issuer
+        - https://token.actions.githubusercontent.com
+        - --certificate-github-workflow-repository
+        - UpCloudLtd/upcloud-cli
+        - --certificate-github-workflow-ref
+        - refs/tags/{{.Version}}
+      bundle:
+        type: github_release
+        asset: upcloud-cli.sigstore.json
+    github_artifact_attestations:
+      signer_workflow: UpCloudLtd/workflows/.github/workflows/build-provenance.yaml
+  - version_constraint: semver(">= 3.31.0")
+    github_artifact_attestations:
+      signer_workflow: UpCloudLtd/workflows/.github/workflows/build-provenance.yaml
+  - version_constraint: semver(">= 3.24.0")
+    github_artifact_attestations:
+      signer_workflow: UpCloudLtd/upcloud-cli/.github/workflows/publish.yml
+  - version_constraint: semver("> 0.5.0")
+  - version_constraint: semver("<= 0.5.0")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: "true"
+    cosign:
+      opts:
+        - --certificate-identity
+        - https://github.com/UpCloudLtd/workflows/.github/workflows/build-provenance.yaml@refs/heads/main
+        - --certificate-oidc-issuer
+        - https://token.actions.githubusercontent.com
+        - --certificate-github-workflow-repository
+        - UpCloudLtd/upcloud-cli
+        - --certificate-github-workflow-ref
+        - refs/tags/{{.Version}}
+      bundle:
+        type: github_release
+        asset: upcloud-cli.sigstore.json
+    github_artifact_attestations:
+      signer_workflow: UpCloudLtd/workflows/.github/workflows/build-provenance.yaml

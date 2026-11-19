@@ -1,0 +1,16 @@
+name: prometheus/prom2json
+type: github_release
+repo_owner: prometheus
+repo_name: prom2json
+repo_id: 21465618
+description: A tool to scrape a Prometheus client and dump the result as JSON
+files:
+  - name: prom2json
+    src: prom2json-{{trimV .Version}}.{{.OS}}-{{.Arch}}/prom2json
+version_overrides:
+  - version_constraint: semver(">= 1.3.1")
+  - version_constraint: "true"
+    supported_envs:
+      - darwin
+      - linux
+      - amd64

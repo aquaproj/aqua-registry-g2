@@ -76,3 +76,6 @@ version_overrides:
       - darwin
       - windows
       - amd64
+# 1.0-m8 publishes a build for Maven 3.9 (m39) and one for Maven 4.0 (m40); m39 is the one of
+# a released Maven.
+all_assets_filter: not (Asset contains "-m40-")

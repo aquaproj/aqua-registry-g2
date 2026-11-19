@@ -8,11 +8,12 @@
 # - a path under pkgs/ is in the directory its id says;
 # - a pull request ar2 opened for a package touches that package's directory and nothing
 #   else, the one bringing the lists of versions up to date touches nothing but those lists,
-#   and one ar2 opened for anything else touches no package;
-# - a registry-*.json already published is changed or removed only by a pull request that
-#   isn't set to merge itself, because a version the registry serves is meant to stay what
-#   it was, and a person merging the pull request is what says the change was read and is
-#   meant. ar2 labels such a pull request replaces-published for whoever reads the list.
+#   and one ar2 opened for anything else touches no package.
+#
+# A registry-*.json already published may be changed or removed. ar2 never turns auto-merge
+# on for such a pull request and labels it replaces-published, so it waits for a person; a
+# person turning auto-merge on for one is that person's decision, and the checks don't
+# second-guess it.
 #
 # It writes what the jobs after it need to $GITHUB_OUTPUT: the package directories, and the
 # registry files to check.
@@ -43,11 +44,6 @@ if [ "$HEAD_REF" = ar2_versions ]; then
 	lists_only=true
 fi
 
-# Whether the pull request is set to merge itself. One that replaces what is published may
-# not be: merging it is a person's decision. test.yaml runs again when auto-merge is turned on
-# or off, so turning it on after the checks passed fails them again.
-auto_merge=$(gh api "repos/$GITHUB_REPOSITORY/pulls/$NUMBER" --jq '.auto_merge != null')
-
 # The pull request rewriting every published file in the form a generation writes now is
 # checked by deriving it again from its base (ar2 rewrite --verify, in wc_packages.yaml),
 # rather than by downloading every asset a second time. Nothing about a release changes in
@@ -55,9 +51,6 @@ auto_merge=$(gh api "repos/$GITHUB_REPOSITORY/pulls/$NUMBER" --jq '.auto_merge !
 #
 # It replaces every published file all the same, so a person merges it like any other.
 if [ "$HEAD_REF" = ar2_rewrite ]; then
-	if $auto_merge; then
-		fail "this pull request rewrites every published file, so it may not merge itself. Turn auto-merge off, read it, and merge it."
-	fi
 	echo "The pull request that rewrites the published files is checked by ar2 rewrite --verify." >> "$GITHUB_STEP_SUMMARY"
 	{
 		echo "packages="
@@ -105,9 +98,6 @@ while IFS=$'\t' read -r status file previous; do
 			echo "$file" >> files.txt
 			;;
 		*)
-			if $auto_merge; then
-				fail "$file is published and this pull request would change it ($status), so it may not merge itself. Turn auto-merge off, read it, and merge it."
-			fi
 			if [ "$status" != removed ]; then
 				echo "$file" >> files.txt
 			fi

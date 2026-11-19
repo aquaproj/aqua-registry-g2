@@ -1,0 +1,21 @@
+name: dex4er/tf
+type: github_release
+repo_owner: dex4er
+repo_name: tf
+repo_id: 527537343
+description: Less verbose and more shell friendly Terraform
+github_artifact_attestations:
+  signer_workflow: dex4er/tf/.github/workflows/release.yaml
+version_overrides:
+  - version_constraint: semver("> 2.14.0")
+    github_artifact_attestations:
+      signer_workflow: dex4er/tf/.github/workflows/release.yaml
+  - version_constraint: semver("> 1.7.0")
+  - version_constraint: semver("<= 1.7.0")
+    format: raw
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: "true"
+    github_artifact_attestations:
+      signer_workflow: dex4er/tf/.github/workflows/release.yaml

@@ -1,0 +1,10 @@
+name: dthagard/tforganize
+type: github_release
+repo_owner: dthagard
+repo_name: tforganize
+repo_id: 648574638
+description: CLI tool to organize your Terraform code
+version_overrides:
+  - version_constraint: Version == "v0.1.0"
+    error_message: This version isn't support because assets are broken.
+  - version_constraint: "true"

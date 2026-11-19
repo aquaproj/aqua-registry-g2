@@ -1,0 +1,71 @@
+name: chainguard-dev/melange
+type: github_release
+repo_owner: chainguard-dev
+repo_name: melange
+repo_id: 467239260
+description: build APKs from source code
+version_overrides:
+  - version_constraint: semver("> 0.2.0")
+    files:
+      - name: melange
+        src: melange_{{trimV .Version}}_{{.OS}}_{{.Arch}}/melange
+    cosign:
+      opts:
+        - --certificate-identity-regexp
+        - https://github\.com/chainguard-dev/melange/\.github/workflows/release\.yaml@.*
+        - --certificate-oidc-issuer
+        - https://token.actions.githubusercontent.com
+        - --signature
+        - https://github.com/chainguard-dev/melange/releases/download/{{.Version}}/melange_{{trimV
+          .Version}}_{{.OS}}_{{.Arch}}.{{.Format}}.sig
+        - --certificate
+        - https://github.com/chainguard-dev/melange/releases/download/{{.Version}}/melange_{{trimV
+          .Version}}_{{.OS}}_{{.Arch}}.{{.Format}}.crt
+        - --certificate-github-workflow-repository
+        - chainguard-dev/melange
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver("<= 0.2.0")
+    files:
+      - name: melange
+        src: melange_{{trimV .Version}}_{{.OS}}_{{.Arch}}/melange
+    cosign:
+      opts:
+        - --certificate-identity-regexp
+        - https://github\.com/chainguard-dev/melange/\.github/workflows/release\.yaml@.*
+        - --certificate-oidc-issuer
+        - https://token.actions.githubusercontent.com
+        - --signature
+        - https://github.com/chainguard-dev/melange/releases/download/{{.Version}}/melange_{{trimV
+          .Version}}_{{.OS}}_{{.Arch}}.{{.Format}}.sig
+        - --certificate
+        - https://github.com/chainguard-dev/melange/releases/download/{{.Version}}/melange_{{trimV
+          .Version}}_{{.OS}}_{{.Arch}}.{{.Format}}.crt
+        - --certificate-github-workflow-repository
+        - chainguard-dev/melange
+        - --certificate-github-workflow-ref
+        - refs/tags/{{.Version}}
+    supported_envs:
+      - linux
+  - version_constraint: "true"
+    files:
+      - name: melange
+        src: melange_{{trimV .Version}}_{{.OS}}_{{.Arch}}/melange
+    cosign:
+      opts:
+        - --certificate-identity-regexp
+        - https://github\.com/chainguard-dev/melange/\.github/workflows/release\.yaml@.*
+        - --certificate-oidc-issuer
+        - https://token.actions.githubusercontent.com
+        - --signature
+        - https://github.com/chainguard-dev/melange/releases/download/{{.Version}}/melange_{{trimV
+          .Version}}_{{.OS}}_{{.Arch}}.{{.Format}}.sig
+        - --certificate
+        - https://github.com/chainguard-dev/melange/releases/download/{{.Version}}/melange_{{trimV
+          .Version}}_{{.OS}}_{{.Arch}}.{{.Format}}.crt
+        - --certificate-github-workflow-repository
+        - chainguard-dev/melange
+    supported_envs:
+      - linux
+      - darwin

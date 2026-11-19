@@ -17,3 +17,5 @@ version_overrides:
   - version_constraint: semver("< 11.5.0")
     error_message: The version is too old. Please use a version 11.5.0 or higher.
   - version_constraint: "true"
+# The release publishes several programs, and a -slim build of cdxgen.
+all_assets_filter: Asset startsWith "cdxgen-" and not (Asset contains "-slim")

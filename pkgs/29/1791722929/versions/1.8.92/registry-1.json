@@ -22,6 +22,7 @@
     {
       "os": "darwin",
       "arch": "arm64",
+      "rosetta2": true,
       "type": "github_release",
       "repo_owner": "alexhallam",
       "repo_name": "tv",
@@ -52,6 +53,44 @@
         {
           "name": "tidy-viewer",
           "src": "tidy-viewer.exe"
+        }
+      ]
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "windows_arm_emulation": true,
+      "type": "github_release",
+      "repo_owner": "alexhallam",
+      "repo_name": "tv",
+      "repo_id": 363146690,
+      "asset": "tidy-viewer-1.8.92-x86_64-pc-windows-msvc.zip",
+      "format": "zip",
+      "checksum": "f93e184febf1bd594f2c02867734cea0e098816d77dc3019c32948be35646967",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "tidy-viewer",
+          "src": "tidy-viewer.exe"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "alexhallam",
+      "repo_name": "tv",
+      "repo_id": 363146690,
+      "asset": "tidy-viewer-1.8.92.tgz",
+      "format": "tgz",
+      "checksum": "fa495f1db4883bc92128174abb55662ad6b8a2a99b39bf74e6b4aea3e52f94bf",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "tidy-viewer",
+          "src": "tidy-viewer"
         }
       ]
     }

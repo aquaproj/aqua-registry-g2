@@ -1,0 +1,57 @@
+{
+  "published_at": "2025-11-06T01:49:11Z",
+  "assets": [
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "containerd",
+      "repo_name": "fuse-overlayfs-snapshotter",
+      "repo_id": 216317554,
+      "asset": "containerd-fuse-overlayfs-2.1.7-linux-amd64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "d54148043c22381af89cec2a167431e40668716404a1eb682ca69dfb890376f3",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "containerd-fuse-overlayfs-grpc",
+          "src": "containerd-fuse-overlayfs-grpc"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "containerd/fuse-overlayfs-snapshotter/.github/workflows/release.yml",
+        "source_ref": "refs/tags/v2.1.7",
+        "source_digest": "da57796c7d0a2b608abf173651cf148706e33337",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "containerd",
+      "repo_name": "fuse-overlayfs-snapshotter",
+      "repo_id": 216317554,
+      "asset": "containerd-fuse-overlayfs-2.1.7-linux-arm64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "94ed6c2c3bece42e0c789ea056565b64fe487de4644121ee0dfb8acd8ef9369c",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "containerd-fuse-overlayfs-grpc",
+          "src": "containerd-fuse-overlayfs-grpc"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "containerd/fuse-overlayfs-snapshotter/.github/workflows/release.yml",
+        "source_ref": "refs/tags/v2.1.7",
+        "source_digest": "da57796c7d0a2b608abf173651cf148706e33337",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    }
+  ]
+}

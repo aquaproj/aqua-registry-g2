@@ -1,0 +1,17 @@
+name: syumai/sbx
+type: github_release
+repo_owner: syumai
+repo_name: sbx
+repo_id: 968266741
+description: an easy-to-use command-line tool for running commands with macOS sandbox-exec
+  policies using flag-based interface
+version_overrides:
+  - version_constraint: Version == "v0.0.1"
+    no_asset: true
+  - version_constraint: semver("> 0.0.4")
+    supported_envs:
+      - darwin
+  - version_constraint: semver("<= 0.0.4")
+  - version_constraint: "true"
+    supported_envs:
+      - darwin

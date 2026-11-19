@@ -1,0 +1,17 @@
+name: sue445/plant_erd
+type: github_release
+repo_owner: sue445
+repo_name: plant_erd
+repo_id: 223186878
+description: ERD exporter with PlantUML and mermaid format
+version_overrides:
+  - version_constraint: Version == "v0.4.1.rc1"
+    no_asset: true
+  - version_constraint: "true"
+    files:
+      - name: plant_erd
+        src: '{{.AssetWithoutExt}}'
+    supported_envs:
+      - darwin
+      - windows
+      - amd64

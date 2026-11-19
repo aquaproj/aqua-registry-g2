@@ -1,0 +1,23 @@
+name: fujiwara/tfstate-lookup
+type: github_release
+repo_owner: fujiwara
+repo_name: tfstate-lookup
+repo_id: 249898286
+description: Lookup resource attributes in tfstate
+version_overrides:
+  - version_constraint: semver("> 0.0.14")
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver("> 0.0.3")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: semver("<= 0.0.3")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: "true"
+    supported_envs:
+      - linux
+      - darwin

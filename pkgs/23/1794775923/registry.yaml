@@ -1,0 +1,19 @@
+name: chenjiandongx/kubectl-images
+type: github_release
+repo_owner: chenjiandongx
+repo_name: kubectl-images
+repo_id: 240276816
+description: Show container images used in the cluster
+version_overrides:
+  - version_constraint: Version == "v0.3.3"
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("> 0.3.2")
+  - version_constraint: semver("<= 0.3.2")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: "true"

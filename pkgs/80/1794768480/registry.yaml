@@ -1,0 +1,19 @@
+name: rhysd/hgrep
+type: github_release
+repo_owner: rhysd
+repo_name: hgrep
+repo_id: 416368107
+description: Grep with human-friendly search results
+files:
+  - name: hgrep
+    src: hgrep-{{.Version}}-{{.Arch}}-{{.OS}}/hgrep
+supported_envs:
+  - darwin
+  - linux
+  - windows/amd64
+version_overrides:
+  - version_constraint: semver(">= 0.2.5")
+  - version_constraint: "true"
+    supported_envs:
+      - darwin
+      - amd64

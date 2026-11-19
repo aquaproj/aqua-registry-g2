@@ -1,0 +1,16 @@
+name: CQLabs/homebrew-dcm
+type: github_release
+repo_owner: CQLabs
+repo_name: homebrew-dcm
+repo_id: 589549620
+description: Homebrew formula for DCM
+files:
+  - name: dcm
+version_overrides:
+  - version_constraint: "true"
+    files:
+      - name: dcm
+    supported_envs:
+      - darwin
+      - windows
+      - amd64

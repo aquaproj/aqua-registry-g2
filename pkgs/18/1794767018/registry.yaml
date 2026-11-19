@@ -1,0 +1,43 @@
+name: Azure/kubelogin
+type: github_release
+repo_owner: Azure
+repo_name: kubelogin
+repo_id: 250050091
+description: A Kubernetes credential (exec) plugin implementing azure authentication
+version_overrides:
+  - version_constraint: Version == "v0.0.10"
+    files:
+      - name: kubelogin
+        src: bin/{{.OS}}_{{.Arch}}/kubelogin
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: Version == "v0.1.9"
+    files:
+      - name: kubelogin
+        src: bin/{{.OS}}_{{.Arch}}/kubelogin
+  - version_constraint: semver("> 0.2.6")
+    files:
+      - name: kubelogin
+        src: bin/{{.OS}}_{{.Arch}}/kubelogin
+  - version_constraint: semver("> 0.1.7")
+    no_asset: true
+  - version_constraint: semver("> 0.0.9")
+    files:
+      - name: kubelogin
+        src: bin/{{.OS}}_{{.Arch}}/kubelogin
+  - version_constraint: semver("> 0.0.4")
+    files:
+      - name: kubelogin
+        src: bin/{{.OS}}_{{.Arch}}/kubelogin
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("<= 0.0.4")
+    no_asset: true
+  - version_constraint: "true"
+    files:
+      - name: kubelogin
+        src: bin/{{.OS}}_{{.Arch}}/kubelogin

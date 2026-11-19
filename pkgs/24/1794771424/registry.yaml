@@ -1,0 +1,22 @@
+name: out-of-cheese-error/the-way
+type: github_release
+repo_owner: out-of-cheese-error
+repo_name: the-way
+repo_id: 258870502
+description: A code snippets manager for your terminal
+version_overrides:
+  - version_constraint: Version == "v0.2.1-osx"
+    supported_envs:
+      - darwin
+  - version_constraint: semver("> 0.14.0")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: semver("<= 0.14.0")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: "true"
+    supported_envs:
+      - linux/amd64
+      - darwin

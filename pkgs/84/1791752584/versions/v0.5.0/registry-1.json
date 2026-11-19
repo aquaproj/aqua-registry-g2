@@ -38,6 +38,25 @@
       ]
     },
     {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "corneliusweig",
+      "repo_name": "rakkess",
+      "repo_id": 172054938,
+      "asset": "rakkess-amd64-linux.tar.gz",
+      "format": "tar.gz",
+      "checksum": "f9d90b3d2d96c3afc76adb1d92755a11b82f27800d44864416479b128f3f991e",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "rakkess",
+          "src": "rakkess-amd64-linux"
+        }
+      ]
+    },
+    {
       "os": "windows",
       "arch": "amd64",
       "type": "github_release",
@@ -58,6 +77,7 @@
     {
       "os": "windows",
       "arch": "arm64",
+      "windows_arm_emulation": true,
       "type": "github_release",
       "repo_owner": "corneliusweig",
       "repo_name": "rakkess",
@@ -70,25 +90,6 @@
         {
           "name": "rakkess",
           "src": "rakkess-amd64-windows.exe"
-        }
-      ]
-    },
-    {
-      "os": "linux",
-      "arch": "amd64",
-      "linked_libc": "static",
-      "type": "github_release",
-      "repo_owner": "corneliusweig",
-      "repo_name": "rakkess",
-      "repo_id": 172054938,
-      "asset": "rakkess-amd64-linux.tar.gz",
-      "format": "tar.gz",
-      "checksum": "f9d90b3d2d96c3afc76adb1d92755a11b82f27800d44864416479b128f3f991e",
-      "checksum_algorithm": "sha256",
-      "files": [
-        {
-          "name": "rakkess",
-          "src": "rakkess-amd64-linux"
         }
       ]
     }

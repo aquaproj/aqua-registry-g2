@@ -6,6 +6,11 @@ repo_id: 67623822
 description: Maintainable configuration files
 files:
   - name: dhall
+# 1.40.2's dhall-1.40.2-x86_64-macos.tar.bz2 is an uncompressed tar archive despite its
+# name, and aqua picks the decompressor by the name, so nothing can be installed from it.
+asset_filters:
+  - version_constraint: Version == "1.40.2"
+    all_assets_filter: not (Asset contains "-macos")
 version_overrides:
   - version_constraint: Version == "1.42.1"
     no_asset: true

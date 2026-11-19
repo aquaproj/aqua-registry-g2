@@ -7,3 +7,21 @@ description: Review Access - kubectl plugin to show an access matrix for k8s ser
 files:
   - name: rakkess
     src: rakkess-{{.Arch}}-{{.OS}}
+version_overrides:
+  # v0.4.2's Windows zip holds the executable under out/.
+  - version_constraint: Version == "v0.4.2"
+    overrides:
+      - goos: windows
+        files:
+          - name: rakkess
+            src: out/rakkess-{{.Arch}}-{{.OS}}
+  # Up to v0.4.1 the builds are named rakkess-<os>-<arch>, gzipped. The Windows zip holds
+  # out/rakkess-windows-amd64 with no .exe, which Windows can't run.
+  - version_constraint: semver("<= 0.4.1")
+    files:
+      - name: rakkess
+        src: rakkess-{{.OS}}-{{.Arch}}
+    supported_envs:
+      - darwin
+      - linux/amd64
+  - version_constraint: "true"

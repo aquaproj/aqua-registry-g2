@@ -45,3 +45,5 @@ version_overrides:
     files:
       - name: glider
         src: '{{.AssetWithoutExt}}/glider'
+# amd64v3 builds, for newer x86-64 CPUs, tied with the amd64 one.
+all_assets_filter: not (Asset matches "amd64v[0-9]")

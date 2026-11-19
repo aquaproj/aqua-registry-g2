@@ -1,0 +1,14 @@
+name: replicatedhq/outdated
+type: github_release
+repo_owner: replicatedhq
+repo_name: outdated
+repo_id: 200257453
+description: Kubectl plugin to find and report outdated images running in a Kubernetes
+  cluster
+files:
+  - name: kubectl-outdated
+    src: outdated
+supported_envs:
+  - darwin
+  - linux
+  - amd64

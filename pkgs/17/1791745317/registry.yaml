@@ -5,6 +5,9 @@ repo_name: secretspec
 repo_id: 1013984512
 description: Declare secrets once. Store them anywhere
 version_overrides:
+  # v0.19.0 published libraries alone, and no build of the CLI.
+  - version_constraint: Version == "v0.19.0"
+    no_asset: true
   - version_constraint: Version == "v0.2.0"
     files:
       - name: secretspec
@@ -21,3 +24,7 @@ version_overrides:
       - goos: windows
         files:
           - name: secretspec
+# The release publishes FFI libraries, PHP extensions, a Go library and an XCFramework
+# beside the CLI, some named like a build of it (secretspec_linux_amd64.so), and v0.19.0
+# published no CLI, so the FFI library was offered.
+all_assets_filter: not (Asset contains "ffi" or Asset contains "php-native" or Asset contains "go-static" or Asset contains "xcframework" or Asset matches "[.](so|dll|dylib)$")

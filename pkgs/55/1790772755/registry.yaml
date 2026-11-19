@@ -52,3 +52,7 @@ all_assets_filter: Asset matches "^borg-[^.]+$"
 asset_filters:
     - version_constraint: semver(">= 1.4.2")
       all_assets_filter: Asset matches "^borg-[^.]+-gh$"
+    # Before 1.4.2 the Linux binary is published for three glibc versions, which tie.
+    # glibc236 is the one aqua-registry's definition chose.
+    - version_constraint: semver("<= 1.4.1")
+      all_assets_filter: Asset matches "^borg-[^.]+$" and not (Asset matches "^borg-linux-glibc2(28|31)$")

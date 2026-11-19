@@ -1,0 +1,15 @@
+name: containers/gvisor-tap-vsock/qemu-wrapper
+type: github_release
+repo_owner: containers
+repo_name: gvisor-tap-vsock
+repo_id: 282845245
+description: A new network stack based on gVisor
+version_overrides:
+  - version_constraint: "true"
+    supported_envs:
+      - linux/amd64
+all_assets_filter: Asset matches "^qemu-wrapper([.].+)?$" or Asset endsWith ".intoto.jsonl"
+asset_rules:
+  - envs:
+      - linux/amd64
+    filter: Asset matches "^qemu-wrapper([.].+)?$"

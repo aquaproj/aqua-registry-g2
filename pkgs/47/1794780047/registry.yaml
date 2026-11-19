@@ -1,0 +1,13 @@
+name: llogick/zigscient
+type: github_release
+repo_owner: llogick
+repo_name: zigscient
+repo_id: 873520161
+description: A Zig Language Server
+files:
+  - name: zls
+version_overrides:
+  - version_constraint: "true"
+    files:
+      - name: zls
+        src: '{{.AssetWithoutExt}}'

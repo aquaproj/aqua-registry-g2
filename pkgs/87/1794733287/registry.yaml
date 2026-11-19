@@ -1,0 +1,9 @@
+name: prometheus/promlens
+type: github_release
+repo_owner: prometheus
+repo_name: promlens
+repo_id: 547991185
+description: PromLens – The query builder, analyzer, and explainer for PromQL
+files:
+  - name: promlens
+    src: promlens-{{trimV .Version}}.{{.OS}}-{{.Arch}}/promlens

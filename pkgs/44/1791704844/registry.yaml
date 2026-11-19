@@ -4,24 +4,11 @@ repo_owner: Bearer
 repo_name: bearer
 repo_id: 542197924
 description: Code security scanning tool (SAST) to discover, filter and prioritize security and privacy risks
+# The Arch Linux package (.pkg.tar.zst) ties with the tarball for Linux, so it is left out.
+# The tarball holds the executable at the top, where the darwin one is too.
+all_assets_filter: not (Asset endsWith ".pkg.tar.zst")
 version_overrides:
-  - version_constraint: semver("> 1.43.4")
-    overrides:
-      - goos: linux
-        files:
-          - name: bearer
-            src: usr/bin/bearer
   - version_constraint: semver("> 0.24.0")
-    overrides:
-      - goos: linux
-        files:
-          - name: bearer
-            src: usr/bin/bearer
   - version_constraint: semver("<= 0.24.0")
     no_asset: true
   - version_constraint: "true"
-    overrides:
-      - goos: linux
-        files:
-          - name: bearer
-            src: usr/bin/bearer

@@ -27,6 +27,7 @@ version_overrides:
         src: bin/codex
 asset_filters:
   - version_constraint: semver("> 0.133.0-alpha.1")
-    all_assets_filter: Asset matches "^codex-package-"
+    # A -bazel build tied with the ordinary one.
+    all_assets_filter: Asset matches "^codex-package-" and not (Asset contains "-bazel")
   - version_constraint: "true"
     all_assets_filter: Asset matches "^codex-(x86_64|aarch64)-"

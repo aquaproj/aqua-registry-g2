@@ -1,0 +1,20 @@
+name: int128/ghcp
+type: github_release
+repo_owner: int128
+repo_name: ghcp
+repo_id: 173228257
+description: Tool to fork a repository, commit files, create a pull request and upload
+  assets using GitHub API
+version_overrides:
+  - version_constraint: semver("> 1.13.0")
+  - version_constraint: semver("> 1.5.0")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("<= 1.5.0")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: "true"

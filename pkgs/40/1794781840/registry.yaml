@@ -1,0 +1,14 @@
+name: kbrdn1/gwm-cli
+type: github_release
+repo_owner: kbrdn1
+repo_name: gwm-cli
+repo_id: 1242368753
+description: git worktree manager — Rust CLI + ratatui TUI, native libgit2, per-repo
+  bootstrap via .gwm.toml
+files:
+  - name: gwm
+version_overrides:
+  - version_constraint: "true"
+    files:
+      - name: gwm
+        src: '{{.AssetWithoutExt}}/gwm'

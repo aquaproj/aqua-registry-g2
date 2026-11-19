@@ -1,0 +1,33 @@
+name: aquaproj/registry-tool
+type: github_release
+repo_owner: aquaproj
+repo_name: registry-tool
+repo_id: 520401912
+description: CLI to develop aqua Registry
+files:
+  - name: argd
+packslip:
+  identity_prefix: https://github.com/suzuki-shunsuke/go-release-workflow/
+  issuer: https://token.actions.githubusercontent.com
+version_overrides:
+  - version_constraint: Version == "v0.3.7-0"
+    files:
+      - name: aqua-registry
+    slsa_provenance:
+      type: github_release
+      asset: multiple.intoto.jsonl
+  - version_constraint: semver("> 0.5.9")
+  - version_constraint: semver("> 0.3.6")
+    slsa_provenance:
+      type: github_release
+      asset: multiple.intoto.jsonl
+  - version_constraint: semver("> 0.1.5")
+    files:
+      - name: aqua-registry
+    slsa_provenance:
+      type: github_release
+      asset: multiple.intoto.jsonl
+  - version_constraint: semver("<= 0.1.5")
+    files:
+      - name: aqua-registry
+  - version_constraint: "true"

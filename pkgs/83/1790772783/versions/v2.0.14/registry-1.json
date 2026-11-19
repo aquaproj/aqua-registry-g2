@@ -1,0 +1,97 @@
+{
+  "published_at": "2026-10-13T22:26:41Z",
+  "assets": [
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "containerd",
+      "repo_name": "containerd",
+      "repo_id": 46089560,
+      "asset": "containerd-static-2.0.14-linux-amd64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "ca8a02e4949fea7fe201c37fbaed5013bc8bb77f6dce99d2e749998bb57bf36a",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "containerd",
+          "src": "bin/containerd"
+        },
+        {
+          "name": "containerd-shim-runc-v2",
+          "src": "bin/containerd-shim-runc-v2"
+        },
+        {
+          "name": "containerd-stress",
+          "src": "bin/containerd-stress"
+        },
+        {
+          "name": "ctr",
+          "src": "bin/ctr"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "containerd-2.0.14-attestation.intoto.jsonl"
+        },
+        "certificate_identity": "https://github.com/containerd/containerd/.github/workflows/release.yml@refs/tags/v2.0.14",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      },
+      "github_artifact_attestations": {
+        "signer_workflow": "containerd/containerd/.github/workflows/release.yml",
+        "source_ref": "refs/tags/v2.0.14",
+        "source_digest": "9681afd6c50dc7f18b68cbea4cee26f48b5e22ae",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "containerd",
+      "repo_name": "containerd",
+      "repo_id": 46089560,
+      "asset": "containerd-static-2.0.14-linux-arm64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "ffe3eaad23084cefec85fe1614ba0d897562b27be8d5b4e472c62f15a3714b9e",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "containerd",
+          "src": "bin/containerd"
+        },
+        {
+          "name": "containerd-shim-runc-v2",
+          "src": "bin/containerd-shim-runc-v2"
+        },
+        {
+          "name": "containerd-stress",
+          "src": "bin/containerd-stress"
+        },
+        {
+          "name": "ctr",
+          "src": "bin/ctr"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "containerd-2.0.14-attestation.intoto.jsonl"
+        },
+        "certificate_identity": "https://github.com/containerd/containerd/.github/workflows/release.yml@refs/tags/v2.0.14",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      },
+      "github_artifact_attestations": {
+        "signer_workflow": "containerd/containerd/.github/workflows/release.yml",
+        "source_ref": "refs/tags/v2.0.14",
+        "source_digest": "9681afd6c50dc7f18b68cbea4cee26f48b5e22ae",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    }
+  ]
+}

@@ -18,3 +18,9 @@ version_overrides:
     - version_constraint: semver("<= 0.2.0")
       no_asset: true
     - version_constraint: "true"
+# The Windows asset of v0.10.2 is a damaged tar archive: it breaks off inside
+# wasm-pack.exe, so nothing can be installed from it. wasm-pack-init.exe, which every
+# release publishes, is the installer rather than wasm-pack, so it is no stand-in.
+asset_filters:
+    - version_constraint: Version == "v0.10.2"
+      all_assets_filter: not (Asset contains "windows" or Asset startsWith "wasm-pack-init")

@@ -1,0 +1,14 @@
+name: firecracker-microvm/firectl
+type: github_release
+repo_owner: firecracker-microvm
+repo_name: firectl
+repo_id: 160432801
+description: firectl is a command-line tool to run Firecracker microVMs
+version_overrides:
+  - version_constraint: "true"
+    supported_envs:
+      - linux/amd64
+asset_rules:
+  - envs:
+      - linux/amd64
+    filter: Asset matches "^firectl-.+([.].+)?$"

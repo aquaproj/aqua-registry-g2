@@ -1,0 +1,20 @@
+name: openshift/rosa
+type: github_release
+repo_owner: openshift
+repo_name: rosa
+repo_id: 249552331
+version_filter: not (Version matches "rc[0-9]+$")
+version_overrides:
+  - version_constraint: Version == "v1.2.19"
+    no_asset: true
+  - version_constraint: semver("> 1.2.26")
+  - version_constraint: semver("> 0.0.2")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("<= 0.0.2")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: "true"

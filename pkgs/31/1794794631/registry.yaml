@@ -1,0 +1,17 @@
+name: suzuki-shunsuke/tfrstate
+type: github_release
+repo_owner: suzuki-shunsuke
+repo_name: tfrstate
+repo_id: 894243910
+description: Find directories where changed terraform_remote_state data source is
+  used
+packslip:
+  identity_prefix: https://github.com/suzuki-shunsuke/go-release-workflow/
+  issuer: https://token.actions.githubusercontent.com
+version_overrides:
+  - version_constraint: semver("> 1.0.0")
+  - version_constraint: semver("<= 1.0.0")
+    slsa_provenance:
+      type: github_release
+      asset: multiple.intoto.jsonl
+  - version_constraint: "true"

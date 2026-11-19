@@ -1,0 +1,26 @@
+name: entireio/git-sync
+type: github_release
+repo_owner: entireio
+repo_name: git-sync
+repo_id: 1205118051
+description: Mirror git refs from a source remote to a target remote without a local
+  checkout. Packfiles stream directly over Smart HTTP and an in-memory object store
+github_artifact_attestations:
+  signer_workflow: entireio/git-sync/.github/workflows/release.yml
+version_overrides:
+  - version_constraint: semver("> 0.8.0")
+    github_artifact_attestations:
+      signer_workflow: entireio/git-sync/.github/workflows/release.yml
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver("<= 0.8.0")
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: "true"
+    github_artifact_attestations:
+      signer_workflow: entireio/git-sync/.github/workflows/release.yml
+    supported_envs:
+      - linux
+      - darwin

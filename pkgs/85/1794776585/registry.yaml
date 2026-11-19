@@ -1,0 +1,19 @@
+name: making/rsc
+type: github_release
+repo_owner: making
+repo_name: rsc
+repo_id: 224445169
+description: RSocket Client CLI (RSC) that aims to be a curl for RSocket
+version_overrides:
+  - version_constraint: semver("> 0.5.0")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: semver("<= 0.5.0")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: "true"
+    supported_envs:
+      - linux/amd64
+      - darwin

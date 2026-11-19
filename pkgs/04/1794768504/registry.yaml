@@ -1,0 +1,19 @@
+name: fioncat/otree
+type: github_release
+repo_owner: fioncat
+repo_name: otree
+repo_id: 799161509
+description: A command line tool to view objects (JSON/YAML/TOML) in TUI tree widget
+version_overrides:
+  - version_constraint: semver("> 0.3.0")
+    supported_envs:
+      - linux
+      - darwin/arm64
+  - version_constraint: semver("<= 0.3.0")
+    supported_envs:
+      - linux/amd64
+      - darwin/arm64
+  - version_constraint: "true"
+    supported_envs:
+      - linux
+      - darwin/arm64

@@ -1,0 +1,17 @@
+name: defenseunicorns/uds-cli
+type: github_release
+repo_owner: defenseunicorns
+repo_name: uds-cli
+repo_id: 667500482
+files:
+  - name: uds
+version_overrides:
+  - version_constraint: Version == "nightly-unstable"
+    error_message: nightly-unstable is not supported.
+  - version_constraint: "true"
+    files:
+      - name: uds
+        src: uds-cli_{{.Version}}_{{.OS}}_{{.Arch}}
+    supported_envs:
+      - linux
+      - darwin

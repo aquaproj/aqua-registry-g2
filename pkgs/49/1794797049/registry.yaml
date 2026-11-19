@@ -1,0 +1,20 @@
+name: IxDay/mruby
+type: github_release
+repo_owner: IxDay
+repo_name: mruby
+repo_id: 877826377
+description: Lightweight Ruby
+files:
+  - name: mruby
+  - name: mrake
+version_overrides:
+  - version_constraint: "true"
+    files:
+      - name: mruby
+      - name: mrake
+    overrides:
+      - goos: windows
+        files:
+          - name: mruby
+          - name: mrake
+            src: mrake.bat

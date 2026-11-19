@@ -1,0 +1,19 @@
+name: aquaproj/example-go-slsa-provenance
+type: github_release
+repo_owner: aquaproj
+repo_name: example-go-slsa-provenance
+repo_id: 580199314
+description: Example Go Application with SLSA Provenance
+version_overrides:
+  - version_constraint: semver("> 0.1.2")
+    slsa_provenance:
+      type: github_release
+      asset: multiple.intoto.jsonl
+  - version_constraint: semver("<= 0.1.2")
+    slsa_provenance:
+      type: github_release
+      asset: multiple.intoto.jsonl
+  - version_constraint: "true"
+    slsa_provenance:
+      type: github_release
+      asset: multiple.intoto.jsonl

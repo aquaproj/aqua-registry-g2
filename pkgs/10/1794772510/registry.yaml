@@ -1,0 +1,26 @@
+name: sstadick/crabz
+type: github_release
+repo_owner: sstadick
+repo_name: crabz
+repo_id: 398919005
+description: Like pigz, but rust
+version_overrides:
+  - version_constraint: Version in ["v0.7.0", "v0.7.6"]
+    supported_envs:
+      - darwin
+  - version_constraint: semver("> 0.7.2")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("<= 0.7.2")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: "true"
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+all_assets_filter: not (Asset matches "-src")

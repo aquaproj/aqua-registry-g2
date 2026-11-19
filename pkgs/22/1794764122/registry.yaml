@@ -1,0 +1,17 @@
+name: theupdateframework/go-tuf/tuf-client
+type: github_release
+repo_owner: theupdateframework
+repo_name: go-tuf
+repo_id: 27903690
+description: Go implementation of The Update Framework (TUF)
+version_overrides:
+  - version_constraint: semver(">= 2.0.0")
+    error_message: |
+      They decided to leave go-tuf as a library only.
+      https://github.com/theupdateframework/go-tuf/releases/tag/v2.0.0
+  - version_constraint: "true"
+    supported_envs:
+      - darwin
+      - amd64
+all_assets_filter: Asset matches "^tuf-client_.+_.+_.+[.]tar[.]gz([.].+)?$" or Asset
+  endsWith ".intoto.jsonl"

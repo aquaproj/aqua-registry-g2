@@ -1,0 +1,19 @@
+name: ddddddO/gtree
+type: github_release
+repo_owner: ddddddO
+repo_name: gtree
+repo_id: 372102795
+description: Generate directory trees and the directories itself using Markdown or
+  Programmatically. Provide CLI, Golang library and Web (using WebAssembly)
+version_overrides:
+  - version_constraint: semver(">= 1.8.4")
+  - version_constraint: Version == "v1.8.3"
+    no_asset: true
+  - version_constraint: semver(">= 1.2.0")
+  - version_constraint: semver("< 1.2.0")
+    files:
+      - name: gentree
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: "true"

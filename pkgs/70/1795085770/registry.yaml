@@ -1,0 +1,30 @@
+name: yhay81/sqrail
+type: github_release
+repo_owner: yhay81
+repo_name: sqrail
+repo_id: 1312575336
+description: A bounded SQL-on-files CLI for coding agents. SQL in, files out
+github_artifact_attestations:
+  signer_workflow: yhay81/sqrail/.github/workflows/release.yml
+version_overrides:
+  - version_constraint: semver("> 0.2.2")
+    files:
+      - name: sqrail
+        src: '{{.AssetWithoutExt}}/bin/sqrail'
+    github_artifact_attestations:
+      signer_workflow: yhay81/sqrail/.github/workflows/release.yml
+  - version_constraint: semver("<= 0.2.2")
+    files:
+      - name: sqrail
+        src: '{{.AssetWithoutExt}}/bin/sqrail'
+    github_artifact_attestations:
+      signer_workflow: yhay81/sqrail/.github/workflows/release.yml
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: "true"
+    files:
+      - name: sqrail
+        src: '{{.AssetWithoutExt}}/bin/sqrail'
+    github_artifact_attestations:
+      signer_workflow: yhay81/sqrail/.github/workflows/release.yml

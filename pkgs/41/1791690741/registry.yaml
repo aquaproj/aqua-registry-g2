@@ -4,6 +4,9 @@ repo_owner: matthart1983
 repo_name: netwatch
 repo_id: 1158138526
 description: Real-time network diagnostics in your terminal. One command, zero config, instant visibility
+# From 0.38.0 each Linux build also comes as a -static one, netwatch-linux-x86_64-static.tar.gz,
+# and the two tie. The regular build is taken, as for gdu and opa.
+all_assets_filter: not (Asset contains "-static")
 files:
   - name: netwatch
     src: '{{.AssetWithoutExt}}'

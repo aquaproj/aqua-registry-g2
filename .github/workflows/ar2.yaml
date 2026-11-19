@@ -93,12 +93,25 @@ jobs:
           for package in $PACKAGES; do
             args+=("$package")
           done
-          ar2 run \
-            --log-level "$LOG_LEVEL" \
-            --limit "$LIMIT" \
-            --g2-owner "${GITHUB_REPOSITORY%/*}" \
-            --g2-repo "${GITHUB_REPOSITORY#*/}" \
-            "${args[@]}"
+          # A deadline of its own, short of the job's. A run that hit the job's timeout
+          # left no log at all -- the runner was killed before it uploaded one -- so what
+          # it got stuck on could only be guessed. Killed here instead, the job goes on and
+          # the log is kept. The deadline is past ar2's own --time-budget, after which it
+          # starts no more work, so a run that is only finishing a package isn't cut off.
+          status=0
+          timeout --kill-after=30s 25m \
+            ar2 run \
+              --log-level "$LOG_LEVEL" \
+              --limit "$LIMIT" \
+              --g2-owner "${GITHUB_REPOSITORY%/*}" \
+              --g2-repo "${GITHUB_REPOSITORY#*/}" \
+              "${args[@]}" || status=$?
+          # 124 is timeout's own, and 137 is the SIGKILL after a SIGTERM went unanswered.
+          if [ "$status" = 124 ] || [ "$status" = 137 ]; then
+            echo "timed_out=true" >> "$GITHUB_OUTPUT"
+            echo "::error::ar2 run didn't finish in 25 minutes"
+          fi
+          exit "$status"
         env:
           # The state, in the container registry, which only GITHUB_TOKEN reaches.
           GITHUB_TOKEN: ${{ github.token }}
@@ -111,6 +124,14 @@ jobs:
           PACKAGES: ${{ inputs.packages }}
           LIMIT: ${{ inputs.limit }}
           LOG_LEVEL: ${{ inputs.log_level }}
+      # How much of the app's budget is used, core and GraphQL alike, after 'ar2 run' read
+      # and wrote through it. Only after: a line read before the run answered for a window of
+      # its own (core=0). See the action.
+      - uses: $/.github/actions/measure-rate-limit
+        if: always()
+        continue-on-error: true
+        with:
+          token: ${{ steps.pr_token.outputs.token }}
 
       # The cadence is this, rather than a schedule. A workflow asking for every ten
       # minutes is triggered every few hours: aqua-registry's own updater, set to
@@ -123,11 +144,12 @@ jobs:
       # noticing looks like is the paragraph below.
       #
       # Not after a cancellation, which is how a chain is stopped: cancel the run that is
-      # going and no successor is dispatched. A job that hit its timeout counts as
-      # cancelled too, so a run that got stuck ends the chain rather than handing the same
-      # state to another run to get stuck on.
+      # going and no successor is dispatched. Nor after 'ar2 run' ran out of time, so a run
+      # that got stuck ends the chain rather than handing the same state to another run to
+      # get stuck on. That is a failure as far as the step's outcome goes, which is why it
+      # is told apart by an output of its own.
       - name: dispatch the next run
-        if: ${{ !cancelled() && inputs.chain != '0' }}
+        if: ${{ !cancelled() && inputs.chain != '0' && steps.generate.outputs.timed_out != 'true' }}
         env:
           GH_TOKEN: ${{ github.token }}
           OUTCOME: ${{ steps.generate.outcome }}
@@ -139,3 +161,16 @@ jobs:
           # The issue whoever watches this repository gets the mail from.
           ISSUE: "105"
         run: bash .github/scripts/chain.sh
+      # A chain that ran out of time stops without anybody being told, and the last one
+      # that did went unnoticed for three days. The failures that end a chain are said on
+      # the monitoring issue, so this is too.
+      - name: say the chain stopped
+        if: ${{ !cancelled() && inputs.chain != '0' && steps.generate.outputs.timed_out == 'true' }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          ISSUE: "105"
+        run: |
+          gh issue comment "$ISSUE" \
+            --repo "$GITHUB_REPOSITORY" \
+            --body "The chain of ar2 runs stopped: ar2 run didn't finish in 25 minutes. $RUN_URL"

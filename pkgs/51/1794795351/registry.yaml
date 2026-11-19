@@ -1,0 +1,21 @@
+name: dahlia/submark
+type: github_release
+repo_owner: dahlia
+repo_name: submark
+repo_id: 104562003
+description: Extract a part from CommonMark/Markdown docs
+version_overrides:
+  - version_constraint: Version == "0.1.0"
+    supported_envs:
+      - linux/amd64
+  - version_constraint: Version == "0.2.0"
+    supported_envs:
+      - linux/amd64
+      - windows/amd64
+  - version_constraint: semver("> 0.3.1")
+  - version_constraint: semver("<= 0.3.1")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: "true"

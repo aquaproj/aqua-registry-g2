@@ -1,0 +1,21 @@
+name: Darth-Tech/samwise-cli
+type: github_release
+repo_owner: Darth-Tech
+repo_name: samwise-cli
+repo_id: 840399696
+description: A CLI application to accompany on your terraform module journey and sharing
+  your burden of module dependency updates, just as one brave Hobbit helped Frodo
+  carry his :)
+version_overrides:
+  - version_constraint: semver("> 0.2.0")
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver("<= 0.2.0")
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: "true"
+    supported_envs:
+      - linux
+      - darwin

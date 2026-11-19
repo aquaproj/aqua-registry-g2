@@ -1,0 +1,16 @@
+name: momaek/authy
+type: github_release
+repo_owner: momaek
+repo_name: authy
+repo_id: 290223750
+description: TOTP Alfred Workflow, Authy Aflred Workflow, Authy command line tool
+files:
+  - name: authy
+    src: authy-{{.OS}}-{{.Arch}}
+supported_envs:
+  - darwin
+asset_rules:
+  - envs:
+      - darwin/amd64
+      - darwin/arm64
+    filter: Asset matches "^authy[.]tar[.]gz([.].+)?$"

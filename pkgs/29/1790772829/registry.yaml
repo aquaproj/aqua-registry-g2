@@ -6,3 +6,5 @@ repo_owner: git-bug
 repo_name: git-bug
 repo_id: 140680839
 description: Distributed, offline-first bug tracker embedded in git, with bridges
+# The Arch Linux package (.pkg.tar.zst) ties with the tarball for linux/amd64 and linux/arm64.
+all_assets_filter: not (Asset endsWith ".pkg.tar.zst")

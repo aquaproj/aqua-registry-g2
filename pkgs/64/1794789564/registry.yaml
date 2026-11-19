@@ -1,0 +1,11 @@
+name: fujiwara/apprun-cli
+type: github_release
+repo_owner: fujiwara
+repo_name: apprun-cli
+repo_id: 910369755
+description: CLI for sakura AppRun
+version_overrides:
+  - version_constraint: semver("> 0.2.2")
+  - version_constraint: semver("> 0.1.0")
+    no_asset: true
+  - version_constraint: "true"

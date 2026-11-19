@@ -1,0 +1,33 @@
+name: unikraft/kraftkit
+type: github_release
+repo_owner: unikraft
+repo_name: kraftkit
+repo_id: 470572304
+description: Build and use highly customized and ultra-lightweight unikernel VMs
+version_filter: not (Version matches "-\\d+-g[0-9a-f]+$")
+version_overrides:
+  - version_constraint: semver("> 0.7.0")
+    files:
+      - name: kraft
+      - name: kraftld
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver("> 0.6.4")
+    files:
+      - name: kraft
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver("<= 0.6.4")
+    files:
+      - name: kraft
+    supported_envs:
+      - linux/amd64
+  - version_constraint: "true"
+    files:
+      - name: kraft
+      - name: kraftld
+    supported_envs:
+      - linux
+      - darwin

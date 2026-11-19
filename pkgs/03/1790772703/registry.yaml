@@ -11,3 +11,5 @@ version_overrides:
     - version_constraint: semver("<= 7.0.13")
     - version_constraint: semver("<= 7.4.7") || (semver(">= 7.5.0-preview.1, <= 7.5.1")) || (semver(">= 7.6.0-preview.1, <= 7.6.0-preview.4"))
     - version_constraint: "true"
+# fxdependent builds, which need .NET installed, tied with the self-contained ones.
+all_assets_filter: not (Asset contains "fxdependent")

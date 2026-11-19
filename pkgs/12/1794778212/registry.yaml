@@ -1,0 +1,35 @@
+name: buildkite/cli
+type: github_release
+repo_owner: buildkite
+repo_name: cli
+repo_id: 100342159
+description: A command line interface for Buildkite
+files:
+  - name: bk
+version_overrides:
+  - version_constraint: Version == "v1.2.0"
+  - version_constraint: Version == "v2.0.0"
+  - version_constraint: Version == "v3.0.0-beta.20240202"
+  - version_constraint: Version == "v3.0.0-beta.20240326"
+  - version_constraint: Version == "v3.0.0-beta.20240418"
+  - version_constraint: semver("> 1.1.0")
+    files:
+      - name: bk
+        src: '{{.AssetWithoutExt}}/bk'
+    overrides:
+      - goos: windows
+        files:
+          - name: bk
+  - version_constraint: semver("<= 1.1.0")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: "true"
+    files:
+      - name: bk
+        src: '{{.AssetWithoutExt}}/bk'
+    overrides:
+      - goos: windows
+        files:
+          - name: bk

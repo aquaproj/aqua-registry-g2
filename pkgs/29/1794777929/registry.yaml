@@ -1,0 +1,37 @@
+name: g-plane/pnpm-shell-completion
+type: github_release
+repo_owner: g-plane
+repo_name: pnpm-shell-completion
+repo_id: 598523751
+description: |
+  Complete your pnpm command fastly
+
+  ## Set up
+
+  You need to execute a script within the running shell's process.
+  For details, please see the document.
+
+  https://github.com/g-plane/pnpm-shell-completion#installation
+
+  Zsh:
+
+  ```sh
+  local plugin_path_dir=$(dirname $(aqua which pnpm-shell-completion))
+  local plugin_path="${plugin_path_dir}/pnpm-shell-completion.plugin.zsh"
+  source $plugin_path
+  ```
+version_overrides:
+  - version_constraint: semver("> 0.2.0")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("<= 0.2.0")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: "true"
+    supported_envs:
+      - darwin
+      - windows
+      - amd64

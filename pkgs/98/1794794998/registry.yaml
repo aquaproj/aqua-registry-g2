@@ -1,0 +1,14 @@
+name: mpyw/suve
+type: github_release
+repo_owner: mpyw
+repo_name: suve
+repo_id: 655470553
+description: Git-like CLI/TUI/GUI for AWS Parameter Store / Secrets Manager, Google
+  Cloud Secret Manager, and Azure Key Vault / App Configuration
+version_overrides:
+  - version_constraint: semver(">= 1.6.1")
+  - version_constraint: semver("< 1.6.1")
+    error_message: |
+      suve versions before v1.6.1 are not supported by the aqua registry.
+      The project changed significantly in earlier releases; please use v1.6.1 or later.
+  - version_constraint: "true"

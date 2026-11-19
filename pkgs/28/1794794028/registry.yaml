@@ -1,0 +1,26 @@
+name: nabeken/go-github-apps
+type: github_release
+repo_owner: nabeken
+repo_name: go-github-apps
+repo_id: 285963659
+description: A tiny command-line utility to retrieve Github Apps Installation Token
+version_overrides:
+  - version_constraint: Version == "v0.1.2"
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: Version == "v0.1.3"
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("> 0.1.1")
+  - version_constraint: semver("> 0.0.1")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("<= 0.0.1")
+    no_asset: true
+  - version_constraint: "true"

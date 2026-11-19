@@ -1,0 +1,21 @@
+name: carvel-dev/kwt
+aliases:
+  - name: vmware-tanzu/carvel-kwt
+type: github_release
+repo_owner: carvel-dev
+repo_name: kwt
+repo_id: 150145584
+description: Kubernetes Workstation Tools CLI
+version_overrides:
+  - version_constraint: semver("> 0.0.6")
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver("<= 0.0.6")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: "true"
+    supported_envs:
+      - linux
+      - darwin

@@ -1,0 +1,28 @@
+name: yuuki/tcpulse
+type: github_release
+repo_owner: yuuki
+repo_name: tcpulse
+repo_id: 328703454
+description: A TCP/UDP load generator that provides fine-grained, flow-level control
+  in Go
+version_overrides:
+  - version_constraint: semver("> 0.7.2")
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver("> 0.2.0")
+    files:
+      - name: connperf
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver("<= 0.2.0")
+    files:
+      - name: connperf
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: "true"
+    supported_envs:
+      - linux
+      - darwin

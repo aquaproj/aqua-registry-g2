@@ -1,0 +1,17 @@
+name: ryane/kfilt
+type: github_release
+repo_owner: ryane
+repo_name: kfilt
+repo_id: 193619311
+description: kfilt can filter Kubernetes resources
+# From v1.0.0 the release also publishes kubectl-kfilt archives, the kubectl plugin,
+# beside the raw kfilt binaries every release has.
+all_assets_filter: not (Asset startsWith "kubectl-kfilt")
+version_overrides:
+  - version_constraint: semver("> 0.0.5")
+  - version_constraint: semver("<= 0.0.5")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: "true"

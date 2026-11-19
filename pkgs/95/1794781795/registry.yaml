@@ -1,0 +1,27 @@
+name: restechnica/semverbot
+type: github_release
+repo_owner: restechnica
+repo_name: semverbot
+repo_id: 343148961
+description: A CLI which automates semver versioning
+version_overrides:
+  - version_constraint: semver("> 1.1.0")
+    files:
+      - name: sbot
+  - version_constraint: semver("> 0.1.2")
+    files:
+      - name: sbot
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("<= 0.1.2")
+    files:
+      - name: sbot
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: "true"
+    files:
+      - name: sbot

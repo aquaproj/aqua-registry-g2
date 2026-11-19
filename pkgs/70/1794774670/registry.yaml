@@ -1,0 +1,13 @@
+name: Ladicle/kubectl-rolesum
+type: github_release
+repo_owner: Ladicle
+repo_name: kubectl-rolesum
+repo_id: 186439829
+description: Summarize Kubernetes RBAC roles for the specified subjects
+files:
+  - name: kubectl-rolesum
+    src: kubectl-rolesum_{{.OS}}-{{.Arch}}/kubectl-rolesum
+supported_envs:
+  - windows
+  - darwin
+  - linux/amd64

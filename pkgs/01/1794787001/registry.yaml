@@ -1,0 +1,30 @@
+name: Songmu/make2help
+type: github_release
+repo_owner: Songmu
+repo_name: make2help
+repo_id: 60949888
+description: Utility for self-documented Makefile
+version_overrides:
+  - version_constraint: semver("> 0.2.0")
+    files:
+      - name: make2help
+        src: make2help_{{.Version}}_{{.OS}}_{{.Arch}}/make2help
+  - version_constraint: semver("> 0.0.1")
+    files:
+      - name: make2help
+        src: make2help_{{.Version}}_{{.OS}}_{{.Arch}}/make2help
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("<= 0.0.1")
+    files:
+      - name: make2help
+        src: make2help_{{.Version}}_{{.OS}}_{{.Arch}}/make2help
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: "true"
+    files:
+      - name: make2help
+        src: make2help_{{.Version}}_{{.OS}}_{{.Arch}}/make2help

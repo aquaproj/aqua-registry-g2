@@ -12,6 +12,8 @@ files:
   - name: 7zz
   - name: 7za
 version_overrides:
+  # The x86-64 7za.exe of the extra archive is under x64/, not under the architecture's own
+  # name, and a 7za.exe at the top is the 32-bit one. 24.05 added an arm64/ build.
   - version_constraint: Version == "21.07"
     overrides:
       - goos: linux
@@ -24,7 +26,7 @@ version_overrides:
         format: 7z
         files:
           - name: 7za
-            src: '{{.Arch}}/7za.exe'
+            src: x64/7za.exe
   - version_constraint: Version in ["22.00", "22.01"]
     overrides:
       - goos: linux
@@ -34,7 +36,7 @@ version_overrides:
         format: 7z
         files:
           - name: 7za
-            src: '{{.Arch}}/7za.exe'
+            src: x64/7za.exe
     supported_envs:
       - linux
       - windows
@@ -50,7 +52,7 @@ version_overrides:
         format: 7z
         files:
           - name: 7za
-            src: '{{.Arch}}/7za.exe'
+            src: x64/7za.exe
   - version_constraint: Version in ["24.05", "24.06"]
     overrides:
       - goos: linux
@@ -60,10 +62,17 @@ version_overrides:
         files:
           - name: 7zz
       - goos: windows
+        goarch: amd64
         format: 7z
         files:
           - name: 7za
-            src: '{{.Arch}}/7za.exe'
+            src: x64/7za.exe
+      - goos: windows
+        goarch: arm64
+        format: 7z
+        files:
+          - name: 7za
+            src: arm64/7za.exe
   - version_constraint: "true"
     overrides:
       - goos: linux

@@ -1,0 +1,20 @@
+name: gruntwork-io/fetch
+type: github_release
+repo_owner: gruntwork-io
+repo_name: fetch
+repo_id: 56711104
+description: Download files, folders, and release assets from a specific git commit,
+  branch, or tag of public and private GitHub repos
+version_overrides:
+  - version_constraint: semver("> 0.4.1")
+  - version_constraint: semver("> 0.3.3")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("<= 0.3.3")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: "true"

@@ -1,0 +1,35 @@
+name: mekedron/wolt-cli
+type: github_release
+repo_owner: mekedron
+repo_name: wolt-cli
+repo_id: 1163965526
+description: 'Free & Open Source CLI for Wolt: discover venues, inspect menus and
+  options, manage carts, and preview checkout from the terminal'
+github_artifact_attestations:
+  signer_workflow: mekedron/wolt-cli/.github/workflows/release.yml
+version_overrides:
+  - version_constraint: semver("> 2.4.0")
+    files:
+      - name: wolt
+      - name: wolt-mcp
+    github_artifact_attestations:
+      signer_workflow: mekedron/wolt-cli/.github/workflows/release.yml
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver("<= 2.4.0")
+    files:
+      - name: wolt
+      - name: wolt-mcp
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: "true"
+    files:
+      - name: wolt
+      - name: wolt-mcp
+    github_artifact_attestations:
+      signer_workflow: mekedron/wolt-cli/.github/workflows/release.yml
+    supported_envs:
+      - linux
+      - darwin

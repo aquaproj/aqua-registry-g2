@@ -105,3 +105,8 @@ version_overrides:
       - linux/amd64
       - windows/amd64
 all_assets_filter: not ((Asset matches ".deb$") or (Asset matches ".rpm$"))
+# Up to v0.28.0 the Linux build is fclones-<version>.tgz, a name saying no OS.
+asset_rules:
+  - envs:
+      - linux/amd64
+    filter: Asset matches "^fclones-[0-9.]+[.]tgz$"

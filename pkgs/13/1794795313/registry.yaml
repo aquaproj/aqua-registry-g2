@@ -1,0 +1,16 @@
+name: mvisonneau/s5
+type: github_release
+repo_owner: mvisonneau
+repo_name: s5
+repo_id: 140294827
+description: Safely Store Super Sensitive Stuff
+version_overrides:
+  - version_constraint: Version == "v0.1.14"
+    no_asset: true
+  - version_constraint: semver("> 0.1.1")
+  - version_constraint: semver("<= 0.1.1")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: "true"

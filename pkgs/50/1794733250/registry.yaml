@@ -1,0 +1,23 @@
+name: yoheimuta/protolint
+type: github_release
+repo_owner: yoheimuta
+repo_name: protolint
+repo_id: 161958912
+description: A pluggable linter and fixer to enforce Protocol Buffer style and conventions
+files:
+  - name: protolint
+  - name: protoc-gen-protolint
+version_overrides:
+  - version_constraint: semver("> 0.27.0")
+  - version_constraint: semver("> 0.9.3")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("<= 0.9.3")
+    files:
+      - name: protolint
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: "true"

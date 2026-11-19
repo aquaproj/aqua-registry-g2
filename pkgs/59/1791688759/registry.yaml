@@ -1,0 +1,17 @@
+name: docker/docker-agent
+aliases:
+  - name: docker/cagent
+type: github_release
+repo_owner: docker
+repo_name: docker-agent
+repo_id: 1048418394
+description: Agent Builder and Runtime by Docker Engineering
+files:
+  - name: docker-agent
+version_overrides:
+  # The project was cagent until 1.28.0, when the docker-agent builds started appearing beside
+  # the cagent ones; from 1.37.0 there are docker-agent builds alone.
+  - version_constraint: semver("< 1.28.0")
+    files:
+      - name: cagent
+  - version_constraint: "true"

@@ -1,0 +1,20 @@
+name: elsesiy/kubectl-view-secret
+type: github_release
+repo_owner: elsesiy
+repo_name: kubectl-view-secret
+repo_id: 216479275
+description: Kubernetes CLI plugin to decode Kubernetes secrets
+files:
+  - name: kubectl-view_secret
+    src: kubectl-view-secret
+supported_envs:
+  - darwin
+  - linux
+  - amd64
+version_overrides:
+  - version_constraint: semver(">= 0.8.0")
+  - version_constraint: semver("= 0.7.0")
+  - version_constraint: "true"
+    supported_envs:
+      - darwin
+      - amd64

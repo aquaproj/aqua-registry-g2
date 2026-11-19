@@ -1,0 +1,23 @@
+name: schemalex/schemalex
+type: github_release
+repo_owner: schemalex
+repo_name: schemalex
+repo_id: 37586301
+description: Generate difference sql of two mysql schema
+files:
+  - name: schemadiff
+    src: schemalex_{{.OS}}_{{.Arch}}/schemadiff
+  - name: schemalex
+    src: schemalex_{{.OS}}_{{.Arch}}/schemalex
+  - name: schemalint
+    src: schemalex_{{.OS}}_{{.Arch}}/schemalint
+supported_envs:
+  - darwin
+  - amd64
+version_overrides:
+  # Before 0.0.9 the archive holds schemalex alone; schemadiff and schemalint came with 0.0.9.
+  - version_constraint: semver("< 0.0.9")
+    files:
+      - name: schemalex
+        src: schemalex_{{.OS}}_{{.Arch}}/schemalex
+  - version_constraint: "true"

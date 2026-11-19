@@ -1,0 +1,29 @@
+name: microsoft/apm
+type: github_release
+repo_owner: microsoft
+repo_name: apm
+repo_id: 1059472549
+description: Agent Package Manager
+version_overrides:
+  - version_constraint: semver("> 0.7.8")
+    files:
+      - name: apm
+        src: '{{.AssetWithoutExt}}/apm'
+  - version_constraint: semver("> 0.4.2")
+    files:
+      - name: apm
+        src: '{{.AssetWithoutExt}}/apm'
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver("<= 0.4.2")
+    files:
+      - name: apm
+        src: '{{.AssetWithoutExt}}/apm'
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: "true"
+    files:
+      - name: apm
+        src: '{{.AssetWithoutExt}}/apm'

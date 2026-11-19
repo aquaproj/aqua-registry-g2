@@ -1,0 +1,13 @@
+name: magodo/pipeform
+type: github_release
+repo_owner: magodo
+repo_name: pipeform
+repo_id: 902851079
+description: Terraform runtime TUI
+version_overrides:
+  - version_constraint: Version matches "\\b[0-9a-f]{40}\\b"
+  - version_constraint: Version == "v0.1.0"
+    files:
+      - name: pipeform
+        src: pipeform_{{.Version}}
+  - version_constraint: "true"

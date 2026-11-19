@@ -1,0 +1,32 @@
+name: zmap/zlint
+type: github_release
+repo_owner: zmap
+repo_name: zlint
+repo_id: 75216133
+description: X.509 Certificate Linter focused on Web PKI standards and requirements
+version_filter: not (Version matches "-rc")
+version_overrides:
+  - version_constraint: semver(">= 3.7.0")
+    files:
+      - name: zlint
+        src: '{{.AssetWithoutExt}}/{{.FileName}}'
+    supported_envs:
+      - darwin
+      - linux/amd64
+  - version_constraint: semver("> 1.1.0")
+    files:
+      - name: zlint
+        src: '{{.AssetWithoutExt}}/{{.FileName}}'
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: semver("<= 1.1.0")
+    no_asset: true
+  - version_constraint: "true"
+    files:
+      - name: zlint
+        src: '{{.AssetWithoutExt}}/{{.FileName}}'
+    supported_envs:
+      - darwin
+      - linux/amd64

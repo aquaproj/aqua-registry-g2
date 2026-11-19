@@ -1,0 +1,21 @@
+name: mooltiverse/nyx
+type: github_release
+repo_owner: mooltiverse
+repo_name: nyx
+repo_id: 239131147
+description: The one stop semantic release tool
+version_overrides:
+  - version_constraint: Version == "2.5.0-alpha.3"
+    no_asset: true
+  - version_constraint: Version == "2.5.1-alpha.4"
+    no_asset: true
+  - version_constraint: semver("> 2.5.1-alpha.3")
+  - version_constraint: semver("> 2.5.0-alpha.2")
+  - version_constraint: semver("> 2.3.2-hotfix196.1")
+  - version_constraint: semver("> 1.2.3")
+  - version_constraint: semver("> 1.0.0-alpha.1")
+    no_asset: true
+  - version_constraint: semver("<= 1.0.0-alpha.1")
+    supported_envs:
+      - darwin
+  - version_constraint: "true"

@@ -1,0 +1,22 @@
+name: devops-kung-fu/bomber
+type: github_release
+repo_owner: devops-kung-fu
+repo_name: bomber
+repo_id: 511935338
+description: Scans Software Bill of Materials (SBOMs) for security vulnerabilities
+version_overrides:
+  - version_constraint: semver("> 0.3.2")
+  - version_constraint: semver("> 0.1.1")
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver("<= 0.1.1")
+    overrides:
+      - goos: linux
+        files:
+          - name: bomber
+            src: hookz
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: "true"

@@ -1,0 +1,20 @@
+name: lotabout/rargs
+type: github_release
+repo_owner: lotabout
+repo_name: rargs
+repo_id: 128610722
+description: xargs + awk with pattern matching support. `ls *.bak | rargs -p '(.*)\.bak'
+  mv {0} {1}`
+version_overrides:
+  - version_constraint: semver("> 0.2.1")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: semver("<= 0.2.1")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: "true"
+    supported_envs:
+      - linux/amd64
+      - darwin

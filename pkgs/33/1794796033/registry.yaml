@@ -1,0 +1,12 @@
+name: lasiar/canonicalheader
+type: github_release
+repo_owner: lasiar
+repo_name: canonicalheader
+repo_id: 726693133
+description: Golang linter checking the canonicality of the http header
+version_overrides:
+  - version_constraint: "true"
+    supported_envs:
+      - darwin
+      - windows
+      - amd64

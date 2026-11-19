@@ -1,0 +1,35 @@
+name: arch-go/arch-go
+type: github_release
+repo_owner: arch-go
+repo_name: arch-go
+repo_id: 351282380
+description: Architecture checks for Go projects
+version_overrides:
+  - version_constraint: semver("> 1.6.0")
+    cosign:
+      opts:
+        - --certificate-identity
+        - https://github.com/arch-go/arch-go/.github/workflows/ci.yml@refs/heads/main
+        - --certificate-oidc-issuer
+        - https://token.actions.githubusercontent.com
+        - --signature
+        - https://github.com/arch-go/arch-go/releases/download/{{.Version}}/{{.Asset}}-keyless.sig
+        - --certificate
+        - https://github.com/arch-go/arch-go/releases/download/{{.Version}}/{{.Asset}}-keyless.pem
+        - --certificate-github-workflow-repository
+        - arch-go/arch-go
+  - version_constraint: semver("<= 1.6.0")
+    no_asset: true
+  - version_constraint: "true"
+    cosign:
+      opts:
+        - --certificate-identity
+        - https://github.com/arch-go/arch-go/.github/workflows/ci.yml@refs/heads/main
+        - --certificate-oidc-issuer
+        - https://token.actions.githubusercontent.com
+        - --signature
+        - https://github.com/arch-go/arch-go/releases/download/{{.Version}}/{{.Asset}}-keyless.sig
+        - --certificate
+        - https://github.com/arch-go/arch-go/releases/download/{{.Version}}/{{.Asset}}-keyless.pem
+        - --certificate-github-workflow-repository
+        - arch-go/arch-go

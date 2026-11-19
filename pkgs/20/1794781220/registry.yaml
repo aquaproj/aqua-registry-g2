@@ -1,0 +1,23 @@
+name: ysugimoto/falco
+type: github_release
+repo_owner: ysugimoto
+repo_name: falco
+repo_id: 382078997
+description: falco is a VCL developer tool dedicated to Fastly
+version_overrides:
+  - version_constraint: semver("> 1.1.1")
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver("> 0.9.1")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: semver("<= 0.9.1")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: "true"
+    supported_envs:
+      - linux
+      - darwin

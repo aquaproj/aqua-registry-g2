@@ -1,0 +1,23 @@
+name: cfgaudit/cfgaudit
+type: github_release
+repo_owner: cfgaudit
+repo_name: cfgaudit
+repo_id: 1244663220
+description: 'Static security auditor for AI-agent configuration: Claude Code, MCP
+  servers, Cursor, Codex, Copilot, Gemini CLI and more. SARIF output, OWASP LLM Top
+  10 mapping'
+github_artifact_attestations:
+  signer_workflow: cfgaudit/cfgaudit/.github/workflows/build-release.yml
+version_overrides:
+  - version_constraint: semver("> 1.16.0")
+    github_artifact_attestations:
+      signer_workflow: cfgaudit/cfgaudit/.github/workflows/build-release.yml
+  - version_constraint: semver("> 1.7.0")
+    github_artifact_attestations:
+      signer_workflow: cfgaudit/cfgaudit/.github/workflows/release.yml
+  - version_constraint: semver("> 1.0.0")
+  - version_constraint: semver("<= 1.0.0")
+    no_asset: true
+  - version_constraint: "true"
+    github_artifact_attestations:
+      signer_workflow: cfgaudit/cfgaudit/.github/workflows/build-release.yml

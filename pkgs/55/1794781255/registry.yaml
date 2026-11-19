@@ -1,0 +1,11 @@
+name: siketyan/ghr
+type: github_release
+repo_owner: siketyan
+repo_name: ghr
+repo_id: 562095757
+description: Yet another repository management with auto-attaching profiles
+version_overrides:
+  - version_constraint: semver("> 0.2.0")
+  - version_constraint: semver("<= 0.2.0")
+    no_asset: true
+  - version_constraint: "true"

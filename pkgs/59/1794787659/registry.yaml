@@ -1,0 +1,21 @@
+name: superbrothers/ksort
+type: github_release
+repo_owner: superbrothers
+repo_name: ksort
+repo_id: 117810202
+description: Sort manifest files in a proper order by Kind
+files:
+  - name: ksort
+  - name: kubectl-sort_manifests
+    src: ksort
+version_overrides:
+  - version_constraint: semver("> 0.4.0")
+  - version_constraint: semver("> 0.3.0")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: semver("<= 0.3.0")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: "true"

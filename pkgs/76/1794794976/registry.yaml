@@ -1,0 +1,11 @@
+name: Songmu/gh2changelog
+type: github_release
+repo_owner: Songmu
+repo_name: gh2changelog
+repo_id: 530672709
+files:
+  - name: gh2changelog
+    src: gh2changelog_{{.Version}}_{{.OS}}_{{.Arch}}/gh2changelog
+supported_envs:
+  - linux
+  - darwin

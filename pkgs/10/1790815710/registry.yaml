@@ -12,6 +12,29 @@ files:
     link: rustup
   - name: rustup-init
 version_overrides:
+  # rustup publishes an aarch64-apple-darwin build from 1.23.0 and an aarch64-pc-windows-msvc
+  # one from 1.26.0. Before them, an arm64 machine runs the x86_64 build.
+  - version_constraint: semver("< 1.23.0")
+    url: https://static.rust-lang.org/rustup/archive/{{.Version}}/{{.Arch}}-{{.OS}}/rustup-init
+    format: raw
+    replacements:
+      amd64: x86_64
+      arm64: aarch64
+      darwin: apple-darwin
+      linux: unknown-linux-gnu
+      windows: pc-windows-msvc
+    rosetta2: true
+    windows_arm_emulation: true
+  - version_constraint: semver("< 1.26.0")
+    url: https://static.rust-lang.org/rustup/archive/{{.Version}}/{{.Arch}}-{{.OS}}/rustup-init
+    format: raw
+    replacements:
+      amd64: x86_64
+      arm64: aarch64
+      darwin: apple-darwin
+      linux: unknown-linux-gnu
+      windows: pc-windows-msvc
+    windows_arm_emulation: true
   - version_constraint: "true"
     url: https://static.rust-lang.org/rustup/archive/{{.Version}}/{{.Arch}}-{{.OS}}/rustup-init
     format: raw

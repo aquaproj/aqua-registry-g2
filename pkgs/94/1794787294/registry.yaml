@@ -1,0 +1,13 @@
+name: iamhsa/pkenv
+type: github_archive
+repo_owner: iamhsa
+repo_name: pkenv
+repo_id: 84218774
+description: Packer version manager
+version_overrides:
+  - version_constraint: "true"
+    files:
+      - name: pkenv
+        src: pkenv-{{trimV .Version}}/bin/pkenv
+      - name: packer
+        src: pkenv-{{trimV .Version}}/bin/packer

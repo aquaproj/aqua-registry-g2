@@ -1,0 +1,32 @@
+name: mintoolkit/mint
+aliases:
+  - name: slimtoolkit/slim
+  - name: docker-slim/docker-slim
+type: github_release
+repo_owner: mintoolkit
+repo_name: mint
+repo_id: 767771806
+description: 'minT(oolkit): Mint awesome, secure and production ready containers just
+  the way you need them! Don''t change anything in your container image and minify
+  it by up to 30x (and for compiled languages even more) making it secure too! (free
+  and open source)'
+files:
+  - name: docker-slim
+    src: '{{.AssetWithoutExt}}/docker-slim'
+  - name: mint
+    src: '{{.AssetWithoutExt}}/mint'
+  - name: mint-sensor
+    src: '{{.AssetWithoutExt}}/mint-sensor'
+  - name: slim
+    src: '{{.AssetWithoutExt}}/slim'
+version_overrides:
+  - version_constraint: semver(">= 1.40.11")
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver("< 1.40.11")
+    no_asset: true
+  - version_constraint: "true"
+    supported_envs:
+      - linux
+      - darwin

@@ -1,0 +1,12 @@
+name: emanuele-em/proxelar
+type: github_release
+repo_owner: emanuele-em
+repo_name: proxelar
+repo_id: 591022890
+description: Scriptable local traffic workbench for inspecting, intercepting, replaying,
+  and rewriting HTTP/HTTPS and WebSocket traffic
+version_overrides:
+  - version_constraint: semver("> 0.1.6")
+  - version_constraint: semver("<= 0.1.6")
+    no_asset: true
+  - version_constraint: "true"

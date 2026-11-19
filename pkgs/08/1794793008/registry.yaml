@@ -1,0 +1,24 @@
+name: sholdee/crd-schema-publisher
+type: github_release
+repo_owner: sholdee
+repo_name: crd-schema-publisher
+repo_id: 1205545100
+description: Browsable CRD docs and IDE validation schemas, straight from your Kubernetes
+  cluster
+github_artifact_attestations:
+  signer_workflow: sholdee/crd-schema-publisher/.github/workflows/release.yaml
+version_overrides:
+  - version_constraint: semver("> 2026.424.75813")
+    github_artifact_attestations:
+      signer_workflow: sholdee/crd-schema-publisher/.github/workflows/release.yaml
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver("<= 2026.424.75813")
+    no_asset: true
+  - version_constraint: "true"
+    github_artifact_attestations:
+      signer_workflow: sholdee/crd-schema-publisher/.github/workflows/release.yaml
+    supported_envs:
+      - linux
+      - darwin

@@ -1,0 +1,32 @@
+name: caarlos0/fork-cleaner
+type: github_release
+repo_owner: caarlos0
+repo_name: fork-cleaner
+repo_id: 70362025
+description: Quickly clean up unused forks on your github account
+github_artifact_attestations:
+  signer_workflow: caarlos0/fork-cleaner/.github/workflows/build.yml
+version_overrides:
+  - version_constraint: Version == "v2.2.1"
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver("> 2.3.1")
+    github_artifact_attestations:
+      signer_workflow: caarlos0/fork-cleaner/.github/workflows/build.yml
+  - version_constraint: semver("> 2.0.3")
+  - version_constraint: semver("> 1.8.0")
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver("> 1.0.8")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: semver("<= 1.0.8")
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: "true"
+    github_artifact_attestations:
+      signer_workflow: caarlos0/fork-cleaner/.github/workflows/build.yml

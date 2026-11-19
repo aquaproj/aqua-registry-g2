@@ -1,0 +1,24 @@
+name: DeNA/unity-meta-check/gh-action-yaml-gen
+type: github_release
+repo_owner: DeNA
+repo_name: unity-meta-check
+repo_id: 339063961
+description: A cli tool to automatically generate action.yaml for DeNA/unity-meta-check
+version_overrides:
+  - version_constraint: semver("> 3.3.0")
+    supported_envs:
+      - darwin
+      - linux
+      - windows
+  - version_constraint: semver("<= 3.3.0")
+    supported_envs:
+      - darwin
+      - linux/amd64
+      - windows
+  - version_constraint: "true"
+    supported_envs:
+      - darwin
+      - linux
+      - windows
+all_assets_filter: Asset matches "^gh-action-yaml-gen-.+-.+([.].+)?$" or Asset endsWith
+  ".intoto.jsonl"

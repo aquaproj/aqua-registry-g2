@@ -1,0 +1,16 @@
+name: atlassian.com/acli
+type: http
+repo_owner: ryan-pip
+repo_name: acli-versions
+repo_id: 1185804372
+description: Software to interact with Atlassian Cloud from the terminal
+link: https://developer.atlassian.com/cloud/acli/
+url: https://acli.atlassian.com/{{.OS}}/{{.Version}}/acli_{{.Version}}_{{.OS}}_{{.Arch}}.{{.Format}}
+format: tar.gz
+version_source: github_tag
+overrides:
+  - goos: windows
+    format: zip
+files:
+  - name: acli
+    src: acli_{{.Version}}_{{.OS}}_{{.Arch}}/acli

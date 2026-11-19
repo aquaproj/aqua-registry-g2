@@ -1,0 +1,61 @@
+{
+  "published_at": "2021-11-30T04:01:19Z",
+  "assets": [
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "dhall-lang",
+      "repo_name": "dhall-haskell",
+      "repo_id": 67623822,
+      "asset": "dhall-1.40.2-x86_64-linux.tar.bz2",
+      "format": "tar.bz2",
+      "checksum": "56ecbcdc7daaf42d764764f06c71426b982032d70a075a2f1b7e2acfcb0fda6f",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "dhall",
+          "src": "bin/dhall"
+        }
+      ]
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "dhall-lang",
+      "repo_name": "dhall-haskell",
+      "repo_id": 67623822,
+      "asset": "dhall-1.40.2-x86_64-windows.zip",
+      "format": "zip",
+      "checksum": "aa6e234f2bf6e0528c86bd5dee273195c1655f937dc18824b4ad43fc372d29a1",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "dhall",
+          "src": "bin/dhall.exe"
+        }
+      ]
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "windows_arm_emulation": true,
+      "type": "github_release",
+      "repo_owner": "dhall-lang",
+      "repo_name": "dhall-haskell",
+      "repo_id": 67623822,
+      "asset": "dhall-1.40.2-x86_64-windows.zip",
+      "format": "zip",
+      "checksum": "aa6e234f2bf6e0528c86bd5dee273195c1655f937dc18824b4ad43fc372d29a1",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "dhall",
+          "src": "bin/dhall.exe"
+        }
+      ]
+    }
+  ]
+}

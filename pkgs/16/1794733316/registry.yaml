@@ -1,0 +1,30 @@
+name: micahkepe/jsongrep
+type: github_release
+repo_owner: micahkepe
+repo_name: jsongrep
+repo_id: 1034729507
+description: A path query language for JSON, YAML, TOML, and other serialization formats
+version_overrides:
+  - version_constraint: Version == "v0.1.1"
+    files:
+      - name: jg
+        src: '{{.AssetWithoutExt}}/jg'
+    supported_envs:
+      - linux/amd64
+      - darwin
+  - version_constraint: semver("> 0.6.0")
+    files:
+      - name: jg
+        src: '{{.AssetWithoutExt}}/jg'
+  - version_constraint: semver("<= 0.6.0")
+    files:
+      - name: jg
+        src: '{{.AssetWithoutExt}}/jg'
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: "true"
+    files:
+      - name: jg
+        src: '{{.AssetWithoutExt}}/jg'

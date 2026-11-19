@@ -1,0 +1,31 @@
+name: sandreas/tone
+type: github_release
+repo_owner: sandreas
+repo_name: tone
+repo_id: 406651459
+description: tone is a cross platform audio tagger and metadata editor to dump and
+  modify metadata for a wide variety of formats, including mp3, m4b, flac and more.
+  It has no dependencies and can be downloaded as single binary for Windows, macOS,
+  Linux and other common platforms
+files:
+  - name: tone
+    src: '{{.AssetWithoutExt}}/tone'
+version_overrides:
+  - version_constraint: semver("> 0.0.4")
+    overrides:
+      - goos: windows
+        format: zip
+        files:
+          - name: tone
+  - version_constraint: semver("<= 0.0.4")
+    overrides:
+      - goos: windows
+        format: zip
+        files:
+          - name: tone
+  - version_constraint: "true"
+    overrides:
+      - goos: windows
+        format: zip
+        files:
+          - name: tone

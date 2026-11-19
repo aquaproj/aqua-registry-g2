@@ -1,0 +1,18 @@
+name: sunny0826/kubectl-pod-lens
+type: github_release
+repo_owner: sunny0826
+repo_name: kubectl-pod-lens
+repo_id: 340288159
+description: kubectl plugin for show pod-related resources
+files:
+  - name: kubectl-pod_lens
+    src: pod-lens
+  - name: pod-lens
+version_overrides:
+  - version_constraint: semver("> 0.2.0")
+  - version_constraint: semver("<= 0.2.0")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: "true"

@@ -12,6 +12,16 @@ supported_envs:
   - linux
   - amd64
 version_overrides:
+  # Before 0.3.0 the project was dircolors-hd, and so was the executable.
+  - version_constraint: semver("< 0.3.0")
+    files:
+      - name: dircolors-hd
+        src: '{{.AssetWithoutExt}}/dircolors-hd'
+      - name: vivid
+        src: '{{.AssetWithoutExt}}/dircolors-hd'
+    supported_envs:
+      - linux/amd64
+      - darwin
   - version_constraint: semver("< 0.8.0")
     supported_envs:
       - linux/amd64

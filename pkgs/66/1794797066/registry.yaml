@@ -1,0 +1,21 @@
+name: mattn/zig-update
+type: github_release
+repo_owner: mattn
+repo_name: zig-update
+repo_id: 517134841
+description: Zig updater
+version_overrides:
+  - version_constraint: semver("> 0.0.3")
+    files:
+      - name: zig-update
+        src: zig-update_{{.Version}}_{{.OS}}_{{.Arch}}/zig-update
+  - version_constraint: semver("> 0.0.1")
+    no_asset: true
+  - version_constraint: semver("<= 0.0.1")
+    files:
+      - name: zig-update
+        src: zig-update_{{.Version}}_{{.OS}}_{{.Arch}}/zig-update
+  - version_constraint: "true"
+    files:
+      - name: zig-update
+        src: zig-update_{{.Version}}_{{.OS}}_{{.Arch}}/zig-update

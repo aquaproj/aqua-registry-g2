@@ -1,0 +1,21 @@
+name: vcsjones/AzureSignTool
+type: github_release
+repo_owner: vcsjones
+repo_name: AzureSignTool
+repo_id: 102048753
+description: SignTool Library with Azure Key Vault Support
+version_filter: semver(">= 6.0.0")
+version_overrides:
+  - version_constraint: semver(">= 6.0.0")
+    supported_envs:
+      - windows
+  - version_constraint: semver("< 6.0.0")
+    error_message: Please use v6.0.0 or later
+  - version_constraint: "true"
+    supported_envs:
+      - windows
+asset_rules:
+  - envs:
+      - windows/amd64
+      - windows/arm64
+    filter: Asset matches "^AzureSignTool-.+([.].+)?$"

@@ -1,0 +1,12 @@
+name: natecraddock/zf
+type: github_release
+repo_owner: natecraddock
+repo_name: zf
+repo_id: 399270517
+description: a commandline fuzzy finder designed for filtering filepaths
+files:
+  - name: zf
+    src: zf-{{.Version}}-{{.Arch}}-{{.OS}}
+supported_envs:
+  - linux
+  - darwin

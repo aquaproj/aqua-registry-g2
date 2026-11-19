@@ -1,0 +1,21 @@
+name: comtrya/comtrya
+type: github_release
+repo_owner: comtrya
+repo_name: comtrya
+repo_id: 344452751
+description: Configuration Management for Localhost / dotfiles
+supported_envs:
+  - darwin
+  - linux
+  - amd64
+version_overrides:
+  - version_constraint: semver(">= 0.3.19")
+  - version_constraint: "true"
+    supported_envs:
+      - linux/amd64
+      - windows/amd64
+asset_rules:
+  - envs:
+      - linux/amd64
+      - windows/amd64
+    filter: Asset matches "^comtrya([.].+)?$"

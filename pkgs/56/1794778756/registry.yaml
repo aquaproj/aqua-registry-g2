@@ -1,0 +1,37 @@
+name: muquit/mailsend-go
+type: github_release
+repo_owner: muquit
+repo_name: mailsend-go
+repo_id: 167734369
+description: mailsend-go is a multi-platform  command line tool to send mail via SMTP
+  protocol
+version_overrides:
+  # From v1.0.13 the archive holds the binary in a directory named after the asset.
+  - version_constraint: semver(">= 1.0.13")
+    files:
+      - name: mailsend-go
+        src: '{{.AssetWithoutExt}}/mailsend-go-{{.Version}}-{{.OS}}-{{.Arch}}'
+  - version_constraint: semver("> 1.0.11")
+    files:
+      - name: mailsend-go
+        src: mailsend-go-{{.Version}}-{{.OS}}-{{.Arch}}
+  - version_constraint: semver("> 1.0.10")
+    files:
+      - name: mailsend-go
+        src: '{{.AssetWithoutExt}}/mailsend-go-{{.Version}}-{{.OS}}-{{.Arch}}'
+  - version_constraint: semver("> 1.0.3")
+    files:
+      - name: mailsend-go
+        src: mailsend-go-dir/mailsend-go
+  - version_constraint: semver("<= 1.0.3")
+    files:
+      - name: mailsend-go
+        src: mailsend-go-dir/mailsend-go
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: "true"
+    files:
+      - name: mailsend-go
+        src: mailsend-go-{{.Version}}-{{.OS}}-{{.Arch}}
