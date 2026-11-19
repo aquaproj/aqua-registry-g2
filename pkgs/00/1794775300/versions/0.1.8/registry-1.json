@@ -15,7 +15,7 @@
       "files": [
         {
           "name": "mysql_random_data_load",
-          "src": "mysql_random_data_load"
+          "src": "mysql_random_data_loader"
         }
       ]
     },
@@ -34,13 +34,14 @@
       "files": [
         {
           "name": "mysql_random_data_load",
-          "src": "mysql_random_data_load"
+          "src": "mysql_random_data_loader"
         }
       ]
     },
     {
       "os": "linux",
       "arch": "amd64",
+      "linked_libc": "glibc",
       "type": "github_release",
       "repo_owner": "Percona-Lab",
       "repo_name": "mysql_random_data_load",
@@ -52,7 +53,7 @@
       "files": [
         {
           "name": "mysql_random_data_load",
-          "src": "mysql_random_data_load"
+          "src": "mysql_random_data_loader"
         }
       ]
     }
