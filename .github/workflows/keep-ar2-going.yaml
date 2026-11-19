@@ -1,0 +1,60 @@
+---
+name: keep ar2 going
+# Start the chain of ar2 runs again when it has stopped and nobody stopped it. See
+# .github/scripts/keep-chain.sh for what counts as stopped.
+#
+# After a run that didn't succeed, which is where a chain ends without meaning to: a run
+# that was cancelled because it hit the job's timeout dispatches nothing. After a run that
+# succeeded with chain=0 too: dispatched by hand while a chain was going, it replaced the
+# chain's pending run in the concurrency group, and dispatches nothing itself; and a single
+# run or a finite chain ending is this too, since a chain is meant to be going whenever the
+# workflow is enabled. And on a schedule, for whatever else ends one, and for the restart
+# after a streak of failures that is left to it. GitHub runs a schedule late, hours late at
+# times, so this is the slow path; the first is the one that usually fires.
+#
+# To stop the chain, disable the ar2 workflow. To start it again, enable it: the schedule's
+# next run starts a chain, which may be hours away, so dispatch ar2 by hand for one now.
+on:
+  workflow_run:
+    workflows:
+      - ar2
+    types:
+      - completed
+  schedule:
+    - cron: "23 * * * *"
+permissions: {}
+# One check at a time, so two of them can't each find nothing going and both dispatch.
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+jobs:
+  keep:
+    if: >-
+      github.event_name == 'schedule'
+      || github.event.workflow_run.conclusion != 'success'
+      || endsWith(github.event.workflow_run.display_title, 'chain=0')
+    runs-on: ubuntu-26.04
+    timeout-minutes: 10
+    permissions:
+      # Checking out main for the script.
+      contents: read
+      # Reading ar2's runs and dispatching it.
+      actions: write
+      # Saying on the monitoring issue that the chain stopped, when chain.sh couldn't.
+      issues: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+          sparse-checkout: .github/scripts
+      - run: bash .github/scripts/keep-chain.sh
+        env:
+          GH_TOKEN: ${{ github.token }}
+          EVENT: ${{ github.event_name }}
+          CONCLUSION: ${{ github.event.workflow_run.conclusion }}
+          RUN_URL: ${{ github.event.workflow_run.html_url }}
+          # The issue whoever watches this repository gets the mail from, as in ar2.yaml.
+          ISSUE: "105"
+          # The limit the chain has run with. A chain this starts is otherwise what one
+          # started by hand would be.
+          LIMIT: "10"

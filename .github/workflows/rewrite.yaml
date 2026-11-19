@@ -3,7 +3,8 @@ name: rewrite
 # Write every published file the way a generation writes it now (#743): repo_id in each
 # definition and on each entry, cosign's command line as fields, registry.json indented.
 #
-# Run once, with the chain stopped until its pull request merges. It opens one pull request,
+# Run once, with the chain stopped until its pull request merges -- disable the ar2 workflow,
+# since cancelling a run no longer stops it (see keep-ar2-going.yaml). It opens one pull request,
 # which wc_packages.yaml checks with ar2 rewrite --verify instead of downloading every asset
 # again. A version merged while it is open conflicts with it, since both write the package's
 # versions.json.

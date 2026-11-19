@@ -11,8 +11,8 @@ set -euo pipefail
 # never touches a run that did anything; what it slows down is the run that failed in
 # seconds, which is the one that could otherwise spin.
 readonly FLOOR=180
-# How many failures in a row end the chain. The run that has just failed is one of
-# them, so four more are read from the history.
+# How many runs in a row that didn't succeed end the chain. The run that has just failed
+# is one of them, so four more are read from the history.
 readonly RECENT=4
 
 # next is what the successor is told to chain in turn.
@@ -24,22 +24,9 @@ next() {
 	echo $((CHAIN - 1))
 }
 
-# failing says every one of the runs before this one failed as well.
-#
-# Counting the failures rather than what isn't one, so that a repository with fewer runs
-# than that in its history can't reach the count and a chain is never given up on for
-# want of history.
-failing() {
-	local failures
-	failures=$(gh run list \
-		--repo "$GITHUB_REPOSITORY" \
-		--workflow ar2.yaml \
-		--status completed \
-		--limit "$RECENT" \
-		--json conclusion \
-		--jq '[.[] | select(.conclusion == "failure")] | length')
-	[ "$failures" = "$RECENT" ]
-}
+# disabled, streak and new_streak, shared with keep-chain.sh.
+# shellcheck source=.github/scripts/chain-common.sh
+source "$(dirname "$0")/chain-common.sh"
 
 # wait_out_the_floor sleeps until the run is old enough for another to follow it.
 wait_out_the_floor() {
@@ -52,15 +39,25 @@ wait_out_the_floor() {
 
 # give_up says on the monitoring issue that nothing is generating any more.
 give_up() {
-	echo "::warning::five runs in a row failed; the chain stops here"
+	echo "::warning::five runs in a row failed or were cancelled; the chain stops here"
 	gh issue comment "$ISSUE" \
 		--repo "$GITHUB_REPOSITORY" \
-		--body "The chain of ar2 runs stopped: five runs in a row failed. $RUN_URL"
+		--body "The chain of ar2 runs stopped: five runs in a row failed or were cancelled. keep-ar2-going.yaml tries again every hour, and this isn't said again until a run succeeds. $RUN_URL"
 }
 
 main() {
-	if [ "$OUTCOME" != success ] && failing; then
-		give_up
+	# Disabling the workflow is how the chain is stopped, and the run that was going when it
+	# was disabled shouldn't fail for it.
+	if disabled; then
+		echo "the ar2 workflow is disabled; the chain stops here" >&2
+		return
+	fi
+	if [ "$OUTCOME" != success ] && streak "$RECENT"; then
+		# Said once: a retry from keep-ar2-going.yaml that fails again finds the streak one
+		# longer, and that was said already.
+		if ! streak $((RECENT + 1)); then
+			give_up
+		fi
 		return
 	fi
 	wait_out_the_floor
