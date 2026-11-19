@@ -14,3 +14,10 @@ files:
 supported_envs:
   - darwin
   - amd64
+version_overrides:
+  # Before 0.0.9 the archive holds schemalex alone; schemadiff and schemalint came with 0.0.9.
+  - version_constraint: semver("< 0.0.9")
+    files:
+      - name: schemalex
+        src: schemalex_{{.OS}}_{{.Arch}}/schemalex
+  - version_constraint: "true"
