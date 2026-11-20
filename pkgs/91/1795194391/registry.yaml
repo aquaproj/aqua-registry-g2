@@ -1,0 +1,12 @@
+name: supabase/cli
+type: github_release
+repo_owner: supabase
+repo_name: cli
+repo_id: 314160187
+description: Supabase CLI. Manage postgres migrations, run Supabase locally, deploy
+  edge functions. Postgres backups. Generating types from your database schema
+files:
+  - name: supabase
+# Each build is published as supabase_<os>_<arch> and as supabase_<version>_<os>_<arch>,
+# Windows also as a zip of the versioned one. aqua-registry installs the unversioned one.
+all_assets_filter: not (Asset matches "^supabase_[0-9][^_]*_(darwin|linux|windows)_")
