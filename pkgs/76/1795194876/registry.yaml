@@ -6,3 +6,6 @@ repo_id: 958161066
 description: Create, develop, and deploy Slack apps from the command-line ✨
 files:
   - name: slack
+# Each build is published as the version, as dev and as latest, under both 64-bit and amd64,
+# and outside Windows as both tar.gz and zip. Windows has only _64-bit.zip.
+all_assets_filter: not (Asset matches "_(dev|latest)_") and (Asset contains "windows" or (Asset endsWith ".tar.gz" and not (Asset contains "64-bit")))
