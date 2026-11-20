@@ -12,3 +12,10 @@ version_overrides:
       suve versions before v1.6.1 are not supported by the aqua registry.
       The project changed significantly in earlier releases; please use v1.6.1 or later.
   - version_constraint: "true"
+# On Linux, suve_* is the desktop app (and _webkit2_41 its build for WebKitGTK 4.1), and
+# suve-cli_* is the command line tool.
+asset_rules:
+  - envs:
+      - linux/amd64
+      - linux/arm64
+    filter: Asset startsWith "suve-cli_"

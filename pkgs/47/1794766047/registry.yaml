@@ -33,3 +33,11 @@ version_overrides:
     supported_envs:
       - darwin
       - linux/amd64
+# zprintm is the macOS build for Intel and zprintma the one for Apple silicon.
+asset_rules:
+  - envs:
+      - darwin/amd64
+    filter: Asset startsWith "zprintm-"
+  - envs:
+      - darwin/arm64
+    filter: Asset startsWith "zprintma-"

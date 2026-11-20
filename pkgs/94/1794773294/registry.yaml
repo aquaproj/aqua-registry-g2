@@ -30,3 +30,11 @@ version_overrides:
     supported_envs:
       - linux
       - darwin
+# dist_mac.zip is the build for Intel and dist_mac_m1.zip the one for Apple silicon.
+asset_rules:
+  - envs:
+      - darwin/amd64
+    filter: Asset == "dist_mac.zip"
+  - envs:
+      - darwin/arm64
+    filter: Asset == "dist_mac_m1.zip"

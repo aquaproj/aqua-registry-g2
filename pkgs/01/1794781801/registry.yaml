@@ -18,3 +18,6 @@ version_overrides:
     supported_envs:
       - linux
       - darwin
+# -32- is the 32-bit build, and -dynamic the build linked against the system's libc, beside
+# the static 64-bit one.
+all_assets_filter: not (Asset contains "-32-") and not (Asset endsWith "-dynamic")
