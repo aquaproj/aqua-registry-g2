@@ -6,7 +6,6 @@ repo_id: 535010912
 description: static builds cURL with HTTP3
 files:
   - name: curl
-  - name: curl-config
 version_overrides:
   - version_constraint: Version == "8.6.0-1"
     files:
@@ -17,12 +16,11 @@ version_overrides:
     supported_envs:
       - linux
       - darwin
+  # The plain archives hold curl alone at the top. curl-config, and the curl-<arch>/bin
+  # layout, are the -dev- build's, which is left out.
   - version_constraint: semver("> 8.5.0")
     files:
       - name: curl
-        src: curl-{{.Arch}}/bin/curl
-      - name: curl-config
-        src: curl-{{.Arch}}/bin/curl-config
   - version_constraint: semver("> 8.2.0")
     files:
       - name: curl
@@ -39,9 +37,6 @@ version_overrides:
   - version_constraint: "true"
     files:
       - name: curl
-        src: curl-{{.Arch}}/bin/curl
-      - name: curl-config
-        src: curl-{{.Arch}}/bin/curl-config
 asset_rules:
   - envs:
       - linux/amd64
