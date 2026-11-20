@@ -56,6 +56,43 @@
           "src": "ys-0.2.32-linux-aarch64/ys"
         }
       ]
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "yaml",
+      "repo_name": "yamlscript",
+      "repo_id": 510139682,
+      "asset": "ys-0.2.32-windows-x64.zip",
+      "format": "zip",
+      "checksum": "ef400318a42cf1f41cfef658a8674f8642c1218dc957f66fdddcebad1c662b16",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "ys",
+          "src": "ys-0.2.32-windows-x64/ys-0.2.32.exe"
+        }
+      ]
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "windows_arm_emulation": true,
+      "type": "github_release",
+      "repo_owner": "yaml",
+      "repo_name": "yamlscript",
+      "repo_id": 510139682,
+      "asset": "ys-0.2.32-windows-x64.zip",
+      "format": "zip",
+      "checksum": "ef400318a42cf1f41cfef658a8674f8642c1218dc957f66fdddcebad1c662b16",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "ys",
+          "src": "ys-0.2.32-windows-x64/ys-0.2.32.exe"
+        }
+      ]
     }
   ]
 }
