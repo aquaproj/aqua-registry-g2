@@ -7,14 +7,12 @@ description: Beautifully format Clojure and Clojurescript source code and s-expr
 version_overrides:
   - version_constraint: semver("> 1.2.7")
     replacements:
-      darwin: m
       linux: l
     supported_envs:
       - darwin
       - linux/amd64
   - version_constraint: semver("> 0.4.10")
     replacements:
-      darwin: m
       linux: l
     supported_envs:
       - darwin/amd64
@@ -28,12 +26,13 @@ version_overrides:
     no_asset: true
   - version_constraint: "true"
     replacements:
-      darwin: m
       linux: l
     supported_envs:
       - darwin
       - linux/amd64
-# zprintm is the macOS build for Intel and zprintma the one for Apple silicon.
+# zprintm is the macOS build for Intel and zprintma the one for Apple silicon. Their names
+# don't spell darwin as anything the parser reads, and no spelling of it tells the two apart
+# (zprintma starts with zprintm), so no spelling is given and these rules place them.
 asset_rules:
   - envs:
       - darwin/amd64
