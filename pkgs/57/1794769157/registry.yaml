@@ -5,6 +5,13 @@ repo_name: inletsctl
 repo_id: 218249412
 description: Create inlets servers on the top cloud platforms
 overrides:
+  # The darwin/arm64 archive holds inletsctl-darwin-arm64, which the darwin entry below
+  # would otherwise name inletsctl-darwin.
+  - goos: darwin
+    goarch: arm64
+    files:
+      - name: inletsctl
+        src: inletsctl-darwin-arm64
   - goos: darwin
     files:
       - name: inletsctl

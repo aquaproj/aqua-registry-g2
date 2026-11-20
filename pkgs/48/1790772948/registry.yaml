@@ -9,6 +9,25 @@ version_overrides:
       files:
         - name: exa
           src: bin/exa
+    # Up to v0.4.0 the macOS build is called osx rather than macos, and v0.3.0 writes x86-64.
+    - version_constraint: Version in ["v0.2.0", "v0.4.0"]
+      files:
+        - name: exa
+          src: exa-linux-x86_64
+      overrides:
+        - goos: darwin
+          files:
+            - name: exa
+              src: exa-osx-x86_64
+    - version_constraint: Version == "v0.3.0"
+      files:
+        - name: exa
+          src: exa-linux-x86_64
+      overrides:
+        - goos: darwin
+          files:
+            - name: exa
+              src: exa-osx-x86-64
     - version_constraint: "true"
       files:
         - name: exa
