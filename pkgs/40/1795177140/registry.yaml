@@ -1,0 +1,14 @@
+name: yashikota/tlc-static
+type: github_release
+repo_owner: yashikota
+repo_name: tlc-static
+repo_id: 1431074194
+description: Native, JVM-free TLA+ TLC. Fully static on Linux
+files:
+  - name: tlc
+version_overrides:
+  - version_constraint: "true"
+    supported_envs:
+      - linux
+      - darwin/arm64
+      - windows
