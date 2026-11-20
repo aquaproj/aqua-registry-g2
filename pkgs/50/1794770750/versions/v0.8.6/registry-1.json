@@ -74,6 +74,42 @@
           "src": "gvproxy-linux-arm64"
         }
       ]
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "containers",
+      "repo_name": "gvisor-tap-vsock",
+      "repo_id": 282845245,
+      "asset": "gvproxy-windows.exe",
+      "format": "raw",
+      "checksum": "ee24c7cca2f019399114374b2eb4c26628cb5d3cbcdd48e9adc7c7c269fa51a2",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "gvproxy",
+          "src": "gvproxy-windows.exe"
+        }
+      ]
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "containers",
+      "repo_name": "gvisor-tap-vsock",
+      "repo_id": 282845245,
+      "asset": "gvproxy-windows-arm64.exe",
+      "format": "raw",
+      "checksum": "f6cc491b8fd3ddfd6b9b292c73ebaefca035ffe4adae6d692913f5501e51d431",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "gvproxy",
+          "src": "gvproxy-windows-arm64.exe"
+        }
+      ]
     }
   ]
 }
