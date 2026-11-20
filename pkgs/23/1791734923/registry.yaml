@@ -6,17 +6,21 @@ repo_owner: kubepug
 repo_name: kubepug
 repo_id: 232220881
 description: Kubernetes PreUpGrade (Checker)
+# Each asset is signed on its own as <asset>.sig with <asset>.pem. aqua-registry names
+# darwin_amd64's signature for every asset, which verifies no other one.
 cosign:
   opts:
-    - --signature
-    - https://github.com/kubepug/kubepug/releases/download/{{.Version}}/kubepug_darwin_amd64.tar.gz.sig
-    - --certificate
-    - https://github.com/kubepug/kubepug/releases/download/{{.Version}}/kubepug_darwin_amd64.tar.gz.pem
     # Up to v1.6.x the releases were signed while the repository was rikatz/kubepug.
     - --certificate-identity-regexp
     - ^https://github[.]com/(rikatz|kubepug)/kubepug/[.]github/workflows/release[.]yaml@refs/tags/{{.Version}}$
     - --certificate-oidc-issuer
     - https://token.actions.githubusercontent.com
+  signature:
+    type: github_release
+    asset: '{{.Asset}}.sig'
+  certificate:
+    type: github_release
+    asset: '{{.Asset}}.pem'
 version_overrides:
   - version_constraint: Version == "v1.2.1"
     no_asset: true
