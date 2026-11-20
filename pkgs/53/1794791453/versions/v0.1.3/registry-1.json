@@ -14,8 +14,8 @@
       "checksum_algorithm": "sha256",
       "files": [
         {
-          "name": "config-registry",
-          "src": "config-registry"
+          "name": "kubeconf",
+          "src": "kubeconf"
         }
       ]
     },
@@ -33,14 +33,15 @@
       "checksum_algorithm": "sha256",
       "files": [
         {
-          "name": "config-registry",
-          "src": "config-registry"
+          "name": "kubeconf",
+          "src": "kubeconf"
         }
       ]
     },
     {
       "os": "linux",
       "arch": "amd64",
+      "linked_libc": "static",
       "type": "github_release",
       "repo_owner": "mumoshu",
       "repo_name": "config-registry",
@@ -51,14 +52,15 @@
       "checksum_algorithm": "sha256",
       "files": [
         {
-          "name": "config-registry",
-          "src": "config-registry"
+          "name": "kubeconf",
+          "src": "kubeconf"
         }
       ]
     },
     {
       "os": "linux",
       "arch": "arm64",
+      "linked_libc": "static",
       "type": "github_release",
       "repo_owner": "mumoshu",
       "repo_name": "config-registry",
@@ -69,8 +71,8 @@
       "checksum_algorithm": "sha256",
       "files": [
         {
-          "name": "config-registry",
-          "src": "config-registry"
+          "name": "kubeconf",
+          "src": "kubeconf"
         }
       ]
     },
@@ -87,8 +89,8 @@
       "checksum_algorithm": "sha256",
       "files": [
         {
-          "name": "config-registry",
-          "src": "config-registry.exe"
+          "name": "kubeconf",
+          "src": "kubeconf.exe"
         }
       ]
     },
@@ -106,8 +108,8 @@
       "checksum_algorithm": "sha256",
       "files": [
         {
-          "name": "config-registry",
-          "src": "config-registry.exe"
+          "name": "kubeconf",
+          "src": "kubeconf.exe"
         }
       ]
     }
