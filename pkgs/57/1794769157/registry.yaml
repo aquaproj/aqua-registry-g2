@@ -20,10 +20,16 @@ overrides:
     files:
       - name: inletsctl
         src: inletsctl-arm64
+# Only the macOS archives name their OS. inletsctl.tgz holds the linux/amd64 executable alone,
+# inletsctl-arm64.tgz the linux/arm64 one, and inletsctl.exe.tgz the Windows one.
 asset_rules:
   - envs:
       - linux/amd64
+    filter: Asset == "inletsctl.tgz"
+  - envs:
       - linux/arm64
+    filter: Asset == "inletsctl-arm64.tgz"
+  - envs:
       - windows/amd64
       - windows/arm64
-    filter: Asset matches "^inletsctl[.]tgz([.].+)?$"
+    filter: Asset == "inletsctl.exe.tgz"
