@@ -8,3 +8,22 @@ repo_id: 337964429
 description: DataStax Astra automation CLI
 files:
   - name: astra
+# v0.4.0 publishes signed macOS zips, astra-osx-<arch>-signed.zip, beside the tarballs, and
+# nothing in the names tells them apart from astra-cli_0.4.0_darwin_<arch>.tar.gz.
+asset_filters:
+  - version_constraint: Version == "v0.4.0"
+    all_assets_filter: not (Asset startsWith "astra-osx-")
+version_overrides:
+  # From v0.4.0 to v0.5.4 the Linux and Windows archives name the binary astra-cli, while
+  # the macOS ones name it astra, as every archive does from v0.5.5 on.
+  - version_constraint: semver(">= 0.4.0") and semver("<= 0.5.4")
+    overrides:
+      - goos: linux
+        files:
+          - name: astra
+            src: astra-cli
+      - goos: windows
+        files:
+          - name: astra
+            src: astra-cli
+  - version_constraint: "true"
