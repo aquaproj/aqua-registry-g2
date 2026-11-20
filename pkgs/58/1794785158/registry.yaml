@@ -4,6 +4,8 @@ repo_owner: airbytehq
 repo_name: abctl
 repo_id: 772768484
 description: Airbyte's CLI for managing local Airbyte installations
+# The repository releases airbox too, tagged airbox-v<version>, which is another program.
+version_filter: not (Version startsWith "airbox-")
 version_overrides:
   - version_constraint: semver("> 0.13.1")
     files:
