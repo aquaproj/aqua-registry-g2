@@ -2,6 +2,66 @@
   "published_at": "2024-05-29T05:30:54Z",
   "assets": [
     {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "mintoolkit",
+      "repo_name": "mint",
+      "repo_id": 767771806,
+      "asset": "dist_mac.zip",
+      "format": "zip",
+      "checksum": "0481bd9ef9feb795a4cf352455d06abd01cca15266edfea1171583b00cfcd880",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "docker-slim",
+          "src": "dist_mac/docker-slim"
+        },
+        {
+          "name": "mint",
+          "src": "dist_mac/mint"
+        },
+        {
+          "name": "mint-sensor",
+          "src": "dist_mac/mint-sensor"
+        },
+        {
+          "name": "slim",
+          "src": "dist_mac/slim"
+        }
+      ]
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "mintoolkit",
+      "repo_name": "mint",
+      "repo_id": 767771806,
+      "asset": "dist_mac_m1.zip",
+      "format": "zip",
+      "checksum": "87bb2fd2fed19e6df747a61ca811fd748e823b7f9541e299d88abe574b93e17a",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "docker-slim",
+          "src": "dist_mac_m1/docker-slim"
+        },
+        {
+          "name": "mint",
+          "src": "dist_mac_m1/mint"
+        },
+        {
+          "name": "mint-sensor",
+          "src": "dist_mac_m1/mint-sensor"
+        },
+        {
+          "name": "slim",
+          "src": "dist_mac_m1/slim"
+        }
+      ]
+    },
+    {
       "os": "linux",
       "arch": "amd64",
       "linked_libc": "static",
