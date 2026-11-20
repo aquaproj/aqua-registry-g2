@@ -14,8 +14,8 @@
       "checksum_algorithm": "sha256",
       "files": [
         {
-          "name": "kubectl-external_forward",
-          "src": "kubectl-external_forward"
+          "name": "kubectl-socat",
+          "src": "kubectl-socat"
         }
       ]
     },
@@ -32,14 +32,15 @@
       "checksum_algorithm": "sha256",
       "files": [
         {
-          "name": "kubectl-external_forward",
-          "src": "kubectl-external_forward"
+          "name": "kubectl-socat",
+          "src": "kubectl-socat"
         }
       ]
     },
     {
       "os": "linux",
       "arch": "amd64",
+      "linked_libc": "static",
       "type": "github_release",
       "repo_owner": "int128",
       "repo_name": "kubectl-external-forward",
@@ -50,14 +51,15 @@
       "checksum_algorithm": "sha256",
       "files": [
         {
-          "name": "kubectl-external_forward",
-          "src": "kubectl-external_forward"
+          "name": "kubectl-socat",
+          "src": "kubectl-socat"
         }
       ]
     },
     {
       "os": "linux",
       "arch": "arm64",
+      "linked_libc": "static",
       "type": "github_release",
       "repo_owner": "int128",
       "repo_name": "kubectl-external-forward",
@@ -68,8 +70,8 @@
       "checksum_algorithm": "sha256",
       "files": [
         {
-          "name": "kubectl-external_forward",
-          "src": "kubectl-external_forward"
+          "name": "kubectl-socat",
+          "src": "kubectl-socat"
         }
       ]
     },
@@ -86,8 +88,8 @@
       "checksum_algorithm": "sha256",
       "files": [
         {
-          "name": "kubectl-external_forward",
-          "src": "kubectl-external_forward.exe"
+          "name": "kubectl-socat",
+          "src": "kubectl-socat.exe"
         }
       ]
     },
@@ -105,8 +107,8 @@
       "checksum_algorithm": "sha256",
       "files": [
         {
-          "name": "kubectl-external_forward",
-          "src": "kubectl-external_forward.exe"
+          "name": "kubectl-socat",
+          "src": "kubectl-socat.exe"
         }
       ]
     }
