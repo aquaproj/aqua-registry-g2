@@ -1,0 +1,190 @@
+{
+  "published_at": "2026-10-18T09:06:56Z",
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "runxhq",
+      "repo_name": "runx",
+      "repo_id": 1207981219,
+      "asset": "runx-0.10.2-x86_64-apple-darwin.tar.gz",
+      "format": "tar.gz",
+      "checksum": "d89d470c09db61c4b349a03e1137884b3c1a8fec3f8aa1977f4ee00c85a8eae4",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "runx",
+          "src": "runx-0.10.2-x86_64-apple-darwin/runx"
+        },
+        {
+          "name": "runx-js-worker",
+          "src": "runx-0.10.2-x86_64-apple-darwin/runx-js-worker"
+        }
+      ]
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "runxhq",
+      "repo_name": "runx",
+      "repo_id": 1207981219,
+      "asset": "runx-0.10.2-aarch64-apple-darwin.tar.gz",
+      "format": "tar.gz",
+      "checksum": "cbf4929fbdc896f1d482b7650950439545aa8c9f9d8a203fe321c25ab8baa496",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "runx",
+          "src": "runx-0.10.2-aarch64-apple-darwin/runx"
+        },
+        {
+          "name": "runx-js-worker",
+          "src": "runx-0.10.2-aarch64-apple-darwin/runx-js-worker"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "runxhq",
+      "repo_name": "runx",
+      "repo_id": 1207981219,
+      "asset": "deterministic-module-linux-x64.json",
+      "format": "raw",
+      "checksum": "84b8b3531cca98c0346991df2073da794138d16d087e4dc999e65b5ea3df8646",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "runx",
+          "src": "deterministic-module-linux-x64.json"
+        },
+        {
+          "name": "runx-js-worker",
+          "src": "deterministic-module-linux-x64.json"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "variants": {
+        "libc": "musl"
+      },
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "runxhq",
+      "repo_name": "runx",
+      "repo_id": 1207981219,
+      "asset": "runx-0.10.2-x86_64-unknown-linux-musl.tar.gz",
+      "format": "tar.gz",
+      "checksum": "9dd0dc1ade0a3bface4d8bb12ad61df0e1f3980f93a86a68b7ecd3f96d132691",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "runx",
+          "src": "runx-0.10.2-x86_64-unknown-linux-musl/runx"
+        },
+        {
+          "name": "runx-js-worker",
+          "src": "runx-0.10.2-x86_64-unknown-linux-musl/runx-js-worker"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "runxhq",
+      "repo_name": "runx",
+      "repo_id": 1207981219,
+      "asset": "deterministic-module-linux-arm64.json",
+      "format": "raw",
+      "checksum": "ab652962f9c074d2ae37160d5d4223f542bbbeb540c994656f5d13eb474bb899",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "runx",
+          "src": "deterministic-module-linux-arm64.json"
+        },
+        {
+          "name": "runx-js-worker",
+          "src": "deterministic-module-linux-arm64.json"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "variants": {
+        "libc": "musl"
+      },
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "runxhq",
+      "repo_name": "runx",
+      "repo_id": 1207981219,
+      "asset": "runx-0.10.2-aarch64-unknown-linux-musl.tar.gz",
+      "format": "tar.gz",
+      "checksum": "09d58e3ebc812cde5a19bb368fa73bfede8323231f0e94bd7879793d1e06f1c9",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "runx",
+          "src": "runx-0.10.2-aarch64-unknown-linux-musl/runx"
+        },
+        {
+          "name": "runx-js-worker",
+          "src": "runx-0.10.2-aarch64-unknown-linux-musl/runx-js-worker"
+        }
+      ]
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "runxhq",
+      "repo_name": "runx",
+      "repo_id": 1207981219,
+      "asset": "runx-0.10.2-x86_64-pc-windows-msvc.zip",
+      "format": "zip",
+      "checksum": "d39d0ca7c5cad61b7212e17520f1b41c49b076ba7163fd02e10108481f971f6a",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "runx",
+          "src": "runx-0.10.2-x86_64-pc-windows-msvc/runx.exe"
+        },
+        {
+          "name": "runx-js-worker",
+          "src": "runx-0.10.2-x86_64-pc-windows-msvc/runx-js-worker.exe"
+        }
+      ]
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "windows_arm_emulation": true,
+      "type": "github_release",
+      "repo_owner": "runxhq",
+      "repo_name": "runx",
+      "repo_id": 1207981219,
+      "asset": "runx-0.10.2-x86_64-pc-windows-msvc.zip",
+      "format": "zip",
+      "checksum": "d39d0ca7c5cad61b7212e17520f1b41c49b076ba7163fd02e10108481f971f6a",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "runx",
+          "src": "runx-0.10.2-x86_64-pc-windows-msvc/runx.exe"
+        },
+        {
+          "name": "runx-js-worker",
+          "src": "runx-0.10.2-x86_64-pc-windows-msvc/runx-js-worker.exe"
+        }
+      ]
+    }
+  ]
+}
