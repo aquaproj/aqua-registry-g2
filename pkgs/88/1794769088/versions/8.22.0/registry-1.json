@@ -2,21 +2,94 @@
   "published_at": "2026-09-04T03:57:33Z",
   "assets": [
     {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "stunnel",
+      "repo_name": "static-curl",
+      "repo_id": 535010912,
+      "asset": "curl-macos-x86_64-8.22.0.tar.xz",
+      "format": "tar.xz",
+      "checksum": "a48bfd016757830fd1ddb96909d9d4db497c9452629f3140d850380ed596762e",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "curl",
+          "src": "curl"
+        },
+        {
+          "name": "curl-config",
+          "src": "curl-x86_64/bin/curl-config"
+        }
+      ]
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "stunnel",
+      "repo_name": "static-curl",
+      "repo_id": 535010912,
+      "asset": "curl-macos-arm64-8.22.0.tar.xz",
+      "format": "tar.xz",
+      "checksum": "416cadcd491e57846d23301e4c56e1a1517668c62f63d4ac991ad6caf4feabea",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "curl",
+          "src": "curl"
+        },
+        {
+          "name": "curl-config",
+          "src": "curl-arm64/bin/curl-config"
+        }
+      ]
+    },
+    {
       "os": "linux",
       "arch": "amd64",
+      "variants": {
+        "libc": "glibc"
+      },
       "linked_libc": "static",
       "type": "github_release",
       "repo_owner": "stunnel",
       "repo_name": "static-curl",
       "repo_id": 535010912,
-      "asset": "curl-linux-x86_64-dev-8.22.0.tar.xz",
+      "asset": "curl-linux-x86_64-glibc-8.22.0.tar.xz",
       "format": "tar.xz",
-      "checksum": "93a928c9bab36604ff646e7de31c9d4b789145acf8c7cda75e7da2e1221c5cc7",
+      "checksum": "d74460e43c0e6eaf40ec1fdda92c53dee94da8a6e6db066711541ada5aab0fa6",
       "checksum_algorithm": "sha256",
       "files": [
         {
           "name": "curl",
-          "src": "curl-x86_64/bin/curl"
+          "src": "curl"
+        },
+        {
+          "name": "curl-config",
+          "src": "curl-x86_64/bin/curl-config"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "variants": {
+        "libc": "musl"
+      },
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "stunnel",
+      "repo_name": "static-curl",
+      "repo_id": 535010912,
+      "asset": "curl-linux-x86_64-musl-8.22.0.tar.xz",
+      "format": "tar.xz",
+      "checksum": "dfb02460ba2abe513087538f12a3cf79b74b64a5ea3787ce8ac0cdb11251f884",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "curl",
+          "src": "curl"
         },
         {
           "name": "curl-config",
@@ -27,23 +100,96 @@
     {
       "os": "linux",
       "arch": "arm64",
+      "variants": {
+        "libc": "glibc"
+      },
       "linked_libc": "static",
       "type": "github_release",
       "repo_owner": "stunnel",
       "repo_name": "static-curl",
       "repo_id": 535010912,
-      "asset": "curl-linux-aarch64-dev-8.22.0.tar.xz",
+      "asset": "curl-linux-aarch64-glibc-8.22.0.tar.xz",
       "format": "tar.xz",
-      "checksum": "73958bd2cb2116e7f4860100826424d44d4961a4fe81c20a50304744617d5dc9",
+      "checksum": "fa4de50f80fb2fbbf77a7bf8385891b6cb1a501a2e28b1ed18cf25e11fd66b66",
       "checksum_algorithm": "sha256",
       "files": [
         {
           "name": "curl",
-          "src": "curl-aarch64/bin/curl"
+          "src": "curl"
         },
         {
           "name": "curl-config",
           "src": "curl-aarch64/bin/curl-config"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "variants": {
+        "libc": "musl"
+      },
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "stunnel",
+      "repo_name": "static-curl",
+      "repo_id": 535010912,
+      "asset": "curl-linux-aarch64-musl-8.22.0.tar.xz",
+      "format": "tar.xz",
+      "checksum": "cf94cbeaae1b3c1944a4a761ef04478f8f0b23e93a324b5ed009b2082eda11f3",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "curl",
+          "src": "curl"
+        },
+        {
+          "name": "curl-config",
+          "src": "curl-aarch64/bin/curl-config"
+        }
+      ]
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "stunnel",
+      "repo_name": "static-curl",
+      "repo_id": 535010912,
+      "asset": "curl-windows-x86_64-8.22.0.tar.xz",
+      "format": "tar.xz",
+      "checksum": "8a57d1a52ea246f50be9e3f24a1d539d4fd23884405efbe18c6eb44eaf8ca524",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "curl",
+          "src": "curl.exe"
+        },
+        {
+          "name": "curl-config",
+          "src": "curl-x86_64/bin/curl-config.exe"
+        }
+      ]
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "stunnel",
+      "repo_name": "static-curl",
+      "repo_id": 535010912,
+      "asset": "curl-windows-aarch64-8.22.0.tar.xz",
+      "format": "tar.xz",
+      "checksum": "c9052640c7997c9a0c81a1560a11e79442da38a514ab429b74612547ae504bb5",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "curl",
+          "src": "curl.exe"
+        },
+        {
+          "name": "curl-config",
+          "src": "curl-aarch64/bin/curl-config.exe"
         }
       ]
     }
