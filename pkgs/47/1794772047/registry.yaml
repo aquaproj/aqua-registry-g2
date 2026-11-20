@@ -5,3 +5,11 @@ repo_name: gocovsh
 repo_id: 453526680
 description: 'Go Coverage in your terminal: a tool for exploring Go Coverage reports
   from the command line'
+version_overrides:
+  # checksums.txt of v0.5.0 and v0.5.1 is signed with a certificate that carries no SCT,
+  # which today's cosign requires: certificate does not include required embedded SCT.
+  - version_constraint: Version in ["v0.5.0", "v0.5.1"]
+    checksum:
+      cosign:
+        enabled: false
+  - version_constraint: "true"
