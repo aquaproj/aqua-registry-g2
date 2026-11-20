@@ -6,3 +6,6 @@ repo_id: 385135014
 description: A process manager & log viewer for dev
 files:
   - name: exo
+# Each build is published as exo_managed_* and exo_standalone_*. aqua-registry installs
+# the standalone one.
+all_assets_filter: not (Asset contains "_managed_")
