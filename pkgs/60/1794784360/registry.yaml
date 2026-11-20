@@ -14,4 +14,6 @@ version_overrides:
   - version_constraint: "true"
     supported_envs:
       - linux
-all_assets_filter: Asset matches "^gh-action-.+-.+([.].+)?$" or Asset endsWith ".intoto.jsonl"
+# The release also carries gh-action-yaml-gen-<os>-<arch>, another program, for darwin and
+# windows as well. gh-action itself is built for Linux alone.
+all_assets_filter: (Asset startsWith "gh-action-" and not (Asset startsWith "gh-action-yaml-gen-")) or Asset endsWith ".intoto.jsonl"
