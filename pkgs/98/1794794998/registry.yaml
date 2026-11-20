@@ -14,8 +14,4 @@ version_overrides:
   - version_constraint: "true"
 # On Linux, suve_* is the desktop app (and _webkit2_41 its build for WebKitGTK 4.1), and
 # suve-cli_* is the command line tool.
-asset_rules:
-  - envs:
-      - linux/amd64
-      - linux/arm64
-    filter: Asset startsWith "suve-cli_"
+all_assets_filter: not (Asset contains "linux") or Asset startsWith "suve-cli_"
