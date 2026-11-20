@@ -1,0 +1,67 @@
+{
+  "published_at": "2026-01-02T18:20:38Z",
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "domoritz",
+      "repo_name": "arrow-tools",
+      "repo_id": 596376544,
+      "asset": "csv2parquet-aarch64-apple-darwin.tar.xz",
+      "format": "tar.xz",
+      "checksum": "f6361a0d90e84f53ad3528de0bde852e22df730197af8616240b80c1fba5161e",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "csv2parquet",
+          "src": "csv2parquet-aarch64-apple-darwin/csv2parquet"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "variants": {
+        "libc": "glibc"
+      },
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "domoritz",
+      "repo_name": "arrow-tools",
+      "repo_id": 596376544,
+      "asset": "csv2parquet-x86_64-unknown-linux-gnu.tar.xz",
+      "format": "tar.xz",
+      "checksum": "63f668c8ee73daa4e70918c76b87826ef34b53c7d73db05210bed4e24ccae5ef",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "csv2parquet",
+          "src": "csv2parquet-x86_64-unknown-linux-gnu/csv2parquet"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "variants": {
+        "libc": "glibc"
+      },
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "domoritz",
+      "repo_name": "arrow-tools",
+      "repo_id": 596376544,
+      "asset": "csv2parquet-aarch64-unknown-linux-gnu.tar.xz",
+      "format": "tar.xz",
+      "checksum": "cf0299095031d17b8f3940327fc4460867a88ac9e85edd14730c7b6a46146f41",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "csv2parquet",
+          "src": "csv2parquet-aarch64-unknown-linux-gnu/csv2parquet"
+        }
+      ]
+    }
+  ]
+}
