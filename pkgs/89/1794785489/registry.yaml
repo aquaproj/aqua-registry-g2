@@ -10,6 +10,18 @@ description: Workflow language and runner for AI jobs - one .nika.yaml file, sta
 github_artifact_attestations:
   signer_workflow: supernovae-st/nika/.github/workflows/release.yml
 version_overrides:
+  # From v0.124.5 the release is built after the repository moved to nika-open/nika, and
+  # its attestations are signed by that repository's workflow.
+  - version_constraint: semver(">= 0.124.5")
+    slsa_provenance:
+      type: github_release
+      asset: multiple.intoto.jsonl
+      source_tag: '-'
+    github_artifact_attestations:
+      signer_workflow: nika-open/nika/.github/workflows/release.yml
+    supported_envs:
+      - linux
+      - darwin
   - version_constraint: semver("> 0.105.0")
     slsa_provenance:
       type: github_release
