@@ -3,6 +3,24 @@
   "assets": [
     {
       "os": "darwin",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "osteele",
+      "repo_name": "gojekyll",
+      "repo_id": 94036828,
+      "asset": "gojekyll_Darwin_x86_64v1.tar.gz",
+      "format": "tar.gz",
+      "checksum": "8149cf55e808b22adb7927cf3ba09135367e4a782c3a44d037cccab8bdb0fe2e",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "gojekyll",
+          "src": "gojekyll"
+        }
+      ]
+    },
+    {
+      "os": "darwin",
       "arch": "arm64",
       "type": "github_release",
       "repo_owner": "osteele",
@@ -11,6 +29,25 @@
       "asset": "gojekyll_Darwin_arm64.tar.gz",
       "format": "tar.gz",
       "checksum": "a7bdb079d2d3df4b8507345c59df3c3f54c9330d6aa3f5864320d96bd3b64cfc",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "gojekyll",
+          "src": "gojekyll"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "osteele",
+      "repo_name": "gojekyll",
+      "repo_id": 94036828,
+      "asset": "gojekyll_Linux_x86_64v1.tar.gz",
+      "format": "tar.gz",
+      "checksum": "ec5e4cb7ba91ae437ea45d3ce8c64897854360c7f9aefc9deccc1848696ebdb8",
       "checksum_algorithm": "sha256",
       "files": [
         {
@@ -35,6 +72,24 @@
         {
           "name": "gojekyll",
           "src": "gojekyll"
+        }
+      ]
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "osteele",
+      "repo_name": "gojekyll",
+      "repo_id": 94036828,
+      "asset": "gojekyll_Windows_x86_64v1.zip",
+      "format": "zip",
+      "checksum": "b3f61515ff3e2fb2fbada7c290b151cebc84162a49d14719af1be632fc7db2f8",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "gojekyll",
+          "src": "gojekyll.exe"
         }
       ]
     },
