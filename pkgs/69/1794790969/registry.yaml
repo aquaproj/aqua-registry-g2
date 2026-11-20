@@ -11,3 +11,9 @@ supported_envs:
   - darwin
   - linux
   - amd64
+version_overrides:
+  # Up to v0.3.0 the plugin was kubectl-socat, and the archive holds it under that name.
+  - version_constraint: semver("<= 0.3.0")
+    files:
+      - name: kubectl-socat
+  - version_constraint: "true"
