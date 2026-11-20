@@ -7,6 +7,11 @@ description: Cross-platform Rust rewrite of the GNU coreutils
 # Most releases build windows/amd64 twice, with MSVC and with MinGW (x86_64-pc-windows-gnu),
 # and the two names tie. The MSVC build is the one every release has.
 all_assets_filter: not (Asset contains "windows-gnu")
+# 0.7.0 to 0.9.0 publish the x86_64 MSVC build as one executable per command, without the
+# multi-call coreutils.exe that the MinGW build and every other release has.
+asset_filters:
+    - version_constraint: semver(">= 0.7.0") and semver("< 0.10.0")
+      all_assets_filter: not (Asset contains "x86_64-pc-windows-msvc")
 version_overrides:
     - version_constraint: Version in ["0.0.9", "0.0.24", "0.0.25", "0.0.29"]
       no_asset: true

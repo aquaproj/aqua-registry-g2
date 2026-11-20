@@ -33,3 +33,9 @@ version_overrides:
     supported_envs:
       - linux/amd64
       - darwin/arm64
+    # The Windows archive names the executable after the version: ys-<version>.exe.
+    overrides:
+      - goos: windows
+        files:
+          - name: ys
+            src: '{{.AssetWithoutExt}}/ys-{{trimV .Version}}'
