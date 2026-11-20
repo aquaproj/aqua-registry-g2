@@ -40,25 +40,6 @@
     {
       "os": "linux",
       "arch": "amd64",
-      "linked_libc": "static",
-      "type": "github_release",
-      "repo_owner": "cachix",
-      "repo_name": "secretspec",
-      "repo_id": 1013984512,
-      "asset": "secretspec_ffi_linux_amd64.so",
-      "format": "raw",
-      "checksum": "ac34a96f3f2729d397079362a4de11b88b980f2a49d9bc12a7c49c1a4c6f233d",
-      "checksum_algorithm": "sha256",
-      "files": [
-        {
-          "name": "secretspec",
-          "src": "secretspec_ffi_linux_amd64.so"
-        }
-      ]
-    },
-    {
-      "os": "linux",
-      "arch": "amd64",
       "variants": {
         "libc": "glibc"
       },
@@ -75,25 +56,6 @@
         {
           "name": "secretspec",
           "src": "secretspec-x86_64-unknown-linux-gnu/secretspec"
-        }
-      ]
-    },
-    {
-      "os": "linux",
-      "arch": "arm64",
-      "linked_libc": "static",
-      "type": "github_release",
-      "repo_owner": "cachix",
-      "repo_name": "secretspec",
-      "repo_id": 1013984512,
-      "asset": "secretspec_ffi_linux_arm64.so",
-      "format": "raw",
-      "checksum": "31bd612df197659eabc5d27d898f85969751b5dd2c666f38d2f51236d66b2022",
-      "checksum_algorithm": "sha256",
-      "files": [
-        {
-          "name": "secretspec",
-          "src": "secretspec_ffi_linux_arm64.so"
         }
       ]
     },
