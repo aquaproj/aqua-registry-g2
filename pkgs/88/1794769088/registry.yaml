@@ -47,3 +47,5 @@ asset_rules:
       - linux/amd64
       - linux/arm64
     filter: Asset matches "^curl-static-.+-.+[.].+([.].+)?$"
+# curl-*-dev-* is the build with headers and libraries, published beside the plain one.
+all_assets_filter: not (Asset contains "-dev-")

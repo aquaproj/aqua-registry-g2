@@ -9,3 +9,6 @@ version_overrides:
   - version_constraint: semver("<= 0.5.2")
     no_asset: true
   - version_constraint: "true"
+# resticprofile_no_self_update_* is the build without the self-update command, and the zip
+# holds the same as the tar.gz.
+all_assets_filter: not (Asset contains "no_self_update") and not (Asset endsWith ".zip")

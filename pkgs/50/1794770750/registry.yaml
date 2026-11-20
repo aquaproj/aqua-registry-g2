@@ -28,8 +28,10 @@ version_overrides:
       - amd64
   - version_constraint: "true"
 all_assets_filter: not (Asset contains "sshproxy")
+# gvproxy-windowsgui.exe and gvproxy-arm64.exe are built with -H=windowsgui, which detaches
+# from the console; gvproxy-windows.exe and gvproxy-windows-arm64.exe are the console builds.
 asset_rules:
   - envs:
       - windows/amd64
       - windows/arm64
-    filter: Asset matches "^gvproxy-.+([.].+)?$"
+    filter: Asset matches "^gvproxy-windows(-arm64)?[.]exe$"

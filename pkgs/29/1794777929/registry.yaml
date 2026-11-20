@@ -35,3 +35,12 @@ version_overrides:
       - darwin
       - windows
       - amd64
+# The _pwsh_ archive holds the PowerShell completion, which is all Windows is published with.
+# Elsewhere the plain archive is the one, and it is published as both tar.gz and zip.
+asset_rules:
+  - envs:
+      - darwin/amd64
+      - darwin/arm64
+      - linux/amd64
+      - linux/arm64
+    filter: not (Asset contains "_pwsh_") and Asset endsWith ".tar.gz"

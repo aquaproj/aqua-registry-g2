@@ -17,3 +17,5 @@ version_overrides:
       - linux/amd64
       - darwin
   - version_constraint: "true"
+# x86_64v2 and x86_64v3 need a newer CPU than x86_64v1, which runs on any amd64 machine.
+all_assets_filter: not (Asset matches "x86_64v[23]")

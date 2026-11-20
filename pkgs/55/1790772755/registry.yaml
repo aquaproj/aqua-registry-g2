@@ -52,6 +52,10 @@ all_assets_filter: Asset matches "^borg-[^.]+$"
 asset_filters:
     - version_constraint: semver(">= 1.4.2")
       all_assets_filter: Asset matches "^borg-[^.]+-gh$"
+    # 1.2.7 to 1.2.9 name their three Linux builds borg-linuxold64, borg-linuxnew64 and
+    # borg-linuxnewer64 instead. aqua-registry installs linuxnewer.
+    - version_constraint: Version in ["1.2.7", "1.2.8", "1.2.9"]
+      all_assets_filter: Asset matches "^borg-[^.]+$" and not (Asset matches "^borg-linux(old|new)64$")
     # Before 1.4.2 the Linux binary is published for three glibc versions, which tie.
     # glibc236 is the one aqua-registry's definition chose.
     - version_constraint: semver("<= 1.4.1")
