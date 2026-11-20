@@ -1,0 +1,187 @@
+{
+  "published_at": "2026-03-29T16:36:10Z",
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "stacklok",
+      "repo_name": "frizbee",
+      "repo_id": 721113155,
+      "asset": "frizbee_0.1.10_darwin_amd64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "45b486a74154dfd28fbcb9d4e0408bd3f91b026c201658daa0dc7e2e4e123e0f",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "frizbee",
+          "src": "frizbee"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "frizbee_0.1.10_darwin_amd64.tar.gz.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/stacklok/frizbee/.github/workflows/releaser.yml@refs/tags/v0.1.10",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      },
+      "slsa_provenance": {
+        "type": "github_release",
+        "asset": "multiple.intoto.jsonl"
+      }
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "stacklok",
+      "repo_name": "frizbee",
+      "repo_id": 721113155,
+      "asset": "frizbee_0.1.10_darwin_arm64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "bb393bfdd5d26544f792813fd2d4cffbe2943ee91bd07c1f8a26c5776981acad",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "frizbee",
+          "src": "frizbee"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "frizbee_0.1.10_darwin_arm64.tar.gz.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/stacklok/frizbee/.github/workflows/releaser.yml@refs/tags/v0.1.10",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      },
+      "slsa_provenance": {
+        "type": "github_release",
+        "asset": "multiple.intoto.jsonl"
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "stacklok",
+      "repo_name": "frizbee",
+      "repo_id": 721113155,
+      "asset": "frizbee_0.1.10_linux_amd64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "9638bb999f0f0936c381f01273feacda0bd0fcc573f037e0d7bd1b86d222f51c",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "frizbee",
+          "src": "frizbee"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "frizbee_0.1.10_linux_amd64.tar.gz.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/stacklok/frizbee/.github/workflows/releaser.yml@refs/tags/v0.1.10",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      },
+      "slsa_provenance": {
+        "type": "github_release",
+        "asset": "multiple.intoto.jsonl"
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "stacklok",
+      "repo_name": "frizbee",
+      "repo_id": 721113155,
+      "asset": "frizbee_0.1.10_linux_arm64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "8277be164692a55f901f8b64dbaae4a12a058fdf09b8396f6b2c4662973ec736",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "frizbee",
+          "src": "frizbee"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "frizbee_0.1.10_linux_arm64.tar.gz.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/stacklok/frizbee/.github/workflows/releaser.yml@refs/tags/v0.1.10",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      },
+      "slsa_provenance": {
+        "type": "github_release",
+        "asset": "multiple.intoto.jsonl"
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "stacklok",
+      "repo_name": "frizbee",
+      "repo_id": 721113155,
+      "asset": "frizbee_0.1.10_windows_amd64.zip",
+      "format": "zip",
+      "checksum": "bab77a670221798fa8e6b6e87421898ea899cc19ce8fe7383714661bd9e7ef43",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "frizbee",
+          "src": "frizbee.exe"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "frizbee_0.1.10_windows_amd64.zip.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/stacklok/frizbee/.github/workflows/releaser.yml@refs/tags/v0.1.10",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      },
+      "slsa_provenance": {
+        "type": "github_release",
+        "asset": "multiple.intoto.jsonl"
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "stacklok",
+      "repo_name": "frizbee",
+      "repo_id": 721113155,
+      "asset": "frizbee_0.1.10_windows_arm64.zip",
+      "format": "zip",
+      "checksum": "1f2c6f12f8e4b0bc56c7832a4aab20bb92bfaa0b84d270b22bb0bee0db5aa367",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "frizbee",
+          "src": "frizbee.exe"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "frizbee_0.1.10_windows_arm64.zip.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/stacklok/frizbee/.github/workflows/releaser.yml@refs/tags/v0.1.10",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      },
+      "slsa_provenance": {
+        "type": "github_release",
+        "asset": "multiple.intoto.jsonl"
+      }
+    }
+  ]
+}
