@@ -1,0 +1,64 @@
+{
+  "published_at": "2024-05-29T10:04:58Z",
+  "assets": [
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "variants": {
+        "libc": "musl"
+      },
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "so-dang-cool",
+      "repo_name": "sigi",
+      "repo_id": 342117544,
+      "asset": "sigi_v3.7.0_x86_64-unknown-linux-musl.tar.gz",
+      "format": "tar.gz",
+      "checksum": "c2d554c8374744fda338596163c4a184cb70f2cfc07329e6fe4a3c019977dd55",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "sigi",
+          "src": "sigi"
+        }
+      ]
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "so-dang-cool",
+      "repo_name": "sigi",
+      "repo_id": 342117544,
+      "asset": "sigi_v3.7.0_x86_64-pc-windows-gnu.tar.gz",
+      "format": "tar.gz",
+      "checksum": "f64e6b5d1966a4edca9cfbb7871b0ec175963a1985a6fe294f6dc1fc88824d77",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "sigi",
+          "src": "sigi.exe"
+        }
+      ]
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "windows_arm_emulation": true,
+      "type": "github_release",
+      "repo_owner": "so-dang-cool",
+      "repo_name": "sigi",
+      "repo_id": 342117544,
+      "asset": "sigi_v3.7.0_x86_64-pc-windows-gnu.tar.gz",
+      "format": "tar.gz",
+      "checksum": "f64e6b5d1966a4edca9cfbb7871b0ec175963a1985a6fe294f6dc1fc88824d77",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "sigi",
+          "src": "sigi.exe"
+        }
+      ]
+    }
+  ]
+}
