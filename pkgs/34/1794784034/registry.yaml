@@ -4,6 +4,9 @@ repo_owner: openshift
 repo_name: rosa
 repo_id: 249552331
 version_filter: not (Version matches "rc[0-9]+$")
+# From v1.2.67 the release carries rosa-<os>-arm64.tar.gz beside rosa_<os>_arm64.zip, and
+# nothing in the names tells them apart. The zips are what every version publishes.
+all_assets_filter: not (Asset endsWith ".tar.gz")
 version_overrides:
   - version_constraint: Version == "v1.2.19"
     no_asset: true
