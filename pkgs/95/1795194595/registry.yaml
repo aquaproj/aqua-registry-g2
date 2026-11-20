@@ -1,0 +1,11 @@
+name: localstack/localstack-cli
+type: github_release
+repo_owner: localstack
+repo_name: localstack-cli
+repo_id: 466586578
+description: Deprecated LocalStack CLI packaged with PyInstaller, superseded by lstk
+files:
+  - name: localstack
+# Each build is published twice: -onefile is a single executable, the other a directory of
+# files around one. aqua-registry installs -onefile.
+all_assets_filter: not (Asset startsWith "localstack-cli-") or Asset contains "-onefile"
