@@ -2,19 +2,52 @@
   "published_at": "2022-12-08T12:22:06Z",
   "assets": [
     {
-      "os": "linux",
+      "os": "darwin",
       "arch": "amd64",
-      "variants": {
-        "libc": "musl"
-      },
-      "linked_libc": "musl",
       "type": "github_release",
       "repo_owner": "ory",
       "repo_name": "hydra",
       "repo_id": 36071697,
-      "asset": "hydra_2.0.3-linux_sqlite_libmusl_64bit.tar.gz",
+      "asset": "hydra_2.0.3-macOS_64bit.tar.gz",
       "format": "tar.gz",
-      "checksum": "1b67341ab3169583af851cc0415ae7d4578cb9a53ccc54ab92d5cfdfe9b71eed",
+      "checksum": "67c0ffae5077ff8116c2b5d746f349d734e6330fa4114680ec8f4a1943172c0c",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "hydra",
+          "src": "hydra"
+        }
+      ]
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "ory",
+      "repo_name": "hydra",
+      "repo_id": 36071697,
+      "asset": "hydra_2.0.3-macOS_arm64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "20c3320e049c946b59fbbd90b72ffdabf36a3ef00d57c81a8f8e5569771a7aa9",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "hydra",
+          "src": "hydra"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "ory",
+      "repo_name": "hydra",
+      "repo_id": 36071697,
+      "asset": "hydra_2.0.3-linux_64bit.tar.gz",
+      "format": "tar.gz",
+      "checksum": "e24bec23bfd75b634fa357e2a412eb7bd01a4cdf032b141da95e5401888f6b3c",
       "checksum_algorithm": "sha256",
       "files": [
         {
@@ -26,22 +59,37 @@
     {
       "os": "linux",
       "arch": "arm64",
-      "variants": {
-        "libc": "musl"
-      },
-      "linked_libc": "musl",
+      "linked_libc": "static",
       "type": "github_release",
       "repo_owner": "ory",
       "repo_name": "hydra",
       "repo_id": 36071697,
-      "asset": "hydra_2.0.3-linux_sqlite_libmusl_arm64.tar.gz",
+      "asset": "hydra_2.0.3-linux_arm64.tar.gz",
       "format": "tar.gz",
-      "checksum": "eae817ffdbe10cf5c363e1a8b4dde4b0c7407250759f0ba1a9737d624c5466e9",
+      "checksum": "e1c9b76d5a544e18083dbab97378936f0ee2452ddf014d1c408580dc15b12b9d",
       "checksum_algorithm": "sha256",
       "files": [
         {
           "name": "hydra",
           "src": "hydra"
+        }
+      ]
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "ory",
+      "repo_name": "hydra",
+      "repo_id": 36071697,
+      "asset": "hydra_2.0.3-windows_64bit.zip",
+      "format": "zip",
+      "checksum": "ff0ef2183c1cfe9a408998b86292915677c5335c6a16d54e4db16081cdd39c6f",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "hydra",
+          "src": "hydra.exe"
         }
       ]
     },
