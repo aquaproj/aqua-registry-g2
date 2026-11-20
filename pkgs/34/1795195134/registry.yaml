@@ -6,3 +6,5 @@ repo_id: 1163218211
 description: Run terminal apps anywhere
 files:
   - name: trolley
+# trolley-runtime-* is the runtime the CLI packages apps with, published beside trolley-cli-*.
+all_assets_filter: not (Asset startsWith "trolley-runtime-")
