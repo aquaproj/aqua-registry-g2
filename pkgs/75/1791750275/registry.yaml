@@ -11,16 +11,20 @@ files:
   - name: terragrunt
   - name: tf
   - name: atmos
+# Each asset is signed on its own as <asset>.sig with <asset>.pem. aqua-registry names
+# Darwin_x86_64's signature for every asset, which verifies no other one.
 cosign:
   opts:
-    - --signature
-    - https://github.com/tofuutils/tenv/releases/download/{{.Version}}/tenv_{{.Version}}_Darwin_x86_64.tar.gz.sig
-    - --certificate
-    - https://github.com/tofuutils/tenv/releases/download/{{.Version}}/tenv_{{.Version}}_Darwin_x86_64.tar.gz.pem
     - --certificate-identity
     - https://github.com/tofuutils/tenv/.github/workflows/release.yml@refs/tags/{{.Version}}
     - --certificate-oidc-issuer
     - https://token.actions.githubusercontent.com
+  signature:
+    type: github_release
+    asset: '{{.Asset}}.sig'
+  certificate:
+    type: github_release
+    asset: '{{.Asset}}.pem'
 version_overrides:
   - version_constraint: Version == "v1.0.6"
     files:
