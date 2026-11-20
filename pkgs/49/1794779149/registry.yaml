@@ -15,8 +15,25 @@ cosign:
     asset: '{{.Asset}}.sigstore.json'
 version_overrides:
   - version_constraint: Version == "v0.0.1"
+  # v0.1.3 to v0.1.7 sign each archive as <asset>.sig with its certificate in
+  # <asset-without-extension>.pem, before the .sigstore.json bundles of v0.1.8 on.
+  # v0.1.5 has no SLSA provenance.
   - version_constraint: Version == "v0.1.5"
-  - version_constraint: Version == "v0.1.6"
+    cosign:
+      opts:
+        - --certificate
+        - https://github.com/stacklok/frizbee/releases/download/{{.Version}}/{{.AssetWithoutExt}}.pem
+        - --certificate-identity
+        - https://github.com/stacklok/frizbee/.github/workflows/releaser.yml@refs/tags/{{.Version}}
+        - --certificate-oidc-issuer
+        - https://token.actions.githubusercontent.com
+        - --signature
+        - https://github.com/stacklok/frizbee/releases/download/{{.Version}}/{{.Asset}}.sig
+        - --certificate-github-workflow-repository
+        - stacklok/frizbee
+        - --certificate-github-workflow-ref
+        - refs/tags/{{.Version}}
+  - version_constraint: semver(">= 0.1.3") and semver("<= 0.1.7")
     cosign:
       opts:
         - --certificate
