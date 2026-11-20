@@ -2,48 +2,162 @@
   "published_at": "2026-10-22T11:54:06Z",
   "assets": [
     {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "stunnel",
+      "repo_name": "static-curl",
+      "repo_id": 535010912,
+      "asset": "curl-macos-x86_64-8.23.0-1.tar.xz",
+      "format": "tar.xz",
+      "checksum": "be645642d239a625c9f06a823ae0a62e2acb4788309435bf8d91e7b6bd197238",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "curl",
+          "src": "curl"
+        }
+      ]
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "stunnel",
+      "repo_name": "static-curl",
+      "repo_id": 535010912,
+      "asset": "curl-macos-arm64-8.23.0-1.tar.xz",
+      "format": "tar.xz",
+      "checksum": "dea0ecfa234f1c79f1473e19b73769a25ce517644cd1908eec7d530c419886d2",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "curl",
+          "src": "curl"
+        }
+      ]
+    },
+    {
       "os": "linux",
       "arch": "amd64",
+      "variants": {
+        "libc": "glibc"
+      },
       "linked_libc": "static",
       "type": "github_release",
       "repo_owner": "stunnel",
       "repo_name": "static-curl",
       "repo_id": 535010912,
-      "asset": "curl-linux-x86_64-dev-8.23.0-1.tar.xz",
+      "asset": "curl-linux-x86_64-glibc-8.23.0-1.tar.xz",
       "format": "tar.xz",
-      "checksum": "0c56942d16ead76eb8c5838443dd7d1fbdfb2549b2cff8cdd88a336de70e6dce",
+      "checksum": "a9f5d72eb245623f82a649bf64acae0c935af3510700d2167857964c47fe9e5b",
       "checksum_algorithm": "sha256",
       "files": [
         {
           "name": "curl",
-          "src": "curl-x86_64/bin/curl"
-        },
+          "src": "curl"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "variants": {
+        "libc": "musl"
+      },
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "stunnel",
+      "repo_name": "static-curl",
+      "repo_id": 535010912,
+      "asset": "curl-linux-x86_64-musl-8.23.0-1.tar.xz",
+      "format": "tar.xz",
+      "checksum": "2e0c54ba696afd0df1e899e4344fa63d53d73107f9ac08173314d9be85bc76fd",
+      "checksum_algorithm": "sha256",
+      "files": [
         {
-          "name": "curl-config",
-          "src": "curl-x86_64/bin/curl-config"
+          "name": "curl",
+          "src": "curl"
         }
       ]
     },
     {
       "os": "linux",
       "arch": "arm64",
+      "variants": {
+        "libc": "glibc"
+      },
       "linked_libc": "static",
       "type": "github_release",
       "repo_owner": "stunnel",
       "repo_name": "static-curl",
       "repo_id": 535010912,
-      "asset": "curl-linux-aarch64-dev-8.23.0-1.tar.xz",
+      "asset": "curl-linux-aarch64-glibc-8.23.0-1.tar.xz",
       "format": "tar.xz",
-      "checksum": "ed2e3162aef9c4a7116ba63db34f8bbb677c12d4f66c9b52230f851c34ff6609",
+      "checksum": "434dace1222adbf0fa5de5069e36aae20069ad0d70495a409cbafed1cab0f6a5",
       "checksum_algorithm": "sha256",
       "files": [
         {
           "name": "curl",
-          "src": "curl-aarch64/bin/curl"
-        },
+          "src": "curl"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "variants": {
+        "libc": "musl"
+      },
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "stunnel",
+      "repo_name": "static-curl",
+      "repo_id": 535010912,
+      "asset": "curl-linux-aarch64-musl-8.23.0-1.tar.xz",
+      "format": "tar.xz",
+      "checksum": "e20f26e5b87c1883608f286f86bdabf39d3b8556e8a8e75dfe205e14bd206199",
+      "checksum_algorithm": "sha256",
+      "files": [
         {
-          "name": "curl-config",
-          "src": "curl-aarch64/bin/curl-config"
+          "name": "curl",
+          "src": "curl"
+        }
+      ]
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "stunnel",
+      "repo_name": "static-curl",
+      "repo_id": 535010912,
+      "asset": "curl-windows-x86_64-8.23.0-1.tar.xz",
+      "format": "tar.xz",
+      "checksum": "dbe9115e709d96b7997a65b381e6faffee86b6c482cc09f23f69bae482740f9e",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "curl",
+          "src": "curl.exe"
+        }
+      ]
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "stunnel",
+      "repo_name": "static-curl",
+      "repo_id": 535010912,
+      "asset": "curl-windows-aarch64-8.23.0-1.tar.xz",
+      "format": "tar.xz",
+      "checksum": "b3c149c5d662a862aeeb25b30e510e5035b24c2445008b36a97a69259acf9754",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "curl",
+          "src": "curl.exe"
         }
       ]
     }
