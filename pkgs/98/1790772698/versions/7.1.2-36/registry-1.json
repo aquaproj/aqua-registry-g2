@@ -2,6 +2,141 @@
   "published_at": "2026-11-16T19:07:26Z",
   "assets": [
     {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "ImageMagick",
+      "repo_name": "ImageMagick",
+      "repo_id": 35780977,
+      "asset": "ImageMagick-7.1.2-36-portable-Q16-HDRI-macos-arm64.tar.xz",
+      "format": "tar.xz",
+      "checksum": "224157488f2863a834c979607fe6666d749075279c12a2d01c41917d4acd561e",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "magick",
+          "src": "ImageMagick-7.1.2-36-portable-Q16-HDRI-macos-arm64/bin/magick"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "ImageMagick/ImageMagick/.github/workflows/release.yml",
+        "source_ref": "refs/heads/main",
+        "source_digest": "dcec873ede2912a1b045a50fd54cd138ee5f3fa4",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "ImageMagick",
+      "repo_name": "ImageMagick",
+      "repo_id": 35780977,
+      "asset": "ImageMagick-7.1.2-36-portable-Q16-HDRI-linux-x64.tar.xz",
+      "format": "tar.xz",
+      "checksum": "72c8dd0268f824f621e1628737b79d8e80bc63a5d46a69950dabb13c5de80c91",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "magick",
+          "src": "ImageMagick-7.1.2-36-portable-Q16-HDRI-linux-x64/bin/magick"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "ImageMagick/ImageMagick/.github/workflows/release.yml",
+        "source_ref": "refs/heads/main",
+        "source_digest": "dcec873ede2912a1b045a50fd54cd138ee5f3fa4",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "variants": {
+        "libc": "musl"
+      },
+      "linked_libc": "musl",
+      "type": "github_release",
+      "repo_owner": "ImageMagick",
+      "repo_name": "ImageMagick",
+      "repo_id": 35780977,
+      "asset": "ImageMagick-7.1.2-36-portable-Q16-HDRI-linux-musl-x64.tar.xz",
+      "format": "tar.xz",
+      "checksum": "88bfa928f397ea29bdcdf9ce33b80fb124116b5e56c02dc272348409c6e2003f",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "magick",
+          "src": "ImageMagick-7.1.2-36-portable-Q16-HDRI-linux-musl-x64/bin/magick"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "ImageMagick/ImageMagick/.github/workflows/release.yml",
+        "source_ref": "refs/heads/main",
+        "source_digest": "dcec873ede2912a1b045a50fd54cd138ee5f3fa4",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "ImageMagick",
+      "repo_name": "ImageMagick",
+      "repo_id": 35780977,
+      "asset": "ImageMagick-7.1.2-36-portable-Q16-HDRI-linux-arm64.tar.xz",
+      "format": "tar.xz",
+      "checksum": "456146795540708e3fe67af4847f3aeb23c614593572f8d65a50b9bb663ee2db",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "magick",
+          "src": "ImageMagick-7.1.2-36-portable-Q16-HDRI-linux-arm64/bin/magick"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "ImageMagick/ImageMagick/.github/workflows/release.yml",
+        "source_ref": "refs/heads/main",
+        "source_digest": "dcec873ede2912a1b045a50fd54cd138ee5f3fa4",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "variants": {
+        "libc": "musl"
+      },
+      "linked_libc": "musl",
+      "type": "github_release",
+      "repo_owner": "ImageMagick",
+      "repo_name": "ImageMagick",
+      "repo_id": 35780977,
+      "asset": "ImageMagick-7.1.2-36-portable-Q16-HDRI-linux-musl-arm64.tar.xz",
+      "format": "tar.xz",
+      "checksum": "b1202d6a6ae551fc5407bc49b2c522faf9c0a2d17cfe6c57d78a106b06b863bf",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "magick",
+          "src": "ImageMagick-7.1.2-36-portable-Q16-HDRI-linux-musl-arm64/bin/magick"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "ImageMagick/ImageMagick/.github/workflows/release.yml",
+        "source_ref": "refs/heads/main",
+        "source_digest": "dcec873ede2912a1b045a50fd54cd138ee5f3fa4",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
       "os": "windows",
       "arch": "amd64",
       "type": "github_release",
