@@ -1,0 +1,192 @@
+{
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "http",
+      "repo_owner": "kubernetes",
+      "repo_name": "kubernetes",
+      "repo_id": 20580498,
+      "asset": "kubectl-convert",
+      "url": "https://dl.k8s.io/v1.35.10/bin/darwin/amd64/kubectl-convert",
+      "format": "raw",
+      "checksum": "67f75ec9f3c8fad4b9111bcbf616280a919446f0ae9a921d0b31575e2436611b",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "kubectl-convert",
+          "src": "kubectl-convert"
+        }
+      ],
+      "cosign": {
+        "signature": {
+          "type": "http",
+          "url": "https://dl.k8s.io/v1.35.10/bin/darwin/amd64/kubectl-convert.sig"
+        },
+        "certificate": {
+          "type": "http",
+          "url": "https://dl.k8s.io/v1.35.10/bin/darwin/amd64/kubectl-convert.cert"
+        },
+        "certificate_identity": "krel-staging@k8s-releng-prod.iam.gserviceaccount.com",
+        "certificate_oidc_issuer": "https://accounts.google.com"
+      }
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "http",
+      "repo_owner": "kubernetes",
+      "repo_name": "kubernetes",
+      "repo_id": 20580498,
+      "asset": "kubectl-convert",
+      "url": "https://dl.k8s.io/v1.35.10/bin/darwin/arm64/kubectl-convert",
+      "format": "raw",
+      "checksum": "3ec5a7b5a37b6127a2ae26e7075c932e1e4186bc3cfcc6d0ac7b06ea818a7e9a",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "kubectl-convert",
+          "src": "kubectl-convert"
+        }
+      ],
+      "cosign": {
+        "signature": {
+          "type": "http",
+          "url": "https://dl.k8s.io/v1.35.10/bin/darwin/arm64/kubectl-convert.sig"
+        },
+        "certificate": {
+          "type": "http",
+          "url": "https://dl.k8s.io/v1.35.10/bin/darwin/arm64/kubectl-convert.cert"
+        },
+        "certificate_identity": "krel-staging@k8s-releng-prod.iam.gserviceaccount.com",
+        "certificate_oidc_issuer": "https://accounts.google.com"
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "static",
+      "type": "http",
+      "repo_owner": "kubernetes",
+      "repo_name": "kubernetes",
+      "repo_id": 20580498,
+      "asset": "kubectl-convert",
+      "url": "https://dl.k8s.io/v1.35.10/bin/linux/amd64/kubectl-convert",
+      "format": "raw",
+      "checksum": "dc835315008f4d0b02b116bb19bd5bbfa042d99cb702f5a1f46a440dcad17131",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "kubectl-convert",
+          "src": "kubectl-convert"
+        }
+      ],
+      "cosign": {
+        "signature": {
+          "type": "http",
+          "url": "https://dl.k8s.io/v1.35.10/bin/linux/amd64/kubectl-convert.sig"
+        },
+        "certificate": {
+          "type": "http",
+          "url": "https://dl.k8s.io/v1.35.10/bin/linux/amd64/kubectl-convert.cert"
+        },
+        "certificate_identity": "krel-staging@k8s-releng-prod.iam.gserviceaccount.com",
+        "certificate_oidc_issuer": "https://accounts.google.com"
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "linked_libc": "static",
+      "type": "http",
+      "repo_owner": "kubernetes",
+      "repo_name": "kubernetes",
+      "repo_id": 20580498,
+      "asset": "kubectl-convert",
+      "url": "https://dl.k8s.io/v1.35.10/bin/linux/arm64/kubectl-convert",
+      "format": "raw",
+      "checksum": "b1a17b6c2b21cebb8289bcb2a62b1b000fac78a62c4a84b9bf92a8c3cd49eeb8",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "kubectl-convert",
+          "src": "kubectl-convert"
+        }
+      ],
+      "cosign": {
+        "signature": {
+          "type": "http",
+          "url": "https://dl.k8s.io/v1.35.10/bin/linux/arm64/kubectl-convert.sig"
+        },
+        "certificate": {
+          "type": "http",
+          "url": "https://dl.k8s.io/v1.35.10/bin/linux/arm64/kubectl-convert.cert"
+        },
+        "certificate_identity": "krel-staging@k8s-releng-prod.iam.gserviceaccount.com",
+        "certificate_oidc_issuer": "https://accounts.google.com"
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "http",
+      "repo_owner": "kubernetes",
+      "repo_name": "kubernetes",
+      "repo_id": 20580498,
+      "asset": "kubectl-convert.exe",
+      "url": "https://dl.k8s.io/v1.35.10/bin/windows/amd64/kubectl-convert.exe",
+      "format": "raw",
+      "checksum": "d4469c3a994bec8d18a58495dfab97fb0c4dbcebedc31c5409f17c7a2ca1bb70",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "kubectl-convert",
+          "src": "kubectl-convert.exe"
+        }
+      ],
+      "cosign": {
+        "signature": {
+          "type": "http",
+          "url": "https://dl.k8s.io/v1.35.10/bin/windows/amd64/kubectl-convert.exe.sig"
+        },
+        "certificate": {
+          "type": "http",
+          "url": "https://dl.k8s.io/v1.35.10/bin/windows/amd64/kubectl-convert.exe.cert"
+        },
+        "certificate_identity": "krel-staging@k8s-releng-prod.iam.gserviceaccount.com",
+        "certificate_oidc_issuer": "https://accounts.google.com"
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "type": "http",
+      "repo_owner": "kubernetes",
+      "repo_name": "kubernetes",
+      "repo_id": 20580498,
+      "asset": "kubectl-convert.exe",
+      "url": "https://dl.k8s.io/v1.35.10/bin/windows/arm64/kubectl-convert.exe",
+      "format": "raw",
+      "checksum": "9d4ea30c56c646844e6ee7d721b05cffe879d30af18dcc6c153a47334e68cd66",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "kubectl-convert",
+          "src": "kubectl-convert.exe"
+        }
+      ],
+      "cosign": {
+        "signature": {
+          "type": "http",
+          "url": "https://dl.k8s.io/v1.35.10/bin/windows/arm64/kubectl-convert.exe.sig"
+        },
+        "certificate": {
+          "type": "http",
+          "url": "https://dl.k8s.io/v1.35.10/bin/windows/arm64/kubectl-convert.exe.cert"
+        },
+        "certificate_identity": "krel-staging@k8s-releng-prod.iam.gserviceaccount.com",
+        "certificate_oidc_issuer": "https://accounts.google.com"
+      }
+    }
+  ]
+}
