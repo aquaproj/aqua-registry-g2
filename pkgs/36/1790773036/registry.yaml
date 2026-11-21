@@ -6,9 +6,9 @@ repo_id: 148228732
 description: Active development trunk for Yarn
 version_prefix: '@yarnpkg/cli/'
 files:
-    - name: yarn
+  - name: yarn
 version_overrides:
-    - version_constraint: "true"
-      url: https://repo.yarnpkg.com/{{.SemVer}}/packages/yarnpkg-cli/bin/yarn.js
-      format: raw
-      complete_windows_ext: false
+  - version_constraint: "true"
+    url: https://repo.yarnpkg.com/{{.SemVer}}/packages/yarnpkg-cli/bin/yarn.js
+    format: raw
+    complete_windows_ext: false

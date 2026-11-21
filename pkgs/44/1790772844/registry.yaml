@@ -5,30 +5,30 @@ repo_name: gogs
 repo_id: 16752620
 description: Gogs is a painless self-hosted Git service
 files:
-    - name: gogs
-      src: gogs/gogs
+  - name: gogs
+    src: gogs/gogs
 # Each Windows build is published twice, the second as _mws (run as a Windows service),
 # and the two tie unless the second is left out.
 all_assets_filter: not (Asset contains "_mws")
 version_overrides:
-    - version_constraint: Version in ["v0.12.4-rc.1", "v0.12.5-rc.1", "v0.12.6-rc.1", "v0.12.7-rc.1", "v0.12.8-rc.1", "v0.12.9-rc.1", "v0.12.10-rc.1", "v0.12.11-rc.1", "v0.13.0-rc.1", "v0.13.3-rc.1", "v0.14.0", "latest-commit-build", "release-archive-testing"]
-      no_asset: true
-    - version_constraint: Version == "v0.3.1"
-    - version_constraint: Version == "v0.5.11"
-    - version_constraint: Version == "v0.12.0"
-      format: zip
-    - version_constraint: Version == "v0.12.3"
-    - version_constraint: Version in ["v0.12.4", "v0.12.5", "v0.12.6"]
-    - version_constraint: Version in ["v0.12.7", "v0.12.8", "v0.12.9", "v0.12.10", "v0.12.11", "v0.13.0", "v0.13.2", "v0.13.3", "v0.13.4"]
-    - version_constraint: Version in ["v0.14.0-rc.1", "v0.14.1-rc.1"]
-    - version_constraint: semver("<= 0.4.1")
-      no_asset: true
-    - version_constraint: semver("<= 0.6.15")
-    - version_constraint: semver("<= 0.9.97")
-    - version_constraint: semver("<= 0.11.91")
-      format: zip
-    - version_constraint: semver("<= 0.12.2")
-    - version_constraint: semver("<= 0.13.4-rc.3")
-      no_asset: true
-    - version_constraint: semver("<= 0.14.1")
-    - version_constraint: "true"
+  - version_constraint: Version in ["v0.12.4-rc.1", "v0.12.5-rc.1", "v0.12.6-rc.1", "v0.12.7-rc.1", "v0.12.8-rc.1", "v0.12.9-rc.1", "v0.12.10-rc.1", "v0.12.11-rc.1", "v0.13.0-rc.1", "v0.13.3-rc.1", "v0.14.0", "latest-commit-build", "release-archive-testing"]
+    no_asset: true
+  - version_constraint: Version == "v0.3.1"
+  - version_constraint: Version == "v0.5.11"
+  - version_constraint: Version == "v0.12.0"
+    format: zip
+  - version_constraint: Version == "v0.12.3"
+  - version_constraint: Version in ["v0.12.4", "v0.12.5", "v0.12.6"]
+  - version_constraint: Version in ["v0.12.7", "v0.12.8", "v0.12.9", "v0.12.10", "v0.12.11", "v0.13.0", "v0.13.2", "v0.13.3", "v0.13.4"]
+  - version_constraint: Version in ["v0.14.0-rc.1", "v0.14.1-rc.1"]
+  - version_constraint: semver("<= 0.4.1")
+    no_asset: true
+  - version_constraint: semver("<= 0.6.15")
+  - version_constraint: semver("<= 0.9.97")
+  - version_constraint: semver("<= 0.11.91")
+    format: zip
+  - version_constraint: semver("<= 0.12.2")
+  - version_constraint: semver("<= 0.13.4-rc.3")
+    no_asset: true
+  - version_constraint: semver("<= 0.14.1")
+  - version_constraint: "true"

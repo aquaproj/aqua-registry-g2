@@ -5,13 +5,13 @@ repo_name: presenterm
 repo_id: 683837120
 description: A markdown terminal slideshow tool
 version_overrides:
-    - version_constraint: semver("> 0.2.0")
-      files:
-        - name: presenterm
-          src: presenterm-{{trimV .Version}}/presenterm
-    - version_constraint: semver("<= 0.2.0")
-      no_asset: true
-    - version_constraint: "true"
-      files:
-        - name: presenterm
-          src: presenterm-{{trimV .Version}}/presenterm
+  - version_constraint: semver("> 0.2.0")
+    files:
+      - name: presenterm
+        src: presenterm-{{trimV .Version}}/presenterm
+  - version_constraint: semver("<= 0.2.0")
+    no_asset: true
+  - version_constraint: "true"
+    files:
+      - name: presenterm
+        src: presenterm-{{trimV .Version}}/presenterm

@@ -5,19 +5,19 @@ repo_name: hexyl
 repo_id: 156294298
 description: A command-line hex viewer
 version_overrides:
-    - version_constraint: semver("> 0.15.0")
-      files:
-        - name: hexyl
-          src: '{{.AssetWithoutExt}}/hexyl'
-    - version_constraint: semver("> 0.8.0")
-      files:
-        - name: hexyl
-          src: '{{.AssetWithoutExt}}/hexyl'
-    - version_constraint: semver("<= 0.8.0")
-      files:
-        - name: hexyl
-          src: '{{.AssetWithoutExt}}/hexyl'
-    - version_constraint: "true"
-      files:
-        - name: hexyl
-          src: '{{.AssetWithoutExt}}/hexyl'
+  - version_constraint: semver("> 0.15.0")
+    files:
+      - name: hexyl
+        src: '{{.AssetWithoutExt}}/hexyl'
+  - version_constraint: semver("> 0.8.0")
+    files:
+      - name: hexyl
+        src: '{{.AssetWithoutExt}}/hexyl'
+  - version_constraint: semver("<= 0.8.0")
+    files:
+      - name: hexyl
+        src: '{{.AssetWithoutExt}}/hexyl'
+  - version_constraint: "true"
+    files:
+      - name: hexyl
+        src: '{{.AssetWithoutExt}}/hexyl'

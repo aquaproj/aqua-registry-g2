@@ -5,8 +5,8 @@ repo_name: opa
 repo_id: 48714685
 description: Open Policy Agent (OPA) is an open source, general-purpose policy engine
 version_overrides:
-    - version_constraint: Version == "v0.5.2"
-      no_asset: true
-    - version_constraint: "true"
+  - version_constraint: Version == "v0.5.2"
+    no_asset: true
+  - version_constraint: "true"
 # A _static build tied with the ordinary one, which newer versions use.
 all_assets_filter: not (Asset endsWith "_static")

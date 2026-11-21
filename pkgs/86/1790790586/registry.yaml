@@ -5,28 +5,28 @@ repo_name: sd
 repo_id: 162863623
 description: Intuitive find & replace CLI (sed alternative)
 version_overrides:
-    - version_constraint: Version == "v0.7.2"
-      files:
-        - name: sd
-          src: b/{{.Arch}}-{{.OS}}/release/sd
-    - version_constraint: Version == "v0.7.5"
-      files:
-        - name: sd
-          src: b/{{.Arch}}-{{.OS}}/release/sd
-    - version_constraint: Version == "v0.7.6"
-    - version_constraint: semver("> 0.7.4")
-      files:
-        - name: sd
-          src: sd-{{.Version}}-{{.Arch}}-{{.OS}}/sd
-    - version_constraint: semver("> 0.6.5")
-      files:
-        - name: sd
-          src: b/{{.Arch}}-{{.OS}}/release/sd
-    - version_constraint: semver("<= 0.6.5")
-      files:
-        - name: sd
-          src: '{{.Arch}}-{{.OS}}/sd'
-    - version_constraint: "true"
-      files:
-        - name: sd
-          src: sd-{{.Version}}-{{.Arch}}-{{.OS}}/sd
+  - version_constraint: Version == "v0.7.2"
+    files:
+      - name: sd
+        src: b/{{.Arch}}-{{.OS}}/release/sd
+  - version_constraint: Version == "v0.7.5"
+    files:
+      - name: sd
+        src: b/{{.Arch}}-{{.OS}}/release/sd
+  - version_constraint: Version == "v0.7.6"
+  - version_constraint: semver("> 0.7.4")
+    files:
+      - name: sd
+        src: sd-{{.Version}}-{{.Arch}}-{{.OS}}/sd
+  - version_constraint: semver("> 0.6.5")
+    files:
+      - name: sd
+        src: b/{{.Arch}}-{{.OS}}/release/sd
+  - version_constraint: semver("<= 0.6.5")
+    files:
+      - name: sd
+        src: '{{.Arch}}-{{.OS}}/sd'
+  - version_constraint: "true"
+    files:
+      - name: sd
+        src: sd-{{.Version}}-{{.Arch}}-{{.OS}}/sd

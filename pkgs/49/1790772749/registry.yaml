@@ -5,10 +5,10 @@ repo_name: ntfy
 repo_id: 420503947
 description: Send push notifications to your phone or desktop using PUT/POST
 overrides:
-    - goos: darwin
-      files:
-        - name: ntfy
-          src: ntfy_{{trimV .Version}}_{{.OS}}_all/ntfy
+  - goos: darwin
+    files:
+      - name: ntfy
+        src: ntfy_{{trimV .Version}}_{{.OS}}_all/ntfy
 files:
-    - name: ntfy
-      src: ntfy_{{trimV .Version}}_{{.OS}}_{{.Arch}}/ntfy
+  - name: ntfy
+    src: ntfy_{{trimV .Version}}_{{.OS}}_{{.Arch}}/ntfy

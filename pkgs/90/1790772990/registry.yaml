@@ -5,7 +5,7 @@ repo_name: hyperfine
 repo_id: 117356231
 description: A command-line benchmarking tool
 files:
-    - name: hyperfine
-      src: hyperfine-{{.Version}}-{{.Arch}}-{{.OS}}/hyperfine
+  - name: hyperfine
+    src: hyperfine-{{.Version}}-{{.Arch}}-{{.OS}}/hyperfine
 replacements:
-    "386": i686
+  "386": i686

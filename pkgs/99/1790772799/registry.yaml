@@ -5,23 +5,23 @@ repo_name: dolt
 repo_id: 198683574
 description: Dolt – It's Git for Data
 files:
-    - name: dolt
-      src: dolt-{{.OS}}-{{.Arch}}/bin/dolt
+  - name: dolt
+    src: dolt-{{.OS}}-{{.Arch}}/bin/dolt
 version_overrides:
-    - version_constraint: semver(">= 0.40.29")
-    - version_constraint: semver(">= 0.40.15")
-      files:
-        - name: dolt
-          src: dolt-{{.OS}}-{{.Arch}}/bin/dolt
-        - name: git-dolt
-          src: dolt-{{.OS}}-{{.Arch}}/bin/git-dolt
-        - name: git-dolt-smudge
-          src: dolt-{{.OS}}-{{.Arch}}/bin/git-dolt-smudge
-    - version_constraint: "true"
-      files:
-        - name: dolt
-          src: dolt-{{.OS}}-{{.Arch}}/bin/dolt
-        - name: git-dolt
-          src: dolt-{{.OS}}-{{.Arch}}/bin/git-dolt
-        - name: git-dolt-smudge
-          src: dolt-{{.OS}}-{{.Arch}}/bin/git-dolt-smudge
+  - version_constraint: semver(">= 0.40.29")
+  - version_constraint: semver(">= 0.40.15")
+    files:
+      - name: dolt
+        src: dolt-{{.OS}}-{{.Arch}}/bin/dolt
+      - name: git-dolt
+        src: dolt-{{.OS}}-{{.Arch}}/bin/git-dolt
+      - name: git-dolt-smudge
+        src: dolt-{{.OS}}-{{.Arch}}/bin/git-dolt-smudge
+  - version_constraint: "true"
+    files:
+      - name: dolt
+        src: dolt-{{.OS}}-{{.Arch}}/bin/dolt
+      - name: git-dolt
+        src: dolt-{{.OS}}-{{.Arch}}/bin/git-dolt
+      - name: git-dolt-smudge
+        src: dolt-{{.OS}}-{{.Arch}}/bin/git-dolt-smudge

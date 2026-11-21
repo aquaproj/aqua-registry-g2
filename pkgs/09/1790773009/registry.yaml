@@ -5,13 +5,13 @@ repo_name: thanos
 repo_id: 109162639
 description: Highly available Prometheus setup with long term storage capabilities. A CNCF Incubating project
 version_overrides:
-    - version_constraint: semver("> 0.1.0-rc.1")
-      files:
-        - name: thanos
-          src: '{{.AssetWithoutExt}}/thanos'
-    - version_constraint: semver("<= 0.1.0-rc.1")
-      no_asset: true
-    - version_constraint: "true"
-      files:
-        - name: thanos
-          src: '{{.AssetWithoutExt}}/thanos'
+  - version_constraint: semver("> 0.1.0-rc.1")
+    files:
+      - name: thanos
+        src: '{{.AssetWithoutExt}}/thanos'
+  - version_constraint: semver("<= 0.1.0-rc.1")
+    no_asset: true
+  - version_constraint: "true"
+    files:
+      - name: thanos
+        src: '{{.AssetWithoutExt}}/thanos'

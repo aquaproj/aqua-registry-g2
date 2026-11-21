@@ -5,9 +5,9 @@ repo_name: delta
 repo_id: 193526915
 description: A syntax-highlighting pager for git, diff, grep, and blame output
 overrides:
-    - goos: windows
-      files:
-        - name: delta
+  - goos: windows
+    files:
+      - name: delta
 files:
-    - name: delta
-      src: '{{.AssetWithoutExt}}/delta'
+  - name: delta
+    src: '{{.AssetWithoutExt}}/delta'

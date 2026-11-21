@@ -6,9 +6,9 @@ repo_id: 355946670
 description: vCluster - Create fully functional virtual Kubernetes clusters - Each vcluster runs inside a namespace of the underlying k8s cluster. It's cheaper than creating separate full-blown clusters and it offers better multi-tenancy and isolation than regular namespaces
 version_filter: not (Version matches "-(alpha|beta|rc)")
 version_overrides:
-    - version_constraint: semver("> 0.15.2")
-    - version_constraint: semver("<= 0.15.2")
-    - version_constraint: "true"
+  - version_constraint: semver("> 0.15.2")
+  - version_constraint: semver("<= 0.15.2")
+  - version_constraint: "true"
 # The release publishes syncer, which was offered for Linux, and a standalone and a FIPS
 # build beside the vcluster CLI.
 all_assets_filter: Asset startsWith "vcluster-" and not (Asset contains "standalone")

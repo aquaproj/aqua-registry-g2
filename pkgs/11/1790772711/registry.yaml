@@ -5,26 +5,26 @@ repo_name: Xray-core
 repo_id: 311315731
 description: Xray, Penetrates Everything. Also the best v2ray-core
 files:
-    - name: xray
+  - name: xray
 version_overrides:
-    - version_constraint: semver("> 1.4.5")
-      replacements:
-        amd64: "64"
-        arm64: arm64-v8a
-    - version_constraint: semver("> 1.2.1")
-      replacements:
-        amd64: "64"
-        arm64: arm64-v8a
-    - version_constraint: semver("<= 1.2.1")
-      replacements:
-        amd64: "64"
-        arm64: arm64-v8a
-    - version_constraint: "true"
-      replacements:
-        amd64: "64"
-        arm64: arm64-v8a
+  - version_constraint: semver("> 1.4.5")
+    replacements:
+      amd64: "64"
+      arm64: arm64-v8a
+  - version_constraint: semver("> 1.2.1")
+    replacements:
+      amd64: "64"
+      arm64: arm64-v8a
+  - version_constraint: semver("<= 1.2.1")
+    replacements:
+      amd64: "64"
+      arm64: arm64-v8a
+  - version_constraint: "true"
+    replacements:
+      amd64: "64"
+      arm64: arm64-v8a
 # Xray-linux-loong64.zip holds "64", the definition's spelling of amd64, and ties with
 # Xray-linux-64.zip for linux/amd64 unless it is left out.
 all_assets_filter: |
-    let words = ["-32\\.", "^Xray-win7-", "-loong64\\."];
-    not any(words, {Asset matches #})
+  let words = ["-32\\.", "^Xray-win7-", "-loong64\\."];
+  not any(words, {Asset matches #})

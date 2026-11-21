@@ -5,15 +5,15 @@ repo_name: coder
 repo_id: 440752086
 description: Provision remote development environments via Terraform
 github_artifact_attestations:
-    signer_workflow: coder/coder/.github/workflows/release.yaml
+  signer_workflow: coder/coder/.github/workflows/release.yaml
 version_overrides:
-    - version_constraint: semver(">= 2.33.0")
-      github_artifact_attestations:
-        signer_workflow: coder/coder/.github/workflows/release.yaml
-    - version_constraint: semver("> 0.5.9")
-    - version_constraint: semver("> 0.4.2")
-    - version_constraint: semver("> 0.3.3")
-    - version_constraint: semver("<= 0.3.3")
-    - version_constraint: "true"
-      github_artifact_attestations:
-        signer_workflow: coder/coder/.github/workflows/release.yaml
+  - version_constraint: semver(">= 2.33.0")
+    github_artifact_attestations:
+      signer_workflow: coder/coder/.github/workflows/release.yaml
+  - version_constraint: semver("> 0.5.9")
+  - version_constraint: semver("> 0.4.2")
+  - version_constraint: semver("> 0.3.3")
+  - version_constraint: semver("<= 0.3.3")
+  - version_constraint: "true"
+    github_artifact_attestations:
+      signer_workflow: coder/coder/.github/workflows/release.yaml

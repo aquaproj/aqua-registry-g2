@@ -5,10 +5,10 @@ repo_name: xsv
 repo_id: 23560214
 description: A fast CSV command line toolkit written in Rust
 version_overrides:
-    - version_constraint: semver(">= 0.10.3")
-    - version_constraint: semver(">= 0.10.0")
-    - version_constraint: semver("< 0.10.0")
-      files:
-        - name: xsv
-          src: xsv-{{.Version}}-{{.Arch}}-{{.OS}}/xsv
-    - version_constraint: "true"
+  - version_constraint: semver(">= 0.10.3")
+  - version_constraint: semver(">= 0.10.0")
+  - version_constraint: semver("< 0.10.0")
+    files:
+      - name: xsv
+        src: xsv-{{.Version}}-{{.Arch}}-{{.OS}}/xsv
+  - version_constraint: "true"
