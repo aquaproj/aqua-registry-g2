@@ -82,6 +82,39 @@ version_overrides:
               src: '{{.AssetWithoutExt}}/npm.cmd'
             - name: npx
               src: '{{.AssetWithoutExt}}/npx.cmd'
+    # From v27 nodejs.org publishes linux-x64-musl itself, and unofficial-builds doesn't
+    # carry the release. win-arm64 is a native build. semver() never matches a prerelease
+    # against a constraint without one, so the v27 prereleases are named.
+    - version_constraint: semver(">= 27.0.0") or Version startsWith "v27."
+      url: https://nodejs.org/dist/{{.Version}}/node-{{.Version}}-{{.OS}}-{{.Arch}}.{{.Format}}
+      format: tar.gz
+      files:
+        - name: node
+          src: '{{.AssetWithoutExt}}/bin/node'
+        - name: npm
+          src: '{{.AssetWithoutExt}}/bin/npm'
+        - name: npx
+          src: '{{.AssetWithoutExt}}/bin/npx'
+      overrides:
+        - goos: linux
+          variants:
+            - key: libc
+              value: glibc
+        - goos: linux
+          goarch: amd64
+          url: https://nodejs.org/dist/{{.Version}}/node-{{.Version}}-linux-{{.Arch}}-musl.tar.gz
+          variants:
+            - key: libc
+              value: musl
+        - goos: windows
+          format: zip
+          files:
+            - name: node
+              src: '{{.AssetWithoutExt}}/node'
+            - name: npm
+              src: '{{.AssetWithoutExt}}/npm.cmd'
+            - name: npx
+              src: '{{.AssetWithoutExt}}/npx.cmd'
     - version_constraint: "true"
       url: https://nodejs.org/dist/{{.Version}}/node-{{.Version}}-{{.OS}}-{{.Arch}}.{{.Format}}
       format: tar.gz
