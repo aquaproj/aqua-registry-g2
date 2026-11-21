@@ -10,63 +10,63 @@ all_assets_filter: not (Asset contains "windows-gnu")
 # 0.7.0 to 0.9.0 publish the x86_64 MSVC build as one executable per command, without the
 # multi-call coreutils.exe that the MinGW build and every other release has.
 asset_filters:
-    - version_constraint: semver(">= 0.7.0") and semver("< 0.10.0")
-      all_assets_filter: not (Asset contains "x86_64-pc-windows-msvc")
+  - version_constraint: semver(">= 0.7.0") and semver("< 0.10.0")
+    all_assets_filter: not (Asset contains "x86_64-pc-windows-msvc")
 version_overrides:
-    - version_constraint: Version in ["0.0.9", "0.0.24", "0.0.25", "0.0.29"]
-      no_asset: true
-    - version_constraint: Version == "0.0.1"
-      files:
-        - name: uutils
-          src: uutils-{{.Version}}-{{.Arch}}-{{.OS}}/uutils
-    - version_constraint: Version == "0.0.1.1"
-      files:
-        - name: coreutils
-          src: coreutils-{{.Version}}-{{.Arch}}-{{.OS}}/coreutils
-    - version_constraint: Version == "0.0.2"
-      files:
-        - name: coreutils
-          src: coreutils-{{.Version}}-{{.Arch}}-{{.OS}}/coreutils
-    - version_constraint: Version == "0.0.7"
-      files:
-        - name: coreutils
-          src: coreutils-{{.Version}}-{{.Arch}}-{{.OS}}/coreutils
-    - version_constraint: Version == "0.0.14"
-      files:
-        - name: coreutils
-          src: coreutils-{{.Version}}-{{.Arch}}-{{.OS}}/coreutils
-    - version_constraint: semver("<= 0.0.22")
-      files:
-        - name: coreutils
-          src: coreutils-{{.Version}}-{{.Arch}}-{{.OS}}/coreutils
-    - version_constraint: Version == "0.0.23"
-      files:
-        - name: coreutils
-          src: coreutils-{{.Version}}-{{.Arch}}-{{.OS}}/coreutils
-    - version_constraint: Version == "0.0.26"
-      files:
-        - name: coreutils
-          src: coreutils-{{.Version}}-{{.Arch}}-{{.OS}}/coreutils
-    - version_constraint: Version == "0.0.27"
-      files:
-        - name: coreutils
-          src: coreutils-{{.Version}}-{{.Arch}}-{{.OS}}/coreutils
-    - version_constraint: Version == "0.6.0"
-      files:
-        - name: coreutils
-          src: coreutils-{{.Arch}}-{{.OS}}/coreutils
-    - version_constraint: semver("<= 0.6.0")
-      files:
-        - name: coreutils
-          src: coreutils-{{.Version}}-{{.Arch}}-{{.OS}}/coreutils
-    - version_constraint: semver("< 0.10.0")
-      files:
-        - name: coreutils
-          src: coreutils-{{.Version}}-{{.Arch}}-{{.OS}}/coreutils
-      supported_envs:
-        - darwin
-        - linux
-    - version_constraint: "true"
-      files:
-        - name: coreutils
-          src: coreutils-{{.Version}}-{{.Arch}}-{{.OS}}/coreutils
+  - version_constraint: Version in ["0.0.9", "0.0.24", "0.0.25", "0.0.29"]
+    no_asset: true
+  - version_constraint: Version == "0.0.1"
+    files:
+      - name: uutils
+        src: uutils-{{.Version}}-{{.Arch}}-{{.OS}}/uutils
+  - version_constraint: Version == "0.0.1.1"
+    files:
+      - name: coreutils
+        src: coreutils-{{.Version}}-{{.Arch}}-{{.OS}}/coreutils
+  - version_constraint: Version == "0.0.2"
+    files:
+      - name: coreutils
+        src: coreutils-{{.Version}}-{{.Arch}}-{{.OS}}/coreutils
+  - version_constraint: Version == "0.0.7"
+    files:
+      - name: coreutils
+        src: coreutils-{{.Version}}-{{.Arch}}-{{.OS}}/coreutils
+  - version_constraint: Version == "0.0.14"
+    files:
+      - name: coreutils
+        src: coreutils-{{.Version}}-{{.Arch}}-{{.OS}}/coreutils
+  - version_constraint: semver("<= 0.0.22")
+    files:
+      - name: coreutils
+        src: coreutils-{{.Version}}-{{.Arch}}-{{.OS}}/coreutils
+  - version_constraint: Version == "0.0.23"
+    files:
+      - name: coreutils
+        src: coreutils-{{.Version}}-{{.Arch}}-{{.OS}}/coreutils
+  - version_constraint: Version == "0.0.26"
+    files:
+      - name: coreutils
+        src: coreutils-{{.Version}}-{{.Arch}}-{{.OS}}/coreutils
+  - version_constraint: Version == "0.0.27"
+    files:
+      - name: coreutils
+        src: coreutils-{{.Version}}-{{.Arch}}-{{.OS}}/coreutils
+  - version_constraint: Version == "0.6.0"
+    files:
+      - name: coreutils
+        src: coreutils-{{.Arch}}-{{.OS}}/coreutils
+  - version_constraint: semver("<= 0.6.0")
+    files:
+      - name: coreutils
+        src: coreutils-{{.Version}}-{{.Arch}}-{{.OS}}/coreutils
+  - version_constraint: semver("< 0.10.0")
+    files:
+      - name: coreutils
+        src: coreutils-{{.Version}}-{{.Arch}}-{{.OS}}/coreutils
+    supported_envs:
+      - darwin
+      - linux
+  - version_constraint: "true"
+    files:
+      - name: coreutils
+        src: coreutils-{{.Version}}-{{.Arch}}-{{.OS}}/coreutils

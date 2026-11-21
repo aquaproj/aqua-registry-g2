@@ -5,5 +5,5 @@ repo_name: termshark
 repo_id: 182353393
 description: A terminal UI for tshark, inspired by Wireshark
 files:
-    - name: termshark
-      src: termshark_{{trimV .Version}}_{{.OS}}_{{.Arch}}/termshark
+  - name: termshark
+    src: termshark_{{trimV .Version}}_{{.OS}}_{{.Arch}}/termshark

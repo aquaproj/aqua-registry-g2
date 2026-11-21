@@ -5,15 +5,15 @@ repo_name: crush
 repo_id: 987670088
 description: The glamourous AI coding agent for your favourite terminal
 version_overrides:
-    - version_constraint: semver("> 0.20.0")
-      files:
-        - name: crush
-          src: crush_{{trimV .Version}}_{{.OS}}_{{.Arch}}/crush
-    - version_constraint: semver("<= 0.20.0")
-      files:
-        - name: crush
-          src: crush_{{trimV .Version}}_{{.OS}}_{{.Arch}}/crush
-    - version_constraint: "true"
-      files:
-        - name: crush
-          src: crush_{{trimV .Version}}_{{.OS}}_{{.Arch}}/crush
+  - version_constraint: semver("> 0.20.0")
+    files:
+      - name: crush
+        src: crush_{{trimV .Version}}_{{.OS}}_{{.Arch}}/crush
+  - version_constraint: semver("<= 0.20.0")
+    files:
+      - name: crush
+        src: crush_{{trimV .Version}}_{{.OS}}_{{.Arch}}/crush
+  - version_constraint: "true"
+    files:
+      - name: crush
+        src: crush_{{trimV .Version}}_{{.OS}}_{{.Arch}}/crush

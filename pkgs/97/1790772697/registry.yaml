@@ -6,9 +6,9 @@ repo_id: 118654121
 description: Easy and Repeatable Kubernetes Development
 url: https://storage.googleapis.com/skaffold/releases/{{.Version}}/skaffold-{{.OS}}-{{.Arch}}
 files:
-    - name: skaffold
-      src: skaffold-{{.OS}}-{{.Arch}}
+  - name: skaffold
+    src: skaffold-{{.OS}}-{{.Arch}}
 supported_envs:
-    - darwin
-    - linux
-    - amd64
+  - darwin
+  - linux
+  - amd64

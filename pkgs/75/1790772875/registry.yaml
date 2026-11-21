@@ -5,25 +5,25 @@ repo_name: helix
 repo_id: 268424739
 description: A post-modern modal text editor
 files:
-    - name: hx
+  - name: hx
 version_overrides:
-    - version_constraint: semver("> 22.8.1")
-      files:
-        - name: hx
-          src: '{{.AssetWithoutExt}}/hx'
-    - version_constraint: semver("> 22.5.0")
-      files:
-        - name: hx
-          src: '{{.AssetWithoutExt}}/hx'
-    - version_constraint: semver("> 0.6.0")
-      files:
-        - name: hx
-          src: '{{.AssetWithoutExt}}/hx'
-    - version_constraint: semver("<= 0.6.0")
-      files:
-        - name: hx
-          src: '{{.AssetWithoutExt}}/hx'
-    - version_constraint: "true"
-      files:
-        - name: hx
-          src: '{{.AssetWithoutExt}}/hx'
+  - version_constraint: semver("> 22.8.1")
+    files:
+      - name: hx
+        src: '{{.AssetWithoutExt}}/hx'
+  - version_constraint: semver("> 22.5.0")
+    files:
+      - name: hx
+        src: '{{.AssetWithoutExt}}/hx'
+  - version_constraint: semver("> 0.6.0")
+    files:
+      - name: hx
+        src: '{{.AssetWithoutExt}}/hx'
+  - version_constraint: semver("<= 0.6.0")
+    files:
+      - name: hx
+        src: '{{.AssetWithoutExt}}/hx'
+  - version_constraint: "true"
+    files:
+      - name: hx
+        src: '{{.AssetWithoutExt}}/hx'

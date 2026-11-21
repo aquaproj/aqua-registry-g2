@@ -5,42 +5,42 @@ repo_name: gost
 repo_id: 240039769
 description: GO Simple Tunnel - a simple tunnel written in golang
 version_overrides:
-    - version_constraint: semver("> 3.0.0-rc.4")
-      overrides:
-        - goos: windows
-          files:
-            - name: gost
-    - version_constraint: semver("> 3.0.0-beta.6")
-      files:
-        - name: gost
-          src: gost-{{.OS}}-{{.Arch}}-{{trimV .Version}}
-      overrides:
-        - goos: windows
-          files:
-            - name: gost
-              src: gost-windows-{{.Arch}}.exe
-    - version_constraint: semver("> 3.0.0-beta.2")
-      files:
-        - name: gost
-          src: gost-{{.OS}}-{{.Arch}}-{{trimV .Version}}
-      overrides:
-        - goos: windows
-          files:
-            - name: gost
-              src: gost-windows-{{.Arch}}.exe
-    - version_constraint: semver("<= 3.0.0-beta.2")
-      files:
-        - name: gost
-          src: gost-{{.OS}}-{{.Arch}}-{{trimV .Version}}
-      overrides:
-        - goos: windows
-          files:
-            - name: gost
-              src: gost-windows-{{.Arch}}.exe
-    - version_constraint: "true"
-      overrides:
-        - goos: windows
-          files:
-            - name: gost
+  - version_constraint: semver("> 3.0.0-rc.4")
+    overrides:
+      - goos: windows
+        files:
+          - name: gost
+  - version_constraint: semver("> 3.0.0-beta.6")
+    files:
+      - name: gost
+        src: gost-{{.OS}}-{{.Arch}}-{{trimV .Version}}
+    overrides:
+      - goos: windows
+        files:
+          - name: gost
+            src: gost-windows-{{.Arch}}.exe
+  - version_constraint: semver("> 3.0.0-beta.2")
+    files:
+      - name: gost
+        src: gost-{{.OS}}-{{.Arch}}-{{trimV .Version}}
+    overrides:
+      - goos: windows
+        files:
+          - name: gost
+            src: gost-windows-{{.Arch}}.exe
+  - version_constraint: semver("<= 3.0.0-beta.2")
+    files:
+      - name: gost
+        src: gost-{{.OS}}-{{.Arch}}-{{trimV .Version}}
+    overrides:
+      - goos: windows
+        files:
+          - name: gost
+            src: gost-windows-{{.Arch}}.exe
+  - version_constraint: "true"
+    overrides:
+      - goos: windows
+        files:
+          - name: gost
 # amd64v3 builds, for newer x86-64 CPUs, tied with the amd64 one.
 all_assets_filter: not (Asset matches "amd64v[0-9]")

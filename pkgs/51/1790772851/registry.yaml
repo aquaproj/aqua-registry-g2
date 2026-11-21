@@ -5,5 +5,5 @@ repo_name: mock
 repo_id: 37334619
 description: GoMock is a mocking framework for the Go programming language
 files:
-    - name: mockgen
-      src: mock_{{trimV .Version}}_{{.OS}}_{{.Arch}}/mockgen
+  - name: mockgen
+    src: mock_{{trimV .Version}}_{{.OS}}_{{.Arch}}/mockgen

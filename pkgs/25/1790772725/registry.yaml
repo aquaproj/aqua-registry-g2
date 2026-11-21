@@ -5,10 +5,10 @@ repo_name: fx
 repo_id: 118945118
 description: Command-line tool and terminal JSON viewer
 version_overrides:
-    - version_constraint: semver(">= 21.0.0")
-    - version_constraint: "true"
-      files:
-        - name: fx
-          src: fx-{{.OS}}
-      replacements:
-        windows: win.exe
+  - version_constraint: semver(">= 21.0.0")
+  - version_constraint: "true"
+    files:
+      - name: fx
+        src: fx-{{.OS}}
+    replacements:
+      windows: win.exe

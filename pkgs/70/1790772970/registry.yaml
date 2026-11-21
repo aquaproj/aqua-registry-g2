@@ -5,7 +5,7 @@ repo_name: alertmanager
 repo_id: 11452538
 description: Prometheus Alertmanager
 files:
-    - name: alertmanager
-      src: alertmanager-{{trimV .Version}}.{{.OS}}-{{.Arch}}/alertmanager
-    - name: amtool
-      src: alertmanager-{{trimV .Version}}.{{.OS}}-{{.Arch}}/amtool
+  - name: alertmanager
+    src: alertmanager-{{trimV .Version}}.{{.OS}}-{{.Arch}}/alertmanager
+  - name: amtool
+    src: alertmanager-{{trimV .Version}}.{{.OS}}-{{.Arch}}/amtool

@@ -5,15 +5,15 @@ repo_name: anteon
 repo_id: 392596825
 description: Anteon (formerly Ddosify) - Effortless Kubernetes Monitoring and Performance Testing. Available on CLI, Self-Hosted, and Cloud
 version_overrides:
-    - version_constraint: semver("> 1.0.3")
-      files:
-        - name: ddosify
-    - version_constraint: semver("> 0.4.1")
-      files:
-        - name: ddosify
-    - version_constraint: semver("<= 0.4.1")
-      files:
-        - name: ddosify
-    - version_constraint: "true"
-      files:
-        - name: ddosify
+  - version_constraint: semver("> 1.0.3")
+    files:
+      - name: ddosify
+  - version_constraint: semver("> 0.4.1")
+    files:
+      - name: ddosify
+  - version_constraint: semver("<= 0.4.1")
+    files:
+      - name: ddosify
+  - version_constraint: "true"
+    files:
+      - name: ddosify

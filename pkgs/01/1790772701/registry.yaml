@@ -5,7 +5,7 @@ repo_name: go-blueprint
 repo_id: 703404066
 description: Go-blueprint allows users to spin up a quick Go project using a popular framework
 version_overrides:
-    - version_constraint: Version == "v0.2.4"
-      replacements:
-        amd64: x86
-    - version_constraint: "true"
+  - version_constraint: Version == "v0.2.4"
+    replacements:
+      amd64: x86
+  - version_constraint: "true"

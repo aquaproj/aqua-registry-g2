@@ -1,50 +1,50 @@
 name: kubevela/kubevela
 aliases:
-    - name: oam-dev/kubevela
+  - name: oam-dev/kubevela
 type: github_release
 repo_owner: kubevela
 repo_name: kubevela
 repo_id: 276822250
 description: The Modern Application Platform
 files:
-    - name: vela
+  - name: vela
 version_overrides:
-    - version_constraint: Version in ["v1.7.0", "v1.7.1"]
-      no_asset: true
-    - version_constraint: Version == "v0.3.4"
-      files:
-        - name: vela
-          src: '{{.OS}}-{{.Arch}}/vela'
-    - version_constraint: Version in ["v1.3.3"]
-    - version_constraint: semver("<= 0.0.1.1")
-      no_asset: true
-    - version_constraint: semver("<= 0.0.3")
-    - version_constraint: semver("<= 0.3.0")
-      files:
-        - name: vela
-          src: '{{.OS}}-{{.Arch}}/vela'
-    - version_constraint: semver("<= 0.3.3")
-      files:
-        - name: vela
-          src: '{{.OS}}-{{.Arch}}/vela'
-    - version_constraint: semver("<= 1.1.13")
-      files:
-        - name: vela
-          src: '{{.OS}}-{{.Arch}}/vela'
-    - version_constraint: semver("<= 1.6.7")
-      files:
-        - name: vela
-          src: '{{.OS}}-{{.Arch}}/vela'
-    - version_constraint: semver("<= 1.10.2")
-      files:
-        - name: vela
-          src: '{{.OS}}-{{.Arch}}/vela'
-    - version_constraint: "true"
-      files:
-        - name: vela
-          src: '{{.OS}}-{{.Arch}}/vela'
-      slsa_provenance:
-        type: github_release
-        asset: multiple.intoto.jsonl
+  - version_constraint: Version in ["v1.7.0", "v1.7.1"]
+    no_asset: true
+  - version_constraint: Version == "v0.3.4"
+    files:
+      - name: vela
+        src: '{{.OS}}-{{.Arch}}/vela'
+  - version_constraint: Version in ["v1.3.3"]
+  - version_constraint: semver("<= 0.0.1.1")
+    no_asset: true
+  - version_constraint: semver("<= 0.0.3")
+  - version_constraint: semver("<= 0.3.0")
+    files:
+      - name: vela
+        src: '{{.OS}}-{{.Arch}}/vela'
+  - version_constraint: semver("<= 0.3.3")
+    files:
+      - name: vela
+        src: '{{.OS}}-{{.Arch}}/vela'
+  - version_constraint: semver("<= 1.1.13")
+    files:
+      - name: vela
+        src: '{{.OS}}-{{.Arch}}/vela'
+  - version_constraint: semver("<= 1.6.7")
+    files:
+      - name: vela
+        src: '{{.OS}}-{{.Arch}}/vela'
+  - version_constraint: semver("<= 1.10.2")
+    files:
+      - name: vela
+        src: '{{.OS}}-{{.Arch}}/vela'
+  - version_constraint: "true"
+    files:
+      - name: vela
+        src: '{{.OS}}-{{.Arch}}/vela'
+    slsa_provenance:
+      type: github_release
+      asset: multiple.intoto.jsonl
 # kubectl-vela, the kubectl plugin, tied with vela.
 all_assets_filter: Asset startsWith "vela-"
