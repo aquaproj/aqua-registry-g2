@@ -1,0 +1,25 @@
+name: zavoloklom/docker-compose-linter
+type: github_release
+repo_owner: zavoloklom
+repo_name: docker-compose-linter
+repo_id: 845738739
+description: A command-line tool for validating and enforcing best practices in Docker
+  Compose files
+version_overrides:
+  - version_constraint: "true"
+    format: raw
+    files:
+      - name: dclint
+    overrides:
+      - goos: linux
+        asset: dclint-bullseye-{{.Arch}}
+        variants:
+          - key: libc
+            value: glibc
+    supported_envs:
+      - linux
+asset_rules:
+  - envs:
+      - linux/amd64
+      - linux/arm64
+    filter: Asset matches "^dclint-alpine-.+([.].+)?$"
