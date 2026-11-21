@@ -65,7 +65,7 @@ jobs:
       # approval-required state, so nothing would run until someone pressed a button
       # and auto-merge would never fire. This app is a bypass actor for nothing: it
       # opens pull requests and that is all, so the checks still decide what merges.
-      - uses: actions/create-github-app-token@64ab729a6294000f5aa4a4bc0b73d1f32bc45510 # v3.3.0
+      - uses: actions/create-github-app-token@f418cff399f7aef4c2f0ad47e25ca7a6abbdd6fc # v3.4.0
         id: pr_token
         with:
           client-id: ${{ vars.AR2_PR_CLIENT_ID }}
