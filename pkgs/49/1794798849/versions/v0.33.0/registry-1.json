@@ -1,0 +1,170 @@
+{
+  "published_at": "2026-09-12T16:51:04Z",
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "s0undt3ch",
+      "repo_name": "ToolR",
+      "repo_id": 726585744,
+      "asset": "toolr-0.33.0-x86_64-apple-darwin.tar.gz",
+      "format": "tar.gz",
+      "checksum": "83f75d09194423dd0dc75e6e4886ac18dd97e03b8e285feb7b4f6fde714fd394",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "toolr",
+          "src": "toolr-0.33.0-x86_64-apple-darwin/toolr"
+        }
+      ],
+      "github_artifact_attestations": {
+        "enabled": true,
+        "signer_workflow": "s0undt3ch/ToolR/.github/workflows/_build-binary-archive.yml",
+        "source_ref": "refs/heads/main",
+        "source_digest": "15c8716571e815a61d447d91460add300e945bab",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "s0undt3ch",
+      "repo_name": "ToolR",
+      "repo_id": 726585744,
+      "asset": "toolr-0.33.0-aarch64-apple-darwin.tar.gz",
+      "format": "tar.gz",
+      "checksum": "2493250f599e06899316c0b6f63f04495aaf403041aebbe8baa20a20602db21c",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "toolr",
+          "src": "toolr-0.33.0-aarch64-apple-darwin/toolr"
+        }
+      ],
+      "github_artifact_attestations": {
+        "enabled": true,
+        "signer_workflow": "s0undt3ch/ToolR/.github/workflows/_build-binary-archive.yml",
+        "source_ref": "refs/heads/main",
+        "source_digest": "15c8716571e815a61d447d91460add300e945bab",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "variants": {
+        "libc": "musl"
+      },
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "s0undt3ch",
+      "repo_name": "ToolR",
+      "repo_id": 726585744,
+      "asset": "toolr-0.33.0-x86_64-unknown-linux-musl.tar.gz",
+      "format": "tar.gz",
+      "checksum": "8d0dd2aa05f966785b0583f5e1b1fcfa59909c7ea0cc3acffcae2e3e5e38ed82",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "toolr",
+          "src": "toolr-0.33.0-x86_64-unknown-linux-musl/toolr"
+        }
+      ],
+      "github_artifact_attestations": {
+        "enabled": true,
+        "signer_workflow": "s0undt3ch/ToolR/.github/workflows/_build-binary-archive.yml",
+        "source_ref": "refs/heads/main",
+        "source_digest": "15c8716571e815a61d447d91460add300e945bab",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "variants": {
+        "libc": "musl"
+      },
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "s0undt3ch",
+      "repo_name": "ToolR",
+      "repo_id": 726585744,
+      "asset": "toolr-0.33.0-aarch64-unknown-linux-musl.tar.gz",
+      "format": "tar.gz",
+      "checksum": "319810a876ca3ac5aeeb4259143005a9c10670c8fcdc956f3e03b9562e4e4dd7",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "toolr",
+          "src": "toolr-0.33.0-aarch64-unknown-linux-musl/toolr"
+        }
+      ],
+      "github_artifact_attestations": {
+        "enabled": true,
+        "signer_workflow": "s0undt3ch/ToolR/.github/workflows/_build-binary-archive.yml",
+        "source_ref": "refs/heads/main",
+        "source_digest": "15c8716571e815a61d447d91460add300e945bab",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "s0undt3ch",
+      "repo_name": "ToolR",
+      "repo_id": 726585744,
+      "asset": "toolr-0.33.0-x86_64-pc-windows-msvc.zip",
+      "format": "zip",
+      "checksum": "8ac0abe862132715a583e3059a2fbee9bec57ece914d8f26e278cb94423e6609",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "toolr",
+          "src": "toolr-0.33.0-x86_64-pc-windows-msvc/toolr.exe"
+        }
+      ],
+      "github_artifact_attestations": {
+        "enabled": true,
+        "signer_workflow": "s0undt3ch/ToolR/.github/workflows/_build-binary-archive.yml",
+        "source_ref": "refs/heads/main",
+        "source_digest": "15c8716571e815a61d447d91460add300e945bab",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "windows_arm_emulation": true,
+      "type": "github_release",
+      "repo_owner": "s0undt3ch",
+      "repo_name": "ToolR",
+      "repo_id": 726585744,
+      "asset": "toolr-0.33.0-x86_64-pc-windows-msvc.zip",
+      "format": "zip",
+      "checksum": "8ac0abe862132715a583e3059a2fbee9bec57ece914d8f26e278cb94423e6609",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "toolr",
+          "src": "toolr-0.33.0-x86_64-pc-windows-msvc/toolr.exe"
+        }
+      ],
+      "github_artifact_attestations": {
+        "enabled": true,
+        "signer_workflow": "s0undt3ch/ToolR/.github/workflows/_build-binary-archive.yml",
+        "source_ref": "refs/heads/main",
+        "source_digest": "15c8716571e815a61d447d91460add300e945bab",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    }
+  ]
+}
