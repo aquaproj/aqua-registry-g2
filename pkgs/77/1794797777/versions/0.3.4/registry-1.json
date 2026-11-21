@@ -1,0 +1,90 @@
+{
+  "published_at": "2025-09-10T21:15:00Z",
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "technicalpickles",
+      "repo_name": "envsense",
+      "repo_id": 1042700743,
+      "asset": "envsense-0.3.4-universal-apple-darwin",
+      "format": "raw",
+      "checksum": "fbf65ef4c0083a6dd78321d39d6d3c4e03a23d9c04a596b20fea25049239bc36",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "envsense",
+          "src": "envsense-0.3.4-universal-apple-darwin"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "envsense-0.3.4-universal-apple-darwin.bundle"
+        },
+        "certificate_identity_regexp": "^https://github\\.com/technicalpickles/envsense/",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "certificate_github_workflow_repository": "technicalpickles/envsense"
+      }
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "technicalpickles",
+      "repo_name": "envsense",
+      "repo_id": 1042700743,
+      "asset": "envsense-0.3.4-universal-apple-darwin",
+      "format": "raw",
+      "checksum": "fbf65ef4c0083a6dd78321d39d6d3c4e03a23d9c04a596b20fea25049239bc36",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "envsense",
+          "src": "envsense-0.3.4-universal-apple-darwin"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "envsense-0.3.4-universal-apple-darwin.bundle"
+        },
+        "certificate_identity_regexp": "^https://github\\.com/technicalpickles/envsense/",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "certificate_github_workflow_repository": "technicalpickles/envsense"
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "variants": {
+        "libc": "glibc"
+      },
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "technicalpickles",
+      "repo_name": "envsense",
+      "repo_id": 1042700743,
+      "asset": "envsense-0.3.4-x86_64-unknown-linux-gnu",
+      "format": "raw",
+      "checksum": "075c97013c57a358e178d0ec19c52b59116704d98948c20623e821c46b8c547d",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "envsense",
+          "src": "envsense-0.3.4-x86_64-unknown-linux-gnu"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "envsense-0.3.4-x86_64-unknown-linux-gnu.bundle"
+        },
+        "certificate_identity_regexp": "^https://github\\.com/technicalpickles/envsense/",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "certificate_github_workflow_repository": "technicalpickles/envsense"
+      }
+    }
+  ]
+}
