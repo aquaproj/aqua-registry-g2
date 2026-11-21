@@ -1,0 +1,139 @@
+{
+  "published_at": "2026-10-12T16:30:25Z",
+  "assets": [
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "variants": {
+        "libc": "glibc"
+      },
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "takumin",
+      "repo_name": "qemu-bin",
+      "repo_id": 1415804611,
+      "asset": "qemu-x86_64-linux-gnu.tar.gz",
+      "format": "tar.gz",
+      "checksum": "0826cc8a5278ff06b37b6d75f8f22d7f041e4abdc45aa4b3b32d71c51dd53752",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "qemu-edid",
+          "src": "bin/qemu-edid"
+        },
+        {
+          "name": "qemu-img",
+          "src": "bin/qemu-img"
+        },
+        {
+          "name": "qemu-io",
+          "src": "bin/qemu-io"
+        },
+        {
+          "name": "qemu-nbd",
+          "src": "bin/qemu-nbd"
+        },
+        {
+          "name": "qemu-pr-helper",
+          "src": "bin/qemu-pr-helper"
+        },
+        {
+          "name": "qemu-storage-daemon",
+          "src": "bin/qemu-storage-daemon"
+        },
+        {
+          "name": "qemu-system-aarch64",
+          "src": "bin/qemu-system-aarch64"
+        },
+        {
+          "name": "qemu-system-x86_64",
+          "src": "bin/qemu-system-x86_64"
+        },
+        {
+          "name": "qemu-vmsr-helper",
+          "src": "bin/qemu-vmsr-helper"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "qemu-x86_64-linux-gnu.tar.gz.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/takumin/qemu-bin/.github/workflows/wc-sign.yml@refs/heads/main",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      },
+      "github_artifact_attestations": {
+        "signer_workflow": "takumin/qemu-bin/.github/workflows/wc-sign.yml",
+        "source_ref": "refs/heads/main",
+        "source_digest": "b2371a6b532bf628ffadfff64d5d16a6ecbb5a5d",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "variants": {
+        "libc": "glibc"
+      },
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "takumin",
+      "repo_name": "qemu-bin",
+      "repo_id": 1415804611,
+      "asset": "qemu-aarch64-linux-gnu.tar.gz",
+      "format": "tar.gz",
+      "checksum": "db7ed1b4b1d45646ba7d797a99f4f662019624b88d16262f1a7fe917b8ffabd9",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "qemu-edid",
+          "src": "bin/qemu-edid"
+        },
+        {
+          "name": "qemu-img",
+          "src": "bin/qemu-img"
+        },
+        {
+          "name": "qemu-io",
+          "src": "bin/qemu-io"
+        },
+        {
+          "name": "qemu-nbd",
+          "src": "bin/qemu-nbd"
+        },
+        {
+          "name": "qemu-pr-helper",
+          "src": "bin/qemu-pr-helper"
+        },
+        {
+          "name": "qemu-storage-daemon",
+          "src": "bin/qemu-storage-daemon"
+        },
+        {
+          "name": "qemu-system-aarch64",
+          "src": "bin/qemu-system-aarch64"
+        },
+        {
+          "name": "qemu-system-x86_64",
+          "src": "bin/qemu-system-x86_64"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "qemu-aarch64-linux-gnu.tar.gz.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/takumin/qemu-bin/.github/workflows/wc-sign.yml@refs/heads/main",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      },
+      "github_artifact_attestations": {
+        "signer_workflow": "takumin/qemu-bin/.github/workflows/wc-sign.yml",
+        "source_ref": "refs/heads/main",
+        "source_digest": "b2371a6b532bf628ffadfff64d5d16a6ecbb5a5d",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    }
+  ]
+}
