@@ -1,0 +1,175 @@
+{
+  "published_at": "2026-11-17T13:40:19Z",
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "docker",
+      "repo_name": "compose",
+      "repo_id": 15045751,
+      "asset": "docker-compose-darwin-x86_64",
+      "format": "raw",
+      "checksum": "5c41cd573c549dc66abb03c5b29d6d4dfaae206b2e79848d1c32482bb2a3b416",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "docker-cli-plugin-docker-compose",
+          "src": "docker-compose-darwin-x86_64"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "docker-compose-darwin-x86_64.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/docker/github-builder/.github/workflows/bake.yml@a31d2311da4d55e21b978c1c52bab82ba97d51ee",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "certificate_github_workflow_repository": "docker/compose",
+        "certificate_github_workflow_ref": "refs/tags/v5.8.0"
+      }
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "docker",
+      "repo_name": "compose",
+      "repo_id": 15045751,
+      "asset": "docker-compose-darwin-aarch64",
+      "format": "raw",
+      "checksum": "008b8fcf6c6d60340f5796626a0f0d51c042085793a9b1653343011727140b71",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "docker-cli-plugin-docker-compose",
+          "src": "docker-compose-darwin-aarch64"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "docker-compose-darwin-aarch64.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/docker/github-builder/.github/workflows/bake.yml@a31d2311da4d55e21b978c1c52bab82ba97d51ee",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "certificate_github_workflow_repository": "docker/compose",
+        "certificate_github_workflow_ref": "refs/tags/v5.8.0"
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "docker",
+      "repo_name": "compose",
+      "repo_id": 15045751,
+      "asset": "docker-compose-linux-x86_64",
+      "format": "raw",
+      "checksum": "b8840f5008c447f41fce0a57ae3adeab42c89b1eb6e6012524bcabbfb4ffbaf6",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "docker-cli-plugin-docker-compose",
+          "src": "docker-compose-linux-x86_64"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "docker-compose-linux-x86_64.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/docker/github-builder/.github/workflows/bake.yml@a31d2311da4d55e21b978c1c52bab82ba97d51ee",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "certificate_github_workflow_repository": "docker/compose",
+        "certificate_github_workflow_ref": "refs/tags/v5.8.0"
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "docker",
+      "repo_name": "compose",
+      "repo_id": 15045751,
+      "asset": "docker-compose-linux-aarch64",
+      "format": "raw",
+      "checksum": "1a9c918b2fb49b9c87f0018c64b5abd0d30715155e98dc939779fbaee6c414d3",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "docker-cli-plugin-docker-compose",
+          "src": "docker-compose-linux-aarch64"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "docker-compose-linux-aarch64.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/docker/github-builder/.github/workflows/bake.yml@a31d2311da4d55e21b978c1c52bab82ba97d51ee",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "certificate_github_workflow_repository": "docker/compose",
+        "certificate_github_workflow_ref": "refs/tags/v5.8.0"
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "docker",
+      "repo_name": "compose",
+      "repo_id": 15045751,
+      "asset": "docker-compose-windows-x86_64.exe",
+      "format": "raw",
+      "checksum": "0c2d9245a5f61e8e3cc85009b8b4888fa82fded08239d28bd6da5ca818eda2b2",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "docker-cli-plugin-docker-compose",
+          "src": "docker-compose-windows-x86_64.exe"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "docker-compose-windows-x86_64.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/docker/github-builder/.github/workflows/bake.yml@a31d2311da4d55e21b978c1c52bab82ba97d51ee",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "certificate_github_workflow_repository": "docker/compose",
+        "certificate_github_workflow_ref": "refs/tags/v5.8.0"
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "docker",
+      "repo_name": "compose",
+      "repo_id": 15045751,
+      "asset": "docker-compose-windows-aarch64.exe",
+      "format": "raw",
+      "checksum": "ec7a100a77d9aedbaa6e2b13a10140729860b58b8d2b6855d8191c52e7dd50fc",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "docker-cli-plugin-docker-compose",
+          "src": "docker-compose-windows-aarch64.exe"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "docker-compose-windows-aarch64.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/docker/github-builder/.github/workflows/bake.yml@a31d2311da4d55e21b978c1c52bab82ba97d51ee",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "certificate_github_workflow_repository": "docker/compose",
+        "certificate_github_workflow_ref": "refs/tags/v5.8.0"
+      }
+    }
+  ]
+}
