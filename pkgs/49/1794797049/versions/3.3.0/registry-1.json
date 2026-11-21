@@ -1,0 +1,192 @@
+{
+  "published_at": "2025-05-05T04:24:20Z",
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "IxDay",
+      "repo_name": "mruby",
+      "repo_id": 877826377,
+      "asset": "mruby-macos-x86_64.zip",
+      "format": "zip",
+      "checksum": "6e36400dd57a8c894cf439651dede0cb5ce17dfcb73f429214e5f3eefe600870",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "mruby",
+          "src": "mruby"
+        },
+        {
+          "name": "mrake",
+          "src": "mrake"
+        }
+      ]
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "IxDay",
+      "repo_name": "mruby",
+      "repo_id": 877826377,
+      "asset": "mruby-macos-aarch64.zip",
+      "format": "zip",
+      "checksum": "23aa791487442a2a124da74166d4efe05ea9ea9659fdbbe3e2739910da27fa86",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "mruby",
+          "src": "mruby"
+        },
+        {
+          "name": "mrake",
+          "src": "mrake"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "IxDay",
+      "repo_name": "mruby",
+      "repo_id": 877826377,
+      "asset": "mruby-linux-x86_64.zip",
+      "format": "zip",
+      "checksum": "86d788f8d0502d78162835e04854ae0189f2a3733008cc6e6796db03b1057e59",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "mruby",
+          "src": "mruby"
+        },
+        {
+          "name": "mrake",
+          "src": "mrake"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "variants": {
+        "libc": "musl"
+      },
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "IxDay",
+      "repo_name": "mruby",
+      "repo_id": 877826377,
+      "asset": "mruby-linux-x86_64-musl.zip",
+      "format": "zip",
+      "checksum": "e54283508d60d30e80af3035bdca958d74959d4927e7edc4ec2981c33656a181",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "mruby",
+          "src": "mruby"
+        },
+        {
+          "name": "mrake",
+          "src": "mrake"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "IxDay",
+      "repo_name": "mruby",
+      "repo_id": 877826377,
+      "asset": "mruby-linux-aarch64.zip",
+      "format": "zip",
+      "checksum": "5e8dce5eeb99c80960acb65d5c9ee801cfd56774f3b1348e88f6fd5607fe48c3",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "mruby",
+          "src": "mruby"
+        },
+        {
+          "name": "mrake",
+          "src": "mrake"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "variants": {
+        "libc": "musl"
+      },
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "IxDay",
+      "repo_name": "mruby",
+      "repo_id": 877826377,
+      "asset": "mruby-linux-aarch64-musl.zip",
+      "format": "zip",
+      "checksum": "c6db7ff5047c1f41b33e1e21f83c72bde14f9cd4aba6a47a608585bdc4d25f9d",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "mruby",
+          "src": "mruby"
+        },
+        {
+          "name": "mrake",
+          "src": "mrake"
+        }
+      ]
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "IxDay",
+      "repo_name": "mruby",
+      "repo_id": 877826377,
+      "asset": "mruby-windows-x86_64.zip",
+      "format": "zip",
+      "checksum": "321c85a75e807bc571021ae69cc96e00783bf5f09a22b13e9cd99eae157a5710",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "mruby",
+          "src": "mruby.exe"
+        },
+        {
+          "name": "mrake",
+          "src": "mrake.bat"
+        }
+      ]
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "windows_arm_emulation": true,
+      "type": "github_release",
+      "repo_owner": "IxDay",
+      "repo_name": "mruby",
+      "repo_id": 877826377,
+      "asset": "mruby-windows-x86_64.zip",
+      "format": "zip",
+      "checksum": "321c85a75e807bc571021ae69cc96e00783bf5f09a22b13e9cd99eae157a5710",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "mruby",
+          "src": "mruby.exe"
+        },
+        {
+          "name": "mrake",
+          "src": "mrake.bat"
+        }
+      ]
+    }
+  ]
+}
