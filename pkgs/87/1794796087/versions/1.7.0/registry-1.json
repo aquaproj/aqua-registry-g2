@@ -1,0 +1,42 @@
+{
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "http",
+      "repo_owner": "kunobi-ninja",
+      "repo_name": "kunobi",
+      "repo_id": 1161664337,
+      "asset": "Kunobi_1.7.0_darwin_aarch64.app.tar.gz",
+      "url": "https://r2.kunobi.ninja/v1.7.0/Kunobi_1.7.0_darwin_aarch64.app.tar.gz",
+      "format": "tar.gz",
+      "checksum": "6ea486b49ee079ac51cf5db48754f496af27977bf6d5b1faf65edb009a5d35fc",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "kunobi",
+          "src": "Kunobi.app/Contents/MacOS/kunobi"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "type": "http",
+      "repo_owner": "kunobi-ninja",
+      "repo_name": "kunobi",
+      "repo_id": 1161664337,
+      "asset": "Kunobi_1.7.0_linux_x86_64.tar.gz",
+      "url": "https://r2.kunobi.ninja/v1.7.0/Kunobi_1.7.0_linux_x86_64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "ff2de331314047de85e17996ccfb76f25743696c57be5983ac14c508d10d541f",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "kunobi",
+          "src": "kunobi/AppRun"
+        }
+      ]
+    }
+  ]
+}
