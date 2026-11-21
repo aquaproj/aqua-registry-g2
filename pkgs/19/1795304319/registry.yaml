@@ -1,0 +1,21 @@
+name: bnjbvr/cargo-machete
+type: github_release
+repo_owner: bnjbvr
+repo_name: cargo-machete
+repo_id: 420777439
+description: Remove unused Rust dependencies with this one weird trick
+files:
+  - name: cargo-machete
+    src: '{{.AssetWithoutExt}}/cargo-machete'
+version_overrides:
+  - version_constraint: Version == "v0.10.0"
+    supported_envs:
+      - linux
+      - windows/amd64
+  - version_constraint: semver("> 0.8.0")
+  - version_constraint: semver("<= 0.8.0")
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  - version_constraint: "true"
