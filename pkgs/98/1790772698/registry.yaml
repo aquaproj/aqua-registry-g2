@@ -4,15 +4,23 @@ repo_owner: ImageMagick
 repo_name: ImageMagick
 repo_id: 35780977
 description: ImageMagick is a free and open-source software suite for displaying, creating, converting, modifying, and editing raster images
-replacements:
-    linux: gcc
-    windows: portable
 slsa_provenance:
     enabled: false
 github_artifact_attestations:
     signer_workflow: ImageMagick/ImageMagick/.github/workflows/release.yml
+# From 7.1.2-36 every portable archive is named "portable", so it can't be the
+# spelling of windows any more: the Windows archives name no OS and are placed here.
+# Before that, windows is spelled "portable" and these archives aren't unnamed.
+asset_rules:
+    - envs:
+        - windows/amd64
+        - windows/arm64
+      filter: Asset endsWith ".7z"
 version_overrides:
     - version_constraint: Version == "7.1.2-19"
+      replacements:
+        linux: gcc
+        windows: portable
       github_artifact_attestations:
         signer_workflow: ImageMagick/ImageMagick/.github/workflows/release.yml
       overrides:
@@ -26,7 +34,10 @@ version_overrides:
             - name: mogrify
             - name: montage
             - name: stream
-    - version_constraint: semver("> 7.1.2-18")
+    - version_constraint: semver("> 7.1.2-18") and semver("<= 7.1.2-35")
+      replacements:
+        linux: gcc
+        windows: portable
       github_artifact_attestations:
         signer_workflow: ImageMagick/ImageMagick/.github/workflows/release.yml
       overrides:
@@ -44,6 +55,9 @@ version_overrides:
             - name: montage
             - name: stream
     - version_constraint: semver("<= 7.1.2-18")
+      replacements:
+        linux: gcc
+        windows: portable
       overrides:
         - goos: linux
           files:
@@ -58,13 +72,15 @@ version_overrides:
             - name: mogrify
             - name: montage
             - name: stream
+    # 7.1.2-36 renamed the AppImage and started publishing portable tar.xz archives for
+    # Linux (glibc and musl) and macOS arm64, each holding a static bin/magick.
     - version_constraint: "true"
       github_artifact_attestations:
         signer_workflow: ImageMagick/ImageMagick/.github/workflows/release.yml
+      files:
+        - name: magick
+          src: '{{.AssetWithoutExt}}/bin/magick'
       overrides:
-        - goos: linux
-          files:
-            - name: magick
         - goos: windows
           files:
             - name: compare
@@ -75,4 +91,4 @@ version_overrides:
             - name: mogrify
             - name: montage
             - name: stream
-all_assets_filter: Asset matches "^ImageMagick-[^ ]*-(portable-Q16-HDRI-(x64|arm64)\\.7z|gcc-x86_64\\.AppImage)$"
+all_assets_filter: Asset matches "^ImageMagick-[^ ]*-(portable-Q16-HDRI-(x64|arm64|linux-(musl-)?(x64|arm64)|macos-arm64)\\.(7z|tar\\.xz)|gcc-x86_64\\.AppImage)$"
