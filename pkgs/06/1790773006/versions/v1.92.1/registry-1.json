@@ -1,0 +1,90 @@
+{
+  "assets": [
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "static",
+      "type": "http",
+      "repo_owner": "tailscale",
+      "repo_name": "tailscale",
+      "repo_id": 237523442,
+      "asset": "tailscale_1.92.1_amd64.tgz",
+      "url": "https://pkgs.tailscale.com/stable/tailscale_1.92.1_amd64.tgz",
+      "format": "tgz",
+      "checksum": "d1750da42d983b9875fe71c29bf937c59ace3ab00e87c24ca0ae614a09508b11",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "tailscale",
+          "src": "tailscale_1.92.1_amd64/tailscale"
+        },
+        {
+          "name": "tailscaled",
+          "src": "tailscale_1.92.1_amd64/tailscaled"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "linked_libc": "static",
+      "type": "http",
+      "repo_owner": "tailscale",
+      "repo_name": "tailscale",
+      "repo_id": 237523442,
+      "asset": "tailscale_1.92.1_arm64.tgz",
+      "url": "https://pkgs.tailscale.com/stable/tailscale_1.92.1_arm64.tgz",
+      "format": "tgz",
+      "checksum": "ddb0c31916cf928caec1dfd11b7c977f46c2a9c30b2fe7fb9917cfac663cf0c1",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "tailscale",
+          "src": "tailscale_1.92.1_arm64/tailscale"
+        },
+        {
+          "name": "tailscaled",
+          "src": "tailscale_1.92.1_arm64/tailscaled"
+        }
+      ]
+    },
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "http",
+      "repo_owner": "tailscale",
+      "repo_name": "tailscale",
+      "repo_id": 237523442,
+      "asset": "Tailscale-1.92.1-macos.pkg",
+      "url": "https://pkgs.tailscale.com/stable/Tailscale-1.92.1-macos.pkg",
+      "format": "pkg",
+      "checksum": "1e3bc4f2ba250edfb1864c7087eb3117874a839b07098e6fef8e31cc148461e8",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "tailscale",
+          "src": "Distribution.pkg/Payload/Contents/MacOS/Tailscale"
+        }
+      ]
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "http",
+      "repo_owner": "tailscale",
+      "repo_name": "tailscale",
+      "repo_id": 237523442,
+      "asset": "Tailscale-1.92.1-macos.pkg",
+      "url": "https://pkgs.tailscale.com/stable/Tailscale-1.92.1-macos.pkg",
+      "format": "pkg",
+      "checksum": "1e3bc4f2ba250edfb1864c7087eb3117874a839b07098e6fef8e31cc148461e8",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "tailscale",
+          "src": "Distribution.pkg/Payload/Contents/MacOS/Tailscale"
+        }
+      ]
+    }
+  ]
+}
