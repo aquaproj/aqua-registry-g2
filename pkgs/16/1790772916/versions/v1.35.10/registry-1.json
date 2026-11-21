@@ -1,0 +1,131 @@
+{
+  "assets": [
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "glibc",
+      "type": "http",
+      "repo_owner": "kubernetes",
+      "repo_name": "kubernetes",
+      "repo_id": 20580498,
+      "asset": "kubelet",
+      "url": "https://dl.k8s.io/v1.35.10/bin/linux/amd64/kubelet",
+      "format": "raw",
+      "checksum": "25d2645e4f8975dec8d864b7cf289e9609456fc864c892c9c6e644c384a2a061",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "kubelet",
+          "src": "kubelet"
+        }
+      ],
+      "cosign": {
+        "signature": {
+          "type": "http",
+          "url": "https://dl.k8s.io/v1.35.10/bin/linux/amd64/kubelet.sig"
+        },
+        "certificate": {
+          "type": "http",
+          "url": "https://dl.k8s.io/v1.35.10/bin/linux/amd64/kubelet.cert"
+        },
+        "certificate_identity": "krel-staging@k8s-releng-prod.iam.gserviceaccount.com",
+        "certificate_oidc_issuer": "https://accounts.google.com"
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "linked_libc": "glibc",
+      "type": "http",
+      "repo_owner": "kubernetes",
+      "repo_name": "kubernetes",
+      "repo_id": 20580498,
+      "asset": "kubelet",
+      "url": "https://dl.k8s.io/v1.35.10/bin/linux/arm64/kubelet",
+      "format": "raw",
+      "checksum": "322cf11cd6b5d217e1e9f309b9fd119a3ec60cfcecf1d2c4e284f0d0762f9151",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "kubelet",
+          "src": "kubelet"
+        }
+      ],
+      "cosign": {
+        "signature": {
+          "type": "http",
+          "url": "https://dl.k8s.io/v1.35.10/bin/linux/arm64/kubelet.sig"
+        },
+        "certificate": {
+          "type": "http",
+          "url": "https://dl.k8s.io/v1.35.10/bin/linux/arm64/kubelet.cert"
+        },
+        "certificate_identity": "krel-staging@k8s-releng-prod.iam.gserviceaccount.com",
+        "certificate_oidc_issuer": "https://accounts.google.com"
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "http",
+      "repo_owner": "kubernetes",
+      "repo_name": "kubernetes",
+      "repo_id": 20580498,
+      "asset": "kubelet.exe",
+      "url": "https://dl.k8s.io/v1.35.10/bin/windows/amd64/kubelet.exe",
+      "format": "raw",
+      "checksum": "c7bd7109f94b1ac956ed65f38f8ab29a520fb3e8d9477235f29ea35fb4647465",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "kubelet",
+          "src": "kubelet.exe"
+        }
+      ],
+      "cosign": {
+        "signature": {
+          "type": "http",
+          "url": "https://dl.k8s.io/v1.35.10/bin/windows/amd64/kubelet.exe.sig"
+        },
+        "certificate": {
+          "type": "http",
+          "url": "https://dl.k8s.io/v1.35.10/bin/windows/amd64/kubelet.exe.cert"
+        },
+        "certificate_identity": "krel-staging@k8s-releng-prod.iam.gserviceaccount.com",
+        "certificate_oidc_issuer": "https://accounts.google.com"
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "windows_arm_emulation": true,
+      "type": "http",
+      "repo_owner": "kubernetes",
+      "repo_name": "kubernetes",
+      "repo_id": 20580498,
+      "asset": "kubelet.exe",
+      "url": "https://dl.k8s.io/v1.35.10/bin/windows/amd64/kubelet.exe",
+      "format": "raw",
+      "checksum": "c7bd7109f94b1ac956ed65f38f8ab29a520fb3e8d9477235f29ea35fb4647465",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "kubelet",
+          "src": "kubelet.exe"
+        }
+      ],
+      "cosign": {
+        "signature": {
+          "type": "http",
+          "url": "https://dl.k8s.io/v1.35.10/bin/windows/amd64/kubelet.exe.sig"
+        },
+        "certificate": {
+          "type": "http",
+          "url": "https://dl.k8s.io/v1.35.10/bin/windows/amd64/kubelet.exe.cert"
+        },
+        "certificate_identity": "krel-staging@k8s-releng-prod.iam.gserviceaccount.com",
+        "certificate_oidc_issuer": "https://accounts.google.com"
+      }
+    }
+  ]
+}
