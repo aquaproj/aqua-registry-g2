@@ -58,6 +58,37 @@
     },
     {
       "os": "linux",
+      "arch": "amd64",
+      "variants": {
+        "libc": "musl"
+      },
+      "linked_libc": "musl",
+      "type": "http",
+      "repo_owner": "nodejs",
+      "repo_name": "node",
+      "repo_id": 27193779,
+      "asset": "node-v27.0.0-alpha.0.1.1-linux-x64-musl.tar.gz",
+      "url": "https://nodejs.org/dist/v27.0.0-alpha.0.1.1/node-v27.0.0-alpha.0.1.1-linux-x64-musl.tar.gz",
+      "format": "tar.gz",
+      "checksum": "747051c5a5d7fda41597e1fa6d739d870ba5d21668c6c7cd74bee5d0d86b974d",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "node",
+          "src": "node-v27.0.0-alpha.0.1.1-linux-x64-musl/bin/node"
+        },
+        {
+          "name": "npm",
+          "src": "node-v27.0.0-alpha.0.1.1-linux-x64-musl/bin/npm"
+        },
+        {
+          "name": "npx",
+          "src": "node-v27.0.0-alpha.0.1.1-linux-x64-musl/bin/npx"
+        }
+      ]
+    },
+    {
+      "os": "linux",
       "arch": "arm64",
       "linked_libc": "glibc",
       "type": "http",
@@ -114,28 +145,27 @@
     {
       "os": "windows",
       "arch": "arm64",
-      "windows_arm_emulation": true,
       "type": "http",
       "repo_owner": "nodejs",
       "repo_name": "node",
       "repo_id": 27193779,
-      "asset": "node-v27.0.0-alpha.0.1.1-win-x64.zip",
-      "url": "https://nodejs.org/dist/v27.0.0-alpha.0.1.1/node-v27.0.0-alpha.0.1.1-win-x64.zip",
+      "asset": "node-v27.0.0-alpha.0.1.1-win-arm64.zip",
+      "url": "https://nodejs.org/dist/v27.0.0-alpha.0.1.1/node-v27.0.0-alpha.0.1.1-win-arm64.zip",
       "format": "zip",
-      "checksum": "67a346171e62714202df7dc571f72e894034616bcb15fc5d664f998adb7fa07a",
+      "checksum": "347ffb10ae42a1977cbab520d2d92754c8778893d7fada5c1e5c39d533fe05ff",
       "checksum_algorithm": "sha256",
       "files": [
         {
           "name": "node",
-          "src": "node-v27.0.0-alpha.0.1.1-win-x64/node.exe"
+          "src": "node-v27.0.0-alpha.0.1.1-win-arm64/node.exe"
         },
         {
           "name": "npm",
-          "src": "node-v27.0.0-alpha.0.1.1-win-x64/npm.cmd"
+          "src": "node-v27.0.0-alpha.0.1.1-win-arm64/npm.cmd"
         },
         {
           "name": "npx",
-          "src": "node-v27.0.0-alpha.0.1.1-win-x64/npx.cmd"
+          "src": "node-v27.0.0-alpha.0.1.1-win-arm64/npx.cmd"
         }
       ]
     }
