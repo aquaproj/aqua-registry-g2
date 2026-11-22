@@ -1,0 +1,18 @@
+name: Mattbusel/crypto-orderbook
+type: github_release
+repo_owner: Mattbusel
+repo_name: crypto-orderbook
+repo_id: 1270485457
+description: Keep a sequenced Binance order book in memory and serve depth, micro-price
+  and VWAP over REST, WebSocket and Prometheus
+files:
+  - name: crypto-orderbook
+version_overrides:
+  - version_constraint: "true"
+    files:
+      - name: crypto-orderbook
+        src: '{{.AssetWithoutExt}}/crypto-orderbook'
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
