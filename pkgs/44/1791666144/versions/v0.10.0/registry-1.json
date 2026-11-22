@@ -22,6 +22,7 @@
     {
       "os": "darwin",
       "arch": "arm64",
+      "rosetta2": true,
       "type": "github_release",
       "repo_owner": "Qovery",
       "repo_name": "Replibyte",
@@ -29,6 +30,28 @@
       "asset": "replibyte_v0.10.0_x86_64-apple-darwin.zip",
       "format": "zip",
       "checksum": "014aabafd6af474e30511970e7713da080d8fc392e33e26cc7256ea4d21fc1ed",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "replibyte",
+          "src": "replibyte"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "variants": {
+        "libc": "musl"
+      },
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "Qovery",
+      "repo_name": "Replibyte",
+      "repo_id": 459739627,
+      "asset": "replibyte_v0.10.0_x86_64-unknown-linux-musl.tar.gz",
+      "format": "tar.gz",
+      "checksum": "6de60297986f246456796420ed61dd349a5f0a904f162a6f1dca6957f286a3cd",
       "checksum_algorithm": "sha256",
       "files": [
         {
@@ -58,6 +81,7 @@
     {
       "os": "windows",
       "arch": "arm64",
+      "windows_arm_emulation": true,
       "type": "github_release",
       "repo_owner": "Qovery",
       "repo_name": "Replibyte",
@@ -70,25 +94,6 @@
         {
           "name": "replibyte",
           "src": "replibyte.exe"
-        }
-      ]
-    },
-    {
-      "os": "linux",
-      "arch": "amd64",
-      "linked_libc": "static",
-      "type": "github_release",
-      "repo_owner": "Qovery",
-      "repo_name": "Replibyte",
-      "repo_id": 459739627,
-      "asset": "replibyte_v0.10.0_x86_64-unknown-linux-musl.tar.gz",
-      "format": "tar.gz",
-      "checksum": "6de60297986f246456796420ed61dd349a5f0a904f162a6f1dca6957f286a3cd",
-      "checksum_algorithm": "sha256",
-      "files": [
-        {
-          "name": "replibyte",
-          "src": "replibyte"
         }
       ]
     }
