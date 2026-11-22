@@ -1,0 +1,23 @@
+name: Mattbusel/polymarket-agent
+type: github_release
+repo_owner: Mattbusel
+repo_name: polymarket-agent
+repo_id: 1452101123
+description: Polymarket CLI and MCP server that lets AI agents search markets, read
+  books and place orders
+files:
+  - name: polymarket-agent
+version_overrides:
+  - version_constraint: "true"
+    files:
+      - name: polymarket-agent
+        src: '{{.AssetWithoutExt}}/polymarket-agent'
+    overrides:
+      - goos: windows
+        format: zip
+        files:
+          - name: polymarket-agent
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
