@@ -1,0 +1,223 @@
+{
+  "published_at": "2025-12-19T13:56:44Z",
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "terramate-io",
+      "repo_name": "terramate",
+      "repo_id": 411630635,
+      "asset": "terramate_0.15.2_darwin_x86_64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "f4990a631fb9a418529c511d082f9d6adbef21ffc578dde6390012f6ce0a1f99",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "terramate",
+          "src": "terramate"
+        },
+        {
+          "name": "terramate-ls",
+          "src": "terramate-ls"
+        }
+      ],
+      "cosign": {
+        "signature": {
+          "type": "github_release",
+          "repo_owner": "terramate-io",
+          "repo_name": "terramate",
+          "asset": "terramate_0.15.2_darwin_x86_64.tar.gz.sig"
+        },
+        "key": {
+          "type": "github_release",
+          "repo_owner": "terramate-io",
+          "repo_name": "terramate",
+          "asset": "cosign.pub"
+        }
+      }
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "terramate-io",
+      "repo_name": "terramate",
+      "repo_id": 411630635,
+      "asset": "terramate_0.15.2_darwin_arm64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "cdfadcbbadbfc85371af822fe97086e60d00e7fa4d24c4be69cd9c06ea3ff2e7",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "terramate",
+          "src": "terramate"
+        },
+        {
+          "name": "terramate-ls",
+          "src": "terramate-ls"
+        }
+      ],
+      "cosign": {
+        "signature": {
+          "type": "github_release",
+          "repo_owner": "terramate-io",
+          "repo_name": "terramate",
+          "asset": "terramate_0.15.2_darwin_arm64.tar.gz.sig"
+        },
+        "key": {
+          "type": "github_release",
+          "repo_owner": "terramate-io",
+          "repo_name": "terramate",
+          "asset": "cosign.pub"
+        }
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "terramate-io",
+      "repo_name": "terramate",
+      "repo_id": 411630635,
+      "asset": "terramate_0.15.2_linux_x86_64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "c6500475595faee0da42a89ecdd93a9329f6da55daff5984bf80b943531c1e3b",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "terramate",
+          "src": "terramate"
+        },
+        {
+          "name": "terramate-ls",
+          "src": "terramate-ls"
+        }
+      ],
+      "cosign": {
+        "signature": {
+          "type": "github_release",
+          "repo_owner": "terramate-io",
+          "repo_name": "terramate",
+          "asset": "terramate_0.15.2_linux_x86_64.tar.gz.sig"
+        },
+        "key": {
+          "type": "github_release",
+          "repo_owner": "terramate-io",
+          "repo_name": "terramate",
+          "asset": "cosign.pub"
+        }
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "terramate-io",
+      "repo_name": "terramate",
+      "repo_id": 411630635,
+      "asset": "terramate_0.15.2_linux_arm64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "6716f3a7dd03dc4c59a59eb0505f59d3eef93219f58a2ecc5fa8099ab0c7d4d1",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "terramate",
+          "src": "terramate"
+        },
+        {
+          "name": "terramate-ls",
+          "src": "terramate-ls"
+        }
+      ],
+      "cosign": {
+        "signature": {
+          "type": "github_release",
+          "repo_owner": "terramate-io",
+          "repo_name": "terramate",
+          "asset": "terramate_0.15.2_linux_arm64.tar.gz.sig"
+        },
+        "key": {
+          "type": "github_release",
+          "repo_owner": "terramate-io",
+          "repo_name": "terramate",
+          "asset": "cosign.pub"
+        }
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "terramate-io",
+      "repo_name": "terramate",
+      "repo_id": 411630635,
+      "asset": "terramate_0.15.2_windows_x86_64.zip",
+      "format": "zip",
+      "checksum": "9c4d1e28d816662d726d63374f0ae43f96bdcbefc18f50a069e8652792d85a48",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "terramate",
+          "src": "terramate.exe"
+        },
+        {
+          "name": "terramate-ls",
+          "src": "terramate-ls.exe"
+        }
+      ],
+      "cosign": {
+        "signature": {
+          "type": "github_release",
+          "repo_owner": "terramate-io",
+          "repo_name": "terramate",
+          "asset": "terramate_0.15.2_windows_x86_64.zip.sig"
+        },
+        "key": {
+          "type": "github_release",
+          "repo_owner": "terramate-io",
+          "repo_name": "terramate",
+          "asset": "cosign.pub"
+        }
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "terramate-io",
+      "repo_name": "terramate",
+      "repo_id": 411630635,
+      "asset": "terramate_0.15.2_windows_arm64.zip",
+      "format": "zip",
+      "checksum": "d64e5822c3bf9371670e767f10f9df4d3d8573015f9443cae13eb64fc8976ada",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "terramate",
+          "src": "terramate.exe"
+        },
+        {
+          "name": "terramate-ls",
+          "src": "terramate-ls.exe"
+        }
+      ],
+      "cosign": {
+        "signature": {
+          "type": "github_release",
+          "repo_owner": "terramate-io",
+          "repo_name": "terramate",
+          "asset": "terramate_0.15.2_windows_arm64.zip.sig"
+        },
+        "key": {
+          "type": "github_release",
+          "repo_owner": "terramate-io",
+          "repo_name": "terramate",
+          "asset": "cosign.pub"
+        }
+      }
+    }
+  ]
+}
