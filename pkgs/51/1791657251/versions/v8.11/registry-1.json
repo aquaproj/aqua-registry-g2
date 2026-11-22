@@ -1,0 +1,97 @@
+{
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "http",
+      "repo_owner": "racket",
+      "repo_name": "racket",
+      "repo_id": 615969,
+      "asset": "racket-minimal-8.11-x86_64-macosx-cs.tgz",
+      "url": "https://download.racket-lang.org/releases/8.11/installers/racket-minimal-8.11-x86_64-macosx-cs.tgz",
+      "format": "tgz",
+      "checksum": "79e11bd527d5e850d215f748d82ed98037ad9d40618ae66dad08606ca971b99d",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "racket",
+          "src": "racket/bin/racket"
+        },
+        {
+          "name": "raco",
+          "src": "racket/bin/raco"
+        }
+      ]
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "http",
+      "repo_owner": "racket",
+      "repo_name": "racket",
+      "repo_id": 615969,
+      "asset": "racket-minimal-8.11-aarch64-macosx-cs.tgz",
+      "url": "https://download.racket-lang.org/releases/8.11/installers/racket-minimal-8.11-aarch64-macosx-cs.tgz",
+      "format": "tgz",
+      "checksum": "775cc3d3b8c58851a84cb6dcf7c08be043170e69643fd3f2b3bc232567a4ee9e",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "racket",
+          "src": "racket/bin/racket"
+        },
+        {
+          "name": "raco",
+          "src": "racket/bin/raco"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "glibc",
+      "type": "http",
+      "repo_owner": "racket",
+      "repo_name": "racket",
+      "repo_id": 615969,
+      "asset": "racket-minimal-8.11-x86_64-linux-cs.tgz",
+      "url": "https://download.racket-lang.org/releases/8.11/installers/racket-minimal-8.11-x86_64-linux-cs.tgz",
+      "format": "tgz",
+      "checksum": "507dd0bee9a44d1b968adc705268cc6e242e97b0fb5bdcb6b1149c2f01966b9f",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "racket",
+          "src": "racket/bin/racket"
+        },
+        {
+          "name": "raco",
+          "src": "racket/bin/raco"
+        }
+      ]
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "http",
+      "repo_owner": "racket",
+      "repo_name": "racket",
+      "repo_id": 615969,
+      "asset": "racket-minimal-8.11-x86_64-win32-cs.tgz",
+      "url": "https://download.racket-lang.org/releases/8.11/installers/racket-minimal-8.11-x86_64-win32-cs.tgz",
+      "format": "tgz",
+      "checksum": "8963dcfcbb0a3118eb3a298e04228899c7af2a6f0fb5988cbf8526c6015a5505",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "racket",
+          "src": "racket/Racket.exe"
+        },
+        {
+          "name": "raco",
+          "src": "racket/raco.exe"
+        }
+      ]
+    }
+  ]
+}
