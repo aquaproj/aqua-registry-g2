@@ -9,6 +9,7 @@ files:
 # Before 0.5.0 the command was askgit, from before the project was renamed. v0.1.0's
 # archive holds one executable named after the asset.
 version_overrides:
+  - version_constraint: semver(">= 0.5.0")
   - version_constraint: Version == "v0.1.0"
     files:
       - name: askgit
