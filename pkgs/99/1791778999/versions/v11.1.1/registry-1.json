@@ -1,0 +1,42 @@
+{
+  "published_at": "2022-10-01T18:33:16Z",
+  "assets": [
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "qpdf",
+      "repo_name": "qpdf",
+      "repo_id": 4539167,
+      "asset": "qpdf-11.1.1-bin-linux-x86_64.zip",
+      "format": "zip",
+      "checksum": "4d533774db3d85bca792108e74c9ebb0fb79dd760b3d38b2823164272f4b627d",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "qpdf",
+          "src": "bin/qpdf"
+        }
+      ]
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "qpdf",
+      "repo_name": "qpdf",
+      "repo_id": 4539167,
+      "asset": "qpdf-11.1.1-mingw64.zip",
+      "format": "zip",
+      "checksum": "397c225e9bd334d1d11f1e3b0fe7fc96b38cd4baed7d73c0e67acd38566c6172",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "qpdf",
+          "src": "qpdf-11.1.1-mingw64/bin/qpdf.exe"
+        }
+      ]
+    }
+  ]
+}
