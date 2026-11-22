@@ -60,6 +60,7 @@ files:
     src: '{{.AssetWithoutExt}}/bin/{{.FileName}}'
 # graal-24.0.2 ships no bin/syntax_suggest.
 version_overrides:
+  - version_constraint: Version != "graal-24.0.2"
   - version_constraint: Version == "graal-24.0.2"
     files:
       - name: bundle
