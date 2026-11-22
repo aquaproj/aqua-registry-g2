@@ -15,6 +15,12 @@ version_overrides:
     files:
       - name: replibyte
         src: replibyte_{{.Version}}_{{.Arch}}-{{.OS}}
+  # Up to 0.6.3 each archive holds one executable named after the asset, such as
+  # replibyte_v0.6.3_x86_64-apple-darwin.
+  - version_constraint: semver("> 0.4.1") and semver("<= 0.6.3")
+    files:
+      - name: replibyte
+        src: '{{.AssetWithoutExt}}'
   - version_constraint: semver("> 0.4.1")
     files:
       - name: replibyte
