@@ -1,0 +1,172 @@
+{
+  "published_at": "2026-10-03T03:56:35Z",
+  "assets": [
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "variants": {
+        "libc": "glibc"
+      },
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "carthage-software",
+      "repo_name": "mago",
+      "repo_id": 878733839,
+      "asset": "mago-1.51.1-x86_64-unknown-linux-gnu.tar.gz",
+      "format": "tar.gz",
+      "checksum": "4a69ea612c9311c94f1baf00e750d7da930a555916bd9c9ded3d2b3bbdb2a4f9",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "mago",
+          "src": "mago-1.51.1-x86_64-unknown-linux-gnu/mago"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "carthage-software/mago/.github/workflows/cd.yml",
+        "source_ref": "refs/tags/1.51.1",
+        "source_digest": "59c9265b5b79c2174b921b3b9ef6b933edcad939",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "variants": {
+        "libc": "musl"
+      },
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "carthage-software",
+      "repo_name": "mago",
+      "repo_id": 878733839,
+      "asset": "mago-1.51.1-x86_64-unknown-linux-musl.tar.gz",
+      "format": "tar.gz",
+      "checksum": "b7e4d7d5f9686ed9f0acdd565dfb3a52ae51b70ed44e6ada876ea113b5d3708e",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "mago",
+          "src": "mago-1.51.1-x86_64-unknown-linux-musl/mago"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "carthage-software/mago/.github/workflows/cd.yml",
+        "source_ref": "refs/tags/1.51.1",
+        "source_digest": "59c9265b5b79c2174b921b3b9ef6b933edcad939",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "variants": {
+        "libc": "glibc"
+      },
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "carthage-software",
+      "repo_name": "mago",
+      "repo_id": 878733839,
+      "asset": "mago-1.51.1-aarch64-unknown-linux-gnu.tar.gz",
+      "format": "tar.gz",
+      "checksum": "09a1613cc67ecfcb9f725aec95a83b3b7c9e46426d99cb1db99741d932e1b49d",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "mago",
+          "src": "mago-1.51.1-aarch64-unknown-linux-gnu/mago"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "carthage-software/mago/.github/workflows/cd.yml",
+        "source_ref": "refs/tags/1.51.1",
+        "source_digest": "59c9265b5b79c2174b921b3b9ef6b933edcad939",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "variants": {
+        "libc": "musl"
+      },
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "carthage-software",
+      "repo_name": "mago",
+      "repo_id": 878733839,
+      "asset": "mago-1.51.1-aarch64-unknown-linux-musl.tar.gz",
+      "format": "tar.gz",
+      "checksum": "5e6dbd0c30f3694668fa269e3b05dc42fbb35898f6b1753321a2dc30af6071ef",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "mago",
+          "src": "mago-1.51.1-aarch64-unknown-linux-musl/mago"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "carthage-software/mago/.github/workflows/cd.yml",
+        "source_ref": "refs/tags/1.51.1",
+        "source_digest": "59c9265b5b79c2174b921b3b9ef6b933edcad939",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "carthage-software",
+      "repo_name": "mago",
+      "repo_id": 878733839,
+      "asset": "mago-1.51.1-x86_64-pc-windows-msvc.zip",
+      "format": "zip",
+      "checksum": "4aa88261690eac98b127d068e39444b3020122c76bed8346e21cbdc7b29a0ba2",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "mago",
+          "src": "mago-1.51.1-x86_64-pc-windows-msvc/mago.exe"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "carthage-software/mago/.github/workflows/cd.yml",
+        "source_ref": "refs/tags/1.51.1",
+        "source_digest": "59c9265b5b79c2174b921b3b9ef6b933edcad939",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "windows_arm_emulation": true,
+      "type": "github_release",
+      "repo_owner": "carthage-software",
+      "repo_name": "mago",
+      "repo_id": 878733839,
+      "asset": "mago-1.51.1-x86_64-pc-windows-msvc.zip",
+      "format": "zip",
+      "checksum": "4aa88261690eac98b127d068e39444b3020122c76bed8346e21cbdc7b29a0ba2",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "mago",
+          "src": "mago-1.51.1-x86_64-pc-windows-msvc/mago.exe"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "carthage-software/mago/.github/workflows/cd.yml",
+        "source_ref": "refs/tags/1.51.1",
+        "source_digest": "59c9265b5b79c2174b921b3b9ef6b933edcad939",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    }
+  ]
+}
