@@ -1,0 +1,261 @@
+{
+  "published_at": "2026-11-12T19:45:10Z",
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "theseus-rs",
+      "repo_name": "postgresql-binaries",
+      "repo_id": 746919647,
+      "asset": "postgresql-18.7.0-x86_64-apple-darwin.tar.gz",
+      "format": "tar.gz",
+      "checksum": "9cd649259d6bf4af60a235e772c83853df215b63f4c1967c2eed7f9376aefb89",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "psql",
+          "src": "postgresql-18.7.0-x86_64-apple-darwin/bin/psql"
+        },
+        {
+          "name": "pg_dump",
+          "src": "postgresql-18.7.0-x86_64-apple-darwin/bin/pg_dump"
+        },
+        {
+          "name": "pg_dumpall",
+          "src": "postgresql-18.7.0-x86_64-apple-darwin/bin/pg_dumpall"
+        },
+        {
+          "name": "pg_restore",
+          "src": "postgresql-18.7.0-x86_64-apple-darwin/bin/pg_restore"
+        }
+      ]
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "theseus-rs",
+      "repo_name": "postgresql-binaries",
+      "repo_id": 746919647,
+      "asset": "postgresql-18.7.0-aarch64-apple-darwin.tar.gz",
+      "format": "tar.gz",
+      "checksum": "86456c0ed99d2466524eaa074db6580cf7d748b91042e252c83eaca9a9d216e7",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "psql",
+          "src": "postgresql-18.7.0-aarch64-apple-darwin/bin/psql"
+        },
+        {
+          "name": "pg_dump",
+          "src": "postgresql-18.7.0-aarch64-apple-darwin/bin/pg_dump"
+        },
+        {
+          "name": "pg_dumpall",
+          "src": "postgresql-18.7.0-aarch64-apple-darwin/bin/pg_dumpall"
+        },
+        {
+          "name": "pg_restore",
+          "src": "postgresql-18.7.0-aarch64-apple-darwin/bin/pg_restore"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "variants": {
+        "libc": "glibc"
+      },
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "theseus-rs",
+      "repo_name": "postgresql-binaries",
+      "repo_id": 746919647,
+      "asset": "postgresql-18.7.0-x86_64-unknown-linux-gnu.tar.gz",
+      "format": "tar.gz",
+      "checksum": "53ca01952cb581145e4fb16b6b3b675da345a82879f350707b9f65863a0642f4",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "psql",
+          "src": "postgresql-18.7.0-x86_64-unknown-linux-gnu/bin/psql"
+        },
+        {
+          "name": "pg_dump",
+          "src": "postgresql-18.7.0-x86_64-unknown-linux-gnu/bin/pg_dump"
+        },
+        {
+          "name": "pg_dumpall",
+          "src": "postgresql-18.7.0-x86_64-unknown-linux-gnu/bin/pg_dumpall"
+        },
+        {
+          "name": "pg_restore",
+          "src": "postgresql-18.7.0-x86_64-unknown-linux-gnu/bin/pg_restore"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "variants": {
+        "libc": "musl"
+      },
+      "linked_libc": "musl",
+      "type": "github_release",
+      "repo_owner": "theseus-rs",
+      "repo_name": "postgresql-binaries",
+      "repo_id": 746919647,
+      "asset": "postgresql-18.7.0-x86_64-unknown-linux-musl.tar.gz",
+      "format": "tar.gz",
+      "checksum": "d1aa6f1a7bd9b746897562e73e99c0e66a099038faeda69d60c3cb00c157faa1",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "psql",
+          "src": "postgresql-18.7.0-x86_64-unknown-linux-musl/bin/psql"
+        },
+        {
+          "name": "pg_dump",
+          "src": "postgresql-18.7.0-x86_64-unknown-linux-musl/bin/pg_dump"
+        },
+        {
+          "name": "pg_dumpall",
+          "src": "postgresql-18.7.0-x86_64-unknown-linux-musl/bin/pg_dumpall"
+        },
+        {
+          "name": "pg_restore",
+          "src": "postgresql-18.7.0-x86_64-unknown-linux-musl/bin/pg_restore"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "variants": {
+        "libc": "glibc"
+      },
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "theseus-rs",
+      "repo_name": "postgresql-binaries",
+      "repo_id": 746919647,
+      "asset": "postgresql-18.7.0-aarch64-unknown-linux-gnu.tar.gz",
+      "format": "tar.gz",
+      "checksum": "6fcf45163aa044fe58597885b0e27c4b1614c53ad088d4d0ebbbfdf5df510eaf",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "psql",
+          "src": "postgresql-18.7.0-aarch64-unknown-linux-gnu/bin/psql"
+        },
+        {
+          "name": "pg_dump",
+          "src": "postgresql-18.7.0-aarch64-unknown-linux-gnu/bin/pg_dump"
+        },
+        {
+          "name": "pg_dumpall",
+          "src": "postgresql-18.7.0-aarch64-unknown-linux-gnu/bin/pg_dumpall"
+        },
+        {
+          "name": "pg_restore",
+          "src": "postgresql-18.7.0-aarch64-unknown-linux-gnu/bin/pg_restore"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "variants": {
+        "libc": "musl"
+      },
+      "linked_libc": "musl",
+      "type": "github_release",
+      "repo_owner": "theseus-rs",
+      "repo_name": "postgresql-binaries",
+      "repo_id": 746919647,
+      "asset": "postgresql-18.7.0-aarch64-unknown-linux-musl.tar.gz",
+      "format": "tar.gz",
+      "checksum": "5bb1730daec296f2162ab32f7f6ac418920a565ce9110675103c70d1f25d47a0",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "psql",
+          "src": "postgresql-18.7.0-aarch64-unknown-linux-musl/bin/psql"
+        },
+        {
+          "name": "pg_dump",
+          "src": "postgresql-18.7.0-aarch64-unknown-linux-musl/bin/pg_dump"
+        },
+        {
+          "name": "pg_dumpall",
+          "src": "postgresql-18.7.0-aarch64-unknown-linux-musl/bin/pg_dumpall"
+        },
+        {
+          "name": "pg_restore",
+          "src": "postgresql-18.7.0-aarch64-unknown-linux-musl/bin/pg_restore"
+        }
+      ]
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "theseus-rs",
+      "repo_name": "postgresql-binaries",
+      "repo_id": 746919647,
+      "asset": "postgresql-18.7.0-x86_64-pc-windows-msvc.tar.gz",
+      "format": "tar.gz",
+      "checksum": "6e054adb854dbed1f78f9933a1c65737d85a47d2446ce0e9b5f055fb3794fe5c",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "psql",
+          "src": "postgresql-18.7.0-x86_64-pc-windows-msvc/bin/psql.exe"
+        },
+        {
+          "name": "pg_dump",
+          "src": "postgresql-18.7.0-x86_64-pc-windows-msvc/bin/pg_dump.exe"
+        },
+        {
+          "name": "pg_dumpall",
+          "src": "postgresql-18.7.0-x86_64-pc-windows-msvc/bin/pg_dumpall.exe"
+        },
+        {
+          "name": "pg_restore",
+          "src": "postgresql-18.7.0-x86_64-pc-windows-msvc/bin/pg_restore.exe"
+        }
+      ]
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "theseus-rs",
+      "repo_name": "postgresql-binaries",
+      "repo_id": 746919647,
+      "asset": "postgresql-18.7.0-aarch64-pc-windows-msvc.tar.gz",
+      "format": "tar.gz",
+      "checksum": "6226f348f07bd6d9b9928aab53ce3c694fde769633ebd805488866949adc562f",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "psql",
+          "src": "postgresql-18.7.0-aarch64-pc-windows-msvc/bin/psql.exe"
+        },
+        {
+          "name": "pg_dump",
+          "src": "postgresql-18.7.0-aarch64-pc-windows-msvc/bin/pg_dump.exe"
+        },
+        {
+          "name": "pg_dumpall",
+          "src": "postgresql-18.7.0-aarch64-pc-windows-msvc/bin/pg_dumpall.exe"
+        },
+        {
+          "name": "pg_restore",
+          "src": "postgresql-18.7.0-aarch64-pc-windows-msvc/bin/pg_restore.exe"
+        }
+      ]
+    }
+  ]
+}
