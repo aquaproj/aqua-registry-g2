@@ -1,0 +1,48 @@
+{
+  "assets": [
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "static",
+      "type": "http",
+      "repo_owner": "docker",
+      "repo_name": "cli",
+      "asset": "docker-rootless-extras-29.4.1.tgz",
+      "url": "https://download.docker.com/linux/static/stable/x86_64/docker-rootless-extras-29.4.1.tgz",
+      "checksum": "10d5ce325c6094febf00d8ad9659732bc2f1e15ad43d55b8bc842e2b2b23a1e2",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "rootlesskit",
+          "src": "docker-rootless-extras/rootlesskit"
+        },
+        {
+          "name": "vpnkit",
+          "src": "docker-rootless-extras/vpnkit"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "linked_libc": "static",
+      "type": "http",
+      "repo_owner": "docker",
+      "repo_name": "cli",
+      "asset": "docker-rootless-extras-29.4.1.tgz",
+      "url": "https://download.docker.com/linux/static/stable/aarch64/docker-rootless-extras-29.4.1.tgz",
+      "checksum": "26db532cb5502da5e4486b2dcadfd0de2754fc388da31487ee3bc26f475f18e6",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "rootlesskit",
+          "src": "docker-rootless-extras/rootlesskit"
+        },
+        {
+          "name": "vpnkit",
+          "src": "docker-rootless-extras/vpnkit"
+        }
+      ]
+    }
+  ]
+}
