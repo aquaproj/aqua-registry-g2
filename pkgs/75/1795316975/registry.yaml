@@ -1,0 +1,22 @@
+name: theseus-rs/postgresql-binaries
+type: github_release
+repo_owner: theseus-rs
+repo_name: postgresql-binaries
+repo_id: 746919647
+description: PostgreSQL binaries for Linux, MacOS and Windows
+files:
+  - name: psql
+  - name: pg_dump
+  - name: pg_dumpall
+  - name: pg_restore
+version_overrides:
+  - version_constraint: "true"
+    files:
+      - name: psql
+        src: postgresql-{{.Version}}-{{.Arch}}-{{.OS}}/bin/psql
+      - name: pg_dump
+        src: postgresql-{{.Version}}-{{.Arch}}-{{.OS}}/bin/pg_dump
+      - name: pg_dumpall
+        src: postgresql-{{.Version}}-{{.Arch}}-{{.OS}}/bin/pg_dumpall
+      - name: pg_restore
+        src: postgresql-{{.Version}}-{{.Arch}}-{{.OS}}/bin/pg_restore
