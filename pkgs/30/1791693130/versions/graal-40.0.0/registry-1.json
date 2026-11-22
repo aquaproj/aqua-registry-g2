@@ -2,6 +2,76 @@
   "published_at": "2026-09-17T11:10:12Z",
   "assets": [
     {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "truffleruby",
+      "repo_name": "truffleruby",
+      "repo_id": 51164398,
+      "asset": "truffleruby-40.0.0-macos-aarch64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "f37d33d7d58c9cbaa0dd6eacc508a596a74d053ad476d47bcefebe63fbec1547",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "bundle",
+          "src": "truffleruby-40.0.0-macos-aarch64/bin/bundle"
+        },
+        {
+          "name": "bundler",
+          "src": "truffleruby-40.0.0-macos-aarch64/bin/bundler"
+        },
+        {
+          "name": "erb",
+          "src": "truffleruby-40.0.0-macos-aarch64/bin/erb"
+        },
+        {
+          "name": "gem",
+          "src": "truffleruby-40.0.0-macos-aarch64/bin/gem"
+        },
+        {
+          "name": "irb",
+          "src": "truffleruby-40.0.0-macos-aarch64/bin/irb"
+        },
+        {
+          "name": "racc",
+          "src": "truffleruby-40.0.0-macos-aarch64/bin/racc"
+        },
+        {
+          "name": "rake",
+          "src": "truffleruby-40.0.0-macos-aarch64/bin/rake"
+        },
+        {
+          "name": "rbs",
+          "src": "truffleruby-40.0.0-macos-aarch64/bin/rbs"
+        },
+        {
+          "name": "rdbg",
+          "src": "truffleruby-40.0.0-macos-aarch64/bin/rdbg"
+        },
+        {
+          "name": "rdoc",
+          "src": "truffleruby-40.0.0-macos-aarch64/bin/rdoc"
+        },
+        {
+          "name": "ri",
+          "src": "truffleruby-40.0.0-macos-aarch64/bin/ri"
+        },
+        {
+          "name": "ruby",
+          "src": "truffleruby-40.0.0-macos-aarch64/bin/ruby"
+        },
+        {
+          "name": "truffleruby",
+          "src": "truffleruby-40.0.0-macos-aarch64/bin/truffleruby"
+        },
+        {
+          "name": "truffleruby-polyglot-get",
+          "src": "truffleruby-40.0.0-macos-aarch64/bin/truffleruby-polyglot-get"
+        }
+      ]
+    },
+    {
       "os": "linux",
       "arch": "amd64",
       "linked_libc": "glibc",
@@ -61,10 +131,6 @@
         {
           "name": "ruby",
           "src": "truffleruby-40.0.0-linux-amd64/bin/ruby"
-        },
-        {
-          "name": "syntax_suggest",
-          "src": "truffleruby-40.0.0-linux-amd64/bin/syntax_suggest"
         },
         {
           "name": "truffleruby",
@@ -138,90 +204,12 @@
           "src": "truffleruby-40.0.0-linux-aarch64/bin/ruby"
         },
         {
-          "name": "syntax_suggest",
-          "src": "truffleruby-40.0.0-linux-aarch64/bin/syntax_suggest"
-        },
-        {
           "name": "truffleruby",
           "src": "truffleruby-40.0.0-linux-aarch64/bin/truffleruby"
         },
         {
           "name": "truffleruby-polyglot-get",
           "src": "truffleruby-40.0.0-linux-aarch64/bin/truffleruby-polyglot-get"
-        }
-      ]
-    },
-    {
-      "os": "darwin",
-      "arch": "arm64",
-      "type": "github_release",
-      "repo_owner": "truffleruby",
-      "repo_name": "truffleruby",
-      "repo_id": 51164398,
-      "asset": "truffleruby-40.0.0-macos-aarch64.tar.gz",
-      "format": "tar.gz",
-      "checksum": "f37d33d7d58c9cbaa0dd6eacc508a596a74d053ad476d47bcefebe63fbec1547",
-      "checksum_algorithm": "sha256",
-      "files": [
-        {
-          "name": "bundle",
-          "src": "truffleruby-40.0.0-macos-aarch64/bin/bundle"
-        },
-        {
-          "name": "bundler",
-          "src": "truffleruby-40.0.0-macos-aarch64/bin/bundler"
-        },
-        {
-          "name": "erb",
-          "src": "truffleruby-40.0.0-macos-aarch64/bin/erb"
-        },
-        {
-          "name": "gem",
-          "src": "truffleruby-40.0.0-macos-aarch64/bin/gem"
-        },
-        {
-          "name": "irb",
-          "src": "truffleruby-40.0.0-macos-aarch64/bin/irb"
-        },
-        {
-          "name": "racc",
-          "src": "truffleruby-40.0.0-macos-aarch64/bin/racc"
-        },
-        {
-          "name": "rake",
-          "src": "truffleruby-40.0.0-macos-aarch64/bin/rake"
-        },
-        {
-          "name": "rbs",
-          "src": "truffleruby-40.0.0-macos-aarch64/bin/rbs"
-        },
-        {
-          "name": "rdbg",
-          "src": "truffleruby-40.0.0-macos-aarch64/bin/rdbg"
-        },
-        {
-          "name": "rdoc",
-          "src": "truffleruby-40.0.0-macos-aarch64/bin/rdoc"
-        },
-        {
-          "name": "ri",
-          "src": "truffleruby-40.0.0-macos-aarch64/bin/ri"
-        },
-        {
-          "name": "ruby",
-          "src": "truffleruby-40.0.0-macos-aarch64/bin/ruby"
-        },
-        {
-          "name": "syntax_suggest",
-          "src": "truffleruby-40.0.0-macos-aarch64/bin/syntax_suggest"
-        },
-        {
-          "name": "truffleruby",
-          "src": "truffleruby-40.0.0-macos-aarch64/bin/truffleruby"
-        },
-        {
-          "name": "truffleruby-polyglot-get",
-          "src": "truffleruby-40.0.0-macos-aarch64/bin/truffleruby-polyglot-get"
         }
       ]
     }
