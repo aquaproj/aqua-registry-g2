@@ -1,0 +1,100 @@
+{
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "go_install",
+      "repo_owner": "hashicorp",
+      "repo_name": "hcl",
+      "repo_id": 22485114,
+      "asset": "hclfmt",
+      "path": "github.com/hashicorp/hcl/v{{(semver .Version).Major}}/cmd/hclfmt",
+      "files": [
+        {
+          "name": "hclfmt",
+          "src": "hclfmt"
+        }
+      ]
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "go_install",
+      "repo_owner": "hashicorp",
+      "repo_name": "hcl",
+      "repo_id": 22485114,
+      "asset": "hclfmt",
+      "path": "github.com/hashicorp/hcl/v{{(semver .Version).Major}}/cmd/hclfmt",
+      "files": [
+        {
+          "name": "hclfmt",
+          "src": "hclfmt"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "type": "go_install",
+      "repo_owner": "hashicorp",
+      "repo_name": "hcl",
+      "repo_id": 22485114,
+      "asset": "hclfmt",
+      "path": "github.com/hashicorp/hcl/v{{(semver .Version).Major}}/cmd/hclfmt",
+      "files": [
+        {
+          "name": "hclfmt",
+          "src": "hclfmt"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "type": "go_install",
+      "repo_owner": "hashicorp",
+      "repo_name": "hcl",
+      "repo_id": 22485114,
+      "asset": "hclfmt",
+      "path": "github.com/hashicorp/hcl/v{{(semver .Version).Major}}/cmd/hclfmt",
+      "files": [
+        {
+          "name": "hclfmt",
+          "src": "hclfmt"
+        }
+      ]
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "go_install",
+      "repo_owner": "hashicorp",
+      "repo_name": "hcl",
+      "repo_id": 22485114,
+      "asset": "hclfmt.exe",
+      "path": "github.com/hashicorp/hcl/v{{(semver .Version).Major}}/cmd/hclfmt",
+      "files": [
+        {
+          "name": "hclfmt",
+          "src": "hclfmt.exe"
+        }
+      ]
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "type": "go_install",
+      "repo_owner": "hashicorp",
+      "repo_name": "hcl",
+      "repo_id": 22485114,
+      "asset": "hclfmt.exe",
+      "path": "github.com/hashicorp/hcl/v{{(semver .Version).Major}}/cmd/hclfmt",
+      "files": [
+        {
+          "name": "hclfmt",
+          "src": "hclfmt.exe"
+        }
+      ]
+    }
+  ]
+}
