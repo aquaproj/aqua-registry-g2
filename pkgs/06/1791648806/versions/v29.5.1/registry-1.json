@@ -1,0 +1,152 @@
+{
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "http",
+      "repo_owner": "docker",
+      "repo_name": "cli",
+      "asset": "docker-29.5.1.tgz",
+      "url": "https://download.docker.com/mac/static/stable/x86_64/docker-29.5.1.tgz",
+      "format": "tgz",
+      "checksum": "e98c73d5a5958c072c7984ed7458ccbb090405becedc172a4cf2598dc2ec7450",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "docker",
+          "src": "docker/docker"
+        }
+      ]
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "http",
+      "repo_owner": "docker",
+      "repo_name": "cli",
+      "asset": "docker-29.5.1.tgz",
+      "url": "https://download.docker.com/mac/static/stable/aarch64/docker-29.5.1.tgz",
+      "format": "tgz",
+      "checksum": "839602a1dbc0544c12e566bb12ad06ed40a77dd99aef22568199a547e4398567",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "docker",
+          "src": "docker/docker"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "static",
+      "type": "http",
+      "repo_owner": "docker",
+      "repo_name": "cli",
+      "asset": "docker-29.5.1.tgz",
+      "url": "https://download.docker.com/linux/static/stable/x86_64/docker-29.5.1.tgz",
+      "format": "tgz",
+      "checksum": "dfa6e37ffe24e71a637f737ec911e24dcd7a106e01973636cb33a201728a9bd6",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "containerd",
+          "src": "docker/containerd"
+        },
+        {
+          "name": "containerd-shim-runc-v2",
+          "src": "docker/containerd-shim-runc-v2"
+        },
+        {
+          "name": "ctr",
+          "src": "docker/ctr"
+        },
+        {
+          "name": "docker",
+          "src": "docker/docker"
+        },
+        {
+          "name": "docker-init",
+          "src": "docker/docker-init"
+        },
+        {
+          "name": "docker-proxy",
+          "src": "docker/docker-proxy"
+        },
+        {
+          "name": "dockerd",
+          "src": "docker/dockerd"
+        },
+        {
+          "name": "runc",
+          "src": "docker/runc"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "linked_libc": "static",
+      "type": "http",
+      "repo_owner": "docker",
+      "repo_name": "cli",
+      "asset": "docker-29.5.1.tgz",
+      "url": "https://download.docker.com/linux/static/stable/aarch64/docker-29.5.1.tgz",
+      "format": "tgz",
+      "checksum": "2ea0c005ebb1b0f58bc70d1e1fea54a6dc56ab98d246f60ed012f2c92ae1c9c8",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "containerd",
+          "src": "docker/containerd"
+        },
+        {
+          "name": "containerd-shim-runc-v2",
+          "src": "docker/containerd-shim-runc-v2"
+        },
+        {
+          "name": "ctr",
+          "src": "docker/ctr"
+        },
+        {
+          "name": "docker",
+          "src": "docker/docker"
+        },
+        {
+          "name": "docker-init",
+          "src": "docker/docker-init"
+        },
+        {
+          "name": "docker-proxy",
+          "src": "docker/docker-proxy"
+        },
+        {
+          "name": "dockerd",
+          "src": "docker/dockerd"
+        },
+        {
+          "name": "runc",
+          "src": "docker/runc"
+        }
+      ]
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "http",
+      "repo_owner": "docker",
+      "repo_name": "cli",
+      "asset": "docker-29.5.1.zip",
+      "url": "https://download.docker.com/win/static/stable/x86_64/docker-29.5.1.zip",
+      "format": "zip",
+      "checksum": "7008d54da30461fa745d4539beb87d3d14dd38c7ab0110657720526e16f5f2d3",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "docker",
+          "src": "docker/docker.exe"
+        }
+      ]
+    }
+  ]
+}
