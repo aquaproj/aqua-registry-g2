@@ -5,6 +5,10 @@ repo_name: gocryptfs
 repo_id: 41997606
 description: Encrypted overlay filesystem written in Go
 version_overrides:
+  # The archives before 2.0 hold gocryptfs and its man page; gocryptfs-xray came with 2.0.
+  - version_constraint: semver("> 1.3") and semver("< 2.0")
+    files:
+      - name: gocryptfs
   - version_constraint: semver("> 1.3")
     files:
       - name: gocryptfs
