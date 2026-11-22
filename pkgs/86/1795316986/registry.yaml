@@ -1,0 +1,16 @@
+name: ynqa/vy
+type: github_release
+repo_owner: ynqa
+repo_name: vy
+repo_id: 1202432256
+description: Explore and query JSON and YAML, right in your terminal
+version_overrides:
+  - version_constraint: "true"
+    files:
+      - name: vy
+        src: '{{.AssetWithoutExt}}/vy'
+    overrides:
+      - goos: windows
+        format: zip
+        files:
+          - name: vy
