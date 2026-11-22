@@ -10,6 +10,10 @@ files:
   - name: protoc-gen-validate-go
   - name: protoc-gen-validate-java
 version_overrides:
+  # v0.7.0's archive holds protoc-gen-validate alone.
+  - version_constraint: Version == "v0.7.0"
+    files:
+      - name: protoc-gen-validate
   - version_constraint: semver("> 1.1.0")
   - version_constraint: semver("> 1.0.2")
     no_asset: true
