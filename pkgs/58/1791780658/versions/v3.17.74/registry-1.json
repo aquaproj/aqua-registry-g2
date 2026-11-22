@@ -1,0 +1,164 @@
+{
+  "published_at": "2026-08-02T17:43:49Z",
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "jenkins-x",
+      "repo_name": "jx",
+      "repo_id": 116400734,
+      "asset": "jx-darwin-amd64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "fa44d65f0e9534aba8490d8763159fa3eb0bcab45fd8e935db7f238c291a946c",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "jx",
+          "src": "jx"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "jx-darwin-amd64.tar.gz.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/jenkins-x/jx/.github/workflows/jenkins-x-release.yaml@refs/heads/main",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "jenkins-x",
+      "repo_name": "jx",
+      "repo_id": 116400734,
+      "asset": "jx-darwin-arm64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "181c4f28e3497b07a9cc80ea7cb8083a965d5e8c974ee2fdf706ab1e02ba9d83",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "jx",
+          "src": "jx"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "jx-darwin-arm64.tar.gz.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/jenkins-x/jx/.github/workflows/jenkins-x-release.yaml@refs/heads/main",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "jenkins-x",
+      "repo_name": "jx",
+      "repo_id": 116400734,
+      "asset": "jx-linux-amd64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "a16f0ddb5aa37973866930decf0a2a0bdffd943d2d386da5797c292e240149a7",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "jx",
+          "src": "jx"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "jx-linux-amd64.tar.gz.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/jenkins-x/jx/.github/workflows/jenkins-x-release.yaml@refs/heads/main",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "jenkins-x",
+      "repo_name": "jx",
+      "repo_id": 116400734,
+      "asset": "jx-linux-arm64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "a6c3295a0460b2098afd75c0a2687b50d193a083a52e9104b9cc0ec9241523eb",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "jx",
+          "src": "jx"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "jx-linux-arm64.tar.gz.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/jenkins-x/jx/.github/workflows/jenkins-x-release.yaml@refs/heads/main",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "jenkins-x",
+      "repo_name": "jx",
+      "repo_id": 116400734,
+      "asset": "jx-windows-amd64.zip",
+      "format": "zip",
+      "checksum": "9a390628117707e56836828aa9d9e8a330bcbd92144a294628c0a3c0e39b189c",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "jx",
+          "src": "jx.exe"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "jx-windows-amd64.zip.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/jenkins-x/jx/.github/workflows/jenkins-x-release.yaml@refs/heads/main",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "windows_arm_emulation": true,
+      "type": "github_release",
+      "repo_owner": "jenkins-x",
+      "repo_name": "jx",
+      "repo_id": 116400734,
+      "asset": "jx-windows-amd64.zip",
+      "format": "zip",
+      "checksum": "9a390628117707e56836828aa9d9e8a330bcbd92144a294628c0a3c0e39b189c",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "jx",
+          "src": "jx.exe"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "jx-windows-amd64.zip.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/jenkins-x/jx/.github/workflows/jenkins-x-release.yaml@refs/heads/main",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    }
+  ]
+}
