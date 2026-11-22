@@ -1,0 +1,295 @@
+{
+  "published_at": "2026-04-09T18:41:36Z",
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "opengrep",
+      "repo_name": "opengrep",
+      "repo_id": 903510992,
+      "asset": "opengrep_osx_x86",
+      "format": "raw",
+      "checksum": "6159af8070d28c0e2df642a68b3be4ce512442b5b31fae85fb3218dac5301f9d",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "opengrep",
+          "src": "opengrep_osx_x86"
+        }
+      ],
+      "cosign": {
+        "signature": {
+          "type": "github_release",
+          "repo_owner": "opengrep",
+          "repo_name": "opengrep",
+          "asset": "opengrep_osx_x86.sig"
+        },
+        "certificate": {
+          "type": "github_release",
+          "repo_owner": "opengrep",
+          "repo_name": "opengrep",
+          "asset": "opengrep_osx_x86.cert"
+        },
+        "certificate_identity_regexp": "https://github.com/opengrep/opengrep.+",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "certificate_github_workflow_repository": "opengrep/opengrep"
+      }
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "opengrep",
+      "repo_name": "opengrep",
+      "repo_id": 903510992,
+      "asset": "opengrep_osx_arm64",
+      "format": "raw",
+      "checksum": "8e9f2ecfd2b6f0c824aa111b9663f93b1d5fd2e59d5e5a25b5d6f84f922087ae",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "opengrep",
+          "src": "opengrep_osx_arm64"
+        }
+      ],
+      "cosign": {
+        "signature": {
+          "type": "github_release",
+          "repo_owner": "opengrep",
+          "repo_name": "opengrep",
+          "asset": "opengrep_osx_arm64.sig"
+        },
+        "certificate": {
+          "type": "github_release",
+          "repo_owner": "opengrep",
+          "repo_name": "opengrep",
+          "asset": "opengrep_osx_arm64.cert"
+        },
+        "certificate_identity_regexp": "https://github.com/opengrep/opengrep.+",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "certificate_github_workflow_repository": "opengrep/opengrep"
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "opengrep",
+      "repo_name": "opengrep",
+      "repo_id": 903510992,
+      "asset": "opengrep_manylinux_x86",
+      "format": "raw",
+      "checksum": "1d69a41beb88e8e7917f26cc6a16c1edf298f31402807e6d1afbb5d8684c3590",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "opengrep",
+          "src": "opengrep_manylinux_x86"
+        }
+      ],
+      "cosign": {
+        "signature": {
+          "type": "github_release",
+          "repo_owner": "opengrep",
+          "repo_name": "opengrep",
+          "asset": "opengrep_manylinux_x86.sig"
+        },
+        "certificate": {
+          "type": "github_release",
+          "repo_owner": "opengrep",
+          "repo_name": "opengrep",
+          "asset": "opengrep_manylinux_x86.cert"
+        },
+        "certificate_identity_regexp": "https://github.com/opengrep/opengrep.+",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "certificate_github_workflow_repository": "opengrep/opengrep"
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "variants": {
+        "libc": "musl"
+      },
+      "linked_libc": "musl",
+      "type": "github_release",
+      "repo_owner": "opengrep",
+      "repo_name": "opengrep",
+      "repo_id": 903510992,
+      "asset": "opengrep_musllinux_x86",
+      "format": "raw",
+      "checksum": "02cf0b1be28d4bafd21fc836d59f4bdccf3ff0635dc3ec3c1a33560ab76a65e5",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "opengrep",
+          "src": "opengrep_musllinux_x86"
+        }
+      ],
+      "cosign": {
+        "signature": {
+          "type": "github_release",
+          "repo_owner": "opengrep",
+          "repo_name": "opengrep",
+          "asset": "opengrep_musllinux_x86.sig"
+        },
+        "certificate": {
+          "type": "github_release",
+          "repo_owner": "opengrep",
+          "repo_name": "opengrep",
+          "asset": "opengrep_musllinux_x86.cert"
+        },
+        "certificate_identity_regexp": "https://github.com/opengrep/opengrep.+",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "certificate_github_workflow_repository": "opengrep/opengrep"
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "opengrep",
+      "repo_name": "opengrep",
+      "repo_id": 903510992,
+      "asset": "opengrep_manylinux_aarch64",
+      "format": "raw",
+      "checksum": "7141748e929292e2b672f12515035a01643705010f28970c66ae43612162213e",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "opengrep",
+          "src": "opengrep_manylinux_aarch64"
+        }
+      ],
+      "cosign": {
+        "signature": {
+          "type": "github_release",
+          "repo_owner": "opengrep",
+          "repo_name": "opengrep",
+          "asset": "opengrep_manylinux_aarch64.sig"
+        },
+        "certificate": {
+          "type": "github_release",
+          "repo_owner": "opengrep",
+          "repo_name": "opengrep",
+          "asset": "opengrep_manylinux_aarch64.cert"
+        },
+        "certificate_identity_regexp": "https://github.com/opengrep/opengrep.+",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "certificate_github_workflow_repository": "opengrep/opengrep"
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "variants": {
+        "libc": "musl"
+      },
+      "linked_libc": "musl",
+      "type": "github_release",
+      "repo_owner": "opengrep",
+      "repo_name": "opengrep",
+      "repo_id": 903510992,
+      "asset": "opengrep_musllinux_aarch64",
+      "format": "raw",
+      "checksum": "cbe97968569491bbaea33cf88384177cf602319550d10da066297c2421c24466",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "opengrep",
+          "src": "opengrep_musllinux_aarch64"
+        }
+      ],
+      "cosign": {
+        "signature": {
+          "type": "github_release",
+          "repo_owner": "opengrep",
+          "repo_name": "opengrep",
+          "asset": "opengrep_musllinux_aarch64.sig"
+        },
+        "certificate": {
+          "type": "github_release",
+          "repo_owner": "opengrep",
+          "repo_name": "opengrep",
+          "asset": "opengrep_musllinux_aarch64.cert"
+        },
+        "certificate_identity_regexp": "https://github.com/opengrep/opengrep.+",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "certificate_github_workflow_repository": "opengrep/opengrep"
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "opengrep",
+      "repo_name": "opengrep",
+      "repo_id": 903510992,
+      "asset": "opengrep_windows_x86.exe",
+      "format": "raw",
+      "checksum": "f559795b0a8e66452e7f370d52b86398c09d99a50202ec4483fe2fa89a86d1c7",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "opengrep",
+          "src": "opengrep_windows_x86.exe"
+        }
+      ],
+      "cosign": {
+        "signature": {
+          "type": "github_release",
+          "repo_owner": "opengrep",
+          "repo_name": "opengrep",
+          "asset": "opengrep_windows_x86.exe.sig"
+        },
+        "certificate": {
+          "type": "github_release",
+          "repo_owner": "opengrep",
+          "repo_name": "opengrep",
+          "asset": "opengrep_windows_x86.exe.cert"
+        },
+        "certificate_identity_regexp": "https://github.com/opengrep/opengrep.+",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "certificate_github_workflow_repository": "opengrep/opengrep"
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "opengrep",
+      "repo_name": "opengrep",
+      "repo_id": 903510992,
+      "asset": "opengrep_windows_x86.exe",
+      "format": "raw",
+      "checksum": "f559795b0a8e66452e7f370d52b86398c09d99a50202ec4483fe2fa89a86d1c7",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "opengrep",
+          "src": "opengrep_windows_x86.exe"
+        }
+      ],
+      "cosign": {
+        "signature": {
+          "type": "github_release",
+          "repo_owner": "opengrep",
+          "repo_name": "opengrep",
+          "asset": "opengrep_windows_x86.exe.sig"
+        },
+        "certificate": {
+          "type": "github_release",
+          "repo_owner": "opengrep",
+          "repo_name": "opengrep",
+          "asset": "opengrep_windows_x86.exe.cert"
+        },
+        "certificate_identity_regexp": "https://github.com/opengrep/opengrep.+",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "certificate_github_workflow_repository": "opengrep/opengrep"
+      }
+    }
+  ]
+}
