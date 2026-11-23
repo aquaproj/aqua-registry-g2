@@ -4,18 +4,17 @@ repo_owner: kdash-rs
 repo_name: kdash
 repo_id: 357436262
 description: A simple and fast dashboard for Kubernetes
-supported_envs:
-  - darwin
-  - amd64
+# From v0.3.3 the Linux arm64 builds are kdash-aarch64-gnu.tar.gz and
+# kdash-aarch64-musl.tar.gz, names saying no OS. The musl one is statically linked.
+asset_rules:
+  - envs:
+      - linux/arm64
+    filter: Asset == "kdash-aarch64-musl.tar.gz"
 version_overrides:
   - version_constraint: semver(">= 0.4.3")
   - version_constraint: semver(">= 0.3.3")
     replacements:
       linux: linux-musl
-    supported_envs:
-      - darwin
-      - linux
-      - amd64
   - version_constraint: semver(">= 0.0.4")
     replacements:
       linux: linux-musl
