@@ -1,0 +1,157 @@
+{
+  "published_at": "2026-03-10T19:40:45Z",
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "cli",
+      "repo_name": "cli",
+      "repo_id": 212613049,
+      "asset": "gh_2.88.0_macOS_amd64.zip",
+      "format": "zip",
+      "checksum": "49d309a6b2152807fb0a70d6db02d14a2d9264b01f52c852938aadb331f4cf70",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "gh",
+          "src": "gh_2.88.0_macOS_amd64/bin/gh"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "cli/cli/.github/workflows/deployment.yml",
+        "source_ref": "refs/heads/trunk",
+        "source_digest": "e8cc7f94367a0d862501aea1e318e6e0c326f0b9",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "cli",
+      "repo_name": "cli",
+      "repo_id": 212613049,
+      "asset": "gh_2.88.0_macOS_arm64.zip",
+      "format": "zip",
+      "checksum": "0ea4edb4b1be0ffa2b4c53bcce81691dd58647bb03bfb5b9fdb01ee5b2afc581",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "gh",
+          "src": "gh_2.88.0_macOS_arm64/bin/gh"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "cli/cli/.github/workflows/deployment.yml",
+        "source_ref": "refs/heads/trunk",
+        "source_digest": "e8cc7f94367a0d862501aea1e318e6e0c326f0b9",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "cli",
+      "repo_name": "cli",
+      "repo_id": 212613049,
+      "asset": "gh_2.88.0_linux_amd64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "4d268420ad31846a807e3012ac4b6547df662777e7776fa7f4c55ce062e15b15",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "gh",
+          "src": "gh_2.88.0_linux_amd64/bin/gh"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "cli/cli/.github/workflows/deployment.yml",
+        "source_ref": "refs/heads/trunk",
+        "source_digest": "e8cc7f94367a0d862501aea1e318e6e0c326f0b9",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "cli",
+      "repo_name": "cli",
+      "repo_id": 212613049,
+      "asset": "gh_2.88.0_linux_arm64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "d9bffed5c9bb65fca9d6097eaa3ebd6edb7438c8bfd641f8595a39c7dc69042f",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "gh",
+          "src": "gh_2.88.0_linux_arm64/bin/gh"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "cli/cli/.github/workflows/deployment.yml",
+        "source_ref": "refs/heads/trunk",
+        "source_digest": "e8cc7f94367a0d862501aea1e318e6e0c326f0b9",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "cli",
+      "repo_name": "cli",
+      "repo_id": 212613049,
+      "asset": "gh_2.88.0_windows_amd64.zip",
+      "format": "zip",
+      "checksum": "0cbf0abde47cd873edbf937e30665d665c07145ff14199f81358d0188affae57",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "gh",
+          "src": "bin/gh.exe"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "cli/cli/.github/workflows/deployment.yml",
+        "source_ref": "refs/heads/trunk",
+        "source_digest": "e8cc7f94367a0d862501aea1e318e6e0c326f0b9",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "cli",
+      "repo_name": "cli",
+      "repo_id": 212613049,
+      "asset": "gh_2.88.0_windows_arm64.zip",
+      "format": "zip",
+      "checksum": "c92f722b8d85ebdc342728b2f0e68af34d6bb2d4bb9213dd0631851d2fe06d96",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "gh",
+          "src": "bin/gh.exe"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "cli/cli/.github/workflows/deployment.yml",
+        "source_ref": "refs/heads/trunk",
+        "source_digest": "e8cc7f94367a0d862501aea1e318e6e0c326f0b9",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    }
+  ]
+}
