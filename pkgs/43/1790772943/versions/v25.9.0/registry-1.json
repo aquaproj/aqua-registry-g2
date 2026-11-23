@@ -1,0 +1,231 @@
+{
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "http",
+      "repo_owner": "nodejs",
+      "repo_name": "node",
+      "repo_id": 27193779,
+      "asset": "node-v25.9.0-darwin-x64.tar.gz",
+      "url": "https://nodejs.org/dist/v25.9.0/node-v25.9.0-darwin-x64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "7d737b53ce191142bfa1c17cfa5b070d96e84eebf76b8dd06d84981cbdc3f7e3",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "node",
+          "src": "node-v25.9.0-darwin-x64/bin/node"
+        },
+        {
+          "name": "npm",
+          "src": "node-v25.9.0-darwin-x64/bin/npm"
+        },
+        {
+          "name": "npx",
+          "src": "node-v25.9.0-darwin-x64/bin/npx"
+        }
+      ]
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "http",
+      "repo_owner": "nodejs",
+      "repo_name": "node",
+      "repo_id": 27193779,
+      "asset": "node-v25.9.0-darwin-arm64.tar.gz",
+      "url": "https://nodejs.org/dist/v25.9.0/node-v25.9.0-darwin-arm64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "e479f3c469d3d9303a44f00a8ea37a3788395d171bb8059c48a4bbbd2e371b59",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "node",
+          "src": "node-v25.9.0-darwin-arm64/bin/node"
+        },
+        {
+          "name": "npm",
+          "src": "node-v25.9.0-darwin-arm64/bin/npm"
+        },
+        {
+          "name": "npx",
+          "src": "node-v25.9.0-darwin-arm64/bin/npx"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "glibc",
+      "type": "http",
+      "repo_owner": "nodejs",
+      "repo_name": "node",
+      "repo_id": 27193779,
+      "asset": "node-v25.9.0-linux-x64.tar.gz",
+      "url": "https://nodejs.org/dist/v25.9.0/node-v25.9.0-linux-x64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "134e55b2408448a219760fe04dc44d6851f9de8a79549021ffd870e9082d9e7b",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "node",
+          "src": "node-v25.9.0-linux-x64/bin/node"
+        },
+        {
+          "name": "npm",
+          "src": "node-v25.9.0-linux-x64/bin/npm"
+        },
+        {
+          "name": "npx",
+          "src": "node-v25.9.0-linux-x64/bin/npx"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "variants": {
+        "libc": "musl"
+      },
+      "linked_libc": "musl",
+      "type": "http",
+      "repo_owner": "nodejs",
+      "repo_name": "node",
+      "repo_id": 27193779,
+      "asset": "node-v25.9.0-linux-x64-musl.tar.gz",
+      "url": "https://unofficial-builds.nodejs.org/download/release/v25.9.0/node-v25.9.0-linux-x64-musl.tar.gz",
+      "format": "tar.gz",
+      "checksum": "1ac44af012be6bc17f1e3723edbf12897c0baeae5d1dc75b9f97d71413e4c8f5",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "node",
+          "src": "node-v25.9.0-linux-x64-musl/bin/node"
+        },
+        {
+          "name": "npm",
+          "src": "node-v25.9.0-linux-x64-musl/bin/npm"
+        },
+        {
+          "name": "npx",
+          "src": "node-v25.9.0-linux-x64-musl/bin/npx"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "linked_libc": "glibc",
+      "type": "http",
+      "repo_owner": "nodejs",
+      "repo_name": "node",
+      "repo_id": 27193779,
+      "asset": "node-v25.9.0-linux-arm64.tar.gz",
+      "url": "https://nodejs.org/dist/v25.9.0/node-v25.9.0-linux-arm64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "8fb4283301b8c720fc9f18bffff0f659e72cc14d0cf207a3bb411808aaa73a57",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "node",
+          "src": "node-v25.9.0-linux-arm64/bin/node"
+        },
+        {
+          "name": "npm",
+          "src": "node-v25.9.0-linux-arm64/bin/npm"
+        },
+        {
+          "name": "npx",
+          "src": "node-v25.9.0-linux-arm64/bin/npx"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "variants": {
+        "libc": "musl"
+      },
+      "linked_libc": "musl",
+      "type": "http",
+      "repo_owner": "nodejs",
+      "repo_name": "node",
+      "repo_id": 27193779,
+      "asset": "node-v25.9.0-linux-arm64-musl.tar.gz",
+      "url": "https://unofficial-builds.nodejs.org/download/release/v25.9.0/node-v25.9.0-linux-arm64-musl.tar.gz",
+      "format": "tar.gz",
+      "checksum": "97f6fe125faa51f84a7bb600d0cd7aefcfaaa0e75a5f49a7c61c3df91d12d535",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "node",
+          "src": "node-v25.9.0-linux-arm64-musl/bin/node"
+        },
+        {
+          "name": "npm",
+          "src": "node-v25.9.0-linux-arm64-musl/bin/npm"
+        },
+        {
+          "name": "npx",
+          "src": "node-v25.9.0-linux-arm64-musl/bin/npx"
+        }
+      ]
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "http",
+      "repo_owner": "nodejs",
+      "repo_name": "node",
+      "repo_id": 27193779,
+      "asset": "node-v25.9.0-win-x64.zip",
+      "url": "https://nodejs.org/dist/v25.9.0/node-v25.9.0-win-x64.zip",
+      "format": "zip",
+      "checksum": "929552b8305effac843ba7b4270c437aefb702fc3fbd73fcd1bffd35d4ac284e",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "node",
+          "src": "node-v25.9.0-win-x64/node.exe"
+        },
+        {
+          "name": "npm",
+          "src": "node-v25.9.0-win-x64/npm.cmd"
+        },
+        {
+          "name": "npx",
+          "src": "node-v25.9.0-win-x64/npx.cmd"
+        }
+      ]
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "windows_arm_emulation": true,
+      "type": "http",
+      "repo_owner": "nodejs",
+      "repo_name": "node",
+      "repo_id": 27193779,
+      "asset": "node-v25.9.0-win-x64.zip",
+      "url": "https://nodejs.org/dist/v25.9.0/node-v25.9.0-win-x64.zip",
+      "format": "zip",
+      "checksum": "929552b8305effac843ba7b4270c437aefb702fc3fbd73fcd1bffd35d4ac284e",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "node",
+          "src": "node-v25.9.0-win-x64/node.exe"
+        },
+        {
+          "name": "npm",
+          "src": "node-v25.9.0-win-x64/npm.cmd"
+        },
+        {
+          "name": "npx",
+          "src": "node-v25.9.0-win-x64/npx.cmd"
+        }
+      ]
+    }
+  ]
+}
