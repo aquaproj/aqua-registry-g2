@@ -29,8 +29,8 @@ jobs:
           AQUA_GITHUB_TOKEN: ${{ github.token }}
       # How much of GITHUB_TOKEN's budget the repository has used, as one line. The budget is
       # the whole repository's, so a job's cost is the difference between lines read while
-      # nothing else runs. Read at the end of the job: a token that hasn't made a request yet
-      # answers with a window of its own (core=0). Asking rate_limit costs nothing.
+      # nothing else runs. Read after the job's requests: a token that hasn't made a request
+      # yet answers with a window of its own (core=0). Asking rate_limit costs nothing.
       #
       # A run step rather than a local action: a '$/' action made every job download the whole
       # registry, pkgs/ included, in "Set up job".
