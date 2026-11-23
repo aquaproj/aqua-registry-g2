@@ -3,8 +3,10 @@
 # not the code's.
 #
 # A failed job is read as transient when its log has one of the patterns below: a 5xx from
-# a server, or a connection that broke. Run 42568811742 is the kind meant -- aqua-installer
-# got a 504 from github.com six times running, and the same run passed when re-run.
+# a server, or a connection that broke or timed out. Run 42568811742 is the kind meant -- aqua-installer
+# got a 504 from github.com six times running, and the same run passed when re-run. Run
+# 45168555588's darwin job is the timed-out kind: "read: operation timed out" downloading
+# deno's asset, the error macOS gives where Linux says "i/o timeout".
 #
 # A 403 is read as transient only where aqua-installer got it downloading aqua's own release
 # asset, which is public: run 45144881274's skills job got it six times over 31 seconds while
@@ -24,7 +26,7 @@ set -euo pipefail
 
 # What GitHub annotates a job with when it cancels it for the machine.
 readonly MACHINE='exceeded the maximum execution time|not acquired by Runner'
-readonly TRANSIENT='returned error: 5[0-9]{2}|HTTP[/ 0-9.]* 5[0-9]{2}|status code:? 5[0-9]{2}|50[234] (Bad Gateway|Service Unavailable|Gateway Time-?out)|connection reset by peer|TLS handshake timeout|i/o timeout'
+readonly TRANSIENT='returned error: 5[0-9]{2}|HTTP[/ 0-9.]* 5[0-9]{2}|status code:? 5[0-9]{2}|50[234] (Bad Gateway|Service Unavailable|Gateway Time-?out)|connection reset by peer|TLS handshake timeout|i/o timeout|operation timed out'
 readonly AQUA_DOWNLOAD='Downloading https://github\.com/aquaproj/aqua/releases/download/'
 readonly FORBIDDEN='returned error: 403'
 
