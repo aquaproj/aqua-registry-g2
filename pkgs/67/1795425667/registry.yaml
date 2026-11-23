@@ -1,0 +1,11 @@
+name: lukeed/lane
+type: github_release
+repo_owner: lukeed
+repo_name: lane
+repo_id: 1340146535
+description: Copy-on-write worktrees with memory that survives them
+version_overrides:
+  - version_constraint: "true"
+    supported_envs:
+      - linux
+      - darwin
