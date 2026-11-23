@@ -120,12 +120,16 @@ jobs:
           LOG_LEVEL: ${{ inputs.log_level }}
       # How much of the app's budget is used, core and GraphQL alike, after 'ar2 run' read
       # and wrote through it. Only after: a line read before the run answered for a window of
-      # its own (core=0). See the action.
-      - uses: $/.github/actions/measure-rate-limit
-        if: always()
+      # its own (core=0). Asking rate_limit costs nothing.
+      #
+      # A run step rather than a local action: a '$/' action made the job download the whole
+      # registry, pkgs/ included, in "Set up job".
+      - if: always()
         continue-on-error: true
-        with:
-          token: ${{ steps.pr_token.outputs.token }}
+        run: |
+          gh api rate_limit --jq '"api-budget end core=\(.resources.core.used)/\(.resources.core.limit) graphql=\(.resources.graphql.used)/\(.resources.graphql.limit) reset=\(.resources.core.reset)"'
+        env:
+          GH_TOKEN: ${{ steps.pr_token.outputs.token }}
 
   # The cadence is this, rather than a schedule. A workflow asking for every ten minutes is
   # triggered every few hours: aqua-registry's own updater, set to "*/10 * * * *", ran eight
