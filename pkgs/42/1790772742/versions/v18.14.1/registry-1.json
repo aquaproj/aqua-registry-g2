@@ -1,0 +1,193 @@
+{
+  "published_at": "2026-04-13T22:23:07Z",
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "atuinsh",
+      "repo_name": "atuin",
+      "repo_id": 301244405,
+      "asset": "atuin-aarch64-apple-darwin.tar.gz",
+      "format": "tar.gz",
+      "checksum": "67ca2694583eac0d02c442d1ffd1cb2d0c505d9f60357e7550aaef2b966597f5",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "atuin",
+          "src": "atuin-aarch64-apple-darwin/atuin"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "atuinsh/atuin/.github/workflows/release.yml",
+        "source_ref": "refs/tags/v18.14.1",
+        "source_digest": "1e93b3129bc540ae8d2b996ba6aa64b93a732d99",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "variants": {
+        "libc": "glibc"
+      },
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "atuinsh",
+      "repo_name": "atuin",
+      "repo_id": 301244405,
+      "asset": "atuin-x86_64-unknown-linux-gnu.tar.gz",
+      "format": "tar.gz",
+      "checksum": "73269ed865c88d830b6106e706f6a074f3815a26d5b26fb9d73738e289ad48bb",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "atuin",
+          "src": "atuin-x86_64-unknown-linux-gnu/atuin"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "atuinsh/atuin/.github/workflows/release.yml",
+        "source_ref": "refs/tags/v18.14.1",
+        "source_digest": "1e93b3129bc540ae8d2b996ba6aa64b93a732d99",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "variants": {
+        "libc": "musl"
+      },
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "atuinsh",
+      "repo_name": "atuin",
+      "repo_id": 301244405,
+      "asset": "atuin-x86_64-unknown-linux-musl.tar.gz",
+      "format": "tar.gz",
+      "checksum": "f648ecb4248eb2cd77e17b42370d6229defe306d35443b0601c2c8a5a5fd0a16",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "atuin",
+          "src": "atuin-x86_64-unknown-linux-musl/atuin"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "atuinsh/atuin/.github/workflows/release.yml",
+        "source_ref": "refs/tags/v18.14.1",
+        "source_digest": "1e93b3129bc540ae8d2b996ba6aa64b93a732d99",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "variants": {
+        "libc": "glibc"
+      },
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "atuinsh",
+      "repo_name": "atuin",
+      "repo_id": 301244405,
+      "asset": "atuin-aarch64-unknown-linux-gnu.tar.gz",
+      "format": "tar.gz",
+      "checksum": "cd4ebee1937dd8de5aed25ca1c8a1c8f08446c0ce04d14941f17688b2443e0fd",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "atuin",
+          "src": "atuin-aarch64-unknown-linux-gnu/atuin"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "atuinsh/atuin/.github/workflows/release.yml",
+        "source_ref": "refs/tags/v18.14.1",
+        "source_digest": "1e93b3129bc540ae8d2b996ba6aa64b93a732d99",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "variants": {
+        "libc": "musl"
+      },
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "atuinsh",
+      "repo_name": "atuin",
+      "repo_id": 301244405,
+      "asset": "atuin-aarch64-unknown-linux-musl.tar.gz",
+      "format": "tar.gz",
+      "checksum": "cf67d0978def478e7d149cdb94a1e572eb008c8151d95f6a53ee5560720f1141",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "atuin",
+          "src": "atuin-aarch64-unknown-linux-musl/atuin"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "atuinsh/atuin/.github/workflows/release.yml",
+        "source_ref": "refs/tags/v18.14.1",
+        "source_digest": "1e93b3129bc540ae8d2b996ba6aa64b93a732d99",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "atuinsh",
+      "repo_name": "atuin",
+      "repo_id": 301244405,
+      "asset": "atuin-x86_64-pc-windows-msvc.zip",
+      "format": "zip",
+      "checksum": "5b7e3630cafad6e8a9846246a192955f8988a4879c88ad167cdb7d7e6bdb0915",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "atuin",
+          "src": "atuin.exe"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "atuinsh/atuin/.github/workflows/release.yml",
+        "source_ref": "refs/tags/v18.14.1",
+        "source_digest": "1e93b3129bc540ae8d2b996ba6aa64b93a732d99",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "windows_arm_emulation": true,
+      "type": "github_release",
+      "repo_owner": "atuinsh",
+      "repo_name": "atuin",
+      "repo_id": 301244405,
+      "asset": "atuin-x86_64-pc-windows-msvc.zip",
+      "format": "zip",
+      "checksum": "5b7e3630cafad6e8a9846246a192955f8988a4879c88ad167cdb7d7e6bdb0915",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "atuin",
+          "src": "atuin.exe"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "atuinsh/atuin/.github/workflows/release.yml",
+        "source_ref": "refs/tags/v18.14.1",
+        "source_digest": "1e93b3129bc540ae8d2b996ba6aa64b93a732d99",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    }
+  ]
+}
