@@ -123,10 +123,19 @@ jobs:
         env:
           FILES: ${{ steps.plan.outputs.files }}
           AQUA_GITHUB_TOKEN: ${{ github.token }}
-      # How much of GITHUB_TOKEN's budget the repository has used. See the action.
-      - uses: $/.github/actions/measure-rate-limit
-        if: always()
+      # How much of GITHUB_TOKEN's budget the repository has used, as one line. The budget is
+      # the whole repository's, so a job's cost is the difference between lines read while
+      # nothing else runs. Read at the end of the job: a token that hasn't made a request yet
+      # answers with a window of its own (core=0). Asking rate_limit costs nothing.
+      #
+      # A run step rather than a local action: a '$/' action made every job download the whole
+      # registry, pkgs/ included, in "Set up job".
+      - if: always()
         continue-on-error: true
+        run: |
+          gh api rate_limit --jq '"api-budget end core=\(.resources.core.used)/\(.resources.core.limit) graphql=\(.resources.graphql.used)/\(.resources.graphql.limit) reset=\(.resources.core.reset)"'
+        env:
+          GH_TOKEN: ${{ github.token }}
 
   test:
     needs: plan
@@ -198,10 +207,19 @@ jobs:
           # assets without a token runs into the anonymous rate limit.
           GITHUB_TOKEN: ${{ github.token }}
           AQUA_GITHUB_TOKEN: ${{ github.token }}
-      # How much of GITHUB_TOKEN's budget the repository has used. See the action.
-      - uses: $/.github/actions/measure-rate-limit
-        if: always()
+      # How much of GITHUB_TOKEN's budget the repository has used, as one line. The budget is
+      # the whole repository's, so a job's cost is the difference between lines read while
+      # nothing else runs. Read at the end of the job: a token that hasn't made a request yet
+      # answers with a window of its own (core=0). Asking rate_limit costs nothing.
+      #
+      # A run step rather than a local action: a '$/' action made every job download the whole
+      # registry, pkgs/ included, in "Set up job".
+      - if: always()
         continue-on-error: true
+        run: |
+          gh api rate_limit --jq '"api-budget end core=\(.resources.core.used)/\(.resources.core.limit) graphql=\(.resources.graphql.used)/\(.resources.graphql.limit) reset=\(.resources.core.reset)"'
+        env:
+          GH_TOKEN: ${{ github.token }}
 
   # The pull request rewriting every published file. See ar2 rewrite --verify.
   rewrite:
@@ -247,7 +265,16 @@ jobs:
           HEAD_SHA: ${{ github.event.pull_request.head.sha }}
           GITHUB_TOKEN: ${{ github.token }}
           AQUA_GITHUB_TOKEN: ${{ github.token }}
-      # How much of GITHUB_TOKEN's budget the repository has used. See the action.
-      - uses: $/.github/actions/measure-rate-limit
-        if: always()
+      # How much of GITHUB_TOKEN's budget the repository has used, as one line. The budget is
+      # the whole repository's, so a job's cost is the difference between lines read while
+      # nothing else runs. Read at the end of the job: a token that hasn't made a request yet
+      # answers with a window of its own (core=0). Asking rate_limit costs nothing.
+      #
+      # A run step rather than a local action: a '$/' action made every job download the whole
+      # registry, pkgs/ included, in "Set up job".
+      - if: always()
         continue-on-error: true
+        run: |
+          gh api rate_limit --jq '"api-budget end core=\(.resources.core.used)/\(.resources.core.limit) graphql=\(.resources.graphql.used)/\(.resources.graphql.limit) reset=\(.resources.core.reset)"'
+        env:
+          GH_TOKEN: ${{ github.token }}
