@@ -1,0 +1,49 @@
+{
+  "published_at": "2024-01-07T14:23:07Z",
+  "assets": [
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "variants": {
+        "libc": "musl"
+      },
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "aristocratos",
+      "repo_name": "btop",
+      "repo_id": 365005377,
+      "asset": "btop-x86_64-linux-musl.tbz",
+      "format": "tbz",
+      "checksum": "a05f5de965acafbbeb1c8ff1db6b2f3dbfe387b707a25a1a399e8f8f74ad53b3",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "btop",
+          "src": "btop/bin/btop"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "variants": {
+        "libc": "musl"
+      },
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "aristocratos",
+      "repo_name": "btop",
+      "repo_id": 365005377,
+      "asset": "btop-aarch64-linux-musl.tbz",
+      "format": "tbz",
+      "checksum": "5a0e589b06ce4773e1db7304c490660f7772fcf379f5fb9d0c11548628b29dc1",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "btop",
+          "src": "btop/bin/btop"
+        }
+      ]
+    }
+  ]
+}
