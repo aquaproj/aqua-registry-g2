@@ -41,14 +41,21 @@ Check upstream: a project that moved from cosign to attestations, or retired a k
 so in its release notes or its workflow. A project that says nothing about it is the
 case this exists for.
 
-## The version covers platforms the one before it didn't
+## The version covers a platform the one before it didn't, with an asset named unlike the others
 
-> These versions cover platforms the version before them didn't
+> These versions cover platforms the version before them didn't, with an asset named unlike the others
 
 The asset names are read from the release, so an asset placed on a platform it wasn't on
-before is either a build the release started publishing, or another program of the release
-whose name doesn't tell it apart. The first merges as it is. The second is what
-`all_assets_filter` is for: see below.
+before is either a build the release started publishing, or another program of the release.
+Another program is named differently before the os, arch and version --
+`gh-action-yaml-gen-darwin-amd64` beside `gh-action-linux-amd64` -- and that is what stops
+the pull request. If it is another program, `all_assets_filter` is what leaves it out: see
+below. If it is a build of the package under an odd name, it merges as it is.
+
+A platform gained with an asset named like the version's others doesn't stop anything: the
+pull request lists it under "These versions cover platforms the version before them
+didn't" and merges itself. Of 206 pull requests left for review for a gained platform
+alone, none had a wrong entry for it.
 
 ## `files[].src` and environments left out
 
