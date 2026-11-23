@@ -14,7 +14,8 @@ disabled() {
 # streak says the last $1 ar2 runs that ran all ended without succeeding: failure, timed_out,
 # startup_failure, or cancelled after a job had started (the job's timeout, or a person).
 #
-# Other runs are passed over rather than counted either way. A run cancelled before any job
+# A run naming its packages isn't the chain, and is passed over. Other runs are passed over
+# rather than counted either way. A run cancelled before any job
 # started is one the concurrency group replaced -- ar2 keeps one run pending, and dispatching
 # another cancels it -- which is the chain being handed over, not failing. skipped, neutral
 # and action_required aren't the chain failing either.
@@ -29,8 +30,8 @@ streak() {
 		--workflow ar2.yaml \
 		--status completed \
 		--limit $((want * 3)) \
-		--json databaseId,conclusion \
-		--jq '.[] | "\(.databaseId) \(.conclusion)"') || return 1
+		--json databaseId,conclusion,displayTitle \
+		--jq '.[] | select(.displayTitle | contains(" named ") | not) | "\(.databaseId) \(.conclusion)"') || return 1
 	while read -r id conclusion; do
 		case $conclusion in
 		success) ;;

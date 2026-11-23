@@ -31,8 +31,11 @@ fi
 # dispatches is created before the run completes, but give it time to show up.
 sleep "${SETTLE:-60}"
 
+# A run naming its packages runs beside the chain rather than as part of it, so it isn't
+# the chain going.
 going=$(gh run list --repo "$GITHUB_REPOSITORY" --workflow ar2.yaml --limit 20 \
-	--json status --jq '[.[] | select(.status != "completed")] | length')
+	--json status,displayTitle \
+	--jq '[.[] | select(.displayTitle | contains(" named ") | not) | select(.status != "completed")] | length')
 if [ "$going" != 0 ]; then
 	echo "an ar2 run is already queued or running" >&2
 	exit 0
