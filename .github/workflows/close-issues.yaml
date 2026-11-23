@@ -16,7 +16,14 @@ name: close-issues
 # GITHUB_TOKEN's budget, which is the whole repository's. While the chain of ar2 runs merges
 # a version every few seconds, a run on each push meant a run all the time: three of them
 # took most of 800 calls in two minutes. An issue closing within the hour is soon enough.
-# The odd minute keeps off the top of the hour and off index and update-versions.
+#
+# Hourly by a chain rather than by the schedule alone: GitHub ran the hourly cron every five
+# to eight hours (03:56 and then nothing until after 09:00 on 2026-11-23), and fixed issues
+# stayed open that long. Each run waits out the hour from its start in the next job and then
+# dispatches the next run. The schedule stays as the fallback that starts a chain again if
+# one stops: a scheduled run that comes while a run is going waits as the pending run, and the
+# next job leaves the dispatch to it, so the two don't make two chains. To stop the chain,
+# disable this workflow. The odd minute keeps off the top of the hour and off index and update-versions.
 on:
   schedule:
     - cron: "37 * * * *"
@@ -63,3 +70,41 @@ jobs:
           gh api rate_limit --jq '"api-budget end core=\(.resources.core.used)/\(.resources.core.limit) graphql=\(.resources.graphql.used)/\(.resources.graphql.limit) reset=\(.resources.core.reset)"'
         env:
           GH_TOKEN: ${{ github.token }}
+  # Waits out the hour from the run's start and dispatches the next run. It runs after a
+  # failure, a timeout or a cancellation of close-issues alike, so that one bad run doesn't
+  # leave the issues to the schedule.
+  next:
+    needs: close-issues
+    if: always()
+    runs-on: ubuntu-26.04
+    timeout-minutes: 70
+    permissions:
+      # Reading this run's start and the runs waiting, and dispatching the next run.
+      actions: write
+    steps:
+      - name: wait out the hour and dispatch the next run
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RUN_ID: ${{ github.run_id }}
+        run: |
+          set -euo pipefail
+          started=$(gh api "repos/$GITHUB_REPOSITORY/actions/runs/$RUN_ID" --jq .run_started_at)
+          elapsed=$(($(date +%s) - $(date -d "$started" +%s)))
+          if [ "$elapsed" -lt 3600 ]; then
+            sleep $((3600 - elapsed))
+          fi
+          state=$(gh api "repos/$GITHUB_REPOSITORY/actions/workflows/close-issues.yaml" --jq .state)
+          if [[ $state == disabled* ]]; then
+            echo "close-issues is disabled; the chain stops here" >&2
+            exit 0
+          fi
+          # A run already waiting -- one dispatched by hand or by the schedule -- goes next and
+          # dispatches its own successor. Dispatching here would cancel it.
+          waiting=$(gh run list --repo "$GITHUB_REPOSITORY" --workflow close-issues.yaml \
+            --json status \
+            --jq '[.[] | select(.status == "queued" or .status == "pending" or .status == "waiting" or .status == "requested")] | length')
+          if [ "$waiting" != 0 ]; then
+            echo "a close-issues run is already waiting; it goes next" >&2
+            exit 0
+          fi
+          gh workflow run close-issues.yaml --repo "$GITHUB_REPOSITORY"
