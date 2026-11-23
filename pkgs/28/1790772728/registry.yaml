@@ -25,3 +25,6 @@ version_overrides:
       files:
         - name: container
           src: Payload/bin/container
+# From 0.9.0 the installer is published signed and unsigned, and the two tie. The signed one
+# is what Apple's README points at.
+all_assets_filter: not (Asset contains "-unsigned")
