@@ -1,0 +1,68 @@
+{
+  "assets": [
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "static",
+      "type": "http",
+      "repo_owner": "kubernetes",
+      "repo_name": "kubernetes",
+      "repo_id": 20580498,
+      "asset": "kube-scheduler",
+      "url": "https://dl.k8s.io/v1.34.10/bin/linux/amd64/kube-scheduler",
+      "format": "raw",
+      "checksum": "bbb86cdc7c0999d1cf6e1bd5fec539b0c80e594ce1b726b98b453f1b825f4d32",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "kube-scheduler",
+          "src": "kube-scheduler"
+        }
+      ],
+      "cosign": {
+        "signature": {
+          "type": "http",
+          "url": "https://dl.k8s.io/v1.34.10/bin/linux/amd64/kube-scheduler.sig"
+        },
+        "certificate": {
+          "type": "http",
+          "url": "https://dl.k8s.io/v1.34.10/bin/linux/amd64/kube-scheduler.cert"
+        },
+        "certificate_identity": "krel-staging@k8s-releng-prod.iam.gserviceaccount.com",
+        "certificate_oidc_issuer": "https://accounts.google.com"
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "linked_libc": "static",
+      "type": "http",
+      "repo_owner": "kubernetes",
+      "repo_name": "kubernetes",
+      "repo_id": 20580498,
+      "asset": "kube-scheduler",
+      "url": "https://dl.k8s.io/v1.34.10/bin/linux/arm64/kube-scheduler",
+      "format": "raw",
+      "checksum": "9b18db732f4a7eae3c488fb321f7c848a356e6a7ebd3b2dca1d236fe2788584e",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "kube-scheduler",
+          "src": "kube-scheduler"
+        }
+      ],
+      "cosign": {
+        "signature": {
+          "type": "http",
+          "url": "https://dl.k8s.io/v1.34.10/bin/linux/arm64/kube-scheduler.sig"
+        },
+        "certificate": {
+          "type": "http",
+          "url": "https://dl.k8s.io/v1.34.10/bin/linux/arm64/kube-scheduler.cert"
+        },
+        "certificate_identity": "krel-staging@k8s-releng-prod.iam.gserviceaccount.com",
+        "certificate_oidc_issuer": "https://accounts.google.com"
+      }
+    }
+  ]
+}
