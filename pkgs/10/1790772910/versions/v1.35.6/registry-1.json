@@ -1,0 +1,131 @@
+{
+  "assets": [
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "static",
+      "type": "http",
+      "repo_owner": "kubernetes",
+      "repo_name": "kubernetes",
+      "repo_id": 20580498,
+      "asset": "kube-log-runner",
+      "url": "https://dl.k8s.io/v1.35.6/bin/linux/amd64/kube-log-runner",
+      "format": "raw",
+      "checksum": "25a88a6440c6074aa9712940aa3d98062b0f9a387d594da2fdc42566798f7120",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "kube-log-runner",
+          "src": "kube-log-runner"
+        }
+      ],
+      "cosign": {
+        "signature": {
+          "type": "http",
+          "url": "https://dl.k8s.io/v1.35.6/bin/linux/amd64/kube-log-runner.sig"
+        },
+        "certificate": {
+          "type": "http",
+          "url": "https://dl.k8s.io/v1.35.6/bin/linux/amd64/kube-log-runner.cert"
+        },
+        "certificate_identity": "krel-staging@k8s-releng-prod.iam.gserviceaccount.com",
+        "certificate_oidc_issuer": "https://accounts.google.com"
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "linked_libc": "static",
+      "type": "http",
+      "repo_owner": "kubernetes",
+      "repo_name": "kubernetes",
+      "repo_id": 20580498,
+      "asset": "kube-log-runner",
+      "url": "https://dl.k8s.io/v1.35.6/bin/linux/arm64/kube-log-runner",
+      "format": "raw",
+      "checksum": "b7e4005beb6e7bc888d2f7208d1c77abfc4df55dcd98f2acd7f92bd49aec182a",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "kube-log-runner",
+          "src": "kube-log-runner"
+        }
+      ],
+      "cosign": {
+        "signature": {
+          "type": "http",
+          "url": "https://dl.k8s.io/v1.35.6/bin/linux/arm64/kube-log-runner.sig"
+        },
+        "certificate": {
+          "type": "http",
+          "url": "https://dl.k8s.io/v1.35.6/bin/linux/arm64/kube-log-runner.cert"
+        },
+        "certificate_identity": "krel-staging@k8s-releng-prod.iam.gserviceaccount.com",
+        "certificate_oidc_issuer": "https://accounts.google.com"
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "http",
+      "repo_owner": "kubernetes",
+      "repo_name": "kubernetes",
+      "repo_id": 20580498,
+      "asset": "kube-log-runner.exe",
+      "url": "https://dl.k8s.io/v1.35.6/bin/windows/amd64/kube-log-runner.exe",
+      "format": "raw",
+      "checksum": "f7cd18dc1ea5cba23338eca57a7c471b2636a253c4aef5f0cb2cb0d20472d41e",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "kube-log-runner",
+          "src": "kube-log-runner.exe"
+        }
+      ],
+      "cosign": {
+        "signature": {
+          "type": "http",
+          "url": "https://dl.k8s.io/v1.35.6/bin/windows/amd64/kube-log-runner.exe.sig"
+        },
+        "certificate": {
+          "type": "http",
+          "url": "https://dl.k8s.io/v1.35.6/bin/windows/amd64/kube-log-runner.exe.cert"
+        },
+        "certificate_identity": "krel-staging@k8s-releng-prod.iam.gserviceaccount.com",
+        "certificate_oidc_issuer": "https://accounts.google.com"
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "windows_arm_emulation": true,
+      "type": "http",
+      "repo_owner": "kubernetes",
+      "repo_name": "kubernetes",
+      "repo_id": 20580498,
+      "asset": "kube-log-runner.exe",
+      "url": "https://dl.k8s.io/v1.35.6/bin/windows/amd64/kube-log-runner.exe",
+      "format": "raw",
+      "checksum": "f7cd18dc1ea5cba23338eca57a7c471b2636a253c4aef5f0cb2cb0d20472d41e",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "kube-log-runner",
+          "src": "kube-log-runner.exe"
+        }
+      ],
+      "cosign": {
+        "signature": {
+          "type": "http",
+          "url": "https://dl.k8s.io/v1.35.6/bin/windows/amd64/kube-log-runner.exe.sig"
+        },
+        "certificate": {
+          "type": "http",
+          "url": "https://dl.k8s.io/v1.35.6/bin/windows/amd64/kube-log-runner.exe.cert"
+        },
+        "certificate_identity": "krel-staging@k8s-releng-prod.iam.gserviceaccount.com",
+        "certificate_oidc_issuer": "https://accounts.google.com"
+      }
+    }
+  ]
+}
