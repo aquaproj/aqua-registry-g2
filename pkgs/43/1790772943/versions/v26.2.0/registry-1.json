@@ -1,0 +1,231 @@
+{
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "http",
+      "repo_owner": "nodejs",
+      "repo_name": "node",
+      "repo_id": 27193779,
+      "asset": "node-v26.2.0-darwin-x64.tar.gz",
+      "url": "https://nodejs.org/dist/v26.2.0/node-v26.2.0-darwin-x64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "26a5480d0dd952be86beae83e6636dacd7a3ffd17ef51d0b26bc9b260f2b42e9",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "node",
+          "src": "node-v26.2.0-darwin-x64/bin/node"
+        },
+        {
+          "name": "npm",
+          "src": "node-v26.2.0-darwin-x64/bin/npm"
+        },
+        {
+          "name": "npx",
+          "src": "node-v26.2.0-darwin-x64/bin/npx"
+        }
+      ]
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "http",
+      "repo_owner": "nodejs",
+      "repo_name": "node",
+      "repo_id": 27193779,
+      "asset": "node-v26.2.0-darwin-arm64.tar.gz",
+      "url": "https://nodejs.org/dist/v26.2.0/node-v26.2.0-darwin-arm64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "2d8575b6a749c0bc66cc6ecd22a952f7d9bbf3b0ea76fcb0ed3ce858018afff7",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "node",
+          "src": "node-v26.2.0-darwin-arm64/bin/node"
+        },
+        {
+          "name": "npm",
+          "src": "node-v26.2.0-darwin-arm64/bin/npm"
+        },
+        {
+          "name": "npx",
+          "src": "node-v26.2.0-darwin-arm64/bin/npx"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "glibc",
+      "type": "http",
+      "repo_owner": "nodejs",
+      "repo_name": "node",
+      "repo_id": 27193779,
+      "asset": "node-v26.2.0-linux-x64.tar.gz",
+      "url": "https://nodejs.org/dist/v26.2.0/node-v26.2.0-linux-x64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "8e5b4b969bb2414aca2ff84d2b99608511aedca32bf8a8427e6187dbdd703bbe",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "node",
+          "src": "node-v26.2.0-linux-x64/bin/node"
+        },
+        {
+          "name": "npm",
+          "src": "node-v26.2.0-linux-x64/bin/npm"
+        },
+        {
+          "name": "npx",
+          "src": "node-v26.2.0-linux-x64/bin/npx"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "variants": {
+        "libc": "musl"
+      },
+      "linked_libc": "musl",
+      "type": "http",
+      "repo_owner": "nodejs",
+      "repo_name": "node",
+      "repo_id": 27193779,
+      "asset": "node-v26.2.0-linux-x64-musl.tar.gz",
+      "url": "https://unofficial-builds.nodejs.org/download/release/v26.2.0/node-v26.2.0-linux-x64-musl.tar.gz",
+      "format": "tar.gz",
+      "checksum": "9efc99332e1cf70eeb85618398467c9d339bc208be65115380c611dda4c28407",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "node",
+          "src": "node-v26.2.0-linux-x64-musl/bin/node"
+        },
+        {
+          "name": "npm",
+          "src": "node-v26.2.0-linux-x64-musl/bin/npm"
+        },
+        {
+          "name": "npx",
+          "src": "node-v26.2.0-linux-x64-musl/bin/npx"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "linked_libc": "glibc",
+      "type": "http",
+      "repo_owner": "nodejs",
+      "repo_name": "node",
+      "repo_id": 27193779,
+      "asset": "node-v26.2.0-linux-arm64.tar.gz",
+      "url": "https://nodejs.org/dist/v26.2.0/node-v26.2.0-linux-arm64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "bf52461d25017479cdc549642c4e7a2303ac5c5395d7c3d026d5d8b3fa283c05",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "node",
+          "src": "node-v26.2.0-linux-arm64/bin/node"
+        },
+        {
+          "name": "npm",
+          "src": "node-v26.2.0-linux-arm64/bin/npm"
+        },
+        {
+          "name": "npx",
+          "src": "node-v26.2.0-linux-arm64/bin/npx"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "variants": {
+        "libc": "musl"
+      },
+      "linked_libc": "musl",
+      "type": "http",
+      "repo_owner": "nodejs",
+      "repo_name": "node",
+      "repo_id": 27193779,
+      "asset": "node-v26.2.0-linux-arm64-musl.tar.gz",
+      "url": "https://unofficial-builds.nodejs.org/download/release/v26.2.0/node-v26.2.0-linux-arm64-musl.tar.gz",
+      "format": "tar.gz",
+      "checksum": "4593d822012fe3238814721909408c66f2a82955e0141457643a7a4c84e132fd",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "node",
+          "src": "node-v26.2.0-linux-arm64-musl/bin/node"
+        },
+        {
+          "name": "npm",
+          "src": "node-v26.2.0-linux-arm64-musl/bin/npm"
+        },
+        {
+          "name": "npx",
+          "src": "node-v26.2.0-linux-arm64-musl/bin/npx"
+        }
+      ]
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "http",
+      "repo_owner": "nodejs",
+      "repo_name": "node",
+      "repo_id": 27193779,
+      "asset": "node-v26.2.0-win-x64.zip",
+      "url": "https://nodejs.org/dist/v26.2.0/node-v26.2.0-win-x64.zip",
+      "format": "zip",
+      "checksum": "371071a4f7e2c8a5dd280730049c685911feecc59f50ebc488d675dc1087c69c",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "node",
+          "src": "node-v26.2.0-win-x64/node.exe"
+        },
+        {
+          "name": "npm",
+          "src": "node-v26.2.0-win-x64/npm.cmd"
+        },
+        {
+          "name": "npx",
+          "src": "node-v26.2.0-win-x64/npx.cmd"
+        }
+      ]
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "windows_arm_emulation": true,
+      "type": "http",
+      "repo_owner": "nodejs",
+      "repo_name": "node",
+      "repo_id": 27193779,
+      "asset": "node-v26.2.0-win-x64.zip",
+      "url": "https://nodejs.org/dist/v26.2.0/node-v26.2.0-win-x64.zip",
+      "format": "zip",
+      "checksum": "371071a4f7e2c8a5dd280730049c685911feecc59f50ebc488d675dc1087c69c",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "node",
+          "src": "node-v26.2.0-win-x64/node.exe"
+        },
+        {
+          "name": "npm",
+          "src": "node-v26.2.0-win-x64/npm.cmd"
+        },
+        {
+          "name": "npx",
+          "src": "node-v26.2.0-win-x64/npx.cmd"
+        }
+      ]
+    }
+  ]
+}
