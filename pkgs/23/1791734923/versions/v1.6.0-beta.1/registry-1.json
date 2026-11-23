@@ -1,0 +1,188 @@
+{
+  "published_at": "2023-08-05T23:19:14Z",
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "kubepug",
+      "repo_name": "kubepug",
+      "repo_id": 232220881,
+      "asset": "kubepug_darwin_amd64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "f3d9b6f5b9d49437f72efd312a212285d18ea682096677ba697a7ad161958e7a",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "kubepug",
+          "src": "kubepug"
+        }
+      ],
+      "cosign": {
+        "signature": {
+          "type": "github_release",
+          "asset": "kubepug_darwin_amd64.tar.gz.sig"
+        },
+        "certificate": {
+          "type": "github_release",
+          "asset": "kubepug_darwin_amd64.tar.gz.pem"
+        },
+        "certificate_identity_regexp": "^https://github[.]com/(rikatz|kubepug)/kubepug/[.]github/workflows/release[.]yaml@refs/tags/v1.6.0-beta.1$",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "kubepug",
+      "repo_name": "kubepug",
+      "repo_id": 232220881,
+      "asset": "kubepug_darwin_arm64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "7b94eea76cee3874ac6976d99a875f64000503baf7cbb136a2e9a32d1c4f4a85",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "kubepug",
+          "src": "kubepug"
+        }
+      ],
+      "cosign": {
+        "signature": {
+          "type": "github_release",
+          "asset": "kubepug_darwin_arm64.tar.gz.sig"
+        },
+        "certificate": {
+          "type": "github_release",
+          "asset": "kubepug_darwin_arm64.tar.gz.pem"
+        },
+        "certificate_identity_regexp": "^https://github[.]com/(rikatz|kubepug)/kubepug/[.]github/workflows/release[.]yaml@refs/tags/v1.6.0-beta.1$",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "kubepug",
+      "repo_name": "kubepug",
+      "repo_id": 232220881,
+      "asset": "kubepug_linux_amd64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "7742228fadc84d02c81806c81a76ebf5e7ff61fb897c72dbd9f6f4cfef357655",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "kubepug",
+          "src": "kubepug"
+        }
+      ],
+      "cosign": {
+        "signature": {
+          "type": "github_release",
+          "asset": "kubepug_linux_amd64.tar.gz.sig"
+        },
+        "certificate": {
+          "type": "github_release",
+          "asset": "kubepug_linux_amd64.tar.gz.pem"
+        },
+        "certificate_identity_regexp": "^https://github[.]com/(rikatz|kubepug)/kubepug/[.]github/workflows/release[.]yaml@refs/tags/v1.6.0-beta.1$",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "kubepug",
+      "repo_name": "kubepug",
+      "repo_id": 232220881,
+      "asset": "kubepug_linux_arm64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "1004aeb7b6335e29f3ca24af562687ffffe8a711b9bf3d6a831f231b7830e87e",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "kubepug",
+          "src": "kubepug"
+        }
+      ],
+      "cosign": {
+        "signature": {
+          "type": "github_release",
+          "asset": "kubepug_linux_arm64.tar.gz.sig"
+        },
+        "certificate": {
+          "type": "github_release",
+          "asset": "kubepug_linux_arm64.tar.gz.pem"
+        },
+        "certificate_identity_regexp": "^https://github[.]com/(rikatz|kubepug)/kubepug/[.]github/workflows/release[.]yaml@refs/tags/v1.6.0-beta.1$",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "kubepug",
+      "repo_name": "kubepug",
+      "repo_id": 232220881,
+      "asset": "kubepug_windows_amd64.zip",
+      "format": "zip",
+      "checksum": "94a316491879e77df371113671ffade1f667d0bd9dc42696f4cd8bf466cdba3c",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "kubepug",
+          "src": "kubepug.exe"
+        }
+      ],
+      "cosign": {
+        "signature": {
+          "type": "github_release",
+          "asset": "kubepug_windows_amd64.zip.sig"
+        },
+        "certificate": {
+          "type": "github_release",
+          "asset": "kubepug_windows_amd64.zip.pem"
+        },
+        "certificate_identity_regexp": "^https://github[.]com/(rikatz|kubepug)/kubepug/[.]github/workflows/release[.]yaml@refs/tags/v1.6.0-beta.1$",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "windows_arm_emulation": true,
+      "type": "github_release",
+      "repo_owner": "kubepug",
+      "repo_name": "kubepug",
+      "repo_id": 232220881,
+      "asset": "kubepug_windows_amd64.zip",
+      "format": "zip",
+      "checksum": "94a316491879e77df371113671ffade1f667d0bd9dc42696f4cd8bf466cdba3c",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "kubepug",
+          "src": "kubepug.exe"
+        }
+      ],
+      "cosign": {
+        "signature": {
+          "type": "github_release",
+          "asset": "kubepug_windows_amd64.zip.sig"
+        },
+        "certificate": {
+          "type": "github_release",
+          "asset": "kubepug_windows_amd64.zip.pem"
+        },
+        "certificate_identity_regexp": "^https://github[.]com/(rikatz|kubepug)/kubepug/[.]github/workflows/release[.]yaml@refs/tags/v1.6.0-beta.1$",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    }
+  ]
+}
