@@ -42,6 +42,26 @@ wait_out_the_floor() {
 	fi
 }
 
+# waiting says another ar2 run is queued or pending: one a person dispatched while this run
+# was going, such as one naming packages to generate now.
+#
+# The concurrency group keeps one run pending and cancels it when another is dispatched, so
+# dispatching the successor here would cancel that run before it started -- run
+# 45135575942, naming eight packages, went that way. Leaving it pending lets it run next.
+# keep-ar2-going.yaml starts the chain again once it ends, as it does after any run dispatched
+# by hand, and a run dispatched with a chain of its own carries on by itself.
+#
+# A lookup that fails answers no, so the chain goes on as it did before.
+waiting() {
+	local n
+	n=$(gh run list \
+		--repo "$GITHUB_REPOSITORY" \
+		--workflow ar2.yaml \
+		--json status \
+		--jq '[.[] | select(.status == "queued" or .status == "pending" or .status == "waiting" or .status == "requested")] | length') || return 1
+	[ "$n" != 0 ]
+}
+
 # give_up says on the monitoring issue that nothing is generating any more.
 give_up() {
 	echo "::warning::five runs in a row failed or were cancelled; the chain stops here"
@@ -66,6 +86,10 @@ main() {
 		return
 	fi
 	wait_out_the_floor
+	if waiting; then
+		echo "an ar2 run is already waiting to start; it goes first, and the chain is started again after it" >&2
+		return
+	fi
 	gh workflow run ar2.yaml \
 		--repo "$GITHUB_REPOSITORY" \
 		--field limit="$LIMIT" \
