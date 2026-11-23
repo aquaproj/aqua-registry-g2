@@ -1,0 +1,123 @@
+{
+  "published_at": "2022-12-06T15:48:55Z",
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "stackrox",
+      "repo_name": "kube-linter",
+      "repo_id": 287336275,
+      "asset": "kube-linter-darwin",
+      "format": "raw",
+      "checksum": "fc38b57a8ea367826e58e6f2d45890502eb003005fbe2453eea0a79295fa2a59",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "kube-linter",
+          "src": "kube-linter-darwin"
+        }
+      ],
+      "cosign": {
+        "enabled": false
+      }
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "stackrox",
+      "repo_name": "kube-linter",
+      "repo_id": 287336275,
+      "asset": "kube-linter-darwin",
+      "format": "raw",
+      "checksum": "fc38b57a8ea367826e58e6f2d45890502eb003005fbe2453eea0a79295fa2a59",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "kube-linter",
+          "src": "kube-linter-darwin"
+        }
+      ],
+      "cosign": {
+        "enabled": false
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "stackrox",
+      "repo_name": "kube-linter",
+      "repo_id": 287336275,
+      "asset": "kube-linter-linux",
+      "format": "raw",
+      "checksum": "427a33c7de292f884bdb2c8911dec96c9d4fa7cc5fda4fa61bc5c3387bd4e1c3",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "kube-linter",
+          "src": "kube-linter-linux"
+        }
+      ],
+      "cosign": {
+        "opts": [
+          "--insecure-ignore-tlog"
+        ],
+        "signature": {
+          "type": "github_release",
+          "repo_owner": "stackrox",
+          "repo_name": "kube-linter",
+          "asset": "kube-linter-linux.sig"
+        },
+        "key": {
+          "type": "http",
+          "url": "https://raw.githubusercontent.com/stackrox/kube-linter/refs/tags/0.5.1/kubelinter-cosign.pub"
+        }
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "stackrox",
+      "repo_name": "kube-linter",
+      "repo_id": 287336275,
+      "asset": "kube-linter.exe",
+      "format": "raw",
+      "checksum": "1214f41375494882588ace70ce61f9ebfc08e2cb490ec8559a117157ae51e750",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "kube-linter",
+          "src": "kube-linter.exe"
+        }
+      ],
+      "cosign": {
+        "enabled": false
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "stackrox",
+      "repo_name": "kube-linter",
+      "repo_id": 287336275,
+      "asset": "kube-linter.exe",
+      "format": "raw",
+      "checksum": "1214f41375494882588ace70ce61f9ebfc08e2cb490ec8559a117157ae51e750",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "kube-linter",
+          "src": "kube-linter.exe"
+        }
+      ],
+      "cosign": {
+        "enabled": false
+      }
+    }
+  ]
+}
