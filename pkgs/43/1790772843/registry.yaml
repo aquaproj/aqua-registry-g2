@@ -106,3 +106,9 @@ version_overrides:
 all_assets_filter: |
   let words = ["server", "headless", "mono", "android", "editor", "templates", "export", "32"];
   not any(words, {Asset matches #})
+# Up to 3.x the Linux amd64 build is Godot_v<version>_x11.64.zip, and x11 isn't a name of an
+# OS the asset names are read with. 4.x names it linux.
+asset_rules:
+  - envs:
+      - linux/amd64
+    filter: Asset matches "_x11[.]64[.]zip$"
