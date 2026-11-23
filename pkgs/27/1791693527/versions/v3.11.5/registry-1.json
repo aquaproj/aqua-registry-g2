@@ -3,6 +3,24 @@
   "assets": [
     {
       "os": "darwin",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "hairyhenderson",
+      "repo_name": "gomplate",
+      "repo_id": 50242144,
+      "asset": "gomplate_darwin-amd64",
+      "format": "raw",
+      "checksum": "04428c9b13656c806c5be679c0e0e80b83eb8f9eef3c6cd0d4fe24207d4752ba",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "gomplate",
+          "src": "gomplate_darwin-amd64"
+        }
+      ]
+    },
+    {
+      "os": "darwin",
       "arch": "arm64",
       "type": "github_release",
       "repo_owner": "hairyhenderson",
@@ -16,6 +34,44 @@
         {
           "name": "gomplate",
           "src": "gomplate_darwin-arm64"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "hairyhenderson",
+      "repo_name": "gomplate",
+      "repo_id": 50242144,
+      "asset": "gomplate_linux-amd64",
+      "format": "raw",
+      "checksum": "16f6a01a0ff22cae1302980c42ce4f98ca20f8c55443ce5a8e62e37fc23487b3",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "gomplate",
+          "src": "gomplate_linux-amd64"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "hairyhenderson",
+      "repo_name": "gomplate",
+      "repo_id": 50242144,
+      "asset": "gomplate_linux-arm64",
+      "format": "raw",
+      "checksum": "fd980f9d233902e50f3f03f10ea65f36a2705385358a87aa18b19fb7cdf54c1d",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "gomplate",
+          "src": "gomplate_linux-arm64"
         }
       ]
     },
