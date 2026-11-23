@@ -4,3 +4,6 @@ repo_owner: acsandmann
 repo_name: rift
 repo_id: 1025929171
 description: a tiling window manager for macos
+# rift-app-universal-macos-* holds Rift.app; rift-universal-macos-* holds the rift
+# command itself, which is what the package is.
+all_assets_filter: not (Asset startsWith "rift-app-")

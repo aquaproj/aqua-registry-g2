@@ -28,4 +28,9 @@ version_overrides:
         files:
           - name: hugo
             src: Payload/hugo
-all_assets_filter: (Asset matches "extended") or (Asset matches "checksum")
+# hugo_extended_withdeploy_* is another build, with the deploy command, and ties with it.
+all_assets_filter: ((Asset matches "extended") and not (Asset contains "withdeploy")) or (Asset matches "checksum")
+# From v0.103.0 the Linux amd64 build is published twice, as _Linux-64bit and _linux-amd64.
+asset_filters:
+  - version_constraint: semver(">= 0.103.0")
+    all_assets_filter: ((Asset matches "extended") and not (Asset contains "withdeploy") and not (Asset contains "_Linux-64bit")) or (Asset matches "checksum")

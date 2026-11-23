@@ -9,3 +9,5 @@ overrides:
     files:
       - name: gomplate
         src: gomplate_windows-amd64
+# Each build has a -slim variant beside it, which ties with it.
+all_assets_filter: not (Asset contains "-slim")

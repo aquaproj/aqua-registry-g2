@@ -4,3 +4,5 @@ repo_owner: containers
 repo_name: kubernetes-mcp-server
 repo_id: 930678258
 description: Model Context Protocol (MCP) server for Kubernetes and OpenShift
+# The .mcpb files are MCP bundles for desktop clients, and tie with the binaries.
+all_assets_filter: not (Asset endsWith ".mcpb")
