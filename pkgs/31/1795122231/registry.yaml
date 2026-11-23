@@ -25,3 +25,6 @@ version_overrides:
         src: '{{.AssetWithoutExt}}/bin/nvim'
     supported_envs:
       - linux/amd64
+# nvim-linux-x86_64-puc.tar.gz is a build against PUC Lua, which ties with the ordinary
+# LuaJIT one.
+all_assets_filter: not (Asset contains "-puc")

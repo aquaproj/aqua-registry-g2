@@ -19,3 +19,5 @@ version_overrides:
       - darwin
       - windows
       - amd64
+# binnacle-linux_amd64-lxc.tar.gz is a build for LXC that ties with the ordinary one.
+all_assets_filter: not (Asset contains "-lxc")
