@@ -34,7 +34,7 @@ jobs:
             ~/.local/share/aquaproj-aqua/pkgs/github_release/github.com/aquaproj/ar2
             ~/AppData/Local/aquaproj-aqua/pkgs/github_release/github.com/aquaproj/ar2
           key: ar2-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles('aqua/aqua.yaml', 'aqua/aqua-checksums.json') }}
-      - uses: aquaproj/aqua-installer@611554c6f0137ba41c8dd15aca8bee82504ea461 # v4.1.1
+      - uses: aquaproj/aqua-installer@b8be739961814ee66b9e0d505f4d5de0d2eff047 # v4.1.2
         with:
           aqua_version: v2.67.0-lock.0
           packages: ar2
@@ -71,7 +71,7 @@ jobs:
           persist-credentials: false
           sparse-checkout: |
             aqua
-      - uses: aquaproj/aqua-installer@611554c6f0137ba41c8dd15aca8bee82504ea461 # v4.1.1
+      - uses: aquaproj/aqua-installer@b8be739961814ee66b9e0d505f4d5de0d2eff047 # v4.1.2
         with:
           aqua_version: v2.67.0-lock.0
       # Installing for real, not linking: it is the checksums that are being checked.
@@ -115,7 +115,7 @@ jobs:
             .github
             aqua
             skills
-      - uses: aquaproj/aqua-installer@611554c6f0137ba41c8dd15aca8bee82504ea461 # v4.1.1
+      - uses: aquaproj/aqua-installer@b8be739961814ee66b9e0d505f4d5de0d2eff047 # v4.1.2
         with:
           aqua_version: v2.67.0-lock.0
           aqua_opts: -l -a
