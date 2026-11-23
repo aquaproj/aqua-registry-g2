@@ -6,6 +6,12 @@
 # a server, or a connection that broke. Run 42568811742 is the kind meant -- aqua-installer
 # got a 504 from github.com six times running, and the same run passed when re-run.
 #
+# A 403 is read as transient only where aqua-installer got it downloading aqua's own release
+# asset, which is public: run 45144881274's skills job got it six times over 31 seconds while
+# the run's other jobs downloaded the same asset, so it is GitHub refusing that machine for a
+# while rather than anything the job did. A 403 anywhere else may well be a permission the job
+# lacks, and is left alone.
+#
 # A cancelled job is read as transient when GitHub cancelled it for the machine rather than
 # for the job: it hit timeout-minutes, or no runner took it. Run 44711883319's darwin job is
 # the first kind -- one step recorded and nothing logged after it for thirty minutes, the
@@ -19,6 +25,8 @@ set -euo pipefail
 # What GitHub annotates a job with when it cancels it for the machine.
 readonly MACHINE='exceeded the maximum execution time|not acquired by Runner'
 readonly TRANSIENT='returned error: 5[0-9]{2}|HTTP[/ 0-9.]* 5[0-9]{2}|status code:? 5[0-9]{2}|50[234] (Bad Gateway|Service Unavailable|Gateway Time-?out)|connection reset by peer|TLS handshake timeout|i/o timeout'
+readonly AQUA_DOWNLOAD='Downloading https://github\.com/aquaproj/aqua/releases/download/'
+readonly FORBIDDEN='returned error: 403'
 
 jobs=$(gh run view "$RUN_ID" --attempt "$RUN_ATTEMPT" --json jobs \
 	--jq '.jobs[] | select(.conclusion == "failure" or .conclusion == "cancelled") | select(.name | startswith("status-check") | not) | "\(.databaseId) \(.conclusion)"')
@@ -36,10 +44,15 @@ while read -r job conclusion; do
 		fi
 		continue
 	fi
-	if ! gh run view "$RUN_ID" --job "$job" --log-failed | grep -Eiq -- "$TRANSIENT"; then
-		echo "job $job of run $RUN_ID failed for a reason that doesn't look transient; not re-running" >&2
-		exit 0
+	log=$(gh run view "$RUN_ID" --job "$job" --log-failed)
+	if grep -Eiq -- "$TRANSIENT" <<<"$log"; then
+		continue
 	fi
+	if grep -Eq -- "$AQUA_DOWNLOAD" <<<"$log" && grep -Eq -- "$FORBIDDEN" <<<"$log"; then
+		continue
+	fi
+	echo "job $job of run $RUN_ID failed for a reason that doesn't look transient; not re-running" >&2
+	exit 0
 done <<<"$jobs"
 
 # A moment's wait, so a server that was down a moment ago has had the moment.
