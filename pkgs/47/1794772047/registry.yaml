@@ -8,8 +8,21 @@ description: 'Go Coverage in your terminal: a tool for exploring Go Coverage rep
 version_overrides:
   # checksums.txt of v0.5.0 and v0.5.1 is signed with a certificate that carries no SCT,
   # which today's cosign requires: certificate does not include required embedded SCT.
+  # --insecure-ignore-sct leaves out that check alone; the signer is still checked.
   - version_constraint: Version in ["v0.5.0", "v0.5.1"]
     checksum:
+      type: github_release
+      asset: checksums.txt
+      algorithm: sha256
       cosign:
-        enabled: false
+        opts:
+          - --certificate-identity-regexp
+          - ^https://github\.com/orlangure/gocovsh/\.github/workflows/.+\.ya?ml@refs/tags/
+          - --certificate-oidc-issuer
+          - https://token.actions.githubusercontent.com
+          - --signature
+          - https://github.com/orlangure/gocovsh/releases/download/{{.Version}}/checksums.txt.sig
+          - --certificate
+          - https://github.com/orlangure/gocovsh/releases/download/{{.Version}}/checksums.txt.pem
+          - --insecure-ignore-sct
   - version_constraint: "true"

@@ -12,6 +12,41 @@ version_overrides:
       - darwin
       - windows
       - amd64
+  # The signatures of 0.5.0, 0.5.1 and 0.6.0 aren't in the transparency log. They are made
+  # with the project's key, which is still checked; --insecure-ignore-tlog leaves out the
+  # log alone.
+  - version_constraint: Version in ["0.5.0", "0.6.0"]
+    cosign:
+      opts:
+        - --key
+        - https://raw.githubusercontent.com/stackrox/kube-linter/refs/tags/{{.Version}}/kubelinter-cosign.pub
+        - --signature
+        - https://github.com/stackrox/kube-linter/releases/download/{{.Version}}/{{.Asset}}.sig
+        - --insecure-ignore-tlog
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
+  # 0.5.1 signs only its Linux build.
+  - version_constraint: Version == "0.5.1"
+    cosign:
+      opts:
+        - --key
+        - https://raw.githubusercontent.com/stackrox/kube-linter/refs/tags/{{.Version}}/kubelinter-cosign.pub
+        - --signature
+        - https://github.com/stackrox/kube-linter/releases/download/{{.Version}}/{{.Asset}}.sig
+        - --insecure-ignore-tlog
+    overrides:
+      - goos: darwin
+        cosign:
+          enabled: false
+      - goos: windows
+        cosign:
+          enabled: false
+    supported_envs:
+      - darwin
+      - windows
+      - amd64
   - version_constraint: semver("<= 0.6.7")
     cosign:
       opts:
