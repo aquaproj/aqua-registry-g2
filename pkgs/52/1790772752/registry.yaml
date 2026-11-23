@@ -7,3 +7,7 @@ description: Bitwarden CLI
 version_prefix: cli-v
 files:
   - name: bw
+# From cli-v2026.11.0 each build is published twice: bw-bit-*, with the code under the
+# Bitwarden License, and bw-oss-*, built from the GPL code alone. aqua-registry installs
+# bw-bit, and so does this.
+all_assets_filter: not (Asset startsWith "bw-oss-")
