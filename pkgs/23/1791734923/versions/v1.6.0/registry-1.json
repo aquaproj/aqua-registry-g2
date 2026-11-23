@@ -1,0 +1,188 @@
+{
+  "published_at": "2023-08-06T23:45:50Z",
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "kubepug",
+      "repo_name": "kubepug",
+      "repo_id": 232220881,
+      "asset": "kubepug_darwin_amd64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "dee5c6dc6c1cce1559eb9d6a8f12b609f684d548005ff33fd080408df7675f64",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "kubepug",
+          "src": "kubepug"
+        }
+      ],
+      "cosign": {
+        "signature": {
+          "type": "github_release",
+          "asset": "kubepug_darwin_amd64.tar.gz.sig"
+        },
+        "certificate": {
+          "type": "github_release",
+          "asset": "kubepug_darwin_amd64.tar.gz.pem"
+        },
+        "certificate_identity_regexp": "^https://github[.]com/(rikatz|kubepug)/kubepug/[.]github/workflows/release[.]yaml@refs/tags/v1.6.0$",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "kubepug",
+      "repo_name": "kubepug",
+      "repo_id": 232220881,
+      "asset": "kubepug_darwin_arm64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "79fa99387c70aedfe7f6abac9167317d89e263262782c3a71e064a98b8854c03",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "kubepug",
+          "src": "kubepug"
+        }
+      ],
+      "cosign": {
+        "signature": {
+          "type": "github_release",
+          "asset": "kubepug_darwin_arm64.tar.gz.sig"
+        },
+        "certificate": {
+          "type": "github_release",
+          "asset": "kubepug_darwin_arm64.tar.gz.pem"
+        },
+        "certificate_identity_regexp": "^https://github[.]com/(rikatz|kubepug)/kubepug/[.]github/workflows/release[.]yaml@refs/tags/v1.6.0$",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "kubepug",
+      "repo_name": "kubepug",
+      "repo_id": 232220881,
+      "asset": "kubepug_linux_amd64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "222ea1ba5ddd547202b7407ccd54f42ce7c5ffbcdb7591f3995ea7973e337fac",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "kubepug",
+          "src": "kubepug"
+        }
+      ],
+      "cosign": {
+        "signature": {
+          "type": "github_release",
+          "asset": "kubepug_linux_amd64.tar.gz.sig"
+        },
+        "certificate": {
+          "type": "github_release",
+          "asset": "kubepug_linux_amd64.tar.gz.pem"
+        },
+        "certificate_identity_regexp": "^https://github[.]com/(rikatz|kubepug)/kubepug/[.]github/workflows/release[.]yaml@refs/tags/v1.6.0$",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "kubepug",
+      "repo_name": "kubepug",
+      "repo_id": 232220881,
+      "asset": "kubepug_linux_arm64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "7a27760122b3635ddcc9ff9eaae5f8fece0c3c5eb40017340d7a82f4284e1124",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "kubepug",
+          "src": "kubepug"
+        }
+      ],
+      "cosign": {
+        "signature": {
+          "type": "github_release",
+          "asset": "kubepug_linux_arm64.tar.gz.sig"
+        },
+        "certificate": {
+          "type": "github_release",
+          "asset": "kubepug_linux_arm64.tar.gz.pem"
+        },
+        "certificate_identity_regexp": "^https://github[.]com/(rikatz|kubepug)/kubepug/[.]github/workflows/release[.]yaml@refs/tags/v1.6.0$",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "kubepug",
+      "repo_name": "kubepug",
+      "repo_id": 232220881,
+      "asset": "kubepug_windows_amd64.zip",
+      "format": "zip",
+      "checksum": "c66c88e5e8f5d16c4849852f32fcb137f5c403358eaf3b4122a06d2e34e03893",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "kubepug",
+          "src": "kubepug.exe"
+        }
+      ],
+      "cosign": {
+        "signature": {
+          "type": "github_release",
+          "asset": "kubepug_windows_amd64.zip.sig"
+        },
+        "certificate": {
+          "type": "github_release",
+          "asset": "kubepug_windows_amd64.zip.pem"
+        },
+        "certificate_identity_regexp": "^https://github[.]com/(rikatz|kubepug)/kubepug/[.]github/workflows/release[.]yaml@refs/tags/v1.6.0$",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "windows_arm_emulation": true,
+      "type": "github_release",
+      "repo_owner": "kubepug",
+      "repo_name": "kubepug",
+      "repo_id": 232220881,
+      "asset": "kubepug_windows_amd64.zip",
+      "format": "zip",
+      "checksum": "c66c88e5e8f5d16c4849852f32fcb137f5c403358eaf3b4122a06d2e34e03893",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "kubepug",
+          "src": "kubepug.exe"
+        }
+      ],
+      "cosign": {
+        "signature": {
+          "type": "github_release",
+          "asset": "kubepug_windows_amd64.zip.sig"
+        },
+        "certificate": {
+          "type": "github_release",
+          "asset": "kubepug_windows_amd64.zip.pem"
+        },
+        "certificate_identity_regexp": "^https://github[.]com/(rikatz|kubepug)/kubepug/[.]github/workflows/release[.]yaml@refs/tags/v1.6.0$",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    }
+  ]
+}
