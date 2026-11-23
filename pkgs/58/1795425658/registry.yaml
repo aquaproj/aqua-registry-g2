@@ -1,0 +1,14 @@
+name: agavra/tuicr
+type: github_release
+repo_owner: agavra
+repo_name: tuicr
+repo_id: 1130139388
+description: a code review TUI with vim keybindings
+version_overrides:
+  - version_constraint: semver("> 0.7.2")
+  - version_constraint: semver("<= 0.7.2")
+    supported_envs:
+      - linux
+      - darwin/arm64
+      - windows/amd64
+  - version_constraint: "true"
