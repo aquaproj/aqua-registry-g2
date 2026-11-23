@@ -7,8 +7,9 @@ description: Fast, async, stream-based link checker written in Rust. Finds broke
 version_filter: not (Version startsWith "lychee-lib-")
 # v0.15.1's macOS build is named lychee-v0.15.1-macos-x86_64.dmg but holds an arm64-only
 # executable, and the name is all that places it, so it would be offered to darwin/amd64.
+# v0.15.0's dmg is one hdiutil refuses to attach ("corrupt image"), so aqua can't extract it.
 asset_filters:
-  - version_constraint: Version == "v0.15.1"
+  - version_constraint: Version in ["v0.15.0", "v0.15.1"]
     all_assets_filter: not (Asset endsWith ".dmg")
 version_overrides:
   - version_constraint: semver("<= 0.3.1") || Version == "v0.6.0-alpha"
