@@ -113,6 +113,28 @@
           "src": "kdash.exe"
         }
       ]
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "variants": {
+        "libc": "musl"
+      },
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "kdash-rs",
+      "repo_name": "kdash",
+      "repo_id": 357436262,
+      "asset": "kdash-aarch64-musl.tar.gz",
+      "format": "tar.gz",
+      "checksum": "fe90c22d964a38eea2a8dfdd2ec385d60a6483ed3c2b2e09119d8336823d946c",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "kdash",
+          "src": "kdash"
+        }
+      ]
     }
   ]
 }
