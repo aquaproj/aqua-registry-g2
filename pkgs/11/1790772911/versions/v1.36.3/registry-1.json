@@ -1,0 +1,131 @@
+{
+  "assets": [
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "static",
+      "type": "http",
+      "repo_owner": "kubernetes",
+      "repo_name": "kubernetes",
+      "repo_id": 20580498,
+      "asset": "kube-proxy",
+      "url": "https://dl.k8s.io/v1.36.3/bin/linux/amd64/kube-proxy",
+      "format": "raw",
+      "checksum": "f1b5eb4462df9d98751264c6256628d90fdc72ba8e9a8025d1f75674f078f254",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "kube-proxy",
+          "src": "kube-proxy"
+        }
+      ],
+      "cosign": {
+        "signature": {
+          "type": "http",
+          "url": "https://dl.k8s.io/v1.36.3/bin/linux/amd64/kube-proxy.sig"
+        },
+        "certificate": {
+          "type": "http",
+          "url": "https://dl.k8s.io/v1.36.3/bin/linux/amd64/kube-proxy.cert"
+        },
+        "certificate_identity": "krel-staging@k8s-releng-prod.iam.gserviceaccount.com",
+        "certificate_oidc_issuer": "https://accounts.google.com"
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "linked_libc": "static",
+      "type": "http",
+      "repo_owner": "kubernetes",
+      "repo_name": "kubernetes",
+      "repo_id": 20580498,
+      "asset": "kube-proxy",
+      "url": "https://dl.k8s.io/v1.36.3/bin/linux/arm64/kube-proxy",
+      "format": "raw",
+      "checksum": "5db204a2f79b26f676137052b45e391f6f8c93b85c85ef0a1f5d72647e3c7834",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "kube-proxy",
+          "src": "kube-proxy"
+        }
+      ],
+      "cosign": {
+        "signature": {
+          "type": "http",
+          "url": "https://dl.k8s.io/v1.36.3/bin/linux/arm64/kube-proxy.sig"
+        },
+        "certificate": {
+          "type": "http",
+          "url": "https://dl.k8s.io/v1.36.3/bin/linux/arm64/kube-proxy.cert"
+        },
+        "certificate_identity": "krel-staging@k8s-releng-prod.iam.gserviceaccount.com",
+        "certificate_oidc_issuer": "https://accounts.google.com"
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "http",
+      "repo_owner": "kubernetes",
+      "repo_name": "kubernetes",
+      "repo_id": 20580498,
+      "asset": "kube-proxy.exe",
+      "url": "https://dl.k8s.io/v1.36.3/bin/windows/amd64/kube-proxy.exe",
+      "format": "raw",
+      "checksum": "19b002c905a26259331d2a82e8022797ddfa7aab8eec015614d07a5e9c418969",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "kube-proxy",
+          "src": "kube-proxy.exe"
+        }
+      ],
+      "cosign": {
+        "signature": {
+          "type": "http",
+          "url": "https://dl.k8s.io/v1.36.3/bin/windows/amd64/kube-proxy.exe.sig"
+        },
+        "certificate": {
+          "type": "http",
+          "url": "https://dl.k8s.io/v1.36.3/bin/windows/amd64/kube-proxy.exe.cert"
+        },
+        "certificate_identity": "krel-staging@k8s-releng-prod.iam.gserviceaccount.com",
+        "certificate_oidc_issuer": "https://accounts.google.com"
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "windows_arm_emulation": true,
+      "type": "http",
+      "repo_owner": "kubernetes",
+      "repo_name": "kubernetes",
+      "repo_id": 20580498,
+      "asset": "kube-proxy.exe",
+      "url": "https://dl.k8s.io/v1.36.3/bin/windows/amd64/kube-proxy.exe",
+      "format": "raw",
+      "checksum": "19b002c905a26259331d2a82e8022797ddfa7aab8eec015614d07a5e9c418969",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "kube-proxy",
+          "src": "kube-proxy.exe"
+        }
+      ],
+      "cosign": {
+        "signature": {
+          "type": "http",
+          "url": "https://dl.k8s.io/v1.36.3/bin/windows/amd64/kube-proxy.exe.sig"
+        },
+        "certificate": {
+          "type": "http",
+          "url": "https://dl.k8s.io/v1.36.3/bin/windows/amd64/kube-proxy.exe.cert"
+        },
+        "certificate_identity": "krel-staging@k8s-releng-prod.iam.gserviceaccount.com",
+        "certificate_oidc_issuer": "https://accounts.google.com"
+      }
+    }
+  ]
+}
