@@ -25,14 +25,19 @@ on:
         default: "0"
 # The chain value in the name is what keep-ar2-going.yaml reads: a run that succeeded with
 # chain=0 dispatched nothing, and a chain that was going may have been handed to it.
-run-name: ar2 chain=${{ inputs.chain }}
+# "named" marks a run naming its packages, which the chain's scripts pass over.
+run-name: ar2${{ inputs.packages != '' && ' named' || '' }} chain=${{ inputs.chain }}
 permissions: {}
-# One run at a time. The chain never makes two by itself -- a run dispatches its
-# successor and the successor waits for it to finish -- but a dispatch by hand while a
+# One run of the order at a time. The chain never makes two by itself -- a run dispatches
+# its successor and the successor waits for it to finish -- but a dispatch by hand while a
 # chain is going would, and two runs generating at once would take the same packages
 # from the top of the same order.
+#
+# A run naming its packages doesn't take them from the order, so it has a group of its own
+# and runs beside the chain rather than waiting up to a run's 25 minutes for it, or being
+# taken for the chain's next run.
 concurrency:
-  group: ${{ github.workflow }}
+  group: ${{ github.workflow }}${{ inputs.packages != '' && '-named' || '' }}
   cancel-in-progress: false
 jobs:
   run:

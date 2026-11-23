@@ -45,7 +45,9 @@ gh workflow run ar2.yaml -f packages="ko-build/ko sigstore/cosign" -f limit=20
 ```
 
 Nothing else changes: each one is taken over, generated and put to a pull request the way the
-order would have, whenever its turn came. Which is what makes it worth naming one -- a package
+order would have, whenever its turn came. Such a run doesn't take its packages from the order,
+so it runs beside the chain rather than after it, in a concurrency group of its own, and the
+chain's scripts pass it over. Which is what makes it worth naming one -- a package
 the order reaches in a week, because something was fixed and it is the package that was
 waiting for it, or one an issue is asking about.
 

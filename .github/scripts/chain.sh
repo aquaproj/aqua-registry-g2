@@ -42,8 +42,9 @@ wait_out_the_floor() {
 	fi
 }
 
-# waiting says another ar2 run is queued or pending: one a person dispatched while this run
-# was going, such as one naming packages to generate now.
+# waiting says another ar2 run of the order is queued or pending: one a person dispatched
+# while this run was going. A run naming its packages is in a concurrency group of its own,
+# so it is passed over: it waits for nothing and nothing waits for it.
 #
 # The concurrency group keeps one run pending and cancels it when another is dispatched, so
 # dispatching the successor here would cancel that run before it started -- run
@@ -57,8 +58,8 @@ waiting() {
 	n=$(gh run list \
 		--repo "$GITHUB_REPOSITORY" \
 		--workflow ar2.yaml \
-		--json status \
-		--jq '[.[] | select(.status == "queued" or .status == "pending" or .status == "waiting" or .status == "requested")] | length') || return 1
+		--json status,displayTitle \
+		--jq '[.[] | select(.displayTitle | contains(" named ") | not) | select(.status == "queued" or .status == "pending" or .status == "waiting" or .status == "requested")] | length') || return 1
 	[ "$n" != 0 ]
 }
 
