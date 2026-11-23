@@ -1,0 +1,67 @@
+{
+  "published_at": "2024-03-18T16:05:08Z",
+  "assets": [
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "firecracker-microvm",
+      "repo_name": "firecracker",
+      "repo_id": 107505869,
+      "asset": "firecracker-v1.7.0-x86_64.tgz",
+      "format": "tgz",
+      "checksum": "55bd3e6d599fdd108e36e52f9aee2319f06c18a90f2fa49b64e93fdf06f5ff53",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "firecracker",
+          "src": "release-v1.7.0-x86_64/firecracker-v1.7.0-x86_64"
+        },
+        {
+          "name": "jailer",
+          "src": "release-v1.7.0-x86_64/jailer-v1.7.0-x86_64"
+        },
+        {
+          "name": "rebase-snap",
+          "src": "release-v1.7.0-x86_64/rebase-snap-v1.7.0-x86_64"
+        },
+        {
+          "name": "seccompiler-bin",
+          "src": "release-v1.7.0-x86_64/seccompiler-bin-v1.7.0-x86_64"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "firecracker-microvm",
+      "repo_name": "firecracker",
+      "repo_id": 107505869,
+      "asset": "firecracker-v1.7.0-aarch64.tgz",
+      "format": "tgz",
+      "checksum": "3cba100386baaae9714a7b3f6514a09fa12d1ebe3afe1b2d3613f5a401edf550",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "firecracker",
+          "src": "release-v1.7.0-aarch64/firecracker-v1.7.0-aarch64"
+        },
+        {
+          "name": "jailer",
+          "src": "release-v1.7.0-aarch64/jailer-v1.7.0-aarch64"
+        },
+        {
+          "name": "rebase-snap",
+          "src": "release-v1.7.0-aarch64/rebase-snap-v1.7.0-aarch64"
+        },
+        {
+          "name": "seccompiler-bin",
+          "src": "release-v1.7.0-aarch64/seccompiler-bin-v1.7.0-aarch64"
+        }
+      ]
+    }
+  ]
+}
