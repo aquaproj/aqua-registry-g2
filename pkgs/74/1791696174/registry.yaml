@@ -4,6 +4,11 @@ repo_owner: veeso
 repo_name: termscp
 repo_id: 310881039
 description: A feature rich terminal UI file transfer and explorer with support for SCP/SFTP/FTP/S3
+# v0.14.0's macOS builds are zip archives named .tar.gz, which aqua can't unpack: it
+# identifies an archive by its name before its contents, whatever format is declared.
+asset_filters:
+  - version_constraint: Version == "v0.14.0"
+    all_assets_filter: not (Asset contains "apple-darwin")
 version_overrides:
   - version_constraint: semver(">= 1.0.0")
   - version_constraint: semver(">= 0.8.1")
