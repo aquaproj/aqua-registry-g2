@@ -1,0 +1,123 @@
+{
+  "published_at": "2023-06-25T16:24:40Z",
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "samwho",
+      "repo_name": "spacer",
+      "repo_id": 651987199,
+      "asset": "spacer-x86_64-apple-darwin.tar.gz",
+      "format": "tar.gz",
+      "checksum": "c244f98faa581105051278827705cbb3e6c6d40d6d956d9aa483fcefe11b4b57",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "spacer",
+          "src": "spacer"
+        }
+      ]
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "rosetta2": true,
+      "type": "github_release",
+      "repo_owner": "samwho",
+      "repo_name": "spacer",
+      "repo_id": 651987199,
+      "asset": "spacer-x86_64-apple-darwin.tar.gz",
+      "format": "tar.gz",
+      "checksum": "c244f98faa581105051278827705cbb3e6c6d40d6d956d9aa483fcefe11b4b57",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "spacer",
+          "src": "spacer"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "variants": {
+        "libc": "glibc"
+      },
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "samwho",
+      "repo_name": "spacer",
+      "repo_id": 651987199,
+      "asset": "spacer-x86_64-unknown-linux-gnu.tar.gz",
+      "format": "tar.gz",
+      "checksum": "27069a355be4d63d7dc84a46cb187f4b813e34d9ed8ce54d830ba030d196325a",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "spacer",
+          "src": "spacer"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "variants": {
+        "libc": "musl"
+      },
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "samwho",
+      "repo_name": "spacer",
+      "repo_id": 651987199,
+      "asset": "spacer-x86_64-unknown-linux-musl.tar.gz",
+      "format": "tar.gz",
+      "checksum": "c127514d126bb369003ccbce72a4d147c9447ff0bf055e37c858fac6b92dd34a",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "spacer",
+          "src": "spacer"
+        }
+      ]
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "samwho",
+      "repo_name": "spacer",
+      "repo_id": 651987199,
+      "asset": "spacer-x86_64-pc-windows-msvc.zip",
+      "format": "zip",
+      "checksum": "1d2b3775d5a2ca30c2c06dcf97fc4733a4ef951745195734b86c11d24037b608",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "spacer",
+          "src": "spacer.exe"
+        }
+      ]
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "windows_arm_emulation": true,
+      "type": "github_release",
+      "repo_owner": "samwho",
+      "repo_name": "spacer",
+      "repo_id": 651987199,
+      "asset": "spacer-x86_64-pc-windows-msvc.zip",
+      "format": "zip",
+      "checksum": "1d2b3775d5a2ca30c2c06dcf97fc4733a4ef951745195734b86c11d24037b608",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "spacer",
+          "src": "spacer.exe"
+        }
+      ]
+    }
+  ]
+}
