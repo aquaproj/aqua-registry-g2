@@ -52,15 +52,23 @@ wait_out_the_floor() {
 # keep-ar2-going.yaml starts the chain again once it ends, as it does after any run dispatched
 # by hand, and a run dispatched with a chain of its own carries on by itself.
 #
+# The run this is part of is passed over too. It hasn't completed while its chain job runs,
+# and it was listed as one of those states: runs 45268034620, 45306726322 and 45405981254
+# each found a run waiting when none was, dispatched nothing, and the chain stood still for
+# hours until the schedule, which GitHub runs late, started it again.
+#
 # A lookup that fails answers no, so the chain goes on as it did before.
 waiting() {
-	local n
-	n=$(gh run list \
+	local runs
+	runs=$(gh run list \
 		--repo "$GITHUB_REPOSITORY" \
 		--workflow ar2.yaml \
-		--json status,displayTitle \
-		--jq '[.[] | select(.displayTitle | contains(" named ") | not) | select(.status == "queued" or .status == "pending" or .status == "waiting" or .status == "requested")] | length') || return 1
-	[ "$n" != 0 ]
+		--json databaseId,status,displayTitle \
+		--jq ".[] | select(.databaseId != $RUN_ID) | select(.displayTitle | contains(\" named \") | not) | select(.status == \"queued\" or .status == \"pending\" or .status == \"waiting\" or .status == \"requested\") | \"\\(.databaseId) \\(.status)\"") || return 1
+	if [ -z "$runs" ]; then
+		return 1
+	fi
+	echo "waiting: $runs" >&2
 }
 
 # give_up says on the monitoring issue that nothing is generating any more.
