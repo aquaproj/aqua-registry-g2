@@ -1,0 +1,59 @@
+{
+  "published_at": "2022-02-22T06:21:16Z",
+  "assets": [
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "containerd",
+      "repo_name": "stargz-snapshotter",
+      "repo_id": 213618352,
+      "asset": "stargz-snapshotter-v0.11.1-linux-amd64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "f958a77b9cc639620af78208b34213fbd17fe28699708a7d3a9c7862025a7a4c",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "containerd-stargz-grpc",
+          "src": "containerd-stargz-grpc"
+        },
+        {
+          "name": "ctr-remote",
+          "src": "ctr-remote"
+        },
+        {
+          "name": "stargz-store",
+          "src": "stargz-store"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "containerd",
+      "repo_name": "stargz-snapshotter",
+      "repo_id": 213618352,
+      "asset": "stargz-snapshotter-v0.11.1-linux-arm64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "37559fc5b62757ae148efed1070c319ad0323aae91a1d83edce1e157644e29ea",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "containerd-stargz-grpc",
+          "src": "containerd-stargz-grpc"
+        },
+        {
+          "name": "ctr-remote",
+          "src": "ctr-remote"
+        },
+        {
+          "name": "stargz-store",
+          "src": "stargz-store"
+        }
+      ]
+    }
+  ]
+}
