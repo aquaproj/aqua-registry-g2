@@ -6,18 +6,18 @@ repo_id: 11870975
 description: A Go based command line tool for exercism.org
 files:
   - name: exercism
+# The Windows zips of v3.0.3 to v3.0.12 hold ../shell/*, paths outside the directory they are
+# extracted to, which aqua refuses to extract. supported_envs doesn't leave out a build the
+# release names, so the zips are filtered out here.
+asset_filters:
+  - version_constraint: semver(">= 3.0.3") and semver("<= 3.0.12")
+    all_assets_filter: not (Asset contains "windows")
 version_overrides:
   - version_constraint: semver(">= 3.2.0")
   - version_constraint: semver(">= 3.0.13")
     supported_envs:
       - darwin
       - amd64
-  # The Windows zips of v3.0.11 and v3.0.12 hold ../shell/*, paths outside the directory
-  # they are extracted to, which aqua refuses to extract.
-  - version_constraint: Version in ["v3.0.11", "v3.0.12"]
-    supported_envs:
-      - darwin
-      - linux/amd64
   - version_constraint: semver(">= 3.0.0")
     supported_envs:
       - darwin
