@@ -27,8 +27,23 @@ if [ "$enabled" -ge "$MAX_ENABLED" ]; then
 	exit 0
 fi
 
+# gh merges at once a pull request GitHub says is ready rather than turning auto-merge on, and
+# that merge fails when another pull request merged a moment before: run 45347680445 gave up on
+# #30837 with "Base branch was modified". It is tried again after a moment.
 enable() {
-	gh pr merge "$PR" --auto --squash
+	local out
+	for _ in 1 2 3; do
+		if out=$(gh pr merge "$PR" --auto --squash 2>&1); then
+			echo "$out"
+			return 0
+		fi
+		echo "$out" >&2
+		if [[ $out != *"Base branch was modified"* ]]; then
+			return 1
+		fi
+		sleep 15
+	done
+	return 1
 }
 
 update() {
