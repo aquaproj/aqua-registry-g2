@@ -1,0 +1,12 @@
+name: mgantlett/nomos
+type: github_release
+repo_owner: mgantlett
+repo_name: nomos
+repo_id: 1437381251
+description: 'Transactional Go runtime between any coding agent and Git: causal INT/SUB
+  spec-vs-code DAGs, isolated git worktrees, 42 polyglot anti-shim AST checks, receipt-gated
+  SQLite memory, and atomic 2PC releases'
+version_overrides:
+  - version_constraint: Version == "v4.10.0"
+    no_asset: true
+  - version_constraint: "true"
