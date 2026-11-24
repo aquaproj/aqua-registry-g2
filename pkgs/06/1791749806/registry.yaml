@@ -4,3 +4,8 @@ repo_owner: compose
 repo_name: transporter
 repo_id: 25216563
 description: Sync data between persistence engines, like ETL only not stodgy
+# The Linux tar.gz of 0.0.1 to v0.0.3 has a header Go's archive/tar can't read, so aqua can't
+# extract it.
+asset_filters:
+  - version_constraint: Version in ["0.0.1", "v0.0.2", "v0.0.3"]
+    all_assets_filter: not (Asset contains "linux")
