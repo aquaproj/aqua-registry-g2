@@ -1,0 +1,85 @@
+{
+  "published_at": "2025-12-30T12:03:42Z",
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "spinel-coop",
+      "repo_name": "rv",
+      "repo_id": 1018217161,
+      "asset": "rv-x86_64-apple-darwin.tar.xz",
+      "format": "tar.xz",
+      "checksum": "f08064bb716c35e4b32aab2a3061f236c7859311137065a02c76bae520c92aa1",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "rv",
+          "src": "rv-x86_64-apple-darwin/rv"
+        }
+      ]
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "spinel-coop",
+      "repo_name": "rv",
+      "repo_id": 1018217161,
+      "asset": "rv-aarch64-apple-darwin.tar.xz",
+      "format": "tar.xz",
+      "checksum": "676d7d70e50e8cab76920f1b5ca29be1a52009fe78c097acb0ab7fdff9e400d1",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "rv",
+          "src": "rv-aarch64-apple-darwin/rv"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "variants": {
+        "libc": "glibc"
+      },
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "spinel-coop",
+      "repo_name": "rv",
+      "repo_id": 1018217161,
+      "asset": "rv-x86_64-unknown-linux-gnu.tar.xz",
+      "format": "tar.xz",
+      "checksum": "ec5c90e52cdef97d7cd0874490392c404d475058c33bafa6eca61719183f1656",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "rv",
+          "src": "rv-x86_64-unknown-linux-gnu/rv"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "variants": {
+        "libc": "glibc"
+      },
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "spinel-coop",
+      "repo_name": "rv",
+      "repo_id": 1018217161,
+      "asset": "rv-aarch64-unknown-linux-gnu.tar.xz",
+      "format": "tar.xz",
+      "checksum": "ce5785357eb88ffe7988e464110692801f9394344b871f33bb0de1b70a7de193",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "rv",
+          "src": "rv-aarch64-unknown-linux-gnu/rv"
+        }
+      ]
+    }
+  ]
+}
