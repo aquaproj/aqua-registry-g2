@@ -1,0 +1,67 @@
+{
+  "published_at": "2025-08-29T04:44:44Z",
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "spinel-coop",
+      "repo_name": "rv",
+      "repo_id": 1018217161,
+      "asset": "rv-aarch64-apple-darwin.tar.xz",
+      "format": "tar.xz",
+      "checksum": "3634bb756c19f534bc281ec5f43e8210564bf8888dab0a76e19c56c695eead2c",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "rv",
+          "src": "rv-aarch64-apple-darwin/rv"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "variants": {
+        "libc": "glibc"
+      },
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "spinel-coop",
+      "repo_name": "rv",
+      "repo_id": 1018217161,
+      "asset": "rv-x86_64-unknown-linux-gnu.tar.xz",
+      "format": "tar.xz",
+      "checksum": "1467e871946e47b81fa3faaa1c1fd1a178be65bedacb924a6f5105b76df5cd38",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "rv",
+          "src": "rv-x86_64-unknown-linux-gnu/rv"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "variants": {
+        "libc": "glibc"
+      },
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "spinel-coop",
+      "repo_name": "rv",
+      "repo_id": 1018217161,
+      "asset": "rv-aarch64-unknown-linux-gnu.tar.xz",
+      "format": "tar.xz",
+      "checksum": "3d4aaa4de059ddb365240be9a8f8d4cbe9afe477be5820e2fd7196e095c65982",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "rv",
+          "src": "rv-aarch64-unknown-linux-gnu/rv"
+        }
+      ]
+    }
+  ]
+}
