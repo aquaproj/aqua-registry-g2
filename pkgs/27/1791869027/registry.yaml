@@ -6,6 +6,9 @@ repo_id: 50565430
 description: Fast, disk space efficient package manager
 github_artifact_attestations:
   signer_workflow: pnpm/pnpm/.github/workflows/release.yml
+# v7 to v10 publish pnpm-linux-* beside pnpm-linuxstatic-*, which nothing in the names
+# tells apart. The published versions install pnpm-linux-*, and so does this.
+all_assets_filter: not (Asset contains "linuxstatic")
 version_overrides:
   - version_constraint: Version == "v7.0.0-alpha.1"
     no_asset: true
