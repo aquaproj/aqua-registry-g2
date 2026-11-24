@@ -1,0 +1,14 @@
+name: h5i-dev/h5i
+type: github_release
+repo_owner: h5i-dev
+repo_name: h5i
+repo_id: 1178494429
+description: An Axum-based Rust web framework with Lean 4-verifiable application kernels
+  that run on servers, bare-metal embedded devices, and GPUs, plus integrated security
+  testing
+version_overrides:
+  - version_constraint: "true"
+    supported_envs:
+      - linux
+      - darwin/arm64
+      - windows/amd64
