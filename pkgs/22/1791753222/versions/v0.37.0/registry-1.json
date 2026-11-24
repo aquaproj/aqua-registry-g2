@@ -1,0 +1,164 @@
+{
+  "published_at": "2026-03-18T11:23:04Z",
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "quarylabs",
+      "repo_name": "sqruff",
+      "repo_id": 601303277,
+      "asset": "sqruff-darwin-x86_64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "b563f2f9f2c464c240030d6f2d6ad489b67988f6d55e37fd0f7b5e447cdfa4df",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "sqruff",
+          "src": "sqruff"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "quarylabs/sqruff/.github/workflows/release.yml",
+        "source_ref": "refs/tags/v0.37.0",
+        "source_digest": "85f15d241bcf26659bdc313bd6036a6fb48bc855",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "quarylabs",
+      "repo_name": "sqruff",
+      "repo_id": 601303277,
+      "asset": "sqruff-darwin-aarch64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "7cc300d7f3d777fad6009b135924c58aac5671c285760d0e574bdb1fa83d5177",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "sqruff",
+          "src": "sqruff"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "quarylabs/sqruff/.github/workflows/release.yml",
+        "source_ref": "refs/tags/v0.37.0",
+        "source_digest": "85f15d241bcf26659bdc313bd6036a6fb48bc855",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "variants": {
+        "libc": "musl"
+      },
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "quarylabs",
+      "repo_name": "sqruff",
+      "repo_id": 601303277,
+      "asset": "sqruff-linux-x86_64-musl.tar.gz",
+      "format": "tar.gz",
+      "checksum": "0ece061e29055c6ec142c7ee4729fe8d6aa0ff1b3ee4289003a4f1226f2ef5aa",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "sqruff",
+          "src": "sqruff"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "quarylabs/sqruff/.github/workflows/release.yml",
+        "source_ref": "refs/tags/v0.37.0",
+        "source_digest": "85f15d241bcf26659bdc313bd6036a6fb48bc855",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "variants": {
+        "libc": "musl"
+      },
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "quarylabs",
+      "repo_name": "sqruff",
+      "repo_id": 601303277,
+      "asset": "sqruff-linux-aarch64-musl.tar.gz",
+      "format": "tar.gz",
+      "checksum": "9aa38f320459d68aece39a45aaff2d738a814f4813a94d8056a6bfde53254c5e",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "sqruff",
+          "src": "sqruff"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "quarylabs/sqruff/.github/workflows/release.yml",
+        "source_ref": "refs/tags/v0.37.0",
+        "source_digest": "85f15d241bcf26659bdc313bd6036a6fb48bc855",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "quarylabs",
+      "repo_name": "sqruff",
+      "repo_id": 601303277,
+      "asset": "sqruff-windows-x86_64.zip",
+      "format": "zip",
+      "checksum": "2a7c16151e26e4af35293f8787a06f2bc8ebac4c6904eafe2148998a48f88ab8",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "sqruff",
+          "src": "sqruff.exe"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "quarylabs/sqruff/.github/workflows/release.yml",
+        "source_ref": "refs/tags/v0.37.0",
+        "source_digest": "85f15d241bcf26659bdc313bd6036a6fb48bc855",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "windows_arm_emulation": true,
+      "type": "github_release",
+      "repo_owner": "quarylabs",
+      "repo_name": "sqruff",
+      "repo_id": 601303277,
+      "asset": "sqruff-windows-x86_64.zip",
+      "format": "zip",
+      "checksum": "2a7c16151e26e4af35293f8787a06f2bc8ebac4c6904eafe2148998a48f88ab8",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "sqruff",
+          "src": "sqruff.exe"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "quarylabs/sqruff/.github/workflows/release.yml",
+        "source_ref": "refs/tags/v0.37.0",
+        "source_digest": "85f15d241bcf26659bdc313bd6036a6fb48bc855",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    }
+  ]
+}
