@@ -58,4 +58,10 @@ jobs:
           ISSUE: "105"
           # The limit the chain has run with. A chain this starts is otherwise what one
           # started by hand would be.
-          LIMIT: "10"
+          #
+          # 30 rather than 10: a run sweeps every package before it generates anything,
+          # which took four of a run's six and a half minutes (run 45599283570), so a run
+          # that generates more spends less of the day sweeping. The app's token used at
+          # most about 600 of its 5000 REST requests an hour at 10, and the job's timeout
+          # is 30 minutes.
+          LIMIT: "30"
