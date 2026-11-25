@@ -1,15 +1,16 @@
 ---
-name: close-issues
-# Close the issues ar2 opened once what they are about is resolved.
+name: hourly
+# The jobs that run once an hour, each its own job so that one failing doesn't hold up the others:
 #
-# A run opens an issue per package for the environments a version was published without
-# (missing-environment), for the versions a check of integrity stopped (integrity), and for the
-# versions that keep failing for a reason that should pass (transient-failure), and writes into
-# it what it is about. 'ar2 close-issues' asks the registry about each, and
-# closes an issue whose every version and environment is resolved.
+# - close-issues: close the issues ar2 opened once what they are about is resolved.
+# - kick-unchecked-prs: start the checks of a pull request of ar2's that no workflow ran for.
 #
-# What resolves one is a version merging: an environment put back by 'ar2 regenerate', or a
-# stopped version published.
+# close-issues: a run opens an issue per package for the environments a version was published
+# without (missing-environment), for the versions a check of integrity stopped (integrity), and
+# for the versions that keep failing for a reason that should pass (transient-failure), and
+# writes into it what it is about. 'ar2 close-issues' asks the registry about each, and closes
+# an issue whose every version and environment is resolved. What resolves one is a version
+# merging: an environment put back by 'ar2 regenerate', or a stopped version published.
 #
 # On a schedule rather than on every push touching a versions directory. A run reads every
 # open issue's comments and a registry.json per version they record, one REST call each, on
@@ -71,8 +72,7 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
   # Starts the checks of a pull request of ar2's that GitHub dropped the event of, so that no
-  # workflow ever ran for it. Here because this is the hourly chain GitHub's late cron can't
-  # hold up; it has nothing else to do with closing issues. See the script.
+  # workflow ever ran for it. See the script.
   kick-unchecked-prs:
     runs-on: ubuntu-26.04
     # The app's key is open to main only.
@@ -119,18 +119,18 @@ jobs:
           if [ "$elapsed" -lt 3600 ]; then
             sleep $((3600 - elapsed))
           fi
-          state=$(gh api "repos/$GITHUB_REPOSITORY/actions/workflows/close-issues.yaml" --jq .state)
+          state=$(gh api "repos/$GITHUB_REPOSITORY/actions/workflows/hourly.yaml" --jq .state)
           if [[ $state == disabled* ]]; then
-            echo "close-issues is disabled; the chain stops here" >&2
+            echo "hourly is disabled; the chain stops here" >&2
             exit 0
           fi
           # A run already waiting -- one dispatched by hand or by the schedule -- goes next and
           # dispatches its own successor. Dispatching here would cancel it.
-          waiting=$(gh run list --repo "$GITHUB_REPOSITORY" --workflow close-issues.yaml \
+          waiting=$(gh run list --repo "$GITHUB_REPOSITORY" --workflow hourly.yaml \
             --json status \
             --jq '[.[] | select(.status == "queued" or .status == "pending" or .status == "waiting" or .status == "requested")] | length')
           if [ "$waiting" != 0 ]; then
-            echo "a close-issues run is already waiting; it goes next" >&2
+            echo "an hourly run is already waiting; it goes next" >&2
             exit 0
           fi
-          gh workflow run close-issues.yaml --repo "$GITHUB_REPOSITORY"
+          gh workflow run hourly.yaml --repo "$GITHUB_REPOSITORY"
