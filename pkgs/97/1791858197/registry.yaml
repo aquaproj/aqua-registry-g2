@@ -12,3 +12,18 @@ files:
 supported_envs:
   - darwin
   - amd64
+version_overrides:
+  # Up to v1.2.0 an asset is ketall-<os>-amd64.gz holding ketall-<os>-amd64, the other way
+  # round from v1.2.1's ketall-amd64-<os>.
+  - version_constraint: semver("<= 1.2.0")
+    files:
+      - name: ketall
+        src: ketall-{{.OS}}-{{.Arch}}
+      - name: kubectl-get_all
+        src: ketall-{{.OS}}-{{.Arch}}
+  - version_constraint: "true"
+# The windows zip up to v1.2.0 holds out/ketall-windows-amd64, with no .exe, which windows
+# won't run.
+asset_filters:
+  - version_constraint: semver("<= 1.2.0")
+    all_assets_filter: not (Asset contains "windows")

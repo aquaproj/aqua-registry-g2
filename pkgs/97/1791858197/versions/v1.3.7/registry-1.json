@@ -26,6 +26,7 @@
     {
       "os": "darwin",
       "arch": "arm64",
+      "rosetta2": true,
       "type": "github_release",
       "repo_owner": "corneliusweig",
       "repo_name": "ketall",
@@ -42,6 +43,29 @@
         {
           "name": "kubectl-get_all",
           "src": "ketall-amd64-darwin"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "corneliusweig",
+      "repo_name": "ketall",
+      "repo_id": 170769233,
+      "asset": "ketall-amd64-linux.tar.gz",
+      "format": "tar.gz",
+      "checksum": "b9eba1656f934197a1547cb1c776e3f2de8904b801536c2ca25ee922e9a8d6fb",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "ketall",
+          "src": "ketall-amd64-linux"
+        },
+        {
+          "name": "kubectl-get_all",
+          "src": "ketall-amd64-linux"
         }
       ]
     },
@@ -70,6 +94,7 @@
     {
       "os": "windows",
       "arch": "arm64",
+      "windows_arm_emulation": true,
       "type": "github_release",
       "repo_owner": "corneliusweig",
       "repo_name": "ketall",
@@ -86,29 +111,6 @@
         {
           "name": "kubectl-get_all",
           "src": "ketall-amd64-windows.exe"
-        }
-      ]
-    },
-    {
-      "os": "linux",
-      "arch": "amd64",
-      "linked_libc": "static",
-      "type": "github_release",
-      "repo_owner": "corneliusweig",
-      "repo_name": "ketall",
-      "repo_id": 170769233,
-      "asset": "ketall-amd64-linux.tar.gz",
-      "format": "tar.gz",
-      "checksum": "b9eba1656f934197a1547cb1c776e3f2de8904b801536c2ca25ee922e9a8d6fb",
-      "checksum_algorithm": "sha256",
-      "files": [
-        {
-          "name": "ketall",
-          "src": "ketall-amd64-linux"
-        },
-        {
-          "name": "kubectl-get_all",
-          "src": "ketall-amd64-linux"
         }
       ]
     }
