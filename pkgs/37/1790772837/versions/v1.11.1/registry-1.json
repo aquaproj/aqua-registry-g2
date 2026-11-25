@@ -1,0 +1,229 @@
+{
+  "published_at": "2025-06-05T18:47:08Z",
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "gleam-lang",
+      "repo_name": "gleam",
+      "repo_id": 62341543,
+      "asset": "gleam-v1.11.1-x86_64-apple-darwin.tar.gz",
+      "format": "tar.gz",
+      "checksum": "f250284e4998f4e7d274d60f8d4f9d5d5cf1519a86bd21065ba77dbff6065054",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "gleam",
+          "src": "gleam"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "gleam-v1.11.1-x86_64-apple-darwin.tar.gz.sigstore"
+        },
+        "certificate_identity": "https://github.com/gleam-lang/gleam/.github/workflows/release.yaml@refs/tags/v1.11.1",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "certificate_github_workflow_repository": "gleam-lang/gleam",
+        "certificate_github_workflow_ref": "refs/tags/v1.11.1"
+      },
+      "github_artifact_attestations": {
+        "predicate_type": "https://spdx.dev/Document/v2.3",
+        "signer_workflow": "gleam-lang/gleam/.github/workflows/release.yaml",
+        "source_ref": "refs/tags/v1.11.1",
+        "source_digest": "665c4beba502388384d2d22587e7dfbff0e14824",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "gleam-lang",
+      "repo_name": "gleam",
+      "repo_id": 62341543,
+      "asset": "gleam-v1.11.1-aarch64-apple-darwin.tar.gz",
+      "format": "tar.gz",
+      "checksum": "a2d492592d86539b1f51ae81f344dff71870b23479bf4d00d78512c6f9eaf1e5",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "gleam",
+          "src": "gleam"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "gleam-v1.11.1-aarch64-apple-darwin.tar.gz.sigstore"
+        },
+        "certificate_identity": "https://github.com/gleam-lang/gleam/.github/workflows/release.yaml@refs/tags/v1.11.1",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "certificate_github_workflow_repository": "gleam-lang/gleam",
+        "certificate_github_workflow_ref": "refs/tags/v1.11.1"
+      },
+      "github_artifact_attestations": {
+        "predicate_type": "https://spdx.dev/Document/v2.3",
+        "signer_workflow": "gleam-lang/gleam/.github/workflows/release.yaml",
+        "source_ref": "refs/tags/v1.11.1",
+        "source_digest": "665c4beba502388384d2d22587e7dfbff0e14824",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "variants": {
+        "libc": "musl"
+      },
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "gleam-lang",
+      "repo_name": "gleam",
+      "repo_id": 62341543,
+      "asset": "gleam-v1.11.1-x86_64-unknown-linux-musl.tar.gz",
+      "format": "tar.gz",
+      "checksum": "31649fab05f982c51d7553cc4a2d3e615ee49348f7162fe75d48f71331618033",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "gleam",
+          "src": "gleam"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "gleam-v1.11.1-x86_64-unknown-linux-musl.tar.gz.sigstore"
+        },
+        "certificate_identity": "https://github.com/gleam-lang/gleam/.github/workflows/release.yaml@refs/tags/v1.11.1",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "certificate_github_workflow_repository": "gleam-lang/gleam",
+        "certificate_github_workflow_ref": "refs/tags/v1.11.1"
+      },
+      "github_artifact_attestations": {
+        "predicate_type": "https://spdx.dev/Document/v2.3",
+        "signer_workflow": "gleam-lang/gleam/.github/workflows/release.yaml",
+        "source_ref": "refs/tags/v1.11.1",
+        "source_digest": "665c4beba502388384d2d22587e7dfbff0e14824",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "variants": {
+        "libc": "musl"
+      },
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "gleam-lang",
+      "repo_name": "gleam",
+      "repo_id": 62341543,
+      "asset": "gleam-v1.11.1-aarch64-unknown-linux-musl.tar.gz",
+      "format": "tar.gz",
+      "checksum": "22d4c9299f57f712210df7f48d1c84f99f13abfd9e067a6b290abfdab384161d",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "gleam",
+          "src": "gleam"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "gleam-v1.11.1-aarch64-unknown-linux-musl.tar.gz.sigstore"
+        },
+        "certificate_identity": "https://github.com/gleam-lang/gleam/.github/workflows/release.yaml@refs/tags/v1.11.1",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "certificate_github_workflow_repository": "gleam-lang/gleam",
+        "certificate_github_workflow_ref": "refs/tags/v1.11.1"
+      },
+      "github_artifact_attestations": {
+        "predicate_type": "https://spdx.dev/Document/v2.3",
+        "signer_workflow": "gleam-lang/gleam/.github/workflows/release.yaml",
+        "source_ref": "refs/tags/v1.11.1",
+        "source_digest": "665c4beba502388384d2d22587e7dfbff0e14824",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "gleam-lang",
+      "repo_name": "gleam",
+      "repo_id": 62341543,
+      "asset": "gleam-v1.11.1-x86_64-pc-windows-msvc.zip",
+      "format": "zip",
+      "checksum": "1cb54473bed54d74e213f993a7f269ed27afa761d693be681b9bf1a3e618d4d5",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "gleam",
+          "src": "gleam.exe"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "gleam-v1.11.1-x86_64-pc-windows-msvc.zip.sigstore"
+        },
+        "certificate_identity": "https://github.com/gleam-lang/gleam/.github/workflows/release.yaml@refs/tags/v1.11.1",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "certificate_github_workflow_repository": "gleam-lang/gleam",
+        "certificate_github_workflow_ref": "refs/tags/v1.11.1"
+      },
+      "github_artifact_attestations": {
+        "predicate_type": "https://spdx.dev/Document/v2.3",
+        "signer_workflow": "gleam-lang/gleam/.github/workflows/release.yaml",
+        "source_ref": "refs/tags/v1.11.1",
+        "source_digest": "665c4beba502388384d2d22587e7dfbff0e14824",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "gleam-lang",
+      "repo_name": "gleam",
+      "repo_id": 62341543,
+      "asset": "gleam-v1.11.1-aarch64-pc-windows-msvc.zip",
+      "format": "zip",
+      "checksum": "a409e9502dc20a427c118bb9ce64afeb8b78ab5652bf6cce3759ab7327ba3c93",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "gleam",
+          "src": "gleam.exe"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "gleam-v1.11.1-aarch64-pc-windows-msvc.zip.sigstore"
+        },
+        "certificate_identity": "https://github.com/gleam-lang/gleam/.github/workflows/release.yaml@refs/tags/v1.11.1",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "certificate_github_workflow_repository": "gleam-lang/gleam",
+        "certificate_github_workflow_ref": "refs/tags/v1.11.1"
+      },
+      "github_artifact_attestations": {
+        "predicate_type": "https://spdx.dev/Document/v2.3",
+        "signer_workflow": "gleam-lang/gleam/.github/workflows/release.yaml",
+        "source_ref": "refs/tags/v1.11.1",
+        "source_digest": "665c4beba502388384d2d22587e7dfbff0e14824",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    }
+  ]
+}
