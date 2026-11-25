@@ -1,0 +1,137 @@
+{
+  "published_at": "2026-05-26T17:28:27Z",
+  "assets": [
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "ImageMagick",
+      "repo_name": "ImageMagick",
+      "repo_id": 35780977,
+      "asset": "ImageMagick-7.1.2-24-gcc-x86_64.AppImage",
+      "format": "raw",
+      "checksum": "70598022a356356c8a118a31bfff5c09585ae2c9cbc188da7365b23ca471f019",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "magick",
+          "src": "ImageMagick-7.1.2-24-gcc-x86_64.AppImage"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "ImageMagick/ImageMagick/.github/workflows/release.yml",
+        "source_ref": "refs/tags/7.1.2-24",
+        "source_digest": "271b6bc4cbbd3e52e6768c5daeac9e9ed7a139f8",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "ImageMagick",
+      "repo_name": "ImageMagick",
+      "repo_id": 35780977,
+      "asset": "ImageMagick-7.1.2-24-portable-Q16-HDRI-x64.7z",
+      "format": "7z",
+      "checksum": "6c84c81e22ee59b04a33af52141f549b7e06541807921890bd1abe802223b90b",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "compare",
+          "src": "compare.exe"
+        },
+        {
+          "name": "composite",
+          "src": "composite.exe"
+        },
+        {
+          "name": "conjure",
+          "src": "conjure.exe"
+        },
+        {
+          "name": "identify",
+          "src": "identify.exe"
+        },
+        {
+          "name": "magick",
+          "src": "magick.exe"
+        },
+        {
+          "name": "mogrify",
+          "src": "mogrify.exe"
+        },
+        {
+          "name": "montage",
+          "src": "montage.exe"
+        },
+        {
+          "name": "stream",
+          "src": "stream.exe"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "ImageMagick/ImageMagick/.github/workflows/release.yml",
+        "source_ref": "refs/tags/7.1.2-24",
+        "source_digest": "271b6bc4cbbd3e52e6768c5daeac9e9ed7a139f8",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "ImageMagick",
+      "repo_name": "ImageMagick",
+      "repo_id": 35780977,
+      "asset": "ImageMagick-7.1.2-24-portable-Q16-HDRI-arm64.7z",
+      "format": "7z",
+      "checksum": "70d9e62c7af2c54dd01852c33452e94626487474124a255df82a978d0209080d",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "compare",
+          "src": "compare.exe"
+        },
+        {
+          "name": "composite",
+          "src": "composite.exe"
+        },
+        {
+          "name": "conjure",
+          "src": "conjure.exe"
+        },
+        {
+          "name": "identify",
+          "src": "identify.exe"
+        },
+        {
+          "name": "magick",
+          "src": "magick.exe"
+        },
+        {
+          "name": "mogrify",
+          "src": "mogrify.exe"
+        },
+        {
+          "name": "montage",
+          "src": "montage.exe"
+        },
+        {
+          "name": "stream",
+          "src": "stream.exe"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "ImageMagick/ImageMagick/.github/workflows/release.yml",
+        "source_ref": "refs/tags/7.1.2-24",
+        "source_digest": "271b6bc4cbbd3e52e6768c5daeac9e9ed7a139f8",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    }
+  ]
+}
