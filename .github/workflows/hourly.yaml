@@ -4,6 +4,7 @@ name: hourly
 #
 # - close-issues: close the issues ar2 opened once what they are about is resolved.
 # - kick-unchecked-prs: start the checks of a pull request of ar2's that no workflow ran for.
+# - keep-ar2-going: start the chain of ar2 runs again when it has stopped and nobody stopped it.
 #
 # close-issues: a run opens an issue per package for the environments a version was published
 # without (missing-environment), for the versions a check of integrity stopped (integrity), and
@@ -96,6 +97,39 @@ jobs:
         env:
           GH_REPO: ${{ github.repository }}
           GH_TOKEN: ${{ steps.pr_token.outputs.token }}
+  # Starts the chain of ar2 runs again when it has stopped and nobody stopped it. See
+  # .github/scripts/keep-chain.sh for what counts as stopped, and keep-ar2-going.yaml for the
+  # same check after a hand-dispatched run. It was keep-ar2-going.yaml's hourly schedule until
+  # GitHub went more than nine hours without running that (after 12:39 on 2026-11-24), while
+  # the chain had stood still since 13:49.
+  keep-ar2-going:
+    runs-on: ubuntu-26.04
+    timeout-minutes: 10
+    # keep-ar2-going.yaml's group, which a job shares with a workflow of the same name: one
+    # check at a time, so two of them can't each find nothing going and both dispatch.
+    concurrency:
+      group: keep ar2 going
+      cancel-in-progress: false
+    permissions:
+      # Checking out main for the script.
+      contents: read
+      # Reading ar2's runs and dispatching it.
+      actions: write
+      # Saying on the monitoring issue that the chain stopped, when chain.sh couldn't.
+      issues: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+          sparse-checkout: .github/scripts
+      - run: bash .github/scripts/keep-chain.sh
+        env:
+          GH_TOKEN: ${{ github.token }}
+          EVENT: ${{ github.event_name }}
+          # The issue whoever watches this repository gets the mail from, as in ar2.yaml.
+          ISSUE: "105"
+          # The limit the chain has run with, as in keep-ar2-going.yaml.
+          LIMIT: "10"
   # Waits out the hour from the run's start and dispatches the next run. It runs after a
   # failure, a timeout or a cancellation of close-issues alike, so that one bad run doesn't
   # leave the issues to the schedule.
