@@ -1,0 +1,26 @@
+name: jnsahaj/lumen
+type: github_release
+repo_owner: jnsahaj
+repo_name: lumen
+repo_id: 879874959
+description: Beautiful git diff viewer, generate commits with AI, get summary of changes,
+  all from the CLI
+version_overrides:
+  - version_constraint: semver("> 2.30.0")
+    supported_envs:
+      - linux
+      - darwin
+  - version_constraint: semver("> 2.4.0")
+    supported_envs:
+      - darwin
+  - version_constraint: semver("<= 2.4.0")
+    supported_envs:
+      - darwin/arm64
+  - version_constraint: "true"
+    supported_envs:
+      - linux
+      - darwin
+asset_rules:
+  - envs:
+      - darwin/arm64
+    filter: Asset matches "^lumen[.].+([.].+)?$"
