@@ -15,11 +15,11 @@
       "files": [
         {
           "name": "ketall",
-          "src": "ketall-amd64-darwin"
+          "src": "ketall-darwin-amd64"
         },
         {
           "name": "kubectl-get_all",
-          "src": "ketall-amd64-darwin"
+          "src": "ketall-darwin-amd64"
         }
       ]
     },
@@ -38,17 +38,18 @@
       "files": [
         {
           "name": "ketall",
-          "src": "ketall-amd64-darwin"
+          "src": "ketall-darwin-amd64"
         },
         {
           "name": "kubectl-get_all",
-          "src": "ketall-amd64-darwin"
+          "src": "ketall-darwin-amd64"
         }
       ]
     },
     {
       "os": "linux",
       "arch": "amd64",
+      "linked_libc": "static",
       "type": "github_release",
       "repo_owner": "corneliusweig",
       "repo_name": "ketall",
@@ -60,56 +61,11 @@
       "files": [
         {
           "name": "ketall",
-          "src": "ketall-amd64-linux"
+          "src": "ketall-linux-amd64"
         },
         {
           "name": "kubectl-get_all",
-          "src": "ketall-amd64-linux"
-        }
-      ]
-    },
-    {
-      "os": "windows",
-      "arch": "amd64",
-      "type": "github_release",
-      "repo_owner": "corneliusweig",
-      "repo_name": "ketall",
-      "repo_id": 170769233,
-      "asset": "ketall-windows-amd64.zip",
-      "format": "zip",
-      "checksum": "c8d831d8d4bb3eb494e80e15c92c30108fa76b6b4165edd1add7b00c7b8bed17",
-      "checksum_algorithm": "sha256",
-      "files": [
-        {
-          "name": "ketall",
-          "src": "ketall-amd64-windows.exe"
-        },
-        {
-          "name": "kubectl-get_all",
-          "src": "ketall-amd64-windows.exe"
-        }
-      ]
-    },
-    {
-      "os": "windows",
-      "arch": "arm64",
-      "windows_arm_emulation": true,
-      "type": "github_release",
-      "repo_owner": "corneliusweig",
-      "repo_name": "ketall",
-      "repo_id": 170769233,
-      "asset": "ketall-windows-amd64.zip",
-      "format": "zip",
-      "checksum": "c8d831d8d4bb3eb494e80e15c92c30108fa76b6b4165edd1add7b00c7b8bed17",
-      "checksum_algorithm": "sha256",
-      "files": [
-        {
-          "name": "ketall",
-          "src": "ketall-amd64-windows.exe"
-        },
-        {
-          "name": "kubectl-get_all",
-          "src": "ketall-amd64-windows.exe"
+          "src": "ketall-linux-amd64"
         }
       ]
     }
