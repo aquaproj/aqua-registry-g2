@@ -1,0 +1,80 @@
+{
+  "published_at": "2025-06-25T11:54:06Z",
+  "assets": [
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "thanos-io",
+      "repo_name": "thanos",
+      "repo_id": 109162639,
+      "asset": "thanos-0.39.0.linux-amd64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "c3197221660cfc0319a49b4be386ff36e473b013dd191ecd8ce8e2632f0a7d48",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "thanos",
+          "src": "thanos-0.39.0.linux-amd64/thanos"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "thanos-io",
+      "repo_name": "thanos",
+      "repo_id": 109162639,
+      "asset": "thanos-0.39.0.linux-arm64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "9e94931e426032300f9749d8b651153310e1d9eda885eed37a5eb846cafb0a58",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "thanos",
+          "src": "thanos-0.39.0.linux-arm64/thanos"
+        }
+      ]
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "thanos-io",
+      "repo_name": "thanos",
+      "repo_id": 109162639,
+      "asset": "thanos-0.39.0.windows-amd64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "8cfddaa9df75cd1d3c5108089d46bdad588926be062c6dd317095cc200fe5276",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "thanos",
+          "src": "thanos-0.39.0.windows-amd64/thanos.exe"
+        }
+      ]
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "windows_arm_emulation": true,
+      "type": "github_release",
+      "repo_owner": "thanos-io",
+      "repo_name": "thanos",
+      "repo_id": 109162639,
+      "asset": "thanos-0.39.0.windows-amd64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "8cfddaa9df75cd1d3c5108089d46bdad588926be062c6dd317095cc200fe5276",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "thanos",
+          "src": "thanos-0.39.0.windows-amd64/thanos.exe"
+        }
+      ]
+    }
+  ]
+}
