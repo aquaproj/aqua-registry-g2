@@ -129,7 +129,7 @@ jobs:
           # The issue whoever watches this repository gets the mail from, as in ar2.yaml.
           ISSUE: "105"
           # The limit the chain has run with, as in keep-ar2-going.yaml.
-          LIMIT: "10"
+          LIMIT: "30"
   # Waits out the hour from the run's start and dispatches the next run. It runs after a
   # failure, a timeout or a cancellation of close-issues alike, so that one bad run doesn't
   # leave the issues to the schedule.
