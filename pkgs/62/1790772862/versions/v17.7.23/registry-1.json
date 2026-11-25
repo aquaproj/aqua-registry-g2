@@ -1,0 +1,184 @@
+{
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "http",
+      "repo_owner": "gravitational",
+      "repo_name": "teleport",
+      "repo_id": 31558937,
+      "asset": "teleport-v17.7.23-darwin-amd64-bin.tar.gz",
+      "url": "https://cdn.teleport.dev/teleport-v17.7.23-darwin-amd64-bin.tar.gz",
+      "format": "tar.gz",
+      "checksum": "5abc671c5a4a22ade0e3568f90edb826a413ae5c3799658ea287b383603a955f",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "tbot",
+          "src": "teleport/tbot"
+        },
+        {
+          "name": "tctl",
+          "src": "teleport/tctl.app/Contents/MacOS/tctl"
+        },
+        {
+          "name": "teleport",
+          "src": "teleport/teleport"
+        },
+        {
+          "name": "tsh",
+          "src": "teleport/tsh.app/Contents/MacOS/tsh"
+        }
+      ]
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "http",
+      "repo_owner": "gravitational",
+      "repo_name": "teleport",
+      "repo_id": 31558937,
+      "asset": "teleport-v17.7.23-darwin-arm64-bin.tar.gz",
+      "url": "https://cdn.teleport.dev/teleport-v17.7.23-darwin-arm64-bin.tar.gz",
+      "format": "tar.gz",
+      "checksum": "4781af81ebd5ae71526bf0ac3dd84a700db833908fc2db2fe78e41e5757dbb3d",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "tbot",
+          "src": "teleport/tbot"
+        },
+        {
+          "name": "tctl",
+          "src": "teleport/tctl.app/Contents/MacOS/tctl"
+        },
+        {
+          "name": "teleport",
+          "src": "teleport/teleport"
+        },
+        {
+          "name": "tsh",
+          "src": "teleport/tsh.app/Contents/MacOS/tsh"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "glibc",
+      "type": "http",
+      "repo_owner": "gravitational",
+      "repo_name": "teleport",
+      "repo_id": 31558937,
+      "asset": "teleport-v17.7.23-linux-amd64-bin.tar.gz",
+      "url": "https://cdn.teleport.dev/teleport-v17.7.23-linux-amd64-bin.tar.gz",
+      "format": "tar.gz",
+      "checksum": "de929c79cd8d26a8435967ed531dbb9e5e897241a0486f534b56296f7bc9ece4",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "tbot",
+          "src": "teleport/tbot"
+        },
+        {
+          "name": "tctl",
+          "src": "teleport/tctl"
+        },
+        {
+          "name": "teleport",
+          "src": "teleport/teleport"
+        },
+        {
+          "name": "tsh",
+          "src": "teleport/tsh"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "linked_libc": "glibc",
+      "type": "http",
+      "repo_owner": "gravitational",
+      "repo_name": "teleport",
+      "repo_id": 31558937,
+      "asset": "teleport-v17.7.23-linux-arm64-bin.tar.gz",
+      "url": "https://cdn.teleport.dev/teleport-v17.7.23-linux-arm64-bin.tar.gz",
+      "format": "tar.gz",
+      "checksum": "53b58c19b1906751a5b4fc7b609738bbf8fe1b1978a804cb12af3a787e945f19",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "tbot",
+          "src": "teleport/tbot"
+        },
+        {
+          "name": "tctl",
+          "src": "teleport/tctl"
+        },
+        {
+          "name": "teleport",
+          "src": "teleport/teleport"
+        },
+        {
+          "name": "tsh",
+          "src": "teleport/tsh"
+        }
+      ]
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "http",
+      "repo_owner": "gravitational",
+      "repo_name": "teleport",
+      "repo_id": 31558937,
+      "asset": "teleport-v17.7.23-windows-amd64-bin.zip",
+      "url": "https://cdn.teleport.dev/teleport-v17.7.23-windows-amd64-bin.zip",
+      "format": "zip",
+      "checksum": "b47a857a60228327641cdd72e06ad162c4332c76a7f6fababc9624bf7e1a0e1a",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "tbot",
+          "src": "tbot.exe"
+        },
+        {
+          "name": "tctl",
+          "src": "tctl.exe"
+        },
+        {
+          "name": "tsh",
+          "src": "tsh.exe"
+        }
+      ]
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "type": "http",
+      "repo_owner": "gravitational",
+      "repo_name": "teleport",
+      "repo_id": 31558937,
+      "asset": "teleport-v17.7.23-windows-amd64-bin.zip",
+      "url": "https://cdn.teleport.dev/teleport-v17.7.23-windows-amd64-bin.zip",
+      "format": "zip",
+      "checksum": "b47a857a60228327641cdd72e06ad162c4332c76a7f6fababc9624bf7e1a0e1a",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "tbot",
+          "src": "tbot.exe"
+        },
+        {
+          "name": "tctl",
+          "src": "tctl.exe"
+        },
+        {
+          "name": "tsh",
+          "src": "tsh.exe"
+        }
+      ]
+    }
+  ]
+}
