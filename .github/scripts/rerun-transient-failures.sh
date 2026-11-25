@@ -15,7 +15,9 @@
 # asset, which is public: run 45144881274's skills job got it six times over 31 seconds while
 # the run's other jobs downloaded the same asset, so it is GitHub refusing that machine for a
 # while rather than anything the job did. A 403 anywhere else may well be a permission the job
-# lacks, and is left alone.
+# lacks, and is left alone. aqua-installer says "returned error: 403" where curl gives the
+# error, and actionlint-action's installer says "Unexpected HTTP response: 403" (run
+# 45529748432), so both spellings count.
 #
 # A cancelled job is read as transient when GitHub cancelled it for the machine rather than
 # for the job: it hit timeout-minutes, or no runner took it. Run 44711883319's darwin job is
@@ -31,7 +33,7 @@ set -euo pipefail
 readonly MACHINE='exceeded the maximum execution time|not acquired by Runner'
 readonly TRANSIENT='returned error: 5[0-9]{2}|HTTP[/ 0-9.]* 5[0-9]{2}|status code:? 5[0-9]{2}|50[234] (Bad Gateway|Service Unavailable|Gateway Time-?out)|connection reset by peer|TLS handshake timeout|i/o timeout|operation timed out|the download took longer than|public good verifier is not available'
 readonly AQUA_DOWNLOAD='Downloading https://github\.com/aquaproj/aqua/releases/download/'
-readonly FORBIDDEN='returned error: 403'
+readonly FORBIDDEN='returned error: 403|Unexpected HTTP response: 403'
 
 jobs=$(gh run view "$RUN_ID" --attempt "$RUN_ATTEMPT" --json jobs \
 	--jq '.jobs[] | select(.conclusion == "failure" or .conclusion == "cancelled") | select(.name | startswith("status-check") | not) | "\(.databaseId) \(.conclusion)"')
