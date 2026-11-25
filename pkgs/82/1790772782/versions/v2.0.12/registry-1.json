@@ -1,0 +1,156 @@
+{
+  "published_at": "2026-09-04T20:49:53Z",
+  "assets": [
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "containerd",
+      "repo_name": "containerd",
+      "repo_id": 46089560,
+      "asset": "containerd-2.0.12-linux-amd64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "d30b9ac38287bf581a79bd8ab874e385047fb7583d2d7357ceeb4d2492842ca9",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "containerd",
+          "src": "bin/containerd"
+        },
+        {
+          "name": "containerd-shim-runc-v2",
+          "src": "bin/containerd-shim-runc-v2"
+        },
+        {
+          "name": "containerd-stress",
+          "src": "bin/containerd-stress"
+        },
+        {
+          "name": "ctr",
+          "src": "bin/ctr"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "containerd/containerd/.github/workflows/release.yml",
+        "source_ref": "refs/tags/v2.0.12",
+        "source_digest": "f8877dc22535f7c22699399c1dfe6160018792fa",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "containerd",
+      "repo_name": "containerd",
+      "repo_id": 46089560,
+      "asset": "containerd-2.0.12-linux-arm64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "33cfe3a7eca4e3cd559417c3009d027b47909f25fd28dc069fbcf190fdb901a9",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "containerd",
+          "src": "bin/containerd"
+        },
+        {
+          "name": "containerd-shim-runc-v2",
+          "src": "bin/containerd-shim-runc-v2"
+        },
+        {
+          "name": "containerd-stress",
+          "src": "bin/containerd-stress"
+        },
+        {
+          "name": "ctr",
+          "src": "bin/ctr"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "containerd/containerd/.github/workflows/release.yml",
+        "source_ref": "refs/tags/v2.0.12",
+        "source_digest": "f8877dc22535f7c22699399c1dfe6160018792fa",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "containerd",
+      "repo_name": "containerd",
+      "repo_id": 46089560,
+      "asset": "containerd-2.0.12-windows-amd64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "4a07c5005b16005114032fedca906d4e7787fd8eb1fcfb292457e021488c778c",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "containerd",
+          "src": "bin/containerd.exe"
+        },
+        {
+          "name": "containerd-shim-runhcs-v1",
+          "src": "bin/containerd-shim-runhcs-v1.exe"
+        },
+        {
+          "name": "containerd-stress",
+          "src": "bin/containerd-stress.exe"
+        },
+        {
+          "name": "ctr",
+          "src": "bin/ctr.exe"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "containerd/containerd/.github/workflows/release.yml",
+        "source_ref": "refs/tags/v2.0.12",
+        "source_digest": "f8877dc22535f7c22699399c1dfe6160018792fa",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "windows_arm_emulation": true,
+      "type": "github_release",
+      "repo_owner": "containerd",
+      "repo_name": "containerd",
+      "repo_id": 46089560,
+      "asset": "containerd-2.0.12-windows-amd64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "4a07c5005b16005114032fedca906d4e7787fd8eb1fcfb292457e021488c778c",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "containerd",
+          "src": "bin/containerd.exe"
+        },
+        {
+          "name": "containerd-shim-runhcs-v1",
+          "src": "bin/containerd-shim-runhcs-v1.exe"
+        },
+        {
+          "name": "containerd-stress",
+          "src": "bin/containerd-stress.exe"
+        },
+        {
+          "name": "ctr",
+          "src": "bin/ctr.exe"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "containerd/containerd/.github/workflows/release.yml",
+        "source_ref": "refs/tags/v2.0.12",
+        "source_digest": "f8877dc22535f7c22699399c1dfe6160018792fa",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    }
+  ]
+}
