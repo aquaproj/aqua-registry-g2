@@ -9,31 +9,30 @@ name: keep ar2 going
 # restart after a streak of failures, a single run or a finite chain ending, since a chain
 # is meant to be going whenever the workflow is enabled.
 #
-# Mostly on the schedule, which GitHub runs late, hours late at times. workflow_run doesn't
-# fire for a run dispatched with GITHUB_TOKEN, which is every run of the chain; it fires for
-# a run dispatched by a person, so a hand-dispatched run that ends with nothing else going
-# is picked up at once.
+# Mostly hourly, by the keep-ar2-going job of hourly.yaml, which runs the same script: that is
+# a chain of runs, where a schedule here was GitHub's cron, which went more than nine hours
+# without a run. This workflow is the other half: workflow_run doesn't fire for a run
+# dispatched with GITHUB_TOKEN, which is every run of the chain; it fires for a run dispatched
+# by a person, so a hand-dispatched run that ends with nothing else going is picked up at once.
 #
-# To stop the chain, disable the ar2 workflow. To start it again, enable it: the schedule's
-# next run starts a chain, which may be hours away, so dispatch ar2 by hand for one now.
+# To stop the chain, disable the ar2 workflow. To start it again, enable it: hourly.yaml's
+# next run starts a chain, which may be up to an hour away, so dispatch ar2 by hand for one now.
 on:
   workflow_run:
     workflows:
       - ar2
     types:
       - completed
-  schedule:
-    - cron: "23 * * * *"
 permissions: {}
-# One check at a time, so two of them can't each find nothing going and both dispatch.
+# One check at a time, so two of them can't each find nothing going and both dispatch. The
+# keep-ar2-going job of hourly.yaml is in this group too.
 concurrency:
   group: ${{ github.workflow }}
   cancel-in-progress: false
 jobs:
   keep:
     if: >-
-      github.event_name == 'schedule'
-      || github.event.workflow_run.conclusion != 'success'
+      github.event.workflow_run.conclusion != 'success'
       || endsWith(github.event.workflow_run.display_title, 'chain=0')
     runs-on: ubuntu-26.04
     timeout-minutes: 10

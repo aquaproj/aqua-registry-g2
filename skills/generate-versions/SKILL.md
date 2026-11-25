@@ -32,8 +32,9 @@ number, is generating on top of it or until it comes back: once it ends with not
 going, a `chain=forever` run is started again.
 
 Cancelling a run doesn't stop it: the job that dispatches the next run runs after a cancelled
-one too, and a chain that ended without being stopped is started again by
-[keep-ar2-going.yaml](../../.github/workflows/keep-ar2-going.yaml).
+one too, and a chain that ended without being stopped is started again by the keep-ar2-going
+job of [hourly.yaml](../../.github/workflows/hourly.yaml), or by
+[keep-ar2-going.yaml](../../.github/workflows/keep-ar2-going.yaml) after a hand-dispatched run.
 
 ### Generating one package now
 
@@ -72,11 +73,13 @@ isn't counted.
 A run that ends the chain without meaning to is the other case. The next run is dispatched
 from a job of its own that runs whatever became of the run job, so a run cancelled by the job's
 timeout -- run 43969374319 stalled with its runner, and nothing generated for 41 hours -- still
-hands over. keep-ar2-going.yaml covers what that can't: every hour it starts a chain if no ar2
-run is queued or running and the workflow is enabled, which catches a dispatch that failed, the
-restart after five runs in a row that didn't succeed, and a single run or a finite chain ending.
-GitHub runs it late at times. It also runs after a hand-dispatched run that ends; it can't after
-the chain's own runs, since workflow_run doesn't fire for a run dispatched with GITHUB_TOKEN.
+hands over. The keep-ar2-going job of hourly.yaml covers what that can't: every hour it starts a
+chain if no ar2 run is queued or running and the workflow is enabled, which catches a dispatch
+that failed, the restart after five runs in a row that didn't succeed, and a single run or a
+finite chain ending. hourly.yaml is a chain of its own rather than a schedule, since GitHub ran
+the hourly cron hours late. keep-ar2-going.yaml runs the same check after a hand-dispatched run
+that ends; it can't after the chain's own runs, since workflow_run doesn't fire for a run
+dispatched with GITHUB_TOKEN.
 
 `limit` bounds the versions attempted, not the versions generated, so a package that fails
 every time can't spend a whole run.

@@ -12,11 +12,11 @@
 # alone here. Cancelling a run no longer stops it.
 set -euo pipefail
 
-# How many runs in a row that didn't succeed leave the restart to the schedule. chain.sh
+# How many runs in a row that didn't succeed leave the restart to hourly.yaml. chain.sh
 # gives up after five failures, and a restart straight after that would spin on a breakage
-# that doesn't go away; the schedule retries it at its own pace instead.
+# that doesn't go away; hourly.yaml retries it at its own pace instead.
 readonly STREAK=5
-# How the run this was triggered by ended; empty on the schedule.
+# How the run this was triggered by ended; empty when hourly.yaml runs this.
 readonly TRIGGER_CONCLUSION=${CONCLUSION:-}
 
 # shellcheck source=.github/scripts/chain-common.sh
@@ -42,14 +42,14 @@ if [ "$going" != 0 ]; then
 fi
 
 if [ "$EVENT" = workflow_run ] && streak "$STREAK"; then
-	echo "the last $STREAK runs didn't succeed; the schedule restarts the chain" >&2
+	echo "the last $STREAK runs didn't succeed; hourly.yaml restarts the chain" >&2
 	# chain.sh says so on the monitoring issue when the run that made the streak failed,
 	# since it ran. A run that was cancelled by the job's timeout, or never started, ran no
 	# chain.sh, and nobody would hear of a chain that stalls every time.
 	if [ "$TRIGGER_CONCLUSION" != failure ] && new_streak "$STREAK"; then
 		gh issue comment "$ISSUE" \
 			--repo "$GITHUB_REPOSITORY" \
-			--body "The chain of ar2 runs stopped: five runs in a row failed or were cancelled, the last one $TRIGGER_CONCLUSION. keep-ar2-going.yaml tries again every hour, and this isn't said again until a run succeeds. $RUN_URL"
+			--body "The chain of ar2 runs stopped: five runs in a row failed or were cancelled, the last one $TRIGGER_CONCLUSION. hourly.yaml tries again every hour, and this isn't said again until a run succeeds. $RUN_URL"
 	fi
 	exit 0
 fi

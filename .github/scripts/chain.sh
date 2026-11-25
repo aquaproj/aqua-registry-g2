@@ -76,7 +76,7 @@ give_up() {
 	echo "::warning::five runs in a row failed or were cancelled; the chain stops here"
 	gh issue comment "$ISSUE" \
 		--repo "$GITHUB_REPOSITORY" \
-		--body "The chain of ar2 runs stopped: five runs in a row failed or were cancelled. keep-ar2-going.yaml tries again every hour, and this isn't said again until a run succeeds. $RUN_URL"
+		--body "The chain of ar2 runs stopped: five runs in a row failed or were cancelled. hourly.yaml tries again every hour, and this isn't said again until a run succeeds. $RUN_URL"
 }
 
 main() {
@@ -87,7 +87,7 @@ main() {
 		return
 	fi
 	if [ "$OUTCOME" != success ] && streak "$RECENT"; then
-		# Said once: a retry from keep-ar2-going.yaml that fails again finds the streak one
+		# Said once: a retry from hourly.yaml that fails again finds the streak one
 		# longer, and that was said already.
 		if ! streak $((RECENT + 1)); then
 			give_up
