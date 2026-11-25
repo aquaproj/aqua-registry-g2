@@ -1,0 +1,280 @@
+{
+  "published_at": "2026-11-25T06:43:28Z",
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "awslabs",
+      "repo_name": "aidlc-workflows",
+      "repo_id": 1096054771,
+      "asset": "aidlc-darwin-x64",
+      "format": "raw",
+      "checksum": "eefd8e5b7ffa16843649d16fd5dc27c7bfd7d773dc4e2f8d0b7a67274238e423",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "aidlc",
+          "src": "aidlc-darwin-x64"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "aidlc-release.intoto.jsonl"
+        },
+        "certificate_identity": "https://github.com/awslabs/aidlc-workflows/.github/workflows/release.yml@refs/tags/v2.11.5",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      },
+      "github_artifact_attestations": {
+        "signer_workflow": "awslabs/aidlc-workflows/.github/workflows/release.yml",
+        "source_ref": "refs/tags/v2.11.5",
+        "source_digest": "30d674ed196c7051222130ce344bf513c82eff2b",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "awslabs",
+      "repo_name": "aidlc-workflows",
+      "repo_id": 1096054771,
+      "asset": "aidlc-darwin-arm64",
+      "format": "raw",
+      "checksum": "ad7b27e1cb6a23badf646bb38120bcd970b0b1b3bef8130b3ce687b17041d3c5",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "aidlc",
+          "src": "aidlc-darwin-arm64"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "aidlc-release.intoto.jsonl"
+        },
+        "certificate_identity": "https://github.com/awslabs/aidlc-workflows/.github/workflows/release.yml@refs/tags/v2.11.5",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      },
+      "github_artifact_attestations": {
+        "signer_workflow": "awslabs/aidlc-workflows/.github/workflows/release.yml",
+        "source_ref": "refs/tags/v2.11.5",
+        "source_digest": "30d674ed196c7051222130ce344bf513c82eff2b",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "awslabs",
+      "repo_name": "aidlc-workflows",
+      "repo_id": 1096054771,
+      "asset": "aidlc-linux-x64",
+      "format": "raw",
+      "checksum": "d81e4511290a5b0d94143da73633abe17abe4e1d9654f82d81a8c516c087a439",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "aidlc",
+          "src": "aidlc-linux-x64"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "aidlc-release.intoto.jsonl"
+        },
+        "certificate_identity": "https://github.com/awslabs/aidlc-workflows/.github/workflows/release.yml@refs/tags/v2.11.5",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      },
+      "github_artifact_attestations": {
+        "signer_workflow": "awslabs/aidlc-workflows/.github/workflows/release.yml",
+        "source_ref": "refs/tags/v2.11.5",
+        "source_digest": "30d674ed196c7051222130ce344bf513c82eff2b",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "variants": {
+        "libc": "musl"
+      },
+      "linked_libc": "musl",
+      "type": "github_release",
+      "repo_owner": "awslabs",
+      "repo_name": "aidlc-workflows",
+      "repo_id": 1096054771,
+      "asset": "aidlc-linux-x64-musl",
+      "format": "raw",
+      "checksum": "293823d3fa440a5f2a7378f01335469a1a4d0eeb10015efe89da922d633bac33",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "aidlc",
+          "src": "aidlc-linux-x64-musl"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "aidlc-release.intoto.jsonl"
+        },
+        "certificate_identity": "https://github.com/awslabs/aidlc-workflows/.github/workflows/release.yml@refs/tags/v2.11.5",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      },
+      "github_artifact_attestations": {
+        "signer_workflow": "awslabs/aidlc-workflows/.github/workflows/release.yml",
+        "source_ref": "refs/tags/v2.11.5",
+        "source_digest": "30d674ed196c7051222130ce344bf513c82eff2b",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "awslabs",
+      "repo_name": "aidlc-workflows",
+      "repo_id": 1096054771,
+      "asset": "aidlc-linux-arm64",
+      "format": "raw",
+      "checksum": "b8d3e5d0b0b2900bdac3a62309a35ba16771e456c87aeabb984206414bcc5c3a",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "aidlc",
+          "src": "aidlc-linux-arm64"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "aidlc-release.intoto.jsonl"
+        },
+        "certificate_identity": "https://github.com/awslabs/aidlc-workflows/.github/workflows/release.yml@refs/tags/v2.11.5",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      },
+      "github_artifact_attestations": {
+        "signer_workflow": "awslabs/aidlc-workflows/.github/workflows/release.yml",
+        "source_ref": "refs/tags/v2.11.5",
+        "source_digest": "30d674ed196c7051222130ce344bf513c82eff2b",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "variants": {
+        "libc": "musl"
+      },
+      "linked_libc": "musl",
+      "type": "github_release",
+      "repo_owner": "awslabs",
+      "repo_name": "aidlc-workflows",
+      "repo_id": 1096054771,
+      "asset": "aidlc-linux-arm64-musl",
+      "format": "raw",
+      "checksum": "4e0cf876c56e728e012afa89d768e44a86a2b7779974e339f77d017528be3012",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "aidlc",
+          "src": "aidlc-linux-arm64-musl"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "aidlc-release.intoto.jsonl"
+        },
+        "certificate_identity": "https://github.com/awslabs/aidlc-workflows/.github/workflows/release.yml@refs/tags/v2.11.5",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      },
+      "github_artifact_attestations": {
+        "signer_workflow": "awslabs/aidlc-workflows/.github/workflows/release.yml",
+        "source_ref": "refs/tags/v2.11.5",
+        "source_digest": "30d674ed196c7051222130ce344bf513c82eff2b",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "awslabs",
+      "repo_name": "aidlc-workflows",
+      "repo_id": 1096054771,
+      "asset": "aidlc-windows-x64.exe",
+      "format": "raw",
+      "checksum": "eab3722af50280ddd62c82231ea5676eb8e8d0f098e6c3173283e6e39ee890f9",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "aidlc",
+          "src": "aidlc-windows-x64.exe"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "aidlc-release.intoto.jsonl"
+        },
+        "certificate_identity": "https://github.com/awslabs/aidlc-workflows/.github/workflows/release.yml@refs/tags/v2.11.5",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      },
+      "github_artifact_attestations": {
+        "signer_workflow": "awslabs/aidlc-workflows/.github/workflows/release.yml",
+        "source_ref": "refs/tags/v2.11.5",
+        "source_digest": "30d674ed196c7051222130ce344bf513c82eff2b",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "windows_arm_emulation": true,
+      "type": "github_release",
+      "repo_owner": "awslabs",
+      "repo_name": "aidlc-workflows",
+      "repo_id": 1096054771,
+      "asset": "aidlc-windows-x64.exe",
+      "format": "raw",
+      "checksum": "eab3722af50280ddd62c82231ea5676eb8e8d0f098e6c3173283e6e39ee890f9",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "aidlc",
+          "src": "aidlc-windows-x64.exe"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "aidlc-release.intoto.jsonl"
+        },
+        "certificate_identity": "https://github.com/awslabs/aidlc-workflows/.github/workflows/release.yml@refs/tags/v2.11.5",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      },
+      "github_artifact_attestations": {
+        "signer_workflow": "awslabs/aidlc-workflows/.github/workflows/release.yml",
+        "source_ref": "refs/tags/v2.11.5",
+        "source_digest": "30d674ed196c7051222130ce344bf513c82eff2b",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    }
+  ]
+}
