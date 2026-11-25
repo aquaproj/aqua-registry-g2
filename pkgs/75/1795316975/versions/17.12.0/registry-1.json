@@ -1,0 +1,261 @@
+{
+  "published_at": "2026-11-12T19:43:32Z",
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "theseus-rs",
+      "repo_name": "postgresql-binaries",
+      "repo_id": 746919647,
+      "asset": "postgresql-17.12.0-x86_64-apple-darwin.tar.gz",
+      "format": "tar.gz",
+      "checksum": "34ba0eca0f15776b4ab9a07b2decc6fb0b1910a57870ad7d7dacb7399b43c9bd",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "psql",
+          "src": "postgresql-17.12.0-x86_64-apple-darwin/bin/psql"
+        },
+        {
+          "name": "pg_dump",
+          "src": "postgresql-17.12.0-x86_64-apple-darwin/bin/pg_dump"
+        },
+        {
+          "name": "pg_dumpall",
+          "src": "postgresql-17.12.0-x86_64-apple-darwin/bin/pg_dumpall"
+        },
+        {
+          "name": "pg_restore",
+          "src": "postgresql-17.12.0-x86_64-apple-darwin/bin/pg_restore"
+        }
+      ]
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "theseus-rs",
+      "repo_name": "postgresql-binaries",
+      "repo_id": 746919647,
+      "asset": "postgresql-17.12.0-aarch64-apple-darwin.tar.gz",
+      "format": "tar.gz",
+      "checksum": "2f752033b208f9a6a12ef64a9ee23bf19149cff160841980db1e221bf7d24809",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "psql",
+          "src": "postgresql-17.12.0-aarch64-apple-darwin/bin/psql"
+        },
+        {
+          "name": "pg_dump",
+          "src": "postgresql-17.12.0-aarch64-apple-darwin/bin/pg_dump"
+        },
+        {
+          "name": "pg_dumpall",
+          "src": "postgresql-17.12.0-aarch64-apple-darwin/bin/pg_dumpall"
+        },
+        {
+          "name": "pg_restore",
+          "src": "postgresql-17.12.0-aarch64-apple-darwin/bin/pg_restore"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "variants": {
+        "libc": "glibc"
+      },
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "theseus-rs",
+      "repo_name": "postgresql-binaries",
+      "repo_id": 746919647,
+      "asset": "postgresql-17.12.0-x86_64-unknown-linux-gnu.tar.gz",
+      "format": "tar.gz",
+      "checksum": "af316b6e42266ec0a153bdc9194e0b1b5f12c9ce4f0b13d9a96dfca77d9aaecc",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "psql",
+          "src": "postgresql-17.12.0-x86_64-unknown-linux-gnu/bin/psql"
+        },
+        {
+          "name": "pg_dump",
+          "src": "postgresql-17.12.0-x86_64-unknown-linux-gnu/bin/pg_dump"
+        },
+        {
+          "name": "pg_dumpall",
+          "src": "postgresql-17.12.0-x86_64-unknown-linux-gnu/bin/pg_dumpall"
+        },
+        {
+          "name": "pg_restore",
+          "src": "postgresql-17.12.0-x86_64-unknown-linux-gnu/bin/pg_restore"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "variants": {
+        "libc": "musl"
+      },
+      "linked_libc": "musl",
+      "type": "github_release",
+      "repo_owner": "theseus-rs",
+      "repo_name": "postgresql-binaries",
+      "repo_id": 746919647,
+      "asset": "postgresql-17.12.0-x86_64-unknown-linux-musl.tar.gz",
+      "format": "tar.gz",
+      "checksum": "7d8c14c474d12d3521847a35d139e19af874802505965e05d5e939e267717c50",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "psql",
+          "src": "postgresql-17.12.0-x86_64-unknown-linux-musl/bin/psql"
+        },
+        {
+          "name": "pg_dump",
+          "src": "postgresql-17.12.0-x86_64-unknown-linux-musl/bin/pg_dump"
+        },
+        {
+          "name": "pg_dumpall",
+          "src": "postgresql-17.12.0-x86_64-unknown-linux-musl/bin/pg_dumpall"
+        },
+        {
+          "name": "pg_restore",
+          "src": "postgresql-17.12.0-x86_64-unknown-linux-musl/bin/pg_restore"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "variants": {
+        "libc": "glibc"
+      },
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "theseus-rs",
+      "repo_name": "postgresql-binaries",
+      "repo_id": 746919647,
+      "asset": "postgresql-17.12.0-aarch64-unknown-linux-gnu.tar.gz",
+      "format": "tar.gz",
+      "checksum": "9b3ca376cbdecb297711f9b09bfe834ae0f7c231042de58b7cb4bb2c0a526301",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "psql",
+          "src": "postgresql-17.12.0-aarch64-unknown-linux-gnu/bin/psql"
+        },
+        {
+          "name": "pg_dump",
+          "src": "postgresql-17.12.0-aarch64-unknown-linux-gnu/bin/pg_dump"
+        },
+        {
+          "name": "pg_dumpall",
+          "src": "postgresql-17.12.0-aarch64-unknown-linux-gnu/bin/pg_dumpall"
+        },
+        {
+          "name": "pg_restore",
+          "src": "postgresql-17.12.0-aarch64-unknown-linux-gnu/bin/pg_restore"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "variants": {
+        "libc": "musl"
+      },
+      "linked_libc": "musl",
+      "type": "github_release",
+      "repo_owner": "theseus-rs",
+      "repo_name": "postgresql-binaries",
+      "repo_id": 746919647,
+      "asset": "postgresql-17.12.0-aarch64-unknown-linux-musl.tar.gz",
+      "format": "tar.gz",
+      "checksum": "82c5331d3c9b3c3041c6bb19369f5d07372045141e44793e22c37fa7d1562db4",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "psql",
+          "src": "postgresql-17.12.0-aarch64-unknown-linux-musl/bin/psql"
+        },
+        {
+          "name": "pg_dump",
+          "src": "postgresql-17.12.0-aarch64-unknown-linux-musl/bin/pg_dump"
+        },
+        {
+          "name": "pg_dumpall",
+          "src": "postgresql-17.12.0-aarch64-unknown-linux-musl/bin/pg_dumpall"
+        },
+        {
+          "name": "pg_restore",
+          "src": "postgresql-17.12.0-aarch64-unknown-linux-musl/bin/pg_restore"
+        }
+      ]
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "theseus-rs",
+      "repo_name": "postgresql-binaries",
+      "repo_id": 746919647,
+      "asset": "postgresql-17.12.0-x86_64-pc-windows-msvc.tar.gz",
+      "format": "tar.gz",
+      "checksum": "11c843939c303aceb70ad79d4c3c27da4b7dec2ffb2d5022ec8edd501517b21b",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "psql",
+          "src": "postgresql-17.12.0-x86_64-pc-windows-msvc/bin/psql.exe"
+        },
+        {
+          "name": "pg_dump",
+          "src": "postgresql-17.12.0-x86_64-pc-windows-msvc/bin/pg_dump.exe"
+        },
+        {
+          "name": "pg_dumpall",
+          "src": "postgresql-17.12.0-x86_64-pc-windows-msvc/bin/pg_dumpall.exe"
+        },
+        {
+          "name": "pg_restore",
+          "src": "postgresql-17.12.0-x86_64-pc-windows-msvc/bin/pg_restore.exe"
+        }
+      ]
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "theseus-rs",
+      "repo_name": "postgresql-binaries",
+      "repo_id": 746919647,
+      "asset": "postgresql-17.12.0-aarch64-pc-windows-msvc.tar.gz",
+      "format": "tar.gz",
+      "checksum": "65de60f8b27d64266483f1f34d49ea69d207984f7485210f110a3f75abdbfda1",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "psql",
+          "src": "postgresql-17.12.0-aarch64-pc-windows-msvc/bin/psql.exe"
+        },
+        {
+          "name": "pg_dump",
+          "src": "postgresql-17.12.0-aarch64-pc-windows-msvc/bin/pg_dump.exe"
+        },
+        {
+          "name": "pg_dumpall",
+          "src": "postgresql-17.12.0-aarch64-pc-windows-msvc/bin/pg_dumpall.exe"
+        },
+        {
+          "name": "pg_restore",
+          "src": "postgresql-17.12.0-aarch64-pc-windows-msvc/bin/pg_restore.exe"
+        }
+      ]
+    }
+  ]
+}
