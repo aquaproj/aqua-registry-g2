@@ -1,0 +1,262 @@
+{
+  "published_at": "2026-10-27T12:13:21Z",
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "theseus-rs",
+      "repo_name": "postgresql-binaries",
+      "repo_id": 746919647,
+      "asset": "postgresql-14.3.4-x86_64-apple-darwin.tar.gz",
+      "format": "tar.gz",
+      "checksum": "d60271a6e04d69e04fc386996c7f014c9fa226c639dab4db034a6c9f3d3c317c",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "psql",
+          "src": "postgresql-14.3.4-x86_64-apple-darwin/bin/psql"
+        },
+        {
+          "name": "pg_dump",
+          "src": "postgresql-14.3.4-x86_64-apple-darwin/bin/pg_dump"
+        },
+        {
+          "name": "pg_dumpall",
+          "src": "postgresql-14.3.4-x86_64-apple-darwin/bin/pg_dumpall"
+        },
+        {
+          "name": "pg_restore",
+          "src": "postgresql-14.3.4-x86_64-apple-darwin/bin/pg_restore"
+        }
+      ]
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "theseus-rs",
+      "repo_name": "postgresql-binaries",
+      "repo_id": 746919647,
+      "asset": "postgresql-14.3.4-aarch64-apple-darwin.tar.gz",
+      "format": "tar.gz",
+      "checksum": "770dfc8ed60e72f0124c503fa6598dff6e31c5558b6908ac8eb180ef1e531d9a",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "psql",
+          "src": "postgresql-14.3.4-aarch64-apple-darwin/bin/psql"
+        },
+        {
+          "name": "pg_dump",
+          "src": "postgresql-14.3.4-aarch64-apple-darwin/bin/pg_dump"
+        },
+        {
+          "name": "pg_dumpall",
+          "src": "postgresql-14.3.4-aarch64-apple-darwin/bin/pg_dumpall"
+        },
+        {
+          "name": "pg_restore",
+          "src": "postgresql-14.3.4-aarch64-apple-darwin/bin/pg_restore"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "variants": {
+        "libc": "glibc"
+      },
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "theseus-rs",
+      "repo_name": "postgresql-binaries",
+      "repo_id": 746919647,
+      "asset": "postgresql-14.3.4-x86_64-unknown-linux-gnu.tar.gz",
+      "format": "tar.gz",
+      "checksum": "3fade13d61f414fa57279567c99209c6e492bed21144f4984822ddda389f4ada",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "psql",
+          "src": "postgresql-14.3.4-x86_64-unknown-linux-gnu/bin/psql"
+        },
+        {
+          "name": "pg_dump",
+          "src": "postgresql-14.3.4-x86_64-unknown-linux-gnu/bin/pg_dump"
+        },
+        {
+          "name": "pg_dumpall",
+          "src": "postgresql-14.3.4-x86_64-unknown-linux-gnu/bin/pg_dumpall"
+        },
+        {
+          "name": "pg_restore",
+          "src": "postgresql-14.3.4-x86_64-unknown-linux-gnu/bin/pg_restore"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "variants": {
+        "libc": "musl"
+      },
+      "linked_libc": "musl",
+      "type": "github_release",
+      "repo_owner": "theseus-rs",
+      "repo_name": "postgresql-binaries",
+      "repo_id": 746919647,
+      "asset": "postgresql-14.3.4-x86_64-unknown-linux-musl.tar.gz",
+      "format": "tar.gz",
+      "checksum": "ae5e362273cd924a8bcc2197159e5ac547b6ffdc34ed037c4b1c0ba36fe0bbc4",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "psql",
+          "src": "postgresql-14.3.4-x86_64-unknown-linux-musl/bin/psql"
+        },
+        {
+          "name": "pg_dump",
+          "src": "postgresql-14.3.4-x86_64-unknown-linux-musl/bin/pg_dump"
+        },
+        {
+          "name": "pg_dumpall",
+          "src": "postgresql-14.3.4-x86_64-unknown-linux-musl/bin/pg_dumpall"
+        },
+        {
+          "name": "pg_restore",
+          "src": "postgresql-14.3.4-x86_64-unknown-linux-musl/bin/pg_restore"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "variants": {
+        "libc": "glibc"
+      },
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "theseus-rs",
+      "repo_name": "postgresql-binaries",
+      "repo_id": 746919647,
+      "asset": "postgresql-14.3.4-aarch64-unknown-linux-gnu.tar.gz",
+      "format": "tar.gz",
+      "checksum": "63f13e843ff9a19c7e3c7857749161cb14e3db6befe4a3814258f341d7746b7e",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "psql",
+          "src": "postgresql-14.3.4-aarch64-unknown-linux-gnu/bin/psql"
+        },
+        {
+          "name": "pg_dump",
+          "src": "postgresql-14.3.4-aarch64-unknown-linux-gnu/bin/pg_dump"
+        },
+        {
+          "name": "pg_dumpall",
+          "src": "postgresql-14.3.4-aarch64-unknown-linux-gnu/bin/pg_dumpall"
+        },
+        {
+          "name": "pg_restore",
+          "src": "postgresql-14.3.4-aarch64-unknown-linux-gnu/bin/pg_restore"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "variants": {
+        "libc": "musl"
+      },
+      "linked_libc": "musl",
+      "type": "github_release",
+      "repo_owner": "theseus-rs",
+      "repo_name": "postgresql-binaries",
+      "repo_id": 746919647,
+      "asset": "postgresql-14.3.4-aarch64-unknown-linux-musl.tar.gz",
+      "format": "tar.gz",
+      "checksum": "633f6ebf8df75aea899dfac1e16b3328713f825db3441a238970f91c00aa3361",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "psql",
+          "src": "postgresql-14.3.4-aarch64-unknown-linux-musl/bin/psql"
+        },
+        {
+          "name": "pg_dump",
+          "src": "postgresql-14.3.4-aarch64-unknown-linux-musl/bin/pg_dump"
+        },
+        {
+          "name": "pg_dumpall",
+          "src": "postgresql-14.3.4-aarch64-unknown-linux-musl/bin/pg_dumpall"
+        },
+        {
+          "name": "pg_restore",
+          "src": "postgresql-14.3.4-aarch64-unknown-linux-musl/bin/pg_restore"
+        }
+      ]
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "theseus-rs",
+      "repo_name": "postgresql-binaries",
+      "repo_id": 746919647,
+      "asset": "postgresql-14.3.4-x86_64-pc-windows-msvc.tar.gz",
+      "format": "tar.gz",
+      "checksum": "26c07a505867483503a8c484c6535f628dd2e71a45cca2edbd346d7ca89e7ded",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "psql",
+          "src": "postgresql-14.3.4-x86_64-pc-windows-msvc/bin/psql.exe"
+        },
+        {
+          "name": "pg_dump",
+          "src": "postgresql-14.3.4-x86_64-pc-windows-msvc/bin/pg_dump.exe"
+        },
+        {
+          "name": "pg_dumpall",
+          "src": "postgresql-14.3.4-x86_64-pc-windows-msvc/bin/pg_dumpall.exe"
+        },
+        {
+          "name": "pg_restore",
+          "src": "postgresql-14.3.4-x86_64-pc-windows-msvc/bin/pg_restore.exe"
+        }
+      ]
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "windows_arm_emulation": true,
+      "type": "github_release",
+      "repo_owner": "theseus-rs",
+      "repo_name": "postgresql-binaries",
+      "repo_id": 746919647,
+      "asset": "postgresql-14.3.4-x86_64-pc-windows-msvc.tar.gz",
+      "format": "tar.gz",
+      "checksum": "26c07a505867483503a8c484c6535f628dd2e71a45cca2edbd346d7ca89e7ded",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "psql",
+          "src": "postgresql-14.3.4-x86_64-pc-windows-msvc/bin/psql.exe"
+        },
+        {
+          "name": "pg_dump",
+          "src": "postgresql-14.3.4-x86_64-pc-windows-msvc/bin/pg_dump.exe"
+        },
+        {
+          "name": "pg_dumpall",
+          "src": "postgresql-14.3.4-x86_64-pc-windows-msvc/bin/pg_dumpall.exe"
+        },
+        {
+          "name": "pg_restore",
+          "src": "postgresql-14.3.4-x86_64-pc-windows-msvc/bin/pg_restore.exe"
+        }
+      ]
+    }
+  ]
+}
