@@ -1,0 +1,101 @@
+{
+  "assets": [
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "static",
+      "type": "http",
+      "repo_owner": "herdrdev",
+      "repo_name": "herdr-core",
+      "repo_id": 1422648422,
+      "asset": "herdr-core-linux-x86_64.tar.gz",
+      "url": "https://releases.herdr.dev/core/0.1.22/herdr-core-linux-x86_64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "3054ec3992ce80c5715d721caa9dcefa6056721d15dc113f4750afce763ba5df",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "herdr-core",
+          "src": "herdr-core"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "linked_libc": "static",
+      "type": "http",
+      "repo_owner": "herdrdev",
+      "repo_name": "herdr-core",
+      "repo_id": 1422648422,
+      "asset": "herdr-core-linux-aarch64.tar.gz",
+      "url": "https://releases.herdr.dev/core/0.1.22/herdr-core-linux-aarch64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "98757985245d45f8d73dd85e68b139b7f167c28488bb89edd9834c3f5a5cf4cf",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "herdr-core",
+          "src": "herdr-core"
+        }
+      ]
+    },
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "http",
+      "repo_owner": "herdrdev",
+      "repo_name": "herdr-core",
+      "repo_id": 1422648422,
+      "asset": "herdr-core-macos-x86_64.tar.gz",
+      "url": "https://releases.herdr.dev/core/0.1.22/herdr-core-macos-x86_64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "35144041969e870ddb4edcd2fd08fd26dfe5cee7d18e6b48adb276f90a48aa19",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "herdr-core",
+          "src": "Herdr Core.app/Contents/MacOS/herdr-core"
+        }
+      ]
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "http",
+      "repo_owner": "herdrdev",
+      "repo_name": "herdr-core",
+      "repo_id": 1422648422,
+      "asset": "herdr-core-macos-aarch64.tar.gz",
+      "url": "https://releases.herdr.dev/core/0.1.22/herdr-core-macos-aarch64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "90798daadefa8d126b90ef0bcdbe9c7dda9c6cfbf011a247065ab5da348f350e",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "herdr-core",
+          "src": "Herdr Core.app/Contents/MacOS/herdr-core"
+        }
+      ]
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "http",
+      "repo_owner": "herdrdev",
+      "repo_name": "herdr-core",
+      "repo_id": 1422648422,
+      "asset": "herdr-core-windows-x86_64.zip",
+      "url": "https://releases.herdr.dev/core/0.1.22/herdr-core-windows-x86_64.zip",
+      "format": "zip",
+      "checksum": "37cae9d6c522e205efcdb55a42d354285f41b8cbb4c6e60fb505b73b151966c9",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "herdr-core",
+          "src": "herdr-core.exe"
+        }
+      ]
+    }
+  ]
+}
