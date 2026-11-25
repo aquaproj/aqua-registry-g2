@@ -70,6 +70,32 @@ jobs:
           gh api rate_limit --jq '"api-budget end core=\(.resources.core.used)/\(.resources.core.limit) graphql=\(.resources.graphql.used)/\(.resources.graphql.limit) reset=\(.resources.core.reset)"'
         env:
           GH_TOKEN: ${{ github.token }}
+  # Starts the checks of a pull request of ar2's that GitHub dropped the event of, so that no
+  # workflow ever ran for it. Here because this is the hourly chain GitHub's late cron can't
+  # hold up; it has nothing else to do with closing issues. See the script.
+  kick-unchecked-prs:
+    runs-on: ubuntu-26.04
+    # The app's key is open to main only.
+    environment: index
+    timeout-minutes: 10
+    permissions:
+      # Checking out main for the script.
+      contents: read
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+          sparse-checkout: .github/scripts
+      # The app's token: a branch updated with GITHUB_TOKEN starts no workflow.
+      - uses: actions/create-github-app-token@f418cff399f7aef4c2f0ad47e25ca7a6abbdd6fc # v3.4.0
+        id: pr_token
+        with:
+          client-id: ${{ vars.AR2_PR_CLIENT_ID }}
+          private-key: ${{ secrets.AR2_PR_PRIVATE_KEY }}
+      - run: bash .github/scripts/kick-unchecked-prs.sh
+        env:
+          GH_REPO: ${{ github.repository }}
+          GH_TOKEN: ${{ steps.pr_token.outputs.token }}
   # Waits out the hour from the run's start and dispatches the next run. It runs after a
   # failure, a timeout or a cancellation of close-issues alike, so that one bad run doesn't
   # leave the issues to the schedule.
