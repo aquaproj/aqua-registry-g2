@@ -1,0 +1,81 @@
+{
+  "assets": [
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "glibc",
+      "type": "http",
+      "repo_owner": "blender",
+      "repo_name": "blender",
+      "repo_id": 213916896,
+      "asset": "blender-4.5.6-linux-x64.tar.xz",
+      "url": "https://download.blender.org/release/Blender4.5/blender-4.5.6-linux-x64.tar.xz",
+      "format": "tar.xz",
+      "checksum": "d4a6ba867b35d65cfa16929178bcafaa5d774afef93beda5493cacdcd912b3a6",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "blender",
+          "src": "blender-4.5.6-linux-x64/blender"
+        }
+      ]
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "http",
+      "repo_owner": "blender",
+      "repo_name": "blender",
+      "repo_id": 213916896,
+      "asset": "blender-4.5.6-windows-x64.zip",
+      "url": "https://download.blender.org/release/Blender4.5/blender-4.5.6-windows-x64.zip",
+      "format": "zip",
+      "checksum": "4fa8b29737d7bf9d83e5c931d4dd7bb75c61fb26f82eb276c5eaec545d98907a",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "blender",
+          "src": "blender-4.5.6-windows-x64/blender.exe"
+        }
+      ]
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "type": "http",
+      "repo_owner": "blender",
+      "repo_name": "blender",
+      "repo_id": 213916896,
+      "asset": "blender-4.5.6-windows-arm64.zip",
+      "url": "https://download.blender.org/release/Blender4.5/blender-4.5.6-windows-arm64.zip",
+      "format": "zip",
+      "checksum": "6ee26c80beffe223d1e47e0e9c028cc6a971451044b118cfb95911de44883a2f",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "blender",
+          "src": "blender-4.5.6-windows-arm64/blender.exe"
+        }
+      ]
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "http",
+      "repo_owner": "blender",
+      "repo_name": "blender",
+      "repo_id": 213916896,
+      "asset": "blender-4.5.6-macos-arm64.dmg",
+      "url": "https://download.blender.org/release/Blender4.5/blender-4.5.6-macos-arm64.dmg",
+      "format": "dmg",
+      "checksum": "02882be85b66b658aa280beabbe482583cdbe1fee86c582f7504bc272f58afe1",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "blender",
+          "src": "Blender.app/Contents/MacOS/Blender"
+        }
+      ]
+    }
+  ]
+}
