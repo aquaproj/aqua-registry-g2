@@ -17,7 +17,15 @@
           "name": "rekor-cli",
           "src": "rekor-cli-darwin-amd64"
         }
-      ]
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "rekor-cli-darwin-amd64-keyless.sigstore.json"
+        },
+        "certificate_identity": "keyless@projectsigstore.iam.gserviceaccount.com",
+        "certificate_oidc_issuer": "https://accounts.google.com"
+      }
     },
     {
       "os": "darwin",
@@ -35,7 +43,15 @@
           "name": "rekor-cli",
           "src": "rekor-cli-darwin-arm64"
         }
-      ]
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "rekor-cli-darwin-arm64-keyless.sigstore.json"
+        },
+        "certificate_identity": "keyless@projectsigstore.iam.gserviceaccount.com",
+        "certificate_oidc_issuer": "https://accounts.google.com"
+      }
     },
     {
       "os": "linux",
@@ -54,7 +70,15 @@
           "name": "rekor-cli",
           "src": "rekor-cli-linux-amd64"
         }
-      ]
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "rekor-cli-linux-amd64-keyless.sigstore.json"
+        },
+        "certificate_identity": "keyless@projectsigstore.iam.gserviceaccount.com",
+        "certificate_oidc_issuer": "https://accounts.google.com"
+      }
     },
     {
       "os": "linux",
@@ -73,7 +97,15 @@
           "name": "rekor-cli",
           "src": "rekor-cli-linux-arm64"
         }
-      ]
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "rekor-cli-linux-arm64-keyless.sigstore.json"
+        },
+        "certificate_identity": "keyless@projectsigstore.iam.gserviceaccount.com",
+        "certificate_oidc_issuer": "https://accounts.google.com"
+      }
     },
     {
       "os": "windows",
@@ -91,11 +123,20 @@
           "name": "rekor-cli",
           "src": "rekor-cli-windows-amd64.exe"
         }
-      ]
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "rekor-cli-windows-amd64.exe-keyless.sigstore.json"
+        },
+        "certificate_identity": "keyless@projectsigstore.iam.gserviceaccount.com",
+        "certificate_oidc_issuer": "https://accounts.google.com"
+      }
     },
     {
       "os": "windows",
       "arch": "arm64",
+      "windows_arm_emulation": true,
       "type": "github_release",
       "repo_owner": "sigstore",
       "repo_name": "rekor",
@@ -109,7 +150,15 @@
           "name": "rekor-cli",
           "src": "rekor-cli-windows-amd64.exe"
         }
-      ]
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "rekor-cli-windows-amd64.exe-keyless.sigstore.json"
+        },
+        "certificate_identity": "keyless@projectsigstore.iam.gserviceaccount.com",
+        "certificate_oidc_issuer": "https://accounts.google.com"
+      }
     }
   ]
 }
