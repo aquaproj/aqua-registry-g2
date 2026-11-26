@@ -1,0 +1,176 @@
+{
+  "published_at": "2026-11-09T10:53:11Z",
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "home-operations",
+      "repo_name": "flate",
+      "repo_id": 1246047993,
+      "asset": "flate_0.7.2_darwin_amd64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "46fcf5dccc0397953a6baba3ef0bf345bd10bbf64a5fa776b968eb7423ccaaab",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "flate",
+          "src": "flate"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "flate_0.7.2_darwin_amd64.tar.gz.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/home-operations/flate/.github/workflows/goreleaser.yaml@refs/tags/v0.7.2",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "certificate_github_workflow_repository": "home-operations/flate",
+        "certificate_github_workflow_ref": "refs/tags/v0.7.2"
+      }
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "home-operations",
+      "repo_name": "flate",
+      "repo_id": 1246047993,
+      "asset": "flate_0.7.2_darwin_arm64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "cb43213808a1a1c5d363e1299c8fbecea950473a0e2c0dd7ec4a6212f0c0f259",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "flate",
+          "src": "flate"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "flate_0.7.2_darwin_arm64.tar.gz.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/home-operations/flate/.github/workflows/goreleaser.yaml@refs/tags/v0.7.2",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "certificate_github_workflow_repository": "home-operations/flate",
+        "certificate_github_workflow_ref": "refs/tags/v0.7.2"
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "home-operations",
+      "repo_name": "flate",
+      "repo_id": 1246047993,
+      "asset": "flate_0.7.2_linux_amd64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "40d076e3d1ce512346b6ef26cadd53478745ea10a4357380f8699482ed42b46f",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "flate",
+          "src": "flate"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "flate_0.7.2_linux_amd64.tar.gz.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/home-operations/flate/.github/workflows/goreleaser.yaml@refs/tags/v0.7.2",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "certificate_github_workflow_repository": "home-operations/flate",
+        "certificate_github_workflow_ref": "refs/tags/v0.7.2"
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "home-operations",
+      "repo_name": "flate",
+      "repo_id": 1246047993,
+      "asset": "flate_0.7.2_linux_arm64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "2261f90e31c9b81b5e18e5ffc4bdabde0a422cf9266366b6abdfcecdde601b1a",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "flate",
+          "src": "flate"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "flate_0.7.2_linux_arm64.tar.gz.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/home-operations/flate/.github/workflows/goreleaser.yaml@refs/tags/v0.7.2",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "certificate_github_workflow_repository": "home-operations/flate",
+        "certificate_github_workflow_ref": "refs/tags/v0.7.2"
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "home-operations",
+      "repo_name": "flate",
+      "repo_id": 1246047993,
+      "asset": "flate_0.7.2_windows_amd64.zip",
+      "format": "zip",
+      "checksum": "22c3b97cdfa99dedfdf22f1481bff84d26aa5aab14106703f7d69594f53a8fae",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "flate",
+          "src": "flate.exe"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "flate_0.7.2_windows_amd64.zip.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/home-operations/flate/.github/workflows/goreleaser.yaml@refs/tags/v0.7.2",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "certificate_github_workflow_repository": "home-operations/flate",
+        "certificate_github_workflow_ref": "refs/tags/v0.7.2"
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "windows_arm_emulation": true,
+      "type": "github_release",
+      "repo_owner": "home-operations",
+      "repo_name": "flate",
+      "repo_id": 1246047993,
+      "asset": "flate_0.7.2_windows_amd64.zip",
+      "format": "zip",
+      "checksum": "22c3b97cdfa99dedfdf22f1481bff84d26aa5aab14106703f7d69594f53a8fae",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "flate",
+          "src": "flate.exe"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "flate_0.7.2_windows_amd64.zip.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/home-operations/flate/.github/workflows/goreleaser.yaml@refs/tags/v0.7.2",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "certificate_github_workflow_repository": "home-operations/flate",
+        "certificate_github_workflow_ref": "refs/tags/v0.7.2"
+      }
+    }
+  ]
+}
