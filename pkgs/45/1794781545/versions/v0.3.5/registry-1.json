@@ -15,13 +15,14 @@
       "files": [
         {
           "name": "astra",
-          "src": "astra"
+          "src": "astra-cli"
         }
       ]
     },
     {
       "os": "linux",
       "arch": "amd64",
+      "linked_libc": "static",
       "type": "github_release",
       "repo_owner": "datastax-archive",
       "repo_name": "astra-cli",
@@ -33,13 +34,14 @@
       "files": [
         {
           "name": "astra",
-          "src": "astra"
+          "src": "astra-cli"
         }
       ]
     },
     {
       "os": "linux",
       "arch": "arm64",
+      "linked_libc": "static",
       "type": "github_release",
       "repo_owner": "datastax-archive",
       "repo_name": "astra-cli",
@@ -51,7 +53,7 @@
       "files": [
         {
           "name": "astra",
-          "src": "astra"
+          "src": "astra-cli"
         }
       ]
     },
@@ -69,7 +71,7 @@
       "files": [
         {
           "name": "astra",
-          "src": "astra.exe"
+          "src": "astra-cli.exe"
         }
       ]
     },
@@ -88,7 +90,7 @@
       "files": [
         {
           "name": "astra",
-          "src": "astra.exe"
+          "src": "astra-cli.exe"
         }
       ]
     }
