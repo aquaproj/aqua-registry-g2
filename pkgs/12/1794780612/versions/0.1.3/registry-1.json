@@ -1,0 +1,82 @@
+{
+  "published_at": "2026-05-01T16:02:23Z",
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "Mic92",
+      "repo_name": "nixfmt-rs",
+      "repo_id": 1083793823,
+      "asset": "nixfmt-aarch64-darwin",
+      "format": "raw",
+      "checksum": "577e9f210c90aa018d9bca75a6d3cc53ec4edac32b7e617aad6937a6e2794a27",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "nixfmt",
+          "src": "nixfmt-aarch64-darwin"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "Mic92/nixfmt-rs/.github/workflows/release-assets.yml",
+        "source_ref": "refs/tags/0.1.3",
+        "source_digest": "2fc060f3c770e7dd54473d8e8126853da50bfcc6",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "Mic92",
+      "repo_name": "nixfmt-rs",
+      "repo_id": 1083793823,
+      "asset": "nixfmt-x86_64-linux",
+      "format": "raw",
+      "checksum": "b18578a88f2a2a0b8bbe35d16d5b0c8e495e0cdc8857165cfea27a548e270877",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "nixfmt",
+          "src": "nixfmt-x86_64-linux"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "Mic92/nixfmt-rs/.github/workflows/release-assets.yml",
+        "source_ref": "refs/tags/0.1.3",
+        "source_digest": "2fc060f3c770e7dd54473d8e8126853da50bfcc6",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "Mic92",
+      "repo_name": "nixfmt-rs",
+      "repo_id": 1083793823,
+      "asset": "nixfmt-aarch64-linux",
+      "format": "raw",
+      "checksum": "c4e8f755d45a8c57927046568dc5121a5527bec662be6f8e9df57c7b9dd6b76e",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "nixfmt",
+          "src": "nixfmt-aarch64-linux"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "Mic92/nixfmt-rs/.github/workflows/release-assets.yml",
+        "source_ref": "refs/tags/0.1.3",
+        "source_digest": "2fc060f3c770e7dd54473d8e8126853da50bfcc6",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    }
+  ]
+}
