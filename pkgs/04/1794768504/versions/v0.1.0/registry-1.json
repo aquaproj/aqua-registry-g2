@@ -1,0 +1,45 @@
+{
+  "published_at": "2024-05-27T15:57:44Z",
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "fioncat",
+      "repo_name": "otree",
+      "repo_id": 799161509,
+      "asset": "otree-aarch64-apple-darwin.tar.gz",
+      "format": "tar.gz",
+      "checksum": "9a9ac7e4e662a49dfdeb5bad4e31f2278dcf3ca2b3b0391ade1df2a44aa28c5a",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "otree",
+          "src": "otree"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "variants": {
+        "libc": "musl"
+      },
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "fioncat",
+      "repo_name": "otree",
+      "repo_id": 799161509,
+      "asset": "otree-x86_64-unknown-linux-musl.tar.gz",
+      "format": "tar.gz",
+      "checksum": "63ac3795b40ea8fdd32ee97b10529c49b502636bf299857202034ad38c2e22f6",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "otree",
+          "src": "otree"
+        }
+      ]
+    }
+  ]
+}
