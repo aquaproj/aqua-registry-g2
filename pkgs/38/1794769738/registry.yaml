@@ -10,3 +10,10 @@ files:
 supported_envs:
   - linux/amd64
   - darwin
+# v2 and earlier ship cache_builder and shell scripts to source; kubectl-fzf-server and
+# kubectl-fzf-completion came with v3.
+version_overrides:
+  - version_constraint: semver(">= 3.0.0")
+  - version_constraint: semver("< 3.0.0")
+    files:
+      - name: cache_builder
