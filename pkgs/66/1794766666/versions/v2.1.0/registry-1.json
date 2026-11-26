@@ -1,0 +1,64 @@
+{
+  "published_at": "2023-02-27T09:07:19Z",
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "greymd",
+      "repo_name": "teip",
+      "repo_id": 268647751,
+      "asset": "teip-2.1.0.x86_64-apple-darwin.tar.gz",
+      "format": "tar.gz",
+      "checksum": "fab67b1b614b28305eefbacee76e2b120882e7a0c1762b52d12e827565667573",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "teip",
+          "src": "bin/teip"
+        }
+      ]
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "rosetta2": true,
+      "type": "github_release",
+      "repo_owner": "greymd",
+      "repo_name": "teip",
+      "repo_id": 268647751,
+      "asset": "teip-2.1.0.x86_64-apple-darwin.tar.gz",
+      "format": "tar.gz",
+      "checksum": "fab67b1b614b28305eefbacee76e2b120882e7a0c1762b52d12e827565667573",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "teip",
+          "src": "bin/teip"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "variants": {
+        "libc": "musl"
+      },
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "greymd",
+      "repo_name": "teip",
+      "repo_id": 268647751,
+      "asset": "teip-2.1.0.x86_64-unknown-linux-musl.tar.gz",
+      "format": "tar.gz",
+      "checksum": "ee6e2eb4ceb51182b139cc71e21538d1ecc9644d49e0dc42ba1a8f214c43955b",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "teip",
+          "src": "bin/teip"
+        }
+      ]
+    }
+  ]
+}
