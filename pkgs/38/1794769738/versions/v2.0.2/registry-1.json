@@ -14,12 +14,8 @@
       "checksum_algorithm": "sha256",
       "files": [
         {
-          "name": "kubectl-fzf-server",
-          "src": "kubectl-fzf-server"
-        },
-        {
-          "name": "kubectl-fzf-completion",
-          "src": "kubectl-fzf-completion"
+          "name": "cache_builder",
+          "src": "cache_builder"
         }
       ]
     },
@@ -37,18 +33,15 @@
       "checksum_algorithm": "sha256",
       "files": [
         {
-          "name": "kubectl-fzf-server",
-          "src": "kubectl-fzf-server"
-        },
-        {
-          "name": "kubectl-fzf-completion",
-          "src": "kubectl-fzf-completion"
+          "name": "cache_builder",
+          "src": "cache_builder"
         }
       ]
     },
     {
       "os": "linux",
       "arch": "amd64",
+      "linked_libc": "static",
       "type": "github_release",
       "repo_owner": "bonnefoa",
       "repo_name": "kubectl-fzf",
@@ -59,12 +52,8 @@
       "checksum_algorithm": "sha256",
       "files": [
         {
-          "name": "kubectl-fzf-server",
-          "src": "kubectl-fzf-server"
-        },
-        {
-          "name": "kubectl-fzf-completion",
-          "src": "kubectl-fzf-completion"
+          "name": "cache_builder",
+          "src": "cache_builder"
         }
       ]
     }
