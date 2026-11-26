@@ -1,0 +1,44 @@
+{
+  "assets": [
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "static",
+      "type": "http",
+      "repo_owner": "aws",
+      "repo_name": "eks-hybrid",
+      "repo_id": 801051598,
+      "asset": "nodeadm",
+      "url": "https://hybrid-assets.eks.amazonaws.com/releases/v1.0.2/bin/linux/amd64/nodeadm",
+      "format": "raw",
+      "checksum": "8fb0274c2d4cd8f6e5db17a80cc1910e5d8c19b48ca60c40801d15f4b183cb2c",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "nodeadm",
+          "src": "nodeadm"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "linked_libc": "static",
+      "type": "http",
+      "repo_owner": "aws",
+      "repo_name": "eks-hybrid",
+      "repo_id": 801051598,
+      "asset": "nodeadm",
+      "url": "https://hybrid-assets.eks.amazonaws.com/releases/v1.0.2/bin/linux/arm64/nodeadm",
+      "format": "raw",
+      "checksum": "0c82405353552f7f51afd111e4263db21027378bfe95a73b1d8afaa998a30839",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "nodeadm",
+          "src": "nodeadm"
+        }
+      ]
+    }
+  ]
+}
