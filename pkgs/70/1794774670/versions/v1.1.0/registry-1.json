@@ -15,7 +15,7 @@
       "files": [
         {
           "name": "kubectl-rolesum",
-          "src": "kubectl-rolesum_darwin-amd64/kubectl-rolesum"
+          "src": "kubectl-bindrole_darwin-amd64/kubectl-bindrole"
         }
       ]
     },
@@ -34,13 +34,14 @@
       "files": [
         {
           "name": "kubectl-rolesum",
-          "src": "kubectl-rolesum_darwin-amd64/kubectl-rolesum"
+          "src": "kubectl-bindrole_darwin-amd64/kubectl-bindrole"
         }
       ]
     },
     {
       "os": "linux",
       "arch": "amd64",
+      "linked_libc": "static",
       "type": "github_release",
       "repo_owner": "Ladicle",
       "repo_name": "kubectl-rolesum",
@@ -52,7 +53,7 @@
       "files": [
         {
           "name": "kubectl-rolesum",
-          "src": "kubectl-rolesum_linux-amd64/kubectl-rolesum"
+          "src": "kubectl-bindrole_linux-amd64/kubectl-bindrole"
         }
       ]
     },
@@ -70,7 +71,7 @@
       "files": [
         {
           "name": "kubectl-rolesum",
-          "src": "kubectl-rolesum_windows-amd64/kubectl-rolesum.exe"
+          "src": "kubectl-bindrole_windows-amd64/kubectl-bindrole"
         }
       ]
     },
@@ -89,7 +90,7 @@
       "files": [
         {
           "name": "kubectl-rolesum",
-          "src": "kubectl-rolesum_windows-amd64/kubectl-rolesum.exe"
+          "src": "kubectl-bindrole_windows-amd64/kubectl-bindrole"
         }
       ]
     }
