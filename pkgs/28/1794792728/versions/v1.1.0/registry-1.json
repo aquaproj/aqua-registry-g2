@@ -1,0 +1,104 @@
+{
+  "published_at": "2026-08-11T18:43:32Z",
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "robgonnella",
+      "repo_name": "releasaurus",
+      "repo_id": 1040293426,
+      "asset": "releasaurus-v1.1.0-aarch64-apple-darwin.tgz",
+      "format": "tgz",
+      "checksum": "b8374120f1a49245381e7f38680fefa5fd526b0737ce6c4fb59a73bf71221f33",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "releasaurus",
+          "src": "target/aarch64-apple-darwin/release/releasaurus"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "variants": {
+        "libc": "musl"
+      },
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "robgonnella",
+      "repo_name": "releasaurus",
+      "repo_id": 1040293426,
+      "asset": "releasaurus-v1.1.0-x86_64-unknown-linux-musl.tgz",
+      "format": "tgz",
+      "checksum": "6e08b760d836ae981cdddd2c1a163272d4f0485be088ec379ef23f0c4cc6f1bf",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "releasaurus",
+          "src": "target/x86_64-unknown-linux-musl/release/releasaurus"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "variants": {
+        "libc": "musl"
+      },
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "robgonnella",
+      "repo_name": "releasaurus",
+      "repo_id": 1040293426,
+      "asset": "releasaurus-v1.1.0-aarch64-unknown-linux-musl.tgz",
+      "format": "tgz",
+      "checksum": "326392b89d52dcf876e7601e6018c28cbd98d1b835618277fc364ff61092ae23",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "releasaurus",
+          "src": "target/aarch64-unknown-linux-musl/release/releasaurus"
+        }
+      ]
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "robgonnella",
+      "repo_name": "releasaurus",
+      "repo_id": 1040293426,
+      "asset": "releasaurus-v1.1.0-x86_64-pc-windows-msvc.tgz",
+      "format": "tgz",
+      "checksum": "0a38d20a5986f46150a418f826dd777d7352e80bfa5a59c08aa8e8fbd493388d",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "releasaurus",
+          "src": "target/x86_64-pc-windows-msvc/release/releasaurus.exe"
+        }
+      ]
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "windows_arm_emulation": true,
+      "type": "github_release",
+      "repo_owner": "robgonnella",
+      "repo_name": "releasaurus",
+      "repo_id": 1040293426,
+      "asset": "releasaurus-v1.1.0-x86_64-pc-windows-msvc.tgz",
+      "format": "tgz",
+      "checksum": "0a38d20a5986f46150a418f826dd777d7352e80bfa5a59c08aa8e8fbd493388d",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "releasaurus",
+          "src": "target/x86_64-pc-windows-msvc/release/releasaurus.exe"
+        }
+      ]
+    }
+  ]
+}
