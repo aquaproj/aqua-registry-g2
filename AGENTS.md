@@ -32,5 +32,7 @@ git is configured to sign.
 - [skills/](skills): one procedure each, as a skill.
 - [skills/review-pull-request](skills/review-pull-request/SKILL.md): how to read a pull request
   ar2 opened, and what CI has already established about it.
+- [skills/check-pull-requests](skills/check-pull-requests/SKILL.md): the pass over every
+  open pull request that needs a person or has stopped, once or on an interval with `/loop`.
 - [CONTRIBUTING.md](CONTRIBUTING.md): for outside contributors. This repository takes issues
   and not pull requests.
