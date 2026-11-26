@@ -16,6 +16,8 @@
 # A connection attempt failed" and Linux as "connection timed out", while the run's other
 # jobs downloaded the same asset. Run 45789813302's darwin job is the DNS kind: checkout
 # failed with "Could not resolve host: github.com" while every other job of the run passed.
+# Run 45896088705's linux/amd64 job is the rate-limited kind: downloading
+# palantir/conjure-typescript's asset got "status code 429", which a later attempt doesn't.
 #
 # A 403 is read as transient only where aqua-installer got it downloading aqua's own release
 # asset, which is public: run 45144881274's skills job got it six times over 31 seconds while
@@ -37,7 +39,7 @@ set -euo pipefail
 
 # What GitHub annotates a job with when it cancels it for the machine.
 readonly MACHINE='exceeded the maximum execution time|not acquired by Runner'
-readonly TRANSIENT='returned error: 5[0-9]{2}|HTTP[/ 0-9.]* 5[0-9]{2}|status code:? 5[0-9]{2}|50[234] (Bad Gateway|Service Unavailable|Gateway Time-?out)|connection reset by peer|TLS handshake timeout|i/o timeout|operation timed out|the download took longer than|public good verifier is not available|Couldn.t connect to server|connectex: A connection attempt failed|connection timed out|Could not resolve host'
+readonly TRANSIENT='returned error: 5[0-9]{2}|HTTP[/ 0-9.]* 5[0-9]{2}|status code:? (5[0-9]{2}|429)|50[234] (Bad Gateway|Service Unavailable|Gateway Time-?out)|connection reset by peer|TLS handshake timeout|i/o timeout|operation timed out|the download took longer than|public good verifier is not available|Couldn.t connect to server|connectex: A connection attempt failed|connection timed out|Could not resolve host'
 readonly AQUA_DOWNLOAD='Downloading https://github\.com/aquaproj/aqua/releases/download/'
 readonly FORBIDDEN='returned error: 403|Unexpected HTTP response: 403'
 
