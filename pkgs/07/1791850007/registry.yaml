@@ -7,9 +7,3 @@ description: Command line client for LibreSpeed
 files:
   - name: librespeed-cli
     src: librespeed-cli
-version_overrides:
-  # v1.0.0 to v1.0.3 name their assets .tar.gz but compress them with xz, so neither aqua nor
-  # ar2 can unpack them.
-  - version_constraint: semver("< 1.0.4")
-    no_asset: true
-  - version_constraint: "true"
