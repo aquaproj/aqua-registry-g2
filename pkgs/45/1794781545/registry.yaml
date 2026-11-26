@@ -14,8 +14,8 @@ asset_filters:
   - version_constraint: Version == "v0.4.0"
     all_assets_filter: not (Asset startsWith "astra-osx-")
 version_overrides:
-  # v0.3.6 names the binary astra-cli in every archive, the macOS ones included.
-  - version_constraint: Version == "v0.3.6"
+  # v0.3.4 to v0.3.6 name the binary astra-cli in every archive, the macOS ones included.
+  - version_constraint: semver(">= 0.3.4") and semver("<= 0.3.6")
     files:
       - name: astra
         src: astra-cli
