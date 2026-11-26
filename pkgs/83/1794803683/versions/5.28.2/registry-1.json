@@ -1,0 +1,82 @@
+{
+  "published_at": "2026-11-08T23:01:37Z",
+  "assets": [
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "timmo001",
+      "repo_name": "system-bridge",
+      "repo_id": 337043865,
+      "asset": "system-bridge-5.28.2-linux-x86_64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "125ca8240d3ef70ec1b8c8e40a30441512dbad56d2d235fe390ccba9666117cf",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "system-bridge",
+          "src": "system-bridge"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "timmo001/system-bridge/.github/workflows/build-and-package-application.yml",
+        "source_ref": "refs/tags/5.28.2",
+        "source_digest": "8dd714a4612ba613cf20e29576e6c646127ab3d8",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "timmo001",
+      "repo_name": "system-bridge",
+      "repo_id": 337043865,
+      "asset": "system-bridge-5.28.2-windows-x86_64.zip",
+      "format": "zip",
+      "checksum": "d049c36085e9a0167641362b1a24173baa86277410bd79daab84c0205a4f8026",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "system-bridge",
+          "src": "system-bridge.exe"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "timmo001/system-bridge/.github/workflows/build-and-package-application.yml",
+        "source_ref": "refs/tags/5.28.2",
+        "source_digest": "8dd714a4612ba613cf20e29576e6c646127ab3d8",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "windows_arm_emulation": true,
+      "type": "github_release",
+      "repo_owner": "timmo001",
+      "repo_name": "system-bridge",
+      "repo_id": 337043865,
+      "asset": "system-bridge-5.28.2-windows-x86_64.zip",
+      "format": "zip",
+      "checksum": "d049c36085e9a0167641362b1a24173baa86277410bd79daab84c0205a4f8026",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "system-bridge",
+          "src": "system-bridge.exe"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "timmo001/system-bridge/.github/workflows/build-and-package-application.yml",
+        "source_ref": "refs/tags/5.28.2",
+        "source_digest": "8dd714a4612ba613cf20e29576e6c646127ab3d8",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    }
+  ]
+}
