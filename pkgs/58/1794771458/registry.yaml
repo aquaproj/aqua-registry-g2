@@ -19,8 +19,3 @@ version_overrides:
     replacements:
       linux/amd64: linux
       linux/arm64: linux-arm
-# v0.2.0's .tar.gz assets are uncompressed tars despite their names, which aqua can't unpack;
-# only the windows zip is usable.
-asset_filters:
-  - version_constraint: Version == "v0.2.0"
-    all_assets_filter: Asset endsWith ".zip"
