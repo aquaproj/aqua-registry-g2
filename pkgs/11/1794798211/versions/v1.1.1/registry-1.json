@@ -1,0 +1,71 @@
+{
+  "published_at": "2023-07-06T23:07:40Z",
+  "assets": [
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "variants": {
+        "libc": "glibc"
+      },
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "so-dang-cool",
+      "repo_name": "findup",
+      "repo_id": 384626709,
+      "asset": "x86_64-linux-gnu.tgz",
+      "format": "tgz",
+      "checksum": "9518e3082aeea53b79a7ce746b48ab5f165151a135723ee262fb807aa6b9fc00",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "findup",
+          "src": "x86_64-linux-gnu/bin/findup"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "variants": {
+        "libc": "musl"
+      },
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "so-dang-cool",
+      "repo_name": "findup",
+      "repo_id": 384626709,
+      "asset": "x86_64-linux-musl.tgz",
+      "format": "tgz",
+      "checksum": "809378ed8c98a9846d66dfff624d976e20374c59eea6398ad2b1ee4800f30acb",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "findup",
+          "src": "x86_64-linux-musl/bin/findup"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "variants": {
+        "libc": "glibc"
+      },
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "so-dang-cool",
+      "repo_name": "findup",
+      "repo_id": 384626709,
+      "asset": "aarch64-linux-gnu.tgz",
+      "format": "tgz",
+      "checksum": "a233f805a9bb6d0975d27f304468e766ce91236fdc4de0fcc6e486c5a49f8113",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "findup",
+          "src": "aarch64-linux-gnu/bin/findup"
+        }
+      ]
+    }
+  ]
+}
