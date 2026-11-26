@@ -30,17 +30,24 @@ fi
 # gh merges at once a pull request GitHub says is ready rather than turning auto-merge on, and
 # that merge fails when another pull request merged a moment before: run 45347680445 gave up on
 # #30837 with "Base branch was modified". It is tried again after a moment.
+#
+# GitHub also refuses to turn auto-merge on for a pull request it could merge now -- "clean
+# status", or "unstable status" while a check that isn't required is still running or failed,
+# this job's own among them. Run 45772762549 gave up on #35965 that way, its required checks
+# all passed. Such a pull request is merged directly.
 enable() {
-	local out
+	local out args=(--auto --squash)
 	for _ in 1 2 3; do
-		if out=$(gh pr merge "$PR" --auto --squash 2>&1); then
+		if out=$(gh pr merge "$PR" "${args[@]}" 2>&1); then
 			echo "$out"
 			return 0
 		fi
 		echo "$out" >&2
-		if [[ $out != *"Base branch was modified"* ]]; then
-			return 1
-		fi
+		case "$out" in
+		*"Base branch was modified"*) ;;
+		*"clean status"* | *"unstable status"*) args=(--squash) ;;
+		*) return 1 ;;
+		esac
 		sleep 15
 	done
 	return 1
