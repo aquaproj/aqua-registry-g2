@@ -6,6 +6,9 @@ repo_owner: anomalyco
 repo_name: opencode
 repo_id: 975734319
 description: The AI coding agent built for the terminal
+# The repository releases opencode-pty too, tagged process-daemon-v<version>, which is
+# another program.
+version_filter: not (Version startsWith "process-daemon-")
 version_overrides:
   - version_constraint: Version in ["v0.1.84", "v0.1.92", "v0.1.115", "v0.1.124"]
   - version_constraint: Version in ["v0.1.139", "v0.1.142"]
