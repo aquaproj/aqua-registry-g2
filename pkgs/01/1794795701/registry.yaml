@@ -7,6 +7,15 @@ description: Generate .circleci/config.yml by merging multiple files
 version_overrides:
   - version_constraint: Version == "v1.1.4"
   - version_constraint: semver("> 1.1.6")
+  # v1.1.5's provenance lists the darwin and linux archives only.
+  - version_constraint: Version == "v1.1.5"
+    slsa_provenance:
+      type: github_release
+      asset: multiple.intoto.jsonl
+    overrides:
+      - goos: windows
+        slsa_provenance:
+          enabled: false
   - version_constraint: semver("> 1.1.4-12")
     slsa_provenance:
       type: github_release

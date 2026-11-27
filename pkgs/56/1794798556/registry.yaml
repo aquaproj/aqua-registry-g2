@@ -5,6 +5,15 @@ repo_name: example-go-slsa-provenance
 repo_id: 580199314
 description: Example Go Application with SLSA Provenance
 version_overrides:
+  # v0.1.1's assets were replaced on purpose to demonstrate SLSA verification failing.
+  - version_constraint: Version == "v0.1.1"
+    error_message: v0.1.1's assets are intentionally tampered to demonstrate SLSA verification. Use another version.
+  # v0.1.0 was built before the repository moved from suzuki-shunsuke.
+  - version_constraint: Version == "v0.1.0"
+    slsa_provenance:
+      type: github_release
+      asset: multiple.intoto.jsonl
+      source_uri: github.com/suzuki-shunsuke/example-go-slsa-provenance
   - version_constraint: semver("> 0.1.2")
     slsa_provenance:
       type: github_release

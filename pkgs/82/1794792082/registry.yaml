@@ -10,3 +10,10 @@ build:
 github_artifact_attestations:
   enabled: true
   signer_workflow: kjanat/actionlint/.github/workflows/release.yml
+# Before v1.16.0 the attesting workflow is release.yaml.
+version_overrides:
+  - version_constraint: semver(">= 1.16.0")
+  - version_constraint: semver("< 1.16.0")
+    github_artifact_attestations:
+      enabled: true
+      signer_workflow: kjanat/actionlint/.github/workflows/release.yaml

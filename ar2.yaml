@@ -17,6 +17,12 @@ ignored_packages:
       refuses the token a run uses: "your IP address is not permitted to access this
       resource", and its downloads are refused from the addresses CI runs on too.
       aqua-registry (v1) ignores bridgecrewio/yor for the same reason.
+  - name: apache/spark
+    reason: |
+      Every version downloads a 400 to 570 MB tarball from archive.apache.org, the only
+      host that keeps old releases, which serves at about 150 KB/s: an hour per tarball,
+      against the run's limit of five minutes for a download. aqua-registry (v1) keeps
+      serving it.
   - name: golang/tools/gorename
     reason: |
       The command was deleted upstream: https://github.com/golang/go/issues/69360

@@ -22,11 +22,14 @@ version_overrides:
     supported_envs:
       - linux
       - darwin
+  # Built before the repository moved from supernovae-st/nika, so the provenance names the
+  # old repository as its source.
   - version_constraint: semver("> 0.105.0")
     slsa_provenance:
       type: github_release
       asset: multiple.intoto.jsonl
       source_tag: '-'
+      source_uri: github.com/supernovae-st/nika
     github_artifact_attestations:
       signer_workflow: supernovae-st/nika/.github/workflows/release.yml
     supported_envs:
@@ -49,6 +52,7 @@ version_overrides:
       type: github_release
       asset: multiple.intoto.jsonl
       source_tag: '-'
+      source_uri: github.com/supernovae-st/nika
     github_artifact_attestations:
       signer_workflow: supernovae-st/nika/.github/workflows/release.yml
     supported_envs:

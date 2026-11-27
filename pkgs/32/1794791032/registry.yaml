@@ -11,6 +11,10 @@ packslip:
 github_artifact_attestations:
   signer_workflow: grafana/flint/.github/workflows/release.yml
 version_overrides:
+  # v0.22.0 was attested by release-assets.yml, which upstream renamed to release.yml after.
+  - version_constraint: Version == "v0.22.0"
+    github_artifact_attestations:
+      signer_workflow: grafana/flint/.github/workflows/release-assets.yml
   - version_constraint: semver("> 0.9.2")
     github_artifact_attestations:
       signer_workflow: grafana/flint/.github/workflows/release.yml

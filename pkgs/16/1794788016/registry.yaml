@@ -8,6 +8,15 @@ version_filter: not (Version matches "-(alpha|beta)")
 github_artifact_attestations:
   signer_workflow: IvanIsCoding/celq/.github/workflows/release_github.yml
 version_overrides:
+  # v0.6.0's windows/arm64 zip was added by a one-off workflow an hour after the release.
+  - version_constraint: Version == "v0.6.0"
+    github_artifact_attestations:
+      signer_workflow: IvanIsCoding/celq/.github/workflows/release_github.yml
+    overrides:
+      - goos: windows
+        goarch: arm64
+        github_artifact_attestations:
+          signer_workflow: IvanIsCoding/celq/.github/workflows/release_github_windows_arm64.yml
   - version_constraint: semver("> 0.2.0-beta.1")
     github_artifact_attestations:
       signer_workflow: IvanIsCoding/celq/.github/workflows/release_github.yml
