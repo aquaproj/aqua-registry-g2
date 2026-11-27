@@ -1,0 +1,301 @@
+{
+  "published_at": "2026-11-26T01:35:09Z",
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "ubugeeei-prod",
+      "repo_name": "vize",
+      "repo_id": 1123610216,
+      "asset": "vize-x86_64-apple-darwin.tar.gz",
+      "format": "tar.gz",
+      "checksum": "278755f176a14d9b5eac1cc404f262fa949ad4aaa463c078b0522976be5c0979",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "vize",
+          "src": "vize"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "vize-x86_64-apple-darwin.tar.gz.cosign.bundle"
+        },
+        "certificate_identity": "https://github.com/ubugeeei-prod/vize/.github/workflows/release.yml@refs/heads/main",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "certificate_github_workflow_repository": "ubugeeei-prod/vize",
+        "certificate_github_workflow_ref": "refs/heads/main"
+      }
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "ubugeeei-prod",
+      "repo_name": "vize",
+      "repo_id": 1123610216,
+      "asset": "vize-aarch64-apple-darwin.tar.gz",
+      "format": "tar.gz",
+      "checksum": "7f76ab6d988785932dbd6f5d6f4ed9655f96fa08c4ae1bd38550c0d88fa113bc",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "vize",
+          "src": "vize"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "vize-aarch64-apple-darwin.tar.gz.cosign.bundle"
+        },
+        "certificate_identity": "https://github.com/ubugeeei-prod/vize/.github/workflows/release.yml@refs/heads/main",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "certificate_github_workflow_repository": "ubugeeei-prod/vize",
+        "certificate_github_workflow_ref": "refs/heads/main"
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "ubugeeei-prod",
+      "repo_name": "vize",
+      "repo_id": 1123610216,
+      "asset": "vize-linux-x64.vsix",
+      "format": "raw",
+      "checksum": "49cfe1b39b6ce59a13094b20d183708f034fde7af7908a5834202699d1ac24ae",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "vize",
+          "src": "vize-linux-x64.vsix"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "vize-linux-x64.vsix.cosign.bundle"
+        },
+        "certificate_identity": "https://github.com/ubugeeei-prod/vize/.github/workflows/release.yml@refs/heads/main",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "certificate_github_workflow_repository": "ubugeeei-prod/vize",
+        "certificate_github_workflow_ref": "refs/heads/main"
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "variants": {
+        "libc": "glibc"
+      },
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "ubugeeei-prod",
+      "repo_name": "vize",
+      "repo_id": 1123610216,
+      "asset": "vize-x86_64-unknown-linux-gnu.tar.gz",
+      "format": "tar.gz",
+      "checksum": "426e264d3a099bbfc8769ca0d6ee0100f2737376bc192c42c7fd75c057db25ae",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "vize",
+          "src": "vize"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "vize-x86_64-unknown-linux-gnu.tar.gz.cosign.bundle"
+        },
+        "certificate_identity": "https://github.com/ubugeeei-prod/vize/.github/workflows/release.yml@refs/heads/main",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "certificate_github_workflow_repository": "ubugeeei-prod/vize",
+        "certificate_github_workflow_ref": "refs/heads/main"
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "variants": {
+        "libc": "musl"
+      },
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "ubugeeei-prod",
+      "repo_name": "vize",
+      "repo_id": 1123610216,
+      "asset": "vize-x86_64-unknown-linux-musl.tar.gz",
+      "format": "tar.gz",
+      "checksum": "fba70d806043393d13afba93c3121ab3e83c9d3a0912e1c510f51281cee1dcef",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "vize",
+          "src": "vize"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "vize-x86_64-unknown-linux-musl.tar.gz.cosign.bundle"
+        },
+        "certificate_identity": "https://github.com/ubugeeei-prod/vize/.github/workflows/release.yml@refs/heads/main",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "certificate_github_workflow_repository": "ubugeeei-prod/vize",
+        "certificate_github_workflow_ref": "refs/heads/main"
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "ubugeeei-prod",
+      "repo_name": "vize",
+      "repo_id": 1123610216,
+      "asset": "vize-linux-arm64.vsix",
+      "format": "raw",
+      "checksum": "0b3ba0c20e9081635cfbca9c863a63db2246eba4589c37df0607fb4fb8f162ea",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "vize",
+          "src": "vize-linux-arm64.vsix"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "vize-linux-arm64.vsix.cosign.bundle"
+        },
+        "certificate_identity": "https://github.com/ubugeeei-prod/vize/.github/workflows/release.yml@refs/heads/main",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "certificate_github_workflow_repository": "ubugeeei-prod/vize",
+        "certificate_github_workflow_ref": "refs/heads/main"
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "variants": {
+        "libc": "glibc"
+      },
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "ubugeeei-prod",
+      "repo_name": "vize",
+      "repo_id": 1123610216,
+      "asset": "vize-aarch64-unknown-linux-gnu.tar.gz",
+      "format": "tar.gz",
+      "checksum": "6dbf5246c986dbcb2eed4d9f881dc03642874008f1843d3bfd6b76f34146194b",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "vize",
+          "src": "vize"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "vize-aarch64-unknown-linux-gnu.tar.gz.cosign.bundle"
+        },
+        "certificate_identity": "https://github.com/ubugeeei-prod/vize/.github/workflows/release.yml@refs/heads/main",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "certificate_github_workflow_repository": "ubugeeei-prod/vize",
+        "certificate_github_workflow_ref": "refs/heads/main"
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "variants": {
+        "libc": "musl"
+      },
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "ubugeeei-prod",
+      "repo_name": "vize",
+      "repo_id": 1123610216,
+      "asset": "vize-aarch64-unknown-linux-musl.tar.gz",
+      "format": "tar.gz",
+      "checksum": "96caa8308d61fc09a32dad659ca0b8a5c451060eed122dc8471ce8d0cef20d9d",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "vize",
+          "src": "vize"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "vize-aarch64-unknown-linux-musl.tar.gz.cosign.bundle"
+        },
+        "certificate_identity": "https://github.com/ubugeeei-prod/vize/.github/workflows/release.yml@refs/heads/main",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "certificate_github_workflow_repository": "ubugeeei-prod/vize",
+        "certificate_github_workflow_ref": "refs/heads/main"
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "ubugeeei-prod",
+      "repo_name": "vize",
+      "repo_id": 1123610216,
+      "asset": "vize-x86_64-pc-windows-msvc.zip",
+      "format": "zip",
+      "checksum": "8007629fc5d67b2b53d85604fa1cbe92e8140e3102e4e8008fb15b4f806501a9",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "vize",
+          "src": "vize.exe"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "vize-x86_64-pc-windows-msvc.zip.cosign.bundle"
+        },
+        "certificate_identity": "https://github.com/ubugeeei-prod/vize/.github/workflows/release.yml@refs/heads/main",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "certificate_github_workflow_repository": "ubugeeei-prod/vize",
+        "certificate_github_workflow_ref": "refs/heads/main"
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "ubugeeei-prod",
+      "repo_name": "vize",
+      "repo_id": 1123610216,
+      "asset": "vize-aarch64-pc-windows-msvc.zip",
+      "format": "zip",
+      "checksum": "8a826baaf1506a7ec25231139f4d72571ad255e330ee922548c18584e059963b",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "vize",
+          "src": "vize.exe"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "vize-aarch64-pc-windows-msvc.zip.cosign.bundle"
+        },
+        "certificate_identity": "https://github.com/ubugeeei-prod/vize/.github/workflows/release.yml@refs/heads/main",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "certificate_github_workflow_repository": "ubugeeei-prod/vize",
+        "certificate_github_workflow_ref": "refs/heads/main"
+      }
+    }
+  ]
+}
