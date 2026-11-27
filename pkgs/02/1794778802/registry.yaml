@@ -19,4 +19,10 @@ asset_rules:
 version_overrides:
   - version_constraint: semver("<= 0.0.8")
     rosetta2: true
+    overrides:
+      - goos: darwin
+        goarch: arm64
+        files:
+          - name: authy
+            src: authy-darwin-amd64
   - version_constraint: "true"
