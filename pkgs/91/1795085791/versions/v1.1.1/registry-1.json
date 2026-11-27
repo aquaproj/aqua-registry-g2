@@ -1,0 +1,163 @@
+{
+  "published_at": "2026-11-13T23:56:34Z",
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "cplieger",
+      "repo_name": "grelot",
+      "repo_id": 1444738584,
+      "asset": "grelot-darwin-amd64",
+      "format": "raw",
+      "checksum": "4b5372d7ab74608ec6d64ff45d9d3b67a5541126cb5142b7ab36c415e5166106",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "grelot",
+          "src": "grelot-darwin-amd64"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "grelot-darwin-amd64.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/cplieger/ci/.github/workflows/docker-release.yaml@3b136e27c2b7ccf94227f61cdfeebaa3e6b79ac8",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "cplieger",
+      "repo_name": "grelot",
+      "repo_id": 1444738584,
+      "asset": "grelot-darwin-arm64",
+      "format": "raw",
+      "checksum": "09ce6dce335c15080f0cfc8c16050a9a800a8223ab5338284ef3daaa3f5629a3",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "grelot",
+          "src": "grelot-darwin-arm64"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "grelot-darwin-arm64.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/cplieger/ci/.github/workflows/docker-release.yaml@3b136e27c2b7ccf94227f61cdfeebaa3e6b79ac8",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "cplieger",
+      "repo_name": "grelot",
+      "repo_id": 1444738584,
+      "asset": "grelot-linux-amd64",
+      "format": "raw",
+      "checksum": "3a82768632eecb62a2621d85f64bb3382a0b655f4efe9fbd4c9608ad9174b2e2",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "grelot",
+          "src": "grelot-linux-amd64"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "grelot-linux-amd64.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/cplieger/ci/.github/workflows/docker-release.yaml@3b136e27c2b7ccf94227f61cdfeebaa3e6b79ac8",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "cplieger",
+      "repo_name": "grelot",
+      "repo_id": 1444738584,
+      "asset": "grelot-linux-arm64",
+      "format": "raw",
+      "checksum": "206ed991b846ae5e98318fda70d1b57c7101c405ccdc8f61f12d6da8e4723200",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "grelot",
+          "src": "grelot-linux-arm64"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "grelot-linux-arm64.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/cplieger/ci/.github/workflows/docker-release.yaml@3b136e27c2b7ccf94227f61cdfeebaa3e6b79ac8",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "cplieger",
+      "repo_name": "grelot",
+      "repo_id": 1444738584,
+      "asset": "grelot-windows-amd64.exe",
+      "format": "raw",
+      "checksum": "36f4c3dec0c624492e84c7fcb3d3986da351e9c5cb5f61042cc7d03615cb712b",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "grelot",
+          "src": "grelot-windows-amd64.exe"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "grelot-windows-amd64.exe.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/cplieger/ci/.github/workflows/docker-release.yaml@3b136e27c2b7ccf94227f61cdfeebaa3e6b79ac8",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "cplieger",
+      "repo_name": "grelot",
+      "repo_id": 1444738584,
+      "asset": "grelot-windows-arm64.exe",
+      "format": "raw",
+      "checksum": "83da1d2167f453d380b0415bb6b04e3385e314e4c6d121b114feebc2fb8bb994",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "grelot",
+          "src": "grelot-windows-arm64.exe"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "grelot-windows-arm64.exe.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/cplieger/ci/.github/workflows/docker-release.yaml@3b136e27c2b7ccf94227f61cdfeebaa3e6b79ac8",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    }
+  ]
+}
