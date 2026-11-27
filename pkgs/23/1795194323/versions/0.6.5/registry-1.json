@@ -2,6 +2,42 @@
   "published_at": "2026-11-20T09:45:48Z",
   "assets": [
     {
+      "os": "linux",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "timmo001",
+      "repo_name": "kestrel",
+      "repo_id": 1454582608,
+      "asset": "kestrel-nvr-0.6.5-linux-x86_64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "b9d6cd27e69cf18bfe2dfcd99cf5e394843cef2250c30e421b8545b6ed9545ad",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "kestrel",
+          "src": "kestrel-nvr-0.6.5-linux-x86_64/bin/kestrel"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "timmo001",
+      "repo_name": "kestrel",
+      "repo_id": 1454582608,
+      "asset": "kestrel-nvr-0.6.5-linux-aarch64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "3279a1bac3709ad5e73665b476815271ead359c134401b5a8365bcf7b94bea4b",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "kestrel",
+          "src": "kestrel-nvr-0.6.5-linux-aarch64/bin/kestrel"
+        }
+      ]
+    },
+    {
       "os": "windows",
       "arch": "amd64",
       "type": "github_release",
@@ -15,7 +51,7 @@
       "files": [
         {
           "name": "kestrel",
-          "src": "kestrel-nvr-0.6.5-windows-x86_64/lib/kestrel-nvr/Resources/app/kestrel"
+          "src": "kestrel-nvr-0.6.5-windows-x86_64/bin/kestrel.cmd"
         }
       ]
     },
@@ -34,7 +70,7 @@
       "files": [
         {
           "name": "kestrel",
-          "src": "kestrel-nvr-0.6.5-windows-x86_64/lib/kestrel-nvr/Resources/app/kestrel"
+          "src": "kestrel-nvr-0.6.5-windows-x86_64/bin/kestrel.cmd"
         }
       ]
     }
