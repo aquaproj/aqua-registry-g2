@@ -1,0 +1,45 @@
+{
+  "published_at": "2026-07-22T20:02:19Z",
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "faberlang",
+      "repo_name": "releases",
+      "repo_id": 1302672799,
+      "asset": "faber-v1.2.0-aarch64-apple-darwin.tar.gz",
+      "format": "tar.gz",
+      "checksum": "e2ba8886461c59b60eb84fa47237893d03816eb5eb13cff22150df881a39e7c0",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "faber",
+          "src": "faber-v1.2.0-aarch64-apple-darwin/faber"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "variants": {
+        "libc": "glibc"
+      },
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "faberlang",
+      "repo_name": "releases",
+      "repo_id": 1302672799,
+      "asset": "faber-v1.2.0-x86_64-unknown-linux-gnu.tar.gz",
+      "format": "tar.gz",
+      "checksum": "3002e87183a102ce76364eb22af75c8ce80d1ec2301c3a38478c6d3b1a01e803",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "faber",
+          "src": "faber-v1.2.0-x86_64-unknown-linux-gnu/faber"
+        }
+      ]
+    }
+  ]
+}
