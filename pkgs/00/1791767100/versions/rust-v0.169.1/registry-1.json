@@ -1,0 +1,137 @@
+{
+  "published_at": "2026-11-17T22:21:10Z",
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "openai",
+      "repo_name": "codex",
+      "repo_id": 965415649,
+      "asset": "codex-package-x86_64-apple-darwin.tar.gz",
+      "format": "tar.gz",
+      "checksum": "207e2b9d877655c2ae5e5f1adddd67672d942668f0975cf47c7bcd140a4fb212",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "codex",
+          "src": "bin/codex"
+        }
+      ]
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "openai",
+      "repo_name": "codex",
+      "repo_id": 965415649,
+      "asset": "codex-package-aarch64-apple-darwin.tar.gz",
+      "format": "tar.gz",
+      "checksum": "1f39d0dc51f55103d8b043332e0b3dba53b35295392899a911a7714a4c342dcd",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "codex",
+          "src": "bin/codex"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "variants": {
+        "libc": "musl"
+      },
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "openai",
+      "repo_name": "codex",
+      "repo_id": 965415649,
+      "asset": "codex-package-x86_64-unknown-linux-musl.tar.gz",
+      "format": "tar.gz",
+      "checksum": "738df5b3182e2b858a48143f0c2fff288d8dd200330dadfe4c5c9f3eac7e2244",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "codex",
+          "src": "bin/codex"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "codex-package-x86_64-unknown-linux-musl.tar.gz.sigstore"
+        },
+        "certificate_identity": "https://github.com/openai/codex/.github/workflows/rust-release.yml@refs/tags/rust-v0.169.1",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "variants": {
+        "libc": "musl"
+      },
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "openai",
+      "repo_name": "codex",
+      "repo_id": 965415649,
+      "asset": "codex-package-aarch64-unknown-linux-musl.tar.gz",
+      "format": "tar.gz",
+      "checksum": "3de502ad37d6f58e4dbc917d76ccbc8f3c16a4084cfaa78afadaf6c86559bcec",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "codex",
+          "src": "bin/codex"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "codex-package-aarch64-unknown-linux-musl.tar.gz.sigstore"
+        },
+        "certificate_identity": "https://github.com/openai/codex/.github/workflows/rust-release.yml@refs/tags/rust-v0.169.1",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "openai",
+      "repo_name": "codex",
+      "repo_id": 965415649,
+      "asset": "codex-package-x86_64-pc-windows-msvc.tar.gz",
+      "format": "tar.gz",
+      "checksum": "6fafb4a62e9d784eaeebabd3b1aa2539d48af753693f62800d73884fbf85600e",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "codex",
+          "src": "bin/codex.exe"
+        }
+      ]
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "openai",
+      "repo_name": "codex",
+      "repo_id": 965415649,
+      "asset": "codex-package-aarch64-pc-windows-msvc.tar.gz",
+      "format": "tar.gz",
+      "checksum": "0b8b0241e32be8a5fb804db5dd676b7f62dac504b30d5ad996da456f2d32f2f2",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "codex",
+          "src": "bin/codex.exe"
+        }
+      ]
+    }
+  ]
+}
