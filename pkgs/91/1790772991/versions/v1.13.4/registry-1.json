@@ -1,0 +1,163 @@
+{
+  "published_at": "2026-06-09T16:42:32Z",
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "siderolabs",
+      "repo_name": "talos",
+      "repo_id": 109451092,
+      "asset": "talosctl-darwin-amd64",
+      "format": "raw",
+      "checksum": "bdee0433a4ef7668cea884b80b536f018160b0f998429d7440388c62a76e2062",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "talosctl",
+          "src": "talosctl-darwin-amd64"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "talosctl-darwin-amd64.bundle"
+        },
+        "certificate_identity": "https://github.com/siderolabs/talos/.github/workflows/ci.yaml@refs/tags/v1.13.4",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "siderolabs",
+      "repo_name": "talos",
+      "repo_id": 109451092,
+      "asset": "talosctl-darwin-arm64",
+      "format": "raw",
+      "checksum": "2d86630f623486d247dac8eb0db1e2f9f581c4aebd201a193e4eaf7eb13392fa",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "talosctl",
+          "src": "talosctl-darwin-arm64"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "talosctl-darwin-arm64.bundle"
+        },
+        "certificate_identity": "https://github.com/siderolabs/talos/.github/workflows/ci.yaml@refs/tags/v1.13.4",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "siderolabs",
+      "repo_name": "talos",
+      "repo_id": 109451092,
+      "asset": "talosctl-linux-amd64",
+      "format": "raw",
+      "checksum": "aae1dadd238f9dfbc9790d117a114424b2d59200ee12872d0d9f89e178a69aae",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "talosctl",
+          "src": "talosctl-linux-amd64"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "talosctl-linux-amd64.bundle"
+        },
+        "certificate_identity": "https://github.com/siderolabs/talos/.github/workflows/ci.yaml@refs/tags/v1.13.4",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "siderolabs",
+      "repo_name": "talos",
+      "repo_id": 109451092,
+      "asset": "talosctl-linux-arm64",
+      "format": "raw",
+      "checksum": "71cb14ab72aee8bd89d3ee08931747a9238a10025a689dc4117d532d4c6c444f",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "talosctl",
+          "src": "talosctl-linux-arm64"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "talosctl-linux-arm64.bundle"
+        },
+        "certificate_identity": "https://github.com/siderolabs/talos/.github/workflows/ci.yaml@refs/tags/v1.13.4",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "siderolabs",
+      "repo_name": "talos",
+      "repo_id": 109451092,
+      "asset": "talosctl-windows-amd64.exe",
+      "format": "raw",
+      "checksum": "c3500946ad95b49fce4e8e6222c7a992ac76f6f4e490ce3984fc2176f1821c73",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "talosctl",
+          "src": "talosctl-windows-amd64.exe"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "talosctl-windows-amd64.exe.bundle"
+        },
+        "certificate_identity": "https://github.com/siderolabs/talos/.github/workflows/ci.yaml@refs/tags/v1.13.4",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "siderolabs",
+      "repo_name": "talos",
+      "repo_id": 109451092,
+      "asset": "talosctl-windows-arm64.exe",
+      "format": "raw",
+      "checksum": "936258257c34a08d273bed95b98a2dfbe38a5ab60643b91241ffc01e076a1724",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "talosctl",
+          "src": "talosctl-windows-arm64.exe"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "talosctl-windows-arm64.exe.bundle"
+        },
+        "certificate_identity": "https://github.com/siderolabs/talos/.github/workflows/ci.yaml@refs/tags/v1.13.4",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    }
+  ]
+}
