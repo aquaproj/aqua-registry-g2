@@ -1,0 +1,68 @@
+{
+  "assets": [
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "static",
+      "type": "http",
+      "repo_owner": "kubernetes",
+      "repo_name": "kubernetes",
+      "repo_id": 20580498,
+      "asset": "kube-controller-manager",
+      "url": "https://dl.k8s.io/v1.35.11/bin/linux/amd64/kube-controller-manager",
+      "format": "raw",
+      "checksum": "0874e38ed7d21d1fc4fabf9d8cad02f34ebf0481dc58e189a0f7b201efe9e7b8",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "kube-controller-manager",
+          "src": "kube-controller-manager"
+        }
+      ],
+      "cosign": {
+        "signature": {
+          "type": "http",
+          "url": "https://dl.k8s.io/v1.35.11/bin/linux/amd64/kube-controller-manager.sig"
+        },
+        "certificate": {
+          "type": "http",
+          "url": "https://dl.k8s.io/v1.35.11/bin/linux/amd64/kube-controller-manager.cert"
+        },
+        "certificate_identity": "krel-staging@k8s-releng-prod.iam.gserviceaccount.com",
+        "certificate_oidc_issuer": "https://accounts.google.com"
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "linked_libc": "static",
+      "type": "http",
+      "repo_owner": "kubernetes",
+      "repo_name": "kubernetes",
+      "repo_id": 20580498,
+      "asset": "kube-controller-manager",
+      "url": "https://dl.k8s.io/v1.35.11/bin/linux/arm64/kube-controller-manager",
+      "format": "raw",
+      "checksum": "f8e584f22cc253c74ed578cd7c87b38182c80c320f9b9026f8f5dff7f37f0e57",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "kube-controller-manager",
+          "src": "kube-controller-manager"
+        }
+      ],
+      "cosign": {
+        "signature": {
+          "type": "http",
+          "url": "https://dl.k8s.io/v1.35.11/bin/linux/arm64/kube-controller-manager.sig"
+        },
+        "certificate": {
+          "type": "http",
+          "url": "https://dl.k8s.io/v1.35.11/bin/linux/arm64/kube-controller-manager.cert"
+        },
+        "certificate_identity": "krel-staging@k8s-releng-prod.iam.gserviceaccount.com",
+        "certificate_oidc_issuer": "https://accounts.google.com"
+      }
+    }
+  ]
+}
