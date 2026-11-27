@@ -6,7 +6,7 @@ repo_id: 59522149
 description: Terragrunt is a flexible orchestration tool that allows Infrastructure as Code written in OpenTofu/Terraform to scale
 version_filter: |
   let words = ["^alpha", "^beta"];
-  not any(words, {Asset matches #})
+  not any(words, {Version matches #})
 version_overrides:
   - version_constraint: semver("> 0.93.5")
     files:
