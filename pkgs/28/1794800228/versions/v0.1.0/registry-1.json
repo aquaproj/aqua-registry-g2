@@ -1,0 +1,100 @@
+{
+  "published_at": "2026-07-06T23:03:35Z",
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "syntax-sh",
+      "repo_name": "lexicon-releases",
+      "repo_id": 1291529228,
+      "asset": "lexicon-x86_64-apple-darwin.tar.xz",
+      "format": "tar.xz",
+      "checksum": "036a991ccf11c84993a1205b39038e3e6ce98a9b536caa0bed0c70879542cdc5",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "lexicon",
+          "src": "lexicon-x86_64-apple-darwin/lexicon"
+        }
+      ]
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "syntax-sh",
+      "repo_name": "lexicon-releases",
+      "repo_id": 1291529228,
+      "asset": "lexicon-aarch64-apple-darwin.tar.xz",
+      "format": "tar.xz",
+      "checksum": "315e0e3d960ea7c1990452f3d62b01232f2e62aaf963a91eb698daa4203d49f4",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "lexicon",
+          "src": "lexicon-aarch64-apple-darwin/lexicon"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "variants": {
+        "libc": "glibc"
+      },
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "syntax-sh",
+      "repo_name": "lexicon-releases",
+      "repo_id": 1291529228,
+      "asset": "lexicon-x86_64-unknown-linux-gnu.tar.xz",
+      "format": "tar.xz",
+      "checksum": "c5d3b3124b0e81bdae77493f61111321da25c2f221abf4928f602c136a44f339",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "lexicon",
+          "src": "lexicon-x86_64-unknown-linux-gnu/lexicon"
+        }
+      ]
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "syntax-sh",
+      "repo_name": "lexicon-releases",
+      "repo_id": 1291529228,
+      "asset": "lexicon-x86_64-pc-windows-msvc.zip",
+      "format": "zip",
+      "checksum": "af15e1cc0641760271a68e11bf1f18384175b285a8797419e72b9884894aeb40",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "lexicon",
+          "src": "lexicon.exe"
+        }
+      ]
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "windows_arm_emulation": true,
+      "type": "github_release",
+      "repo_owner": "syntax-sh",
+      "repo_name": "lexicon-releases",
+      "repo_id": 1291529228,
+      "asset": "lexicon-x86_64-pc-windows-msvc.zip",
+      "format": "zip",
+      "checksum": "af15e1cc0641760271a68e11bf1f18384175b285a8797419e72b9884894aeb40",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "lexicon",
+          "src": "lexicon.exe"
+        }
+      ]
+    }
+  ]
+}
