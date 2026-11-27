@@ -10,12 +10,18 @@ name: rerun transient failures
 # workflows that write (ar2, update-versions, index, ...) are not listed: a re-run of one
 # could open a second pull request or push a second time.
 #
+# autofix.ci is the one listed that may push: autofix-ci/action hands a diff to the app,
+# which commits it. A failure this re-runs is the network failing before that step -- run
+# 45931760541's job got a 403 downloading aqua -- and the commit is whatever the files lack,
+# so a run after one that did push finds nothing to commit.
+#
 # Two re-runs at most. A failure that survives three attempts is left for a person.
 on:
   workflow_run:
     workflows:
       - test
       - actionlint
+      - autofix.ci
     types:
       - completed
 permissions: {}
