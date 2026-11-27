@@ -36,3 +36,33 @@ ignored_packages:
       The Shopify organization has an IP allow list enabled, so the GitHub API refuses
       the token a run uses: "your IP address is not permitted to access this
       resource". aqua-registry (v1) keeps serving its packages.
+  - name: Arata1202/ascdir
+    reason: |
+      The repository Arata1202/ascdir is gone: the API and the web page both answer 404, while
+      the owner remains. No asset can be downloaded, so aqua can't install any version.
+  - name: nishanths/license
+    reason: |
+      The repository nishanths/license is gone: the API and the web page both answer 404, while
+      the owner remains. No asset can be downloaded, so aqua can't install any version.
+  - name: porter-dev/porter
+    reason: |
+      The repository porter-dev/porter is gone: the API and the web page both answer 404, while
+      the owner remains. No asset can be downloaded, so aqua can't install any version.
+  - name: pulumi/tf2pulumi
+    reason: |
+      The repository pulumi/tf2pulumi is gone: the API and the web page both answer 404, while
+      the owner remains. No asset can be downloaded, so aqua can't install any version.
+  - name: RoseSecurity/Kuzco
+    reason: |
+      The repository RoseSecurity/Kuzco is gone: the API and the web page both answer 404, while
+      the owner remains. No asset can be downloaded, so aqua can't install any version.
+  - name_regexp: databricks/.*
+    reason: |
+      The databricks organization has an IP allow list enabled, so the GitHub API refuses
+      the token a run uses: "your IP address is not permitted to access this
+      resource". aqua-registry (v1) keeps serving its packages.
+  - name_regexp: neondatabase/.*
+    reason: |
+      The neondatabase organization has an IP allow list enabled, so the GitHub API refuses
+      the token a run uses: "your IP address is not permitted to access this
+      resource". aqua-registry (v1) keeps serving its packages.
