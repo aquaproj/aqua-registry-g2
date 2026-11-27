@@ -52,12 +52,16 @@ jobs:
       contents: write
       pull-requests: write
     steps:
-      # For aqua/aqua.yaml, which pins the ar2 version and its checksum. Nothing else is read
-      # from the checkout, so only that is checked out.
+      # For aqua/aqua.yaml, which pins the ar2 version and its checksum, and for the tree under
+      # pkgs, which ar2 reads with git (--trees-from): GitHub's API cuts that tree off, since
+      # it outgrew what one response holds (80,000 entries at 35,000 versions), and every run
+      # from 2026-11-26 failed on it. Only aqua is checked out, and no blob is fetched but its:
+      # git reads every tree of a blobless clone.
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
           sparse-checkout: aqua
+          filter: blob:none
       - uses: aquaproj/aqua-installer@b8be739961814ee66b9e0d505f4d5de0d2eff047 # v4.1.2
         with:
           aqua_version: v2.67.0-lock.0
@@ -77,6 +81,7 @@ jobs:
           ar2 update-versions \
             --g2-owner "${GITHUB_REPOSITORY%/*}" \
             --g2-repo "${GITHUB_REPOSITORY#*/}" \
+            --trees-from . \
             "${ids[@]}"
         env:
           GITHUB_TOKEN: ${{ github.token }}
