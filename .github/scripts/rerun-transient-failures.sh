@@ -25,7 +25,10 @@
 # while rather than anything the job did. A 403 anywhere else may well be a permission the job
 # lacks, and is left alone. aqua-installer says "returned error: 403" where curl gives the
 # error, and actionlint-action's installer says "Unexpected HTTP response: 403" (run
-# 45529748432), so both spellings count.
+# 45529748432), so both spellings count. So is a 403 git got fetching this repository, which
+# is public too: run 45932181238's linux job failed adding a package to the sparse checkout
+# with "unable to access 'https://github.com/aquaproj/aqua-registry-g2/': The requested URL
+# returned error: 403".
 #
 # A cancelled job is read as transient when GitHub cancelled it for the machine rather than
 # for the job: it hit timeout-minutes, or no runner took it. Run 44711883319's darwin job is
@@ -42,6 +45,7 @@ readonly MACHINE='exceeded the maximum execution time|not acquired by Runner'
 readonly TRANSIENT='returned error: 5[0-9]{2}|HTTP[/ 0-9.]* 5[0-9]{2}|status code:? (5[0-9]{2}|429)|50[234] (Bad Gateway|Service Unavailable|Gateway Time-?out)|connection reset by peer|TLS handshake timeout|i/o timeout|operation timed out|the download took longer than|public good verifier is not available|Couldn.t connect to server|connectex: A connection attempt failed|connection timed out|Could not resolve host'
 readonly AQUA_DOWNLOAD='Downloading https://github\.com/aquaproj/aqua/releases/download/'
 readonly FORBIDDEN='returned error: 403|Unexpected HTTP response: 403'
+readonly REPO_FETCH="unable to access 'https://github\.com/aquaproj/aqua-registry-g2/'"
 
 jobs=$(gh run view "$RUN_ID" --attempt "$RUN_ATTEMPT" --json jobs \
 	--jq '.jobs[] | select(.conclusion == "failure" or .conclusion == "cancelled") | select(.name | startswith("status-check") | not) | "\(.databaseId) \(.conclusion)"')
@@ -63,7 +67,7 @@ while read -r job conclusion; do
 	if grep -Eiq -- "$TRANSIENT" <<<"$log"; then
 		continue
 	fi
-	if grep -Eq -- "$AQUA_DOWNLOAD" <<<"$log" && grep -Eq -- "$FORBIDDEN" <<<"$log"; then
+	if grep -Eq -- "$AQUA_DOWNLOAD|$REPO_FETCH" <<<"$log" && grep -Eq -- "$FORBIDDEN" <<<"$log"; then
 		continue
 	fi
 	echo "job $job of run $RUN_ID failed for a reason that doesn't look transient; not re-running" >&2
