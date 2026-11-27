@@ -1,0 +1,199 @@
+{
+  "published_at": "2025-05-11T04:25:37Z",
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "takumin-archive",
+      "repo_name": "zizmor-bin",
+      "repo_id": 980580137,
+      "asset": "zizmor-x86_64-apple-darwin",
+      "format": "raw",
+      "checksum": "4fba18d8cfc017d769930290dbf597b7cead350875a58fbdac15fec297ceb81a",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "zizmor",
+          "src": "zizmor-x86_64-apple-darwin"
+        }
+      ],
+      "cosign": {
+        "signature": {
+          "type": "http",
+          "url": "https://github.com/takumin/zizmor-bin/releases/download/v1.1.0/zizmor-x86_64-apple-darwin.sig"
+        },
+        "certificate": {
+          "type": "http",
+          "url": "https://github.com/takumin/zizmor-bin/releases/download/v1.1.0/zizmor-x86_64-apple-darwin.cert"
+        },
+        "certificate_identity": "https://github.com/takumin/zizmor-bin/.github/workflows/wc-sign.yml@refs/heads/main",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "certificate_github_workflow_repository": "takumin/zizmor-bin"
+      }
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "takumin-archive",
+      "repo_name": "zizmor-bin",
+      "repo_id": 980580137,
+      "asset": "zizmor-aarch64-apple-darwin",
+      "format": "raw",
+      "checksum": "96e80bd70d999df10f4412e08836917439d804e3ef63a74d3080e51b489a59da",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "zizmor",
+          "src": "zizmor-aarch64-apple-darwin"
+        }
+      ],
+      "cosign": {
+        "signature": {
+          "type": "http",
+          "url": "https://github.com/takumin/zizmor-bin/releases/download/v1.1.0/zizmor-aarch64-apple-darwin.sig"
+        },
+        "certificate": {
+          "type": "http",
+          "url": "https://github.com/takumin/zizmor-bin/releases/download/v1.1.0/zizmor-aarch64-apple-darwin.cert"
+        },
+        "certificate_identity": "https://github.com/takumin/zizmor-bin/.github/workflows/wc-sign.yml@refs/heads/main",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "certificate_github_workflow_repository": "takumin/zizmor-bin"
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "variants": {
+        "libc": "musl"
+      },
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "takumin-archive",
+      "repo_name": "zizmor-bin",
+      "repo_id": 980580137,
+      "asset": "zizmor-x86_64-unknown-linux-musl",
+      "format": "raw",
+      "checksum": "ddb0ccd3e6fa548f9cfc616defe47917207c17ebb4411a836fc36c47e5aa755e",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "zizmor",
+          "src": "zizmor-x86_64-unknown-linux-musl"
+        }
+      ],
+      "cosign": {
+        "signature": {
+          "type": "http",
+          "url": "https://github.com/takumin/zizmor-bin/releases/download/v1.1.0/zizmor-x86_64-unknown-linux-musl.sig"
+        },
+        "certificate": {
+          "type": "http",
+          "url": "https://github.com/takumin/zizmor-bin/releases/download/v1.1.0/zizmor-x86_64-unknown-linux-musl.cert"
+        },
+        "certificate_identity": "https://github.com/takumin/zizmor-bin/.github/workflows/wc-sign.yml@refs/heads/main",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "certificate_github_workflow_repository": "takumin/zizmor-bin"
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "variants": {
+        "libc": "musl"
+      },
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "takumin-archive",
+      "repo_name": "zizmor-bin",
+      "repo_id": 980580137,
+      "asset": "zizmor-aarch64-unknown-linux-musl",
+      "format": "raw",
+      "checksum": "3059778247f449ded570616afa830c726a4fdee36e3386fe299e92b365490bce",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "zizmor",
+          "src": "zizmor-aarch64-unknown-linux-musl"
+        }
+      ],
+      "cosign": {
+        "signature": {
+          "type": "http",
+          "url": "https://github.com/takumin/zizmor-bin/releases/download/v1.1.0/zizmor-aarch64-unknown-linux-musl.sig"
+        },
+        "certificate": {
+          "type": "http",
+          "url": "https://github.com/takumin/zizmor-bin/releases/download/v1.1.0/zizmor-aarch64-unknown-linux-musl.cert"
+        },
+        "certificate_identity": "https://github.com/takumin/zizmor-bin/.github/workflows/wc-sign.yml@refs/heads/main",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "certificate_github_workflow_repository": "takumin/zizmor-bin"
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "takumin-archive",
+      "repo_name": "zizmor-bin",
+      "repo_id": 980580137,
+      "asset": "zizmor-x86_64-pc-windows-gnullvm.exe",
+      "format": "raw",
+      "checksum": "e6bf5d633e6a95fc949cf78e30cbbf45172f6ef3ceac929fd980d3419dc3e699",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "zizmor",
+          "src": "zizmor-x86_64-pc-windows-gnullvm.exe"
+        }
+      ],
+      "cosign": {
+        "signature": {
+          "type": "http",
+          "url": "https://github.com/takumin/zizmor-bin/releases/download/v1.1.0/zizmor-x86_64-pc-windows-gnullvm.exe.sig"
+        },
+        "certificate": {
+          "type": "http",
+          "url": "https://github.com/takumin/zizmor-bin/releases/download/v1.1.0/zizmor-x86_64-pc-windows-gnullvm.exe.cert"
+        },
+        "certificate_identity": "https://github.com/takumin/zizmor-bin/.github/workflows/wc-sign.yml@refs/heads/main",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "certificate_github_workflow_repository": "takumin/zizmor-bin"
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "takumin-archive",
+      "repo_name": "zizmor-bin",
+      "repo_id": 980580137,
+      "asset": "zizmor-aarch64-pc-windows-gnullvm.exe",
+      "format": "raw",
+      "checksum": "66d463f3176447eb8e60902208f077ea3386767a0a3e639d0b3854441d72d885",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "zizmor",
+          "src": "zizmor-aarch64-pc-windows-gnullvm.exe"
+        }
+      ],
+      "cosign": {
+        "signature": {
+          "type": "http",
+          "url": "https://github.com/takumin/zizmor-bin/releases/download/v1.1.0/zizmor-aarch64-pc-windows-gnullvm.exe.sig"
+        },
+        "certificate": {
+          "type": "http",
+          "url": "https://github.com/takumin/zizmor-bin/releases/download/v1.1.0/zizmor-aarch64-pc-windows-gnullvm.exe.cert"
+        },
+        "certificate_identity": "https://github.com/takumin/zizmor-bin/.github/workflows/wc-sign.yml@refs/heads/main",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "certificate_github_workflow_repository": "takumin/zizmor-bin"
+      }
+    }
+  ]
+}
