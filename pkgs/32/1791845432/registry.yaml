@@ -20,6 +20,21 @@ cosign:
     type: github_release
     asset: '{{.Asset}}.cosign.bundle'
 version_overrides:
+  # From v0.475.0 the release workflow is dispatched from main.
+  - version_constraint: semver(">= 0.475.0")
+    cosign:
+      opts:
+        - --certificate-identity
+        - https://github.com/ubugeeei-prod/vize/.github/workflows/release.yml@refs/heads/main
+        - --certificate-oidc-issuer
+        - https://token.actions.githubusercontent.com
+        - --certificate-github-workflow-repository
+        - ubugeeei-prod/vize
+        - --certificate-github-workflow-ref
+        - refs/heads/main
+      bundle:
+        type: github_release
+        asset: '{{.Asset}}.cosign.bundle'
   - version_constraint: semver(">= 0.426.0")
     cosign:
       opts:

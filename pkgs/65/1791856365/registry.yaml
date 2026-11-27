@@ -7,6 +7,14 @@ description: Hosting Helm Charts via GitHub Pages and Releases
 files:
   - name: cr
 version_overrides:
+  # v1.4.0 is signed with a certificate from the Sigstore of 2022, which today's trusted root
+  # doesn't vouch for: leaf certificate verification failed.
+  - version_constraint: Version == "v1.4.0"
+    cosign:
+      enabled: false
+    checksum:
+      cosign:
+        enabled: false
   - version_constraint: semver("> 1.2.1")
   - version_constraint: semver("> 0.1.4")
     supported_envs:

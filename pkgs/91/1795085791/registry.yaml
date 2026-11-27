@@ -5,11 +5,15 @@ repo_name: grelot
 repo_id: 1444738584
 description: Messaging platform for coding agents, with folder threads and file reservations
 cosign:
+  # The binaries are signed by cplieger/ci's reusable workflow at whichever commit the
+  # caller pins, which Renovate moves; the caller is what says the release is grelot's.
   opts:
-    - --certificate-identity
-    - https://github.com/cplieger/ci/.github/workflows/docker-release.yaml@3b136e27c2b7ccf94227f61cdfeebaa3e6b79ac8
+    - --certificate-identity-regexp
+    - ^https://github[.]com/cplieger/ci/[.]github/workflows/docker-release[.]yaml@[0-9a-f]{40}$
     - --certificate-oidc-issuer
     - https://token.actions.githubusercontent.com
+    - --certificate-github-workflow-repository
+    - cplieger/grelot
   bundle:
     type: github_release
     asset: '{{.Asset}}.sigstore.json'

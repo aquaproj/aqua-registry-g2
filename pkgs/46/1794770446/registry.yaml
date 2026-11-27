@@ -6,6 +6,13 @@ repo_id: 581609881
 description: A scanner for end-of-life (EOL) software and dependencies in container
   images, filesystems, and SBOMs
 version_overrides:
+  # v0.9.5's provenance was built by a run on a branch, not at the tag, though from the
+  # tag's commit.
+  - version_constraint: Version == "v0.9.5"
+    slsa_provenance:
+      type: github_release
+      asset: multiple.intoto.jsonl
+      source_tag: '-'
   - version_constraint: semver("> 0.10.0")
     slsa_provenance:
       type: github_release

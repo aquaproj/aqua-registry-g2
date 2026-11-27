@@ -24,7 +24,19 @@ version_overrides:
   - version_constraint: Version == "v2.0.0-beta20240618"
   - version_constraint: Version == "v2.5.0-beta20251125"
   - version_constraint: semver("> 2.5.5")
+  # Up to 2.5.5 a release is signed at its tag, not from a release branch.
   - version_constraint: semver("> 2.4.4")
+    cosign:
+      opts:
+        - --certificate-identity
+        - https://github.com/openbao/openbao/.github/workflows/release.yml@refs/tags/{{.Version}}
+        - --certificate-oidc-issuer
+        - https://token.actions.githubusercontent.com
+        - --certificate-github-workflow-repository
+        - openbao/openbao
+      bundle:
+        type: github_release
+        asset: '{{.Asset}}.sigstore.json'
   - version_constraint: semver("> 2.1.1")
   - version_constraint: semver("<= 2.1.1")
   - version_constraint: "true"

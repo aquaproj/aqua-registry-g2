@@ -16,4 +16,11 @@ cosign:
 version_overrides:
   - version_constraint: Version in ["v3.0.0-beta.25", "v3.0.0-beta.44", "v3.0.0-beta.56", "v3.46.0", "v3.53.0", "v3.62.1", "v3.63.0", "v3.64.3"]
     no_asset: true
+  # Released with goreleaser v2.15.x, which appended the hashes of the checksum file's own
+  # signature files after signing it (goreleaser/goreleaser#6508); each asset's own signature
+  # still verifies.
+  - version_constraint: Version == "v3.64.1"
+    checksum:
+      cosign:
+        enabled: false
   - version_constraint: "true"
