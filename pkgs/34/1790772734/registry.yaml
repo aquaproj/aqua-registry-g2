@@ -53,3 +53,6 @@ version_overrides:
     files:
       - name: btop
         src: btop/bin/btop
+# v1.2.5 to v1.2.13 publish a macOS build for each of bigsur, monterey and ventura; the
+# bigsur one runs on all of them.
+all_assets_filter: not (Asset contains "-macos-monterey" or Asset contains "-macos-ventura")

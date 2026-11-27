@@ -64,3 +64,8 @@ version_overrides:
     supported_envs:
       - linux
       - darwin
+# The v0.2.0 release still carries v0.1.0's assets, -test- builds among them, and its
+# darwin/amd64 entry had taken envsense-v0.1.0-x86_64-apple-darwin.
+asset_filters:
+  - version_constraint: Version == "v0.2.0"
+    all_assets_filter: Asset contains "-v0.2.0-"

@@ -6,3 +6,6 @@ repo_id: 408562497
 description: Forwarder is a production-ready, fast MITM proxy with PAC support. It's
   suitable for debugging, intercepting and manipulating HTTP traffic. It's used as
   a core component of Sauce Labs Sauce Connect Proxy
+# v1.3.2 and v1.4.0 publish a signed macOS zip beside the unsigned one, with the same
+# layout, and nothing in the names tells them apart; later releases publish the unsigned one.
+all_assets_filter: not (Asset contains "darwin-signed")
