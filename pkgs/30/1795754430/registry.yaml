@@ -1,0 +1,30 @@
+name: ataraxy-labs/sem
+type: github_release
+repo_owner: ataraxy-labs
+repo_name: sem
+repo_id: 1150877418
+description: Semantic version control => entity-level diffs, blame, and impact analysis
+  on top of git. 28 languages via tree-sitter. Built for coding agents
+version_overrides:
+  - version_constraint: Version == "v0.3.16"
+    no_asset: true
+  - version_constraint: semver("> 0.13.0")
+  - version_constraint: semver("> 0.5.2")
+    supported_envs:
+      - linux
+      - darwin/arm64
+      - windows/amd64
+  - version_constraint: semver("> 0.5.0")
+    no_asset: true
+  - version_constraint: semver("> 0.3.10")
+    supported_envs:
+      - linux
+      - darwin/arm64
+      - windows/amd64
+  - version_constraint: semver("> 0.3.6")
+    supported_envs:
+      - linux/amd64
+      - darwin/arm64
+  - version_constraint: semver("<= 0.3.6")
+    no_asset: true
+  - version_constraint: "true"
