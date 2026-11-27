@@ -1,0 +1,27 @@
+{
+  "assets": [
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "glibc",
+      "type": "http",
+      "repo_owner": "aws",
+      "repo_name": "aws-cli",
+      "repo_id": 6780767,
+      "asset": "awscli-exe-linux-x86_64-2.42.5.zip",
+      "url": "https://awscli.amazonaws.com/awscli-exe-linux-x86_64-2.42.5.zip",
+      "checksum": "7694a5b0bdd31ddccdbe9c103849cfe1a2aa4b4768e803a50ae94610aa970800",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "aws",
+          "src": "aws/dist/aws"
+        },
+        {
+          "name": "aws_completer",
+          "src": "aws/dist/aws_completer"
+        }
+      ]
+    }
+  ]
+}
