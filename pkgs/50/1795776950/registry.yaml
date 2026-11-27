@@ -1,0 +1,25 @@
+name: losfair/zeroserve
+type: github_release
+repo_owner: losfair
+repo_name: zeroserve
+repo_id: 1094972803
+description: Zero-config, fast `io_uring`-based HTTPS server
+cosign:
+  opts:
+    - --certificate-identity
+    - https://github.com/losfair/zeroserve/.github/workflows/ci.yml@refs/tags/{{.Version}}
+    - --certificate-oidc-issuer
+    - https://token.actions.githubusercontent.com
+  bundle:
+    type: github_release
+    asset: '{{.Asset}}.sigstore.json'
+version_overrides:
+  - version_constraint: semver("> 0.2.12-alpha.12")
+    supported_envs:
+      - linux
+  - version_constraint: semver("<= 0.2.12-alpha.12")
+    supported_envs:
+      - linux
+  - version_constraint: "true"
+    supported_envs:
+      - linux
