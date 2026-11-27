@@ -10,7 +10,8 @@ version_overrides:
   - version_constraint: semver("<= 0.1.6")
     no_asset: true
   - version_constraint: "true"
-# v0.4.6 also publishes x86_64-pc-windows-msvc-cmodules.zip, which tied with the windows zip.
+# v0.4.6 to v0.4.8 also publish x86_64-pc-windows-msvc-cmodules.zip, which tied with the
+# windows zip.
 asset_filters:
-  - version_constraint: Version == "v0.4.6"
+  - version_constraint: Version in ["v0.4.6", "v0.4.7", "v0.4.8"]
     all_assets_filter: not (Asset contains "cmodules")

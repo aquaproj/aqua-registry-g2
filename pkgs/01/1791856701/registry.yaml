@@ -25,3 +25,7 @@ version_overrides:
       - name: soci-snapshotter-grpc
     supported_envs:
       - linux
+# v0.4.0 publishes every build twice, as -0.4.0- and -v0.4.0-, identical in size.
+asset_filters:
+  - version_constraint: Version == "v0.4.0"
+    all_assets_filter: not (Asset contains "-v0.4.0-")

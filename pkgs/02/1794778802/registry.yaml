@@ -14,3 +14,9 @@ asset_rules:
       - darwin/amd64
       - darwin/arm64
     filter: Asset matches "^authy[.]tar[.]gz([.].+)?$"
+# Up to v0.0.8 the archive holds authy-darwin-amd64 alone, which an arm64 Mac runs through
+# Rosetta 2.
+version_overrides:
+  - version_constraint: semver("<= 0.0.8")
+    rosetta2: true
+  - version_constraint: "true"

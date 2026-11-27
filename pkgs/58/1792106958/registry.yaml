@@ -20,6 +20,14 @@ supported_envs:
   - linux
   - amd64
 version_overrides:
+  # v6.0.0's linux/arm64 archive holds bin/wasmer-headless alone.
+  - version_constraint: Version == "v6.0.0"
+    overrides:
+      - goos: linux
+        goarch: arm64
+        files:
+          - name: wasmer-headless
+            src: bin/wasmer-headless
   - version_constraint: semver(">= 7.2.0-alpha.2")
     supported_envs:
       - darwin/arm64

@@ -5,7 +5,15 @@ repo_name: kestrel
 repo_id: 1454582608
 description: 'One app for your cameras and recorders: live view, recordings, events
   and health, through a small server on your own network'
+# The archive holds bin/kestrel, and lib/kestrel-nvr/Resources/app/kestrel, a shell script
+# of the bundled app; on Windows the command is bin/kestrel.cmd.
 files:
   - name: kestrel
+    src: '{{.AssetWithoutExt}}/bin/kestrel'
+overrides:
+  - goos: windows
+    files:
+      - name: kestrel
+        src: '{{.AssetWithoutExt}}/bin/kestrel.cmd'
 # Kestrel-Setup-* is the setup app published beside the server, kestrel-nvr-*.
 all_assets_filter: not (Asset startsWith "Kestrel-Setup-")
