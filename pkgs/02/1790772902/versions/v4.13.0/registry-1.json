@@ -2,56 +2,20 @@
   "published_at": "2026-02-27T16:20:18Z",
   "assets": [
     {
-      "os": "linux",
-      "arch": "amd64",
-      "type": "github_release",
-      "repo_owner": "kubernetes-sigs",
-      "repo_name": "kubebuilder",
-      "repo_id": 125275487,
-      "asset": "kubebuilder_4.13.0_linux_amd64.cyclonedx.sbom.json",
-      "format": "raw",
-      "checksum": "d8f801d1a276650bf652006770f1e279ddbb6248fcffb42ae87f585d8d6c3dc6",
-      "checksum_algorithm": "sha256",
-      "files": [
-        {
-          "name": "kubebuilder",
-          "src": "kubebuilder_4.13.0_linux_amd64.cyclonedx.sbom.json"
-        }
-      ]
-    },
-    {
-      "os": "linux",
-      "arch": "arm64",
-      "type": "github_release",
-      "repo_owner": "kubernetes-sigs",
-      "repo_name": "kubebuilder",
-      "repo_id": 125275487,
-      "asset": "kubebuilder_4.13.0_linux_arm64.cyclonedx.sbom.json",
-      "format": "raw",
-      "checksum": "4d9be1b91466b1e5d7f2846d0da5865c913210484fcc20581a7c4451c72c0c1c",
-      "checksum_algorithm": "sha256",
-      "files": [
-        {
-          "name": "kubebuilder",
-          "src": "kubebuilder_4.13.0_linux_arm64.cyclonedx.sbom.json"
-        }
-      ]
-    },
-    {
       "os": "darwin",
       "arch": "amd64",
       "type": "github_release",
       "repo_owner": "kubernetes-sigs",
       "repo_name": "kubebuilder",
       "repo_id": 125275487,
-      "asset": "kubebuilder_4.13.0_darwin_amd64.cyclonedx.sbom.json",
+      "asset": "kubebuilder_darwin_amd64",
       "format": "raw",
-      "checksum": "0cc446605f4c0c2c6a8ff4db4e183a343e14dff582e039bc71a7d910fd1bb2a9",
+      "checksum": "278e83ecbd3758a0e8b18c97e3af24503b444187fa9c648a0e75a943bce0d226",
       "checksum_algorithm": "sha256",
       "files": [
         {
           "name": "kubebuilder",
-          "src": "kubebuilder_4.13.0_darwin_amd64.cyclonedx.sbom.json"
+          "src": "kubebuilder_darwin_amd64"
         }
       ]
     },
@@ -62,14 +26,52 @@
       "repo_owner": "kubernetes-sigs",
       "repo_name": "kubebuilder",
       "repo_id": 125275487,
-      "asset": "kubebuilder_4.13.0_darwin_arm64.cyclonedx.sbom.json",
+      "asset": "kubebuilder_darwin_arm64",
       "format": "raw",
-      "checksum": "af38ecca3e97614c413e15321af567286f3d4390df1712ccc8e8824d607fca78",
+      "checksum": "73e6aaa6cc140cb184443861e94ccee8e0c0a76b08db361677a481586b645c9c",
       "checksum_algorithm": "sha256",
       "files": [
         {
           "name": "kubebuilder",
-          "src": "kubebuilder_4.13.0_darwin_arm64.cyclonedx.sbom.json"
+          "src": "kubebuilder_darwin_arm64"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "kubernetes-sigs",
+      "repo_name": "kubebuilder",
+      "repo_id": 125275487,
+      "asset": "kubebuilder_linux_amd64",
+      "format": "raw",
+      "checksum": "df6e73cbf99b4f8216ad6e665985f1527e740306e8d1ebda0bfff3733d511066",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "kubebuilder",
+          "src": "kubebuilder_linux_amd64"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "kubernetes-sigs",
+      "repo_name": "kubebuilder",
+      "repo_id": 125275487,
+      "asset": "kubebuilder_linux_arm64",
+      "format": "raw",
+      "checksum": "ef720de120277319af8f298f321bc9a5a2e34f1be6d6aa4f29e42102744db834",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "kubebuilder",
+          "src": "kubebuilder_linux_arm64"
         }
       ]
     }
