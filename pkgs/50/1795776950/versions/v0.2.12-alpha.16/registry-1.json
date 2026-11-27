@@ -1,0 +1,59 @@
+{
+  "published_at": "2026-09-09T18:57:43Z",
+  "assets": [
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "losfair",
+      "repo_name": "zeroserve",
+      "repo_id": 1094972803,
+      "asset": "zeroserve-x86_64-linux",
+      "format": "raw",
+      "checksum": "35a11bcae584a3e8048bd3ea9edca84a554eca86f9b13948a54603d43decc979",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "zeroserve",
+          "src": "zeroserve-x86_64-linux"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "zeroserve-x86_64-linux.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/losfair/zeroserve/.github/workflows/ci.yml@refs/tags/v0.2.12-alpha.16",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "losfair",
+      "repo_name": "zeroserve",
+      "repo_id": 1094972803,
+      "asset": "zeroserve-aarch64-linux",
+      "format": "raw",
+      "checksum": "b491d777a8482852f27f4c152aa47fcac9ba5df24397fa8e852f3a32a80dc8a1",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "zeroserve",
+          "src": "zeroserve-aarch64-linux"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "zeroserve-aarch64-linux.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/losfair/zeroserve/.github/workflows/ci.yml@refs/tags/v0.2.12-alpha.16",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com"
+      }
+    }
+  ]
+}
