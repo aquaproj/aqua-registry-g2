@@ -1,0 +1,131 @@
+{
+  "assets": [
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "glibc",
+      "type": "http",
+      "repo_owner": "kubernetes",
+      "repo_name": "kubernetes",
+      "repo_id": 20580498,
+      "asset": "kubelet",
+      "url": "https://dl.k8s.io/v1.36.7/bin/linux/amd64/kubelet",
+      "format": "raw",
+      "checksum": "549ae8c93ab608130176f109015757602c409e84e86dc40c1ef3c13a8f29b97f",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "kubelet",
+          "src": "kubelet"
+        }
+      ],
+      "cosign": {
+        "signature": {
+          "type": "http",
+          "url": "https://dl.k8s.io/v1.36.7/bin/linux/amd64/kubelet.sig"
+        },
+        "certificate": {
+          "type": "http",
+          "url": "https://dl.k8s.io/v1.36.7/bin/linux/amd64/kubelet.cert"
+        },
+        "certificate_identity": "krel-staging@k8s-releng-prod.iam.gserviceaccount.com",
+        "certificate_oidc_issuer": "https://accounts.google.com"
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "linked_libc": "glibc",
+      "type": "http",
+      "repo_owner": "kubernetes",
+      "repo_name": "kubernetes",
+      "repo_id": 20580498,
+      "asset": "kubelet",
+      "url": "https://dl.k8s.io/v1.36.7/bin/linux/arm64/kubelet",
+      "format": "raw",
+      "checksum": "31a34f49418719762fe24fc66232b5b6aeee5d13c8352735ab68b0d20e567bcc",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "kubelet",
+          "src": "kubelet"
+        }
+      ],
+      "cosign": {
+        "signature": {
+          "type": "http",
+          "url": "https://dl.k8s.io/v1.36.7/bin/linux/arm64/kubelet.sig"
+        },
+        "certificate": {
+          "type": "http",
+          "url": "https://dl.k8s.io/v1.36.7/bin/linux/arm64/kubelet.cert"
+        },
+        "certificate_identity": "krel-staging@k8s-releng-prod.iam.gserviceaccount.com",
+        "certificate_oidc_issuer": "https://accounts.google.com"
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "http",
+      "repo_owner": "kubernetes",
+      "repo_name": "kubernetes",
+      "repo_id": 20580498,
+      "asset": "kubelet.exe",
+      "url": "https://dl.k8s.io/v1.36.7/bin/windows/amd64/kubelet.exe",
+      "format": "raw",
+      "checksum": "0acd17845aa6671393253a485b5e6fa6cccb4b40b3ea2e9b88b0e643281c694b",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "kubelet",
+          "src": "kubelet.exe"
+        }
+      ],
+      "cosign": {
+        "signature": {
+          "type": "http",
+          "url": "https://dl.k8s.io/v1.36.7/bin/windows/amd64/kubelet.exe.sig"
+        },
+        "certificate": {
+          "type": "http",
+          "url": "https://dl.k8s.io/v1.36.7/bin/windows/amd64/kubelet.exe.cert"
+        },
+        "certificate_identity": "krel-staging@k8s-releng-prod.iam.gserviceaccount.com",
+        "certificate_oidc_issuer": "https://accounts.google.com"
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "windows_arm_emulation": true,
+      "type": "http",
+      "repo_owner": "kubernetes",
+      "repo_name": "kubernetes",
+      "repo_id": 20580498,
+      "asset": "kubelet.exe",
+      "url": "https://dl.k8s.io/v1.36.7/bin/windows/amd64/kubelet.exe",
+      "format": "raw",
+      "checksum": "0acd17845aa6671393253a485b5e6fa6cccb4b40b3ea2e9b88b0e643281c694b",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "kubelet",
+          "src": "kubelet.exe"
+        }
+      ],
+      "cosign": {
+        "signature": {
+          "type": "http",
+          "url": "https://dl.k8s.io/v1.36.7/bin/windows/amd64/kubelet.exe.sig"
+        },
+        "certificate": {
+          "type": "http",
+          "url": "https://dl.k8s.io/v1.36.7/bin/windows/amd64/kubelet.exe.cert"
+        },
+        "certificate_identity": "krel-staging@k8s-releng-prod.iam.gserviceaccount.com",
+        "certificate_oidc_issuer": "https://accounts.google.com"
+      }
+    }
+  ]
+}
