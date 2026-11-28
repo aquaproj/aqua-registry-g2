@@ -1,24 +1,28 @@
 #!/usr/bin/env bash
-# Check what a pull request does to packages served as templates, once the directories it
-# touches are checked out, and say which definitions are templates to install.
+# Check what a pull request does to the package directories it touches, once they are
+# checked out, and say which definitions are templates to install.
 #
-# A package served as a template declares `template:` in its registry.yaml, and ar2 renders
-# template-1.json from it in the catalogue's pull request. aqua reads that file as it is,
-# for every version, so what is refused here is what would let a version reach it that the
-# registry didn't mean to serve that way:
+# For every package:
+#
+# - a definition deleted while what it served is left beside it: versions/, versions.json
+#   or template-1.json. aqua reaches those by the package's id whatever the definition
+#   says, and nothing would take them away once it is gone, since ar2 works from the
+#   definitions it finds. `ar2 remove` takes them away first; the definition can go after;
+# - a new package directory whose id, name or alias the registry already holds. aqua would
+#   go on reading the package it already had, and the catalogue would list the older
+#   directory and nothing from the new one. names.json is what the last catalogue's pull
+#   request wrote, so two pull requests adding the same name, both merged before the
+#   catalogue catches up, aren't caught here.
+#
+# For a package served as a template, which declares `template:` in its registry.yaml and
+# has template-1.json rendered from it in the catalogue's pull request. aqua reads that
+# file as it is, for every version, so what is refused is what would let a version reach it
+# that the registry didn't mean to serve that way:
 #
 # - a template package with versions/ or versions.json beside it, which would serve some
 #   versions generated and the rest from the template;
 # - a definition that stops being a template. Taking a package from a template to generated
-#   versions isn't supported yet: its template would go before its versions arrive;
-# - a template package's definition deleted. ar2 renders and removes templates from the
-#   definitions it finds, so its template-1.json would stay for good. `ar2 remove` is how a
-#   package stops being served;
-# - a new package directory whose id, name or alias the registry already holds. aqua would
-#   go on reading the package it already had, and the new template would never be read.
-#   names.json is what the last catalogue's pull request wrote, so two pull requests adding
-#   the same name, both merged before the catalogue catches up, aren't caught here: the
-#   catalogue then lists the older directory and renders nothing for the newer.
+#   versions isn't supported yet: its template would go before its versions arrive.
 #
 # Which packages are templates is read from the pull request's registry.yaml, not from
 # whether template-1.json exists: that file arrives only after the definition merges.
@@ -70,9 +74,11 @@ for dir in $PACKAGES; do
 	read_base "$def" || in_base=false
 
 	if [ ! -f "$def" ]; then
-		if $in_base && is_template <<<"$base"; then
-			fail "$def is a template package's definition, and deleting it would leave its template-1.json served for good: stop serving the package with ar2 remove"
-		fi
+		for left in "$dir/versions" "$dir/versions.json" "$dir/template-1.json"; do
+			if [ -e "$left" ]; then
+				fail "$def is deleted, but $left is left and would go on being served: stop serving the package with ar2 remove first"
+			fi
+		done
 		continue
 	fi
 

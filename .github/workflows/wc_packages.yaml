@@ -78,12 +78,13 @@ jobs:
           done
         env:
           PACKAGES: ${{ steps.plan.outputs.packages }}
-      # Packages served as templates: what a pull request may do to them, and which of
-      # their definitions to install. Not for the catalogue's pull request, which carries
-      # the templates rendered from definitions already merged and is checked below.
+      # What a pull request may do to a package directory -- delete a definition, add a
+      # directory, make or unmake a template -- and which definitions are templates to
+      # install. Not for the catalogue's pull request, which carries the templates rendered
+      # from definitions already merged and is checked below.
       - id: templates
         if: steps.plan.outputs.packages != '' && github.head_ref != 'ar2_index'
-        run: bash .github/scripts/check-templates.sh
+        run: bash .github/scripts/check-packages.sh
         env:
           PACKAGES: ${{ steps.plan.outputs.packages }}
           BASE_SHA: ${{ github.event.pull_request.base.sha }}

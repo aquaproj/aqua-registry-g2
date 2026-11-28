@@ -56,6 +56,9 @@ called from there:
   finish. When
   every package had a branch of its own, a pull request couldn't reach another package; on
   `main` that is this check.
+- A package's definition may be deleted only once nothing it served is left beside it, and a
+  new package directory may not take an id, a name or an alias the registry already holds
+  ([check-packages.sh](.github/scripts/check-packages.sh)).
 - Each package's definition is validated, and every `registry-*.json` added or changed is
   checked with `ar2 test` on a machine of each environment it describes -- of its OS and
   architecture, except darwin, whose two architectures share an arm64 Mac, since nothing
@@ -97,9 +100,7 @@ can't be downloaded in time to verify them. See
    the same pull request: ar2 renders no template for an ignored package.
 
 Taking a package from a template to generated versions isn't supported yet: the checks refuse
-a definition that stops being a template. Neither is deleting a template package's
-`registry.yaml`: its `template-1.json` would stay, so the checks refuse it, and
-[skills/remove-package](skills/remove-package/SKILL.md) is how a package stops being served.
+a definition that stops being a template.
 
 When ar2 is updated to an aqua whose definition has a field template-1 doesn't list, ar2's
 tests stop at it (`pkg/g2/template_fields.txt`). A field whose absence changes nothing an
@@ -201,6 +202,9 @@ one, which takes away what was published.
 
 Not something this registry does, beyond malware and a package aqua can't install at all. When
 it is decided it is three things at once, and one command does all of them.
+
+The definition stays, ignored. It can be deleted afterwards, once the generated files and any
+`template-1.json` are gone from the package's directory; the checks refuse deleting it before.
 
 ## How To Review pull requests
 
