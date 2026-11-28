@@ -27,3 +27,8 @@ version_overrides:
           - name: hugo
             src: Payload/hugo
 all_assets_filter: (Asset matches "extended_withdeploy") or (Asset matches "checksum")
+# From v0.170.0 every build is extended, and the assets are named hugo_withdeploy_* rather
+# than hugo_extended_withdeploy_*.
+asset_filters:
+  - version_constraint: semver(">= 0.170.0")
+    all_assets_filter: (Asset contains "_withdeploy_") or (Asset matches "checksum")

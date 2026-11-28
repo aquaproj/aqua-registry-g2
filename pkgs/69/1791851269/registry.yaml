@@ -10,3 +10,14 @@ supported_envs:
   - darwin
   - linux
   - amd64
+version_overrides:
+  - version_constraint: semver(">= 0.3.0")
+  # releases.hashicorp.com has nothing before 0.3.0; those are GitHub releases of bare
+  # binaries named <os>-<arch>-levant.
+  - version_constraint: semver("< 0.3.0")
+    type: github_release
+    asset: '{{.OS}}-{{.Arch}}-levant'
+    format: raw
+    supported_envs:
+      - darwin
+      - linux/amd64

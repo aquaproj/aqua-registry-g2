@@ -17,6 +17,10 @@ ignored_packages:
       refuses the token a run uses: "your IP address is not permitted to access this
       resource", and its downloads are refused from the addresses CI runs on too.
       aqua-registry (v1) ignores bridgecrewio/yor for the same reason.
+  - name: qltysh-archive/test-reporter
+    reason: |
+      The repository is archived and its downloads, served from codeclimate.com, answer 404
+      for every version, so nothing can be generated or installed.
   - name: golang/tools/gorename
     reason: |
       The command was deleted upstream: https://github.com/golang/go/issues/69360

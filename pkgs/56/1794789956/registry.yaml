@@ -5,6 +5,8 @@ repo_name: kubeclarity
 repo_id: 840731904
 description: KubeClarity is a tool for detection and management of Software Bill Of
   Materials (SBOM) and vulnerabilities of container images and filesystems
+# The repository also releases its Helm chart, tagged kubeclarity-v<version>-helm.
+version_filter: not (Version endsWith "-helm")
 files:
   - name: kubeclarity-cli
 supported_envs:

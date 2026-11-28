@@ -4,6 +4,8 @@ repo_owner: alpkeskin
 repo_name: mosint
 repo_id: 299054922
 description: An automated e-mail OSINT tool
+# v.2.3 and v.2 aren't versions semver can read.
+version_filter: not (Version startsWith "v.")
 version_overrides:
   - version_constraint: Version == "v2.3.1"
     type: go_build

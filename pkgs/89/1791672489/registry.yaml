@@ -10,6 +10,8 @@ repo_owner: dagucloud
 repo_name: dagu
 repo_id: 484434975
 description: Self-hosted workflow engine for scripts, cron jobs, containers, and ops automation. YAML workflows, retries, logs, approvals, and optional distributed workers
+# The repository also releases its Helm chart, tagged helm-dagu-<version>.
+version_filter: Version startsWith "v"
 version_overrides:
   - version_constraint: semver("> 1.17.3")
   - version_constraint: semver("> 1.10.5")

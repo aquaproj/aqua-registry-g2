@@ -4,6 +4,8 @@ repo_owner: yonahd
 repo_name: kor
 repo_id: 662734440
 description: A Golang Tool to discover unused Kubernetes Resources
+# The repository also releases its Helm chart, tagged kor-<version>.
+version_filter: Version startsWith "v"
 version_overrides:
   - version_constraint: semver(">= 0.2.0")
   - version_constraint: semver("< 0.2.0")
