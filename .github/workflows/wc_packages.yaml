@@ -119,6 +119,25 @@ jobs:
       - id: matrix
         if: steps.plan.outputs.count != '0' || steps.templates.outputs.template_defs != ''
         run: |
+          # The environments are written to a file first rather than read from ar2 as it
+          # runs: a process substitution's exit status is lost, and ar2 failing would read
+          # as no environment at all.
+          : > envs.txt
+          if [ -n "${FILES// /}" ]; then
+            echo "$FILES" | xargs ar2 test --environments >> envs.txt
+            if [ ! -s envs.txt ]; then
+              echo "::error::the files describe no environment to check them on"
+              exit 1
+            fi
+          fi
+          for def in $TEMPLATE_DEFS; do
+            ar2 test --template --environments "$def" > template_envs.txt
+            if [ ! -s template_envs.txt ] && [ "$(yq '(.template.skip_test // "") != ""' "$def")" != true ]; then
+              echo "::error::$def: its test_versions expand to no environment to install them on"
+              exit 1
+            fi
+            cat template_envs.txt >> envs.txt
+          done
           : > matrix.jsonl
           while read -r env; do
             os=${env%%/*}
@@ -137,13 +156,10 @@ jobs:
             esac
             jq -n -c --arg env "$env" --arg os "$os" --arg arch "$arch" --arg runner "$runner" \
               '{env: $env, os: $os, arch: $arch, runner: $runner}' >> matrix.jsonl
-          done < <(
-            if [ -n "${FILES// /}" ]; then echo "$FILES" | xargs ar2 test --environments; fi
-            if [ -n "${TEMPLATE_DEFS// /}" ]; then echo "$TEMPLATE_DEFS" | xargs ar2 test --template --environments; fi
-          )
+          done < envs.txt
           if [ ! -s matrix.jsonl ]; then
-            # Templates that say why CI installs none of their versions.
-            echo "No environment to install anything on." >> "$GITHUB_STEP_SUMMARY"
+            # Only templates, each with skip_test: none of their versions is installed here.
+            echo "No environment to install anything on: every template says why CI installs none of its versions." >> "$GITHUB_STEP_SUMMARY"
             exit 0
           fi
           matrix=$(jq -s -c 'unique | group_by(.runner) | map({env: (map(.env) | join(" ")), os: .[0].os, arch: (map(.arch) | join(" ")), runner: .[0].runner})' matrix.jsonl)

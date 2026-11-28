@@ -93,7 +93,8 @@ can't be downloaded in time to verify them. See
 3. The checks install each of `test_versions` on a machine of every environment, and refuse a
    template package that has versions, or a pull request writing `template-1.json` by hand.
 4. Once it merges, the next `ar2 index` renders `template-1.json` into the catalogue's pull
-   request, which merges itself. A package that was in `ignored_packages` comes out of it.
+   request, which merges itself. A package in `ignored_packages` has to be taken out of it in
+   the same pull request: ar2 renders no template for an ignored package.
 
 Taking a package from a template to generated versions isn't supported yet: the checks refuse
 a definition that stops being a template.
