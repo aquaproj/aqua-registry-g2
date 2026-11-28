@@ -1,0 +1,108 @@
+{
+  "published_at": "2024-10-18T03:17:35Z",
+  "assets": [
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "variants": {
+        "libc": "glibc"
+      },
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "eza-community",
+      "repo_name": "eza",
+      "repo_id": 671832156,
+      "asset": "eza_x86_64-unknown-linux-gnu.tar.gz",
+      "format": "tar.gz",
+      "checksum": "cebee40a7f8c4ea282dd14778489c6c851ec8e415e852d35518c2dae73d78916",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "eza",
+          "src": "eza"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "variants": {
+        "libc": "musl"
+      },
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "eza-community",
+      "repo_name": "eza",
+      "repo_id": 671832156,
+      "asset": "eza_x86_64-unknown-linux-musl.tar.gz",
+      "format": "tar.gz",
+      "checksum": "7520bf9ea2302dfd8f528cc4d0726d38bb7bf374a0068c316366faf56a2866c2",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "eza",
+          "src": "eza"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "variants": {
+        "libc": "glibc"
+      },
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "eza-community",
+      "repo_name": "eza",
+      "repo_id": 671832156,
+      "asset": "eza_aarch64-unknown-linux-gnu.tar.gz",
+      "format": "tar.gz",
+      "checksum": "a5668794a420ac619f8989cca376db3c2578dcc6f6b328652f05e3acbf11d4fe",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "eza",
+          "src": "eza"
+        }
+      ]
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "eza-community",
+      "repo_name": "eza",
+      "repo_id": 671832156,
+      "asset": "eza.exe_x86_64-pc-windows-gnu.tar.gz",
+      "format": "tar.gz",
+      "checksum": "d92876d23037a355876f51853a8ab9040a95a861198d735f8fca5e14febd479f",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "eza",
+          "src": "eza.exe"
+        }
+      ]
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "windows_arm_emulation": true,
+      "type": "github_release",
+      "repo_owner": "eza-community",
+      "repo_name": "eza",
+      "repo_id": 671832156,
+      "asset": "eza.exe_x86_64-pc-windows-gnu.tar.gz",
+      "format": "tar.gz",
+      "checksum": "d92876d23037a355876f51853a8ab9040a95a861198d735f8fca5e14febd479f",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "eza",
+          "src": "eza.exe"
+        }
+      ]
+    }
+  ]
+}
