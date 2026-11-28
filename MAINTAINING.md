@@ -97,7 +97,9 @@ can't be downloaded in time to verify them. See
    the same pull request: ar2 renders no template for an ignored package.
 
 Taking a package from a template to generated versions isn't supported yet: the checks refuse
-a definition that stops being a template.
+a definition that stops being a template. Neither is deleting a template package's
+`registry.yaml`: its `template-1.json` would stay, so the checks refuse it, and
+[skills/remove-package](skills/remove-package/SKILL.md) is how a package stops being served.
 
 When ar2 is updated to an aqua whose definition has a field template-1 doesn't list, ar2's
 tests stop at it (`pkg/g2/template_fields.txt`). A field whose absence changes nothing an
