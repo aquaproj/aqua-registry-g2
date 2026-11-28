@@ -4,6 +4,8 @@ repo_owner: megaease
 repo_name: easeprobe
 repo_id: 463013407
 description: A simple, standalone, and lightWeight tool that can do health/status checking, written in Go
+# The repository also released its Helm charts, tagged easeprobe-helm-charts-v<version>.
+version_filter: Version startsWith "v"
 files:
   - name: easeprobe
     src: bin/easeprobe

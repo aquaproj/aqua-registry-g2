@@ -4,5 +4,7 @@ repo_owner: SurgeDM
 repo_name: Surge
 repo_id: 1085475816
 description: Blazing fast TUI download manager built in Go for power users
+# The repository also releases its browser extension, tagged ext-v<version>.
+version_filter: Version startsWith "v"
 files:
   - name: surge

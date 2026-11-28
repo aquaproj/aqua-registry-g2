@@ -4,6 +4,9 @@ repo_owner: Latias94
 repo_name: merman
 repo_id: 1154399455
 description: Mermaid.js, but headless, in Rust
+# The repository also releases a tree-sitter grammar and a Flutter package, tagged
+# tree-sitter-mermaid-v<version> and flutter-v<version>.
+version_filter: Version startsWith "v"
 version_overrides:
   - version_constraint: Version == "v0.7.0-alpha.1"
     no_asset: true

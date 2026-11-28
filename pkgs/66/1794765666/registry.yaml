@@ -4,6 +4,8 @@ repo_owner: anthropics
 repo_name: anthropic-cli
 repo_id: 1140226073
 description: The CLI for the Claude API
+# The repository also releases sandboxes, tagged sandboxes-v<version>.
+version_filter: Version startsWith "v"
 files:
   - name: ant
 version_overrides:
