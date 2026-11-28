@@ -1,0 +1,169 @@
+{
+  "published_at": "2026-06-17T11:27:10Z",
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "openbao",
+      "repo_name": "openbao",
+      "repo_id": 716719284,
+      "asset": "bao_2.5.5_Darwin_x86_64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "be712aafda1170a05dcc66af7066dc724b6b8a13c4976c74cc677233e4278329",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "bao",
+          "src": "bao"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "bao_2.5.5_Darwin_x86_64.tar.gz.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/openbao/openbao/.github/workflows/release.yml@refs/tags/v2.5.5",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "certificate_github_workflow_repository": "openbao/openbao"
+      }
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "openbao",
+      "repo_name": "openbao",
+      "repo_id": 716719284,
+      "asset": "bao_2.5.5_Darwin_arm64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "944c8f18068305944edaa7d4a8b1d2895d2f2e7b0b09a2635210b0e5b4de84c9",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "bao",
+          "src": "bao"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "bao_2.5.5_Darwin_arm64.tar.gz.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/openbao/openbao/.github/workflows/release.yml@refs/tags/v2.5.5",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "certificate_github_workflow_repository": "openbao/openbao"
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "openbao",
+      "repo_name": "openbao",
+      "repo_id": 716719284,
+      "asset": "bao_2.5.5_Linux_x86_64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "2c5577707e97fc95c2086950f39880ead5e45b356c94388e5cb606f5a5c2b697",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "bao",
+          "src": "bao"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "bao_2.5.5_Linux_x86_64.tar.gz.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/openbao/openbao/.github/workflows/release.yml@refs/tags/v2.5.5",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "certificate_github_workflow_repository": "openbao/openbao"
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "linked_libc": "static",
+      "type": "github_release",
+      "repo_owner": "openbao",
+      "repo_name": "openbao",
+      "repo_id": 716719284,
+      "asset": "bao_2.5.5_Linux_arm64.tar.gz",
+      "format": "tar.gz",
+      "checksum": "9b133729e503ecf4d52f1d4e062954b9fd3798f14335ad8af5f7435f5b8ebd16",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "bao",
+          "src": "bao"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "bao_2.5.5_Linux_arm64.tar.gz.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/openbao/openbao/.github/workflows/release.yml@refs/tags/v2.5.5",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "certificate_github_workflow_repository": "openbao/openbao"
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "openbao",
+      "repo_name": "openbao",
+      "repo_id": 716719284,
+      "asset": "bao_2.5.5_Windows_x86_64.zip",
+      "format": "zip",
+      "checksum": "ed412b3233cb5d870ed8bec4cb1bdd3cdfeefa193c6c21f7c7d2055481b140bc",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "bao",
+          "src": "bao.exe"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "bao_2.5.5_Windows_x86_64.zip.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/openbao/openbao/.github/workflows/release.yml@refs/tags/v2.5.5",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "certificate_github_workflow_repository": "openbao/openbao"
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "openbao",
+      "repo_name": "openbao",
+      "repo_id": 716719284,
+      "asset": "bao_2.5.5_Windows_arm64.zip",
+      "format": "zip",
+      "checksum": "e59bf87f3dbcf840059cbb03dcce275ccd04ea42d5efe615ebf329f09b73227d",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "bao",
+          "src": "bao.exe"
+        }
+      ],
+      "cosign": {
+        "bundle": {
+          "type": "github_release",
+          "asset": "bao_2.5.5_Windows_arm64.zip.sigstore.json"
+        },
+        "certificate_identity": "https://github.com/openbao/openbao/.github/workflows/release.yml@refs/tags/v2.5.5",
+        "certificate_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "certificate_github_workflow_repository": "openbao/openbao"
+      }
+    }
+  ]
+}
