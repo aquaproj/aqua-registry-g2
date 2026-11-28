@@ -2,18 +2,268 @@
   "published_at": "2023-10-19T17:48:32Z",
   "assets": [
     {
-      "os": "linux",
+      "os": "darwin",
       "arch": "amd64",
-      "variants": {
-        "libc": "glibc"
-      },
       "type": "github_release",
       "repo_owner": "adoptium",
       "repo_name": "temurin17-binaries",
       "repo_id": 372925194,
-      "asset": "OpenJDK17U-static-libs-glibc_x64_linux_hotspot_17.0.9_9.tar.gz",
+      "asset": "OpenJDK17U-jdk_x64_mac_hotspot_17.0.9_9.tar.gz",
       "format": "tar.gz",
-      "checksum": "58a896ae5c2b69a042db15a7778e557aaf4dd7eec4d02e4302bb93067ebc4843",
+      "checksum": "c69b37ea72136df49ce54972408803584b49b2c91b0fbc876d7125e963c7db37",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "jar",
+          "src": "jdk-17.0.9+9/Contents/Home/bin/jar"
+        },
+        {
+          "name": "jarsigner",
+          "src": "jdk-17.0.9+9/Contents/Home/bin/jarsigner"
+        },
+        {
+          "name": "java",
+          "src": "jdk-17.0.9+9/Contents/Home/bin/java"
+        },
+        {
+          "name": "javac",
+          "src": "jdk-17.0.9+9/Contents/Home/bin/javac"
+        },
+        {
+          "name": "javadoc",
+          "src": "jdk-17.0.9+9/Contents/Home/bin/javadoc"
+        },
+        {
+          "name": "javap",
+          "src": "jdk-17.0.9+9/Contents/Home/bin/javap"
+        },
+        {
+          "name": "jcmd",
+          "src": "jdk-17.0.9+9/Contents/Home/bin/jcmd"
+        },
+        {
+          "name": "jconsole",
+          "src": "jdk-17.0.9+9/Contents/Home/bin/jconsole"
+        },
+        {
+          "name": "jdb",
+          "src": "jdk-17.0.9+9/Contents/Home/bin/jdb"
+        },
+        {
+          "name": "jdeprscan",
+          "src": "jdk-17.0.9+9/Contents/Home/bin/jdeprscan"
+        },
+        {
+          "name": "jdeps",
+          "src": "jdk-17.0.9+9/Contents/Home/bin/jdeps"
+        },
+        {
+          "name": "jfr",
+          "src": "jdk-17.0.9+9/Contents/Home/bin/jfr"
+        },
+        {
+          "name": "jhsdb",
+          "src": "jdk-17.0.9+9/Contents/Home/bin/jhsdb"
+        },
+        {
+          "name": "jimage",
+          "src": "jdk-17.0.9+9/Contents/Home/bin/jimage"
+        },
+        {
+          "name": "jinfo",
+          "src": "jdk-17.0.9+9/Contents/Home/bin/jinfo"
+        },
+        {
+          "name": "jlink",
+          "src": "jdk-17.0.9+9/Contents/Home/bin/jlink"
+        },
+        {
+          "name": "jmap",
+          "src": "jdk-17.0.9+9/Contents/Home/bin/jmap"
+        },
+        {
+          "name": "jmod",
+          "src": "jdk-17.0.9+9/Contents/Home/bin/jmod"
+        },
+        {
+          "name": "jpackage",
+          "src": "jdk-17.0.9+9/Contents/Home/bin/jpackage"
+        },
+        {
+          "name": "jps",
+          "src": "jdk-17.0.9+9/Contents/Home/bin/jps"
+        },
+        {
+          "name": "jrunscript",
+          "src": "jdk-17.0.9+9/Contents/Home/bin/jrunscript"
+        },
+        {
+          "name": "jshell",
+          "src": "jdk-17.0.9+9/Contents/Home/bin/jshell"
+        },
+        {
+          "name": "jstack",
+          "src": "jdk-17.0.9+9/Contents/Home/bin/jstack"
+        },
+        {
+          "name": "jstat",
+          "src": "jdk-17.0.9+9/Contents/Home/bin/jstat"
+        },
+        {
+          "name": "jstatd",
+          "src": "jdk-17.0.9+9/Contents/Home/bin/jstatd"
+        },
+        {
+          "name": "keytool",
+          "src": "jdk-17.0.9+9/Contents/Home/bin/keytool"
+        },
+        {
+          "name": "rmiregistry",
+          "src": "jdk-17.0.9+9/Contents/Home/bin/rmiregistry"
+        },
+        {
+          "name": "serialver",
+          "src": "jdk-17.0.9+9/Contents/Home/bin/serialver"
+        }
+      ]
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "adoptium",
+      "repo_name": "temurin17-binaries",
+      "repo_id": 372925194,
+      "asset": "OpenJDK17U-jdk_aarch64_mac_hotspot_17.0.9_9.tar.gz",
+      "format": "tar.gz",
+      "checksum": "823777266415347983bbd87ccd8136537242ff27e62f307b7e8521494c665f0d",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "jar",
+          "src": "jdk-17.0.9+9/Contents/Home/bin/jar"
+        },
+        {
+          "name": "jarsigner",
+          "src": "jdk-17.0.9+9/Contents/Home/bin/jarsigner"
+        },
+        {
+          "name": "java",
+          "src": "jdk-17.0.9+9/Contents/Home/bin/java"
+        },
+        {
+          "name": "javac",
+          "src": "jdk-17.0.9+9/Contents/Home/bin/javac"
+        },
+        {
+          "name": "javadoc",
+          "src": "jdk-17.0.9+9/Contents/Home/bin/javadoc"
+        },
+        {
+          "name": "javap",
+          "src": "jdk-17.0.9+9/Contents/Home/bin/javap"
+        },
+        {
+          "name": "jcmd",
+          "src": "jdk-17.0.9+9/Contents/Home/bin/jcmd"
+        },
+        {
+          "name": "jconsole",
+          "src": "jdk-17.0.9+9/Contents/Home/bin/jconsole"
+        },
+        {
+          "name": "jdb",
+          "src": "jdk-17.0.9+9/Contents/Home/bin/jdb"
+        },
+        {
+          "name": "jdeprscan",
+          "src": "jdk-17.0.9+9/Contents/Home/bin/jdeprscan"
+        },
+        {
+          "name": "jdeps",
+          "src": "jdk-17.0.9+9/Contents/Home/bin/jdeps"
+        },
+        {
+          "name": "jfr",
+          "src": "jdk-17.0.9+9/Contents/Home/bin/jfr"
+        },
+        {
+          "name": "jhsdb",
+          "src": "jdk-17.0.9+9/Contents/Home/bin/jhsdb"
+        },
+        {
+          "name": "jimage",
+          "src": "jdk-17.0.9+9/Contents/Home/bin/jimage"
+        },
+        {
+          "name": "jinfo",
+          "src": "jdk-17.0.9+9/Contents/Home/bin/jinfo"
+        },
+        {
+          "name": "jlink",
+          "src": "jdk-17.0.9+9/Contents/Home/bin/jlink"
+        },
+        {
+          "name": "jmap",
+          "src": "jdk-17.0.9+9/Contents/Home/bin/jmap"
+        },
+        {
+          "name": "jmod",
+          "src": "jdk-17.0.9+9/Contents/Home/bin/jmod"
+        },
+        {
+          "name": "jpackage",
+          "src": "jdk-17.0.9+9/Contents/Home/bin/jpackage"
+        },
+        {
+          "name": "jps",
+          "src": "jdk-17.0.9+9/Contents/Home/bin/jps"
+        },
+        {
+          "name": "jrunscript",
+          "src": "jdk-17.0.9+9/Contents/Home/bin/jrunscript"
+        },
+        {
+          "name": "jshell",
+          "src": "jdk-17.0.9+9/Contents/Home/bin/jshell"
+        },
+        {
+          "name": "jstack",
+          "src": "jdk-17.0.9+9/Contents/Home/bin/jstack"
+        },
+        {
+          "name": "jstat",
+          "src": "jdk-17.0.9+9/Contents/Home/bin/jstat"
+        },
+        {
+          "name": "jstatd",
+          "src": "jdk-17.0.9+9/Contents/Home/bin/jstatd"
+        },
+        {
+          "name": "keytool",
+          "src": "jdk-17.0.9+9/Contents/Home/bin/keytool"
+        },
+        {
+          "name": "rmiregistry",
+          "src": "jdk-17.0.9+9/Contents/Home/bin/rmiregistry"
+        },
+        {
+          "name": "serialver",
+          "src": "jdk-17.0.9+9/Contents/Home/bin/serialver"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "adoptium",
+      "repo_name": "temurin17-binaries",
+      "repo_id": 372925194,
+      "asset": "OpenJDK17U-jdk_x64_linux_hotspot_17.0.9_9.tar.gz",
+      "format": "tar.gz",
+      "checksum": "7b175dbe0d6e3c9c23b6ed96449b018308d8fc94a5ecd9c0df8b8bc376c3c18a",
       "checksum_algorithm": "sha256",
       "files": [
         {
@@ -132,17 +382,141 @@
     },
     {
       "os": "linux",
-      "arch": "arm64",
+      "arch": "amd64",
       "variants": {
-        "libc": "glibc"
+        "libc": "musl"
       },
+      "linked_libc": "musl",
       "type": "github_release",
       "repo_owner": "adoptium",
       "repo_name": "temurin17-binaries",
       "repo_id": 372925194,
-      "asset": "OpenJDK17U-static-libs-glibc_aarch64_linux_hotspot_17.0.9_9.tar.gz",
+      "asset": "OpenJDK17U-jdk_x64_alpine-linux_hotspot_17.0.9_9.tar.gz",
       "format": "tar.gz",
-      "checksum": "6987fd2a6333adaf21f4569824861b0f4ed09e6957ffae07cc44021bdb2c82ef",
+      "checksum": "c2a571a56e5bd3f30956b17b048880078c7801ed9e8754af6d1e38b9176059a9",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "jar",
+          "src": "jdk-17.0.9+9/bin/jar"
+        },
+        {
+          "name": "jarsigner",
+          "src": "jdk-17.0.9+9/bin/jarsigner"
+        },
+        {
+          "name": "java",
+          "src": "jdk-17.0.9+9/bin/java"
+        },
+        {
+          "name": "javac",
+          "src": "jdk-17.0.9+9/bin/javac"
+        },
+        {
+          "name": "javadoc",
+          "src": "jdk-17.0.9+9/bin/javadoc"
+        },
+        {
+          "name": "javap",
+          "src": "jdk-17.0.9+9/bin/javap"
+        },
+        {
+          "name": "jcmd",
+          "src": "jdk-17.0.9+9/bin/jcmd"
+        },
+        {
+          "name": "jdb",
+          "src": "jdk-17.0.9+9/bin/jdb"
+        },
+        {
+          "name": "jdeprscan",
+          "src": "jdk-17.0.9+9/bin/jdeprscan"
+        },
+        {
+          "name": "jdeps",
+          "src": "jdk-17.0.9+9/bin/jdeps"
+        },
+        {
+          "name": "jfr",
+          "src": "jdk-17.0.9+9/bin/jfr"
+        },
+        {
+          "name": "jhsdb",
+          "src": "jdk-17.0.9+9/bin/jhsdb"
+        },
+        {
+          "name": "jimage",
+          "src": "jdk-17.0.9+9/bin/jimage"
+        },
+        {
+          "name": "jinfo",
+          "src": "jdk-17.0.9+9/bin/jinfo"
+        },
+        {
+          "name": "jlink",
+          "src": "jdk-17.0.9+9/bin/jlink"
+        },
+        {
+          "name": "jmap",
+          "src": "jdk-17.0.9+9/bin/jmap"
+        },
+        {
+          "name": "jmod",
+          "src": "jdk-17.0.9+9/bin/jmod"
+        },
+        {
+          "name": "jpackage",
+          "src": "jdk-17.0.9+9/bin/jpackage"
+        },
+        {
+          "name": "jps",
+          "src": "jdk-17.0.9+9/bin/jps"
+        },
+        {
+          "name": "jrunscript",
+          "src": "jdk-17.0.9+9/bin/jrunscript"
+        },
+        {
+          "name": "jshell",
+          "src": "jdk-17.0.9+9/bin/jshell"
+        },
+        {
+          "name": "jstack",
+          "src": "jdk-17.0.9+9/bin/jstack"
+        },
+        {
+          "name": "jstat",
+          "src": "jdk-17.0.9+9/bin/jstat"
+        },
+        {
+          "name": "jstatd",
+          "src": "jdk-17.0.9+9/bin/jstatd"
+        },
+        {
+          "name": "keytool",
+          "src": "jdk-17.0.9+9/bin/keytool"
+        },
+        {
+          "name": "rmiregistry",
+          "src": "jdk-17.0.9+9/bin/rmiregistry"
+        },
+        {
+          "name": "serialver",
+          "src": "jdk-17.0.9+9/bin/serialver"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "adoptium",
+      "repo_name": "temurin17-binaries",
+      "repo_id": 372925194,
+      "asset": "OpenJDK17U-jdk_aarch64_linux_hotspot_17.0.9_9.tar.gz",
+      "format": "tar.gz",
+      "checksum": "e2c5e26f8572544b201bc22a9b28f2b1a3147ab69be111cea07c7f52af252e75",
       "checksum_algorithm": "sha256",
       "files": [
         {
