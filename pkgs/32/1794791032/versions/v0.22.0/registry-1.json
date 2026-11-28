@@ -1,0 +1,164 @@
+{
+  "published_at": "2026-05-11T11:30:21Z",
+  "assets": [
+    {
+      "os": "darwin",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "grafana",
+      "repo_name": "flint",
+      "repo_id": 1157902094,
+      "asset": "flint-x86_64-apple-darwin.tar.gz",
+      "format": "tar.gz",
+      "checksum": "1e495ddf9c205df64bd9ba43199451cc87815b0c364bae976e6b8924cd9ce309",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "flint",
+          "src": "flint"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "grafana/flint/.github/workflows/release-assets.yml",
+        "source_ref": "refs/heads/main",
+        "source_digest": "c3fc3fa71ab2383ec9126670c982c22b70106096",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "grafana",
+      "repo_name": "flint",
+      "repo_id": 1157902094,
+      "asset": "flint-aarch64-apple-darwin.tar.gz",
+      "format": "tar.gz",
+      "checksum": "e781c314884ff2a05875e0b165c49a0da83fa453aa0e33ee74d0461a03dd5e33",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "flint",
+          "src": "flint"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "grafana/flint/.github/workflows/release-assets.yml",
+        "source_ref": "refs/heads/main",
+        "source_digest": "c3fc3fa71ab2383ec9126670c982c22b70106096",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "variants": {
+        "libc": "glibc"
+      },
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "grafana",
+      "repo_name": "flint",
+      "repo_id": 1157902094,
+      "asset": "flint-x86_64-unknown-linux-gnu.tar.gz",
+      "format": "tar.gz",
+      "checksum": "8809abd4d1c4deee42da15d807e22cbe4e5cf27fdaa008a043642539dde99498",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "flint",
+          "src": "flint"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "grafana/flint/.github/workflows/release-assets.yml",
+        "source_ref": "refs/heads/main",
+        "source_digest": "c3fc3fa71ab2383ec9126670c982c22b70106096",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "variants": {
+        "libc": "glibc"
+      },
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "grafana",
+      "repo_name": "flint",
+      "repo_id": 1157902094,
+      "asset": "flint-aarch64-unknown-linux-gnu.tar.gz",
+      "format": "tar.gz",
+      "checksum": "1b99178a705f6bb6a8e5636fa0fa5d76cb1ae39fdb3426183a1992b97e419c22",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "flint",
+          "src": "flint"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "grafana/flint/.github/workflows/release-assets.yml",
+        "source_ref": "refs/heads/main",
+        "source_digest": "c3fc3fa71ab2383ec9126670c982c22b70106096",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "grafana",
+      "repo_name": "flint",
+      "repo_id": 1157902094,
+      "asset": "flint-x86_64-pc-windows-msvc.zip",
+      "format": "zip",
+      "checksum": "54b185fe8bf5001172348e0dd0d8b30d279cefd696d293ca4de1a24298cce5cd",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "flint",
+          "src": "flint.exe"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "grafana/flint/.github/workflows/release-assets.yml",
+        "source_ref": "refs/heads/main",
+        "source_digest": "c3fc3fa71ab2383ec9126670c982c22b70106096",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "windows_arm_emulation": true,
+      "type": "github_release",
+      "repo_owner": "grafana",
+      "repo_name": "flint",
+      "repo_id": 1157902094,
+      "asset": "flint-x86_64-pc-windows-msvc.zip",
+      "format": "zip",
+      "checksum": "54b185fe8bf5001172348e0dd0d8b30d279cefd696d293ca4de1a24298cce5cd",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "flint",
+          "src": "flint.exe"
+        }
+      ],
+      "github_artifact_attestations": {
+        "signer_workflow": "grafana/flint/.github/workflows/release-assets.yml",
+        "source_ref": "refs/heads/main",
+        "source_digest": "c3fc3fa71ab2383ec9126670c982c22b70106096",
+        "cert_oidc_issuer": "https://token.actions.githubusercontent.com",
+        "deny_self_hosted_runners": true
+      }
+    }
+  ]
+}
