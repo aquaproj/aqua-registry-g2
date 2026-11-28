@@ -6,6 +6,8 @@
 # here that is a check rather than a fact, and this is the check:
 #
 # - a path under pkgs/ is in the directory its id says;
+# - a template-1.json, which aqua reads as it is, is written and removed only by the
+#   catalogue's pull request (ar2_index), which ar2 renders it into from the definition;
 # - a pull request ar2 opened for a package touches that package's directory and nothing
 #   else, the one bringing the lists of versions up to date touches nothing but those lists,
 #   and one ar2 opened for anything else touches no package.
@@ -33,6 +35,10 @@ fail() {
 head_id=""
 ar2_head=false
 lists_only=false
+index_head=false
+if [ "$HEAD_REF" = ar2_index ]; then
+	index_head=true
+fi
 if [[ $HEAD_REF == ar2_* ]]; then
 	ar2_head=true
 	if [[ $HEAD_REF =~ ^ar2_([0-9]+)(_.*)?$ ]]; then
@@ -55,6 +61,7 @@ if [ "$HEAD_REF" = ar2_rewrite ]; then
 	{
 		echo "packages="
 		echo "files="
+		echo "templates="
 		echo "count=0"
 	} >> "$GITHUB_OUTPUT"
 	exit "$failed"
@@ -65,6 +72,7 @@ gh api "repos/$GITHUB_REPOSITORY/pulls/$NUMBER/files" --paginate \
 
 : > packages.txt
 : > files.txt
+: > templates.txt
 while IFS=$'\t' read -r status file previous; do
 	for path in "$file" ${previous:+"$previous"}; do
 		if $lists_only && [[ ! $path =~ ^pkgs/[0-9]{2}/[0-9]+/versions\.json$ ]]; then
@@ -87,6 +95,15 @@ while IFS=$'\t' read -r status file previous; do
 			fail "$path is in shard $shard, but the id $id belongs in ${id: -2}"
 			continue
 		fi
+		if [[ $path =~ ^pkgs/[0-9]{2}/[0-9]+/template-1\.json$ ]]; then
+			if ! $index_head; then
+				fail "$path is a template, which only the catalogue's pull request writes or removes: ar2 index renders it from the registry.yaml beside it"
+				continue
+			fi
+			echo "$path" >> templates.txt
+			echo "pkgs/$shard/$id" >> packages.txt
+			continue
+		fi
 		if $ar2_head && [ "$id" != "$head_id" ]; then
 			fail "$path belongs to a package this pull request isn't for"
 		fi
@@ -107,9 +124,11 @@ while IFS=$'\t' read -r status file previous; do
 done < changes.tsv
 
 sort -u -o packages.txt packages.txt
+sort -u -o templates.txt templates.txt
 {
 	echo "packages=$(tr '\n' ' ' < packages.txt)"
 	echo "files=$(tr '\n' ' ' < files.txt)"
+	echo "templates=$(tr '\n' ' ' < templates.txt)"
 	echo "count=$(wc -l < files.txt | tr -d ' ')"
 } >> "$GITHUB_OUTPUT"
 echo "packages:"

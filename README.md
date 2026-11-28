@@ -41,6 +41,7 @@ pkgs/
       versions/
         <escaped version>/
           registry-1.json
+      template-1.json # instead of versions.json and versions/, for a package served as a template
 ```
 
 - `index.json`: the package list. This is what `aqua g` searches.
@@ -60,6 +61,35 @@ pkgs/
   and the digest of the file the registry serves for it. It is brought up to date after the
   versions it lists merge, by [update-versions.yaml](.github/workflows/update-versions.yaml),
   and `versions/` stays the thing that decides what the registry holds.
+- `template-1.json`: for a [package served as a template](#a-package-served-as-a-template),
+  in place of `versions.json` and `versions/`.
+
+#### A package served as a template
+
+Some packages can't have a `registry.json` generated for their versions: ones with no list of
+versions anywhere, such as an `http` package whose definition is only a URL template, and
+ones whose assets can't be downloaded in time to verify them. Their `registry.yaml` declares
+`template:`, and they are served the way aqua-registry serves every package: `template-1.json`
+is the definition with its templates unexpanded, which aqua expands for the version a
+configuration asks for, fetching and verifying the checksums when it writes the lock file.
+
+```yaml
+template:
+  reason: why the versions can't be generated ahead of time
+  test_versions: # installed by CI, like a pkg.yaml of aqua-registry: the newest, and one at each boundary of version_overrides
+    - v2.32.0
+  # skip_test: why CI installs no version, instead of test_versions
+```
+
+- It is declared per package. A package that doesn't declare it is served from generated
+  files alone: a version that failed to generate never falls through to a template.
+- `template-1.json` is written by ar2 alone, from the merged `registry.yaml`, in the
+  catalogue's pull request beside `index.json`. A person writes `registry.yaml` only.
+- The registry has no list of its versions. aqua offers versions from upstream when the
+  definition says how to list them, and none otherwise.
+- The `1` is the schema's major version, as in `registry-1.json`. template-1 allows the
+  fields aqua's definition had when it was introduced, since an older aqua would drop a newer
+  field without a word: one that changes what is resolved needs `template-2.json`.
 
 #### Schema version
 
