@@ -77,6 +77,32 @@ carries actionlint.
 For a package aqua-registry doesn't have, which otherwise has no way into the order at all. A
 request for one aqua-registry already has needs nothing: the order reaches it.
 
+## How To Serve a package as a template
+
+For a package whose versions can't be generated: no list of versions anywhere, or assets that
+can't be downloaded in time to verify them. See
+[README.md](README.md#a-package-served-as-a-template) for what it means.
+
+1. Write its `registry.yaml` in a pull request, with `template:` (`reason`, and `test_versions`
+   or `skip_test`). Write it the way this registry writes definitions: no `version_constraint`
+   at the top, and `version_overrides` newest first. A definition copied from aqua-registry
+   has to be turned round.
+2. A new package needs a directory, `pkgs/<last two digits of id>/<id>/`. Its id is the second
+   it is minted, as ar2 mints one: `date +%s`. The checks refuse an id, a name or an alias the
+   registry already holds.
+3. The checks install each of `test_versions` on a machine of every environment, and refuse a
+   template package that has versions, or a pull request writing `template-1.json` by hand.
+4. Once it merges, the next `ar2 index` renders `template-1.json` into the catalogue's pull
+   request, which merges itself. A package that was in `ignored_packages` comes out of it.
+
+Taking a package from a template to generated versions isn't supported yet: the checks refuse
+a definition that stops being a template.
+
+When ar2 is updated to an aqua whose definition has a field template-1 doesn't list, ar2's
+tests stop at it (`pkg/g2/template_fields.txt`). A field whose absence changes nothing an
+older aqua resolves, such as a description, can join template-1. One that changes what is
+resolved needs `template-2.json`.
+
 ## How To Support a new version
 
 [skills/generate-versions](skills/generate-versions/SKILL.md).

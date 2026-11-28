@@ -42,6 +42,26 @@ Until 2026-10 each package was kept on a branch of its own, `pkg_<id>`, at the r
 
 `1` of `registry-1.json` is the major version of the registry schema. See [README.md](README.md#schema-version) for what a reader should do when a new one arrives.
 
+### A package served as a template
+
+A package that can't have its versions generated has `template-1.json` instead of
+`versions/`: the definition, as one package of aqua-registry's registry.yaml, with its templates
+unexpanded ([README.md](README.md#a-package-served-as-a-template)).
+
+```
+https://raw.githubusercontent.com/aquaproj/aqua-registry-g2/main/pkgs/<shard>/<id>/template-1.json
+```
+
+A tool tries `registry-1.json` of the version first, and the template only when that isn't
+there; only a package served as a template has one. Two things differ from aqua-registry's
+registry.yaml:
+
+- `version_overrides` are ordered newest first, the first whose `version_constraint` the
+  version meets answers, and a version none of them meets takes the first. The top level has
+  no `version_constraint`: it is the base the overrides inherit from.
+- Nothing about it was verified ahead of time. There is no checksum: a tool fetches and
+  verifies one itself, as for any registry.yaml.
+
 ## How To List available packages
 
 Fetch [index.json](index.json).

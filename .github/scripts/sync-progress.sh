@@ -24,10 +24,14 @@ digest=$(jq -r '.layers[] | select(.mediaType == "application/vnd.ar2.state.v1+j
 saved=$(jq -r '.annotations["org.opencontainers.image.created"] // "unknown"' <<<"$manifest")
 curl -sSfL -H "Authorization: Bearer $token" "https://$registry/v2/$repository/blobs/$digest" -o state.json
 
-read -r total walked complete < <(jq -r '[
-	(.packages | length),
-	([.packages[] | select(.last_deep_check != null)] | length),
-	([.packages[] | select(.last_deep_check != null and .caught_up == true)] | length)
+# A package served as a template has no version to generate, so it is in none of the rows
+# but its own: counted among the packages, it would keep every share short of 100%.
+read -r total walked complete templates < <(jq -r '
+	[.packages[] | select(.template != true)] as $generated | [
+	($generated | length),
+	([$generated[] | select(.last_deep_check != null)] | length),
+	([$generated[] | select(.last_deep_check != null and .caught_up == true)] | length),
+	([.packages[] | select(.template == true)] | length)
 ] | @tsv' state.json)
 
 published=$(git ls-tree -r --name-only HEAD pkgs | grep -c '/versions\.json$')
@@ -59,6 +63,7 @@ body=$(cat <<BODY
 | Packages with a version published | $published / $total | $(percent "$published" "$total")% |
 | Packages whose history was walked | $walked / $total | $(percent "$walked" "$total")% |
 | Walked and holding every version swept | $complete / $total | $(percent "$complete" "$total")% |
+| Packages served as templates | $templates | |
 
 $versions versions published$(since "$versions" "$last_versions"). State saved at $saved, main at $(git rev-parse --short HEAD).
 BODY

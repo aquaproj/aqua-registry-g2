@@ -17,6 +17,7 @@ jobs:
       count: ${{ steps.plan.outputs.count }}
       files: ${{ steps.plan.outputs.files }}
       packages: ${{ steps.plan.outputs.packages }}
+      template_defs: ${{ steps.templates.outputs.template_defs }}
       matrix: ${{ steps.matrix.outputs.matrix }}
     env:
       AQUA_GLOBAL_CONFIG: ${{ github.workspace }}/aqua/aqua.yaml
@@ -77,8 +78,25 @@ jobs:
           done
         env:
           PACKAGES: ${{ steps.plan.outputs.packages }}
-      - if: steps.plan.outputs.count == '0'
-        run: echo "This pull request adds or changes no generated registry file." >> "$GITHUB_STEP_SUMMARY"
+      # Packages served as templates: what a pull request may do to them, and which of
+      # their definitions to install. Not for the catalogue's pull request, which carries
+      # the templates rendered from definitions already merged and is checked below.
+      - id: templates
+        if: steps.plan.outputs.packages != '' && github.head_ref != 'ar2_index'
+        run: bash .github/scripts/check-templates.sh
+        env:
+          PACKAGES: ${{ steps.plan.outputs.packages }}
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          GH_TOKEN: ${{ github.token }}
+      # The templates the catalogue's pull request writes or removes have to be exactly
+      # what ar2 renders from the definitions beside them, which are the merged ones here:
+      # the checkout is the pull request merged into main.
+      - if: steps.plan.outputs.templates != ''
+        run: echo "$TEMPLATES" | xargs ar2 validate-templates
+        env:
+          TEMPLATES: ${{ steps.plan.outputs.templates }}
+      - if: steps.plan.outputs.count == '0' && steps.templates.outputs.template_defs == ''
+        run: echo "This pull request adds or changes no generated registry file and no template to install." >> "$GITHUB_STEP_SUMMARY"
       # One job per environment the files describe, on a machine of that environment.
       # An environment with no runner to answer for it fails here rather than being
       # passed over quietly.
@@ -95,8 +113,11 @@ jobs:
       # of type hosted even after multiple attempts", with the annotation "Due to capacity
       # constraints, jobs targeting macOS arm64 runners may experience longer queue times".
       # Since nothing checked is run, either kind of Mac answers for both environments.
+      #
+      # A template's environments are what its test_versions expand to, worked out the
+      # same way.
       - id: matrix
-        if: steps.plan.outputs.count != '0'
+        if: steps.plan.outputs.count != '0' || steps.templates.outputs.template_defs != ''
         run: |
           : > matrix.jsonl
           while read -r env; do
@@ -116,12 +137,21 @@ jobs:
             esac
             jq -n -c --arg env "$env" --arg os "$os" --arg arch "$arch" --arg runner "$runner" \
               '{env: $env, os: $os, arch: $arch, runner: $runner}' >> matrix.jsonl
-          done < <(echo "$FILES" | xargs ar2 test --environments)
-          matrix=$(jq -s -c 'group_by(.runner) | map({env: (map(.env) | join(" ")), os: .[0].os, arch: (map(.arch) | join(" ")), runner: .[0].runner})' matrix.jsonl)
+          done < <(
+            if [ -n "${FILES// /}" ]; then echo "$FILES" | xargs ar2 test --environments; fi
+            if [ -n "${TEMPLATE_DEFS// /}" ]; then echo "$TEMPLATE_DEFS" | xargs ar2 test --template --environments; fi
+          )
+          if [ ! -s matrix.jsonl ]; then
+            # Templates that say why CI installs none of their versions.
+            echo "No environment to install anything on." >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          matrix=$(jq -s -c 'unique | group_by(.runner) | map({env: (map(.env) | join(" ")), os: .[0].os, arch: (map(.arch) | join(" ")), runner: .[0].runner})' matrix.jsonl)
           echo "matrix=$matrix" >> "$GITHUB_OUTPUT"
           echo "$matrix"
         env:
           FILES: ${{ steps.plan.outputs.files }}
+          TEMPLATE_DEFS: ${{ steps.templates.outputs.template_defs }}
           AQUA_GITHUB_TOKEN: ${{ github.token }}
       # How much of GITHUB_TOKEN's budget the repository has used, as one line. The budget is
       # the whole repository's, so a job's cost is the difference between lines read while
@@ -139,7 +169,7 @@ jobs:
 
   test:
     needs: plan
-    if: needs.plan.outputs.count != '0'
+    if: needs.plan.outputs.matrix != ''
     strategy:
       fail-fast: false
       matrix:
@@ -198,11 +228,20 @@ jobs:
               ar2 test --definition "$dir/registry.yaml" --os "$OS" --arch "$arch" "${files[@]}"
             done
           done
+          # A package served as a template has no generated file: its test_versions are
+          # expanded the way aqua expands them and installed, as a pkg.yaml is in
+          # aqua-registry.
+          for def in $TEMPLATE_DEFS; do
+            for arch in $ARCHS; do
+              ar2 test --template --os "$OS" --arch "$arch" "$def"
+            done
+          done
         env:
           OS: ${{ matrix.os }}
           ARCHS: ${{ matrix.arch }}
           PACKAGES: ${{ needs.plan.outputs.packages }}
           FILES: ${{ needs.plan.outputs.files }}
+          TEMPLATE_DEFS: ${{ needs.plan.outputs.template_defs }}
           # Verifying an attestation asks GitHub about the artifact, and downloading
           # assets without a token runs into the anonymous rate limit.
           GITHUB_TOKEN: ${{ github.token }}
