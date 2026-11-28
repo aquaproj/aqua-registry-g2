@@ -1,0 +1,34 @@
+{
+  "name": "apache/spark",
+  "type": "http",
+  "repo_owner": "apache",
+  "repo_name": "spark",
+  "description": "Apache Spark - A unified analytics engine for large-scale data processing",
+  "url": "https://archive.apache.org/dist/spark/spark-{{trimV .Version}}/spark-{{trimV .Version}}-bin-hadoop3.tgz",
+  "format": "tgz",
+  "version_filter": "not (Version contains \"-rc\")",
+  "version_source": "github_tag",
+  "files": [
+    {
+      "name": "pyspark",
+      "src": "spark-{{trimV .Version}}-bin-hadoop3/bin/pyspark"
+    },
+    {
+      "name": "spark-shell",
+      "src": "spark-{{trimV .Version}}-bin-hadoop3/bin/spark-shell"
+    },
+    {
+      "name": "spark-sql",
+      "src": "spark-{{trimV .Version}}-bin-hadoop3/bin/spark-sql"
+    },
+    {
+      "name": "sparkR",
+      "src": "spark-{{trimV .Version}}-bin-hadoop3/bin/sparkR"
+    }
+  ],
+  "checksum": {
+    "type": "http",
+    "url": "https://archive.apache.org/dist/spark/spark-{{trimV .Version}}/spark-{{trimV .Version}}-bin-hadoop3.tgz.sha512",
+    "algorithm": "sha512"
+  }
+}
