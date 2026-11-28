@@ -6,6 +6,9 @@ repo_id: 602574963
 description: Eclipse Temurin JDK 21
 version_filter: Version matches "^jdk-21\\.[\\d.]+\\+\\d+$"
 version_prefix: jdk-
+# A release publishes the JDK beside the JRE, debug and test images and static libraries, all
+# named alike, and a macOS .pkg beside the tarball; files describes the JDK's tarball.
+all_assets_filter: Asset startsWith "OpenJDK21U-jdk_" and not (Asset endsWith ".pkg")
 overrides:
   - goos: darwin
     files:
