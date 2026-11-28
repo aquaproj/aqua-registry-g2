@@ -2,18 +2,541 @@
   "published_at": "2025-10-23T19:54:37Z",
   "assets": [
     {
-      "os": "linux",
+      "os": "darwin",
       "arch": "amd64",
-      "variants": {
-        "libc": "glibc"
-      },
       "type": "github_release",
       "repo_owner": "adoptium",
       "repo_name": "temurin21-binaries",
       "repo_id": 602574963,
-      "asset": "OpenJDK21U-static-libs-glibc_x64_linux_hotspot_21.0.9_10.tar.gz",
+      "asset": "OpenJDK21U-jdk_x64_mac_hotspot_21.0.9_10.tar.gz",
       "format": "tar.gz",
-      "checksum": "bd6e45052d900318ce5c40460360f6fad0f567567d09957f5a384c210b59538c",
+      "checksum": "f803a3f5bce141f23ac699dfcda06a721f4b74f53bacb0f4bbe9bfcad54427d8",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "jar",
+          "src": "jdk-21.0.9+10/Contents/Home/bin/jar"
+        },
+        {
+          "name": "jarsigner",
+          "src": "jdk-21.0.9+10/Contents/Home/bin/jarsigner"
+        },
+        {
+          "name": "java",
+          "src": "jdk-21.0.9+10/Contents/Home/bin/java"
+        },
+        {
+          "name": "javac",
+          "src": "jdk-21.0.9+10/Contents/Home/bin/javac"
+        },
+        {
+          "name": "javadoc",
+          "src": "jdk-21.0.9+10/Contents/Home/bin/javadoc"
+        },
+        {
+          "name": "javap",
+          "src": "jdk-21.0.9+10/Contents/Home/bin/javap"
+        },
+        {
+          "name": "jcmd",
+          "src": "jdk-21.0.9+10/Contents/Home/bin/jcmd"
+        },
+        {
+          "name": "jconsole",
+          "src": "jdk-21.0.9+10/Contents/Home/bin/jconsole"
+        },
+        {
+          "name": "jdb",
+          "src": "jdk-21.0.9+10/Contents/Home/bin/jdb"
+        },
+        {
+          "name": "jdeprscan",
+          "src": "jdk-21.0.9+10/Contents/Home/bin/jdeprscan"
+        },
+        {
+          "name": "jdeps",
+          "src": "jdk-21.0.9+10/Contents/Home/bin/jdeps"
+        },
+        {
+          "name": "jfr",
+          "src": "jdk-21.0.9+10/Contents/Home/bin/jfr"
+        },
+        {
+          "name": "jhsdb",
+          "src": "jdk-21.0.9+10/Contents/Home/bin/jhsdb"
+        },
+        {
+          "name": "jimage",
+          "src": "jdk-21.0.9+10/Contents/Home/bin/jimage"
+        },
+        {
+          "name": "jinfo",
+          "src": "jdk-21.0.9+10/Contents/Home/bin/jinfo"
+        },
+        {
+          "name": "jlink",
+          "src": "jdk-21.0.9+10/Contents/Home/bin/jlink"
+        },
+        {
+          "name": "jmap",
+          "src": "jdk-21.0.9+10/Contents/Home/bin/jmap"
+        },
+        {
+          "name": "jmod",
+          "src": "jdk-21.0.9+10/Contents/Home/bin/jmod"
+        },
+        {
+          "name": "jpackage",
+          "src": "jdk-21.0.9+10/Contents/Home/bin/jpackage"
+        },
+        {
+          "name": "jps",
+          "src": "jdk-21.0.9+10/Contents/Home/bin/jps"
+        },
+        {
+          "name": "jrunscript",
+          "src": "jdk-21.0.9+10/Contents/Home/bin/jrunscript"
+        },
+        {
+          "name": "jshell",
+          "src": "jdk-21.0.9+10/Contents/Home/bin/jshell"
+        },
+        {
+          "name": "jstack",
+          "src": "jdk-21.0.9+10/Contents/Home/bin/jstack"
+        },
+        {
+          "name": "jstat",
+          "src": "jdk-21.0.9+10/Contents/Home/bin/jstat"
+        },
+        {
+          "name": "jstatd",
+          "src": "jdk-21.0.9+10/Contents/Home/bin/jstatd"
+        },
+        {
+          "name": "jwebserver",
+          "src": "jdk-21.0.9+10/Contents/Home/bin/jwebserver"
+        },
+        {
+          "name": "keytool",
+          "src": "jdk-21.0.9+10/Contents/Home/bin/keytool"
+        },
+        {
+          "name": "rmiregistry",
+          "src": "jdk-21.0.9+10/Contents/Home/bin/rmiregistry"
+        },
+        {
+          "name": "serialver",
+          "src": "jdk-21.0.9+10/Contents/Home/bin/serialver"
+        }
+      ]
+    },
+    {
+      "os": "darwin",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "adoptium",
+      "repo_name": "temurin21-binaries",
+      "repo_id": 602574963,
+      "asset": "OpenJDK21U-jdk_aarch64_mac_hotspot_21.0.9_10.tar.gz",
+      "format": "tar.gz",
+      "checksum": "55a40abeb0e174fdc70f769b34b50b70c3967e0b12a643e6a3e23f9a582aac16",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "jar",
+          "src": "jdk-21.0.9+10/Contents/Home/bin/jar"
+        },
+        {
+          "name": "jarsigner",
+          "src": "jdk-21.0.9+10/Contents/Home/bin/jarsigner"
+        },
+        {
+          "name": "java",
+          "src": "jdk-21.0.9+10/Contents/Home/bin/java"
+        },
+        {
+          "name": "javac",
+          "src": "jdk-21.0.9+10/Contents/Home/bin/javac"
+        },
+        {
+          "name": "javadoc",
+          "src": "jdk-21.0.9+10/Contents/Home/bin/javadoc"
+        },
+        {
+          "name": "javap",
+          "src": "jdk-21.0.9+10/Contents/Home/bin/javap"
+        },
+        {
+          "name": "jcmd",
+          "src": "jdk-21.0.9+10/Contents/Home/bin/jcmd"
+        },
+        {
+          "name": "jconsole",
+          "src": "jdk-21.0.9+10/Contents/Home/bin/jconsole"
+        },
+        {
+          "name": "jdb",
+          "src": "jdk-21.0.9+10/Contents/Home/bin/jdb"
+        },
+        {
+          "name": "jdeprscan",
+          "src": "jdk-21.0.9+10/Contents/Home/bin/jdeprscan"
+        },
+        {
+          "name": "jdeps",
+          "src": "jdk-21.0.9+10/Contents/Home/bin/jdeps"
+        },
+        {
+          "name": "jfr",
+          "src": "jdk-21.0.9+10/Contents/Home/bin/jfr"
+        },
+        {
+          "name": "jhsdb",
+          "src": "jdk-21.0.9+10/Contents/Home/bin/jhsdb"
+        },
+        {
+          "name": "jimage",
+          "src": "jdk-21.0.9+10/Contents/Home/bin/jimage"
+        },
+        {
+          "name": "jinfo",
+          "src": "jdk-21.0.9+10/Contents/Home/bin/jinfo"
+        },
+        {
+          "name": "jlink",
+          "src": "jdk-21.0.9+10/Contents/Home/bin/jlink"
+        },
+        {
+          "name": "jmap",
+          "src": "jdk-21.0.9+10/Contents/Home/bin/jmap"
+        },
+        {
+          "name": "jmod",
+          "src": "jdk-21.0.9+10/Contents/Home/bin/jmod"
+        },
+        {
+          "name": "jpackage",
+          "src": "jdk-21.0.9+10/Contents/Home/bin/jpackage"
+        },
+        {
+          "name": "jps",
+          "src": "jdk-21.0.9+10/Contents/Home/bin/jps"
+        },
+        {
+          "name": "jrunscript",
+          "src": "jdk-21.0.9+10/Contents/Home/bin/jrunscript"
+        },
+        {
+          "name": "jshell",
+          "src": "jdk-21.0.9+10/Contents/Home/bin/jshell"
+        },
+        {
+          "name": "jstack",
+          "src": "jdk-21.0.9+10/Contents/Home/bin/jstack"
+        },
+        {
+          "name": "jstat",
+          "src": "jdk-21.0.9+10/Contents/Home/bin/jstat"
+        },
+        {
+          "name": "jstatd",
+          "src": "jdk-21.0.9+10/Contents/Home/bin/jstatd"
+        },
+        {
+          "name": "jwebserver",
+          "src": "jdk-21.0.9+10/Contents/Home/bin/jwebserver"
+        },
+        {
+          "name": "keytool",
+          "src": "jdk-21.0.9+10/Contents/Home/bin/keytool"
+        },
+        {
+          "name": "rmiregistry",
+          "src": "jdk-21.0.9+10/Contents/Home/bin/rmiregistry"
+        },
+        {
+          "name": "serialver",
+          "src": "jdk-21.0.9+10/Contents/Home/bin/serialver"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "adoptium",
+      "repo_name": "temurin21-binaries",
+      "repo_id": 602574963,
+      "asset": "OpenJDK21U-jdk_x64_linux_hotspot_21.0.9_10.tar.gz",
+      "format": "tar.gz",
+      "checksum": "810d3773df7e0d6c4394e4e244b264c8b30e0b05a0acf542d065fd78a6b65c2f",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "jar",
+          "src": "jdk-21.0.9+10/bin/jar"
+        },
+        {
+          "name": "jarsigner",
+          "src": "jdk-21.0.9+10/bin/jarsigner"
+        },
+        {
+          "name": "java",
+          "src": "jdk-21.0.9+10/bin/java"
+        },
+        {
+          "name": "javac",
+          "src": "jdk-21.0.9+10/bin/javac"
+        },
+        {
+          "name": "javadoc",
+          "src": "jdk-21.0.9+10/bin/javadoc"
+        },
+        {
+          "name": "javap",
+          "src": "jdk-21.0.9+10/bin/javap"
+        },
+        {
+          "name": "jcmd",
+          "src": "jdk-21.0.9+10/bin/jcmd"
+        },
+        {
+          "name": "jconsole",
+          "src": "jdk-21.0.9+10/bin/jconsole"
+        },
+        {
+          "name": "jdb",
+          "src": "jdk-21.0.9+10/bin/jdb"
+        },
+        {
+          "name": "jdeprscan",
+          "src": "jdk-21.0.9+10/bin/jdeprscan"
+        },
+        {
+          "name": "jdeps",
+          "src": "jdk-21.0.9+10/bin/jdeps"
+        },
+        {
+          "name": "jfr",
+          "src": "jdk-21.0.9+10/bin/jfr"
+        },
+        {
+          "name": "jhsdb",
+          "src": "jdk-21.0.9+10/bin/jhsdb"
+        },
+        {
+          "name": "jimage",
+          "src": "jdk-21.0.9+10/bin/jimage"
+        },
+        {
+          "name": "jinfo",
+          "src": "jdk-21.0.9+10/bin/jinfo"
+        },
+        {
+          "name": "jlink",
+          "src": "jdk-21.0.9+10/bin/jlink"
+        },
+        {
+          "name": "jmap",
+          "src": "jdk-21.0.9+10/bin/jmap"
+        },
+        {
+          "name": "jmod",
+          "src": "jdk-21.0.9+10/bin/jmod"
+        },
+        {
+          "name": "jpackage",
+          "src": "jdk-21.0.9+10/bin/jpackage"
+        },
+        {
+          "name": "jps",
+          "src": "jdk-21.0.9+10/bin/jps"
+        },
+        {
+          "name": "jrunscript",
+          "src": "jdk-21.0.9+10/bin/jrunscript"
+        },
+        {
+          "name": "jshell",
+          "src": "jdk-21.0.9+10/bin/jshell"
+        },
+        {
+          "name": "jstack",
+          "src": "jdk-21.0.9+10/bin/jstack"
+        },
+        {
+          "name": "jstat",
+          "src": "jdk-21.0.9+10/bin/jstat"
+        },
+        {
+          "name": "jstatd",
+          "src": "jdk-21.0.9+10/bin/jstatd"
+        },
+        {
+          "name": "jwebserver",
+          "src": "jdk-21.0.9+10/bin/jwebserver"
+        },
+        {
+          "name": "keytool",
+          "src": "jdk-21.0.9+10/bin/keytool"
+        },
+        {
+          "name": "rmiregistry",
+          "src": "jdk-21.0.9+10/bin/rmiregistry"
+        },
+        {
+          "name": "serialver",
+          "src": "jdk-21.0.9+10/bin/serialver"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "amd64",
+      "variants": {
+        "libc": "musl"
+      },
+      "linked_libc": "musl",
+      "type": "github_release",
+      "repo_owner": "adoptium",
+      "repo_name": "temurin21-binaries",
+      "repo_id": 602574963,
+      "asset": "OpenJDK21U-jdk_x64_alpine-linux_hotspot_21.0.9_10.tar.gz",
+      "format": "tar.gz",
+      "checksum": "52e30d3157432e87ee464b656f776f0a22946f1f3182eea779258284bc6f55da",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "jar",
+          "src": "jdk-21.0.9+10/bin/jar"
+        },
+        {
+          "name": "jarsigner",
+          "src": "jdk-21.0.9+10/bin/jarsigner"
+        },
+        {
+          "name": "java",
+          "src": "jdk-21.0.9+10/bin/java"
+        },
+        {
+          "name": "javac",
+          "src": "jdk-21.0.9+10/bin/javac"
+        },
+        {
+          "name": "javadoc",
+          "src": "jdk-21.0.9+10/bin/javadoc"
+        },
+        {
+          "name": "javap",
+          "src": "jdk-21.0.9+10/bin/javap"
+        },
+        {
+          "name": "jcmd",
+          "src": "jdk-21.0.9+10/bin/jcmd"
+        },
+        {
+          "name": "jconsole",
+          "src": "jdk-21.0.9+10/bin/jconsole"
+        },
+        {
+          "name": "jdb",
+          "src": "jdk-21.0.9+10/bin/jdb"
+        },
+        {
+          "name": "jdeprscan",
+          "src": "jdk-21.0.9+10/bin/jdeprscan"
+        },
+        {
+          "name": "jdeps",
+          "src": "jdk-21.0.9+10/bin/jdeps"
+        },
+        {
+          "name": "jfr",
+          "src": "jdk-21.0.9+10/bin/jfr"
+        },
+        {
+          "name": "jhsdb",
+          "src": "jdk-21.0.9+10/bin/jhsdb"
+        },
+        {
+          "name": "jimage",
+          "src": "jdk-21.0.9+10/bin/jimage"
+        },
+        {
+          "name": "jinfo",
+          "src": "jdk-21.0.9+10/bin/jinfo"
+        },
+        {
+          "name": "jlink",
+          "src": "jdk-21.0.9+10/bin/jlink"
+        },
+        {
+          "name": "jmap",
+          "src": "jdk-21.0.9+10/bin/jmap"
+        },
+        {
+          "name": "jmod",
+          "src": "jdk-21.0.9+10/bin/jmod"
+        },
+        {
+          "name": "jpackage",
+          "src": "jdk-21.0.9+10/bin/jpackage"
+        },
+        {
+          "name": "jps",
+          "src": "jdk-21.0.9+10/bin/jps"
+        },
+        {
+          "name": "jrunscript",
+          "src": "jdk-21.0.9+10/bin/jrunscript"
+        },
+        {
+          "name": "jshell",
+          "src": "jdk-21.0.9+10/bin/jshell"
+        },
+        {
+          "name": "jstack",
+          "src": "jdk-21.0.9+10/bin/jstack"
+        },
+        {
+          "name": "jstat",
+          "src": "jdk-21.0.9+10/bin/jstat"
+        },
+        {
+          "name": "jstatd",
+          "src": "jdk-21.0.9+10/bin/jstatd"
+        },
+        {
+          "name": "jwebserver",
+          "src": "jdk-21.0.9+10/bin/jwebserver"
+        },
+        {
+          "name": "keytool",
+          "src": "jdk-21.0.9+10/bin/keytool"
+        },
+        {
+          "name": "rmiregistry",
+          "src": "jdk-21.0.9+10/bin/rmiregistry"
+        },
+        {
+          "name": "serialver",
+          "src": "jdk-21.0.9+10/bin/serialver"
+        }
+      ]
+    },
+    {
+      "os": "linux",
+      "arch": "arm64",
+      "linked_libc": "glibc",
+      "type": "github_release",
+      "repo_owner": "adoptium",
+      "repo_name": "temurin21-binaries",
+      "repo_id": 602574963,
+      "asset": "OpenJDK21U-jdk_aarch64_linux_hotspot_21.0.9_10.tar.gz",
+      "format": "tar.gz",
+      "checksum": "edf0da4debe7cf475dbe320d174d6eed81479eb363f41e38a2efb740428c603a",
       "checksum_algorithm": "sha256",
       "files": [
         {
@@ -138,15 +661,16 @@
       "os": "linux",
       "arch": "arm64",
       "variants": {
-        "libc": "glibc"
+        "libc": "musl"
       },
+      "linked_libc": "musl",
       "type": "github_release",
       "repo_owner": "adoptium",
       "repo_name": "temurin21-binaries",
       "repo_id": 602574963,
-      "asset": "OpenJDK21U-static-libs-glibc_aarch64_linux_hotspot_21.0.9_10.tar.gz",
+      "asset": "OpenJDK21U-jdk_aarch64_alpine-linux_hotspot_21.0.9_10.tar.gz",
       "format": "tar.gz",
-      "checksum": "14d8c539d20a10e2a07048ebd55057f88f48535ea8c742db0c69e2d50497b73b",
+      "checksum": "6d3c2b956d6b837bfdc992e58488fb16c96e5852820e9feaa42a8672bbca9c7b",
       "checksum_algorithm": "sha256",
       "files": [
         {
@@ -264,6 +788,322 @@
         {
           "name": "serialver",
           "src": "jdk-21.0.9+10/bin/serialver"
+        }
+      ]
+    },
+    {
+      "os": "windows",
+      "arch": "amd64",
+      "type": "github_release",
+      "repo_owner": "adoptium",
+      "repo_name": "temurin21-binaries",
+      "repo_id": 602574963,
+      "asset": "OpenJDK21U-jdk_x64_windows_hotspot_21.0.9_10.zip",
+      "format": "zip",
+      "checksum": "1c67df516e9795c0b09f5714bfe151da2e3cc988082042f5bbb60d75e4e63fb5",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "jabswitch",
+          "src": "jdk-21.0.9+10/bin/jabswitch.exe"
+        },
+        {
+          "name": "jaccessinspector",
+          "src": "jdk-21.0.9+10/bin/jaccessinspector.exe"
+        },
+        {
+          "name": "jaccesswalker",
+          "src": "jdk-21.0.9+10/bin/jaccesswalker.exe"
+        },
+        {
+          "name": "jar",
+          "src": "jdk-21.0.9+10/bin/jar.exe"
+        },
+        {
+          "name": "jarsigner",
+          "src": "jdk-21.0.9+10/bin/jarsigner.exe"
+        },
+        {
+          "name": "java",
+          "src": "jdk-21.0.9+10/bin/java.exe"
+        },
+        {
+          "name": "javac",
+          "src": "jdk-21.0.9+10/bin/javac.exe"
+        },
+        {
+          "name": "javadoc",
+          "src": "jdk-21.0.9+10/bin/javadoc.exe"
+        },
+        {
+          "name": "javap",
+          "src": "jdk-21.0.9+10/bin/javap.exe"
+        },
+        {
+          "name": "javaw",
+          "src": "jdk-21.0.9+10/bin/javaw.exe"
+        },
+        {
+          "name": "jcmd",
+          "src": "jdk-21.0.9+10/bin/jcmd.exe"
+        },
+        {
+          "name": "jconsole",
+          "src": "jdk-21.0.9+10/bin/jconsole.exe"
+        },
+        {
+          "name": "jdb",
+          "src": "jdk-21.0.9+10/bin/jdb.exe"
+        },
+        {
+          "name": "jdeprscan",
+          "src": "jdk-21.0.9+10/bin/jdeprscan.exe"
+        },
+        {
+          "name": "jdeps",
+          "src": "jdk-21.0.9+10/bin/jdeps.exe"
+        },
+        {
+          "name": "jfr",
+          "src": "jdk-21.0.9+10/bin/jfr.exe"
+        },
+        {
+          "name": "jhsdb",
+          "src": "jdk-21.0.9+10/bin/jhsdb.exe"
+        },
+        {
+          "name": "jimage",
+          "src": "jdk-21.0.9+10/bin/jimage.exe"
+        },
+        {
+          "name": "jinfo",
+          "src": "jdk-21.0.9+10/bin/jinfo.exe"
+        },
+        {
+          "name": "jlink",
+          "src": "jdk-21.0.9+10/bin/jlink.exe"
+        },
+        {
+          "name": "jmap",
+          "src": "jdk-21.0.9+10/bin/jmap.exe"
+        },
+        {
+          "name": "jmod",
+          "src": "jdk-21.0.9+10/bin/jmod.exe"
+        },
+        {
+          "name": "jpackage",
+          "src": "jdk-21.0.9+10/bin/jpackage.exe"
+        },
+        {
+          "name": "jps",
+          "src": "jdk-21.0.9+10/bin/jps.exe"
+        },
+        {
+          "name": "jrunscript",
+          "src": "jdk-21.0.9+10/bin/jrunscript.exe"
+        },
+        {
+          "name": "jshell",
+          "src": "jdk-21.0.9+10/bin/jshell.exe"
+        },
+        {
+          "name": "jstack",
+          "src": "jdk-21.0.9+10/bin/jstack.exe"
+        },
+        {
+          "name": "jstat",
+          "src": "jdk-21.0.9+10/bin/jstat.exe"
+        },
+        {
+          "name": "jstatd",
+          "src": "jdk-21.0.9+10/bin/jstatd.exe"
+        },
+        {
+          "name": "jwebserver",
+          "src": "jdk-21.0.9+10/bin/jwebserver.exe"
+        },
+        {
+          "name": "keytool",
+          "src": "jdk-21.0.9+10/bin/keytool.exe"
+        },
+        {
+          "name": "kinit",
+          "src": "jdk-21.0.9+10/bin/kinit.exe"
+        },
+        {
+          "name": "klist",
+          "src": "jdk-21.0.9+10/bin/klist.exe"
+        },
+        {
+          "name": "ktab",
+          "src": "jdk-21.0.9+10/bin/ktab.exe"
+        },
+        {
+          "name": "rmiregistry",
+          "src": "jdk-21.0.9+10/bin/rmiregistry.exe"
+        },
+        {
+          "name": "serialver",
+          "src": "jdk-21.0.9+10/bin/serialver.exe"
+        }
+      ]
+    },
+    {
+      "os": "windows",
+      "arch": "arm64",
+      "type": "github_release",
+      "repo_owner": "adoptium",
+      "repo_name": "temurin21-binaries",
+      "repo_id": 602574963,
+      "asset": "OpenJDK21U-jdk_aarch64_windows_hotspot_21.0.9_10.zip",
+      "format": "zip",
+      "checksum": "260a71ee94cdefba0937fad3f88ae017d5d37a9474ae91798bc8dffb8f308a83",
+      "checksum_algorithm": "sha256",
+      "files": [
+        {
+          "name": "jabswitch",
+          "src": "jdk-21.0.9+10/bin/jabswitch.exe"
+        },
+        {
+          "name": "jaccessinspector",
+          "src": "jdk-21.0.9+10/bin/jaccessinspector.exe"
+        },
+        {
+          "name": "jaccesswalker",
+          "src": "jdk-21.0.9+10/bin/jaccesswalker.exe"
+        },
+        {
+          "name": "jar",
+          "src": "jdk-21.0.9+10/bin/jar.exe"
+        },
+        {
+          "name": "jarsigner",
+          "src": "jdk-21.0.9+10/bin/jarsigner.exe"
+        },
+        {
+          "name": "java",
+          "src": "jdk-21.0.9+10/bin/java.exe"
+        },
+        {
+          "name": "javac",
+          "src": "jdk-21.0.9+10/bin/javac.exe"
+        },
+        {
+          "name": "javadoc",
+          "src": "jdk-21.0.9+10/bin/javadoc.exe"
+        },
+        {
+          "name": "javap",
+          "src": "jdk-21.0.9+10/bin/javap.exe"
+        },
+        {
+          "name": "javaw",
+          "src": "jdk-21.0.9+10/bin/javaw.exe"
+        },
+        {
+          "name": "jcmd",
+          "src": "jdk-21.0.9+10/bin/jcmd.exe"
+        },
+        {
+          "name": "jconsole",
+          "src": "jdk-21.0.9+10/bin/jconsole.exe"
+        },
+        {
+          "name": "jdb",
+          "src": "jdk-21.0.9+10/bin/jdb.exe"
+        },
+        {
+          "name": "jdeprscan",
+          "src": "jdk-21.0.9+10/bin/jdeprscan.exe"
+        },
+        {
+          "name": "jdeps",
+          "src": "jdk-21.0.9+10/bin/jdeps.exe"
+        },
+        {
+          "name": "jfr",
+          "src": "jdk-21.0.9+10/bin/jfr.exe"
+        },
+        {
+          "name": "jhsdb",
+          "src": "jdk-21.0.9+10/bin/jhsdb.exe"
+        },
+        {
+          "name": "jimage",
+          "src": "jdk-21.0.9+10/bin/jimage.exe"
+        },
+        {
+          "name": "jinfo",
+          "src": "jdk-21.0.9+10/bin/jinfo.exe"
+        },
+        {
+          "name": "jlink",
+          "src": "jdk-21.0.9+10/bin/jlink.exe"
+        },
+        {
+          "name": "jmap",
+          "src": "jdk-21.0.9+10/bin/jmap.exe"
+        },
+        {
+          "name": "jmod",
+          "src": "jdk-21.0.9+10/bin/jmod.exe"
+        },
+        {
+          "name": "jpackage",
+          "src": "jdk-21.0.9+10/bin/jpackage.exe"
+        },
+        {
+          "name": "jps",
+          "src": "jdk-21.0.9+10/bin/jps.exe"
+        },
+        {
+          "name": "jrunscript",
+          "src": "jdk-21.0.9+10/bin/jrunscript.exe"
+        },
+        {
+          "name": "jshell",
+          "src": "jdk-21.0.9+10/bin/jshell.exe"
+        },
+        {
+          "name": "jstack",
+          "src": "jdk-21.0.9+10/bin/jstack.exe"
+        },
+        {
+          "name": "jstat",
+          "src": "jdk-21.0.9+10/bin/jstat.exe"
+        },
+        {
+          "name": "jstatd",
+          "src": "jdk-21.0.9+10/bin/jstatd.exe"
+        },
+        {
+          "name": "jwebserver",
+          "src": "jdk-21.0.9+10/bin/jwebserver.exe"
+        },
+        {
+          "name": "keytool",
+          "src": "jdk-21.0.9+10/bin/keytool.exe"
+        },
+        {
+          "name": "kinit",
+          "src": "jdk-21.0.9+10/bin/kinit.exe"
+        },
+        {
+          "name": "klist",
+          "src": "jdk-21.0.9+10/bin/klist.exe"
+        },
+        {
+          "name": "ktab",
+          "src": "jdk-21.0.9+10/bin/ktab.exe"
+        },
+        {
+          "name": "rmiregistry",
+          "src": "jdk-21.0.9+10/bin/rmiregistry.exe"
+        },
+        {
+          "name": "serialver",
+          "src": "jdk-21.0.9+10/bin/serialver.exe"
         }
       ]
     }
