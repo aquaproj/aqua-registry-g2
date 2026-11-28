@@ -23,6 +23,6 @@ files:
     src: spark-{{trimV .Version}}-bin-hadoop3/bin/sparkR
 template:
   reason: |
-    Every version is a 400 to 570 MB tarball on archive.apache.org (about 150 KB/s), which no run can download in time.
+    Every version is a 400 to 570 MB tarball on archive.apache.org, the only host that keeps old releases. It has served from about 150 KB/s to 1.6 MB/s: four minutes to an hour per tarball, against a run's limit of five minutes for a download.
   skip_test: |
-    The tarball takes an hour to download, so CI only lints the definition.
+    Downloading the tarball took four minutes on a fast day (561 MB of v4.3.0 at 1.6 MB/s) and an hour on a slow one, so CI only lints the definition.
