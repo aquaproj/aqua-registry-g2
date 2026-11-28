@@ -1,0 +1,28 @@
+name: apache/spark
+type: http
+repo_owner: apache
+repo_name: spark
+description: Apache Spark - A unified analytics engine for large-scale data processing
+version_source: github_tag
+version_filter: not (Version contains "-rc")
+url: https://archive.apache.org/dist/spark/spark-{{trimV .Version}}/spark-{{trimV .Version}}-bin-hadoop3.tgz
+format: tgz
+checksum:
+  type: http
+  url: https://archive.apache.org/dist/spark/spark-{{trimV .Version}}/spark-{{trimV .Version}}-bin-hadoop3.tgz.sha512
+  algorithm: sha512
+files:
+  # https://github.com/aquaproj/aqua-registry/issues/1174#issuecomment-2577475188
+  - name: pyspark
+    src: spark-{{trimV .Version}}-bin-hadoop3/bin/pyspark
+  - name: spark-shell
+    src: spark-{{trimV .Version}}-bin-hadoop3/bin/spark-shell
+  - name: spark-sql
+    src: spark-{{trimV .Version}}-bin-hadoop3/bin/spark-sql
+  - name: sparkR
+    src: spark-{{trimV .Version}}-bin-hadoop3/bin/sparkR
+template:
+  reason: |
+    Every version is a 400 to 570 MB tarball on archive.apache.org (about 150 KB/s), which no run can download in time.
+  skip_test: |
+    The tarball takes an hour to download, so CI only lints the definition.
