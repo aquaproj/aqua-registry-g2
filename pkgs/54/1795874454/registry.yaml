@@ -1,0 +1,345 @@
+name: adoptium/temurin17-binaries
+type: github_release
+repo_owner: adoptium
+repo_name: temurin17-binaries
+repo_id: 372925194
+description: Eclipse Temurin JDK 17
+version_filter: Version matches "^jdk-17\\.[\\d.]+\\+\\d+$"
+version_prefix: jdk-
+# A release publishes the JDK beside the JRE, debug and test images and static libraries, all
+# named alike, and a macOS .pkg beside the tarball; files describes the JDK's tarball.
+all_assets_filter: Asset startsWith "OpenJDK17U-jdk_" and not (Asset endsWith ".pkg")
+overrides:
+  - goos: linux
+    goarch: amd64
+    files:
+      - name: jar
+        src: '{{.Version}}/bin/{{.FileName}}'
+      - name: jarsigner
+        src: '{{.Version}}/bin/{{.FileName}}'
+      - name: java
+        src: '{{.Version}}/bin/{{.FileName}}'
+      - name: javac
+        src: '{{.Version}}/bin/{{.FileName}}'
+      - name: javadoc
+        src: '{{.Version}}/bin/{{.FileName}}'
+      - name: javap
+        src: '{{.Version}}/bin/{{.FileName}}'
+      - name: jcmd
+        src: '{{.Version}}/bin/{{.FileName}}'
+      - name: jdb
+        src: '{{.Version}}/bin/{{.FileName}}'
+      - name: jdeprscan
+        src: '{{.Version}}/bin/{{.FileName}}'
+      - name: jdeps
+        src: '{{.Version}}/bin/{{.FileName}}'
+      - name: jfr
+        src: '{{.Version}}/bin/{{.FileName}}'
+      - name: jhsdb
+        src: '{{.Version}}/bin/{{.FileName}}'
+      - name: jimage
+        src: '{{.Version}}/bin/{{.FileName}}'
+      - name: jinfo
+        src: '{{.Version}}/bin/{{.FileName}}'
+      - name: jlink
+        src: '{{.Version}}/bin/{{.FileName}}'
+      - name: jmap
+        src: '{{.Version}}/bin/{{.FileName}}'
+      - name: jmod
+        src: '{{.Version}}/bin/{{.FileName}}'
+      - name: jpackage
+        src: '{{.Version}}/bin/{{.FileName}}'
+      - name: jps
+        src: '{{.Version}}/bin/{{.FileName}}'
+      - name: jrunscript
+        src: '{{.Version}}/bin/{{.FileName}}'
+      - name: jshell
+        src: '{{.Version}}/bin/{{.FileName}}'
+      - name: jstack
+        src: '{{.Version}}/bin/{{.FileName}}'
+      - name: jstat
+        src: '{{.Version}}/bin/{{.FileName}}'
+      - name: jstatd
+        src: '{{.Version}}/bin/{{.FileName}}'
+      - name: keytool
+        src: '{{.Version}}/bin/{{.FileName}}'
+      - name: rmiregistry
+        src: '{{.Version}}/bin/{{.FileName}}'
+      - name: serialver
+        src: '{{.Version}}/bin/{{.FileName}}'
+    replacements:
+      linux: alpine-linux
+    variants:
+      - key: libc
+        value: musl
+  - goos: darwin
+    files:
+      - name: jar
+        src: '{{.Version}}/Contents/Home/bin/{{.FileName}}'
+      - name: jarsigner
+        src: '{{.Version}}/Contents/Home/bin/{{.FileName}}'
+      - name: java
+        src: '{{.Version}}/Contents/Home/bin/{{.FileName}}'
+      - name: javac
+        src: '{{.Version}}/Contents/Home/bin/{{.FileName}}'
+      - name: javadoc
+        src: '{{.Version}}/Contents/Home/bin/{{.FileName}}'
+      - name: javap
+        src: '{{.Version}}/Contents/Home/bin/{{.FileName}}'
+      - name: jcmd
+        src: '{{.Version}}/Contents/Home/bin/{{.FileName}}'
+      - name: jconsole
+        src: '{{.Version}}/Contents/Home/bin/{{.FileName}}'
+      - name: jdb
+        src: '{{.Version}}/Contents/Home/bin/{{.FileName}}'
+      - name: jdeprscan
+        src: '{{.Version}}/Contents/Home/bin/{{.FileName}}'
+      - name: jdeps
+        src: '{{.Version}}/Contents/Home/bin/{{.FileName}}'
+      - name: jfr
+        src: '{{.Version}}/Contents/Home/bin/{{.FileName}}'
+      - name: jhsdb
+        src: '{{.Version}}/Contents/Home/bin/{{.FileName}}'
+      - name: jimage
+        src: '{{.Version}}/Contents/Home/bin/{{.FileName}}'
+      - name: jinfo
+        src: '{{.Version}}/Contents/Home/bin/{{.FileName}}'
+      - name: jlink
+        src: '{{.Version}}/Contents/Home/bin/{{.FileName}}'
+      - name: jmap
+        src: '{{.Version}}/Contents/Home/bin/{{.FileName}}'
+      - name: jmod
+        src: '{{.Version}}/Contents/Home/bin/{{.FileName}}'
+      - name: jpackage
+        src: '{{.Version}}/Contents/Home/bin/{{.FileName}}'
+      - name: jps
+        src: '{{.Version}}/Contents/Home/bin/{{.FileName}}'
+      - name: jrunscript
+        src: '{{.Version}}/Contents/Home/bin/{{.FileName}}'
+      - name: jshell
+        src: '{{.Version}}/Contents/Home/bin/{{.FileName}}'
+      - name: jstack
+        src: '{{.Version}}/Contents/Home/bin/{{.FileName}}'
+      - name: jstat
+        src: '{{.Version}}/Contents/Home/bin/{{.FileName}}'
+      - name: jstatd
+        src: '{{.Version}}/Contents/Home/bin/{{.FileName}}'
+      - name: keytool
+        src: '{{.Version}}/Contents/Home/bin/{{.FileName}}'
+      - name: rmiregistry
+        src: '{{.Version}}/Contents/Home/bin/{{.FileName}}'
+      - name: serialver
+        src: '{{.Version}}/Contents/Home/bin/{{.FileName}}'
+  - goos: windows
+    format: zip
+    files:
+      - name: jabswitch
+        src: '{{.Version}}/bin/{{.FileName}}'
+      - name: jaccessinspector
+        src: '{{.Version}}/bin/{{.FileName}}'
+      - name: jaccesswalker
+        src: '{{.Version}}/bin/{{.FileName}}'
+      - name: jar
+        src: '{{.Version}}/bin/{{.FileName}}'
+      - name: jarsigner
+        src: '{{.Version}}/bin/{{.FileName}}'
+      - name: java
+        src: '{{.Version}}/bin/{{.FileName}}'
+      - name: javac
+        src: '{{.Version}}/bin/{{.FileName}}'
+      - name: javadoc
+        src: '{{.Version}}/bin/{{.FileName}}'
+      - name: javap
+        src: '{{.Version}}/bin/{{.FileName}}'
+      - name: javaw
+        src: '{{.Version}}/bin/{{.FileName}}'
+      - name: jcmd
+        src: '{{.Version}}/bin/{{.FileName}}'
+      - name: jconsole
+        src: '{{.Version}}/bin/{{.FileName}}'
+      - name: jdb
+        src: '{{.Version}}/bin/{{.FileName}}'
+      - name: jdeprscan
+        src: '{{.Version}}/bin/{{.FileName}}'
+      - name: jdeps
+        src: '{{.Version}}/bin/{{.FileName}}'
+      - name: jfr
+        src: '{{.Version}}/bin/{{.FileName}}'
+      - name: jhsdb
+        src: '{{.Version}}/bin/{{.FileName}}'
+      - name: jimage
+        src: '{{.Version}}/bin/{{.FileName}}'
+      - name: jinfo
+        src: '{{.Version}}/bin/{{.FileName}}'
+      - name: jlink
+        src: '{{.Version}}/bin/{{.FileName}}'
+      - name: jmap
+        src: '{{.Version}}/bin/{{.FileName}}'
+      - name: jmod
+        src: '{{.Version}}/bin/{{.FileName}}'
+      - name: jpackage
+        src: '{{.Version}}/bin/{{.FileName}}'
+      - name: jps
+        src: '{{.Version}}/bin/{{.FileName}}'
+      - name: jrunscript
+        src: '{{.Version}}/bin/{{.FileName}}'
+      - name: jshell
+        src: '{{.Version}}/bin/{{.FileName}}'
+      - name: jstack
+        src: '{{.Version}}/bin/{{.FileName}}'
+      - name: jstat
+        src: '{{.Version}}/bin/{{.FileName}}'
+      - name: jstatd
+        src: '{{.Version}}/bin/{{.FileName}}'
+      - name: keytool
+        src: '{{.Version}}/bin/{{.FileName}}'
+      - name: kinit
+        src: '{{.Version}}/bin/{{.FileName}}'
+      - name: klist
+        src: '{{.Version}}/bin/{{.FileName}}'
+      - name: ktab
+        src: '{{.Version}}/bin/{{.FileName}}'
+      - name: rmiregistry
+        src: '{{.Version}}/bin/{{.FileName}}'
+      - name: serialver
+        src: '{{.Version}}/bin/{{.FileName}}'
+files:
+  - name: jar
+    src: '{{.Version}}/bin/{{.FileName}}'
+  - name: jarsigner
+    src: '{{.Version}}/bin/{{.FileName}}'
+  - name: java
+    src: '{{.Version}}/bin/{{.FileName}}'
+  - name: javac
+    src: '{{.Version}}/bin/{{.FileName}}'
+  - name: javadoc
+    src: '{{.Version}}/bin/{{.FileName}}'
+  - name: javap
+    src: '{{.Version}}/bin/{{.FileName}}'
+  - name: jcmd
+    src: '{{.Version}}/bin/{{.FileName}}'
+  - name: jconsole
+    src: '{{.Version}}/bin/{{.FileName}}'
+  - name: jdb
+    src: '{{.Version}}/bin/{{.FileName}}'
+  - name: jdeprscan
+    src: '{{.Version}}/bin/{{.FileName}}'
+  - name: jdeps
+    src: '{{.Version}}/bin/{{.FileName}}'
+  - name: jfr
+    src: '{{.Version}}/bin/{{.FileName}}'
+  - name: jhsdb
+    src: '{{.Version}}/bin/{{.FileName}}'
+  - name: jimage
+    src: '{{.Version}}/bin/{{.FileName}}'
+  - name: jinfo
+    src: '{{.Version}}/bin/{{.FileName}}'
+  - name: jlink
+    src: '{{.Version}}/bin/{{.FileName}}'
+  - name: jmap
+    src: '{{.Version}}/bin/{{.FileName}}'
+  - name: jmod
+    src: '{{.Version}}/bin/{{.FileName}}'
+  - name: jpackage
+    src: '{{.Version}}/bin/{{.FileName}}'
+  - name: jps
+    src: '{{.Version}}/bin/{{.FileName}}'
+  - name: jrunscript
+    src: '{{.Version}}/bin/{{.FileName}}'
+  - name: jshell
+    src: '{{.Version}}/bin/{{.FileName}}'
+  - name: jstack
+    src: '{{.Version}}/bin/{{.FileName}}'
+  - name: jstat
+    src: '{{.Version}}/bin/{{.FileName}}'
+  - name: jstatd
+    src: '{{.Version}}/bin/{{.FileName}}'
+  - name: keytool
+    src: '{{.Version}}/bin/{{.FileName}}'
+  - name: rmiregistry
+    src: '{{.Version}}/bin/{{.FileName}}'
+  - name: serialver
+    src: '{{.Version}}/bin/{{.FileName}}'
+version_overrides:
+  - version_constraint: Version == "jdk-17.0.9+9"
+    supported_envs:
+      - darwin
+      - linux
+  - version_constraint: Version == "jdk-17.0.9+9.1"
+    overrides:
+      - goos: windows
+        format: zip
+        files:
+          - name: jabswitch
+            src: jdk-17.0.9+9/bin/{{.FileName}}
+          - name: jaccessinspector
+            src: jdk-17.0.9+9/bin/{{.FileName}}
+          - name: jaccesswalker
+            src: jdk-17.0.9+9/bin/{{.FileName}}
+          - name: jar
+            src: jdk-17.0.9+9/bin/{{.FileName}}
+          - name: jarsigner
+            src: jdk-17.0.9+9/bin/{{.FileName}}
+          - name: java
+            src: jdk-17.0.9+9/bin/{{.FileName}}
+          - name: javac
+            src: jdk-17.0.9+9/bin/{{.FileName}}
+          - name: javadoc
+            src: jdk-17.0.9+9/bin/{{.FileName}}
+          - name: javap
+            src: jdk-17.0.9+9/bin/{{.FileName}}
+          - name: javaw
+            src: jdk-17.0.9+9/bin/{{.FileName}}
+          - name: jcmd
+            src: jdk-17.0.9+9/bin/{{.FileName}}
+          - name: jconsole
+            src: jdk-17.0.9+9/bin/{{.FileName}}
+          - name: jdb
+            src: jdk-17.0.9+9/bin/{{.FileName}}
+          - name: jdeprscan
+            src: jdk-17.0.9+9/bin/{{.FileName}}
+          - name: jdeps
+            src: jdk-17.0.9+9/bin/{{.FileName}}
+          - name: jfr
+            src: jdk-17.0.9+9/bin/{{.FileName}}
+          - name: jhsdb
+            src: jdk-17.0.9+9/bin/{{.FileName}}
+          - name: jimage
+            src: jdk-17.0.9+9/bin/{{.FileName}}
+          - name: jinfo
+            src: jdk-17.0.9+9/bin/{{.FileName}}
+          - name: jlink
+            src: jdk-17.0.9+9/bin/{{.FileName}}
+          - name: jmap
+            src: jdk-17.0.9+9/bin/{{.FileName}}
+          - name: jmod
+            src: jdk-17.0.9+9/bin/{{.FileName}}
+          - name: jpackage
+            src: jdk-17.0.9+9/bin/{{.FileName}}
+          - name: jps
+            src: jdk-17.0.9+9/bin/{{.FileName}}
+          - name: jrunscript
+            src: jdk-17.0.9+9/bin/{{.FileName}}
+          - name: jshell
+            src: jdk-17.0.9+9/bin/{{.FileName}}
+          - name: jstack
+            src: jdk-17.0.9+9/bin/{{.FileName}}
+          - name: jstat
+            src: jdk-17.0.9+9/bin/{{.FileName}}
+          - name: jstatd
+            src: jdk-17.0.9+9/bin/{{.FileName}}
+          - name: keytool
+            src: jdk-17.0.9+9/bin/{{.FileName}}
+          - name: kinit
+            src: jdk-17.0.9+9/bin/{{.FileName}}
+          - name: klist
+            src: jdk-17.0.9+9/bin/{{.FileName}}
+          - name: ktab
+            src: jdk-17.0.9+9/bin/{{.FileName}}
+          - name: rmiregistry
+            src: jdk-17.0.9+9/bin/{{.FileName}}
+          - name: serialver
+            src: jdk-17.0.9+9/bin/{{.FileName}}
+    supported_envs:
+      - windows
+  - version_constraint: "true"
